@@ -1,0 +1,106 @@
+.md-header {
+  background-color: #FF6200;
+}
+
+.md-tabs {
+  background-color: #FFFFFF;
+  color : #FF6200;
+  font-weight: 700;
+}
+
+.md-typeset a:hover {
+  color: #FF6200;
+}
+
+.navbar.bg-primary {
+    background-image: linear-gradient(#FF6200,#FF6200 60%,#FF6200);
+    font-family: var(--md-text-font);
+}
+
+body > .container {
+  font-family: var(--md-text-font);
+}
+
+@font-face {
+  font-family: "INGMe"; 
+  font-weight: normal; 
+  font-style: normal;
+  src: url("../ingfont/INGMeWeb-Regular.ttf");
+}
+
+@font-face {
+  font-family: "INGMe"; 
+  font-weight: bold; 
+  font-style: normal;
+  src: url("../ingfont/INGMeWeb-Bold.ttf");
+
+}
+
+
+:root {
+  --md-text-font: "INGMe";
+  --md-accent-fg-color: #FF6200;
+  --md-primary-fg-color:#525199;
+}
+
+.bs-sidebar .nav > li > a.active,
+.bs-sidebar .nav > li > a.active:hover,
+.bs-sidebar .nav > li > a.active:focus {
+    font-weight: bold;
+    font-family: var(--md-text-font);
+    background-color: transparent;
+    border-right: 1px solid;
+    color: #FF6200;
+}
+
+.bs-sidebar .nav .nav .nav {
+    margin-left: 1em;
+}
+
+.bs-sidebar .nav > li > a {
+    font-weight: bold;
+    color: #FF6200;
+}
+
+.bs-sidebar .nav .nav > li > a {
+    font-weight: normal;
+    color: #FF6200;
+    font-family: var(--md-text-font);
+}
+
+.headerlink {
+    font-family: var(--md-text-font);
+    font-size: 14px;
+    display: none;
+    padding-left: .5em;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.azure {
+  color: #007FFF;
+}
+
+.cucumber {
+  color : #73AF59
+}
+
+.ing {
+  color : #FF6200
+}
+
+.getstarted {
+  color : #349651
+}
+
+.customization {
+  color : #AB0066
+}
+
+.cicd {
+  color : #559BD1
+}
+
+.md-grid {
+  max-width: initial;
+}

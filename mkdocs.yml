@@ -1,0 +1,140 @@
+site_name: INGenious Playwright Studio
+theme:
+ name: material
+ favicon: doc_images/favicon.ico
+ features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.suggest
+    - search.highlight
+    - search.share
+ user_color_mode_toggle: true
+ #palette: 
+
+    # Palette toggle for light mode
+    #- scheme: default
+    #  toggle:
+    #    icon: material/brightness-7 
+    #    name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    #- scheme: slate
+    #  toggle:
+    #    icon: material/brightness-4
+    #    name: Switch to light mode
+
+ icon:
+  admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: material/lightning-bolt
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+plugins:
+    - mkdocs-video
+    - search
+
+nav:
+ - Home: home.md
+ - Getting Started: gettingstarted.md
+ - Know the framework: knowyourframework.md
+ - Browser Testing: 
+    - Create Your First Test: browsertesting/index.md
+    - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
+    - Actions: 
+        - Browser/Page: playwrightActions/browser.md
+        - Click: playwrightActions/clicks.md
+        - Text: playwrightActions/textinput.md
+        - Dropdown: playwrightActions/dropdowns.md
+        - Data Storage: playwrightActions/store.md
+        - Focus: playwrightActions/focus.md
+        - JavaScript: playwrightActions/js.md
+        - Keyboard: playwrightActions/keyboard.md
+        - Upload/Download: playwrightActions/fileuploads.md
+        - Positive Assertions: playwrightActions/positiveassertions.md
+        - Negative Assertions: playwrightActions/negativeassertions.md
+        - Alerts: playwrightActions/alerts.md
+        - Waits: playwrightActions/waitfor.md
+        - Switch: playwrightActions/switch.md
+        - Mocking: playwrightActions/fulfill.md
+        - Dynamic Objects: playwrightActions/dynamicObject.md
+    - Webpage Performance: webpageperformance.md
+    - Accessibility Testing: accessibility.md
+    - Mocking: browsertesting/playwrightmocking.md
+ - API Testing:
+    - Create Your First Test: api.md
+    - Actions: apiActions/webservice.md
+ - Customizations:
+    - Full flexibility: customizations/index.md
+    - Engine: customizations/engine.md
+    - Custom functions: customizations/customfunction.md
+    - Command Line Interface: cli.md            
+ - Integrations :
+    - BDD: bdd.md
+    - Azure DevOps Pipelines: azure.md
+    - Azure DevOps Test Plan: testplan.md       
+    - GitHub Actions: githubActions.md 
+ - Resources :
+    - Reporting: browsertesting/playwrightreporting.md
+    - Good to Know: goodtoknow.md
+    - Tips: tips.md
+    - Troubleshooting: troubleshooting.md
+    #- FAQ: faq.md       
+         
+
+
+
+extra_css:
+  - ing.css
+
+copyright: Created and maintained by ING INGenious Team 
+
+features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.footnote.tooltips
+extra:
+  generator: false  
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html   
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys   
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
