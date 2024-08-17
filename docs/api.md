@@ -141,7 +141,7 @@
 
     JSON Path for retrieving **byron.fields@ing.com** is `$.data[3].email` [Index starts with 0]
 
->>To learn more about JSONPath visit this [GitHub](https://github.com/json-path/JsonPath) page.
+>To learn more about JSONPath visit this [GitHub](https://github.com/json-path/JsonPath) page.
 
 -------------------------------------
 

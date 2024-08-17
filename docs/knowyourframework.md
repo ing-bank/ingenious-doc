@@ -22,7 +22,7 @@
 
  This is where the test cases are designed and debugged. On opening the framework, the user, by default, lands on this pane.
 
- ![design](img/toolui/design.JPG "design")
+ ![design](img/toolui/design.png "design")
 
  **The Design Pane is composed of the following 5 sections (as shown in the picture above):**
 
@@ -142,7 +142,7 @@
 
 ### **Test Execution Pane**
 
- ![nav1](img/toolui/NavigateToExecute.JPG "nav1")
+ ![nav1](img/toolui/NavigateToExecute.jpg "nav1")
 
 In this pane we can club our test cases together into logical **test sets** or **test suites** and execute them - Either locally (on the workstation) or via a CICD pipeline.
 
@@ -165,7 +165,7 @@ Once done, we are good to start our execution by clicking on the <span style="co
 
 ### **Report/Dashboard Pane**
 
- ![nav2](img/toolui/NavigateToDashboard.JPG "nav2")
+ ![nav2](img/toolui/NavigateToDashboard.jpg "nav2")
 
 In this pane we can view the detailed summary report and even access historical individual reports.
 

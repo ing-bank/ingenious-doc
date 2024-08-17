@@ -73,7 +73,7 @@
 
  * Use the action **`capturePageTimings`** on strategic pages
 
- * Navigate to **Configuration>Run Settings** and check the **Performance Reporting** check box under the **Run settings tab**.
+ * Navigate to **Configuration** > **Run Settings** and check the **Performance Reporting** and **Har** check boxes under the **Run settings tab**.
 
  ![perf1](img/perf/1.JPG "perf1")
 

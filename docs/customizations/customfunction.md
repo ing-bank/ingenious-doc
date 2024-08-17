@@ -62,7 +62,7 @@ public class SampleScript extends General {
 
     To display the status of the custom action in the report, you can use the function **`Report.updateTestLog`** as described below.
 
-    ```java
+    ```{.java .copy}
     Report.updateTestLog("Userdefined Action", "Operation Done successfully", Status.PASS);
 
     // Possible Statuses are Status.PASS, Status.PASSNS, Status.FAIL, Status.FAILNS, Status.DONE, Status.DEBUG, Status.WARNING,Status.SCREENSHOT
@@ -71,7 +71,7 @@ public class SampleScript extends General {
 
     To display with **custom html tags** in the report, use the following,
 
-    ```java
+    ```{.java .copy}
     Report.updateTestLog("Userdefined Action", "#CTAG &lt;b&gt; Operation Done successfully&lt;b&gt;;", Status.PASS);
     ```
 
@@ -107,7 +107,7 @@ public class SampleScript extends General {
 
         :octicons-file-code-16: **Usage** :
 
-        ```java
+        ```{.java .copy}
             Playwright.close();
         ```
     
@@ -120,7 +120,7 @@ public class SampleScript extends General {
 
         :octicons-file-code-16: **Usage** :
 
-        ```java
+        ```{.java .copy}
             Page.bringToFront();
         ```
       
@@ -133,7 +133,7 @@ public class SampleScript extends General {
 
         :octicons-file-code-16: **Usage** :
 
-        ```java
+        ```{.java .copy}
             BrowserContext.newPage();
         ```
     
@@ -146,7 +146,7 @@ public class SampleScript extends General {
 
         :octicons-file-code-16: **Usage** :
 
-        ```java
+        ```{.java .copy}
            Locator.highlight();
         ```
   
@@ -162,7 +162,7 @@ public class SampleScript extends General {
 
         :octicons-file-code-16: **Usage** :
 
-        ```java
+        ```{.java .copy}
         System.out.println(Data + "Resolved Input used in InputColumn in the currentTestStep");
         ```
 
@@ -178,7 +178,7 @@ public class SampleScript extends General {
         in execution. That means if the step is being fed a data from the datasheet like **SheetName:ColumnName** or variable like **%var%** or hardcoded as **@data**, the `Input` variable will hold the values as **SheetName:ColumnName**, **%var%** and **@data** respectivey
 
         :octicons-file-code-16: **Usage** :
-        ```java
+        ```{.java .copy}
         System.out.println(Input + "Input used in InputColumn in the currentTestStep");
         ```
 
@@ -191,7 +191,7 @@ public class SampleScript extends General {
         - **Description** : This variable stores the description present in the description column of the current test step.
 
         :octicons-file-code-16: **Usage** :
-        ```java
+        ```{.java .copy}
         System.out.println(Description + "Description used in DescriptionColumn in the currentTestStep");
         ```
 
@@ -202,7 +202,7 @@ public class SampleScript extends General {
         - **Description** : This variable stores the name of the action used in the Action column of the current test step.
 
         :octicons-file-code-16: **Usage** :
-            ```java
+            ```{.java .copy}
             System.out.println(Action + "Action/Command used in ActionColumn in the currentTestStep");
             ```
         
@@ -213,7 +213,7 @@ public class SampleScript extends General {
         - **Description** : TThis variable stores the **Name of the Page** given under the Reference column of the current test step in execution. This Name of the Page is actually defined in the Object Repository.
 
         :octicons-file-code-16: **Usage** :
-        ```java
+        ```{.java .copy}
         System.out.println(Reference + "Reference/PageName used in ReferenceColumn in the currentTestStep");
         ```
 
@@ -226,7 +226,7 @@ public class SampleScript extends General {
 
     There is an inbuilt method available called **`executeTestCase`**, which can be used to execute a particular test case under a particular scenario.
 
-    ```java
+    ```{.java .copy}
     public void executeTestCase(String scenarioName, String testCaseName);
     public void executeTestCase(String scenarioName, String testCaseName, int subIteration);
     ```
@@ -237,7 +237,7 @@ public class SampleScript extends General {
 
 ------------------------------
 
-??? example "Execute An Action From A Custom Method" 
+??? example "Execute An Action From  Custom Method" 
     ### Execute Action from Code
 
     A method called **executeMethod** is available with the Engine and is overloaded in 4 different ways as follows.
@@ -245,18 +245,18 @@ public class SampleScript extends General {
 
     === "Type 1"
 
-        ```java
+        ```{.java .copy}
         public void executeMethod(WebElement element, String Action);
         ```
         Using this function you can provide the element and the action name, in the argument list, to execute the action on the element passed. For example,
 
-        ```java
+        ```{.java .copy}
         executeMethod(element, "Click");
         ```
 
     === "Type 2"
     
-        ```java
+        ```{.java .copy}
         public void executeMethod(String Action, String Input);
         ```
 
@@ -264,13 +264,13 @@ public class SampleScript extends General {
         
         For example:
 
-        ```java
+        ```{.java .copy}
         executeMethod("Open", "@http://something");
         executeMethod("Open", input);
         ```
 
     === "Type 3"
-        ```java
+        ```{.java .copy}
         public void executeMethod(WebElement element, String Action, String Input);
         ```
 
@@ -278,13 +278,13 @@ public class SampleScript extends General {
         
         For example:
 
-        ```java
+        ```{.java .copy}
         executeMethod(element, "Set", input);
         ```
 
     === "Type 4"
 
-        ```java
+        ```{.java .copy}
         public void executeMethod(String Action);
         ```
         This will just call the method of the action that was instructed. 
@@ -296,45 +296,45 @@ public class SampleScript extends General {
 
     Another method to call an action without using the **executeMethod** function is to go with the code described below, Here, we have to set the **Data variable** for the current step and call the `Set` action for execution.
 
-    ```java
+    ```{.java .copy}
     getCommander().Data = "guest";//This line will assign a value to the Data variable used in the current test step.
     new Basic(getCommander()).Set();//This line will call the Set action under the Basic java class file.
     ```
 
     Another example of using the **getCommander()** function to call an action is as follows.Here the method containing the definition for the action **assertElementNotDisplayed** is available under the **AssertElement** java class file.
 
-    ```java
+    ```{.java .copy}
     new AssertElement(getCommander()).assertElementNotDisplayed();//This line will just make a call to the action "assertlementNotDisplayed"
     ```
 
 ------------------------------------
 
-??? example "Access An Object From The Object Repository" 
+??? example "Access An Object From Object Repository" 
 
     ### Access Object from OR
 
     It is possible to access a specific object from the object repository using the function **AObject.findElement** as shown below.
 
-    ```java
-    WebElement element=AObject.findElement(ObjectName, Reference);
+    ```{.java .copy}
+    Locator locator = AObject.findElement(ObjectName, Reference);
     ```
 
     Now all element related functions can be used for this **`element`** variable like;
 
-    ```java
+    ```{.java .copy}
     element.fill(Data);
     ```
 
     It is also possible to use **conditioned find** method.Suppose you want to find an object on a web page using a particular property,obtained from the **stored set of object properties in the Object Repository (OR)**, then you can use the following function.
 
-    ```java
-    WebElement element = AObject.findElement("p", "Yahoo", ObjectProperty.Id);
+    ```{.java .copy}
+    Locator locator = AObject.findElement("p", "Yahoo", ObjectProperty.Id);
     ```
 
     In the example below, a list of objects so obtained can be accessed by storing them in an **ArrayList**.
 
-    ```java
-    List <WebElement> elementList= AObject.findElements("p", "Yahoo", ObjectProperty.ClassName);
+    ```{.java .copy}
+    List <Locator> locatorList= AObject.findElements("p", "Yahoo", ObjectProperty.ClassName);
     ```
 
     In the above example `object` **p** under the `page` with name **Yahoo** (from the object repository) is found on the web page by using the Id property.
@@ -348,20 +348,20 @@ public class SampleScript extends General {
     It is possible to write a custom function, that checks for a condition and if the
     condition passes it will execute a set of code and if it fails then it will execute a
     different set of code.The custom method example **`handleCondition`** defined below, will check
-    if the element is displayed and if so, it will execute the test case cancelTicket but if
+    if the element is displayed and if so, it will execute the test case **`cancelTicket`** but if
     it is not displayed then it will just update the report with a *DONE* status.
 
-    ```java
+    ```{.java .copy}
     public void handleCondition() throws FrameworkException {
 
         // No argument should be given here. Only then will this function be executed
 
 
         //Step 1: Getting object from the object repository
-        WebElement element = AObject.findElement("ObjectName", "PageName");
+        Locator locator = AObject.findElement("ObjectName", "PageName");
 
         //Step 2: Base the condition on object being displayed or not
-        if (element.isDisplayed()) {
+        if (locator.isVisible()) {
 
             //Calling another test case if the condition is matched
 
@@ -383,323 +383,339 @@ public class SampleScript extends General {
 
 -----------------------------------------------
 
-### Access Test Data Sheet In Custom Method
+??? example "Access Test Data Sheet In Custom Method" 
+    ### Access Data Sheet from Code
 
-#### Local Data sheet
+    ??? tip "Local Data Sheet"
+        #### Local Data Sheet
 
-##### **getData**
+        !!! quote "Get Data"
+            ##### **getData**
 
-There are functions to access the data from the datasheet. The **getData**
-function is overloaded in the following ways and can be used accordingly in your
-custom method.
+            There are functions to access the data from the datasheet. The **getData**
+            function is overloaded in the following ways and can be used accordingly in your
+            custom method.
 
-- **Type 1**
+            === "Type 1"
 
-```java
-public String getData(String DataSheetName, String ColumnName);
-```
+                ```{.java .copy}
+                public String getData(String DataSheetName, String ColumnName);
+                ```
 
-Provide the name of the data sheet (**Sample**) and column (**Data1**) that contains the data
-and this function will return a string which is the value of the required data.For
-instance,
+                Provide the name of the data sheet (**Sample**) and column (**Data1**) that contains the data
+                and this function will return a string which is the value of the required data. 
+                For instance:
 
-```java
-String input = userData.getData("Sample", "Data1");
-```
+                ```{.java .copy}
+                String input = userData.getData("Sample", "Data1");
+                ```
 
-- **Type 2**
-```java
-public String getData(String DataSheetName, String ColumnName, String Iteration, String SubIteration);
-```
+            === "Type 2"
+                ```{.java .copy}
+                public String getData(String DataSheetName, String ColumnName, String Iteration, String SubIteration);
+                ```
 
-Provide the name of the **sheet,column,iteration and subiteration** values if you want
-to be specific, as shown in the example below;
+                Provide the **sheet name, column, iteration and subiteration** values if you want
+                to be specific, as shown in the example below;
 
-```java
-String input = userData.getData("Sample", "Data1", "1", "1");
-```
-Here the data stored in the sheet **Sample** ,under the column **Data1** having the
-**subiteration** and **iteration** value as 1 is stored in the input string variable.
-Another way is to provide all the information as given above in the argument list and
-also include the scenario and test case name.
+                ```{.java .copy}
+                String input = userData.getData("Sample", "Data1", "1", "1");
+                ```
+                Here the data stored in the sheet **Sample**, under the column **Data1** having the
+                **subiteration** and **iteration** value as **1**, is stored in the input string variable.
+                Another way is to provide all the information as given above in the argument list and
+                also include the scenario and test case name.
 
-- **Type 3**
+            === "Type 3"
 
-```java
-public String getData(String DataSheetName, String ColumnName, String ScenarioName,String TestCase, String Iteration, String SubIteration);
-```
-Example :
-```java
-String input = userData.getData("Sample", "Data1", "scenario","testcase", "1", "1");
-```
+                ```{.java .copy}
+                public String getData(String DataSheetName, String ColumnName, String ScenarioName,String TestCase, String Iteration, String SubIteration);
+                ```
+                Example :
+                ```{.java .copy}
+                String input = userData.getData("Sample", "Data1", "scenario","testcase", "1", "1");
+                ```
 
-In the example above the data stored in the sheet **Sample** under the column **Data1**
-and belonging to the testcase named **testcase** and **scenario** named scenario having
-the iteration and subiteration value as **1** is stored in input string.
+                In the example above the data stored in the sheet **Sample** under the column **Data1**
+                and belonging to the testcase named **testcase** and **scenario** named scenario having
+                the iteration and subiteration value as **1**, is stored in input string.
 
-##### **putData**
+        !!! quote "Put Data"
+            ##### **putData**
 
-It is also possible to write in to the data sheet using the **"putData"** function:
-The **putData()** function is overloaded in the following ways,
+            It is also possible to write to the data sheet using **"putData"**.
+            The **putData()** function is overloaded in the following ways,
 
-- **Type 1**
-```java
-userData.putData("DatasheetName", "ColumnName", "value to be written");
-```
-Example:
+            === "Type 1"
+                ```{.java .copy}
+                userData.putData("DatasheetName", "ColumnName", "value to be written");
+                ```
+                Example:
 
-```java
-userData.putData("Sample", "Data1", "kk");
-```
+                ```{.java .copy}
+                userData.putData("Sample", "Data1", "John Doe");
+                ```
 
-where **Sample** is the datasheet name ,**Data1** is the column name and **kk** is the value
-to be written under the respective column.
+                where **Sample** is the datasheet name, **Data1** is the column name and **John Doe** is the value
+                to be written under the respective column.
 
-- **Type 2**
+            === "Type 2"
 
-You can also provide the **iteration** and **subiteration** values in the argument list.
+                You can also provide the **iteration** and **subiteration** values in the argument list.
 
-```java
-userData.putData("DatasheetName", "ColumnName", "value to be written", "Iterationvalue", "SubIteration value");
-```
-An example for this is,
+                ```{.java .copy}
+                userData.putData("DatasheetName", "ColumnName", "value to be written", "Iterationvalue", "SubIteration value");
+                ```
+                An example for this is,
 
-```java
-userData.putData("Sample", "Data1", "kk", "1", "1");
-```
+                ```{.java .copy}
+                userData.putData("Sample", "Data1", "John Doe", "1", "1");
+                ```
 
-where **Sample** is the datasheet name ,**Data1** is the column name and **kk** is the value
-to be written under the respective column for the iteration value of **1** and subiteration value of **1**.
+                where **Sample** is the datasheet name, **Data1** is the column name and **John Doe** is the value
+                to be written under the respective column for the iteration value of **1** and subiteration value of **1**.
 
-- **Type 3**
+            === "Type 3"
 
-Apart from the information above you can also include the test case and scenario name as shown below,
+                Apart from the information above you can also include the test case and scenario name as shown below,
 
-```java
-userData.putData("DatasheetName","columnName","value to be written","scenario name","test case name","Iteration value","SubIteration value");
-```
+                ```{.java .copy}
+                userData.putData("DatasheetName","columnName","value to be written","scenario name","test case name","Iteration value","SubIteration value");
+                ```
 
-An example for the above scenario is shown below,
+                An example for the above scenario is shown below,
 
-```java
-userData.putData("Sample", "Data1", "kk", "scenario", "testcase", "1", "1");
-```
+                ```{.java .copy}
+                userData.putData("Sample", "Data1", "John Doe", "scenario", "testcase", "1", "1");
+                ```
 
-where **Sample** is the datasheet name ,**Data1** is the column name,**testcase** is the
-testcase name,**scenario** is the scenario name and **kk** is the value to be written under
-the respective column for the iteration and subiteration value of **1**.
+                where **Sample** is the datasheet name, **Data1** is the column name, **testcase** is the
+                testcase name,**scenario** is the scenario name and **John Doe** is the value to be written under
+                the respective column for the iteration and subiteration value of **1**.
 
+    ??? tip "Global Data Sheet"
+        #### Global Data Sheet
 
-#### Global Data Sheet
+        To access a global data sheet from the custom method to read a global data value, use the method below :
 
-To access a global data sheet from the custom method to read a global data value, use the method below :
+        ```{.java .copy}
+        userData.getGlobalData(globalDataID, columnName);
+        ```
+        Example:
+        ```{.java .copy} 
+        String datavalue = userData.getGlobalData("Glob1", "username");
+        ```
 
-```java
-userData.getGlobalData(globalDataID, columnName);
-```
-Example:
-```java 
-String datavalue = userData.getGlobalData("Glob1", "username");
-```
+        To write or update a global data sheet, call the method below in your custom method,
 
-To write or update a global data sheet, call the method below in your custom method,
+        ```{.java .copy}
+        userData.putGlobalData(globalDataID, columnName, value);
+        ```
+        Example:
+        ```{.java .copy}
+        userData.putGlobalData("Glob1", "username", "LukeSkywalker");
+        ```
 
-```java
-userData.putGlobalData(globalDataID, columnName, value);
-```
-Example:
-```java
-userData.putGlobalData("Glob1", "username", "LukeSkywalker");
-```
+    ??? tip "Test Data Model"
+        #### TestDataModel
 
-#### TestDataModel
+        As an alternative, you can use the following code to access the data sheet by its name and update the same, traversing through every record in the test data sheet.
 
-As an alternative, you can use the following code to access the data sheet by its name and update the same, traversing through every record in the test data sheet.
+        ```{.java .copy}
+        TestDataModel tdModel = Control.getCurrentProject().getTestData().getTestDataByName("TestDataSheetName");
+        tdModel.loadTableModel();
+        int rowsCount = tdModel.getRowCount();
+        for (int row = 0; row < tdModel.getRowCount(); row++) {
 
-```java
-TestDataModel tdModel = Control.getCurrentProject().getTestData().getTestDataByName("TestDataSheetName");
-tdModel.loadTableModel();
-int rowsCount = tdModel.getRowCount();
-for (int row = 0; row < tdModel.getRowCount(); row++) {
+            // Where orderId is a column in my data sheet
+            int colIndex = tdModel.getColumnIndex("orderId");
 
-    // Where orderId is a column in my data sheet
-    int colIndex = tdModel.getColumnIndex("orderId");
+            //To get value
+            String orderId = (String) tdModel.getValueAt(row, colIndex);
 
-    //To get value
-    String orderId = (String) tdModel.getValueAt(row, colIndex);
+            // To put values in to the sheet
+            tdModel.setValueAt("New Value", row, colIndex);
+        }
 
-    // To put values in to the sheet
-    tdModel.setValueAt("New Value", row, colIndex);
-}
-
-```
-
-------------------------------------------------
-### Stop Current Execution/Iteration Based On A Condition
-
-The following code can be used to stop the **current iteration** based on a condition.
-
-```java
-Boolean something = false;
-if (something) {
-    SystemDefaults.stopCurrentIteration.set(true);//Stop the iteration
-}
-```
-
-The following code can be used to stop the **current execution** based on a condition.
-
-```java
-Boolean something = false;
-if (something) {
-    SystemDefaults.stopExecution.set(true);//Stop the execution
-}
-```
+        ```
 
 ------------------------------------------------
 
-### Get Iteration/Subiteration Value Of The Current TestStep
+??? example "Stop Current Execution/Iteration Based On A Condition" 
+    ### Stop Current Execution
 
-It is possible to get the value of current iteration using the function **"getIteration"**
+    The following code can be used to stop the **current iteration** based on a condition.
 
-```java
-String iterationValue=userData.getIteration();
-```
-
-This function returns a string value containing the **Iteration number** of the current iteration.
-
-
-It is also possible to get the value of current subiteration using the function **getSubIteration**
-
-```java
-String subiterationValue=userData.getSubIteration();
-```
-
-This function returns a string value containing the **Subiteration number** of the current sub iteration that is in execution.
-
-------------------------------------------------
-
-### Get Current Scenario/TestCase Name
-
-The **getScenario** function returns a string value containing the name of the current scenario that is in execution.
-
-```java
-String scenarioName=userData.getScenario();
-```
-
-The **getCurrentScenario** function returns a string value containing the name of the current `Reusable` scenario that is in execution.
-
-```java
-String reusableScenarioName=userData.getCurrentScenario();
-```
-
-The **getTestCase** function returns a string value containing the name of the current test case in execution.
-
-```java
-String testcaseName= userData.getTestCase();
-```
-
-The **getCurrentTestCase** function returns a string value containing the name of the current `Reusable` test case in execution.
-
-```java
-String testcaseName= userData.getCurrentTestCase();
-```
-
-------------------------------------------------
-
-### Get ObjectRepository Properties Of WebElement
-
-
-It is possible to access the specific property of an element stored in the Object Repository  using the function **AObject.getObjectProperty** described below.
-
-```java
-String prop = AObject.getObjectProperty("pageName", "objectName", ObjectProperty.Id);
-```
-
-In the above scenario, pass the name of the **page** (under which the object is present
-in the Object Repository),**objectName** and **object property** that you want to access.
-You can also use the following method to get the particular property of the object from the OR.
-
-```java
-String prop = AObject.getWebObject("pageName", "objectName").getId();
-prop = AObject.getWebObject(Reference, ObjectName).getAttributeByName(ObjectProperty.Id); //to get current step object's Id property
-```
-
-------------------------------------------------
-
-### Add Value To A Variable
-
-Suppose you want to create a variable and define a value to it, you can go for **addVar(arg1,arg2)** function or **addGlobalVar(arg1,arg2)** methods.
-
-The **`addVar(arg1,arg2)`** function takes the variable name and it's value as parameters and is defined under the **com.ing.engine.commands.Command** java file as shown below,
-
-```java
-public void addVar(String key, String val) {
-  Commander.addVar(key, val);
-}
-```
-
-This method can be used as shown below:
-
-```java
-addVar("%nameVar%", "LukeSkywalker");
-```
-
-The scope of this variable is only till the end of the execution of the test case in which it is defined.
-
-The **addGlobalVar(arg1,arg2)** function is used to add a value to a variable whose scope is till the end of the execution of the testset ie. till the end of execution of the last test case under the test set. This function can be used in your custom code as
-shown below:
-
-```java
-addGlobalVar("%nameVar%", "LukeSkywalker");
-```
-
-This function is defined as shown below under the **com.ing.engine.commands.Command** java file.
-
-```java
-public void addGlobalVar(String key, String val) {
-    if (key.matches("%.*%")) {
-      key = key.substring(1, key.length() - 1);
+    ```{.java .copy}
+    Boolean something = false;
+    if (something) {
+        SystemDefaults.stopCurrentIteration.set(true);//Stop the iteration
     }
-    Commander.putUserDefinedData(key, val);
-}
-```
+    ```
+
+    The following code can be used to stop the **current execution** based on a condition.
+
+    ```{.java .copy}
+    Boolean something = false;
+    if (something) {
+        SystemDefaults.stopExecution.set(true);//Stop the execution
+    }
+    ```
+
+------------------------------------------------
+
+??? example "Get Iteration/Subiteration Value Of The Current TestStep"
+    ### Get Iteration/Subiteration
+
+    It is possible to get the value of current iteration using the function **"getIteration"**
+
+    ```{.java .copy}
+    String iterationValue=userData.getIteration();
+    ```
+
+    This function returns a string value containing the **Iteration number** of the current iteration.
+
+
+    It is also possible to get the value of current subiteration using the function **getSubIteration**
+
+    ```{.java .copy}
+    String subiterationValue=userData.getSubIteration();
+    ```
+
+    This function returns a string value containing the **Subiteration number** of the current sub iteration that is in execution.
+
+------------------------------------------------
+
+??? example "Get Current Scenario/TestCase"
+    ### Get Current Scenario/TestCase
+
+    The **getScenario** function returns a string value containing the name of the current scenario that is in execution.
+
+    ```{.java .copy}
+    String scenarioName=userData.getScenario();
+    ```
+
+    The **getCurrentScenario** function returns a string value containing the name of the current `Reusable` scenario that is in execution.
+
+    ```{.java .copy}
+    String reusableScenarioName=userData.getCurrentScenario();
+    ```
+
+    The **getTestCase** function returns a string value containing the name of the current test case in execution.
+
+    ```{.java .copy}
+    String testcaseName= userData.getTestCase();
+    ```
+
+    The **getCurrentTestCase** function returns a string value containing the name of the current `Reusable` test case in execution.
+
+    ```{.java .copy}
+    String testcaseName= userData.getCurrentTestCase();
+    ```
+
+------------------------------------------------
+
+??? example "Get ObjectRepository Properties Of WebElement"
+
+    ### Get ObjectRepository Properties
+
+
+    It is possible to access the specific property of an element stored in the Object Repository  using the function **`AObject.getObjectProperty()`** described below.
+
+    ```{.java .copy}
+    String prop = AObject.getObjectProperty("pageName", "objectName", ObjectProperty.Id);
+    ```
+
+    In the above scenario, pass the name of the **page** (under which the object is present
+    in the Object Repository), **objectName** and **object property** that you want to access.
+    You can also use the following method to get the particular property of the object from the OR.
+
+    ```{.java .copy}
+    String prop = AObject.getWebObject("pageName", "objectName").getId();
+    prop = AObject.getWebObject(Reference, ObjectName).getAttributeByName(ObjectProperty.Id); //to get current step object's Id property
+    ```
+
+------------------------------------------------
+
+??? example "Add Value To A Variable"
+
+    ### Add Value To A Variable
+
+    Suppose you want to create a variable and define a value to it, you can go for **addVar(arg1,arg2)** function or **addGlobalVar(arg1,arg2)** methods.
+
+    The **`addVar(arg1,arg2)`** function takes the variable name and it's value as parameters and is defined under the **com.ing.engine.commands.Command** java file as shown below,
+
+    ```{.java .copy}
+    public void addVar(String key, String val) {
+    Commander.addVar(key, val);
+    }
+    ```
+
+    This method can be used as shown below:
+
+    ```{.java .copy}
+    addVar("%nameVar%", "LukeSkywalker");
+    ```
+
+    >> The scope of this variable is only till the end of the execution of the test case in which it is defined.
+
+    The **`addGlobalVar(arg1,arg2)`** function is used to add a value to a variable whose scope is till the end of the execution of the testset i.e. till the end of execution of the last test case under the test set. This function can be used in your custom code as
+    shown below:
+
+    ```{.java .copy}
+    addGlobalVar("%nameVar%", "LukeSkywalker");
+    ```
+
+    This function is defined as shown below under the **com.ing.engine.commands.Command** java file.
+
+    ```{.java .copy}
+    public void addGlobalVar(String key, String val) {
+        if (key.matches("%.*%")) {
+        key = key.substring(1, key.length() - 1);
+        }
+        Commander.putUserDefinedData(key, val);
+    }
+    ```
 
 ----------------------------------------------
-### Access A Variable's Value In Custom Method
+
+??? example "Access A Variable's Value In Custom Method"
+
+    ### Access A Variable
 
 
-The value of a **`variable`** created in your test case can be accessed using the function
-**getVar** which is defined, as shown below, under the **com.ing.engine.commands.Command** java file.
+    The value of a **`variable`** created in your test case can be accessed using the function
+    **getVar** which is defined, as shown below, under the **com.ing.engine.commands.Command** java file.
 
-```java
-public String getVar(String key) {
-    return Commander.getVar(key);
-}
-```
-This function can be used,as shown below, in your custom method. 
+    ```{.java .copy}
+    public String getVar(String key) {
+        return Commander.getVar(key);
+    }
+    ```
+    This function can be used,as shown below, in your custom method. 
 
-Provide the variable name between two `percentage symbols`(%%)
+    Provide the variable name between two `percentage symbols`(%%)
 
-```java
-String value = getVar("%newVar%");
-System.out.println(value);
-```
-Suppose you have defined some variables in the **userdefined** tab of the Settings window, which can be opened by navigating through **Run Settings icon** >> **UserDefined Tab**, then you can access them in your custom method in two ways:
+    ```{.java .copy}
+    String value = getVar("%newVar%");
+    System.out.println(value);
+    ```
+    Suppose you have defined some variables in the **userdefined** tab of the Settings window, which can be opened by navigating through **Run Settings icon** >> **UserDefined Tab**, then you can access them in your custom method in two ways :
 
-- **Option 1:** Use the **getVar** function as shown below.
+    === "**`getVar`**"
 
-```java
-String value;
-value = getVar("%userdefinedVar%");
-value = getVar("userdefinedVar");//This also will work
-```
+        ```{.java .copy}
+        String value;
+        value = getVar("%userdefinedVar%");
+        value = getVar("userdefinedVar");//This also will work
+        ```
 
-The other way is to use the **`getUserDefinedData`** method,which is similar to the **`getVar`** ,but can only be used for accessing the **user defined data.**
+    === "**`getUserDefinedData`**"
 
-```java
-String value = getUserDefinedData("userdefinedVar");
-System.out.println(value);
-```
+        ```{.java .copy}
+        String value = getUserDefinedData("userdefinedVar");
+        System.out.println(value);
+        ```
 
 ---------------------------------
 
@@ -709,7 +725,7 @@ System.out.println(value);
 
     For creating any Custom Method, a java class is required. The following sample code can be used for understanding the usage of various variables and functions that you can access in your custom method.
 
-    ```java
+    ```java linenums="1"
     package com.ing.engine.commands;
 
     import com.ing.engine.commands.General;
@@ -718,6 +734,8 @@ System.out.println(value);
     import com.ing.engine.support.methodInf.Action;
     import com.ing.engine.support.methodInf.ObjectType;
     import com.ing.engine.support.methodInf.InputType;
+    import com.microsoft.playwright.Locator;
+    import java.util.List;
 
     //extend Command to access elements
 
@@ -732,23 +750,13 @@ System.out.println(value);
             executeTestCase("testWeb", "search");
         }
 
-        @Action(object = ObjectType.BROWSER, desc = "open given url", input = InputType.YES)
-        public void prinThis(){
-            /**
-            * No argument should be specifed. Only then will your custom method
-            be executed.
-            */
-            //To do any operations before and/or after execution of eachStep add your code to
-            //functions beforeStepExecution / afterStepExecution in
-            //Annotation.java inside com.ing.engine.core package
-            //To do any operation after execution [execution is finished] add your code to
-            //afterReportComplete function in
-            //SummaryReport.java inside com.ing.engine.reporting package
-            // do ur action
 
+        @Action(object = ObjectType.BROWSER, desc = "open given url", input = InputType.YES)
+        public void prinThis(){  // (1)!
             try {
+
                 /**********************************/
-                Element.click(); //Object in ObjectName is resolved as WebElement and assigned to this variable[Element]
+                Locator.click(); // (2)!
                 System.out.println(ObjectName + "ObjectName used in ObjectColumn in the currentTestStep");
                 System.out.println(Description + "Description used in DescriptionColumn in the currentTestStep");
                 System.out.println(Action + "Action/Command used in ActionColumn in the currentTestStep");
@@ -759,200 +767,166 @@ System.out.println(value);
                 /**********************************/
                 System.out.println(getCurrentBrowserName() + "To get the current browserName");
 
-                /**********************************/
-                //If you stored some dynamic value in a variable[%newVar%] you can get the value from the variable using
-                String value = getVar("%newVar%");
+                /**********************************/                
+                String value = getVar("%newVar%"); //(3)!
                 System.out.println(value);
 
-                //If you want to access the userdefined data created from UserDefined Settings pane you can use it in two ways
-                //1st option
-                value = getVar("%userdefinedVar%");
+                /**********************************/
+                value = getVar("%userdefinedVar%"); //(4)!
                 value = getVar("userdefinedVar"); //This also will work
 
-                //2nd option
-                value = getUserDefinedData("userdefinedVar");
+                value = getUserDefinedData("userdefinedVar"); //(5)!
                 System.out.println(value);
 
-                //If you want to store some value in a variable[%dyanmicVar%] you can store the value into a variable using
-                //Scope is for Current Testcase
-
-                addVar("%dyanmicVar%", "Value to be Stored");
-
-                //Scope is for All
-                addGlobalVar("%dyanmicVar%", "Value to be Stored");
+                /**********************************/
+                addVar("%dyanmicVar%", "Value to be Stored"); //(6)!
+                addGlobalVar("%dyanmicVar%", "Value to be Stored"); //(7)!
 
                 /**********************************/
-                // Using Inbuilt findMethod
-                AObject.findElement(ObjectName, Reference); //To find thecurrent step's object
-                AObject.findElements(ObjectName, Reference); //To find the current step's object
+                AObject.findElement(ObjectName, Reference); 
+                AObject.findElements(ObjectName, Reference); // (8)!
 
-                // to access the object value pass ObjectName and PageName as  inputs
-
-                // ObjectName=p
-                // PageName=Yahoo
-
-                WebElement element = AObject.findElement("p", "Yahoo");
-                List<WebElement>elementList = AObject.findElements("p", "Yahoo");
-
-                // Using Conditioned FindMethod
-
-                element = AObject.findElement("p", "Yahoo", ObjectProperty.Id);
-                elementList = AObject.findElements("p", "Yahoo", ObjectProperty.ClassName);
-                System.out.println("No of elements" + elementList.size());
-                //Using Own findMethod
-
-                element = Driver.findElement(By.id(Data));
+                Locator locator = AObject.findElement("p", "Yahoo"); //(9)!
+                List<Locator>locatorList = AObject.findElements("p", "Yahoo");                
+                System.out.println("No of locators" + locatorList.size());
 
                 /**********************************/
-                // using this element you can perform selenium operations
-
-                element.sendKeys("Normal");
-                element.sendKeys(Data);
+                locator.fill("Normal"); //(10)!
+                locator.fill(Data);
 
                 /**********************************/
-                //To get a property of an object from ObjectRepository
-
-                String prop = AObject.getWebObject("pageName","objectName").getId();
-
-                prop = AObject.getWebObject(Reference,ObjectName).getAttributeByName(ObjectProperty.Id); //to get current step object's id property
-
-                System.out.println(prop);
+                String input_text = userData.getData("Sample", "Data1"); //(11)!
+                input_text = userData.getData("Sample", "Data1", "1", "1"); //(12)!
+                input_text = userData.getData("Sample", "Data1", "scenario","testcase", "1", "1"); //(13)!
+                locator.fill(input_text);
 
                 /**********************************/
-
-                // to access the data from DataSheets pass DataSheetName and ColumnName as inputs
-                // Don't pass GlobalData as inputsheet
-                
-                // SheetName,Columnname
-                String input = userData.getData("Sample", "Data1");
-
-                //To get values from specified Iteration and subiteration
-                input = userData.getData("Sample", "Data1", "1", "1");
-
-                //To get values from specified Scenario, Testcase, Iteration and subiteration
-                input = userData.getData("Sample", "Data1", "scenario","testcase", "1", "1");
-                element.sendKeys(input);
+                userData.putData("Sample", "Data1", "John Doe"); //(14)!
+                userData.putData("Sample", "Data1", "John Doe", "1", "1"); //(15)!
+                userData.putData("Sample", "Data1", "John Doe", "scenario", "testcase", "1", "1"); //(16)!
 
                 /**********************************/
-                //To write values into DataSheet 
-                //Don't pass GlobalData as inputsheet
-                
-                // SheetName,Columnname,value
-                userData.putData("Sample", "Data1", "kk");
-
-                //to write values for specified Iteration and subiteration
-                userData.putData("Sample", "Data1", "kk", "1", "1");
-
-                //to write values for specified Scenario, Testcase, Iteration and subiteration
-                userData.putData("Sample", "Data1", "kk", "scenario", "testcase", "1", "1");
-
-                /**********************************/
-
-                TestDataModel tdModel = Control.getCurrentProject().getTestData().getTestDataByName(" TestDatasheetName");
-
+                TestDataModel tdModel = Control.getCurrentProject().getTestData().getTestDataByName("TestDatasheetName");
                 int rowsCount = tdModel.getRowCount();
-
                 for (int row = 0; row < tdModel.getRowCount(); row++) {
-
-                    // Where orderId is a column in my data sheet
-                    int colIndex = tdModel.getColumnIndex("orderId");
-
-                    //To get value
-                    String orderId = (String) tdModel.getValueAt(row, colIndex);
-
-                    // To put values in to the sheet
-                    tdModel.setValueAt("New Value", row, colIndex);
+    
+                    int colIndex = tdModel.getColumnIndex("orderId"); // (17)!                    
+                    String orderId = (String) tdModel.getValueAt(row, colIndex);// (18)!               
+                    tdModel.setValueAt("New Value", row, colIndex); //(19)! 
                 }
 
                 /**********************************/
-                //To display in Report
-                Report.updateTestLog("Userdefined Action ", "Operation Done successfully", Status.PASS);
-
-                //To display in Report with custom html tags
-                Report.updateTestLog("Userdefined Action ", "#CTAG<b>Operation Done successfully<b>", Status.PASS);
-
-            /**********************************/
-                //To get the current Iteration
-                userData.getIteration();
-
-                //To get the current SubIteration
-                userData.getSubIteration();
-
-                //To get the current Scenario
-
-                userData.getScenario();
-                //To get the current Testcase
-
-                userData.getTestCase();
-                //To get the current BrowserName
-
-                System.out.println(getCurrentBrowserName());
+                Report.updateTestLog("Userdefined Action ", "Operation Done successfully", Status.PASS); //(20)!
+                Report.updateTestLog("Userdefined Action ", "#CTAG<b>Operation Done successfully<b>", Status.PASS); //(21)!
 
                 /**********************************/
-                // to stop the current iteration if u want to... based on condition
+                userData.getIteration(); //(22)!
+                userData.getSubIteration(); //(23)!
+                userData.getScenario(); //(24)!
+                userData.getTestCase(); //(25)!
+                System.out.println(getCurrentBrowserName()); //(26)!
 
+                /**********************************/
                 Boolean something = false;
-
                 if (something) {
 
-                    SystemDefaults.stopCurrentIteration.set(true);
-                    SystemDefaults.stopExecution.set(true); //Stop the execution
+                    SystemDefaults.stopCurrentIteration.set(true); // (27)! 
+                    SystemDefaults.stopExecution.set(true); // (28)!
 
                 }
 
                 /**********************************/
-                // To use inbuilt functions
-                //simple way
-                //make sure you set the Data,Element and other variables
-
-                new Basic(getCommander()).Click();
-
-                //Old school
-
-                executeMethod(element, "Click");
-                executeMethod("open", "@http://something");
-                executeMethod("open", input);
-                executeMethod(element, "Set", input);
+                executeMethod(locator, "Click");
+                executeMethod("Open", "@http://something");
+                executeMethod("Open", input);
+                executeMethod(locator, "Fill", input);
 
                 /**********************************/
-                //To execute Other Testcases
-
-                // scenarioname,testcasename,subiteration
-                executeTestCase("OnlineShopping", "BuyProduct", 2);
-
-                // scenarioname,testcasename
-                executeTestCase("OnlineShopping", "BuyProduct");
+                executeTestCase("OnlineShopping", "BuyProduct", 2); //(29)!
+                executeTestCase("OnlineShopping", "BuyProduct");   //(30)!
 
             } catch (Exception ex) {
-
                 Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-
             }
         }
 
-        /**********************************/
-        public void handleCondition() throws UnCaughtException {
+               /**********************************/
 
-            //Getting object from the object repository
-            WebElement element = AObject.findElement("ObjectName", "PageName");
+        public void handleCondition() throws UnCaughtException {            
+            Locator locator = AObject.findElement("ObjectName", "PageName");
+            if (locator.isVisible()) { // (31)!
 
-            //Basing the condition on a web element being displayed
-            if (element.isDisplayed()) {
-
-                //Calling another test case if the condition is matched
-                
-                //Pass the Scenario name,Test case name and sub-iteration index
-                executeTestCase("testscenario1", "cancelTicket", 1);
+                executeTestCase("testscenario1", "cancelTicket", 1); //(32)!
                 Report.updateTestLog("Userdefined Action ", "inside reusable", Status.PASS);
-
-                //If needed you can break the test case also by calling existing functions
-                executeMethod("StopBrowser");
-                //
+                executeMethod("StopBrowser"); //(33)!
             } else {
                 Report.updateTestLog("Userdefined Action ", "switch to origional", Status.DONE);
             }
         }
     }
     ```
+
+    1. 
+       :material-arrow-right-thin: No argument should be specifed. Only then will your custom method be executed. <br>
+       :material-arrow-right-thin: To do any operation before and/or after execution of each Step, add your desired code to functions `beforeStepExecution` / `afterStepExecution` in `Annotation.java` inside `com.ing.engine.core package`. <br>
+       :material-arrow-right-thin: To do any operation after execution [execution is finished] add your code to `afterReportComplete` function in `SummaryReport.java` inside `com.ing.engine.reporting package`.
+    
+    2. Object in ObjectName is resolved as Playwright Locator and assigned to this variable **`Locator`**
+
+    3. If you store some dynamic value in a variable **`%newVar%`** you can get the value from the variable using **`getVar()`**
+
+    4. **`getVar()`** can also be used to fetch user defined data created from **UserDefined Settings panel**
+
+    5. In addition to **`getVar()`**, you can also use **`getUserDefined()`** to fetch user defined data created from **UserDefined Settings panel**
+
+    6. If you want to store some value in a variable[%dyanmicVar%] you can store the value into a variable using **`addVar()`**. The scope is for __Current Testcase only__
+
+    7. Unlike **`addVar()`**, the scope for **`addGlobalVar()`** is for __All Testcases in the Current Execution__
+
+    8. To find the current step's **`object`**
+
+    9. To access the object value pass ObjectName and PageName as inputs.
+
+        :material-arrow-right-thin: ObjectName = **p**
+
+        :material-arrow-right-thin: PageName = **Yahoo**
+                
+    10. Using this **`locator`** you can perform Playwright Operations
+
+    11. To access the data from DataSheets pass DataSheetName and ColumnName as inputs.
+                    
+        SheetName = **Sample**, Columnname = **Data1**
+
+        :warning: Don't pass GlobalData as inputsheet
+
+    12. To get values from specified Iteration and Subiteration   
+    13. To get values from specified Scenario, Testcase, Iteration and Subiteration
+    14. To write values into DataSheet pass DataSheetName and ColumnName as inputs.
+       
+        SheetName = **Sample**, Columnname = **Data1**, Data = **"John Doe"**
+
+        :warning: Don't pass GlobalData as inputsheet
+    15. To write values for specified Iteration and Subiteration 
+    16. To write values for specified Scenario, Testcase, Iteration and Subiteration 
+    17. Where **orderId** is a column in the data sheet
+    18. To get value
+    19. To put values in the sheet
+    20. To display in Report
+    21. To display in Report with custom html tags
+    22. To get the current Iteration
+    23. To get the current SubIteration
+    24. To get the current Scenario
+    25. To get the current Testcase
+    26. To get the current BrowserName
+    27. To stop the current iteration if you want to... based on a condition
+    28. Stop the execution
+    29. To execute other testcases - **scenario name**, **testcase name**, **subiteration**
+    30. **scenario name**, **testcase name**
+    31. Basing the condition on a web locator being visible
+    32. Calling another test case if the condition is matched
+    
+        Pass the **Scenario name**, **Testcase name** and **Subiteration index**
+    33. If needed you can break the test case also by calling existing function **StopBrowser**  
+
 
 ------------------------------

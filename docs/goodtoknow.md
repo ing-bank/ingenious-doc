@@ -1,125 +1,154 @@
-# **Good to know features**
+# **Additional features**
 
 -------------------------------------
 
-## 01. Global Data Sheets
+??? example "Global Data Sheets"
 
-For every project that is created in INGenious, a default
-global data sheet is generated. The data entered in the global data sheet can be
-referenced in any test data sheet within the project. This allows you to reuse the
-data across multiple test cases.
+    ## Global Data Sheets
 
-**Where to use the Global Data?**
+    For every project that is created in INGenious, a default
+    global data sheet is generated. The data entered in the global data sheet can be
+    referenced in any test data sheet within the project. This allows you to reuse the
+    data across multiple test cases.
 
-Identify the Data column name which is common across multiple data sheets.
+    **Where to use the Global Data?**
 
-![globaldatasheet1](img/Things/GlobalDataSheet1.png "globaldatasheet1")
+    Identify the Data column name which is common across multiple data sheets.
 
-Select that data value and click on **global data** icon, as shown in the image above. Give the global data id, in the respective window, as shown below,
+    ![globaldatasheet1](img/Things/GlobalDataSheet1.png "globaldatasheet1")
 
-![globaldatasheet2](img/Things/GlobalDataSheet2.png "globaldatasheet2")
+    Select that data value and click on **global data** icon, as shown in the image above. Give the global data id, in the respective window, as shown below,
 
-You will get the global id in the global data sheet, as shown below.
+    ![globaldatasheet2](img/Things/GlobalDataSheet2.png "globaldatasheet2")
 
-![globaldatasheet3](img/Things/GlobalDataSheet3.png "globaldatasheet3")
+    You will get the global id in the global data sheet, as shown below.
 
-## 02. Rename a Project
+    ![globaldatasheet3](img/Things/GlobalDataSheet3.png "globaldatasheet3")
 
- To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
+ ------   
 
-![details](img/Things/Details.png "details")
+??? example "Rename a Project"   
 
- The **Project Details** window opens and the following options are available in the window, as shown below.
+    ## Rename a Project
 
-![details1](img/Things/Details1.png "details1")
+    To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
 
- To rename your project, give the new name in the **Project Name text box** and click on **Rename**. Your project will be renamed.
+    ![details](img/Things/Details.png "details")
 
- The **Open** option opens the project location in your system.
+    The **Project Details** window opens and the following options are available in the window, as shown below.
 
- Right below these options, you have details on the total number of scenarios, test cases, reusable components and test data sheets present in the project.
+    ![details1](img/Things/Details1.png "details1")
 
-## 03. Execute A Reusable For Specific Set Of Data
+    To rename your project, give the new name in the **Project Name text box** and click on **Rename**. Your project will be renamed.
 
-A reusable test case can be executed with a desired set of data by providing the sub iteration index in the Input column. It will fetch the data set from the data sheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set set of data passed each time.
+    The **Open** option opens the project location in your system.
 
-![subiteration](img/Things/SubIteration.png "subiteration")
+    Right below these options, you have details on the total number of scenarios, test cases, reusable components and test data sheets present in the project.
 
-## 04. Looping
+-----
 
-**NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Subiterations
+??? example   "Execute A Reusable For Specific Set Of Data"
 
-![subiteration1](img/Things/Subiteration1.png "subiteration1")
+    ## Execute A Reusable For Specific Set Of Data
 
- * For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub iterations for Iteration 1)
+    A reusable test case can be executed with a desired set of data by providing the sub iteration index in the Input column. It will fetch the data set from the data sheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set set of data passed each time.
 
-   * For first iteration, data will be taken from Iteration 1 and Subiteration 1
+    ![subiteration](img/Things/SubIteration.png "subiteration")
 
-   * For second iteration, data will be taken from Iteration 1 and Subiteration 2
+----
 
- * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
+??? example "Looping"
 
- * To iterate through the entire Test Case for all the sub iterations of data in the data sheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
+    ## Looping
 
-## 05. Iterations And Subiterations In Test Execution Panel
+    === "**With Data**"
 
- * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub iterations.
+        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Subiterations
 
-![iterationOption](img/Things/IterationOption.png "iterationOption")
+        ![subiteration1](img/Things/Subiteration1.png "subiteration1")
 
- * In the above image, there are some options given under the Iteration column
+        * For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub iterations for Iteration 1)
 
-   * **All**: will Iterate through all your Iterations of your datasheet.
+        * For first iteration, data will be taken from Iteration 1 and Subiteration 1
 
-   * **Single**: will only Iterate through Iteration 1 of your datasheet.
+        * For second iteration, data will be taken from Iteration 1 and Subiteration 2
 
-   * **n:n** (Range): will Iterate through a range of iterations.
+        * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
 
-    > For example, if you use 2:5, then INGenious will only Iterate through Iteration 2 to Iteration 5 even if there are more iterations.
+        * To iterate through the entire Test Case for all the sub iterations of data in the data sheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
 
-   * **n**: will allow you to Iterate a particular (nth) iteration in your datasheet.
+    === "**Without Data**"
 
-    > For example, if you use 5, then INGenious iterate only the 5th iteration and all its sub iterations.
+        **Looping Without Test Datasheet**
 
-> **Note:** Subiterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
+        * To repeat few steps, use Start Loop and **End Loop:@n**.
 
-**Looping Without Test Datasheet**
+        ![looping](img/Things/Looping.png "looping")
 
- * To repeat few steps, use Start Loop and **End Loop:@n**.
-
-![looping](img/Things/Looping.png "looping")
-
- * In the above image, Start Loop is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
-
-## 06. Handle Random Actions/Pop up Windows
-
-In some applications, there may be components which will originate at random ie. the origination of such components cannot be predicted. This section will describe how to handle such components.
-
-**Logic**
-
-Since the origin of some components cannot be predicted, check for the availability of the respective component before or after performing each step.
-
-**How To Do It?**
-
- * Open ther Engine in **Eclipse IDE** (or any IDE supporting java development).
-
- * Navigate to **com.ing.engine.execution.run**.
- 
- * The following actions will be available in this class **Annotation**:
-
- * **beforeStepExecution**:Enter the code to handle the component here ,if you want to perform the check before the execution of each step.
-
- * **afterStepExecution**:Enter the code to handle the component here,if you want to perform the check after the execution of each step.
+        * In the above image, Start Loop is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
 
 
-## 07. How To Navigate between Test Data Sheets?
+-------
 
- * Right click on any data sheet and choose the option **Search Test Data** from the context menu
+??? example "Iterations And Subiterations In Test Execution Panel"
 
- * In the **Go To Test Data** window, choose the test data sheet or the global data sheet to which you want to navigate
+    ## Iterations And Subiterations In Test Execution Panel
 
- * You will be navigated to the respective sheet after clicking on **[OK]**
+    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub iterations.
 
+    ![iterationOption](img/Things/IterationOption.png "iterationOption")
+
+    * In the above image, there are some options given under the Iteration column
+
+    * **All**: will Iterate through all your Iterations of your datasheet.
+
+    * **Single**: will only Iterate through Iteration 1 of your datasheet.
+
+    * **n:n** (Range): will Iterate through a range of iterations.
+
+        > For example, if you use 2:5, then INGenious will only Iterate through Iteration 2 to Iteration 5 even if there are more iterations.
+
+    * **n**: will allow you to Iterate a particular (nth) iteration in your datasheet.
+
+        > For example, if you use 5, then INGenious iterate only the 5th iteration and all its sub iterations.
+
+    > **Note:** Subiterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
+
+-----
+
+??? example "Handle actions before and after a step"
+
+    ## Handle actions before and after a step
+
+    In some applications, there may be components which will originate at random ie. the origination of such components cannot be predicted. This section will describe how to handle such components.
+
+    **Logic**
+
+    Since the origin of some components cannot be predicted, check for the availability of the respective component before or after performing each step.
+
+    **How To Do It?**
+
+    * Open the Engine in **Eclipse IDE** (or any IDE supporting java development).
+
+    * Navigate to **com.ing.engine.execution.run**.
+    
+    * The following actions will be available in this class **Annotation**
+
+        * **`beforeStepExecution`**: Enter the code to handle the component here, if you want to perform the check **before** the execution of each step.
+
+        * **`afterStepExecution`**: Enter the code to handle the component here, if you want to perform the check **after** the execution of each step.
+
+----
+??? example "How To Navigate between Test Data Sheets"
+    ## How To Navigate between Test Data Sheets
+
+    * Right click on any data sheet and choose the option **Search Test Data** from the context menu
+
+    * In the **Go To Test Data** window, choose the test data sheet or the global data sheet to which you want to navigate
+
+    * You will be navigated to the respective sheet after clicking on **[OK]**
+
+----
 
 ## 08. How To Call AutoIT scripts in the framework?
 
@@ -176,7 +205,7 @@ Follow the steps below to access those options.
 
 | **Function**     | **Syntax** | **Description** |
 | --------------| ---------------- |-------------- |
-| =Round  | =Round(Decimal Number)      |Will **Round Off** the given decimal number |
+| [`=Round`](#)  | =Round(Decimal Number)      |Will **Round Off** the given decimal number |
 | =Pow    | =Pow(a,b)                   |Will return the value of **a^b** |
 | =Min    | =Min(a,b)                   |Will return the minimum number between **a** and **b** |
 | =Max    | =Max(a,b)                   |Will return the maximum number between **a** and **b** |
@@ -191,7 +220,7 @@ Follow the steps below to access those options.
 | =getOccurance   | =getOccurance(Original String,i) |Will return the **number of occurance** of a substring in a String, in this case 3 |
 | =Trim   | =Trim(" TargetString ") |Will **Trim** a String |
 | =Replace   | =Replace('Target String','g','b',first) |Will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
-| =Replace   | =Replace(%var%,'g','b',first) |Suppose %var% has value 'Target String' then it will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
+| =Replace   | =Replace(`%var%`,'g','b',first) |Suppose %var% has value 'Target String' then it will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
 | =Replace   | =Replace('Target String','g','b',all) |Will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
 | =Replace   | =Replace(%var%,'g','b',all) |Suppose %var% has value 'Target String' then it will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
 | =Substring   | =Substring(%var%,startindex,endindex) |Suppose %var% has value 'Netherlands' and start index as 3 and end index as 6 then it will give the substring. **Output : her** |

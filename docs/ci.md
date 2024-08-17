@@ -2,7 +2,9 @@
 icon: material/microsoft-azure-devops
 ---
 
-# **Azure DevOps Integration**  
+# Continuous Integration
+
+## **Azure DevOps Integration**  
 
 -----------------------------------
 Integration with Azure DevOps involves the following points :
@@ -230,3 +232,9 @@ If we click on the `Pipeline Name` and navigate to the **`Analytics`** tab of th
 We can use this feature to determine the health of the pipeline and analysis of historical test reports.
 
  -------------------------------------
+
+!!! info "Remote Execution Integrations"
+
+    |Lambda Test | BrowserStack| SauceLabs | Selenium Grid |
+    |---|---|---|---|
+    | <img src="./img/remoteexecution/lamdatest.svg" alt="grid" width="50"/> | <img src="./img/remoteexecution/browserstack.webp" alt="grid" width="50"/> | <img src="./img/remoteexecution/saucelabs.webp" alt="grid" width="50"/> | <img src="./img/remoteexecution/grid.svg" alt="grid" width="50"/> | 

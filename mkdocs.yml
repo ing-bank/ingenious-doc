@@ -8,6 +8,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.code.annotate
  user_color_mode_toggle: true
  #palette: 
 
@@ -43,7 +44,7 @@ plugins:
     - search
 
 nav:
- - Home: home.md
+ - Home: index.md
  - Getting Started: gettingstarted.md
  - Know the framework: knowyourframework.md
  - Browser Testing: 
@@ -79,12 +80,13 @@ nav:
     - Command Line Interface: cli.md            
  - Integrations :
     - BDD: bdd.md
-    - Azure DevOps Pipelines: azure.md
-    - Azure DevOps Test Plan: testplan.md       
+    - Azure DevOps Test Plan: testplan.md
+    - Continuous Integration: ci.md       
     - GitHub Actions: githubActions.md 
- - Resources :
+ - Hidden Gems :
     - Reporting: browsertesting/playwrightreporting.md
-    - Good to Know: goodtoknow.md
+    - Shortcuts: shortcuts.md
+    - Additional features: additionalfeatures.md
     - Tips: tips.md
     - Troubleshooting: troubleshooting.md
     #- FAQ: faq.md       
@@ -109,6 +111,7 @@ features:
     - content.code.annotation
     - content.code.copy
     - content.footnote.tooltips
+    - content.action.edit
 extra:
   generator: false  
 
@@ -116,6 +119,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: default
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true

@@ -22,7 +22,7 @@
 
 After performing the above steps, you can see the Project imported in your IDE. 
 
->>The process is exactly the same for IntelliJ or any other IDE.
+>The process is exactly the same for IntelliJ or any other IDE.
 
 ![import](../img/engine/Import_MavenProject.gif "import")
 

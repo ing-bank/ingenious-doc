@@ -15,12 +15,7 @@
 ## **Launch Utilities**
 
 | Shortcut Keys  | Description                                 |
-|----------------|---------------------------------------------|
-| ++ctrl+alt+p++  | Start Spy from the UI and open Spy window   |           
-| ++ctrl+alt+h++ | Start Heal from the UI and open Heal window |           
-| ++alt+s++       | To start Spy during Heal                    |           
-| ++ctrl+alt+i++ | Start Image Spy                             |
-| ++ctrl+alt+m++ | Start Mobile Spy                            |           
+|----------------|---------------------------------------------|           
 | ++ctrl+alt+r++ | Start Recording                             |
 
 ------------------------------
@@ -29,9 +24,9 @@
 
 | Shortcut Keys   | Description                      |
 |-----------------|----------------------------------|
-| ++alt+shift+n++  | Navigate to TEST DESIGN panel    |           
-| ++alt+shift+e++  | Navigate to TEST EXECUTION panel |           
-| ++alt+shift+d++ | Navigate to DASHBOARD            |           
+| ++alt+shift+n++  | Navigate to Test Design panel    |           
+| ++alt+shift+e++  | Navigate to Test Execution panel |           
+| ++alt+shift+d++ | Navigate to Dashboard           |           
 | ++alt+shift+a++  | Adjust UI                        |
 
 ------------------------------

@@ -2,33 +2,6 @@
 -------------------------------
 
 
-Please join this [Teams Channel](https://teams.microsoft.com/l/team/19%3afMr7ZiBuDSIecPQP5yeTdO5yPi9nZtQvx48PSGh0gr41%40thread.tacv2/conversations?groupId=849b8346-0976-4dcb-9e43-b16efaa867dc&tenantId=587b6ea1-3db9-4fe1-a9d7-85d4c64ce5cc) to post questions or inquiries about the solution. The community will try to respond.
-
--------------------------------
-
-## Error in Connection
-
-Follow the below steps for such scenario:
-
-**Checking Connection status and establishing the same**
-
-**For Chrome and Firefox:**
-
-Follow the steps below to troubleshoot the "error in Connection" error message, 
- 
- * Open the **options window, right-click** the add-on to launch options window in **chrome** and use the shortcut **Ctrl+Shift+O** in firefox for the same.
-
- * Launch **spy or heal or record** from the IDE 
-
- * Click on **Test Connection**, use the default port **8887**, this port can also be changed as per your choice.
-
- * If you are getting a **red bulb**, the certificate is not installed properly, so click on the bulb again, you will be navigated to the url **https://localhost:8887/status**, you need to give "**Proceed to unsafe**" in chrome and **Add exception** in Firefox to get to this link
-
- * If you do not get this message then you need to install the certificates manually.
-
-
-> **NOTE**: A green bulb indicates that the connection between browser extension and the UI is established and is working fine.
-
 ------------------------------------------
 
 ## Unable To Open The Framework After Introducing Your Custom Method
@@ -47,32 +20,33 @@ If you face this issue after performing inject script then delete the **.class f
 > **Note:** This could also be because the **.jar** files present in the **location\lib\commands** might have got corrupted. So you can simply remove those files to open INGenious.
 
 
+??? example "How To Set Java Path Variable For INGenious"
 
-**How To Hard Code Java Path Variable For INGenious**
+    **How To Set Java Path Variable For INGenious**
 
-> It is possible to hard code the java path in the **Run.bat** file.Refer the section below on how it can be done.
+    > It is possible to set the java path in the **Run.bat** for Windows or the **Run.command** for Mac or Linux. Refer the section below on how it can be done.
 
-**Prerequisites**
+    **Prerequisites**
 
-Following must be installed in your system:
+    Following must be installed in your system:
 
- * INGenious setup
+    * INGenious setup
 
- * Java 11 and above
+    * Java 11 and above
 
- **How to do it?**
+    **How to do it?**
 
- * Navigate to the location where **INGenious** is installed in your system.
+    * Navigate to the location where **INGenious** is installed in your system.
 
- * Right-click the **Run** batch file.
+    * Right-click the **Run** batch file.
 
- * Click the edit option in the context menu.
+    * Click the edit option in the context menu.
 
- * Give the path of the **jre** location under the **'SET PATH'** like this, **SET PATH="C:\Program Files\Java\jdk1.x.x_xx\jre\bin"**.
+    * Give the path of the **jre** location under the **'SET PATH'** like this, **SET PATH="C:\Program Files\Java\jdk1.x.x_xx\jre\bin"**.
 
- * Save the file.
+    * Save the file.
 
- * Double-click the **Run.bat** file and launch Application.
+    * Double-click the **Run.bat** file and launch Application.
 
  -----------------------------------------------
 

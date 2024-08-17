@@ -1,5 +1,0 @@
----
-icon: simple/githubactions
----
-
-#GitHubActions
