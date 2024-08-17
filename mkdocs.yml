@@ -40,7 +40,6 @@ theme:
       quote: octicons/quote-16
 
 plugins:
-    - mkdocs-video
     - search
 
 nav:
