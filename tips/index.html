@@ -534,6 +534,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../browsertesting/autowaiting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-waiting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -545,10 +566,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -559,8 +580,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Actions
           </label>
@@ -1631,15 +1652,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#object-property-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Property Hierarchy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#rename-and-refactor" class="md-nav__link">
     <span class="md-ellipsis">
       Rename and Refactor
@@ -1652,15 +1664,6 @@
   <a href="#report-sharing" class="md-nav__link">
     <span class="md-ellipsis">
       Report Sharing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-existing-browser" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Existing Browser
     </span>
   </a>
   
@@ -1766,15 +1769,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#object-property-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Property Hierarchy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#rename-and-refactor" class="md-nav__link">
     <span class="md-ellipsis">
       Rename and Refactor
@@ -1787,15 +1781,6 @@
   <a href="#report-sharing" class="md-nav__link">
     <span class="md-ellipsis">
       Report Sharing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-existing-browser" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Existing Browser
     </span>
   </a>
   
@@ -1873,7 +1858,7 @@
 <p>Uncheck the check box for “Take full page screen shots”, under <strong>Run settings</strong> tab.</p>
 </li>
 <li>
-<p>You can also enable/disable the screenshots for the PASS or FAIL steps bychecking/unchecking the <strong>Pass</strong> or <strong>Fail</strong> checkboxes respectively.</p>
+<p>You can also enable/disable the screenshots for the Pass or Fail steps by checking/unchecking the <strong>Pass</strong> or <strong>Fail</strong> checkboxes respectively.</p>
 </li>
 </ul>
 <p><img alt="screenshot" src="../img/Things/screenshot.png" title="screenshot" /></p>
@@ -1893,42 +1878,6 @@
 <p><img alt="gd2" src="../img/Things/GlobalDataSheet2.png" title="gd2" /></p>
 <p>You will get the global id in the global data sheet, as shown below.</p>
 <p><img alt="gd3" src="../img/Things/GlobalDataSheet3.png" title="gd3" /></p>
-</details>
-<hr />
-<details class="example">
-<summary>Object Property Hierarchy</summary>
-<h2 id="object-property-hierarchy">Object Property Hierarchy</h2>
-<p><strong>Setting Object Property Hierarchy at Project, Page and Object Level</strong></p>
-<p>You can change the priority of properties of a web element based on which, elements are identified as Object, Page and Project level in the Object Repository.</p>
-<p><strong>Why is it needed?</strong></p>
-<ul>
-<li>
-<p>Any object property, by which we can identify the object uniquely can be set as high priority to reduce the time taken to identify the object on the Web application.</p>
-</li>
-<li>
-<p>Instead of setting the property hierarchy for each object individually, the hierarchy can be set as the project or the page level. As a result, all the objects within the same page or project will follow the same property hierarchy, enabling easy identification of objects.</p>
-</li>
-</ul>
-<p><strong>When will it be useful?</strong></p>
-<p>If the objects <strong>id/name</strong> is dynamic in nature, we can set the object priority to relative <strong>xpath/CSS</strong> to identify the object.</p>
-<p><strong>How can we implement it?</strong></p>
-<ul>
-<li>To change priority at <strong>Object level</strong>, select an Object in Object Repository then in the object properties table shuffle the attributes using <strong>Up arrow or Down arrow</strong>. Now the object will be identified using the changed the property attribute.</li>
-</ul>
-<p><img alt="orarrow" src="../img/Things/ObjectPropertyHierarchyarrow.png" title="orarrow" /></p>
-<ul>
-<li>To change priority at <strong>Page level</strong>, set the property hierarchy in the Properties pane. Then, right click, go to
-<strong>Set Priority</strong> and select the option <strong>Set Priority to Page</strong>. Now all the objects within the page will follow the same hierarchy.</li>
-</ul>
-<p><img alt="or1" src="../img/Things/ObjectPropertyHierarchy13.png" title="or1" /></p>
-<ul>
-<li>To change priority at <strong>Project level</strong>, set the property hierarchy in the Properties pane. Then, right click, go to <strong>Set Priority</strong> and select the option <strong>Set Priority to All</strong>. Now all the objects within the project will follow the same hierarchy.</li>
-</ul>
-<p><img alt="or2" src="../img/Things/OrPriorityAll.png" title="or2" /></p>
-<ul>
-<li>To change priority for <strong>selected objects</strong>, select the objects and set the property hierarchy in the Properties pane. Then, right click, go to <strong>Set Priority</strong> and select the option <strong>Set Priority to Selected</strong>. Now the selected objects will follow the same hierarchy.</li>
-</ul>
-<p><img alt="or2" src="../img/Things/ORPrioSelected.png" title="or2" /></p>
 </details>
 <hr />
 <details class="example">
@@ -1963,32 +1912,6 @@
 <p>This is because of the absence of the media folder found in the <strong><installationlocation>\Projects\<your project>\Results location</strong>. The media folder contains all the necessary <strong>js, css</strong> and other files required to present the report file.</p>
 <p>So ensure that you share the entire results folder found in the location <strong><installationlocation>\Projects\<your project>\Results</strong>. You can compress and share the zipped file.</p>
 <p>You can also create standalone reports for the test cases or test sets. Before execution, go to <strong>Configurations</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> <strong>Options</strong> and enable the <strong>Create Standalone Report</strong> checkbox. After execution, the reports created will be standalone and can be shared independently without the Results folder.</p>
-</details>
-<hr />
-<details class="example">
-<summary>Use Existing Browser</summary>
-<h2 id="use-existing-browser">Use Existing Browser</h2>
-<p><strong>Use Case:</strong></p>
-<p>If you want to run all the test cases in your test set in one session in the same browser in which the first test case is configured, then you can use this option.</p>
-<p><strong>How To Use:</strong></p>
-<p><strong>Create a test set in the execution panel</strong></p>
-<p>*Choose the browser name for the first test case alone, which is Chrome in the image below, the default browser for the other test cases will be Firefox</p>
-<p><img alt="existingbrowser1" src="../img/Things/UseExistingBrowser1.png" title="existingbrowser1" /></p>
-<ul>
-<li>With the test set selected on the left (Test Suite section), navigate to <strong>Configuration</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> <strong>Run Settings</strong></li>
-</ul>
-<p><img alt="existingbrowser2" src="../img/Things/UseExistingBrowser2.png" title="existingbrowser2" /></p>
-<ul>
-<li>
-<p>In the Run settings window, check the option <strong>Use Existing Browser</strong> and click on <strong>Save</strong>.</p>
-</li>
-<li>
-<p>Now when you run the test set, all your test cases will be executed in the browser configured for the first test case in the test set in one session, irrespective of the browser names configured for the rest of the test cases.</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>NOTE:</strong> This option is not applicable for parallel execution.</p>
-</blockquote>
 </details>
 <hr />
 <details class="example">

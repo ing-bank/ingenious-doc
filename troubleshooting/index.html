@@ -532,6 +532,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../browsertesting/autowaiting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-waiting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -543,10 +564,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -557,8 +578,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Actions
           </label>
@@ -1632,9 +1653,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#if-you-get-a-certification-path-error-like-this" class="md-nav__link">
+  <a href="#how-to-set-java-path-variable-for-ingenious" class="md-nav__link">
     <span class="md-ellipsis">
-      If you get a certification path error like this :
+      How To Set Java Path Variable For INGenious
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkix-path-building-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKIX path building failed
     </span>
   </a>
   
@@ -1692,9 +1722,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#if-you-get-a-certification-path-error-like-this" class="md-nav__link">
+  <a href="#how-to-set-java-path-variable-for-ingenious" class="md-nav__link">
     <span class="md-ellipsis">
-      If you get a certification path error like this :
+      How To Set Java Path Variable For INGenious
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkix-path-building-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKIX path building failed
     </span>
   </a>
   
@@ -1717,7 +1756,8 @@
 
 <h1 id="troubleshooting"><strong>Troubleshooting</strong></h1>
 <hr />
-<hr />
+<details class="example">
+<summary>Unable To Open The Framework After Introducing Your Custom Method</summary>
 <h2 id="unable-to-open-the-framework-after-introducing-your-custom-method">Unable To Open The Framework After Introducing Your Custom Method</h2>
 <p>This happens when the <strong>ingenious-engine-<version_number>.jar</strong> found in <strong>INGenious
 installation_location/lib</strong>, gets corrupted while exporting the <strong>ingenious-engine-<version_number>.jar</strong> back from <strong>Engine</strong> or while inject script is performed. You might get an exception stating that <strong>main class not found</strong>.</p>
@@ -1730,9 +1770,11 @@ installation_location/lib</strong>, gets corrupted while exporting the <strong>i
 <blockquote>
 <p><strong>Note:</strong> This could also be because the <strong>.jar</strong> files present in the <strong>location\lib\commands</strong> might have got corrupted. So you can simply remove those files to open INGenious.</p>
 </blockquote>
+</details>
+<hr />
 <details class="example">
 <summary>How To Set Java Path Variable For INGenious</summary>
-<p><strong>How To Set Java Path Variable For INGenious</strong></p>
+<h2 id="how-to-set-java-path-variable-for-ingenious">How To Set Java Path Variable For INGenious</h2>
 <blockquote>
 <p>It is possible to set the java path in the <strong>Run.bat</strong> for Windows or the <strong>Run.command</strong> for Mac or Linux. Refer the section below on how it can be done.</p>
 </blockquote>
@@ -1769,7 +1811,10 @@ installation_location/lib</strong>, gets corrupted while exporting the <strong>i
 </ul>
 </details>
 <hr />
-<h2 id="if-you-get-a-certification-path-error-like-this">If you get a certification path error like this :</h2>
+<details class="example">
+<summary>PKIX path building failed</summary>
+<h2 id="pkix-path-building-failed">PKIX path building failed</h2>
+<p>If you get a certification path error like this :</p>
 <p><code>PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code> </p>
 <p>You need to add the certificate of the application whose APIs you are trying to test. This error can also come if the certificates of Global Selenium Grid is not added (in case of Web Testing using Selenium Grid)</p>
 <p>To add the certificate follow the steps below :</p>
@@ -1795,6 +1840,7 @@ installation_location/lib</strong>, gets corrupted while exporting the <strong>i
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">java</span> <span class="n">-Xms128m</span> <span class="n">-Xmx1024m</span> <span class="n">-Dfile</span><span class="p">.</span><span class="n">encoding</span><span class="p">=</span><span class="n">UTF</span><span class="p">-</span><span class="n">8</span> <span class="n">-cp</span> <span class="n">ingenious-ide</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">jar</span><span class="p">;</span><span class="k">%</span><span class="n">APP_CLASSPATH</span><span class="p">%;</span> <span class="n">com</span><span class="p">.</span><span class="n">ing</span><span class="p">.</span><span class="n">ide</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">Main</span> <span class="p">%*</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span>
 </span></code></pre></div>
+</details>
 
 
 

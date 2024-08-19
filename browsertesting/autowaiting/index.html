@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../playwrightlocatorstrategy/">
+      
+      
+        <link rel="next" href="../../playwrightActions/browser/">
       
       
       <link rel="icon" href="../../doc_images/favicon.ico">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Playwright Recording - INGenious Playwright Studio</title>
+        <title>Auto-waiting - INGenious Playwright Studio</title>
       
     
     
@@ -101,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#playwright-recording" class="md-skip">
+        <a href="#auto-waiting" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Playwright Recording
+              Auto-waiting
             
           </span>
         </div>
@@ -256,11 +260,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../browsertesting/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Browser Testing
@@ -332,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../browsertesting/playwrightreporting/" class="md-tabs__link">
+        <a href="../playwrightreporting/" class="md-tabs__link">
           
   
   Hidden Gems
@@ -446,23 +452,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -473,7 +484,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Browser Testing
@@ -487,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browsertesting/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browsertesting/playwrightlocatorstrategy/" class="md-nav__link">
+      <a href="../playwrightlocatorstrategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,10 +537,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../browsertesting/autowaiting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -538,6 +558,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1006,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browsertesting/playwrightmocking/" class="md-nav__link">
+      <a href="../playwrightmocking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browsertesting/playwrightreporting/" class="md-nav__link">
+      <a href="../playwrightreporting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1630,32 +1651,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#steps-for-recording" class="md-nav__link">
-    <span class="md-ellipsis">
-      Steps for Recording :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-the-recorded-steps-to-create-automation-test-case-scaffolding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import the recorded steps to create automation test case scaffolding :
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1669,57 +1664,195 @@
                   
 
 
-<h1 id="playwright-recording">Playwright Recording</h1>
-<hr />
-<p><strong>Prerequsite :</strong> <code>Maven</code> is installed in the system</p>
-<h2 id="steps-for-recording">Steps for Recording :</h2>
+<h1 id="auto-waiting">Auto-waiting</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Playwright performs a range of actionability checks on the elements before making actions to ensure these actions behave as expected. It auto-waits for all the relevant checks to pass and only then performs the requested action. If the required checks do not pass within the given <code>timeout</code>, action fails with the <code>TimeoutError</code>.</p>
+</div>
+<p>For example, for <code>click()</code> action, Playwright will ensure that:</p>
 <ul>
-<li>
-<p>Launch <strong>INGenious Playwright Studio</strong></p>
-</li>
-<li>
-<p>Click on the <strong>Recorder</strong> icon</p>
-</li>
+<li>locator resolves to an exactly one element</li>
+<li>element is Visible</li>
+<li>element is Stable, as in not animating or completed animation</li>
+<li>element Receives Events, as in not obscured by other elements</li>
+<li>element is Enabled</li>
 </ul>
-<p><img alt="record" src="../../img/recording/1.JPG" title="record" /></p>
-<p>Internally this will call the following <code>mvn</code> command : <code>mvn exec:java -f engine/pom.xml -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen</code></p>
-<ul>
-<li>A loader will show up while the playwright-recorder is being loaded</li>
-</ul>
-<blockquote>
-<p><strong>If a new version of Playwright is available, this step will try to download that first. So the recorder can time out</strong> - Pay attention to the logs!!</p>
-</blockquote>
-<ul>
-<li>
-<p>The <strong>Playwright Inspector</strong> will launch along with chromium browser</p>
-</li>
-<li>
-<p>Enter the URL of the Application Under Test (AUT) in the <strong>chromium</strong> browser and perform the actions you want to perform on the application</p>
-</li>
-<li>
-<p>You will see the steps getting recorded in the <strong>Playwright Inspector</strong></p>
-</li>
-<li>
-<p>Once the recording is done, <strong>save the steps in a <code>.txt</code> file</strong>
- <br>
- Currently only <code>.txt</code> is supported. Going forward all formats : <code>.java</code>, <code>.cs</code>, <code>.py</code>, <code>.js</code> will be supported for import</p>
-</li>
-</ul>
-<h2 id="import-the-recorded-steps-to-create-automation-test-case-scaffolding">Import the recorded steps to create automation test case scaffolding :</h2>
-<ul>
-<li>
-<p>From <strong>INGenious Playwright Studio</strong>, navigate to <strong>Tools</strong> &gt; <strong>Import Playwright Recording</strong> &gt; <strong>Import Playwright Recording</strong>.</p>
-</li>
-<li>
-<p>Locate the <strong>.txt file</strong> and click [OK].</p>
-</li>
-<li>
-<p>The file is immediately rendered as <strong>Scenario</strong> and <strong>Test Case</strong>. All the relevant <strong>test steps</strong> with all the <strong>web objects</strong> and <strong>test data</strong> are imported.</p>
-</li>
-<li>
-<p>All the objects are loaded in the <strong>Object Repository</strong>.</p>
-</li>
-</ul>
+<p>Here is the complete list of actionability checks performed for each action:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Visible</th>
+<th>Stable</th>
+<th>Receives Events</th>
+<th>Enabled</th>
+<th>Editable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Check</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Click</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Double Click</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>setChecked</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Tap</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Uncheck</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Hover</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>dragTo</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Screenshot</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Fill</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td><strong>Clear</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td><strong>selectOption</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>selectText</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>scrollIntoViewIfNeeded</strong></td>
+<td>-</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Blur</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>dispatchEvent</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Focus</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Press</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>pressSequentially</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>setInputFiles</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12Z"/></svg></span> Checkout the Playwright documentation <a href="https://playwright.dev/docs/actionability">here</a></p>
 
 
 
