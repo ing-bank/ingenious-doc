@@ -52,7 +52,7 @@
 
     * Uncheck the check box for “Take full page screen shots”, under **Run settings** tab.
 
-    * You can also enable/disable the screenshots for the PASS or FAIL steps bychecking/unchecking the **Pass** or **Fail** checkboxes respectively.
+    * You can also enable/disable the screenshots for the Pass or Fail steps by checking/unchecking the **Pass** or **Fail** checkboxes respectively.
 
     ![screenshot](img/Things/screenshot.png "screenshot")
 
@@ -86,46 +86,6 @@
 
 -----------------------------------
 
-??? example "Object Property Hierarchy"
-
-    ## Object Property Hierarchy
-
-    **Setting Object Property Hierarchy at Project, Page and Object Level**
-
-    You can change the priority of properties of a web element based on which, elements are identified as Object, Page and Project level in the Object Repository.
-
-    **Why is it needed?**
-
-    * Any object property, by which we can identify the object uniquely can be set as high priority to reduce the time taken to identify the object on the Web application.
-
-    * Instead of setting the property hierarchy for each object individually, the hierarchy can be set as the project or the page level. As a result, all the objects within the same page or project will follow the same property hierarchy, enabling easy identification of objects.
-
-    **When will it be useful?**
-
-    If the objects **id/name** is dynamic in nature, we can set the object priority to relative **xpath/CSS** to identify the object.
-
-    **How can we implement it?**
-
-    *  To change priority at **Object level**, select an Object in Object Repository then in the object properties table shuffle the attributes using **Up arrow or Down arrow**. Now the object will be identified using the changed the property attribute.
-
-    ![orarrow](img/Things/ObjectPropertyHierarchyarrow.png "orarrow")
-
-    * To change priority at **Page level**, set the property hierarchy in the Properties pane. Then, right click, go to
-    **Set Priority** and select the option **Set Priority to Page**. Now all the objects within the page will follow the same hierarchy.
-
-    ![or1](img/Things/ObjectPropertyHierarchy13.png "or1")
-
-
-    * To change priority at **Project level**, set the property hierarchy in the Properties pane. Then, right click, go to **Set Priority** and select the option **Set Priority to All**. Now all the objects within the project will follow the same hierarchy.
-
-    ![or2](img/Things/OrPriorityAll.png "or2")
-
-
-    * To change priority for **selected objects**, select the objects and set the property hierarchy in the Properties pane. Then, right click, go to **Set Priority** and select the option **Set Priority to Selected**. Now the selected objects will follow the same hierarchy.
-
-    ![or2](img/Things/ORPrioSelected.png "or2")
-
-------------------------------------------
 
 ??? example "Rename and Refactor"
 
@@ -172,34 +132,6 @@
     You can also create standalone reports for the test cases or test sets. Before execution, go to **Configurations** :material-arrow-right: **Options** and enable the **Create Standalone Report** checkbox. After execution, the reports created will be standalone and can be shared independently without the Results folder.
 
 ----------------------------------
-
-??? example "Use Existing Browser"
-
-    ## Use Existing Browser
-
-    **Use Case:**
-
-    If you want to run all the test cases in your test set in one session in the same browser in which the first test case is configured, then you can use this option.
-
-    **How To Use:**
-
-    **Create a test set in the execution panel**
-
-    *Choose the browser name for the first test case alone, which is Chrome in the image below, the default browser for the other test cases will be Firefox
-
-    ![existingbrowser1](img/Things/UseExistingBrowser1.png "existingbrowser1")
-
-    * With the test set selected on the left (Test Suite section), navigate to **Configuration** :material-arrow-right: **Run Settings**
-
-    ![existingbrowser2](img/Things/UseExistingBrowser2.png "existingbrowser2")
-
-    * In the Run settings window, check the option **Use Existing Browser** and click on **Save**.
-
-    * Now when you run the test set, all your test cases will be executed in the browser configured for the first test case in the test set in one session, irrespective of the browser names configured for the rest of the test cases.
-
-    > **NOTE:** This option is not applicable for parallel execution.
-
-------------------------------------------------------
 
 ??? example "User Defined Variables"
 

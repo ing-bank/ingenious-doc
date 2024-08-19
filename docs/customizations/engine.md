@@ -16,7 +16,7 @@
 
 - [x] Open **Eclipse IDE**
 
-- [x] Import project using **`File`** > **`Import`** > **`Maven`** > **`Existing Maven Projects`**
+- [x] Import project using **`File`** :material-arrow-right: **`Import`** :material-arrow-right: **`Maven`** :material-arrow-right: **`Existing Maven Projects`**
 
 - [x] Locate the **Engine** folder in your system. This location is inside the directory where INGenious is present
 
@@ -58,12 +58,12 @@ Let's take the example below. Let's assume the custom function is added like thi
 
 ![addpackage](../img/engine/3.JPG "addpackage")
 
-- [X] Navigate to the location where the framework is installed >> Go to **`Configuration`** folder >> Inside **`package.properties`** add the package name like this :
+- [X] Navigate to the location where the framework is installed :material-arrow-right: Go to **`Configuration`** folder :material-arrow-right: Inside **`package.properties`** add the package name like this :
 
 ![addpackage](../img/engine/2.JPG "addpackage")
 
 
-- [x] In the same **`Configuration`** folder >> Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
+- [x] In the same **`Configuration`** folder :material-arrow-right: Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
 
 ![settings](../img/engine/4.JPG "settings")
 
@@ -84,7 +84,7 @@ Let's take the example below. Let's assume the custom function is added like thi
 
 === "From Eclipse"
 
-    Right click on the project :arrow_right:  [`Run As`](#)  :arrow_right:  [`Maven Install`](#)
+    Right click on the project :material-arrow-right: [`Run As`](#)  :material-arrow-right:  [`Maven Install`](#)
 
 === "From Command Prompt"
 

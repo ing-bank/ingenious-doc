@@ -11,7 +11,7 @@ After making modifications to the engine, the users can compile the engine and e
 
 - Open **Eclipse IDE**
 
-- Import project using **`File`** > **`Import`** > **`General`** > **`Existing Projects into Workspace`**
+- Import project using **`File`** :material-arrow-right: **`Import`** :material-arrow-right: **`General`** :material-arrow-right: **`Existing Projects into Workspace`**
 
 - Locate the **Engine** project in your system by clicking on **[Browse]**. This location is usually inside the directory where the framework is present
 
@@ -24,7 +24,7 @@ If you see **Build Path** errors after importing the engine, then you can fix th
 
 **Step 1 :** Remove All the libraries
 - Right Click on the Project Name
-- Select Build Path > Configure Build Path
+- Select Build Path :material-arrow-right: Configure Build Path
 - Under the *Libraries* Tab, select all jar files under *Classpath*
 - Click on [Remove] Button
 
@@ -57,11 +57,11 @@ Follow the steps below to export and  replace the **engine.jar** in the `lib` fo
 
 - Right Click and choose **Export** option
 	
-- Select **`Java`** > **`jar`** option and click **[Next]**
+- Select **`Java`** :material-arrow-right:**`jar`** option and click **[Next]**
 	
 - Click on **[Browse]** and select the path as **&lt;installation location&gt;\lib\ingenious-engine.jar**
 
-- Click on **[Finish]** > **[OK]** to complete the overwriting of the engine.jar
+- Click on **[Finish]** :material-arrow-right: **[OK]** to complete the overwriting of the engine.jar
 
 - Restart the framework to load the updated jar with new methods
 	
@@ -84,12 +84,12 @@ For example, if your custom method is added like this :
 
 ![addpackage](img/engine/3.JPG "addpackage")
 
-Navigate to the location where the framework is installed >> Go to **`Configuration`** folder >> Inside **`package.properties`** add the package name like this :
+Navigate to the location where the framework is installed :material-arrow-right: Go to **`Configuration`** folder :material-arrow-right: Inside **`package.properties`** add the package name like this :
 
 ![addpackage](img/engine/2.JPG "addpackage")
 
 
-- In the same **`Configuration`** folder >> Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
+- In the same **`Configuration`** folder :material-arrow-right: Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
 
 ![settings](img/engine/4.JPG "settings")
 

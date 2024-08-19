@@ -1,28 +1,28 @@
 # **Troubleshooting**
 -------------------------------
 
+??? example "Unable To Open The Framework After Introducing Your Custom Method"
 
-------------------------------------------
+    ## Unable To Open The Framework After Introducing Your Custom Method
 
-## Unable To Open The Framework After Introducing Your Custom Method
+    This happens when the **ingenious-engine-<version_number>.jar** found in **INGenious
+    installation_location/lib**, gets corrupted while exporting the **ingenious-engine-<version_number>.jar** back from **Engine** or while inject script is performed. You might get an exception stating that **main class not found**.
 
-This happens when the **ingenious-engine-<version_number>.jar** found in **INGenious
-installation_location/lib**, gets corrupted while exporting the **ingenious-engine-<version_number>.jar** back from **Engine** or while inject script is performed. You might get an exception stating that **main class not found**.
+    To overcome this issue, always take a backup of the **ingenious-engine-<version_number>.jar** before you export the jar from **Engine**. So even when the jar is corrupt you can still replace the existing jar by the new one. Also do not change the name of the **ingenious-engine-<version_number>.jar** available inside the lib folder.
 
-To overcome this issue, always take a backup of the **ingenious-engine-<version_number>.jar** before you export the jar from **Engine**. So even when the jar is corrupt you can still replace the existing jar by the new one. Also do not change the name of the **ingenious-engine-<version_number>.jar** available inside the lib folder.
+    Another alternative is to delete the **recent items** file present in the installation location when INGenious is closed and open again.
 
-Another alternative is to delete the **recent items** file present in the installation location when INGenious is closed and open again.
+    > **Note:** Please do not take the back up in the same location or inside the lib folder. Place it in a different location.
 
-> **Note:** Please do not take the back up in the same location or inside the lib folder. Place it in a different location.
+    If you face this issue after performing inject script then delete the **.class file** of your custom method found in the **userdefined** folder of installation location and close and reopen.
 
-If you face this issue after performing inject script then delete the **.class file** of your custom method found in the **userdefined** folder of installation location and close and reopen.
+    > **Note:** This could also be because the **.jar** files present in the **location\lib\commands** might have got corrupted. So you can simply remove those files to open INGenious.
 
-> **Note:** This could also be because the **.jar** files present in the **location\lib\commands** might have got corrupted. So you can simply remove those files to open INGenious.
-
+---------------------
 
 ??? example "How To Set Java Path Variable For INGenious"
 
-    **How To Set Java Path Variable For INGenious**
+    ## How To Set Java Path Variable For INGenious
 
     > It is possible to set the java path in the **Run.bat** for Windows or the **Run.command** for Mac or Linux. Refer the section below on how it can be done.
 
@@ -50,52 +50,55 @@ If you face this issue after performing inject script then delete the **.class f
 
  -----------------------------------------------
 
+??? example "PKIX path building failed"
 
-##	If you get a certification path error like this :
+    ##	PKIX path building failed
 
-`PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target` 
+    If you get a certification path error like this :
 
-You need to add the certificate of the application whose APIs you are trying to test. This error can also come if the certificates of Global Selenium Grid is not added (in case of Web Testing using Selenium Grid)
+    `PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target` 
 
-To add the certificate follow the steps below :
+    You need to add the certificate of the application whose APIs you are trying to test. This error can also come if the certificates of Global Selenium Grid is not added (in case of Web Testing using Selenium Grid)
 
-a.	Download the certificate. you can refer to [these](https://medium.com/@menakajain/export-download-ssl-certificate-from-server-site-url-bcfc41ea46a2) steps.
+    To add the certificate follow the steps below :
 
-b. Create a folder called `Security` in your INGenious root instance.
+    a.	Download the certificate. you can refer to [these](https://medium.com/@menakajain/export-download-ssl-certificate-from-server-site-url-bcfc41ea46a2) steps.
 
-c. Copy the existing Java `cacerts` file to this folder. Also copy the above downloaded certificate file to this location.
+    b. Create a folder called `Security` in your INGenious root instance.
 
-e. Using command prompt, navigate to this `Security` folder
+    c. Copy the existing Java `cacerts` file to this folder. Also copy the above downloaded certificate file to this location.
 
-d. Import the Trusted Root Certificate into your `cacerts` keystore, using following command :
+    e. Using command prompt, navigate to this `Security` folder
 
-`<path/to/your>keytool -import -trustcacerts -keystore cacerts -storepass changeit -alias <logical_name_of_your_cert> -file your_certificate.crt`
+    d. Import the Trusted Root Certificate into your `cacerts` keystore, using following command :
 
-Example :
+    `<path/to/your>keytool -import -trustcacerts -keystore cacerts -storepass changeit -alias <logical_name_of_your_cert> -file your_certificate.crt`
 
-`"C:\Program Files\Java\jdk-11.0.2\bin\keytool" -import -trustcacerts -keystore cacerts -storepass changeit -alias testApp -file testApp.crt`
+    Example :
 
-e. Make sure in your INGenious `Run.bat` or/and `Run.command file`, the reference of the above `cacerts` is present.
+    `"C:\Program Files\Java\jdk-11.0.2\bin\keytool" -import -trustcacerts -keystore cacerts -storepass changeit -alias testApp -file testApp.crt`
 
-**Run.bat**
+    e. Make sure in your INGenious `Run.bat` or/and `Run.command file`, the reference of the above `cacerts` is present.
 
-```powershell
+    **Run.bat**
 
-@echo off
-pushd %~dp0
+    ```powershell
 
-rem For App to load lib from
-SET APP_CLASSPATH=lib\*;lib\clib\*
+    @echo off
+    pushd %~dp0
 
-IF "%~1" == "" (
-start javaw -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -Djavax.net.ssl.trustStore=Security\cacerts -Djavax.net.ssl.trustStorePassword=changeit -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
-) ELSE (
-java -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
-)
+    rem For App to load lib from
+    SET APP_CLASSPATH=lib\*;lib\clib\*
+
+    IF "%~1" == "" (
+    start javaw -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -Djavax.net.ssl.trustStore=Security\cacerts -Djavax.net.ssl.trustStorePassword=changeit -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
+    ) ELSE (
+    java -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
+    )
 
 
 
-```
+    ```
 
 
 

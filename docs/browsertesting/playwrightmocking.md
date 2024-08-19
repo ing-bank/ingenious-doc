@@ -48,9 +48,11 @@ In INGenious Playwright Studio, the steps will look like this :
  >The built-in mocking actions can be found [here](../playwrightActions/fulfill.md)
 
 -------------------------------- 
-
+<!--
 **The following video will help you to understand mocking better**
 
 <video width="700" height="400"  controls>
   <source src="../../videos/MockYourWebAPIs.mp4" type="video/mp4">
 </video>
+
+-->

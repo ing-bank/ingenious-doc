@@ -1,6 +1,34 @@
 # **Playwright | Report Analysis** 
 -------------------------------------------
 
+??? example "Built-in HTML report"
+
+    ## Built-in HTML report
+
+    INGenious has a powerful built-in HTML Report that gets generated after every test execution.
+
+    ![html](../img/reports/html1.png "html")
+
+    If we click on any of the test cases, it will show a detailed step-wise report like this : 
+
+    ![html](../img/reports/html2.png "html")
+
+-------
+
+??? example "Built-in Extent report"
+
+    ## Built-in Extent report
+
+    INGenious has built-in Extent Report that gets generated after every test execution when this checkbox is ticked :
+
+    ![html](../img/reports/extent1.png "html")
+
+    If we run the tests **only from the Execution Pane**, a detailed step-wise report will show up, like this : 
+
+    ![html](../img/reports/extent2.png "html")
+
+-------
+
 !!! info "Additional Reporting and Debugging Capabilities"
 
     The following are the **built-in capabilities** within the framework to perform report analysis for Playwright-Java tests, in addition to the already available reporting in INGenious

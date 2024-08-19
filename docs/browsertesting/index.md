@@ -15,11 +15,14 @@
 
     All Playwright actions are pre-built inside INGenious. So the users can simply select them from the INGenious IDE making test design fast and easy.
 
+<!--
 **The following video will help you to create your first browser test**
+
 
 <video width="700" height="400"  controls>
   <source src="../videos/CreateYourFirstScipt.mp4" type="video/mp4">
 </video>
+-->
 
 Make sure to check out the following topics :
 

@@ -151,17 +151,19 @@
 
 ----
 
-??? example "How To Call AutoIT scripts in the framework"
+??? example "How To Search in Data Sheets"
 
-    ## How To Call AutoIT scripts in the framework
+    ## How To Search in Data Sheets
 
 
-    To call any **.exe** file and execute the same directly from the UI, follow the procedure
-    below :
+    * To search for **values inside the cells**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green
 
-    * Create a test step, under the object name as **App**, action as **openApp** and give the path of the **exe** file under the **Input** column.
+    ![search](img/Things/cellsearch.png "search")
 
-    Now when you run this script, the corresponding **.exe** file will be executed.
+
+    * To search for **Columns using the Column Header**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green
+
+    ![search](img/Things/colheadersearch.png "search")
 
 ----
 
@@ -270,13 +272,13 @@
 
 ----
 
-??? example "Enabling/Disabling screenshots for PASS/FAIL"
+??? example "Enabling/Disabling screenshots for Pass/Fail"
 
-    ## Enabling/Disabling screenshots for PASS/FAIL
+    ## Enabling/Disabling screenshots for Pass/Fail
 
     In the report, you will be able to view the screenshots for the steps whose Status is **PASS** or **FAIL**. However, you have the option to enable/disable the screenshots for such steps.
 
-    * In the INGenious UI, go to **Configurations** :material-arrow-right: **Run Settings**.
+    * In the INGenious IDE, go to **Configurations** :material-arrow-right: **Run Settings**.
 
     * Under Screenshot section, you can check/uncheck the **Pass** or **Fail** checkboxes in order to enable/disable the screenshots in the report.
 

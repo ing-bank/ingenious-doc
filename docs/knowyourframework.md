@@ -31,7 +31,7 @@
       This is where the Test Scenarios and Test Cases are created and organized.
       Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
 
-      To see this, you can navigate to the location of your tool, then `Projects` >> `Your Project` >> `Test Plan`
+      To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `Test Plan`
 
       ![testplan1](img/toolui/TestPlan1.JPG "testplan1")
 
@@ -43,7 +43,7 @@
 === ":two: Reusable Components"
        This is where the **Reusable** Test Scenarios and Test Cases (**logical grouping of test steps**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
 
-      To see this, you can navigate to the location of your tool, then `Projects` >> `Your Project` >> `Test Plan`
+      To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `Test Plan`
 
       ![reusables](img/toolui/Reusables.JPG "reusables")
 
@@ -87,14 +87,14 @@
       In the following example, we can create the *Checkout* Reusable simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
 
       ![drag_drop1](img/toolui/draganddrop1.gif "drag_drop1")
-      <span style="color:Red">*The above image is a gif. So if its not moving, please reload the page*</span>
+     
 
       As a best practice, it is advisable to compose your test case **only with Reusables** and not have any loose (orphan) steps.
 
       You can also drag and drop the Reusables to create test cases like this :
 
       ![drag_drop2](img/toolui/draganddrop2.gif "drag_drop2")
-      <span style="color:Red">*The above image is a gif. So if its not moving, please reload the page*</span>
+      
   
 
 === ":four: Test Data"
@@ -148,15 +148,15 @@ In this pane we can club our test cases together into logical **test sets** or *
 
  ![execution](img/toolui/execution.JPG "execution")
 
- * **Step 1** : Right Click on the Project Name >> **Add Release** >> Right Click on the Release Name >> **Add TestSet**
- * **Step 2** : Select the test cases that you want to add to the set. You can do individual selections or bulk selection by simply selecting the entire Scenario. Once selected, click on the <span style="color:Green">**Green <--- Arrow**</span> to pull your selections into the set.
+ * **Step 1** : Right Click on the Project Name :material-arrow-right: **Add Release** :material-arrow-right: Right Click on the Release Name :material-arrow-right: **Add TestSet**
+ * **Step 2** : Select the test cases that you want to add to the set. You can do individual selections or bulk selection by simply selecting the entire Scenario. Once selected, click on the <span style="color:Green">**Green :material-arrow-left: Arrow**</span> to pull your selections into the set.
  * **Step 3** : Order the Test Cases in the sequence of your choice. Choose the appropriate Browsers.
- * **Step 4** : Click on the **gear icon** and open up the **Run Settings**. Here you can configure many settings like :
+ * **Step 4** : Click on the **gear icon** :gear: and open up the **Run Settings**. Here you can configure many settings like :
     * Parallel Thread count
     * Execution Mode as Grid or Local
     * Which Environment to pick for execution
 
-Once done, we are good to start our execution by clicking on the <span style="color:Green">**Green Play/Run button**</span>
+Once done, we are good to start our execution by clicking on the <span style="color:Green">**Green Play/Run button :octicons-play-16:**</span>
 
  <br>
 ----------------------------------------------------------------------

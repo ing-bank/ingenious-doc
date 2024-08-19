@@ -49,6 +49,7 @@ nav:
  - Browser Testing: 
     - Create Your First Test: browsertesting/index.md
     - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
+    - Auto-waiting: browsertesting/autowaiting.md
     - Actions: 
         - Browser/Page: playwrightActions/browser.md
         - Click: playwrightActions/clicks.md

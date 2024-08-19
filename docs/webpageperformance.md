@@ -73,7 +73,7 @@
 
  * Use the action **`capturePageTimings`** on strategic pages
 
- * Navigate to **Configuration** > **Run Settings** and check the **Performance Reporting** and **Har** check boxes under the **Run settings tab**.
+ * Navigate to **Configuration** :material-arrow-right: **Run Settings** and check the **Performance Reporting** and **Har** check boxes under the **Run settings tab**.
 
  ![perf1](img/perf/1.JPG "perf1")
 
@@ -92,7 +92,7 @@
 
 ## Compare Har Files
 
-* To Compare your **Har** files, navigate to **Tools>Har Compare** and you will be redirected to the **Har Comparator** site.
+* To Compare your **Har** files, navigate to **Tools** :material-arrow-right: **Har Compare** and you will be redirected to the **Har Comparator** site.
 
 ![perf4](img/perf/4.JPG "perf4")
 

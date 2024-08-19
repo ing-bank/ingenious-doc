@@ -1,4 +1,4 @@
-# **Getting Started**
+# **Let's Get Rolling**
 
 ## **Prerequisites**
 -------
@@ -101,7 +101,7 @@
 ### Import the recording 
 
 
- * From **INGenious Playwright Studio**, navigate to **Tools** > **Import Playwright Recording** > **Import Playwright Recording**.
+ * From **INGenious Playwright Studio**, navigate to **Tools** :material-arrow-right: **Import Playwright Recording** :material-arrow-right: **Import Playwright Recording**.
 
  * Locate the **.txt file** and click [OK].
 
