@@ -9,14 +9,14 @@
       
       
       
-        <link rel="prev" href="../../ci/">
+        <link rel="prev" href="../../integrations/circleci/">
       
       
         <link rel="next" href="../../shortcuts/">
       
       
       <link rel="icon" href="../../doc_images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
@@ -1276,8 +1276,6 @@
       <a href="../../bdd/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 6h3l3.29-3.3a1 1 0 0 1 1.42 0l2.58 2.59a1 1 0 0 1 0 1.41L19 9h-8v2a1 1 0 0 1-1 1 1 1 0 0 1-1-1V8a2 2 0 0 1 2-2m-6 5v4l-2.29 2.29a1 1 0 0 0 0 1.41l2.58 2.59a1 1 0 0 0 1.42 0L11 17h4a1 1 0 0 0 1-1v-1h1a1 1 0 0 0 1-1v-1h1a1 1 0 0 0 1-1v-1h-7v1a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9Z"/></svg>
-  
   <span class="md-ellipsis">
     BDD
   </span>
@@ -1299,8 +1297,6 @@
       <a href="../../testplan/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>
-  
   <span class="md-ellipsis">
     Azure DevOps Test Plan
   </span>
@@ -1318,14 +1314,50 @@
   
   
   
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Continuous Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../ci/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22 18-5 4-8-3v3l-4.19-5.75 12.91 1.05V6.34L22 5.65V18M4.81 16.25V8.96l12.91-2.62L10.6 2v2.84L3.97 6.76 2 9.38v5.69l2.81 1.18Z"/></svg>
-  
   <span class="md-ellipsis">
-    Continuous Integration
+    Getting Started
   </span>
   
 
@@ -1342,7 +1374,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../githubActions.md" class="md-nav__link">
+      <a href="../../integrations/azuredevops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure DevOps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/githubactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1351,6 +1404,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/circleci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circle CI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1655,33 +1737,39 @@
 
 <h1 id="playwright-report-analysis"><strong>Playwright | Report Analysis</strong></h1>
 <hr />
-<p><span style="color:Green">The following are the <strong>built-in capabilities</strong> within the framework to perform report analysis for Playwright-Java tests, in addition to the already available reporting in INGenious</span></p>
+<div class="admonition info">
+<p class="admonition-title">Additional Reporting and Debugging Capabilities</p>
+<p>The following are the <strong>built-in capabilities</strong> within the framework to perform report analysis for Playwright-Java tests, in addition to the already available reporting in INGenious</p>
+</div>
 <hr />
+<details class="example">
+<summary>Tracing</summary>
 <h2 id="tracing">Tracing</h2>
-<summary>How it works</summary>
-
-<p>From INGenious you can generate traces for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong> :</p>
-<p><img alt="trace1" src="../../img/reports/trace1.JPG" title="trace1" /></p>
+<p>From INGenious you can generate traces for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong></p>
+<p><img alt="trace1" src="../../img/reports/trace.png" title="trace1" /></p>
 <p>When you do this, the traces are saved in the <code>Results</code> location of the corresponding tests.</p>
 <p>Traces are a great way for debugging your tests. You can open the saved trace using the following options :</p>
 <ul>
 <li>On your browser on <code>trace.playwright.dev</code> [<strong>This is not recommended in ING as your tests contain details about you ING applications</strong>]</li>
 <li>Using Playwright CLI . Make sure to add the full path to where your <code>trace.zip</code> file is located. This should include the full path to your <code>trace.zip</code> file.</li>
 </ul>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mvn<span class="w"> </span>exec:java<span class="w"> </span>-e<span class="w"> </span>-D<span class="w"> </span>exec.mainClass<span class="o">=</span>com.microsoft.playwright.CLI<span class="w"> </span>-D<span class="w"> </span>exec.args<span class="o">=</span><span class="s2">&quot;show-trace &lt;full/path/to/trace.zip&gt;&quot;</span>
+<div class="language-shell copy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mvn<span class="w"> </span>exec:java<span class="w"> </span>-e<span class="w"> </span>-D<span class="w"> </span>exec.mainClass<span class="o">=</span>com.microsoft.playwright.CLI<span class="w"> </span>-D<span class="w"> </span>exec.args<span class="o">=</span><span class="s2">&quot;show-trace &lt;full/path/to/trace.zip&gt;&quot;</span>
 </span></code></pre></div>
+</details>
+<details class="example">
+<summary>Videos</summary>
 <h2 id="videos">Videos</h2>
-<summary>How it works</summary>
-
-<p>From INGenious you can generate videos for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong> :</p>
-<p><img alt="videos" src="../../img/reports/videos.JPG" title="videos" /></p>
+<p>From INGenious you can generate videos for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong></p>
+<p><img alt="videos" src="../../img/reports/video.png" title="videos" /></p>
 <p>When you do this, the videos are saved in the <code>Results</code> location of the corresponding tests.</p>
+</details>
+<details class="example">
+<summary>HAR files</summary>
 <h2 id="har-files">HAR files</h2>
-<summary>How it works</summary>
-
-<p>From INGenious you can generate <strong>HAR (Http Archive)</strong> files for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong> :</p>
-<p><img alt="har" src="../../img/reports/har.JPG" title="har" /></p>
+<p>From INGenious you can generate <strong>HAR (Http Archive)</strong> files for all playwright tests that are being executed. You can do this from the <strong>Run Settings</strong></p>
+<p><img alt="har" src="../../img/reports/har.png" title="har" /></p>
 <p>When you do this, the HAR files are saved in the <code>Results</code> location of the corresponding tests.</p>
+</details>
 
 
 
@@ -1730,7 +1818,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
   </body>
