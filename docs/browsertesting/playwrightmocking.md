@@ -45,7 +45,7 @@ In INGenious Playwright Studio, the steps will look like this :
 
  The data in the payload can be parameterized from datasheets as well.
 
- >>The built-in mocking actions can be found [here](../playwrightActions/fulfill.md)
+ >The built-in mocking actions can be found [here](../playwrightActions/fulfill.md)
 
 -------------------------------- 
 

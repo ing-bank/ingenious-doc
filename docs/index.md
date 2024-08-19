@@ -61,7 +61,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
 
 
--   :material-code-json:{ .lg .middle .customization } __Full customization__
+-   :material-code-json:{ .lg .middle .customization } __Full Customization__
 
     ---
 
@@ -85,7 +85,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     [:octicons-arrow-right-24: Test Plan](testplan/)
 
--   :material-rocket-launch:{ .lg .middle .cicd} __Seamless integration with any CI tool__
+-   :material-rocket-launch:{ .lg .middle .cicd} __Seamless Integration with any CI Tool__
 
     ---
 
@@ -115,7 +115,7 @@ INGenious will also cater to the following types of testing. Currently, these ar
 
 <div class="grid cards" markdown>
 
-- :octicons-device-mobile-16: __Mobile Apps__ testing
+- :octicons-device-mobile-16: __Mobile App__ testing
 - :octicons-database-16: __Database__ testing
 
 </div>

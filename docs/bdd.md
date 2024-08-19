@@ -1,8 +1,3 @@
----
-icon: material/handshake
----
-
-
 # **Behavior Driven Development (BDD)** 
 -------------------------------------------
 
@@ -14,13 +9,13 @@ icon: material/handshake
 
 ## BDD Editor
 
-The framework comes with a BDD editor that lets user to **create/edit** feature files. These feature files can then be imported/converted into automation test cases. The **BDD editor** has a provision of auto suggesting the keywords that can be used while writing feature files. Perform **Ctrl+Space** anywhere in the BDD editor workspace to get the list of keywords supported by the BDD editor.
+The framework comes with a BDD editor that lets user to **create/edit** feature files. These feature files can then be imported/converted into automation test cases. The **BDD editor** has a provision of auto suggesting the keywords that can be used while writing feature files. Perform ++ctrl+space++ anywhere in the BDD editor workspace to get the list of keywords supported by the BDD editor.
 
 ---------------------------------------------- 
 
 ## Create/Edit Feature Files With BDD Editor
 
- * [x] From the INGenious IDE, navigate to **Tools** > **BDD** > **Open Feature Editor** and the editor opens in a new window
+ * [x] From the INGenious IDE, navigate to **Tools** :material-arrow-right: **BDD** :material-arrow-right: **Open Feature Editor** and the editor opens in a new window
 
  * [x] Create a new project by clicking on **New Project** option, you can also open an existing project **(This is a Mandatory step)**
 
@@ -31,10 +26,10 @@ The framework comes with a BDD editor that lets user to **create/edit** feature 
  ![featurecreation](img/bdd/createfeaturefile.gif "featurecreation")
 
 
->> **Note:** Projects created from BDD editor are saved as **json** files and internally **Gherkin** language is used to create feature files.
+> **Note:** Projects created from BDD editor are saved as **json** files and internally **Gherkin** language is used to create feature files.
 
         
->> It is also possible to open an existing feature file in the BDD editor using the **down arrow** icon and edit the same and save.
+> It is also possible to open an existing feature file in the BDD editor using the **down arrow** icon and edit the same and save.
 
 ----------------------------------------------        
 
@@ -42,7 +37,7 @@ The framework comes with a BDD editor that lets user to **create/edit** feature 
 
 In order to translate the feature files into an automation scenario, follow the steps below :
 
- * [x] Navigate to **Tools** > **BDD** > **Import Feature file**
+ * [x] Navigate to **Tools** :material-arrow-right: **BDD** :material-arrow-right: **Import Feature file**
 
  * [x] Locate the feature file and click on **OK**
 
@@ -55,7 +50,7 @@ In order to translate the feature files into an automation scenario, follow the 
 
  * [x] The corresponding steps can then be automated accordingly either through Recording or otherwise
 
->> **Note:** Any feature written in Gherkin language can be opened from the **Import Feature file** , even if it is not created using the **BDD editor**.
+> **Note:** Any feature written in Gherkin language can be opened from the **Import Feature file** , even if it is not created using the **BDD editor**.
 
 
 ----------------------------------------------
@@ -64,7 +59,7 @@ In order to translate the feature files into an automation scenario, follow the 
 
 In order to generate BDD Style Reporting post execution, from the Run Settings, make sure **Bdd Reporting** checkbox is checked.
 
- ![checkbox](img/bdd/4.JPG "checkbox")
+ ![checkbox](img/bdd/4.png "checkbox")
 
 
 This will generate **bdd-report.json** file post execution and this json file can then be fed to Azure DevOps Yaml Task to generate BDD Style Reporting.
@@ -79,7 +74,7 @@ For this we need to use the following Yaml commands :
     outputPath: '$(System.DefaultWorkingDirectory)'
     theme: 'bootstrap'
     reportSuiteAsScenarios: true
-    name: 'ING'
+    name: 'Contact Us Form'
     title: 'BDD Results'
 
 ```

@@ -80,8 +80,11 @@ nav:
  - Integrations :
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md
-    - Continuous Integration: ci.md       
-    - GitHub Actions: githubActions.md 
+    - Continuous Integration: 
+        - Getting Started: ci.md 
+        - Azure DevOps: integrations/azuredevops.md
+        - GitHub Actions: integrations/githubactions.md
+        - Circle CI: integrations/circleci.md      
  - Hidden Gems :
     - Reporting: browsertesting/playwrightreporting.md
     - Shortcuts: shortcuts.md

@@ -22,14 +22,7 @@
 -----------------------
 * **Step 1** : Download :material-download:
 
-    * Click [here]() to directly download the latest version
-    * Alternately you can use the following command to download via command line :
-
-    ```bash
-    curl https://
-    ```
-
-    
+    * Click [**here**](https://github.com/ing-bank/INGenious/releases/download/v1.0/ingenious-playwright-1.0.zip) to directly download the latest version
 
 * **Step 2** : Extract the zip, into a directory of your choice.
 
