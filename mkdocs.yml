@@ -38,6 +38,8 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+  
+  repo: simple/github
 
 plugins:
     - search
@@ -146,3 +148,4 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+repo_url: https://github.com/ing-bank/INGenious
