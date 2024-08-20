@@ -657,7 +657,7 @@ public class SampleScript extends General {
     addVar("%nameVar%", "LukeSkywalker");
     ```
 
-    >> The scope of this variable is only till the end of the execution of the test case in which it is defined.
+    > The scope of this variable is only till the end of the execution of the test case in which it is defined.
 
     The **`addGlobalVar(arg1,arg2)`** function is used to add a value to a variable whose scope is till the end of the execution of the testset i.e. till the end of execution of the last test case under the test set. This function can be used in your custom code as
     shown below:

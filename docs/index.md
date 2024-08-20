@@ -49,7 +49,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages the power of **Playwright** to create robust and stable browser tests. 
 
-    [:octicons-arrow-right-24: Browser Testing](BrowserTesting/)
+    [:octicons-arrow-right-24: Browser Testing](browsertesting/)
 
 -   :material-api:{ .lg .middle .cicd} __API Automation__
 

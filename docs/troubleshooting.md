@@ -91,9 +91,9 @@
     SET APP_CLASSPATH=lib\*;lib\clib\*
 
     IF "%~1" == "" (
-    start javaw -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -Djavax.net.ssl.trustStore=Security\cacerts -Djavax.net.ssl.trustStorePassword=changeit -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
+    start javaw -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -Djavax.net.ssl.trustStore=Security\cacerts -Djavax.net.ssl.trustStorePassword=changeit -cp ingenious-ide-1.0.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
     ) ELSE (
-    java -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -cp ingenious-ide-1.1.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
+    java -Xms128m -Xmx1024m -Dfile.encoding=UTF-8 -cp ingenious-ide-1.0.jar;%APP_CLASSPATH%; com.ing.ide.main.Main %*
     )
 
 

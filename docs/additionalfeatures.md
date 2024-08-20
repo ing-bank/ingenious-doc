@@ -161,7 +161,7 @@
     ![search](img/Things/cellsearch.png "search")
 
 
-    * To search for **Columns using the Column Header**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green
+    * To search for **Columns using the Column Header**, simply enter the search string (or even partial string) with '@' as prefix in the [Search Bar], and the search results will immediately show in green
 
     ![search](img/Things/colheadersearch.png "search")
 
@@ -218,7 +218,7 @@
     * Consider any action that requires **Input** column. For instance let us take the **Print** action. Instead of providing the URL directly, you can concatenate two strings that lead to the URL.
 
 
-    | **Function**     | **Syntax** | **Description** |
+    | <div style="width:150px">**Function**</div>  | <div style="width:250px">**Syntax**</div> | **Description** |
     | --------------| ---------------- |-------------- |
     | [`=Round`](#)  | =Round(Decimal Number)      |Will **Round Off** the given decimal number |
     | [`=Pow`](#)    | =Pow(a,b)                   |Will return the value of **a^b** |

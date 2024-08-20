@@ -84,7 +84,7 @@
 
       To make working simple, intuitive and easy, you can also use the **drag and drop** to create test steps.
 
-      In the following example, we can create the *Checkout* Reusable simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
+      In the following example, we can create the **Login** Reusable simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
 
       ![drag_drop1](img/toolui/draganddrop1.gif "drag_drop1")
      
@@ -119,7 +119,7 @@
       * **Step 5** : Select the Environment and the corresponding Data sheets to be copied and then click **[Create] Button**
 
 === ":five: Object Repository"
-      This is the area where the Web Elements/Objects are present along with the multiple attributes/properties to be used to find that element on the Application.
+      This is the area where the Locators/Objects are present along with the multiple attributes/properties to be used to find that element on the Application.
 
       ![or1](img/toolui/OR1.JPG "or1")
       
