@@ -69,6 +69,7 @@ nav:
         - Switch: playwrightActions/switch.md
         - Mocking: playwrightActions/fulfill.md
         - Dynamic Objects: playwrightActions/dynamicObject.md
+    - Browser Configurations: browsertesting/config.md  
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
