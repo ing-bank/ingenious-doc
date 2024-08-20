@@ -281,7 +281,7 @@
 
 -------------------------------------------
 
-??? note "Text"
+??? note "XPath or CSS"
 
     ### Locate by XPath or CSS
 

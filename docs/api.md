@@ -8,7 +8,7 @@
 
 !!! abstract "How does INGenious perform API Tests?"
 
-    API Testing is one of the strong suites of the framework. It uses Java HHTP Client to fire requests, receive responses, validate the response status, response body and response tags.
+    API Testing is one of the strong suites of the framework. It uses Java HTTP Client to fire requests, receive responses, validate the response status, response body and response tags.
 
     It also allows us to store response tags which can be used for subsequent API calls or GUI flows. **This makes API Testing and GUI Testing possible in a single flow coherently.**
 
