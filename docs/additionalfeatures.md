@@ -187,7 +187,7 @@
 
     ## How To Change Report Theme
 
-    * Go to **Configuration** :material-arrow-right: **Options Theme**.
+    * Go to **Configuration** :material-arrow-right: **Options :material-arrow-right: **Theme**.
 
     * From the **Reporting theme**, select a theme of your choice.
 
@@ -196,6 +196,8 @@
     * You can choose which columns need to be displayed in the report.
 
     * Show or hide columns in the report using the **show/hide columns** option. Check the respective column name checkbox to display that column or **uncheck** the respective column name checkbox to hide it.
+
+    ![reporttheme](img/Things/reporttheme.png "reporttheme")
 
     **Filtering In Report**
 

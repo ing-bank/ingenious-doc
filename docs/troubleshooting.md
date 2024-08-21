@@ -100,5 +100,72 @@
 
     ```
 
+---------------------------------------
+??? example "Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on Run.bat file in Windows"
 
+    ## Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on Run.bat file in Windows.
+
+    **If you get the following pop-up when you click on Run.bat**
+
+    ![WindowsErrorPopUp](img/faq/WindowsErrorPopUp.png "WindowsErrorPopUp")
+
+    **Right click on **Run.bat :material-arrow-right: Properties :material-arrow-right:Unblock :material-arrow-right: Apply**
+
+---------------------------------------
+??? example "Browser not launching while running tests"
+
+    ## Unable to launch Browser while running the automated test cases.
+
+    INGenious Playwright Studio, by default launches tests in headless mode. 
+    Try adding the following browser option :
+
+    **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'setHeadless' property with its value as 'False'** :material-arrow-right: **Save**
+
+    ![SetHeadlessConfiguration](img/faq/SetHeadlessConfiguration.png "SetHeadlessConfiguration") 
+    
+--------------------------------------- 
+
+??? example "java.lang.OutOfMemoryError: Java heap space"
+
+    ## Handle `java.lang.OutOfMemoryError: Java heap space`
+
+
+    While executing the test scripts, or while generating the BDD json reporter, sometimes the system throws `java.lang.OutOfMemoryError: Java heap space`. 
+    
+    This happens because of the large number of test steps with screenshots. In order to handle it, **modify the Run.bat and/or Run.command file to increase the Java contiguous memory allocation before startup.**
+
+    So, here is an example of the corresponding Run.bat file.
+
+    ![JavaHeapSize](img/faq/JavaHeapSize.png "JavaHeapSize")
+
+-------------------------------------
+
+??? example "Options to maximize the browser in Ingenious Playwright Studio"
+
+    ## Different options to maximize the browser in Ingenious Playwright Studio
+
+
+    There are 2 options to maximize the browser.
+
+    * **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'startMaximized' property with its value as 'true'** :material-arrow-right: **Save**
+
+    ![StartMaximized](img/faq/StartMaximized.png "StartMaximized")
+
+    * **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'setViewportSize' property with its value as width,height** :material-arrow-right: **Save**
+
+    ![SetViewportSize](img/faq/SetViewportSize.png "SetViewportSize")
+
+    > **NOTE:** startMaximized and setViewportSize should not be set together at the same time.
+  
+--------------------------------------- 
+
+??? example "Alternative for @AfterTest (TestNG) in INGenious Playwright Studio" 
+
+    ## Alternative for @AfterTest (TestNG) in INGenious Playwright Studio
+
+    In the package **com.ing.engine.reporting** there is a class **SummaryReport**. In that class you have an empty method **afterReportComplete()**  where you can add any code of your choice. 
+    
+    For example, if you want to generate any standalone HTML report or perform data clean up, you can add your code there.
+  
+--------------------------------------- 
 
