@@ -179,3 +179,12 @@ The **Latest Summary Report** tab looks like this :
 ![dashboard2](img/toolui/Dashboard2.JPG "dashboard2")
 
 [Browser Testing](browsertesting/index.md){ .md-button } [API Testing](api.md){ .md-button }
+
+
+------
+
+Inspiration
+
+The Framework's look and feel is inspired from 2 solutions :
+1. [CITS](https://github.com/CognizantQAHub/Cognizant-Intelligent-Test-Scripter)
+2. [Katalon Studio](https://katalon.com/katalon-studio)
