@@ -183,8 +183,10 @@ The **Latest Summary Report** tab looks like this :
 
 ------
 
-Inspiration
+### Inspiration
 
 The Framework's look and feel is inspired from 2 solutions :
-1. [CITS](https://github.com/CognizantQAHub/Cognizant-Intelligent-Test-Scripter)
-2. [Katalon Studio](https://katalon.com/katalon-studio)
+
+* [CITS](https://github.com/CognizantQAHub/Cognizant-Intelligent-Test-Scripter)
+
+* [Katalon Studio](https://katalon.com/katalon-studio)
