@@ -75,6 +75,12 @@ nav:
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
+ - Mobile App Testing:
+    - Premise: mobiletesting/index.md
+    - Base Setup: mobiletesting/basesetup.md
+    - Android Setup : mobiletesting/androidsetup.md
+    - iOS Setup : mobiletesting/iOSsetup.md
+    - Appium Inspector : mobiletesting/appiuminspector.md
  - API Testing:
     - Create Your First Test: api.md
     - Actions: apiActions/webservice.md
