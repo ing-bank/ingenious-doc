@@ -84,6 +84,16 @@ nav:
  - API Testing:
     - Create Your First Test: api.md
     - Actions: apiActions/webservice.md
+ - Message Testing:
+    - Premise: messageTesting/index.md
+    - JMS (Queues): 
+        - Outline: messageTesting/jms.md
+        - Queue Actions: jms/queueActions.md
+    - Kafka: messageTesting/kafka.md
+    - Flat Files: messageTesting/files.md
+ - Synthetic Data:
+    - Premise: syntheticData/index.md
+    - Faker Actions: syntheticData/actions.md
  - Customizations:
     - Full flexibility: customizations/index.md
     - Engine: customizations/engine.md

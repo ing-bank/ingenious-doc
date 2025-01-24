@@ -10,7 +10,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
 !!! abstract "About" 
 
-    It provides an easy and simple way to create highly reliable automated tests. It leverages the power of __Playwright-Java__ and combines it with a user-friendly IDE which makes it a highly effective solution.
+    It provides an easy and simple way to create highly reliable automated tests. It leverages the power of __Playwright-Java__ and __Appium-Java__ and combines them with a user-friendly IDE which makes it a highly effective solution.
 
     The idea behind INGenious is to enable engineers, business analysts and even non-technical stakeholders to design high quality automated tests which focus on the business goals, without them having to worry about coding.
 
@@ -50,6 +50,14 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
     <span style="color:#FF6200">INGenious</span> leverages the power of **Playwright** to create robust and stable browser tests. 
 
     [:octicons-arrow-right-24: Browser Testing](browsertesting/)
+
+-   :fontawesome-brands-chrome:{ .lg .middle .ing-sky} __Mobile App Automation__
+
+    ---
+
+    <span style="color:#FF6200">INGenious</span> leverages the power of **Appium** to interact with and test Mobile Applications. 
+
+    [:octicons-arrow-right-24: Mobile App Testing](mobileTesting/)    
 
 -   :material-api:{ .lg .middle .cicd} __API Automation__
 
