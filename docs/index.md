@@ -51,7 +51,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     [:octicons-arrow-right-24: Browser Testing](browsertesting/)
 
--   :fontawesome-brands-chrome:{ .lg .middle .ing-sky} __Mobile App Automation__
+-   :mobile_phone:{ .lg .middle .ing-sky} __Mobile App Automation__
 
     ---
 
@@ -68,6 +68,30 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
     [:octicons-arrow-right-24: API Testing](api/)
 
 
+-   :material-text-box-multiple:{ .lg .middle .cicd} __Message/File Based Testing__
+
+    ---
+
+    <span style="color:#FF6200">INGenious</span> is capable of performing validation of messages over `JMS` and `Kafka` . 
+
+    [:octicons-arrow-right-24: Message based Testing](messageTesting/)    
+
+-   :simple-databricks:{ .lg .middle .cicd} __Synthetic Data Generation__
+
+    ---
+
+    <span style="color:#FF6200">INGenious</span> leverages the power of **Java Faker** to create Synthetic Test Data at run time. 
+
+    [:octicons-arrow-right-24: Synthetic Data Generation](syntheticData/)    
+
+
+-   :octicons-database-16:{ .lg .middle .cicd} __Database Testing__
+
+    ---
+
+    <span style="color:#FF6200">INGenious</span> leverages **JDBC** to connect and test Databases.
+
+    [:octicons-arrow-right-24: Database Testing](databaseTesting/)
 
 -   :material-code-json:{ .lg .middle .customization } __Full Customization__
 
@@ -117,20 +141,8 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
 --------
 
-## Features coming soon
-
-INGenious will also cater to the following types of testing. Currently, these are in the beta-testing stage in ING.
-
-<div class="grid cards" markdown>
-
-- :octicons-device-mobile-16: __Mobile App__ testing
-- :octicons-database-16: __Database__ testing
-
-</div>
 
 
-
---------
 
 
 

@@ -47,9 +47,10 @@ plugins:
     - search
 
 nav:
- - Home: index.md
- - Getting Started: gettingstarted.md
- - Know the framework: knowyourframework.md
+ - Home:
+    - Premise : index.md
+    - Getting Started: gettingstarted.md
+    - Know the framework: knowyourframework.md
  - Browser Testing: 
     - Create Your First Test: browsertesting/index.md
     - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
@@ -91,9 +92,12 @@ nav:
         - Queue Actions: jms/queueActions.md
     - Kafka: messageTesting/kafka.md
     - Flat Files: messageTesting/files.md
- - Synthetic Data:
+ - Database Testing:
     - Premise: syntheticData/index.md
     - Faker Actions: syntheticData/actions.md
+ - Synthetic Data:
+    - Premise: syntheticData/index.md
+    - Faker Actions: syntheticData/actions.md   
  - Customizations:
     - Full flexibility: customizations/index.md
     - Engine: customizations/engine.md
