@@ -181,7 +181,36 @@ The **Latest Summary Report** tab looks like this :
 [Browser Testing](browsertesting/index.md){ .md-button } [API Testing](api.md){ .md-button }
 
 
-------
+ <br>
+----------------------------------------------------------------------
+------------------------------------ 
+ </br>
+
+### **Search Functionality**
+
+ ![search](img/toolui/Search1.png "search")
+
+In the above image you can see how INGenious allows you to search for your assets very easily.
+
+   * Test Cases 
+   * Test Steps 
+   * Test Data 
+   * Objects
+
+To activate the **Search Bar**, simply click on the corresponding pane and press :
+
+++ctrl+f++  :arrow_right: For Windows
+
+++cmd+f++   :arrow_right: For Mac
+
+To do a search on Table headers or Column Names, just prepend the **@** symbol before your search text :
+
+![headersearch](img/toolui/Search2.png "headersearch")
+
+  <br>
+----------------------------------------------------------------------
+------------------------------------ 
+ </br>
 
 ### Inspiration
 

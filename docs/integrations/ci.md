@@ -9,7 +9,7 @@ INGenious is composed of all flat files like `xml` and `csv` in addition to the 
 
 The working directory should contain the following `.gitignore` file :
 
-```gitignore title="gitignore"
+```gitignore title=".gitignore"
 
 LICENSE
 logs/

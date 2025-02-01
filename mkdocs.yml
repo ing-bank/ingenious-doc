@@ -72,7 +72,8 @@ nav:
         - Switch: playwrightActions/switch.md
         - Mocking: playwrightActions/fulfill.md
         - Dynamic Objects: playwrightActions/dynamicObject.md
-    - Browser Configurations: browsertesting/config.md  
+    - Browser Configurations: browsertesting/config.md 
+    - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
@@ -82,22 +83,31 @@ nav:
     - Android Setup : mobiletesting/androidsetup.md
     - iOS Setup : mobiletesting/iOSsetup.md
     - Appium Inspector : mobiletesting/appiuminspector.md
+    - Actions:
+        - WaitFor: mobiletesting/mobileActions/waitFor.md
+        - Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
+        - Element Assertions: mobiletesting/mobileActions/elementAssertions.md
+        - Scroll: mobiletesting/mobileActions/scroll.md
+        - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
+        - Relative: mobiletesting/mobileActions/relative.md
  - API Testing:
     - Create Your First Test: api.md
     - Actions: apiActions/webservice.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
-        - Outline: messageTesting/jms.md
+        - Create your first JMS Test: messageTesting/jms.md
         - Queue Actions: jms/queueActions.md
     - Kafka: messageTesting/kafka.md
     - Flat Files: messageTesting/files.md
  - Database Testing:
-    - Premise: syntheticData/index.md
-    - Faker Actions: syntheticData/actions.md
+    - Premise: databaseTesting/database.md
+    - Actions: 
+        - General Actions: databaseTesting/dbActions.md
+        - Data Storage: databaseTesting/storeActions.md
  - Synthetic Data:
     - Premise: syntheticData/index.md
-    - Faker Actions: syntheticData/actions.md   
+    - Synthetic Data Generation Actions: syntheticData/actions.md   
  - Customizations:
     - Full flexibility: customizations/index.md
     - Engine: customizations/engine.md
@@ -107,7 +117,7 @@ nav:
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md
     - Continuous Integration: 
-        - Getting Started: ci.md 
+        - Getting Started: integrations/ci.md 
         - Azure DevOps: integrations/azuredevops.md
         - GitHub Actions: integrations/githubactions.md
         - Circle CI: integrations/circleci.md      

@@ -1,4 +1,4 @@
-# Auto-waiting
+# **Auto-waiting**
 
 !!! info 
     Playwright performs a range of actionability checks on the elements before making actions to ensure these actions behave as expected. It auto-waits for all the relevant checks to pass and only then performs the requested action. If the required checks do not pass within the given `timeout`, action fails with the `TimeoutError`.

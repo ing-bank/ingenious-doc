@@ -1,4 +1,4 @@
-# Browser-Context/Page Configurations
+# **Browser-Context/Page Configurations**
 
 ??? note "Headless, SlowMo and other Browser Context Options"
 
