@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../jms/queueActions/">
+        <link rel="prev" href="../appiuminspector/">
       
       
-        <link rel="next" href="../kafkaActions/">
+        <link rel="next" href="../mobileActions/waitFor/">
       
       
       <link rel="icon" href="../../doc_images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Create your first Kafka Test - INGenious Playwright Studio</title>
+        <title>Create Your First Mobile Test - INGenious Playwright Studio</title>
       
     
     
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-kafka" class="md-skip">
+        <a href="#creating-mobile-app-tests" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create your first Kafka Test
+              Create Your First Mobile Test
             
           </span>
         </div>
@@ -275,11 +275,13 @@
 		
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../mobiletesting/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Mobile App Testing
@@ -311,12 +313,10 @@
 		
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../messageTesting/" class="md-tabs__link">
           
   
@@ -1237,23 +1237,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1265,7 +1270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Mobile App Testing
@@ -1279,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1301,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/basesetup/" class="md-nav__link">
+      <a href="../basesetup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/androidsetup/" class="md-nav__link">
+      <a href="../androidsetup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1345,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/iOSsetup/" class="md-nav__link">
+      <a href="../iOSsetup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/appiuminspector/" class="md-nav__link">
+      <a href="../appiuminspector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1386,10 +1391,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../mobiletesting/emulatorsetup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Create Your First Mobile Test
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1399,6 +1425,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-an-appium-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up an Appium Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-execution-design-pane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Execution - Design Pane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-execution-execution-pane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Execution - Execution Pane
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1450,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/waitFor/" class="md-nav__link">
+      <a href="../mobileActions/waitFor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1472,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/attributeAssertions/" class="md-nav__link">
+      <a href="../mobileActions/attributeAssertions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1494,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/elementAssertions/" class="md-nav__link">
+      <a href="../mobileActions/elementAssertions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1516,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/scroll/" class="md-nav__link">
+      <a href="../mobileActions/scroll/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/dynamicObjects/" class="md-nav__link">
+      <a href="../mobileActions/dynamicObjects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1560,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/relative/" class="md-nav__link">
+      <a href="../mobileActions/relative/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1582,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/alerts/" class="md-nav__link">
+      <a href="../mobileActions/alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1604,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/storeActions/" class="md-nav__link">
+      <a href="../mobileActions/storeActions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1626,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/basic/" class="md-nav__link">
+      <a href="../mobileActions/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1648,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/byLabel/" class="md-nav__link">
+      <a href="../mobileActions/byLabel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobiletesting/mobileActions/commonActions/" class="md-nav__link">
+      <a href="../mobileActions/commonActions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1794,28 +1876,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1827,7 +1904,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Message Testing
@@ -1951,8 +2028,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1962,11 +2037,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1981,7 +2056,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Kafka
@@ -1992,31 +2067,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Create your first Kafka Test
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../kafka/kafka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2026,53 +2080,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-create-a-kafka-based-test-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to create a Kafka - based Test Case?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#payload-data-parameterization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payload Data Parameterization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assertstore-response-tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assert/Store Response Tags
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2085,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kafkaActions/" class="md-nav__link">
+      <a href="../../kafka/kafkaActions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2928,27 +2935,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-create-a-kafka-based-test-case" class="md-nav__link">
+  <a href="#set-up-an-appium-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      How to create a Kafka - based Test Case?
+      Set up an Appium Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#payload-data-parameterization" class="md-nav__link">
+  <a href="#write-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Payload Data Parameterization
+      Write Tests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assertstore-response-tags" class="md-nav__link">
+  <a href="#test-execution-design-pane" class="md-nav__link">
     <span class="md-ellipsis">
-      Assert/Store Response Tags
+      Test Execution - Design Pane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-execution-execution-pane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Execution - Execution Pane
     </span>
   </a>
   
@@ -2973,123 +2989,50 @@
   
 
 
-<h1 id="working-with-kafka"><strong>Working with Kafka</strong></h1>
-<h2 id="how-to-create-a-kafka-based-test-case">How to create a Kafka - based Test Case?</h2>
+<h1 id="creating-mobile-app-tests"><strong>Creating Mobile App Tests</strong></h1>
+<h2 id="set-up-an-appium-configuration">Set up an Appium Configuration</h2>
+<p>Follow the steps below to create an Appium configuration in INGenious.</p>
 <ul>
 <li>
-<p>At the beginning, there should be steps to set up the configurations for the <strong><code>Kafka Producer</code></strong>. 
-  For instance setting the <strong><code>server</code>, <code>producerTopic</code>, <code>keySerializer</code>, <code>valueSerializer</code>, <code>partition</code>, <code>headers</code></strong> etc. are required.</p>
+<p>Click on the Configuration icon <img alt="browserConfig" src="../../img/toolui/BrowserConfiguration.png" title="browserConfig" /></p>
 </li>
 <li>
-<p>Then there should be steps to create the <strong><code>message</code></strong>. You can leverage built-in capabilities in INGenious like <code>Synthetic Data Generation</code> to create <code>UUID</code>s and other data to be fed into the message.</p>
+<p>Inside the <strong>Manage Browser</strong> tab, Enter the name of the <strong>Appium Configuation</strong> you want to create, in the <code>Browser</code> textbox and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> </p>
 </li>
 <li>
-<p>The <strong><code>produceMessage</code></strong> action comes with an editor which makes parameterization of data in the paylod very easy. This action is always marked in <span style="color:Green"><strong>Green.</strong></span>. [See the section below]</p>
+<p>Add the desired <strong>Appium Configuations</strong> as key-value pair </p>
+<p><img alt="createConfig" src="../../img/mobiletesting/config.png" title="createConfig" /></p>
 </li>
 <li>
-<p>Then there should be the <strong><code>sendKafkaMessage</code></strong> action to push the message to the producer topic.</p>
-</li>
-<li>
-<p>Then there should be steps to configure the <strong><code>Kafka Consumer</code></strong>. 
-  For instance setting the <strong><code>consumerGroupId</code>, <code>consumerTopic</code>, <code>valueDeserializer</code>, <code>pollIntervals</code></strong> etc. are required.</p>
-</li>
-<li>
-<p>Eventually there should be steps to consume the message and validate/store message <strong>details</strong>, <strong>specific tags</strong> or even the <strong>entire message body.</strong></p>
+<p>Make sure you have already tested your configurations from Appium Inspector</p>
+<p><img alt="appiumConfig" src="../../img/mobiletesting/appiumInspectorConfig.png" title="appiumConfig" />  </p>
 </li>
 </ul>
-<p><img alt="kafka" src="../../img/kafka/kafka.png" title="kafka" /></p>
-<p>The above is an example of a Kafka based Testcase.</p>
 <hr />
-<h2 id="payload-data-parameterization">Payload Data Parameterization</h2>
-<p>Data Parameterization can be done using the built-in <strong>editor.</strong> If you mouse-hover on the <strong>Input</strong> column, corresponding to the <strong><code>produceMessage</code></strong> step, an option to open up the Editor comes up.</p>
-<p>Inside this editor, we can paste the entire Payload and then parameterize the specific JSON/XML tags based on our needs.</p>
-<p>If we press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span> the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
-<p>We need to press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to close the editor</p>
-<p><img alt="editor" src="../../img/kafka/editor.gif" title="editor" /></p>
+<h2 id="write-tests">Write Tests</h2>
+<ul>
+<li>
+<p>Head over to the <strong>Design Pane</strong> of INGenious</p>
+</li>
+<li>
+<p>Create <strong>Objects</strong> in the Object Repository with appropriate selectors like <code>xpath</code>, <code>AccessibilityId</code> etc. These can easily be captured from <strong>Appium Inspector</strong></p>
+</li>
+<li>
+<p>Drag and drop the objects into the test case canvas</p>
+</li>
+<li>
+<p>Select appropriate <strong>actions</strong> like <strong><code>Tap</code>, <code>Scroll</code></strong> or <strong><code>Set</code></strong> for each relevant step</p>
+</li>
+</ul>
+<p><img alt="testcase" src="../../img/mobiletesting/testcase.png" title="testcase" />  </p>
 <hr />
-<h2 id="assertstore-response-tags">Assert/Store Response Tags</h2>
-<p>We can access the Response Tags using <strong><code>xpath</code></strong> for XMLs and <strong><code>jsonPath</code></strong> for JSONs.</p>
-<p>The corresponding <strong><code>xpath</code></strong> or <strong><code>jsonPath</code></strong> for the tag, should be entered in the <strong>Condition</strong> column like as shown below :</p>
-<p><img alt="assertions" src="../../img/kafka/assertions.png" title="assertions" /></p>
-<details class="note">
-<summary>Example for writing Xpath</summary>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;root</span><span class="w"> </span><span class="na">xmlns:foo=</span><span class="s">&quot;http://www.foo.org/&quot;</span><span class="w"> </span><span class="na">xmlns:bar=</span><span class="s">&quot;http://www.bar.org&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;actors&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&lt;actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Christian<span class="w"> </span>Bale<span class="nt">&lt;/actor&gt;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&lt;actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Liam<span class="w"> </span>Neeson<span class="nt">&lt;/actor&gt;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&lt;actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Michael<span class="w"> </span>Caine<span class="nt">&lt;/actor&gt;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">&lt;/root&gt;</span>
-</span></code></pre></div>
-<p>XPath for retrieving <strong>Liam Neeson</strong> is <code>/root/actors/actor[2]/text()</code> or simply <code>//actor[2]/text()</code></p>
-</details>
-<details class="note">
-<summary>Example for writing JSONPath</summary>
-<p><strong>Example 1 :</strong></p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;TestName&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&quot;salary&quot;</span><span class="p">:</span><span class="s2">&quot;12300&quot;</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="s2">&quot;29&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>JSON Path for retrieving <strong>TestName</strong> is <code>$.name</code> </p>
-<p><strong>Example 2 :</strong></p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;per_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;total_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;michael.lawson@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Michael&quot;</span><span class="p">,</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lawson&quot;</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lindsay.ferguson@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lindsay&quot;</span><span class="p">,</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ferguson&quot;</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tobias.funke@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tobias&quot;</span><span class="p">,</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Funke&quot;</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;byron.fields@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Byron&quot;</span><span class="p">,</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fields&quot;</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;george.edwards@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;George&quot;</span><span class="p">,</span>
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Edwards&quot;</span>
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rachel.howell@xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">            </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rachel&quot;</span><span class="p">,</span>
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">            </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Howell&quot;</span>
-</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="nt">&quot;additional&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://xyz.com&quot;</span><span class="p">,</span>
-</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">        </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Happy Testing!&quot;</span>
-</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>JSON Path for retrieving <strong>byron.fields@ing.com</strong> is <code>$.data[3].email</code> [Index starts with 0]</p>
-</details>
-<blockquote>
-<p>To learn more about JSONPath visit this <a href="https://github.com/json-path/JsonPath">GitHub</a> page.</p>
-</blockquote>
+<h2 id="test-execution-design-pane">Test Execution - Design Pane</h2>
+<p>While running the test from the Design Pane, make sure to select the appropriate <strong>Appium Configuration</strong> that was created for the test. You can do that by right clicking on the Run Button and selecting the Configuration.</p>
+<p><img alt="execution" src="../../img/mobiletesting/testexecution1.png" title="execution" />  </p>
 <hr />
-<p><a class="md-button" href="../../jms/queueActions/">Actions</a></p>
+<h2 id="test-execution-execution-pane">Test Execution - Execution Pane</h2>
+<p>While running the test from the Execution Pane, make sure to select the appropriate <strong>Appium Configuration</strong> that was created for the test. You can do that by selecting the Configuration in the <code>Browser</code> Column.</p>
+<p><img alt="execution" src="../../img/mobiletesting/testexecution2.png" title="execution" />  </p>
 
 
 
