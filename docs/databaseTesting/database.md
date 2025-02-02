@@ -17,9 +17,7 @@
 
 ## Set up Database Connection
 
-* Add maven dependency in pom.xml for database driver which you are going to use.
-
-- If you are using **mysql** you need to add below dependency 
+* Add maven dependency in pom.xml for database driver which you are going to use. For example, if you are using **mysql** you need to add the following dependency :
 
      ```xml
         <dependency>
@@ -30,9 +28,25 @@
      ```
 
 
-* To connect to specific database from framework we need to provide values in **Database Settings** under **Run Settings** of INGenious.
+* To configure a database connection from INGenious, follow the steps below :
 
-![dbSettings](../img/db/dbsettings.png "dbSettings")
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement..
+
+        ![dbSettings](../img/db/dbsettings.png "dbSettings")
+
+-----------------------------------        
+
+## Create New Database Configuration
+
+To create a new database configuration, follow the steps below :
+
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+
+* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+
+     ![createConfig](../img/db/createConfig.png "createConfig")
+
 
 **In Java if you were to manually connect, you would invariably use the following :**
 
@@ -41,23 +55,50 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productDB", "My_DB_UserName", "My_DB_Password");
 ```
 
-## Query Editor
+-----------------------------------
 
-After the above setting is done, you can proceed with your first steps as shown below.
+## Write your first Database Test
 
- ![basic](img/ "basic")
+* At the beginning, there should be the **`initDBConnection`** step to conect to a database. This requires the Database Alias (which you configured following the steps above) in the **Condition** column. 
 
-Data Parameterization can be done using the built-in **editor.** If you mouse-hover on the **Input** column, corresponding to the **`DB`** steps, an option to open up the Editor comes up.
+* Then there should be steps to execute the **SQL Statements** like **`executeSelectQuery`**, **`executeDMLQuery`**, **`storeResultInDataSheet`**, **`storeResultInVariable`**
 
- Inside this editor, we can write the `Query` and then parameterize it based on our needs.
+* The steps above, come with an editor which makes parameterization of data in the SQL statments very easy. [See the section below]
 
- If we press <span style="color:Red">**[ctrl] + [SPACE]**</span>, the list of all available **DataSheets : ColumnNames** along with all **user-defined variables** show up. We can then select the appropriate item from where we want to parameterize.
+* Eventually there should be steps to validate/store result-set  **specific columns** or the **entire result.**
 
- We need to press <span style="color:Red">**[esc]**</span> to close the editor
+* A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
+
+ ![database](../img/db/db.png "database")
+
+ The above is an example of a Database Testcase.
+
+
+
+-----------------------------------
+
+## Query Parameterization
+
+
+Parameterization of the SQL statements can be done using the built-in **editor.** If you mouse-hover on the **Input** column, corresponding to the **`Query`** steps, an option to open up the Editor comes up.
+
+The list of **`Query`** steps is as follows :
+
+- **`executeSelectQuery`**
+- **`executeDMLQuery`**
+- **`storeResultInDataSheet`**
+- **`storeResultInVariable`**
+
+ Inside this editor, we can write the **SQL statement** and then parameterize the the `table names`, `column names`, `where` clause etc. based on our needs.
+
+ If we press ++ctrl+space++ the list of all available **DataSheets : ColumnNames** along with all **user-defined variables** show up. We can then select the appropriate item from where we want to parameterize.
+
+ We need to press ++escape++ to close the editor
 
  ![editor](../img/db/editor.gif "editor")
- <span style="color:Red">*The above image is a gif, running in a loop</span> 
+ 
 
+-----------------------------------
 
 Make sure to check out the following topics :
 
