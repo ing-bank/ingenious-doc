@@ -52,7 +52,7 @@ nav:
     - Getting Started: gettingstarted.md
     - Know the framework: knowyourframework.md
  - Browser Testing: 
-    - Create Your First Test: browsertesting/index.md
+    - Create Your First Browser Test: browsertesting/index.md
     - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
     - Auto-waiting: browsertesting/autowaiting.md
     - Actions: 
@@ -83,6 +83,7 @@ nav:
     - Android Setup : mobiletesting/androidsetup.md
     - iOS Setup : mobiletesting/iOSsetup.md
     - Appium Inspector : mobiletesting/appiuminspector.md
+    - Create Your First Mobile Test: mobiletesting/emulatorsetup.md
     - Actions:
         - WaitFor: mobiletesting/mobileActions/waitFor.md
         - Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
@@ -90,8 +91,14 @@ nav:
         - Scroll: mobiletesting/mobileActions/scroll.md
         - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
         - Relative: mobiletesting/mobileActions/relative.md
+        - Alerts: mobiletesting/mobileActions/alerts.md
+        - Store Actions: mobiletesting/mobileActions/storeActions.md
+        - Basic: mobiletesting/mobileActions/basic.md
+        - Label: mobiletesting/mobileActions/byLabel.md
+        - General: mobiletesting/mobileActions/commonActions.md
+
  - API Testing:
-    - Create Your First Test: api.md
+    - Create Your First API Test: api.md
     - Actions: apiActions/webservice.md
  - Message Testing:
     - Premise: messageTesting/index.md
