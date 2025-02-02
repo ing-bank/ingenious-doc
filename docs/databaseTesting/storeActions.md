@@ -10,7 +10,7 @@
 
     | ObjectName | Action | Input          | Condition        |
     |------------|----------------|------------------|---|
-    | Database   | :green_circle: [`storeDBValueinDataSheet`](#) | DatasheetName:ColumnName  | productName, 1   |
+    | Database   | :green_circle: [`storeDBValueinDataSheet`](#) | DatasheetName:ColumnName  | DatabaseColumnName, ResultSetRowNumber   |
 
 === "Corresponding Code"
 
@@ -53,14 +53,13 @@
 
 **Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in a user defined variable
 
-**Input Format** : %variableName% , Condition : DatabaseColumnName,
-ResultSetRowNumber
+**Input Format** : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber
 
 === "Usage"
 
     | ObjectName | Action |Input        | Condition          |
     |------------|--------------|--------------------|---|
-    | Database   | :green_circle: [`storeValueInVariable`](#) | %variableName%        | productName, 1     |
+    | Database   | :green_circle: [`storeValueInVariable`](#) | %variableName%        | DatabaseColumnName,ResultSetRowNumber     |
 
 === "Corresponding Code"
 
@@ -82,14 +81,13 @@ ResultSetRowNumber
 
 **Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in global variable
 
-**Input Format** : %variableName% , Condition : DatabaseColumnName,
-ResultSetRowNumber
+**Input Format** : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber
 
 === "Usage"
 
     | ObjectName | Action | Input        | Condition       |
     |------------|--------------|-----------------|----|
-    | Database   | :green_circle: [`storeValueInGlobalVariable`](#) | %variableName%        | productName, 1  |
+    | Database   | :green_circle: [`storeValueInGlobalVariable`](#) | %variableName%        | DatabaseColumnName,ResultSetRowNumber  |
 
 === "Corresponding Code"
 
@@ -117,7 +115,7 @@ ResultSetRowNumber
 
     | ObjectName | Action | Input                            | Condition |
     |------------|----------------------------------|-----------|----|
-    | Database   | :green_circle: [`storeResultInDataSheet`](#) | ```@select * from public."Employee"```  | DatasheetName |
+    | Database   | :green_circle: [`storeResultInDataSheet`](#) | ```@select designation from job where id=121;```  | DatasheetName |
 
 === "Corresponding Code"
 
@@ -162,7 +160,7 @@ ResultSetRowNumber
 
     | ObjectName | Action | Input                             | Condition |
     |------------|-----------------------------------|-----------|----|
-    | Database   | :green_circle: [`storeResultInVariable`](#) | ```@select * from public."Employee"```   | %variableName%     |
+    | Database   | :green_circle: [`storeResultInVariable`](#) | ```@@select designation from job where id=121;"```   | %variableName%     |
 
 === "Corresponding Code"
 

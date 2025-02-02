@@ -16,4 +16,4 @@
 
 Make sure to check out the following topics :
 
-[Faker Actions](actions.md){ .md-button } 
+[Synthetic Data Generation Actions](actions.md){ .md-button } 

@@ -142,7 +142,7 @@
 
     | ObjectName | Action | Input                            | Condition |
     |------------|--------|-----------|-------|
-    | Database   | :green_circle: [`executeSelectQuery`](#) | ``` @select * from tableName ```      |           |
+    | Database   | :green_circle: [`executeSelectQuery`](#) | ``` @select designation from job where id=121;```      |           |
 
 === "Corresponding Code"
 
@@ -177,7 +177,7 @@
 
     | ObjectName | Action | Input                                                     | Condition    |
     |------------|-----------------------------------------------------------|--------------|---|
-    | Database   | :green_circle: [`executeDMLQuery`](#) |```@UPDATE public."Employee" SET "Age"=27 WHERE id = 123456;``` |              |
+    | Database   | :green_circle: [`executeDMLQuery`](#) |```@UPDATE job SET "designation"=Tester WHERE id = 121;``` |              |
     | Database	 | :green_circle: [`executeDMLQuery`](#) |Sheet:Column                                              |          	|  
     | Database   | :green_circle: [`executeDMLQuery`](#) |%dynamicVar%                                              |              |
 
@@ -198,43 +198,4 @@
             }
         }   
 
-    ```
-
-
-## **verifyWithDataSheet**
-
-**Description**: Verify Table values with the Test Data sheet
-
-**Input Format** : @`SQL Query`
-
-=== "Usage"
-
-    | ObjectName | Action | Input                             | Condition |
-    |------------|-----------------------------------|-----------|----|
-    | Database   | :green_circle: [`verifyWithDataSheet`](#) | ```@select * from public."Employee" ```  | %variableName%     |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.DATABASE, desc = "Verify Table values with the Test Data sheet ", input = InputType.YES)
-        public void verifyWithDataSheet() {
-            String sheetName = Data;
-            TestDataView dataView;
-            if (!sheetName.isEmpty() && (dataView = userData.getTestData(sheetName)) != null) {
-                List<String> columns = dataView.columns();
-                boolean isFailed = false;
-                StringBuilder desc = new StringBuilder();
-                for (String column : columns.subList(4, columns.size())) {
-                    if (assertDB(column, dataView.getField(column))) {
-                        desc.append("Value ").append(userData.getData(sheetName, column)).append(" exist in the Database").append("\n");
-                    } else {
-                        isFailed = true;
-                        desc.append("Value ").append(userData.getData(sheetName, column)).append(" doesn't exist in the Database").append("\n");
-                    }
-                }
-                Report.updateTestLog(Action, desc.toString(), isFailed ? Status.FAILNS : Status.PASSNS);
-            } else {
-                Report.updateTestLog(Action, "Incorrect Sheet Name", Status.FAILNS);
-            }
-        }
     ```

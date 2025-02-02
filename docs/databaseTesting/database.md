@@ -45,7 +45,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 After the above setting is done, you can proceed with your first steps as shown below.
 
- ![basic](img/db/basictest.gif "basic")
+ ![basic](img/ "basic")
 
 Data Parameterization can be done using the built-in **editor.** If you mouse-hover on the **Input** column, corresponding to the **`DB`** steps, an option to open up the Editor comes up.
 
@@ -55,8 +55,8 @@ Data Parameterization can be done using the built-in **editor.** If you mouse-ho
 
  We need to press <span style="color:Red">**[esc]**</span> to close the editor
 
- ![editor](img/db/parameterization.gif "editor")
- <span style="color:Red">*The above image is a gif. So if its not moving, please reload the page*</span> 
+ ![editor](../img/db/editor.gif "editor")
+ <span style="color:Red">*The above image is a gif, running in a loop</span> 
 
 
 Make sure to check out the following topics :

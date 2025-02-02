@@ -96,10 +96,12 @@ nav:
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
-        - Create your first JMS Test: messageTesting/jms.md
+        - Create your first JMS Test: jms/jms.md
         - Queue Actions: jms/queueActions.md
-    - Kafka: messageTesting/kafka.md
-    - Flat Files: messageTesting/files.md
+    - Kafka: 
+        - Create your first Kafka Test: kafka/kafka.md
+        - Kafka Actions: kafka/kafkaActions.md
+    - Flat Files: messageTesting/flatfiles.md
  - Database Testing:
     - Premise: databaseTesting/database.md
     - Actions: 

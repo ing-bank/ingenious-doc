@@ -25,6 +25,6 @@
 
 Make sure to check out the following topics :
 
-[JMS (Queues)](jms.md){ .md-button } 
-[Kafka](kafka.md){ .md-button } 
-[Flat Files](files.md){ .md-button }
+[JMS (Queues)](../jms/jms.md){ .md-button } 
+[Kafka](../kafka/kafka.md){ .md-button } 
+[Flat Files](flatfiles.md){ .md-button }

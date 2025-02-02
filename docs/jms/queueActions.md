@@ -1,4 +1,4 @@
-# Queue Operations
+# **Queue Operations**
 ------------------------
 
 ## **setHost**
@@ -479,7 +479,7 @@
 
 ---------------------------------
 
-## **storeXMLtagInDataSheet**
+## **storeQueueXMLtagInDataSheet**
 
 **Description**: This function is used to store a certain XML tag value into a respective column of a given datasheet.
 
@@ -491,7 +491,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`storeXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Queue     |:green_circle: [`storeQueueXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
 
     Note: Ensure that your data sheet doesn't contain column names with spaces. 
 
@@ -499,7 +499,7 @@
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Store XML tag In DataSheet ", input = InputType.YES, condition = InputType.YES)
-        public void storeXMLtagInDataSheet() {
+        public void storeQueueXMLtagInDataSheet() {
 
             try {
                 String strObj = Input;
@@ -540,7 +540,8 @@
         }
     ```
 ----------------------
-## **assertXMLtagEquals**
+
+## **assertQueueXMLtagEquals**
 
 **Description**:  This function is used to validate whether a certain XML tag equals an expected text or not.
 
@@ -552,15 +553,15 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`assertXMLtagEquals`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Queue     |:green_circle: [`assertXMLtagEquals`](#)  | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Queue     |:green_circle: [`assertXMLtagEquals`](#)  | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Queue     |:green_circle: [`assertQueueXMLtagEquals`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Queue     |:green_circle: [`assertQueueXMLtagEquals`](#)  | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Queue     |:green_circle: [`assertQueueXMLtagEquals`](#)  | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Assert XML Tag Equals ", input = InputType.YES, condition = InputType.YES)
-        public void assertXMLtagEquals() {
+        public void assertQueueXMLtagEquals() {
 
             try {
                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -587,7 +588,8 @@
     ```
 
 ---------------------------------
-## **assertXMLtagContains**
+
+## **assertQueueXMLtagContains**
 
 **Description**:  This function is used to validate whether a certain XML tag contains an expected text or not.
 
@@ -599,15 +601,15 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`assertXMLtagContains`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Queue     |:green_circle: [`assertXMLtagContains`](#)  | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Queue     |:green_circle: [`assertXMLtagContains`](#)  | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Queue     |:green_circle: [`assertQueueXMLtagContains`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Queue     |:green_circle: [`assertQueueXMLtagContains`](#)  | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Queue     |:green_circle: [`assertQueueXMLtagContains`](#)  | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Assert XML Tag Contains ", input = InputType.YES, condition = InputType.YES)
-        public void assertXMLtagContains() {
+        public void assertQueueXMLtagContains() {
 
             try {
                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -636,7 +638,7 @@
 
 ---------------------------------
 
-## **assertResponseMessageContains**
+## **assertQueueResponseMessageContains**
 
 **Description**:  This function is used to validate whether response message contains an expected text or not.
 
@@ -646,15 +648,15 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`assertResponseMessageContains`](#)  | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Queue     |:green_circle: [`assertResponseMessageContains`](#)  | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Queue     | :green_circle: [`assertResponseMessageContains`](#)  | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Queue     |:green_circle: [`assertQueueResponseMessageContains`](#)  | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Queue     |:green_circle: [`assertQueueResponseMessageContains`](#)  | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Queue     | :green_circle: [`assertQueueResponseMessageContains`](#)  | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Assert Response Message contains ", input = InputType.YES)
-        public void assertResponseMessageContains() {
+        public void assertQueueResponseMessageContains() {
             try {
                 if (receivedMessage.get(key).contains(Data)) {
                     Report.updateTestLog(Action, "Response Message contains : " + Data, Status.PASSNS);
@@ -670,7 +672,7 @@
 
 ---------------------------------
 
-## **assertJSONtagEquals**
+## **assertQueueJSONtagEquals**
 
 **Description**:  This function is used to validate whether a certain JSON tag equals an expected text or not.
 
@@ -682,15 +684,15 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`assertJSONtagEquals`](#)  | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Queue     |:green_circle: [`assertJSONtagEquals`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Queue     |:green_circle: [`assertJSONtagEquals`](#) | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Queue     |:green_circle: [`assertQueueJSONtagEquals`](#)  | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Queue     |:green_circle: [`assertQueueJSONtagEquals`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Queue     |:green_circle: [`assertQueueJSONtagEquals`](#) | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Assert JSON Tag Equals ", input = InputType.YES, condition = InputType.YES)
-        public void assertJSONtagEquals() {
+        public void assertQueueJSONtagEquals() {
             try {
                 String response = receivedMessage.get(key);
                 String jsonpath = Condition;
@@ -709,7 +711,8 @@
     ```
 
 ---------------------------------
-## **assertJSONtagContains**
+
+## **assertQueueJSONtagContains**
 
 **Description**:  This function is used to validate whether a certain JSON tag contains an expected text or not.
 
@@ -721,15 +724,15 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`assertJSONtagContains`](#)   | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Queue     |:green_circle: [`assertJSONtagContains`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Queue     |:green_circle: [`assertJSONtagContains`](#)  | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Queue     |:green_circle: [`assertQueueJSONtagContains`](#)   | @value      |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Queue     |:green_circle: [`assertQueueJSONtagContains`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Queue     |:green_circle: [`assertQueueJSONtagContains`](#)  | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Assert JSON Tag Contains ", input = InputType.YES, condition = InputType.YES)
-        public void assertJSONtagContains() {
+        public void assertQueueJSONtagContains() {
             try {
                 String response = receivedMessage.get(key);
                 String jsonpath = Condition;
@@ -749,7 +752,8 @@
     ```
 
 ---------------------------------
-## **storeJSONtagInDataSheet**
+
+## **storeQueueJSONtagInDataSheet**
 
 **Description**: This function is used to store a certain JSON tag value into a respective column of a given datasheet.
 
@@ -761,7 +765,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`storeJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Queue     |:green_circle: [`storeQueueJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
 
     Note: Ensure that your data sheet doesn't contain column names with spaces.
 
@@ -769,7 +773,7 @@
 
     ```java
     @Action(object = ObjectType.QUEUE, desc = "Store JSON Tag In DataSheet ", input = InputType.YES, condition = InputType.YES)
-        public void storeJSONtagInDataSheet() {
+        public void storeQueueJSONtagInDataSheet() {
 
             try {
                 String strObj = Input;
