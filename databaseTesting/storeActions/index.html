@@ -1765,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../messageTesting/jms/" class="md-nav__link">
+      <a href="../../jms/jms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1816,12 +1816,51 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../messageTesting/kafka/" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Kafka
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create your first Kafka Test
     
   </span>
   
@@ -1839,7 +1878,37 @@
   
   
     <li class="md-nav__item">
-      <a href="../../messageTesting/files/" class="md-nav__link">
+      <a href="../../kafka/kafkaActions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messageTesting/flatfiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2829,7 +2898,7 @@
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>storeDBValueinDataSheet</code></a></td>
 <td>DatasheetName:ColumnName</td>
-<td>productName, 1</td>
+<td>DatabaseColumnName, ResultSetRowNumber</td>
 </tr>
 </tbody>
 </table>
@@ -2872,8 +2941,7 @@
 </div>
 <h2 id="storevalueinvariable"><strong>storeValueInVariable</strong></h2>
 <p><strong>Description</strong>: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in a user defined variable</p>
-<p><strong>Input Format</strong> : %variableName% , Condition : DatabaseColumnName,
-ResultSetRowNumber</p>
+<p><strong>Input Format</strong> : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Usage</label><label for="__tabbed_2_2">Corresponding Code</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2891,7 +2959,7 @@ ResultSetRowNumber</p>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>storeValueInVariable</code></a></td>
 <td>%variableName%</td>
-<td>productName, 1</td>
+<td>DatabaseColumnName,ResultSetRowNumber</td>
 </tr>
 </tbody>
 </table>
@@ -2912,8 +2980,7 @@ ResultSetRowNumber</p>
 </div>
 <h2 id="storevalueinglobalvariable"><strong>storeValueInGlobalVariable</strong></h2>
 <p><strong>Description</strong>: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in global variable</p>
-<p><strong>Input Format</strong> : %variableName% , Condition : DatabaseColumnName,
-ResultSetRowNumber</p>
+<p><strong>Input Format</strong> : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Usage</label><label for="__tabbed_3_2">Corresponding Code</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2931,7 +2998,7 @@ ResultSetRowNumber</p>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>storeValueInGlobalVariable</code></a></td>
 <td>%variableName%</td>
-<td>productName, 1</td>
+<td>DatabaseColumnName,ResultSetRowNumber</td>
 </tr>
 </tbody>
 </table>
@@ -2969,7 +3036,7 @@ ResultSetRowNumber</p>
 <tr>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>storeResultInDataSheet</code></a></td>
-<td><code>@select * from public."Employee"</code></td>
+<td><code>@select designation from job where id=121;</code></td>
 <td>DatasheetName</td>
 </tr>
 </tbody>
@@ -3026,7 +3093,7 @@ ResultSetRowNumber</p>
 <tr>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>storeResultInVariable</code></a></td>
-<td><code>@select * from public."Employee"</code></td>
+<td><code>@@select designation from job where id=121;"</code></td>
 <td>%variableName%</td>
 </tr>
 </tbody>

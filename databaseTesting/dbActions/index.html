@@ -1765,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../messageTesting/jms/" class="md-nav__link">
+      <a href="../../jms/jms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1816,12 +1816,51 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../messageTesting/kafka/" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Kafka
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create your first Kafka Test
     
   </span>
   
@@ -1839,7 +1878,37 @@
   
   
     <li class="md-nav__item">
-      <a href="../../messageTesting/files/" class="md-nav__link">
+      <a href="../../kafka/kafkaActions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messageTesting/flatfiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,15 +2131,6 @@
   <a href="#executedmlquery" class="md-nav__link">
     <span class="md-ellipsis">
       executeDMLQuery
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifywithdatasheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      verifyWithDataSheet
     </span>
   </a>
   
@@ -2798,15 +2858,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#verifywithdatasheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      verifyWithDataSheet
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3037,7 +3088,7 @@
 <tr>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>executeSelectQuery</code></a></td>
-<td><code>@select * from tableName</code></td>
+<td><code>@select designation from job where id=121;</code></td>
 <td></td>
 </tr>
 </tbody>
@@ -3084,7 +3135,7 @@
 <tr>
 <td>Database</td>
 <td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>executeDMLQuery</code></a></td>
-<td><code>@UPDATE public."Employee" SET "Age"=27 WHERE id = 123456;</code></td>
+<td><code>@UPDATE job SET "designation"=Tester WHERE id = 121;</code></td>
 <td></td>
 </tr>
 <tr>
@@ -3116,57 +3167,6 @@
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span><span class="n">Status</span><span class="p">.</span><span class="na">FAILNS</span><span class="p">);</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="verifywithdatasheet"><strong>verifyWithDataSheet</strong></h2>
-<p><strong>Description</strong>: Verify Table values with the Test Data sheet</p>
-<p><strong>Input Format</strong> : @<code>SQL Query</code></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Usage</label><label for="__tabbed_6_2">Corresponding Code</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>ObjectName</th>
-<th>Action</th>
-<th>Input</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Database</td>
-<td><img alt="🟢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e2.svg" title=":green_circle:" /> <a href="#"><code>verifyWithDataSheet</code></a></td>
-<td><code>@select * from public."Employee"</code></td>
-<td>%variableName%</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@Action</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ObjectType</span><span class="p">.</span><span class="na">DATABASE</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Verify Table values with the Test Data sheet &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InputType</span><span class="p">.</span><span class="na">YES</span><span class="p">)</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verifyWithDataSheet</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sheetName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Data</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">TestDataView</span><span class="w"> </span><span class="n">dataView</span><span class="p">;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sheetName</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">dataView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">getTestData</span><span class="p">(</span><span class="n">sheetName</span><span class="p">))</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">columns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataView</span><span class="p">.</span><span class="na">columns</span><span class="p">();</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isFailed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span><span class="na">subList</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">columns</span><span class="p">.</span><span class="na">size</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">assertDB</span><span class="p">(</span><span class="n">column</span><span class="p">,</span><span class="w"> </span><span class="n">dataView</span><span class="p">.</span><span class="na">getField</span><span class="p">(</span><span class="n">column</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">                    </span><span class="n">desc</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;Value &quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">userData</span><span class="p">.</span><span class="na">getData</span><span class="p">(</span><span class="n">sheetName</span><span class="p">,</span><span class="w"> </span><span class="n">column</span><span class="p">)).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot; exist in the Database&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">                    </span><span class="n">isFailed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">                    </span><span class="n">desc</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;Value &quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">userData</span><span class="p">.</span><span class="na">getData</span><span class="p">(</span><span class="n">sheetName</span><span class="p">,</span><span class="w"> </span><span class="n">column</span><span class="p">)).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot; doesn&#39;t exist in the Database&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">            </span><span class="n">Report</span><span class="p">.</span><span class="na">updateTestLog</span><span class="p">(</span><span class="n">Action</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span><span class="w"> </span><span class="n">isFailed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">Status</span><span class="p">.</span><span class="na">FAILNS</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Status</span><span class="p">.</span><span class="na">PASSNS</span><span class="p">);</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">            </span><span class="n">Report</span><span class="p">.</span><span class="na">updateTestLog</span><span class="p">(</span><span class="n">Action</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Incorrect Sheet Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Status</span><span class="p">.</span><span class="na">FAILNS</span><span class="p">);</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="p">}</span>
 </span></code></pre></div>
 </div>
 </div>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../kafka/">
+        <link rel="prev" href="../../kafka/kafkaActions/">
       
       
         <link rel="next" href="../../databaseTesting/database/">
@@ -1770,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jms/" class="md-nav__link">
+      <a href="../../jms/jms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,9 +1821,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../kafka/" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Kafka
@@ -1831,7 +1844,63 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create your first Kafka Test
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/kafkaActions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1853,6 +1922,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Flat Files
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1863,6 +1944,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-generate-data-driven-flat-files-using-ingenious" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to generate data-driven flat files using INGenious?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payload-data-parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload Data Parameterization
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2660,6 +2778,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-generate-data-driven-flat-files-using-ingenious" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to generate data-driven flat files using INGenious?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payload-data-parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload Data Parameterization
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2678,6 +2822,57 @@
 
 
 <h1 id="working-with-flat-files"><strong>Working with Flat Files</strong></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Significance of flat files for Testing</p>
+<p>In various banking or other industries, one would need to produce inputs in the form of flat files. These flats files are consumed (via <code>XFB</code>s or other protocols) by systems (<strong>Application Under Test</strong>) to generate outputs.
+For example in a Payment processing system a flat file like the one below, is an input and then the system generates bookings based on the data in the files.
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;PaymentFile&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;Payment&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&lt;PaymentID&gt;</span>12345<span class="nt">&lt;/PaymentID&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&lt;Payer&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&lt;Name&gt;</span>John<span class="w"> </span>Doe<span class="nt">&lt;/Name&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&lt;AccountNumber&gt;</span>987654321<span class="nt">&lt;/AccountNumber&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&lt;Bank&gt;</span>ABC<span class="w"> </span>Bank<span class="nt">&lt;/Bank&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&lt;/Payer&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">&lt;Payee&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">&lt;Name&gt;</span>Jane<span class="w"> </span>Smith<span class="nt">&lt;/Name&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nt">&lt;AccountNumber&gt;</span>123456789<span class="nt">&lt;/AccountNumber&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nt">&lt;Bank&gt;</span>XYZ<span class="w"> </span>Bank<span class="nt">&lt;/Bank&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&lt;/Payee&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">&lt;Amount&gt;</span>1500.00<span class="nt">&lt;/Amount&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="nt">&lt;PaymentDate&gt;</span>2025-02-02<span class="nt">&lt;/PaymentDate&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="nt">&lt;Description&gt;</span>Invoice<span class="w"> </span>Payment<span class="nt">&lt;/Description&gt;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">&lt;/Payment&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">&lt;/PaymentFile&gt;</span>
+</span></code></pre></div></p>
+<p>For automated testing, it becomes crucial to be able to generate multiple such test files (by making these driven by data) and then eventually validate whether the system (<strong>Application Under Test</strong>) has processed them in the expected way or not.</p>
+</div>
+<h2 id="how-to-generate-data-driven-flat-files-using-ingenious">How to generate data-driven flat files using INGenious?</h2>
+<ul>
+<li>
+<p>At the beginning, there should be a step to set the <strong><code>file location</code></strong>. 
+  This needs to be done by creating a variable called <code>%fileLocation%</code> and feeding a <strong>relative/absolute</strong> path to it, where you want to save the output file.</p>
+</li>
+<li>
+<p>Then, there should be a step to set the <strong><code>file name</code></strong>. 
+  This needs to be done by creating another variable called <code>%fileName%</code> and feeding the actual file name (with extension) to it. You can leverage built-in capabilities in INGenious like <code>Synthetic Data Generation</code> to create <code>file name</code>s to be fed to the variable.</p>
+</li>
+<li>
+<p>Then there should be the <strong><code>populateData</code></strong> action to generate the file. The <strong><code>populateData</code></strong> action comes with an editor which makes parameterization of data in   the paylod very easy. This action is always marked in <span style="color:Green"><strong>Green.</strong></span>. [See the section below]</p>
+</li>
+</ul>
+<p><img alt="file" src="../../img/flatfiles/file.png" title="file" /></p>
+<p>The above is an example of a File Generation Testcase.</p>
+<hr />
+<h2 id="payload-data-parameterization">Payload Data Parameterization</h2>
+<p>Data Parameterization can be done using the built-in <strong>editor.</strong> If you mouse-hover on the <strong>Input</strong> column, corresponding to the <strong><code>populateData</code></strong> step, an option to open up the Editor comes up.</p>
+<p>Inside this editor, we can paste the entire Payload and then parameterize the specific JSON/XML tags based on our needs.</p>
+<p>If we press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span> the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
+<p>We need to press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to close the editor</p>
+<p><img alt="editor" src="../../img/flatfiles/editor.gif" title="editor" /></p>
+<hr />
 
 
 
