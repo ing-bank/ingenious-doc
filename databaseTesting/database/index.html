@@ -2038,9 +2038,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-editor" class="md-nav__link">
+  <a href="#create-new-database-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Query Editor
+      Create New Database Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-your-first-database-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write your first Database Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Parameterization
     </span>
   </a>
   
@@ -2794,9 +2812,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-editor" class="md-nav__link">
+  <a href="#create-new-database-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Query Editor
+      Create New Database Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-your-first-database-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write your first Database Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Parameterization
     </span>
   </a>
   
@@ -2836,10 +2872,7 @@
 <h2 id="set-up-database-connection">Set up Database Connection</h2>
 <ul>
 <li>
-<p>Add maven dependency in pom.xml for database driver which you are going to use.</p>
-</li>
-<li>
-<p>If you are using <strong>mysql</strong> you need to add below dependency </p>
+<p>Add maven dependency in pom.xml for database driver which you are going to use. For example, if you are using <strong>mysql</strong> you need to add the following dependency :</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">   </span><span class="nt">&lt;dependency&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">       </span><span class="nt">&lt;groupId&gt;</span>com.mysql<span class="nt">&lt;/groupId&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">       </span><span class="nt">&lt;artifactId&gt;</span>mysql-connector-j<span class="nt">&lt;/artifactId&gt;</span>
@@ -2848,23 +2881,68 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>To connect to specific database from framework we need to provide values in <strong>Database Settings</strong> under <strong>Run Settings</strong> of INGenious.</p>
+<p>To configure a database connection from INGenious, follow the steps below :</p>
+<ul>
+<li>Click on the Configuration icon <img alt="browserConfig" src="../../img/toolui/BrowserConfiguration.png" title="browserConfig" /></li>
+<li>
+<p>Under <strong>Database Configurations</strong> you will see the <code>Database Alias</code> as <code>default</code>. Change the values as per requirement..</p>
+<p><img alt="dbSettings" src="../../img/db/dbsettings.png" title="dbSettings" /></p>
 </li>
 </ul>
-<p><img alt="dbSettings" src="../../img/db/dbsettings.png" title="dbSettings" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="create-new-database-configuration">Create New Database Configuration</h2>
+<p>To create a new database configuration, follow the steps below :</p>
+<ul>
+<li>
+<p>Click on the Configuration icon <img alt="browserConfig" src="../../img/toolui/BrowserConfiguration.png" title="browserConfig" /></p>
+</li>
+<li>
+<p>Inside the <strong>Database Configurations</strong> tab, Enter the <code>Database Alias</code> and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> . Alternatively you can also click on the <img alt="add" src="../../img/toolui/addIcon.png" title="add" /> icon.</p>
+<p><img alt="createConfig" src="../../img/db/createConfig.png" title="createConfig" /></p>
+</li>
+</ul>
 <p><strong>In Java if you were to manually connect, you would invariably use the following :</strong></p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">&quot;jdbc:mysql://localhost:3306/productDB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;My_DB_UserName&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;My_DB_Password&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<h2 id="query-editor">Query Editor</h2>
-<p>After the above setting is done, you can proceed with your first steps as shown below.</p>
-<p><img alt="basic" src="img/" title="basic" /></p>
-<p>Data Parameterization can be done using the built-in <strong>editor.</strong> If you mouse-hover on the <strong>Input</strong> column, corresponding to the <strong><code>DB</code></strong> steps, an option to open up the Editor comes up.</p>
-<p>Inside this editor, we can write the <code>Query</code> and then parameterize it based on our needs.</p>
-<p>If we press <span style="color:Red"><strong>[ctrl] + [SPACE]</strong></span>, the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
-<p>We need to press <span style="color:Red"><strong>[esc]</strong></span> to close the editor</p>
-<p><img alt="editor" src="../../img/db/editor.gif" title="editor" />
- <span style="color:Red">*The above image is a gif, running in a loop</span> </p>
+<hr />
+<h2 id="write-your-first-database-test">Write your first Database Test</h2>
+<ul>
+<li>
+<p>At the beginning, there should be the <strong><code>initDBConnection</code></strong> step to conect to a database. This requires the Database Alias (which you configured following the steps above) in the <strong>Condition</strong> column. </p>
+</li>
+<li>
+<p>Then there should be steps to execute the <strong>SQL Statements</strong> like <strong><code>executeSelectQuery</code></strong>, <strong><code>executeDMLQuery</code></strong>, <strong><code>storeResultInDataSheet</code></strong>, <strong><code>storeResultInVariable</code></strong></p>
+</li>
+<li>
+<p>The steps above, come with an editor which makes parameterization of data in the SQL statments very easy. [See the section below]</p>
+</li>
+<li>
+<p>Eventually there should be steps to validate/store result-set  <strong>specific columns</strong> or the <strong>entire result.</strong></p>
+</li>
+<li>
+<p>A Database test case should contain a <strong><code>closeDBConnection</code></strong> action at the end for clean-up.</p>
+</li>
+</ul>
+<p><img alt="database" src="../../img/db/db.png" title="database" /></p>
+<p>The above is an example of a Database Testcase.</p>
+<hr />
+<h2 id="query-parameterization">Query Parameterization</h2>
+<p>Parameterization of the SQL statements can be done using the built-in <strong>editor.</strong> If you mouse-hover on the <strong>Input</strong> column, corresponding to the <strong><code>Query</code></strong> steps, an option to open up the Editor comes up.</p>
+<p>The list of <strong><code>Query</code></strong> steps is as follows :</p>
+<ul>
+<li><strong><code>executeSelectQuery</code></strong></li>
+<li><strong><code>executeDMLQuery</code></strong></li>
+<li><strong><code>storeResultInDataSheet</code></strong></li>
+<li><strong><code>storeResultInVariable</code></strong></li>
+</ul>
+<p>Inside this editor, we can write the <strong>SQL statement</strong> and then parameterize the the <code>table names</code>, <code>column names</code>, <code>where</code> clause etc. based on our needs.</p>
+<p>If we press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span> the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
+<p>We need to press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to close the editor</p>
+<p><img alt="editor" src="../../img/db/editor.gif" title="editor" /></p>
+<hr />
 <p>Make sure to check out the following topics :</p>
 <p><a class="md-button" href="../dbActions/">Database Actions</a> </p>
 
