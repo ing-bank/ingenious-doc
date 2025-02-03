@@ -57,7 +57,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages the power of **Appium** to interact with and test Mobile Applications. 
 
-    [:octicons-arrow-right-24: Mobile App Testing](mobileTesting/)    
+    [:octicons-arrow-right-24: Mobile App Testing](mobiletesting/)    
 
 -   :material-api:{ .lg .middle .cicd} __API Automation__
 
@@ -91,7 +91,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages **JDBC** to connect and test Databases.
 
-    [:octicons-arrow-right-24: Database Testing](databaseTesting/)
+    [:octicons-arrow-right-24: Database Testing](databaseTesting/database/)
 
 -   :material-code-json:{ .lg .middle .customization } __Full Customization__
 
@@ -123,7 +123,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> is built in Java and has a strong command line interface. This makes integration with any CI tool, very easy.
 
-    [:octicons-arrow-right-24: Integration](ci.md)
+    [:octicons-arrow-right-24: Integration](integrations/ci/)
 
 -   :material-scale-balance:{ .lg .middle .grey  } __Open Source, MIT__
 
