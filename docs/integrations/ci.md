@@ -27,7 +27,7 @@ Please check out the pipeline integrations with the following solutions :
 
 
 
-[GitHub Actions :simple-githubactions:](integrations/githubactions.md){ .md-button } [Azure DevOps :material-microsoft-azure-devops:](integrations/azuredevops.md){ .md-button }  [Circle CI :simple-circleci:](integrations/circleci.md){ .md-button } 
+[GitHub Actions :simple-githubactions:](../integrations/githubactions.md){ .md-button } [Azure DevOps :material-microsoft-azure-devops:](../integrations/azuredevops.md){ .md-button }  [Circle CI :simple-circleci:](../integrations/circleci.md){ .md-button } 
 
 
 
