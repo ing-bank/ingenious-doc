@@ -1,3 +1,7 @@
+---
+icon: material/mouse-scroll-wheel
+---
+
 # **Scroll Actions** 
 
 ## **scrollInAndroid**
