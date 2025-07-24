@@ -318,3 +318,161 @@
     > **Note**: In addition to adding breakpoints to the test steps, you can comment the selected test steps as well, by performing right click and choosing the option **Toggle Comments**.
 
 ----
+
+??? example "String Operations"
+
+    ## String Operations
+
+    There are actions available to perform functions for string manipulation like concatenating strings, splitting strings and etc. The result will be stored to dynnamic variable *%variableName%* provided from the *Condition* column.
+
+    **Hardcoded String Format** : "String value"
+    **Input from Datasheet Format** : {Sheet:Column}
+    **Input from Dynamic Variable Format** : %dynamicVariable%
+
+
+    ### **Concat**
+
+    **Description**: This function will append the strings
+
+    **Input Format** : Comma separated string limited to 5 eg., string1, string2, string3, string4, string5
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *Concat* | "Hello,"," World","!","!","!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations  | *Concat* | {Sheet:Column}," World","!","!","!" | %variableName%  | |<span style="color:Blue"><< *Input from Datashee*</span> 
+        | String Operations | *Concat* | %dynamicVar%," World","!","!","!" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span> 
+    
+     -----------------------------------------------------
+    ### **GetLength**
+
+    **Description**: This function will get the lenth of the string
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *GetLength* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *GetLength* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *GetLength* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    
+     -----------------------------------------------------
+    ### **GetOccurence**
+
+    **Description**: This function will get the lenth of the string
+
+    **Input Format** : Comma separated string eg., *target_string, search_string*
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *GetOccurence* | "Hello, World!","e" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *GetOccurence* | {Sheet:Column},"e" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *GetOccurence* | %dynamicVar%,"e" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    
+    -----------------------------------------------------
+    ### **Replace**
+
+    **Description**: This function will replace *first* or *all* occurance of a character or string from target string
+
+    **Input Format** : Comma separated string eg., *string, target_string, replacement_string, first/all*
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *Replace* | "Hello, World!","o","a","first" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace first instance only*</span> 
+        | String Operations | *Replace* | {Sheet:Column},"o","a","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace first instance only*</span>
+        | String Operations | *Replace* | %dynamicVar%,"o","a","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace first instance only*</span>
+        | String Operations | *Replace* | "Hello, World!","o","a","all" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace all instance*</span> 
+        | String Operations | *Replace* | {Sheet:Column},"o","a","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace all instance*</span>
+        | String Operations | *Replace* | %dynamicVar%,"o","a","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace all instance*</span>
+        | String Operations | *Replace* | "apple pie pie","pie","cake","first" | %variableName% | |<span style="color:Green"><<*Hardcoded Input, Multi character replace first instance only*</span>
+        | String Operations | *Replace* | {Sheet:Column},"pie","cake","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi character replace first instance only*</span>
+        | String Operations | *Replace* | %dynamicVar%,"pie","cake","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi character replace first instance only*</span>
+        | String Operations | *Replace* | "apple pie pie","pie","cake","all" | %variableName% | |<span style="color:Green"><<*Hardcoded Input, Multi character replace all instance*</span>
+        | String Operations | *Replace* | {Sheet:Column},"pie","cake","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi character replace all instance*</span>
+        | String Operations | *Replace* | %dynamicVar%,"pie","cake","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi character replace all instance*</span>
+    
+     -----------------------------------------------------
+    ### **Split**
+
+    **Description**: This function will split string based on the *delimeter* and return value of the provided *index* and/or *limit*
+
+    **Input Format** : Comma separated string eg., *string, delimeter, index, limit*
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *Split* | "one@two@three@four","@","1" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Split* | {Sheet:Column},"@","1" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Split* | %dynamicVar%,"@","1" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+        | String Operations | *Split* | "one@two@three@four","@","1","2" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with limited no. of split*</span> 
+        | String Operations | *Split* | {Sheet:Column},"@","1","2" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with limited no. of split*</span>
+        | String Operations | *Split* | %dynamicVar%,"@","1","2"| %variableName% | |<span style="color:Brown"><< *Input from variable, with limited no. of split*</span>
+    
+     -----------------------------------------------------
+    ### **Substring**
+
+    **Description**: This function will return a new string that is a substring of the original string
+
+    **Input Format** : Comma separated string eg., *string, beginIndex, endIndex(optional)*
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *Substring* | "Hello, World!","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Substring* | {Sheet:Column},"7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Substring* | %dynamicVar%,"7" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+        | String Operations | *Substring* | "Hello, World!","1","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with end index*</span> 
+        | String Operations | *Substring* | {Sheet:Column},"1","7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with end index*</span>
+        | String Operations | *Substring* | %dynamicVar%,"1","7"| %variableName% | |<span style="color:Brown"><< *Input from variable, with end index*</span>
+    
+     -----------------------------------------------------
+    ### **ToLower**
+
+    **Description**: This function will convert a String to lowercase
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *ToLower* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *ToLower* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *ToLower* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    
+     -----------------------------------------------------
+    ### **ToUpper**
+
+    **Description**: This function will convert a String to uppercase
+
+    **Input Format** : @PageName,Target ObjectName - as defined in the Object Repository
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *ToUpper* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *ToUpper* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *ToUpper* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    
+     -----------------------------------------------------
+    ### **Trim**
+
+    **Description**: This function will identifies and removes any whitespace characters (including spaces, tabs, and newline characters) at the beginning and end of a string
+
+    **Input Format** : @PageName,Target ObjectName - as defined in the Object Repository
+
+    === "Usage"
+
+        | ObjectName | Action | Input        | Condition |Reference|  |
+        |------------|--------|--------------|-----------|---------|--|
+        | String Operations | *Trim* | " Hello, World! " | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Trim* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Trim* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    
+----
