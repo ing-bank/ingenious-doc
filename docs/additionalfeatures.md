@@ -326,7 +326,9 @@
     There are actions available to perform functions for string manipulation like concatenating strings, splitting strings and etc. The result will be stored to dynnamic variable *%variableName%* provided from the *Condition* column.
 
     **Hardcoded String Format** : "String value"
+
     **Input from Datasheet Format** : {Sheet:Column}
+    
     **Input from Dynamic Variable Format** : %dynamicVariable%
 
 
