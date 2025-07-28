@@ -490,7 +490,7 @@ icon: octicons/browser-16
         |-----------|-------------|
         | `string_value` | string value to split |
         | `delimeter` | separator to split the string |
-        | `index` | key index value to return in the action |
+        | `index` | key index value to return in the action where base index is `0` |
         | `limit` | number of times the string will be splitted |
 
     === "Usage"
