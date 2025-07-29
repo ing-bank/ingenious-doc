@@ -327,9 +327,9 @@ icon: octicons/browser-16
 
     ## String Operations
 
-    There are actions available to perform functions for string manipulation like concatenating strings, splitting strings and etc. The result will be stored to dynamic variable *`%variableName%`* provided from the *Condition* column.
+    Below are actions you may use to perform several string manipulations. The result will be stored to dynamic variable *`%variableName%`* provided from the *Condition* column.
 
-    Different *Input* formats for String Operaions.
+    Different *Input* formats for String Operations.
 
     | Input Type | Format |
     |-----------|-------------|
@@ -347,7 +347,7 @@ icon: octicons/browser-16
 
         | Parameter | Description |
         |-----------|-------------|
-        | `string_value` | set of strings to be concatenated to a new string, max number string value is 5 |
+        | `string_value` | set of strings to be concatenated to a new string, max number of string value is 5 |
 
     === "Usage"
 
@@ -480,7 +480,7 @@ icon: octicons/browser-16
      -----------------------------------------------------
     ### **Split**
 
-    The function splits the string using the specified delimeter and returns a substring based on the provided index or no of limit the sptring will be splitted.
+    The function splits the string using the specified delimeter and returns a substring based on the provided index or number of limit the sptring will be splitted.
 
     === "Input Parameters"
 
@@ -510,11 +510,11 @@ icon: octicons/browser-16
 
         **Sample Test Case:**
 
-        ![Split Examples](../img/stringoperations/concat-1.png "examples")
+        ![Split Examples](../img/stringoperations/Split-1.png "examples")
 
         **Sample Report:**
 
-        ![Split Examples](../img/stringoperations/concat-2.png "report")
+        ![Split Examples](../img/stringoperations/Split-2.png "report")
 
      -----------------------------------------------------
     ### **Substring**
