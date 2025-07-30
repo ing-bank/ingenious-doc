@@ -1,7 +1,3 @@
----
-icon: octicons/browser-16
----
-
 # **Additional features**
 
 -------------------------------------
@@ -343,19 +339,19 @@ icon: octicons/browser-16
 
     === "Input Parameters"
 
-        **Input Format**: Comma separated string limited to 5, (i.e. *`"string_value 1"`,`"string_value 2"`,`"string_value 3"`,`"string_value 4"`,`"string_value 5"`*)
+        **Input Format**: Comma separated strings, (i.e. *`"string_value 1"`,`"string_value 2"`,`"string_value 3"`,`"string_value 4"`,`"string_value 5"`*)
 
         | Parameter | Description |
         |-----------|-------------|
-        | `string_value` | set of strings to be concatenated to a new string, max number of string value is 5 |
+        | `string_value` | set of strings to be concatenated to a new string, max number of `string_value` is `5` |
 
     === "Usage"
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *Concat* | "Hello,"," World","!","!","!" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *Concat* | {Sheet:Column}," World","!","!","!" | %variableName%  | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span> 
-        | String Operations | *Concat* | %dynamicVar%," World","!","!","!" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span> 
+        | String Operations | *Concat* | "Hello,"," World","!","!","!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Concat* | {Sheet:Column}," World","!","!","!" | %variableName%  | |<span style="color:Blue"><< *Input from Datasheet*</span> 
+        | String Operations | *Concat* | %dynamicVar%," World","!","!","!" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span> 
     
     === "Examples"
 
@@ -374,7 +370,7 @@ icon: octicons/browser-16
 
     === "Input Parameters"
 
-        **Input Format**: Single string value, (i.e. *`"string_value`")
+        **Input Format**: Single string value, (i.e. *`"string_value"`*)
 
         | Parameter | Description |
         |-----------|-------------|
@@ -384,9 +380,9 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *GetLength* | "Hello, World!" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *GetLength* | {Sheet:Column} | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *GetLength* | %dynamicVar% | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
+        | String Operations | *GetLength* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *GetLength* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *GetLength* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
     
     === "Examples"
 
@@ -401,7 +397,7 @@ icon: octicons/browser-16
      -----------------------------------------------------
     ### **GetOccurence**
 
-    This function will get the number od occuerencess of the searched character.
+    This function will get the number od occurrences of the searched character.
 
     === "Input Parameters"
 
@@ -416,9 +412,9 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *GetOccurence* | "Hello, World!","e" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *GetOccurence* | {Sheet:Column},"e" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *GetOccurence* | %dynamicVar%,"e" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
+        | String Operations | *GetOccurence* | "Hello, World!","e" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *GetOccurence* | {Sheet:Column},"e" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *GetOccurence* | %dynamicVar%,"e" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
 
     === "Examples"
 
@@ -439,7 +435,7 @@ icon: octicons/browser-16
 
     === "Input Parameters"
 
-        **Input Format**: Comma separated string, (i.e. *`"string"`,`"target_string"`,`"replacement_string"`,`"first/all"`*)
+        **Input Format**: Comma separated string, (i.e. *`"string_value"`,`"target_string"`,`"replacement_string"`,`"first/all"`*)
 
         | Parameter | Description |
         |-----------|-------------|
@@ -452,18 +448,18 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *Replace* | "Hello, World!","o","a","first" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, Single character replace first instance only*</span> 
-        | String Operations | *Replace* | {Sheet:Column},"o","a","first" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, Single character replace first instance only*</span>
-        | String Operations | *Replace* | %dynamicVar%,"o","a","first" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, Single character replace first instance only*</span>
-        | String Operations | *Replace* | "Hello, World!","o","a","all" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, Single character replace all instance*</span> 
-        | String Operations | *Replace* | {Sheet:Column},"o","a","all" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, Single character replace all instance*</span>
-        | String Operations | *Replace* | %dynamicVar%,"o","a","all" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, Single character replace all instance*</span>
-        | String Operations | *Replace* | "apple pie pie","pie","cake","first" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, Multi-character replace first instance only*</span>
-        | String Operations | *Replace* | {Sheet:Column},"pie","cake","first" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, Multi-character replace first instance only*</span>
-        | String Operations | *Replace* | %dynamicVar%,"pie","cake","first" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, Multi-character replace first instance only*</span>
-        | String Operations | *Replace* | "apple pie pie","pie","cake","all" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, Multi-character replace all instance*</span>
-        | String Operations | *Replace* | {Sheet:Column},"pie","cake","all" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, Multi-character replace all instance*</span>
-        | String Operations | *Replace* | %dynamicVar%,"pie","cake","all" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, Multi-character replace all instance*</span>
+        | String Operations | *Replace* | "Hello, World!","o","a","first" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace first instance only*</span> 
+        | String Operations | *Replace* | {Sheet:Column},"o","a","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace first instance only*</span>
+        | String Operations | *Replace* | %dynamicVar%,"o","a","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace first instance only*</span>
+        | String Operations | *Replace* | "Hello, World!","o","a","all" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace all instance*</span> 
+        | String Operations | *Replace* | {Sheet:Column},"o","a","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace all instance*</span>
+        | String Operations | *Replace* | %dynamicVar%,"o","a","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace all instance*</span>
+        | String Operations | *Replace* | "apple pie pie","pie","cake","first" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Multi-character replace first instance only*</span>
+        | String Operations | *Replace* | {Sheet:Column},"pie","cake","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi-character replace first instance only*</span>
+        | String Operations | *Replace* | %dynamicVar%,"pie","cake","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi-character replace first instance only*</span>
+        | String Operations | *Replace* | "apple pie pie","pie","cake","all" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Multi-character replace all instance*</span>
+        | String Operations | *Replace* | {Sheet:Column},"pie","cake","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi-character replace all instance*</span>
+        | String Operations | *Replace* | %dynamicVar%,"pie","cake","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi-character replace all instance*</span>
     
     === "Examples"
 
@@ -484,7 +480,7 @@ icon: octicons/browser-16
 
     === "Input Parameters"
 
-        **Input Format**: Comma separated string, (i.e. *`"string"`,`"delimeter"`,`"index"`,`"limit"`*)
+        **Input Format**: Comma separated string, (i.e. *`"string_value"`,`"delimeter"`,`"index"`,`"limit"`*)
 
         | Parameter | Description |
         |-----------|-------------|
@@ -497,12 +493,12 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *Split* | "one@two@three@four","@","1" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *Split* | {Sheet:Column},"@","1" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *Split* | %dynamicVar%,"@","1" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
-        | String Operations | *Split* | "one@two@three@four","@","1","2" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, with limited no. of split*</span> 
-        | String Operations | *Split* | {Sheet:Column},"@","1","2" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, with limited no. of split*</span>
-        | String Operations | *Split* | %dynamicVar%,"@","1","2"| %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, with limited no. of split*</span>
+        | String Operations | *Split* | "one@two@three@four","@","1" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Split* | {Sheet:Column},"@","1" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Split* | %dynamicVar%,"@","1" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+        | String Operations | *Split* | "one@two@three@four","@","1","2" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with limited no. of split*</span> 
+        | String Operations | *Split* | {Sheet:Column},"@","1","2" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with limited no. of split*</span>
+        | String Operations | *Split* | %dynamicVar%,"@","1","2"| %variableName% | |<span style="color:Brown"><< *Input from variable, with limited no. of split*</span>
     
     === "Examples"
 
@@ -523,7 +519,7 @@ icon: octicons/browser-16
 
     === "Input Parameters"
 
-        **Input Format**: Comma separated string, (i.e. *`"string"`,`"begin_index"`,`"end_index(optional)"`*)
+        **Input Format**: Comma separated string, (i.e. *`"string_value"`,`"begin_index"`,`"end_index(optional)"`*)
 
         | Parameter | Description |
         |-----------|-------------|
@@ -535,12 +531,12 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *Substring* | "Hello, World!","7" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *Substring* | {Sheet:Column},"7" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *Substring* | %dynamicVar%,"7" | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
-        | String Operations | *Substring* | "Hello, World!","1","7" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input, with end index*</span> 
-        | String Operations | *Substring* | {Sheet:Column},"1","7" | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet, with end index*</span>
-        | String Operations | *Substring* | %dynamicVar%,"1","7"| %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable, with end index*</span>
+        | String Operations | *Substring* | "Hello, World!","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Substring* | {Sheet:Column},"7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Substring* | %dynamicVar%,"7" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+        | String Operations | *Substring* | "Hello, World!","1","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with end index*</span> 
+        | String Operations | *Substring* | {Sheet:Column},"1","7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with end index*</span>
+        | String Operations | *Substring* | %dynamicVar%,"1","7"| %variableName% | |<span style="color:Brown"><< *Input from variable, with end index*</span>
     
     === "Examples"
 
@@ -571,9 +567,9 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *ToLower* | "Hello, World!" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *ToLower* | {Sheet:Column} | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *ToLower* | %dynamicVar% | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
+        | String Operations | *ToLower* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *ToLower* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *ToLower* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
     
     === "Examples"
 
@@ -604,9 +600,9 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *ToUpper* | "Hello, World!" | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *ToUpper* | {Sheet:Column} | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *ToUpper* | %dynamicVar% | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
+        | String Operations | *ToUpper* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *ToUpper* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *ToUpper* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
     
     === "Examples"
 
@@ -637,9 +633,9 @@ icon: octicons/browser-16
 
         | ObjectName | Action | Input        | Condition |Reference|  |
         |------------|--------|--------------|-----------|---------|--|
-        | String Operations | *Trim* | " Hello, World! " | %variableName% | |<span style="color:Green">:arrow_left: *Hardcoded Input*</span> 
-        | String Operations | *Trim* | {Sheet:Column} | %variableName% | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
-        | String Operations | *Trim* | %dynamicVar% | %variableName% | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
+        | String Operations | *Trim* | " Hello, World! " | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
+        | String Operations | *Trim* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
+        | String Operations | *Trim* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
     
     === "Examples"
 
