@@ -335,7 +335,7 @@
 
     ### **Concat**
 
-    This function returns the appended strings provided from the *Input* column.
+    This function appends the strings provided from the *Input* column.
 
     === "Input Parameters"
 
@@ -557,7 +557,7 @@
      -----------------------------------------------------
     ### **ToLower**
 
-    This function will convert a String to lowercase.
+    This function converts a String to lowercase.
 
     === "Input Parameters"
 
@@ -590,7 +590,7 @@
      -----------------------------------------------------
     ### **ToUpper**
 
-    This function will convert a String to uppercase.
+    This function converts a String to uppercase.
 
     === "Input Parameters"
 
