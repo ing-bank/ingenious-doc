@@ -335,7 +335,7 @@
 
     ### **Concat**
 
-    This function will append the strings provided from the *Input* column.
+    This function returns the appended strings provided from the *Input* column.
 
     === "Input Parameters"
 
@@ -355,6 +355,8 @@
     
     === "Examples"
 
+        Below are sample Test Case and generated report on how to use String Operations *Concat*
+
         **Sample Test Case:**
 
         ![Concat Examples](../img/stringoperations/Concat-1.png "examples")
@@ -366,7 +368,7 @@
      -----------------------------------------------------
     ### **GetLength**
 
-    This function will get the length of the string.
+    This function returns the length of the string.
 
     === "Input Parameters"
 
@@ -386,6 +388,8 @@
     
     === "Examples"
 
+        Below are sample Test Case and generated report on how to use String Operations *GetLength*
+
         **Sample Test Case:**
 
         ![GetLength Examples](../img/stringoperations/GetLength-1.png "examples")
@@ -397,16 +401,16 @@
      -----------------------------------------------------
     ### **GetOccurence**
 
-    This function will get the number od occurrences of the searched character.
+    This function returns the number of occurrences of the searched character.
 
     === "Input Parameters"
 
-        **Input Format**: Comma separated string, (i.e. *`"target_string"`,`"search_string"`*)
+        **Input Format**: Comma separated string, (i.e. *`"target_string"`,`"search_character"`*)
 
         | Parameter | Description |
         |-----------|-------------|
         | `target_string` | target string value to search|
-        | `search_string` | string value to search from the target string |
+        | `search_character` | character value to search from the target string |
 
     === "Usage"
 
@@ -418,7 +422,7 @@
 
     === "Examples"
 
-        Below are sample Test Case and generated report on how to use String Operations *Concat*
+        Below are sample Test Case and generated report on how to use String Operations *GetOccurence*
 
         **Sample Test Case:**
 
@@ -476,7 +480,7 @@
      -----------------------------------------------------
     ### **Split**
 
-    The function splits the string using the specified delimeter and returns a substring based on the provided index or number of limit the sptring will be splitted.
+    The function splits the string using the specified delimeter and returns a substring based on the provided index or number of limit the string will be splitted.
 
     === "Input Parameters"
 
@@ -515,7 +519,7 @@
      -----------------------------------------------------
     ### **Substring**
 
-    This function will return a new string that is a substring of the original string.
+    This function returns a new string that is a substring of the original string.
 
     === "Input Parameters"
 
