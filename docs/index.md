@@ -6,7 +6,7 @@
 
 
 
-Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**</span> for over 4 years of real-world usage, **INGenious** is now open-source and available to everyone. Designed to simplify and streamline test automation, this robust solution empowers teams of all sizes to achieve efficient, high-quality testing. By joining the global testing community, ING aims to collaborate, innovate, and elevate automated testing together.
+Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**</span> for over 5 years of real-world usage, **INGenious** is now open-source and available to everyone. Designed to simplify and streamline test automation, this robust solution empowers teams of all sizes to achieve efficient, high-quality testing. By joining the global testing community, ING aims to collaborate, innovate, and elevate automated testing together.
 
 !!! abstract "About" 
 

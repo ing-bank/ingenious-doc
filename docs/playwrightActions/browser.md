@@ -145,37 +145,6 @@ icon: octicons/browser-16
     ```
 ------------------------------------------------------
 
-## **pause**
-
-**Description**:  This function is used to **pause** the execution for a specific duration
-
-**Input Format** : @duration in milliseconds. Example: @`5000` - this will pause the execution for 5 seconds.
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference| 
-    |------------|--------|--------------|-----------|---------|
-    | Browser     |:green_circle: [`pause`](#)  |@value   | | 
-
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.BROWSER, desc = "Wait for [<Data>] milli seconds", input = InputType.YES)
-        public void pause() {
-            try {
-                Thread.sleep(Long.parseLong(Data));
-                Report.updateTestLog(Action, "Thread sleep for '" + Long.parseLong(Data), Status.DONE);
-            } catch (Exception e) {
-                Report.updateTestLog(Action, e.getMessage(), Status.FAIL);
-                Logger.getLogger(CommonMethods.class.getName()).log(Level.SEVERE, null, e);
-            }
-
-        }
-    ```   
-
-----------------------------------------------------
-
 ## **clearCookies**
 
 **Description**:  This function is used to **clearCookies** from the browser

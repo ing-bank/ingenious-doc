@@ -1,3 +1,7 @@
+---
+icon: material/atom
+---
+
 # **Dynamic Object** 
 
 ## **setMobileObjectProperty**
@@ -38,7 +42,7 @@
     ```
 ----------------------
 
-## **setMobileObjectProperty**
+## **setMobileglobalObjectProperty**
 
 **Description**: This function will set all objects property to data in input column  at runtime
 

@@ -80,12 +80,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@Smoke"
+    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@Smoke"
+    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 ---------------------- 
@@ -145,7 +145,8 @@ User Defined Settings | -setEnv "`user`.SettingName=Value"|
 Driver Settings | -setEnv "`driver`.SettingName=Value"|
 Test Management Settings | -setEnv "`tm`.SettingName=Value"|
 Browser Capability Settings | -setEnv "`capability`.`browserName`.SettingName=Value"|
-Browser Context Settings |-setEnv "`context`.SettingName=Value"|
+Browser Context Settings |-setEnv "`context`.`aliasName`.SettingName=Value"|
+Database Settungs | -setEnv "'`db`.`aliasName`.SettingName=Value"|
 
 Examples :
 
@@ -153,7 +154,7 @@ Examples :
 -setEnv "capability.chromium.setheadless=false"` 
 ```
 ```{ .shell .copy }
--setEnv "context.password=Value"
+-setEnv "context.test.password=Value"
 ```
 
 

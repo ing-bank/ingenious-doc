@@ -421,75 +421,7 @@ icon: simple/databricks
             }
         }
     ```
----------------------------------------------------    
-
-## **storeVariableInDataSheet**
-
-**Description**: This function will **store a variable** in a data sheet
-
-**Input Format** : DatasheetName:ColumnName
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeVariableInDataSheet`](#)  | DatasheetName:ColumnName       |%variableName% | PageName|
-
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.BROWSER, desc = "store variable value [<Condition>] in data sheet[<Data>]", input = InputType.YES, condition = InputType.YES)
-        public void storeVariableInDataSheet() {
-            if (Input != null && Condition != null) {
-                if (!getVar(Condition).isEmpty()) {
-                    System.out.println(Condition);
-                    String[] sheetDetail = Input.split(":");
-                    String sheetName = sheetDetail[0];
-                    String columnName = sheetDetail[1];
-                    userData.putData(sheetName, columnName, getVar(Condition));
-                    Report.updateTestLog(Action, "Value of variable " + Condition + " has been stored into " + "the data sheet", Status.DONE);
-                } else {
-                    Report.updateTestLog(Action, "The variable " + Condition + " does not contain any value", Status.FAIL);
-                }
-            } else {
-                Report.updateTestLog(Action, "Incorrect input format", Status.DEBUG);
-                System.out.println("Incorrect input format " + Condition);
-            }
-        }
-
-    ```
-
------------------------------------------------------
-
-## **storeVariable**
-
-**Description**: This function will **store data in variable**
-
-**Input Format** : @Data
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Browser     |:green_circle: [`storeVariable`](#)  | @Data       |%variableName% | PageName|
-
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.BROWSER, desc = "store  value [<Data>] in Variable [<Condition>]", input = InputType.YES, condition = InputType.YES)
-        public void storeVariable() {
-            if (Condition.startsWith("%") && Condition.endsWith("%")) {
-                addVar(Condition, Data);
-                Report.updateTestLog(Action, "Value" + Data + "' is stored in Variable '" + Condition + "'", Status.DONE);
-            } else {
-                Report.updateTestLog(Action, "Variable format is not correct", Status.DEBUG);
-            }
-        }
-    ```
-
------------------------------------------------------
+---------------------------------------------------  
 
 ## **StoreStorageState**
 
