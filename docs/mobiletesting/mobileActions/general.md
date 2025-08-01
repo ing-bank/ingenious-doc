@@ -1,3 +1,7 @@
+---
+icon: octicons/browser-16
+---
+
 # General Actions
 ------------------------
 
