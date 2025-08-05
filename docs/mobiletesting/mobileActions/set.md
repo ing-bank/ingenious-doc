@@ -204,7 +204,8 @@ icon: simple/databricks
 
 ## **set_Relative**
 
-**Description**: This function will set given data from input column on element baseb on parent object
+**Description**: This function will set given data from input column on element based on parent object
+
 **Input Format** : @Expected Text
 
 === "Usage"

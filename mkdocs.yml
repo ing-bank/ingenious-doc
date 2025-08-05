@@ -75,6 +75,7 @@ nav:
         - General: playwrightActions/general.md
     - Browser Configurations: browsertesting/config.md 
     - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
+    - Authentication: browsertesting/playwrightauthenticate.md
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md

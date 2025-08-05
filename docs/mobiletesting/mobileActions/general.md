@@ -198,6 +198,7 @@ icon: octicons/browser-16
 ## **sendKeysToElement**
 
 **Description**: This function is used to perform send key action on object.
+
 **Input Format** : @Expected Text
 
 === "Usage"
@@ -251,6 +252,7 @@ icon: octicons/browser-16
 ## **sendKeysToWindow**
 
 **Description**: This function is used to perform send key action on window.
+
 **Input Format** : @Expected Text
 
 === "Usage"

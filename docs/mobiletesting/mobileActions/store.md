@@ -49,7 +49,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`storeTextinDataSheet`](#)   | Sheet:Column      |     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | mobileObject     |:green_circle: [`storeTextinDataSheet`](#)   | Sheet:Column      |     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed to be stored*</span> 
 
     Note: Ensure that your data sheet doesn't contain column names with spaces. 
 
