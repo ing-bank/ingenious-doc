@@ -146,7 +146,7 @@ Driver Settings | -setEnv "`driver`.SettingName=Value"|
 Test Management Settings | -setEnv "`tm`.SettingName=Value"|
 Browser Capability Settings | -setEnv "`capability`.`browserName`.SettingName=Value"|
 Browser Context Settings |-setEnv "`context`.`aliasName`.SettingName=Value"|
-Database Settungs | -setEnv "'`db`.`aliasName`.SettingName=Value"|
+Database Settings | -setEnv "'`db`.`aliasName`.SettingName=Value"|
 
 Examples :
 
