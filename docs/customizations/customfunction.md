@@ -22,7 +22,7 @@ For your Custom Methods to appear in the INGenious IDE and available for auto-su
 Custom Method.
 
 ```{.java .copy}
-import com.ing.engine.commands.General;
+import com.ing.engine.commands.browser.General;
 import com.ing.engine.core.CommandControl;
 import com.ing.engine.support.Status;
 import com.ing.engine.support.methodInf.Action;
@@ -643,7 +643,7 @@ public class SampleScript extends General {
 
     Suppose you want to create a variable and define a value to it, you can go for **addVar(arg1,arg2)** function or **addGlobalVar(arg1,arg2)** methods.
 
-    The **`addVar(arg1,arg2)`** function takes the variable name and it's value as parameters and is defined under the **com.ing.engine.commands.Command** java file as shown below,
+    The **`addVar(arg1,arg2)`** function takes the variable name and it's value as parameters and is defined under the **com.ing.engine.commands.browser.Command** java file as shown below,
 
     ```{.java .copy}
     public void addVar(String key, String val) {
@@ -666,7 +666,7 @@ public class SampleScript extends General {
     addGlobalVar("%nameVar%", "LukeSkywalker");
     ```
 
-    This function is defined as shown below under the **com.ing.engine.commands.Command** java file.
+    This function is defined as shown below under the **com.ing.engine.commands.browser.Command** java file.
 
     ```{.java .copy}
     public void addGlobalVar(String key, String val) {
@@ -685,7 +685,7 @@ public class SampleScript extends General {
 
 
     The value of a **`variable`** created in your test case can be accessed using the function
-    **getVar** which is defined, as shown below, under the **com.ing.engine.commands.Command** java file.
+    **getVar** which is defined, as shown below, under the **com.ing.engine.commands.browser.Command** java file.
 
     ```{.java .copy}
     public String getVar(String key) {
@@ -728,7 +728,7 @@ public class SampleScript extends General {
     ```java linenums="1"
     package com.ing.engine.commands;
 
-    import com.ing.engine.commands.General;
+    import com.ing.engine.commands.browser.General;
     import com.ing.engine.core.CommandControl;
     import com.ing.engine.support.Status;
     import com.ing.engine.support.methodInf.Action;

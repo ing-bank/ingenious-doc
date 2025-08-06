@@ -2,8 +2,6 @@
 icon: material/atom
 ---
 
-
-
 # Dynamic Object
 
 ----------------------------------
