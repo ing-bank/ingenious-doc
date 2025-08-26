@@ -30,7 +30,9 @@
 
  * Enter the URL of the Application Under Test (AUT) in the **Chromium** browser and perform the actions you want to perform on the application
 
- * You will see the steps getting recorded in the **Playwright Inspector**
+ * You will see the steps getting recorded in the **Playwright Inspector**. Make sure to select the **Java Library** as the Target.
+
+ ![Playwright Inspector](../img/recording/PlaywrightInspector.png "Playwright Inspector")
 
  * Once the recording is done, **manually copy the recorded steps using the Copy button in the Playwright Inspector, or by Ctrl + C (Windows) or Command + C (Mac)** so the recorded steps will be saved as a `.txt` file.
  
