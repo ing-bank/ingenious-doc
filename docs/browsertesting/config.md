@@ -9,7 +9,6 @@
     |<div style="width:250px">Options</div>     |Description|
     |-------------|---------------|
     |`setHeadless`|By default, this is `true`. If you set it as `false`, you will see the browsers opening up during execution|
-    |`startMaximized`|By default, this is `false`. If you set it as `true`, you will see the browsers opening up as maximized|
     |`setSlowMo`|This is slow down the execution by **N** milliseconds per operation|
     |`setChannel`|Browser distribution channel. Supported values are **chrome**, **chrome-beta**, **chrome-dev**, **chrome-canary**, **msedge**, **msedge-beta**, **msedge-dev**, **msedge-canary**.|
     |`setChromiumSandbox`|Enable Chromium sandboxing. Defaults to `false`.|
@@ -18,6 +17,7 @@
     |`setExecutablePath`|Path to a browser executable to run instead of the bundled one. If executablePath is a relative path, then it is resolved relative to the current working directory. Note that Playwright only works with the bundled Chromium, Firefox or WebKit, use at your own risk.
     |`setTimeout`|Maximum time in **milliseconds** to wait for the browser instance to start. Defaults to `30000` (30 seconds). Pass `0` to disable timeout.|
     |`setProxy`|Proxy to be used for all requests. HTTP and SOCKS proxies are supported, for example `http://myproxy.com:3128` or `socks5://myproxy.com:3128`. Short form `myproxy.com:3128` is considered an HTTP proxy.|
+    |`--start-maximized`|By default, this is `false`. If you set it as `true`, you will see the browsers opening up as maximized. You need to set `setViewportSize` to `null` from *Context Configuration* for the argument to apply in browser.|
     |`--disable-notifications`|By default, browser Web Notifications and Push APIs are enabled. If added as browser option, it will disable the Web Notifications and the Push APIs of the browser.|
     |`--disable-extensions`|By default, browser extensions are enabled. If added as browser option, it will disable browser extensions.|
     |`--disable-popup-blocking`|By default, browser's built-in pop-up blocker is enabled. If added as browser option, it will disable the browser's built-in pop-up blocker.|
