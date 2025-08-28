@@ -17,14 +17,12 @@
     |`setExecutablePath`|Path to a browser executable to run instead of the bundled one. If executablePath is a relative path, then it is resolved relative to the current working directory. Note that Playwright only works with the bundled Chromium, Firefox or WebKit, use at your own risk.
     |`setTimeout`|Maximum time in **milliseconds** to wait for the browser instance to start. Defaults to `30000` (30 seconds). Pass `0` to disable timeout.|
     |`setProxy`|Proxy to be used for all requests. HTTP and SOCKS proxies are supported, for example `http://myproxy.com:3128` or `socks5://myproxy.com:3128`. Short form `myproxy.com:3128` is considered an HTTP proxy.|
-    |`--start-maximized`|By default, this is `false`. If you set it as `true`, you will see the browsers opening up as maximized. You need to set `setViewportSize` to `null` from *Context Configuration* for the argument to apply in browser.|
     |`--disable-notifications`|By default, browser Web Notifications and Push APIs are enabled. If added as browser option, it will disable the Web Notifications and the Push APIs of the browser.|
     |`--disable-extensions`|By default, browser extensions are enabled. If added as browser option, it will disable browser extensions.|
     |`--disable-popup-blocking`|By default, browser's built-in pop-up blocker is enabled. If added as browser option, it will disable the browser's built-in pop-up blocker.|
     |`--no-sandbox`|If added as browser option, the sandbox will be disabled for all process types that are normally sandboxed. Meant to be used as a browser-level switch for testing purposes only.|
     |`--disable-dev-shm-usage`|You can use this browser option to work-around the issues related to /dev/shm shared memory partition. A temporary directory will always be used to create anonymous shared memory files.|
     |`--ignore-certificate-errors`|You can use this browser option to bypass SSL/TLS certificate validation errors. When this option is enabled, the browser will not display warnings or block access to websites that have invalid, expired, self-signed, or otherwise untrusted SSL/TLS certificates.|
-    |`--window-size`|You can use this browser option to set the initial width and height of the browser window size: `--window-size=<width>,<height>`.|
     |`--incognito`|You can use this browser option to allow private browsing, preventing the browser from saving history, cookies, and site data for that session.|
     |`--lang=en-US`|You can use this browser option to laucnh browser with a specific language for its user interface: `--lang=<language_code>`.|
     
