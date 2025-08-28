@@ -227,24 +227,10 @@
     | [`=Min`](#)    | =Min(a,b)                   |Will return the minimum number between **a** and **b** |
     | [`=Max`](#)    | =Max(a,b)                   |Will return the maximum number between **a** and **b** |
     | [`=Random`](#) | =Random(a)                  |Will return a random number of **"a"** digits |
-    | [`=Random`](#) | =Round(a,b)                 |Will return a random number between **"a"** and **"b"**|
-    | [`=Concat`](#) | =Concat(a,b)                |Will Concatenate the strings **a** and **b**|
+    | [`=Round`](#)  | =Round(a,b)                 |Will return a random number between **"a"** and **"b"**|
     | [`=Date`](#)   | =Date("0", dd/MM/YYYY)      |Will return the **date** in the specified format |
     | [`=Date`](#)   | =Date("+n or -n", dd/MM/YYYY) |Will **add or subtract n days from the current date** and display it in the specified format |
-    | [`=ToLower`](#)   | =ToLower("DUMMY") |Will convert a String to **lowercase** |
-    | [`=ToUpper`](#)   | =ToUpper("dummy") |Will convert a String to **uppercase** |
-    | [`=getLength`](#)   | =getLength("TargetString") |Will return the **length** of a String, in this case 12 |
-    | [`=getOccurance`](#)   | =getOccurance(Original String,i) |Will return the **number of occurance** of a substring in a String, in this case 3 |
-    | [`=Trim`](#)   | =Trim(" TargetString ") |Will **Trim** a String |
-    | [`=Replace`](#)   | =Replace('Target String','g','b',first) |Will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
-    | [`=Replace`](#)   | =Replace(`%var%`,'g','b',first) |Suppose `%var%` has value 'Target String' then it will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
-    | [`=Replace`](#)   | =Replace('Target String','g','b',all) |Will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
-    | [`=Replace`](#)   | =Replace(`%var%`,'g','b',all) |Suppose `%var%` has value 'Target String' then it will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
-    | [`=Substring`](#)   | =Substring(`%var%`,startindex,endindex) |Suppose `%var%` has value 'Netherlands' and start index as 3 and end index as 6 then it will give the substring. **Output : her** |
-    | [`=Substring`](#)   | =Substring(`%var%`,startindex) |Suppose `%var%` has value 'Netherlands' and start index as 3  then it will give the substring. **Output : herlands** |
-    | [`=Split`](#)   | =Split(`%var%`,'split String',index) |Suppose `%var%` has value 'Netherlands' and split string as 'e' and return string index as 1 then it will give the splitted string. **Output : th** |
-    | [`=Split`](#)   | =Split(`%var%`,'split String',limit,index) |Suppose `%var%` has value 'Netherlands' and split string as 'e' and limit as 2 and return string index as 1 then it will give the splitted string. **Output : therlands** |
-
+    
 
     > **Note:** It is also possible to combine two relevant functions for optimum usage.| Example1: **=Concat(Diaphragm,=Round(360.45))** Result: **Diaphragm360** <br> Example2: **=Concat(James_,=Round(=Random(3)))** Result: **James_155**. 
 
@@ -318,3 +304,4 @@
     > **Note**: In addition to adding breakpoints to the test steps, you can comment the selected test steps as well, by performing right click and choosing the option **Toggle Comments**.
 
 ----
+

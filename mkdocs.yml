@@ -215,6 +215,7 @@ nav:
     - Reporting: browsertesting/playwrightreporting.md
     - Shortcuts: shortcuts.md
     - Additional features: additionalfeatures.md
+    - String Operations: stringOperations.md
     - Tips: tips.md
     - Troubleshooting: troubleshooting.md 
          
