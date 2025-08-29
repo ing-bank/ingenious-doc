@@ -5,7 +5,6 @@
 
 ## Steps for Recording :
 
-
  * Launch **INGenious Playwright Studio**
 
  * Click on the **Recorder** icon
@@ -13,10 +12,6 @@
    ![record](../img/recording/1.JPG "record")
 
    Internally this will call the following `mvn` command : `mvn exec:java -f engine/pom.xml -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen`
-
- * The following message will be shown as a reminder:
- 
- ![Reminder](../img/recording/RecorderReminder.png "Reminder")
  
  * Playwright logs will be shown during the playwright-recorder's loading process
 
@@ -32,14 +27,9 @@
 
  * You will see the steps getting recorded in the **Playwright Inspector**. Make sure to select the **Java Library** as the Target.
 
- ![Playwright Inspector](../img/recording/PlaywrightInspector.png "Playwright Inspector")
-
- * Once the recording is done, **manually copy the recorded steps using the Copy button in the Playwright Inspector, or by Ctrl + C (Windows) or Command + C (Mac)** so the recorded steps will be saved as a `.txt` file.
+ * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the steps as a `.txt` file.
  
  * A notification will appear upon successful copy of the recorded steps.
-
- ![Notification](../img/recording/CopyNotif.png "Notification")
- 
 
 ## Import the recording
 
@@ -49,14 +39,11 @@
 
  * A prompt will appear asking whether to proceed with the import. Select Yes.
 
-![Import](../img/recording/Import.png "Import") 
-
  * Provide a Test Scenario Name or use the default name NewScenario.
-
-![TestScenarioName](../img/recording/TestScenarioName.png "TestScenarioName")
 
  * Once completed, the recording will be imported and displayed as a **Scenario** and **Test Case** . All relevant **test steps**, along with associated **web objects** and **test data**, will be included. The objects will be loaded into the **Object Repository**.
 
+ ![Playwright Recorder Auto-Import](../img/recorder/autoimport.gif "Playwright Recorder Auto-Import")
 
 ### Import from `.txt` file:
 
