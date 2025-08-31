@@ -47,9 +47,15 @@
 
 #### Import from `.txt` file
 
+ * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording.txt` file under `Projects/ProjectName/Recording`.
+
+ * Once the recorded steps have been succesfully copied, close the Playwright Recorder.
+
+ * A prompt will appear asking whether to proceed with the import. Select No.
+
  * From **INGenious Playwright Studio**, navigate to **Tools** :material-arrow-right: **Import Playwright Recording** :material-arrow-right: **Import Playwright Recording**.
 
- * Locate the **.txt file** and click [OK].
+ * Locate the **recording.txt file** under `Projects/ProjectName/Recording` and click [OK].
 
  * The file is immediately rendered as **Scenario** and **Test Case**. All the relevant **test steps** with all the **web objects** and **test data** are imported.
 
