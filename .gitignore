@@ -1,1 +1,4 @@
 site/
+
+# System Files
+.DS_Store
