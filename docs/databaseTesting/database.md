@@ -35,6 +35,18 @@
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
 
+    - There are two ways to provide the properties:
+        1. Hardcoded Properties – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
+        1. Dynamic Properties – Construct the property using a combination of runtime variables, user-defined variables, and datasheet values. This approach allows for greater flexibility and adaptability across environments. 
+
+        For example: 
+        
+        - The username might be sourced from a datasheet variable. 
+        - The password could be defined as a runtime variable. 
+        - The connection string might be a combination of both, allowing dynamic resolution based on context.
+        
+        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config")
+
 -----------------------------------        
 
 ## Create New Database Configuration
