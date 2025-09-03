@@ -216,6 +216,7 @@ nav:
     - Shortcuts: shortcuts.md
     - Additional features: additionalfeatures.md
     - String Operations: stringOperations.md
+    - Global Datasheets: globalDataSheet.md
     - Tips: tips.md
     - Troubleshooting: troubleshooting.md 
          
