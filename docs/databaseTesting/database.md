@@ -35,9 +35,9 @@
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
 
-    - There are two ways to provide the properties:
-        1. Hardcoded Properties – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
-        1. Dynamic Properties – Construct the property using a combination of runtime variables, user-defined variables, and datasheet values. This approach allows for greater flexibility and adaptability across environments. 
+    - There are two ways to provide the property values:
+        1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
+        1. Dynamic values – Construct the property using runtime variables, user-defined variables, and datasheet values or a combination of these. This approach allows for flexibility and adaptability across environments. 
 
         For example: 
         
