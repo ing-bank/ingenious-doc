@@ -37,7 +37,7 @@
 
     - There are two ways to provide the property values:
         1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
-        1. Dynamic values – Construct the property using runtime variables, user-defined variables, and datasheet values or a combination of these. This approach allows for flexibility and adaptability across environments. 
+        1. Dynamic values – These values can be defined using runtime variables, user-defined variables, datasheet entries, or any combination of these sources. This approach allows for flexibility and adaptability across environments. 
 
         For example: 
         
