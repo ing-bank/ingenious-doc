@@ -23,7 +23,6 @@
     |`--no-sandbox`|If added as browser option, the sandbox will be disabled for all process types that are normally sandboxed. Meant to be used as a browser-level switch for testing purposes only.|
     |`--disable-dev-shm-usage`|You can use this browser option as a workaround for issues related to /dev/shm shared memory partition. A temporary directory will always be used to create anonymous shared memory files.|
     |`--ignore-certificate-errors`|You can use this browser option to bypass SSL/TLS certificate validation errors. When this option is enabled, the browser will not display warnings or block access to websites that have invalid, expired, self-signed, or otherwise untrusted SSL/TLS certificates.|
-    |`--incognito`|You can use this browser option to allow private browsing, preventing the browser from saving history, cookies, and site data for that session.|
     |`--lang=en-US`|You can use this browser option to launch browser with a specific language for its user interface: `--lang=<language_code>`.|
     
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
