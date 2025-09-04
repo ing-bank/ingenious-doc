@@ -118,6 +118,7 @@ There are **two primary methods** to implement and manage Global Data in your te
 ## Referencing Global Data
 
 Once a value is stored in the Global Data Sheet:
+
 - Use the **Global Data ID** in any test data sheet.
 - The framework will automatically resolve the reference during test execution.
 
@@ -126,7 +127,7 @@ Once a value is stored in the Global Data Sheet:
 ## Best Practices
 
 - Use **clear and descriptive Global Data IDs**.
-- Avoid hardcoding values in multiple sheets—promote them to global.
+- Avoid hardcoding values in multiple sheets — promote them to global.
 - Regularly **review and clean up** unused global data entries.
 - Use **naming conventions** to distinguish between static and dynamic global data.
 
