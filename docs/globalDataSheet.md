@@ -97,7 +97,7 @@ There are **two primary methods** to implement and manage Global Data in your te
 
 === "Examples"
 
-    Below are sample Test Case and generated report on how to use **storeInGlobalDataSheet** action
+    Below is a sample Test Case and generated report on how to use **storeInGlobalDataSheet** action
 
     **Sample Test Case:**
 
