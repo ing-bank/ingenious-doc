@@ -280,3 +280,43 @@
 
 ----
 
+??? example "Store Data From Previous Test Case"
+
+    ## Store Data From Previous Test Case
+
+    This action retrieves data from a previous test case execution and stores it either in a runtime variable or a target datasheet for use in the current test case.
+
+    **When to use**
+
+    Used in data-driven test automation where **test cases depend on the output data of previously executed test cases**. This enables chaining of test scenarios and dynamic data reuse.
+
+    **Required Variables**   
+
+    - `%PreviousScenario%` - The previous Test Case Scenario name to fetch the data. If not set, by defaut it will use the current test case scenario name.   
+    - `%PreviousTestCase%` - The previous Test Case name to fetch the data. If not set, by defaut it will use the current test case name.     
+    - `%PreviousIteration%` - The previous Test Case Iteration to fetch the data. If not set, by defaut it will use the current test case iteration.   
+    - `%PreviousSubIteration%` - The previous Test Case Sub-Iteration to fetch the data. If not set, by defaut it will use the current test case sub-iteration.   
+
+    **How to use**
+
+    - From test case, select ObjectName **General**, select action **storeDataFromPreviousTestCaseData** and provide Input and Condition:
+        - **Input** as the target Test Datasheet or Variable name where you want to store data. By default, it will be stored to test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
+        - and **Condition** as the source Test Datasheet name where to get the data based from values that was set to the requried variables. By default, if the required variables was not set, it will be get the data from test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
+    
+
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
+
+    - **Note**: Make sure both Test Datasheet has been created before using this action.
+
+    Source Datasheet:
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-2.png "storeDataFromPreviousTestCaseData2")
+
+    Target Datasheet:
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
+
+
+
+
+    
+
+ ------   
