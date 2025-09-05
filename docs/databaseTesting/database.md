@@ -67,6 +67,25 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productDB", "My_DB_UserName", "My_DB_Password");
 ```
 
+-----------------------------------        
+
+# User Added Database Configuration Property
+
+* INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
+!!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
+    
+    
+* Add a new property 
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
+    3. Provide the corresponding **property value**.
+    4. Click **Save** to apply the changes.
+
+* Remove a property
+    1. Select the **property** you want to remove.
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    3. Click **Save** to apply the changes.
+
 -----------------------------------
 
 ## Write your first Database Test
