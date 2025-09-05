@@ -297,7 +297,7 @@
     - `%PreviousIteration%` - The previous Test Case Iteration to fetch the data. If not set, by defaut it will use the current test case iteration.   
     - `%PreviousSubIteration%` - The previous Test Case Sub-Iteration to fetch the data. If not set, by defaut it will use the current test case sub-iteration.   
 
-    **How to use**
+    **How to store Data from previous Test case**
 
     - From test case, select ObjectName **General**, select action **storeDataFromPreviousTestCaseData** and provide Input and Condition:
         - **Input** as the target Test Datasheet or Variable name where you want to store data. By default, it will be stored to test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
@@ -314,9 +314,15 @@
     Target Datasheet:
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
 
+    **How to reset required variables**
 
+    - From test case, select ObjectName **General**, select action **resetPreviousTestCaseDataVariables**.
+    - This action will reset the values for variables:
+        - `%PreviousScenario%`    
+        - `%PreviousTestCase%`     
+        - `%PreviousIteration%   
+        - `%PreviousSubIteration%`  
 
-
-    
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-4.png "storeDataFromPreviousTestCaseData4")
 
  ------   
