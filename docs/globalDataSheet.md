@@ -68,9 +68,9 @@ There are **two primary methods** to implement and manage Global Data in your te
 
     | ObjectName | Action | Input        | Condition | Reference |  |
     |------------|--------|--------------|-----------|-----------|--|
-    | General    | :green_circle: `datasheet` | @`Value` | `GlobalID:ColumnName` | | <span style="color:#349651">:arrow_left: *Hardcoded Input*</span> |
-    | General    | :green_circle: `datasheet` | `Sheet:Column`(`containing value`) | `GlobalID:ColumnName` | | <span style="color:#559BD1">:arrow_left: *Input from Datasheet*</span> |
-    | General    | :green_circle: `datasheet` | `%dynamicVar%`(`containing value`) | `GlobalID:ColumnName` | | <span style="color:#AB0066">:arrow_left: *Input from variable*</span> |
+    | General    | `storeInGlobalDataSheet` | @`Value` | `GlobalID:ColumnName` | | <span style="color:#349651">:arrow_left: *Hardcoded Input*</span> |
+    | General    | `storeInGlobalDataSheet` | `Sheet:Column`(`containing value`) | `GlobalID:ColumnName` | | <span style="color:#559BD1">:arrow_left: *Input from Datasheet*</span> |
+    | General    | `storeInGlobalDataSheet` | `%dynamicVar%`(`containing value`) | `GlobalID:ColumnName` | | <span style="color:#AB0066">:arrow_left: *Input from variable*</span> |
 
 === "Corresponding Code"
 
@@ -117,10 +117,11 @@ There are **two primary methods** to implement and manage Global Data in your te
 
 ## Referencing Global Data
 
-Once a value is stored in the Global Data Sheet:
+After a value is added to the Global Data Sheet:
 
-- Use the **Global Data ID** in any test data sheet.
-- The framework will automatically resolve the reference during test execution.
+- You can reference it in any test data sheet using its Global Data ID.
+- To reference it, input the Global Data ID name using the format `#SampleGlobalDataIDName` in the test case datasheet, making sure the column name aligns with the one linked to that Global Data ID.
+- During test execution, the framework will automatically resolve and apply the referenced global data.
 
 ---
 
