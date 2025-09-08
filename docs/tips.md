@@ -56,34 +56,6 @@
 
     ![screenshot](img/Things/screenshot.png "screenshot")
 
--------------------------------------
-
-??? example "Global Data Sheet"
-
-    ## Global Data Sheet
-
-    **What is Global Data sheet?**
-
-    Global Data sheet is used to contain data that can be used across multiple data sheets (for example application URL, API endpoints etc).
-
-    **How To Use Global Data Sheet?**
-
-    For every project that is created, a default global data sheet is generated.
-
-    **Where to use the Global Data?**
-
-    Identify the Data column name which is common across multiple data sheets.
-
-    ![gd1](img/Things/GlobalDataSheet1.png "gd1")
-
-    Select that data value and click on **global data** icon, as shown in the image above. Give the global data id, in the respective window, as shown below.
-
-    ![gd2](img/Things/GlobalDataSheet2.png "gd2")
-
-    You will get the global id in the global data sheet, as shown below.
-
-    ![gd3](img/Things/GlobalDataSheet3.png "gd3")
-
 -----------------------------------
 
 

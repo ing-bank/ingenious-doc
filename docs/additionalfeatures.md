@@ -2,31 +2,6 @@
 
 -------------------------------------
 
-??? example "Global Data Sheets"
-
-    ## Global Data Sheets
-
-    For every project that is created in INGenious, a default
-    global data sheet is generated. The data entered in the global data sheet can be
-    referenced in any test data sheet within the project. This allows you to reuse the
-    data across multiple test cases.
-
-    **Where to use the Global Data?**
-
-    Identify the Data column name which is common across multiple data sheets.
-
-    ![globaldatasheet1](img/Things/GlobalDataSheet1.png "globaldatasheet1")
-
-    Select that data value and click on **global data** icon, as shown in the image above. Give the global data id, in the respective window, as shown below,
-
-    ![globaldatasheet2](img/Things/GlobalDataSheet2.png "globaldatasheet2")
-
-    You will get the global id in the global data sheet, as shown below.
-
-    ![globaldatasheet3](img/Things/GlobalDataSheet3.png "globaldatasheet3")
-
- ------   
-
 ??? example "Rename a Project"   
 
     ## Rename a Project
