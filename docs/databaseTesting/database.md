@@ -17,16 +17,7 @@
 
 ## Set up Database Connection
 
-* Add maven dependency in pom.xml for database driver which you are going to use. For example, if you are using **mysql** you need to add the following dependency :
-
-     ```xml
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>LATEST</version>
-        </dependency>
-     ```
-
+* Include the appropriate database dependency in the pom.xml file. Note that MySQL and Oracle dependencies are already included by default. 
 
 * To configure a database connection from INGenious, follow the steps below :
 
