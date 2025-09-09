@@ -17,9 +17,9 @@
 
 ## Set up Database Connection
 
-* Include the appropriate database dependency in the pom.xml file. Note that MySQL and Oracle dependencies are already included by default. 
+* Include the appropriate database dependency in the pom.xml file. *Note: By default, MySQL and Oracle dependencies are already included.* 
 
-* To configure a database connection from INGenious, follow the steps below :
+* To configure a database connection from INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement..
