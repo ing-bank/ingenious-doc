@@ -17,7 +17,8 @@
 
 ## Set up Database Connection
 
-* Include the appropriate database dependency in the pom.xml file. *Note: By default, MySQL and Oracle dependencies are already included.* 
+* Include the appropriate database dependency in the pom.xml file. 
+> **Note:** By default, **MySQL** and **Oracle** dependencies are already included.* 
 
 * To configure a database connection from INGenious, follow the steps below:
 
@@ -60,7 +61,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 -----------------------------------        
 
-# User Added Database Configuration Property
+## User Added Database Configuration Property
 
 * INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
