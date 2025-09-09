@@ -22,7 +22,7 @@
 * To configure a database connection from INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
-    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement..
+    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
 
