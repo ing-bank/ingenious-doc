@@ -65,7 +65,8 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 * INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-    
+![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons")
+
 * Add a new property 
     1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
