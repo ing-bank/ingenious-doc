@@ -299,10 +299,16 @@
 
     **How to store Data from previous Test Case**
 
-    - From test case, select ObjectName **General**, select action **storeDataFromPreviousTestCaseData** and provide Input and Condition:
+    - To store data from previous test case, make sure to set your required variables properly to your desired test case data or keep the default values.
+    - You can use action **storeDataFromPreviousTestCaseData** that requires Input and Condition field
         - **Input** as the target Test Datasheet or Variable name where you want to store data. By default, it will be stored to test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
         - and **Condition** as the source Test Datasheet name where to get the data based from values that was set to the requried variables. By default, if the required variables were not set, it will get the data from test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
-    
+    - You can also reset the required variables to the current test case data using action **resetPreviousTestCaseDataVariables**.
+        - This action will reset the values for the required variables:
+            - `%PreviousScenario%`
+            - `%PreviousTestCase%`
+            - `%PreviousIteration%`
+            - `%PreviousSubIteration%`
 
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
 
@@ -313,16 +319,5 @@
 
     Target Datasheet:
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
-
-    **How to reset required variables**
-
-    - From test case, select ObjectName **General**, select action **resetPreviousTestCaseDataVariables**.
-    - This action will reset the values for variables:
-        - `%PreviousScenario%`    
-        - `%PreviousTestCase%`     
-        - `%PreviousIteration%   
-        - `%PreviousSubIteration%`  
-
-    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-4.png "storeDataFromPreviousTestCaseData4")
 
  ------   
