@@ -312,7 +312,7 @@
 
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
 
-    - **Note**: Ensure that both Source and Target Test Datasheets have been created before using this action.
+    > **Note:** Ensure that both Source and Target Test Datasheets have been created before using this action.
 
     Source Datasheet:
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-2.png "storeDataFromPreviousTestCaseData2")
