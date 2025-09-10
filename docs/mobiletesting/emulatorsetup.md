@@ -8,7 +8,7 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 
-* Add the desired **Appium Configuations** as key-value pair 
+* By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
 
      ![createConfig](../img/mobiletesting/config.png "createConfig")
 
