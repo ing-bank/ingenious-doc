@@ -17,21 +17,13 @@
 
 ## Set up Database Connection
 
-* Add maven dependency in pom.xml for database driver which you are going to use. For example, if you are using **mysql** you need to add the following dependency :
+* Include the appropriate database dependency in the pom.xml file. 
+> **Note:** By default, **MySQL** and **Oracle** dependencies are already included.* 
 
-     ```xml
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>LATEST</version>
-        </dependency>
-     ```
-
-
-* To configure a database connection from INGenious, follow the steps below :
+* To configure a database connection from INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
-    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement..
+    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
 
@@ -66,6 +58,26 @@ To create a new database configuration, follow the steps below :
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productDB", "My_DB_UserName", "My_DB_Password");
 ```
+
+-----------------------------------        
+
+## User Added Database Configuration Property
+
+* INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
+!!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
+    
+![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons")
+
+* Add a new property 
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
+    3. Provide the corresponding **property value**.
+    4. Click **Save** to apply the changes.
+
+* Remove a property
+    1. Select the **property** you want to remove.
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    3. Click **Save** to apply the changes.
 
 -----------------------------------
 
