@@ -204,7 +204,16 @@
 === "Corresponding Code"
 
     ```java
-    INSERT CODE HERE
+    @Action(object = ObjectType.KAFKA, desc = "Set Auto Register Schemas", input = InputType.YES, condition = InputType.NO)
+    public void setAutoRegisterSchemas() {
+        try {
+            kafkaAutoRegisterSchemas.put(key, Boolean.valueOf(Data.toLowerCase().trim()));
+            Report.updateTestLog(Action, "Auto Register Schemas has been set successfully", Status.DONE);
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Exception Max Poll Record setup", ex);
+            Report.updateTestLog(Action, "Error in Auto Register Schemas: " + "\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
     ```
 
 -------------------------------
@@ -226,7 +235,30 @@
 === "Corresponding Code"
 
     ```java
-    INSERT CODE HERE
+    @Action(object = ObjectType.KAFKA, desc = "Add Avro Schema", input = InputType.YES, condition = InputType.NO)
+    public void addSchema() throws IOException {
+        try {
+            Schema mainSchema = null;
+            Schema.Parser parser = new Schema.Parser();
+            if (Data.contains(";")) {
+                String[] paths = Data.split(";");
+                for (int i = 0; i < paths.length - 1; i++) {
+
+                    parser.parse(new File(Paths.get(paths[i]).toString()));
+                }
+                mainSchema = parser.parse(new File(Paths.get(paths[paths.length - 1]).toString()));
+
+            } else {
+                // Only one schema, no dependencies
+                mainSchema = new Schema.Parser().parse(new File(Paths.get(Data).toString()));
+            }
+            kafkaAvroSchema.put(key, mainSchema);
+            Report.updateTestLog(Action, "Schema added successfully", Status.DONE);
+        } catch (Exception e) {
+            Report.updateTestLog(Action, " Unable to add Schema : " + e.getMessage(), Status.FAIL);
+        }
+
+    }
     ```
 
 -------------------------------
@@ -561,7 +593,16 @@
 === "Corresponding Code"
 
     ```java
-    INSERT CODE HERE
+    @Action(object = ObjectType.KAFKA, desc = "Set Consumer Max Poll Records", input = InputType.YES, condition = InputType.NO)
+    public void setConsumerMaxPollRecords() {
+        try {
+            kafkaConsumerMaxPollRecords.put(key, Integer.valueOf(Data));
+            Report.updateTestLog(Action, "Max Poll Records has been set successfully", Status.DONE);
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Exception Max Poll Record setup", ex);
+            Report.updateTestLog(Action, "Error in setting Max Poll Records: " + "\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
     ```
 
 -------------------------------
@@ -683,7 +724,18 @@
 === "Corresponding Code"
 
     ```java
-    INSERT CODE HERE
+    @Action(object = ObjectType.KAFKA, desc = "Identify target message", input = InputType.YES, condition = InputType.YES)
+    public void identifyTargetMessage() {
+        try {
+            kafkaRecordIdentifierValue.put(key, Data);
+            kafkaRecordIdentifierPath.put(key, Condition);
+            Report.updateTestLog(Action,
+                    "Target message set with tag value as [" + Data + "] and tag path as [" + Condition + "].",
+                    Status.DONE);
+        } catch (Exception e) {
+            Report.updateTestLog(Action, "Error in target message setup : " + e.getMessage(), Status.FAIL);
+        }
+    }
     ```
 
 -------------------------------
@@ -1081,7 +1133,28 @@
 === "Corresponding Code"
 
     ```java
-    INSERT CODE HERE
+    @Action(object = ObjectType.KAFKA, desc = "Close Consumer", input = InputType.NO, condition = InputType.NO)
+    public void closeConsumer() {
+        try {
+            kafkaConsumerRecords.remove(key);
+            kafkaConsumerRecord.remove(key);
+            kafkaConsumeRecordValue.remove(key);
+            kafkaConsumerPollDuration.remove(key);
+            kafkaConsumerPollRetries.remove(key);
+            kafkaConsumerTopic.remove(key);
+            kafkaValueDeserializer.remove(key);
+            kafkaSchemaRegistryURL.remove(key);
+            kafkaSharedSecret.remove(key);
+            kafkaConsumerGroupId.remove(key);
+            kafkaConsumerPollRecord.remove(key);
+            kafkaRecordIdentifierValue.remove(key);
+            kafkaRecordIdentifierPath.remove(key);
+            Report.updateTestLog(Action, "Consumer closed successfully", Status.DONE);
+        } catch (Exception ex) {
+            Report.updateTestLog(Action, "Error in closing Consumer.", Status.DEBUG);
+        }
+
+    }
     ```
 
 -------------------------------

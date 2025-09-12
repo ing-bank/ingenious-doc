@@ -17,9 +17,13 @@
 * Eventually there should be steps to consume the message and validate/store message **details**, **specific tags** or even the **entire message body.**
 
 
- ![kafka](../img/kafka/kafka.png "kafka")
+=== "String Serializer Example"
 
- The above is an example of a Kafka based Testcase.
+    ![kafka string serializer](../img/kafka/string_serializer.png "kafka string serializer")
+
+=== "Avro Serializer Example"
+
+    ![kafka avro serializer](../img/kafka/avro_serializer.png "kafka avro serializer")
 
 
 -------------------------------------
