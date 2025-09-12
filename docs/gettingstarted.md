@@ -14,7 +14,6 @@
 #### Software Requirements
 
  * Java 11 or above
- * Maven [Installation guide can be found [here](https://maven.apache.org/install.html)]
  * For customizations, any IDE which supports Java Development (eg. Eclipse, Netbeans, IntelliJ etc.)
 
 ## **Installation**
@@ -51,10 +50,6 @@
 
 ## **Quick Start with Recording** - <span style="color:#FF6200">**Playwright Recorder (CodeGen)**</span>  
 
-!!! note
-
-    Make sure Maven is installed in the system. INGenious internally uses Playwright codegen.
-
 ### Steps for recording
 
  * Launch **INGenious Playwright Studio**
@@ -62,16 +57,8 @@
  * Click on the **Recorder** icon
 
    ![record](img/recording/1.JPG "record")
-
-   Internally this will call the following `mvn` command : `mvn exec:java -f engine/pom.xml -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen`
  
- * Playwright logs will be shown during the playwright-recorder's loading process
-
-!!! warning 
-    
-    If a new version of Playwright is available, this step will try to download that first. So the recorder can time out if the network speed is slow.
-
-    **Pay attention to the logs!!**
+ * A loader will show up while the playwright-recorder is being loaded
 
  * The **Playwright Inspector** will launch along with **Chromium** browser
 
