@@ -711,15 +711,15 @@
 
 **Input Format** : @Expected value
 
-**Condition Format**: JSONPath or XMLPath of the unique identifier
+**Condition Format**: JSONPath or XPath of the unique identifier
 
 === "Usage"
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | @value       | JSONPath or XMLPath | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | Sheet:Column | JSONPath or XMLPath | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | %dynamicVar% | JSONPath or XMLPath | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | @value       | JSONPath or XPath | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | Sheet:Column | JSONPath or XPath | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | %dynamicVar% | JSONPath or XPath | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
