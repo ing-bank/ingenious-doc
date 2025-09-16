@@ -14,6 +14,8 @@
 * Then there should be steps to configure the **`Kafka Consumer`**. 
   For instance setting the **`consumerGroupId`, `consumerTopic`, `valueDeserializer`, `pollIntervals`** etc. are required.
 
+* To consume a specific target message, use the **`identifyTargetMessage`** action and provide a unique value along with its corresponding JSON Path or X-Path.
+
 * Eventually there should be steps to consume the message and validate/store message **details**, **specific tags** or even the **entire message body.**
 
 
