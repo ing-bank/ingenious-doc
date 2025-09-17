@@ -8,17 +8,69 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 
-* By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
+* Inside the **Mobile Tab**, you can set yout **Remote URL/Appium** from the textbox 
 
-     ![createConfig](../img/mobiletesting/config.png "createConfig")
+* Inside the **Capabilities/Options Tab**, you can set your **Appium Capabilities/Options**
 
-* Make sure you have already tested your configurations from Appium Inspector
+* By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configurations** when creating new emulators. Additional Appium configurations can be included as needed.
 
-     ![appiumConfig](../img/mobiletesting/appiumInspectorConfig.png "appiumConfig")  
+=== "Sample Android Emulator Configurations"
 
+    For this example, we have setup Android Emulator, Appium Inspector and `UIAutomator2` automation driver to run the Mobile sample test case.
+
+    **Sample Android Emulator Ingenious IDE Configurations**
+
+    Remote URL:
+
+    ![createConfig](../img/mobiletesting/remoteurl-android.png "remoteUrl"){ width=50% }
+    
+    Appium Capabilities/Options:
+
+    ![createConfig](../img/mobiletesting/config-android.png "createConfig"){ width=50% }
+   
+    **Sample Android Appium Capabilities Set**
+
+    ```json
+          {
+               "appium:deviceName": "emulator-5554",
+               "appium:automationName": "UIAutomator2",
+               "appium:platformVersion": "15.0",
+               "platformName": "Android",
+               "appium:appActivity": ".MainActivity",
+               "appium:appPackage": "com.swaglabsmobileapp"
+          }
+    ```
+
+=== "Sample iOS Emulator Configurations"
+
+    For this example, we have setup iOS Emulator, Appium Inspector, and `XCUITest` automation driver to run the Mobile sample test case.
+
+    **Sample Ingenious iOS Emulator IDE Configurations**
+
+    Remote URL:
+
+    ![createConfig](../img/mobiletesting/remoteurl-ios.png "remoteUrl"){ width=50% }
+
+    Appium Capabilities/Options:
+
+    ![createConfig](../img/mobiletesting/config-ios.png "createConfig"){ width=50% }
+
+    **Sample iOS Appium Capabilities Set**
+
+    ```json
+          {
+               "appium:udui": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+               "appium:bundleId": "com.saucelabs.SwagLabsMobileApp",
+               "appium:automationName": "XCUITest",
+               "platformName": "iOS",
+               "appium:deviceName": "iPhone 13 Pro Max",
+               "appium:platformVersion": "18.6"
+          }
+    ```
+
+> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
 
 ---------------------------     
-
 
 ## Write Tests
 
@@ -30,8 +82,17 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Select appropriate **actions** like **`Tap`, `Scroll`** or **`Set`** for each relevant step
 
-![testcase](../img/mobiletesting/testcase.png "testcase")  
+=== "Sample Android Test Case"
 
+    For this sample, we are testing in **Android Platform**.
+
+    ![testcase](../img/mobiletesting/testcase-android.png "testcase")  
+
+=== "Sample iOS Test Case"
+
+    For this sample, we are testing in **iOS Platform**.
+
+    ![testcase](../img/mobiletesting/testcase-ios.png "testcase")  
 
 ---------------------------     
 
