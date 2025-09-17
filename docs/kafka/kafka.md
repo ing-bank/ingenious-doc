@@ -14,13 +14,42 @@
 * Then there should be steps to configure the **`Kafka Consumer`**. 
   For instance setting the **`consumerGroupId`, `consumerTopic`, `valueDeserializer`, `pollIntervals`** etc. are required.
 
+* To consume a specific target message, use the **`identifyTargetMessage`** action and provide a unique value along with its corresponding JSON Path or X-Path.
+
 * Eventually there should be steps to consume the message and validate/store message **details**, **specific tags** or even the **entire message body.**
 
 
- ![kafka](../img/kafka/kafka.png "kafka")
+=== "String Serializer Example"
 
- The above is an example of a Kafka based Testcase.
+    For String Serializer, the following are required: **`server`, `producerTopic`, `valueSerializer`, `keySerializer`**
 
+    ![kafka string serializer](../img/kafka/string_serializer.png "kafka string serializer")
+
+=== "Avro Serializer Example"
+
+    For Avro Serializer, the following are required: **`server`, `producerTopic`, `valueSerializer`, `keySerializer`, `setSchemaRegistryURL`, `addSchema`**
+
+    ![kafka avro serializer](../img/kafka/avro_serializer.png "kafka avro serializer")
+
+
+-------------------------------------
+
+
+## Setup SSL certificates
+
+If Key Store Certificates are required, you may set it up by clicking on the **gear icon** :gear: to open up the **Run Settings** :material-arrow-right: **Kakfa ssl Configurations**
+
+=== "With SSL certificate configuration example"
+
+    For this example, **`Producer_ssl_Enabled` is set to `true`** then the following are required: **`Producer_Keystore_Location`, `Producer_Key_Password`, `Producer_Keystore_Password`**
+
+    ![With SSL configuration](../img/kafka/with_ssl.png "With SSL configuration")
+
+=== "Without SSL certificate configuration example"
+
+    For this example, **`Producer_ssl_Enabled` is set to `false`**
+
+    ![Without SSL configuration](../img/kafka/without_ssl.png "Without SSL configuration")
 
 -------------------------------------
 

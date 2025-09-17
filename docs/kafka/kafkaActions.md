@@ -32,7 +32,6 @@
 
 ----------------------
 
-
 ## **setProducerTopic**
 
 **Description**: This function is used to set the Producer Topic name
@@ -64,8 +63,6 @@
 
 ----------------------
 
-
-
 ## **setKey**
 
 **Description**: This function is used to set the key for the Kafka connection.
@@ -94,6 +91,7 @@
         }
     }
     ```
+
 ----------------------------------------
 
 ## **setKeySerializer**
@@ -124,6 +122,7 @@
         }
     }
     ```
+
 ----------------------------------------
 
 ## **setValueSerializer**
@@ -154,6 +153,7 @@
         }
     }
     ```
+
 ----------------------------------------
 
 ## **setSchemaRegistryURL**
@@ -184,6 +184,83 @@
         }
     }
     ```
+
+-------------------------------
+
+## **setAutoRegisterSchemas**
+
+**Description**: When set to true, this function automatically registers the `Avro` schema with the Schema Registry when producing messages. If set to false, the producer checks for the `Avro` schema's existence in the registry; if not found, the message will not be published and an error will be thrown.
+
+**Input Format** : @Boolean Value. Either set to `true` or `false`
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Kafka     |:green_circle: [`setAutoRegisterSchemas`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Kafka     |:green_circle: [`setAutoRegisterSchemas`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Kafka     |:green_circle: [`setAutoRegisterSchemas`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.KAFKA, desc = "Set Auto Register Schemas", input = InputType.YES, condition = InputType.NO)
+    public void setAutoRegisterSchemas() {
+        try {
+            kafkaAutoRegisterSchemas.put(key, Boolean.valueOf(Data.toLowerCase().trim()));
+            Report.updateTestLog(Action, "Auto Register Schemas has been set successfully", Status.DONE);
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Exception Max Poll Record setup", ex);
+            Report.updateTestLog(Action, "Error in Auto Register Schemas: " + "\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+    ```
+
+-------------------------------
+
+## **addSchema**
+
+**Description**: This function is used to register the `Avro` schema with the Schema Registry.
+
+**Input Format** : @Path to the schema file
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Kafka     |:green_circle: [`addSchema`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Kafka     |:green_circle: [`addSchema`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Kafka     |:green_circle: [`addSchema`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.KAFKA, desc = "Add Avro Schema", input = InputType.YES, condition = InputType.NO)
+    public void addSchema() throws IOException {
+        try {
+            Schema mainSchema = null;
+            Schema.Parser parser = new Schema.Parser();
+            if (Data.contains(";")) {
+                String[] paths = Data.split(";");
+                for (int i = 0; i < paths.length - 1; i++) {
+
+                    parser.parse(new File(Paths.get(paths[i]).toString()));
+                }
+                mainSchema = parser.parse(new File(Paths.get(paths[paths.length - 1]).toString()));
+
+            } else {
+                // Only one schema, no dependencies
+                mainSchema = new Schema.Parser().parse(new File(Paths.get(Data).toString()));
+            }
+            kafkaAvroSchema.put(key, mainSchema);
+            Report.updateTestLog(Action, "Schema added successfully", Status.DONE);
+        } catch (Exception e) {
+            Report.updateTestLog(Action, " Unable to add Schema : " + e.getMessage(), Status.FAIL);
+        }
+
+    }
+    ```
+
 -------------------------------
 
 ## **setPartition**
@@ -247,6 +324,7 @@
         }
     }
     ```
+
 ------------------------------------------
 
 ## **addKafkaHeader**
@@ -316,11 +394,8 @@
     }
 
     ```
+
 ----------------------
-
-
-
-
 
 ## **produceMessage**
 
@@ -374,7 +449,6 @@
     }
     ```
 
-
 -----------------------------
 
 ## **sendKafkaMessage**
@@ -406,6 +480,7 @@
         }
     }
     ```
+
 ------------------------------------------
 
 ## **setConsumerTopic**
@@ -498,7 +573,39 @@
         }
     }
     ```
+
 ----------------------
+
+## **setConsumerMaxPollRecords**
+
+**Description**: This function is used to set the maximum number of records that can be retrieved in a single poll operation.
+
+**Input Format** : @Expected maximum value. Expected value is `integer`
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Kafka     |:green_circle: [`setConsumerMaxPollRecords`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Kafka     |:green_circle: [`setConsumerMaxPollRecords`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Kafka     |:green_circle: [`setConsumerMaxPollRecords`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.KAFKA, desc = "Set Consumer Max Poll Records", input = InputType.YES, condition = InputType.NO)
+    public void setConsumerMaxPollRecords() {
+        try {
+            kafkaConsumerMaxPollRecords.put(key, Integer.valueOf(Data));
+            Report.updateTestLog(Action, "Max Poll Records has been set successfully", Status.DONE);
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Exception Max Poll Record setup", ex);
+            Report.updateTestLog(Action, "Error in setting Max Poll Records: " + "\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+    ```
+
+-------------------------------
 
 ## **setConsumerGroupId**
 
@@ -528,6 +635,7 @@
         }
     }
     ```
+
 ----------------------
 
 ## **setValueDeserializer**
@@ -597,6 +705,41 @@
 
 ---------------------------------
 
+## **identifyTargetMessage**
+
+**Description**: This function is used to locate a specific Kafka message from the consumed records based on the unique identifier provided.
+
+**Input Format** : @Expected value
+
+**Condition Format**: JSONPath or XPath of the unique identifier
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | @value       | JSONPath or XPath | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | Sheet:Column | JSONPath or XPath | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Kafka     |:green_circle: [`identifyTargetMessage`](#)   | %dynamicVar% | JSONPath or XPath | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.KAFKA, desc = "Identify target message", input = InputType.YES, condition = InputType.YES)
+    public void identifyTargetMessage() {
+        try {
+            kafkaRecordIdentifierValue.put(key, Data);
+            kafkaRecordIdentifierPath.put(key, Condition);
+            Report.updateTestLog(Action,
+                    "Target message set with tag value as [" + Data + "] and tag path as [" + Condition + "].",
+                    Status.DONE);
+        } catch (Exception e) {
+            Report.updateTestLog(Action, "Error in target message setup : " + e.getMessage(), Status.FAIL);
+        }
+    }
+    ```
+
+-------------------------------
+
 ## **storeKafkaXMLtagInDataSheet**
 
 **Description**: This function is used to store a certain XML tag value into a respective column of a given datasheet.
@@ -657,6 +800,7 @@
         }
     }
     ```
+
 ----------------------
 
 ## **assertKafkaXMLtagEquals**
@@ -805,9 +949,8 @@
         }
     }
     ```
+
 ----------------------
-
-
 
 ## **assertKafkaResponseMessageContains**
 
@@ -976,3 +1119,42 @@
     ```
 
 ---------------------------------
+
+## **closeConsumer**
+
+**Description**: This function is used to gracefully shut down a Kafka consumer.
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Kafka     |:green_circle: [`closeConsumer`](#) | | | |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.KAFKA, desc = "Close Consumer", input = InputType.NO, condition = InputType.NO)
+    public void closeConsumer() {
+        try {
+            kafkaConsumerRecords.remove(key);
+            kafkaConsumerRecord.remove(key);
+            kafkaConsumeRecordValue.remove(key);
+            kafkaConsumerPollDuration.remove(key);
+            kafkaConsumerPollRetries.remove(key);
+            kafkaConsumerTopic.remove(key);
+            kafkaValueDeserializer.remove(key);
+            kafkaSchemaRegistryURL.remove(key);
+            kafkaSharedSecret.remove(key);
+            kafkaConsumerGroupId.remove(key);
+            kafkaConsumerPollRecord.remove(key);
+            kafkaRecordIdentifierValue.remove(key);
+            kafkaRecordIdentifierPath.remove(key);
+            Report.updateTestLog(Action, "Consumer closed successfully", Status.DONE);
+        } catch (Exception ex) {
+            Report.updateTestLog(Action, "Error in closing Consumer.", Status.DEBUG);
+        }
+
+    }
+    ```
+
+-------------------------------
