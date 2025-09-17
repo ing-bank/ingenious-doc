@@ -8,11 +8,17 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 
-* Inside the **Mobile Tab**, you can set yout **Remote URL/Appium** from the textbox 
+* Inside the **Mobile Tab**, you can set your **Remote URL/Appium** from the textbox. By default, it is set to `http://127.0.0.1:4723/`
+
+     ![createConfig](../img/mobiletesting/sampleRemoteURL.jpeg "remoteurl"){ width=50% }
 
 * Inside the **Capabilities/Options Tab**, you can set your **Appium Capabilities/Options**
 
+     ![createConfig](../img/mobiletesting/sampleCapabilities.jpeg "createConfig"){ width=50% }
+
 * By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configurations** when creating new emulators. Additional Appium configurations can be included as needed.
+
+> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
 
 === "Sample Android Emulator Configurations"
 
@@ -59,16 +65,13 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     ```json
           {
-               "appium:udui": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+               "appium:udid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
                "appium:bundleId": "com.saucelabs.SwagLabsMobileApp",
                "appium:automationName": "XCUITest",
                "platformName": "iOS",
-               "appium:deviceName": "iPhone 13 Pro Max",
-               "appium:platformVersion": "18.6"
+               "appium:deviceName": "emulator-ios"
           }
     ```
-
-> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
 
 ---------------------------     
 
