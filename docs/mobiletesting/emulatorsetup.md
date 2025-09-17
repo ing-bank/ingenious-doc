@@ -16,15 +16,15 @@ Follow the steps below to create an Appium configuration in INGenious.
 
      ![createConfig](../img/mobiletesting/sampleCapabilities.jpeg "createConfig"){ width=50% }
 
-* By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configurations** when creating new emulators. Additional Appium configurations can be included as needed.
+* By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
+
+* Click on **Save** button to save your Appium Configuration.
 
 > **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
 
 === "Sample Android Emulator Configurations"
 
-    For this example, we have setup Android Emulator, Appium Inspector and `UIAutomator2` automation driver to run the Mobile sample test case.
-
-    **Sample Android Emulator Ingenious IDE Configurations**
+    **Sample Android Emulator INGenious Configurations**
 
     Remote URL:
 
@@ -49,9 +49,7 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 === "Sample iOS Emulator Configurations"
 
-    For this example, we have setup iOS Emulator, Appium Inspector, and `XCUITest` automation driver to run the Mobile sample test case.
-
-    **Sample Ingenious iOS Emulator IDE Configurations**
+    **Sample iOS Emulator INGenious Configurations**
 
     Remote URL:
 
@@ -87,13 +85,9 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 === "Sample Android Test Case"
 
-    For this sample, we are testing in an **Android Platform**.
-
     ![testcase](../img/mobiletesting/testcase-android.png "testcase")  
 
 === "Sample iOS Test Case"
-
-    For this sample, we are testing in an **iOS Platform**.
 
     ![testcase](../img/mobiletesting/testcase-ios.png "testcase")  
 
