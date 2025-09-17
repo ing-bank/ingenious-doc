@@ -84,13 +84,13 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 === "Sample Android Test Case"
 
-    For this sample, we are testing in **Android Platform**.
+    For this sample, we are testing in an **Android Platform**.
 
     ![testcase](../img/mobiletesting/testcase-android.png "testcase")  
 
 === "Sample iOS Test Case"
 
-    For this sample, we are testing in **iOS Platform**.
+    For this sample, we are testing in an **iOS Platform**.
 
     ![testcase](../img/mobiletesting/testcase-ios.png "testcase")  
 
