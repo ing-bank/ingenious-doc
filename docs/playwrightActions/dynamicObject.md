@@ -22,6 +22,12 @@ icon: material/atom
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
+=== "Parameterized Usage Example"
+
+    ![Parameterized Usage Example](../img/playwrightActions/dynamicObjExample.png "Parameterized Usage Example")
+
+    In the example above, part of the locator can be parameterized in the format `#variableName`. *Note: This can also be done for all locators.* In the test steps, use `setObjectProperty`. Input column will have the `datasheet:column` reference or variable reference from where to take the data. Condition column will have the parameterized part `#variableName`. Next test step would be a click or any other action on that object
+
 === "Corresponding Code"
 
     ```java
@@ -45,6 +51,7 @@ icon: material/atom
             }
         }
     ```
+
 ----------------------------------
 
 ## **setglobalObjectProperty**
