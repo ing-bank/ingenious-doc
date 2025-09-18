@@ -99,9 +99,9 @@
 
     ![iterationMode](img/Things/iterationMode.png "iterationMode")
 
-    * If **ContinueonError** is selected Test Case will keep on running even if an error occurs during one of the iterations.
+    * If **ContinueOnError** is selected Test Case will keep on running even if an error occurs during one of the iterations.
 
-    * If **BreakonError** is selected Test Case will immediately stop execution upon encountering an error during iteration.
+    * If **BreakOnError** is selected Test Case will immediately stop execution upon encountering an error during iteration.
 
 
 -----
