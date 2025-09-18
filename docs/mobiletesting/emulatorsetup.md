@@ -8,17 +8,70 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 
+* Inside the **Mobile Tab**, you can set your **Remote URL/Appium** from the textbox. By default, it is set to `http://127.0.0.1:4723/`
+
+     ![createConfig](../img/mobiletesting/sampleRemoteURL.jpeg "remoteurl"){ width=50% }
+
+* Inside the **Capabilities/Options Tab**, you can set your **Appium Capabilities/Options**
+
+     ![createConfig](../img/mobiletesting/sampleCapabilities.jpeg "createConfig"){ width=50% }
+
 * By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
 
-     ![createConfig](../img/mobiletesting/config.png "createConfig")
+* Click on **Save** button to save your Appium Configuration.
 
-* Make sure you have already tested your configurations from Appium Inspector
+> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
 
-     ![appiumConfig](../img/mobiletesting/appiumInspectorConfig.png "appiumConfig")  
+=== "Sample Android Emulator Configurations"
 
+    **Sample Android Emulator INGenious Configurations**
+
+    Remote URL:
+
+    ![createConfig](../img/mobiletesting/remoteurl-android.png "remoteUrl"){ width=50% }
+    
+    Appium Capabilities/Options:
+
+    ![createConfig](../img/mobiletesting/config-android.png "createConfig"){ width=50% }
+   
+    **Sample Android Appium Capabilities Set**
+
+    ```json
+          {
+               "appium:deviceName": "emulator-5554",
+               "appium:automationName": "UIAutomator2",
+               "appium:platformVersion": "15.0",
+               "platformName": "Android",
+               "appium:appActivity": ".MainActivity",
+               "appium:appPackage": "com.swaglabsmobileapp"
+          }
+    ```
+
+=== "Sample iOS Emulator Configurations"
+
+    **Sample iOS Emulator INGenious Configurations**
+
+    Remote URL:
+
+    ![createConfig](../img/mobiletesting/remoteurl-ios.png "remoteUrl"){ width=50% }
+
+    Appium Capabilities/Options:
+
+    ![createConfig](../img/mobiletesting/config-ios.png "createConfig"){ width=50% }
+
+    **Sample iOS Appium Capabilities Set**
+
+    ```json
+          {
+               "appium:udid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+               "appium:bundleId": "com.saucelabs.SwagLabsMobileApp",
+               "appium:automationName": "XCUITest",
+               "platformName": "iOS",
+               "appium:deviceName": "emulator-ios"
+          }
+    ```
 
 ---------------------------     
-
 
 ## Write Tests
 
@@ -30,8 +83,13 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Select appropriate **actions** like **`Tap`, `Scroll`** or **`Set`** for each relevant step
 
-![testcase](../img/mobiletesting/testcase.png "testcase")  
+=== "Sample Android Test Case"
 
+    ![testcase](../img/mobiletesting/testcase-android.png "testcase")  
+
+=== "Sample iOS Test Case"
+
+    ![testcase](../img/mobiletesting/testcase-ios.png "testcase")  
 
 ---------------------------     
 
