@@ -15,10 +15,10 @@
 -----------------------------------
 ## Set up API Configuration
 
-* To configure a database connection from INGenious, follow the steps below:
+* To configure an API configuration from INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
-    - Under **API Configurations** you will see the `API Configuration Alias` as `default`. Change the values as per requirement.
+    - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
 
         ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
 
@@ -30,7 +30,7 @@ To create a new API configuration, follow the steps below :
 
 * Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
 
-* Inside the **API Configurations** tab, Enter the `API Configuration Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+* Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
 
      ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig")
 

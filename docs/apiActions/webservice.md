@@ -113,9 +113,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | @Endpoint (from Editor)      |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | @Endpoint (from Editor)      |   #apiConfigAlias (optional)   | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | Sheet:Column |  #apiConfigAlias (optional)      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | %dynamicVar% |  #apiConfigAlias (optional)      | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded`, passed inside the **Endpoint editor** which is capable of parameterising the Endpoint (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -127,6 +127,17 @@
     @Action(object = ObjectType.WEBSERVICE, desc = "Set End Point ", input = InputType.YES, condition = InputType.OPTIONAL)
         public void setEndPoint() {
             try {
+                String apiConfigName = Condition;
+                DriverProperties driverProperties = Control.getCurrentProject().getProjectSettings().getDriverSettings();
+                if (apiConfigName.startsWith("#")) {
+                    apiConfigName = apiConfigName.replace("#", "");
+                } else {
+                    apiConfigName = ""; //This means that the Condtion is not an API Config Alias
+                }
+
+                String configToLoad = driverProperties.doesAPIconfigExist(apiConfigName) ? apiConfigName : "default";
+                driverProperties.setCurrLoadedAPIConfig(configToLoad);
+                
                 String resource = handlePayloadorEndpoint(Data);
                 endPoints.put(key, resource);
                 httpAgentCheck();
