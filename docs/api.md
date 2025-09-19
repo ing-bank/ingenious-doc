@@ -13,10 +13,56 @@
     It also allows us to store response tags which can be used for subsequent API calls or GUI flows. **This makes API Testing and GUI Testing possible in a single flow coherently.**
 
 -----------------------------------
+## Set up API Configuration
+
+* To configure a database connection from INGenious, follow the steps below:
+
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+    - Under **API Configurations** you will see the `API Configuration Alias` as `default`. Change the values as per requirement.
+
+        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
+
+-----------------------------------        
+
+## Create New API Configuration
+
+To create a new API configuration, follow the steps below :
+
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+
+* Inside the **API Configurations** tab, Enter the `API Configuration Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+
+     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig")
+
+* A new set of API configurations with default values will be added below.
+
+-----------------------------------        
+
+## User Added API Configuration Property
+
+* INGenious allows users to add API properties thru the API Configurations window. 
+!!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
+    
+![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons")
+
+* Add a new property 
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
+    3. Provide the corresponding **property value**.
+    4. Click **Save** to apply the changes.
+
+* Remove a property
+    1. Select the **property** you want to remove.
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    3. Click **Save** to apply the changes.
+
+-----------------------------------
 
 ## How to create an API Test Case?
 
 * A request should contain a **`setEndPoint`** action. This action is always marked in <span style="color:Blue">**Blue.**</span> This is where you put the endpoint to which the request is supposed to be fired. This action comes with an editor for convenience of data set up.
+
+* Optionally, specify the required API configuration by adding `#apiAliasName` in the *Condition* column. If omitted, the default configurations will be automatically loaded.
 
 * You can have steps to add headers/authentication etc. (if required)
 
@@ -26,7 +72,7 @@
 
 * A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:Brown">**Brown.**</span>
 
- ![api1](img/api/1.JPG "api1")
+ ![api_testcase_example](img/api/api_testcase_example.png "api_testcase_example")
 
  The above is an example of a **`postRestRequest`** and then **`assertResponseCode`** followed by **`storeJSONelementInDataSheet`**
 
