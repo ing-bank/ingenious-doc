@@ -91,9 +91,9 @@
 
 -------
 
-??? example "Iteration Mode in Run Settings"
+??? example "Continue or Break on Error"
 
-    ## Iteration Mode in Run Settings
+    ## Continue or Break on Error
 
     * **Iteration Mode** can be found under the Run Settings.
 
