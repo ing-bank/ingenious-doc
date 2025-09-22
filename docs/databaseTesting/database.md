@@ -85,40 +85,29 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 Below are examples of Database configuration implementations.
 
-* You can implement your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
+* You can add your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
 
     > **Note:** Please consult your database documentations for details. 
 
-Here is our example configuration `groupConcatMaxLen` with the value of 100000 and we are going to set it as a session variable. 
-![user_db_config_example1](../img/configurations/user_db_config_example1.png)
-
-In the example below, we are setting the value of the session variable `group_concat_max_len`.
-Line 58 retrieves and resolves the value of the `groupConcatMaxLen` configuration property. This value is then appended to the JDBC connection string, ensuring the session variable is set when the connection is established. We printed the value to verify the resulting connection string. Lines 79-83 further confirm that the session variable has been set by querying and displaying its value from the database. 
-
-This is a code snippet from the `verifyDbConnection` method of the `General` class in the `com.ing.engine.commands.database` package.
-![user_db_config_code_example1](../img/configurations/user_db_config_code_example1.png)
-
-Here we can verify that connection string result and the session variable value.
-![check_db_global_variable1](../img/configurations/check_db_global_variable1.png)
+    Here are examples configuration properties autoReconnect and characterEncoding added thru the connection string.
+   ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
 
 
 
-* For configurations that cannot be set through the JDBC connection string, another option is to configure your database by executing a SQL statement directly after establishing the connection. For example, global variables—such as `group_concat_max_len` at the global scope—can only be set using an SQL statement.
+* For configurations that cannot be set through the JDBC connection string, another option is to configure your database by executing an SQL statement directly after establishing the connection. For example, global variables—such as `group_concat_max_len` at the global scope—can only be set using an SQL statement.
 
-Here is our example configuration groupConcatMaxLen wtih the value of 1000.
 
-![user_db_config_example2](../img/configurations/user_db_config_example2.png)
+     Here is an example configuration `groupConcatMaxLen` with the value of 1000.
 
-In the example below, we are setting the value of the global variable `group_concat_max_len`.
-Line 58 retrieves and resolves the value of the `groupConcatMaxLen` configuration property.
-Lines 75–80 then apply this value to the database by executing a SQL statement that sets `group_concat_max_len` globally.
+    ![user_db_config_example2](../img/configurations/user_db_config_example2.png)
 
-This is a code snippet from the `verifyDbConnection` method of the `General` class in the `com.ing.engine.commands.database` package.
-![user_db_config_code_example2](../img/configurations/user_db_config_code_example2.png "user_db_config_code_example2")
+    The code snippet below is taken from the `verifyDbConnection` method within the `General` class, which is part of the `com.ing.engine.commands.database` package. In this example, the global variable `group_concat_max_len` is assigned a value. Line 58 retrieves and resolves the value of the groupConcatMaxLen configuration property. Lines 75–80 then apply this value to the database by executing a SQL statement that sets `group_concat_max_len` globally.
 
-In the database we can check if the value has been set.
+    ![user_db_config_code_example2](../img/configurations/user_db_config_code_example2.png "user_db_config_code_example2")
 
-![check_db_global_variable2](../img/configurations/check_db_global_variable2.png)
+    In the database, you can check if the value has been set.
+
+    ![check_db_global_variable2](../img/configurations/check_db_global_variable2.png)
 
 -----------------------------------
 
@@ -168,3 +157,15 @@ The list of **`Query`** steps is as follows :
 Make sure to check out the following topics :
 
 [Database Actions](dbActions.md){ .md-button } 
+
+<!-- Here is our example configuration `groupConcatMaxLen` with the value of 100000 and we are going to set it as a session variable. 
+    ![user_db_config_example1](../img/configurations/user_db_config_example1.png)
+
+    In the example below, we are setting the value of the session variable `group_concat_max_len`.
+    Line 58 retrieves and resolves the value of the `groupConcatMaxLen` configuration property. This value is then appended to the JDBC connection string, ensuring the session variable is set when the connection is established. We printed the value to verify the resulting connection string. Lines 79-83 further confirm that the session variable has been set by querying and displaying its value from the database. 
+
+    This is a code snippet from the `verifyDbConnection` method of the `General` class in the `com.ing.engine.commands.database` package.
+    ![user_db_config_code_example1](../img/configurations/user_db_config_code_example1.png)
+
+    Here you can verify that connection string result and the session variable value.
+    ![check_db_global_variable1](../img/configurations/check_db_global_variable1.png) -->
