@@ -40,6 +40,18 @@ icon: material/atom
     }
 
     ```
+
+=== "Example"
+
+    For **standard usage**:
+
+    ![setObjectProperty Example](../../img/mobiletesting/dynamicObjExample1.png "setObjectProperty Example")
+
+    For **parameterized usage**:
+
+    ![setObjectProperty Example](../../img/mobiletesting/dynamicObjExample2.png "setObjectProperty Example")
+
+    In the example above, part of the locator can be parameterized in the format `#variableName`. *Note: This can also be done for all locators.* In the test steps, use `setMobileObjectProperty`. Input column will have the `datasheet:column` reference or variable reference from where to take the data. Condition column will have the parameterized part `#variableName`. Next test step would be a tap or any other action on that object.
 ----------------------
 
 ## **setMobileglobalObjectProperty**
