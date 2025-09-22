@@ -89,6 +89,21 @@
 
     > **Note:** Subiterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
 
+-------
+
+??? example "Continue or Break on Error"
+
+    ## Continue or Break on Error
+
+    * **Iteration Mode** can be found under the Run Settings.
+
+    ![iterationMode](img/Things/iterationMode.png "iterationMode")
+
+    * If **ContinueOnError** is selected, Test Case will keep on running even if an error occurs during one of the iterations.
+
+    * If **BreakOnError** is selected, Test Case will immediately stop execution upon encountering an error during iteration.
+
+
 -----
 
 ??? example "Handle actions before and after a step"
