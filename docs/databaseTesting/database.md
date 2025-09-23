@@ -92,7 +92,7 @@ Below are examples of Database configuration implementations.
 === "Mysql Example"
     MySQL JDBC connection string format
     ```java
-    jdbc:mysql://[hosts][/database][?properties]
+    jdbc:mysql://[hostname:port]/[database]?[properties]
     ```
 
     Example of MySQL JDBC connection string  
