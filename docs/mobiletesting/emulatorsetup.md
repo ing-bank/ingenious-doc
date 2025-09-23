@@ -38,12 +38,12 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     ```json
           {
-               "appium:deviceName": "emulator-5554",
-               "appium:automationName": "UIAutomator2",
-               "appium:platformVersion": "15.0",
+               "deviceName": "emulator-5554",
+               "automationName": "UIAutomator2",
+               "platformVersion": "15.0",
                "platformName": "Android",
-               "appium:appActivity": ".MainActivity",
-               "appium:appPackage": "com.swaglabsmobileapp"
+               "appActivity": ".MainActivity",
+               "appPackage": "com.swaglabsmobileapp"
           }
     ```
 
@@ -63,11 +63,71 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     ```json
           {
-               "appium:udid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-               "appium:bundleId": "com.saucelabs.SwagLabsMobileApp",
-               "appium:automationName": "XCUITest",
+               "udid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+               "bundleId": "com.saucelabs.SwagLabsMobileApp",
+               "automationName": "XCUITest",
                "platformName": "iOS",
-               "appium:deviceName": "emulator-ios"
+               "deviceName": "emulator-ios"
+          }
+    ```
+
+=== "Sample Lambda Configurations"
+
+    **Sample Lambda INGenious Configurations**
+
+    ***Remote URL***
+
+    Your remote url to make connection with **LAMBDATEST** is your connection URL with combination of your Lambda **Username**, **Access key** and extends with `@mobile-hub.lambdatest.com/wd/hub`
+
+    * For this example, remote url is set to `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`
+
+        ![createConfig](../img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
+
+    * To get your **Username** and **Access Key**
+        * Login to LAMBDATEST Portal, go to **Home** > **Account Settings** > **Password & Security**
+        * Under **Username and Access Key**, copy **Username** and **Access Key** as shown from example `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`.
+
+            ![createConfig](../img/mobiletesting/Lambda-user-token.jpeg "user-token"){ width=60% }
+    
+    ***Appium Capabilities/Options***
+
+    * For this example, you can set the capabilities as below:
+
+        ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
+
+    * To get **`app` capability**   
+        * To load application and get **App Id**, follow step from Lambda Official Documentaion 
+            * [Application Setup via GUI](https://www.lambdatest.com/support/docs/application-setup-via-gui/)
+            * [Application Setup via API](https://www.lambdatest.com/support/docs/application-setup-via-api/)
+
+    * For Android Mobile in LAMBDATEST, you can use capabilities
+        * `automatorName` as `UIAutomator2`
+        * `platformName` as `Android`
+        * `platformVersion` as the Android platform version you want to use
+
+    * For iOS Mobile in LAMBDATEST, you can use capabilities
+        * `automatorName` as `XCUITest`
+        * `platformName` as `iOS`
+    
+    * You can also add your other desired capabilities for LAMBDATEST. 
+        * For more information related to capabilities, you can visit **[Desired Capabilities for LAMBDATEST](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)**
+        * To check capabilites, you can visit **[Lambda Test Automation Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/)**
+   
+    **Sample LAMBDATEST Appium Capabilities Set**
+
+    ```json
+          {
+               "deviceName": "Galaxy S23",
+               "automationName": "UIAutomator2",
+               "platformVersion": "15.0",
+               "platformName": "Android",
+               "app": "lt://APPXXXXXXXXXXXXXXX",
+               "w3c": "true",
+               "language": "nl",
+               "isRealMobile": "true",
+               "locale": "true",
+               "build": "Sample-Build-Name",
+               "autoGrantPermissions": "true",
           }
     ```
 
