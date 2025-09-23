@@ -115,7 +115,23 @@ Below are examples of Database configuration implementations.
 
     ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
     
+-----------------------------------
 
+## Write your first Database Test
+
+* At the beginning, there should be the **`initDBConnection`** step to conect to a database. This requires the Database Alias (which you configured following the steps above) in the **Condition** column. 
+
+* Then there should be steps to execute the **SQL Statements** like **`executeSelectQuery`**, **`executeDMLQuery`**, **`storeResultInDataSheet`**, **`storeResultInVariable`**
+
+* The steps above, come with an editor which makes parameterization of data in the SQL statments very easy. [See the section below]
+
+* Eventually there should be steps to validate/store result-set  **specific columns** or the **entire result.**
+
+* A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
+
+ ![database](../img/db/db.png "database")
+
+ The above is an example of a Database Testcase.
 
 -----------------------------------
 
