@@ -62,7 +62,7 @@ To create a new API configuration, follow the steps below :
 
 * A request should contain a **`setEndPoint`** action. This action is always marked in <span style="color:Blue">**Blue.**</span> This is where you put the endpoint to which the request is supposed to be fired. This action comes with an editor for convenience of data set up.
 
-* Optionally, specify the required API configuration by adding `#apiAliasName` in the *Condition* column. If omitted, the default configurations will be automatically loaded.
+* Optionally, specify the required API configuration by adding `#apiAliasName` in the *Condition* column. If **omitted**, the **default configurations** will be **automatically loaded**.
 
 * You can have steps to add headers/authentication etc. (if required)
 
