@@ -75,13 +75,48 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     **Sample Lambda INGenious Configurations**
 
-    Remote URL:
+    ***Remote URL***
 
-    ![createConfig](../img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
+    Your remote url for Lambda Testing is your connection string with combination of your Lmabda **Username**, **Access key** and `@mobile-hub.lambdatest.com/wd/hub`
+
+    * For this example, remote url is set to `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`:
+
+        ![createConfig](../img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
+
+    * To get your Username and Access Token
+        * From you Lambda Testing Portal, go to **Home** > **Account Settings** > **Password & Security**
+        * Under **Username and Access Key**, copy your **Username** and **Access Key** as shown from example `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`.
+
+            ![createConfig](../img/mobiletesting/Lambda-user-token.jpeg "user-token"){ width=60% }
     
-    Appium Capabilities/Options:
+    ***Appium Capabilities/Options***
 
-    ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
+    * For this example, you can set the capabilities as below:
+
+        ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
+
+    * To get you `app` capability
+        * From you Lambda Testing Portal, go to **Real time** or **Real Device** > **App Testing** > **Virtual Mobile** 
+        * Click on the **App Settings,**  
+
+            ![createConfig](../img/mobiletesting/virtualMachine-settings.jpeg "virtual device"){ width=60% }
+
+        * Under **App Settings**, copy your **App Id** to `app` capabilities in INGenious Configurations
+
+            ![createConfig](../img/mobiletesting/AppSettings.png "App Settings"){ width=60% }
+
+    * For Android Mobile in Lambda Testing, you can use capabilities
+        * `automatorName` as `UIAutomator2`
+        * `platformName` as `Android`
+        * `platformVersion` as the Android platform version you want to use
+
+    * For iOS Mobile in Lambda Testing, you can use capabilities
+        * `automatorName` as `XCUITest`
+        * `platformName` as `iOS`
+    
+    * You can also add your other desired capabilities for Lambda Testing. 
+        * For more information, you can visit **[Desired Capabilities for Lambda Testing](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)**
+        * or visit **[Lambda Test Automation Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/)**
    
     **Sample Lambda Appium Capabilities Set**
 
@@ -96,9 +131,8 @@ Follow the steps below to create an Appium configuration in INGenious.
                "appium:language": "nl",
                "appium:isRealMobile": "true",
                "appium:locale": "true",
-               "appium:build": "Android-Bankieren_NL",
+               "appium:build": "Sample-Build-Name",
                "appium:autoGrantPermissions": "true",
-               "appium:autoAcceptAlerts": "false",
           }
     ```
 
