@@ -81,7 +81,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 -----------------------------------        
 
-## Implementation of User Added Database Configuration Property
+## Additional Database Configuration Property
 
 Below are examples of Database configuration implementations.
 
@@ -89,44 +89,32 @@ Below are examples of Database configuration implementations.
 
     > **Note:** Please consult your database documentations for details. 
 
-    Here are examples configuration properties autoReconnect and characterEncoding added thru the connection string.
-   ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
+=== "Mysql Example"
+    MySQL JDBC connection string format
+    ```java
+    jdbc:mysql://[hosts][/database][?properties]
+    ```
 
+    Example of MySQL JDBC connection string  
+    ```java
+    jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
+    ```
+    
+    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
 
+=== "Oracle Example"
+    Oracle JDBC connection string format
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=<Your retry count>)(RETRY_DELAY=<Your retry delay>)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=<Your hostName>)(PORT=<Your Port Name>)))(CONNECT_DATA=(SERVICE_NAME=<Your service name>)))'
+    ```
 
-* For configurations that cannot be set through the JDBC connection string, another option is to configure your database by executing an SQL statement directly after establishing the connection. For example, global variables—such as `group_concat_max_len` at the global scope—can only be set using an SQL statement.
+    Example of Oracle JDBC connection string  
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
+    ```
 
-
-     Here is an example configuration `groupConcatMaxLen` with the value of 1000.
-
-    ![user_db_config_example2](../img/configurations/user_db_config_example2.png)
-
-    The code snippet below is taken from the `verifyDbConnection` method within the `General` class, which is part of the `com.ing.engine.commands.database` package. In this example, the global variable `group_concat_max_len` is assigned a value. Line 58 retrieves and resolves the value of the groupConcatMaxLen configuration property. Lines 75–80 then apply this value to the database by executing a SQL statement that sets `group_concat_max_len` globally.
-
-    ![user_db_config_code_example2](../img/configurations/user_db_config_code_example2.png "user_db_config_code_example2")
-
-    In the database, you can check if the value has been set.
-
-    ![check_db_global_variable2](../img/configurations/check_db_global_variable2.png)
-
------------------------------------
-
-## Write your first Database Test
-
-* At the beginning, there should be the **`initDBConnection`** step to conect to a database. This requires the Database Alias (which you configured following the steps above) in the **Condition** column. 
-
-* Then there should be steps to execute the **SQL Statements** like **`executeSelectQuery`**, **`executeDMLQuery`**, **`storeResultInDataSheet`**, **`storeResultInVariable`**
-
-* The steps above, come with an editor which makes parameterization of data in the SQL statments very easy. [See the section below]
-
-* Eventually there should be steps to validate/store result-set  **specific columns** or the **entire result.**
-
-* A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
-
- ![database](../img/db/db.png "database")
-
- The above is an example of a Database Testcase.
-
+    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
+    
 
 
 -----------------------------------
