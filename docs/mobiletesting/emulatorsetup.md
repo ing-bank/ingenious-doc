@@ -71,6 +71,37 @@ Follow the steps below to create an Appium configuration in INGenious.
           }
     ```
 
+=== "Sample Lambda Configurations"
+
+    **Sample Lambda INGenious Configurations**
+
+    Remote URL:
+
+    ![createConfig](../img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
+    
+    Appium Capabilities/Options:
+
+    ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
+   
+    **Sample Lambda Appium Capabilities Set**
+
+    ```json
+          {
+               "appium:deviceName": "Galaxy S23",
+               "appium:automationName": "UIAutomator2",
+               "appium:platformVersion": "15.0",
+               "platformName": "Android",
+               "appium:app": "lt://APPXXXXXXXXXXXXXXX",
+               "appium:w3c": "true",
+               "appium:language": "nl",
+               "appium:isRealMobile": "true",
+               "appium:locale": "true",
+               "appium:build": "Android-Bankieren_NL",
+               "appium:autoGrantPermissions": "true",
+               "appium:autoAcceptAlerts": "false",
+          }
+    ```
+
 ---------------------------     
 
 ## Write Tests
