@@ -83,13 +83,13 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 ## Additional Database Configuration Property
 
-Below are examples of Database configuration implementations.
+Below are examples of additiona Database configuration properties.
 
 * You can add your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
 
     > **Note:** Please consult your database documentations for details. 
 
-=== "Mysql Example"
+=== "MySQL Example"
     MySQL JDBC connection string format
     ```java
     jdbc:mysql://[hostname:port]/[database]?[properties]
@@ -162,14 +162,3 @@ Make sure to check out the following topics :
 
 [Database Actions](dbActions.md){ .md-button } 
 
-<!-- Here is our example configuration `groupConcatMaxLen` with the value of 100000 and we are going to set it as a session variable. 
-    ![user_db_config_example1](../img/configurations/user_db_config_example1.png)
-
-    In the example below, we are setting the value of the session variable `group_concat_max_len`.
-    Line 58 retrieves and resolves the value of the `groupConcatMaxLen` configuration property. This value is then appended to the JDBC connection string, ensuring the session variable is set when the connection is established. We printed the value to verify the resulting connection string. Lines 79-83 further confirm that the session variable has been set by querying and displaying its value from the database. 
-
-    This is a code snippet from the `verifyDbConnection` method of the `General` class in the `com.ing.engine.commands.database` package.
-    ![user_db_config_code_example1](../img/configurations/user_db_config_code_example1.png)
-
-    Here you can verify that connection string result and the session variable value.
-    ![check_db_global_variable1](../img/configurations/check_db_global_variable1.png) -->
