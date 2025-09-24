@@ -13,9 +13,8 @@
 
 !!! warning 
     
-    On first use, Playwright will download its required binaries. If network connection is slow, this may cause the recorder to time out.
-
-    **Pay attention to the logs!!**
+    For **first time usage**, Playwright will download its required binaries. If network connection is slow, this may cause the recorder to time out.
+    Several diaglog boxes might appear during setup, **just click 'OK' to proceed**. Once the recorder opens, **close it and start a new recording**.
 
  * The **Playwright Inspector** will launch along with **Chromium** browser
 
