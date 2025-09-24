@@ -62,6 +62,12 @@
  
  * A loader will show up while the playwright-recorder is being loaded
 
+!!! warning 
+    
+    On first use, Playwright will download its required binaries. If network connection is slow, this may cause the recorder to time out.
+
+    **Pay attention to the logs!!**
+
  * The **Playwright Inspector** will launch along with **Chromium** browser
 
  * Enter the URL of the Application Under Test (AUT) in the **Chromium** browser and perform the actions you want to perform on the application
