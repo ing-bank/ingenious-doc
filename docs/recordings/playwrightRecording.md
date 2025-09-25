@@ -1,8 +1,6 @@
 # Playwright Recording
 ----------------------------------
 
-**Prerequsite :** `Maven` is installed in the system
-
 ## Steps for Recording :
 
  * Launch **INGenious Playwright Studio**
@@ -10,16 +8,13 @@
  * Click on the **Recorder** icon
 
    ![record](../img/recording/1.JPG "record")
-
-   Internally this will call the following `mvn` command : `mvn exec:java -f engine/pom.xml -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen`
  
- * Playwright logs will be shown during the playwright-recorder's loading process
+ * A loader will show up while the playwright-recorder is being loaded
 
 !!! warning 
     
-    If a new version of Playwright is available, this step will try to download that first. So the recorder can time out if the network speed is slow.
-
-    **Pay attention to the logs!!**
+    For **first time usage**, Playwright will download its required binaries. If network connection is slow, this may cause the recorder to time out.
+    Several dialog boxes might appear during setup, **just click 'OK' to proceed**. Once the recorder opens, **close it and start a new recording**.
 
  * The **Playwright Inspector** will launch along with **Chromium** browser
 
