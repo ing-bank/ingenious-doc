@@ -79,6 +79,42 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
     2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
     3. Click **Save** to apply the changes.
 
+-----------------------------------        
+
+## Additional Database Configuration Property
+
+Below are examples of additiona Database configuration properties.
+
+* You can add your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
+
+    > **Note:** Please consult your database documentations for details. 
+
+=== "MySQL Example"
+    MySQL JDBC connection string format
+    ```java
+    jdbc:mysql://[hostname:port]/[database]?[properties]
+    ```
+
+    Example of MySQL JDBC connection string  
+    ```java
+    jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
+    ```
+    
+    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
+
+=== "Oracle Example"
+    Oracle JDBC connection string format
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=<Your retry count>)(RETRY_DELAY=<Your retry delay>)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=<Your hostName>)(PORT=<Your Port Name>)))(CONNECT_DATA=(SERVICE_NAME=<Your service name>)))'
+    ```
+
+    Example of Oracle JDBC connection string  
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
+    ```
+
+    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
+    
 -----------------------------------
 
 ## Write your first Database Test
@@ -96,8 +132,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
  ![database](../img/db/db.png "database")
 
  The above is an example of a Database Testcase.
-
-
 
 -----------------------------------
 
@@ -127,3 +161,4 @@ The list of **`Query`** steps is as follows :
 Make sure to check out the following topics :
 
 [Database Actions](dbActions.md){ .md-button } 
+
