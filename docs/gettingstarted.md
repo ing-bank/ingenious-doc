@@ -22,7 +22,7 @@
 -----------------------
 * **Step 1** : Download :material-download:
 
-    * Click [**here**](https://github.com/ing-bank/INGenious/releases/download/v2.2/ingenious-playwright-2.2-setup.zip) to directly download the latest version
+    * Click [**here**](https://github.com/ing-bank/INGenious/releases/download/v2.3/ingenious-playwright-2.3-setup.zip) to directly download the latest version
 
 * **Step 2** : Extract the zip, into a directory of your choice.
 
