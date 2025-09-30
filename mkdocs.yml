@@ -72,8 +72,10 @@ nav:
         - Switch: playwrightActions/switch.md
         - Mocking: playwrightActions/fulfill.md
         - Dynamic Objects: playwrightActions/dynamicObject.md
+        - General: playwrightActions/general.md
     - Browser Configurations: browsertesting/config.md 
     - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
+    - Authentication: browsertesting/playwrightauthenticate.md
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
@@ -85,21 +87,27 @@ nav:
     - Appium Inspector : mobiletesting/appiuminspector.md
     - Create Your First Mobile Test: mobiletesting/emulatorsetup.md
     - Actions:
-        - WaitFor: mobiletesting/mobileActions/waitFor.md
-        - Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
-        - Element Assertions: mobiletesting/mobileActions/elementAssertions.md
-        - Scroll: mobiletesting/mobileActions/scroll.md
-        - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
-        - Relative: mobiletesting/mobileActions/relative.md
         - Alerts: mobiletesting/mobileActions/alerts.md
-        - Store Actions: mobiletesting/mobileActions/storeActions.md
-        - Basic: mobiletesting/mobileActions/basic.md
-        - Label: mobiletesting/mobileActions/byLabel.md
-        - General: mobiletesting/mobileActions/commonActions.md
-
+        - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
+        - General: mobiletesting/mobileActions/general.md
+        - Mobile : mobiletesting/mobileActions/mobile.md
+        - Positive Assertions : mobiletesting/mobileActions/positiveAssertions.md
+        - Negative Assertions : mobiletesting/mobileActions/negativeAssertions.md
+        - Scroll: mobiletesting/mobileActions/scroll.md
+        - Set: mobiletesting/mobileActions/set.md
+        - Store : mobiletesting/mobileActions/store.md
+        - Tap : mobiletesting/mobileActions/tap.md
+        - Wait: mobiletesting/mobileActions/wait.md
+        #- Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
+        #- Element Assertions: mobiletesting/mobileActions/elementAssertions.md    
+        #- Basic: mobiletesting/mobileActions/basic.md 
+        #- General: mobiletesting/mobileActions/commonActions.md
  - API Testing:
     - Create Your First API Test: api.md
-    - Actions: apiActions/webservice.md
+    - Actions: 
+        - General: apiActions/webservice.md
+        - Store: apiActions/store.md
+        - Assertions: apiActions/assertions.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
@@ -116,7 +124,80 @@ nav:
         - Data Storage: databaseTesting/storeActions.md
  - Synthetic Data:
     - Premise: syntheticData/index.md
-    - Synthetic Data Generation Actions: syntheticData/actions.md   
+    - Synthetic Data Generation Actions: 
+        - Locale Setup: syntheticData/syntheticDataActions/locale.md
+        - Address: syntheticData/syntheticDataActions/address.md
+        - Ancient: syntheticData/syntheticDataActions/ancient.md
+        - App: syntheticData/syntheticDataActions/app.md
+        - Artist: syntheticData/syntheticDataActions/artist.md
+        - Avatar: syntheticData/syntheticDataActions/avatar.md
+        - Aviation: syntheticData/syntheticDataActions/aviation.md
+        - Back to the future: syntheticData/syntheticDataActions/backToTheFuture.md
+        - Beer: syntheticData/syntheticDataActions/beer.md
+        - Book: syntheticData/syntheticDataActions/book.md
+        - Bool: syntheticData/syntheticDataActions/bool.md
+        - Business: syntheticData/syntheticDataActions/business.md
+        - Cat: syntheticData/syntheticDataActions/cat.md
+        - Chunk Norris: syntheticData/syntheticDataActions/chunkNorris.md
+        - Code: syntheticData/syntheticDataActions/code.md
+        - Color: syntheticData/syntheticDataActions/color.md
+        - Commerce: syntheticData/syntheticDataActions/commerce.md
+        - Company: syntheticData/syntheticDataActions/company.md
+        - Country: syntheticData/syntheticDataActions/country.md
+        - Crypto: syntheticData/syntheticDataActions/crypto.md
+        - Currency: syntheticData/syntheticDataActions/currency.md
+        - Date and Time: syntheticData/syntheticDataActions/dateAndTime.md
+        - Demographic: syntheticData/syntheticDataActions/demographic.md
+        - Dog: syntheticData/syntheticDataActions/dog.md
+        - Dragon Ball: syntheticData/syntheticDataActions/dragonBall.md
+        - Educator: syntheticData/syntheticDataActions/educator.md
+        - Esports: syntheticData/syntheticDataActions/esports.md
+        - File: syntheticData/syntheticDataActions/file.md
+        - Finance: syntheticData/syntheticDataActions/finance.md
+        - Food: syntheticData/syntheticDataActions/food.md
+        - Friends: syntheticData/syntheticDataActions/friends.md
+        - Funny Name: syntheticData/syntheticDataActions/funnyName.md
+        - Game of Thrones: syntheticData/syntheticDataActions/gameOfThrones.md
+        - Hacker: syntheticData/syntheticDataActions/hacker.md
+        - Harry Potter: syntheticData/syntheticDataActions/harryPotter.md
+        - Hipster: syntheticData/syntheticDataActions/hipster.md
+        - Hitch Hikers Guide to the Galaxy: syntheticData/syntheticDataActions/hitchhikersGuideToTheGalaxy.md
+        - Hobbit: syntheticData/syntheticDataActions/hobbit.md
+        - How I met your mother: syntheticData/syntheticDataActions/howIMetYourMother.md
+        - ID Number: syntheticData/syntheticDataActions/idNumber.md
+        - Internet: syntheticData/syntheticDataActions/internet.md
+        - Job: syntheticData/syntheticDataActions/job.md
+        - League of Legends: syntheticData/syntheticDataActions/leagueOfLegends.md
+        - Lebowski: syntheticData/syntheticDataActions/lebowski.md
+        - Lord of the Rings: syntheticData/syntheticDataActions/lordOfTheRings.md
+        - Lorem: syntheticData/syntheticDataActions/lorem.md
+        - Matz: syntheticData/syntheticDataActions/matz.md
+        - Medical: syntheticData/syntheticDataActions/medical.md
+        - Music: syntheticData/syntheticDataActions/music.md
+        - Name: syntheticData/syntheticDataActions/name.md
+        - Number: syntheticData/syntheticDataActions/number.md
+        - Options: syntheticData/syntheticDataActions/options.md
+        - Overwatch: syntheticData/syntheticDataActions/overwatch.md
+        - Phone Number: syntheticData/syntheticDataActions/phoneNumber.md
+        - Pokemon: syntheticData/syntheticDataActions/pokemon.md
+        - Random Service: syntheticData/syntheticDataActions/randomService.md
+        - Rick and Morty: syntheticData/syntheticDataActions/rickAndMorty.md
+        - Robin: syntheticData/syntheticDataActions/robin.md
+        - Rock Band: syntheticData/syntheticDataActions/rockBand.md
+        - Shakespeare: syntheticData/syntheticDataActions/shakespeare.md
+        - Slack Emoji: syntheticData/syntheticDataActions/slackEmoji.md
+        - Space: syntheticData/syntheticDataActions/space.md
+        - StarTrek: syntheticData/syntheticDataActions/starTrek.md
+        - Stock: syntheticData/syntheticDataActions/stock.md
+        - Super Hero: syntheticData/syntheticDataActions/superHero.md
+        - Team: syntheticData/syntheticDataActions/team.md
+        - Twin Peaks: syntheticData/syntheticDataActions/twinPeaks.md
+        - University: syntheticData/syntheticDataActions/university.md
+        - Weather: syntheticData/syntheticDataActions/weather.md
+        - Witcher: syntheticData/syntheticDataActions/witcher.md
+        - Yoda: syntheticData/syntheticDataActions/yoda.md
+        - Zelda: syntheticData/syntheticDataActions/zelda.md
+        - Miscellaneous: syntheticData/syntheticDataActions/misc.md
  - Customizations:
     - Full flexibility: customizations/index.md
     - Engine: customizations/engine.md
@@ -134,6 +215,8 @@ nav:
     - Reporting: browsertesting/playwrightreporting.md
     - Shortcuts: shortcuts.md
     - Additional features: additionalfeatures.md
+    - String Operations: stringOperations.md
+    - Global Datasheets: globalDataSheet.md
     - Tips: tips.md
     - Troubleshooting: troubleshooting.md 
          

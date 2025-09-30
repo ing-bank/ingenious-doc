@@ -2,31 +2,6 @@
 
 -------------------------------------
 
-??? example "Global Data Sheets"
-
-    ## Global Data Sheets
-
-    For every project that is created in INGenious, a default
-    global data sheet is generated. The data entered in the global data sheet can be
-    referenced in any test data sheet within the project. This allows you to reuse the
-    data across multiple test cases.
-
-    **Where to use the Global Data?**
-
-    Identify the Data column name which is common across multiple data sheets.
-
-    ![globaldatasheet1](img/Things/GlobalDataSheet1.png "globaldatasheet1")
-
-    Select that data value and click on **global data** icon, as shown in the image above. Give the global data id, in the respective window, as shown below,
-
-    ![globaldatasheet2](img/Things/GlobalDataSheet2.png "globaldatasheet2")
-
-    You will get the global id in the global data sheet, as shown below.
-
-    ![globaldatasheet3](img/Things/GlobalDataSheet3.png "globaldatasheet3")
-
- ------   
-
 ??? example "Rename a Project"   
 
     ## Rename a Project
@@ -113,6 +88,21 @@
         > For example, if you use 5, then INGenious iterate only the 5th iteration and all its sub iterations.
 
     > **Note:** Subiterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
+
+-------
+
+??? example "Continue or Break on Error"
+
+    ## Continue or Break on Error
+
+    * **Iteration Mode** can be found under the Run Settings.
+
+    ![iterationMode](img/Things/iterationMode.png "iterationMode")
+
+    * If **ContinueOnError** is selected, Test Case will keep on running even if an error occurs during one of the iterations.
+
+    * If **BreakOnError** is selected, Test Case will immediately stop execution upon encountering an error during iteration.
+
 
 -----
 
@@ -227,24 +217,10 @@
     | [`=Min`](#)    | =Min(a,b)                   |Will return the minimum number between **a** and **b** |
     | [`=Max`](#)    | =Max(a,b)                   |Will return the maximum number between **a** and **b** |
     | [`=Random`](#) | =Random(a)                  |Will return a random number of **"a"** digits |
-    | [`=Random`](#) | =Round(a,b)                 |Will return a random number between **"a"** and **"b"**|
-    | [`=Concat`](#) | =Concat(a,b)                |Will Concatenate the strings **a** and **b**|
+    | [`=Round`](#)  | =Round(a,b)                 |Will return a random number between **"a"** and **"b"**|
     | [`=Date`](#)   | =Date("0", dd/MM/YYYY)      |Will return the **date** in the specified format |
     | [`=Date`](#)   | =Date("+n or -n", dd/MM/YYYY) |Will **add or subtract n days from the current date** and display it in the specified format |
-    | [`=ToLower`](#)   | =ToLower("DUMMY") |Will convert a String to **lowercase** |
-    | [`=ToUpper`](#)   | =ToUpper("dummy") |Will convert a String to **uppercase** |
-    | [`=getLength`](#)   | =getLength("TargetString") |Will return the **length** of a String, in this case 12 |
-    | [`=getOccurance`](#)   | =getOccurance(Original String,i) |Will return the **number of occurance** of a substring in a String, in this case 3 |
-    | [`=Trim`](#)   | =Trim(" TargetString ") |Will **Trim** a String |
-    | [`=Replace`](#)   | =Replace('Target String','g','b',first) |Will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
-    | [`=Replace`](#)   | =Replace(`%var%`,'g','b',first) |Suppose `%var%` has value 'Target String' then it will **replace first** occurance of **g** with **b**. **Output : Tarbet String** |
-    | [`=Replace`](#)   | =Replace('Target String','g','b',all) |Will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
-    | [`=Replace`](#)   | =Replace(`%var%`,'g','b',all) |Suppose `%var%` has value 'Target String' then it will **replace all** occurances of **g** with **b**. **Output : Tarbet Strinb** |
-    | [`=Substring`](#)   | =Substring(`%var%`,startindex,endindex) |Suppose `%var%` has value 'Netherlands' and start index as 3 and end index as 6 then it will give the substring. **Output : her** |
-    | [`=Substring`](#)   | =Substring(`%var%`,startindex) |Suppose `%var%` has value 'Netherlands' and start index as 3  then it will give the substring. **Output : herlands** |
-    | [`=Split`](#)   | =Split(`%var%`,'split String',index) |Suppose `%var%` has value 'Netherlands' and split string as 'e' and return string index as 1 then it will give the splitted string. **Output : th** |
-    | [`=Split`](#)   | =Split(`%var%`,'split String',limit,index) |Suppose `%var%` has value 'Netherlands' and split string as 'e' and limit as 2 and return string index as 1 then it will give the splitted string. **Output : therlands** |
-
+    
 
     > **Note:** It is also possible to combine two relevant functions for optimum usage.| Example1: **=Concat(Diaphragm,=Round(360.45))** Result: **Diaphragm360** <br> Example2: **=Concat(James_,=Round(=Random(3)))** Result: **James_155**. 
 
@@ -318,3 +294,45 @@
     > **Note**: In addition to adding breakpoints to the test steps, you can comment the selected test steps as well, by performing right click and choosing the option **Toggle Comments**.
 
 ----
+
+??? example "Store Data From Previous Test Case"
+
+    ## Store Data From Previous Test Case
+
+    This action retrieves data from a previous test case execution and stores it either in a runtime variable or a target datasheet for use in the current test case.
+
+    **When to use**
+
+    Used in data-driven test automation where **test cases depend on the output data of previously executed test cases**. This enables chaining of test scenarios and dynamic data reuse.
+
+    **Required Variables**   
+
+    - `%PreviousScenario%` - The previous Test Case Scenario Name to fetch the data. If not set, by defaut it will use the current test case scenario name.   
+    - `%PreviousTestCase%` - The previous Test Case Name to fetch the data. If not set, by defaut it will use the current test case name.     
+    - `%PreviousIteration%` - The previous Test Case Iteration to fetch the data. If not set, by defaut it will use the current test case iteration.   
+    - `%PreviousSubIteration%` - The previous Test Case Sub-Iteration to fetch the data. If not set, by defaut it will use the current test case sub-iteration.   
+
+    **How to store Data from previous Test Case**
+
+    - To store data from previous test case, make sure to set your required variables properly to your desired test case data or keep the default values.
+    - You can use action **storeDataFromPreviousTestCaseData** that requires Input and Condition field
+        - **Input** as the target Test Datasheet or Variable name where you want to store data. By default, it will be stored to test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
+        - and **Condition** as the source Test Datasheet name where to get the data based from values that was set to the requried variables. By default, if the required variables were not set, it will get the data from test datasheet in your current scenario, current test case, current iteration and current sub-iteration.
+    - You can also reset the required variables to the current test case data using action **resetPreviousTestCaseDataVariables**.
+        - This action will reset the values for the required variables:
+            - `%PreviousScenario%`
+            - `%PreviousTestCase%`
+            - `%PreviousIteration%`
+            - `%PreviousSubIteration%`
+
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
+
+    > **Note:** Ensure that both Source and Target Test Datasheets have been created before using this action.
+
+    Source Datasheet:
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-2.png "storeDataFromPreviousTestCaseData2")
+
+    Target Datasheet:
+    ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
+
+ ------   

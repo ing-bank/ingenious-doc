@@ -17,23 +17,27 @@
 
 ## Set up Database Connection
 
-* Add maven dependency in pom.xml for database driver which you are going to use. For example, if you are using **mysql** you need to add the following dependency :
+* Include the appropriate database dependency in the pom.xml file. 
+> **Note:** By default, **MySQL** and **Oracle** dependencies are already included.* 
 
-     ```xml
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>LATEST</version>
-        </dependency>
-     ```
-
-
-* To configure a database connection from INGenious, follow the steps below :
+* To configure a database connection from INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
-    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement..
+    - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
+
+    - There are two ways to provide the property values:
+        1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
+        1. Dynamic values – These values can be defined using runtime variables, user-defined variables, datasheet entries, or any combination of these sources. This approach allows for flexibility and adaptability across environments. 
+
+        For example: 
+        
+        - The username might be sourced from a datasheet variable. 
+        - The password could be defined as a runtime variable. 
+        - The connection string might be a combination of both, allowing dynamic resolution based on context.
+        
+        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config")
 
 -----------------------------------        
 
@@ -55,6 +59,62 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productDB", "My_DB_UserName", "My_DB_Password");
 ```
 
+-----------------------------------        
+
+## User Added Database Configuration Property
+
+* INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
+!!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
+    
+![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons")
+
+* Add a new property 
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
+    3. Provide the corresponding **property value**.
+    4. Click **Save** to apply the changes.
+
+* Remove a property
+    1. Select the **property** you want to remove.
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    3. Click **Save** to apply the changes.
+
+-----------------------------------        
+
+## Additional Database Configuration Property
+
+Below are examples of additiona Database configuration properties.
+
+* You can add your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
+
+    > **Note:** Please consult your database documentations for details. 
+
+=== "MySQL Example"
+    MySQL JDBC connection string format
+    ```java
+    jdbc:mysql://[hostname:port]/[database]?[properties]
+    ```
+
+    Example of MySQL JDBC connection string  
+    ```java
+    jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
+    ```
+    
+    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
+
+=== "Oracle Example"
+    Oracle JDBC connection string format
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=<Your retry count>)(RETRY_DELAY=<Your retry delay>)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=<Your hostName>)(PORT=<Your Port Name>)))(CONNECT_DATA=(SERVICE_NAME=<Your service name>)))'
+    ```
+
+    Example of Oracle JDBC connection string  
+    ```java
+    jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
+    ```
+
+    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
+    
 -----------------------------------
 
 ## Write your first Database Test
@@ -72,8 +132,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
  ![database](../img/db/db.png "database")
 
  The above is an example of a Database Testcase.
-
-
 
 -----------------------------------
 
@@ -103,3 +161,4 @@ The list of **`Query`** steps is as follows :
 Make sure to check out the following topics :
 
 [Database Actions](dbActions.md){ .md-button } 
+

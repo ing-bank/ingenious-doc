@@ -1,43 +1,5 @@
 # API Testing Actions
 
-## **setEndPoint**
-
-**Description**: This function is used to set the End Point for a Rest/SOAP API. 
-
-**Input Format** : @EndPoint
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | @Endpoint (from Editor)      |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`setEndPoint`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-    Inputs in the Input column can be either `hardcoded`, passed inside the **Endpoint editor** which is capable of parameterising the Endpoint (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
-
-=== "Corresponding Code"
-
-    Performs opening of URL Connection
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Set End Point ", input = InputType.YES, condition = InputType.OPTIONAL)
-        public void setEndPoint() {
-            try {
-                String resource = handlePayloadorEndpoint(Data);
-                endPoints.put(key, resource);
-                httpAgentCheck();
-                OpenURLconnection();
-                Report.updateTestLog(Action, "End point set : " + resource, Status.DONE);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error setting the end point :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-
-    ```
------------------------------
-
 ## **addHeader**
 
 **Description**:  This function is used to add a header for a Rest/SOAP API request.
@@ -141,6 +103,55 @@
     ```
 -----------------------------
 
+## **setEndPoint**
+
+**Description**: This function is used to set the End Point for a Rest/SOAP API. 
+
+**Input Format** : @EndPoint
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | @Endpoint (from Editor)      |   #apiConfigAlias (optional)   | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | Sheet:Column |  #apiConfigAlias (optional)      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Webservice     |:green_circle: [`setEndPoint`](#)  | %dynamicVar% |  #apiConfigAlias (optional)      | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded`, passed inside the **Endpoint editor** which is capable of parameterising the Endpoint (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
+=== "Corresponding Code"
+
+    Performs opening of URL Connection
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Set End Point ", input = InputType.YES, condition = InputType.OPTIONAL)
+        public void setEndPoint() {
+            try {
+                String apiConfigName = Condition;
+                DriverProperties driverProperties = Control.getCurrentProject().getProjectSettings().getDriverSettings();
+                if (apiConfigName.startsWith("#")) {
+                    apiConfigName = apiConfigName.replace("#", "");
+                } else {
+                    apiConfigName = ""; //This means that the Condtion is not an API Config Alias
+                }
+
+                String configToLoad = driverProperties.doesAPIconfigExist(apiConfigName) ? apiConfigName : "default";
+                driverProperties.setCurrLoadedAPIConfig(configToLoad);
+                
+                String resource = handlePayloadorEndpoint(Data);
+                endPoints.put(key, resource);
+                httpAgentCheck();
+                OpenURLconnection();
+                Report.updateTestLog(Action, "End point set : " + resource, Status.DONE);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+                Report.updateTestLog(Action, "Error setting the end point :" + "\n" + ex.getMessage(), Status.DEBUG);
+            }
+        }
+
+    ```
+-----------------------------
+
 ## **closeConnection**
 
 **Description**: This function is used to close a connection for a Rest/SOAP API request.
@@ -175,121 +186,6 @@
 
 -----------------------------------
 
-## **storeResponseBodyInDataSheet**
-
-**Description**: This function is used to store the response body of SOAP/REST request, into a respective column of a given datasheet.
-
-**Input Format** : @Expected **DatasheetName:ColumnName**
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeResponseBodyInDataSheet`](#)  | Sheet:Column      |      | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is supposed to be stored*</span>
-
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
-
-=== "Corresponding Code"
-
-    ```java 
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store Response Message In DataSheet ", input = InputType.YES)
-        public void storeResponseBodyInDataSheet() {
-            try {
-                String strObj = Input;
-                if (strObj.matches(".*:.*")) {
-                    try {
-                        System.out.println("Updating value in SubIteration " + userData.getSubIteration());
-                        String sheetName = strObj.split(":", 2)[0];
-                        String columnName = strObj.split(":", 2)[1];
-                        userData.putData(sheetName, columnName, responsebodies.get(key));
-                        Report.updateTestLog(Action, "Response body is stored in " + strObj, Status.DONE);
-                    } catch (Exception ex) {
-                        Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
-                        Report.updateTestLog(Action, "Error Storing text in datasheet :" + ex.getMessage(), Status.DEBUG);
-                    }
-                } else {
-                    Report.updateTestLog(Action,
-                            "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing response body in datasheet :" + "\n" + ex.getMessage(),Status.DEBUG);
-            }
-        }
-    ```
-
-----------------------
-
-
-## **assertResponseCode**
-
-**Description**: This function is used to validate the response code of SOAP/REST response.
-
-**Input Format** : @Expected code
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertResponseCode`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertResponseCode`](#)  | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertResponseCode`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert Response Code ", input = InputType.YES)
-        public void assertResponseCode() {
-            try {
-                if (responsecodes.get(key).equals(Data)) {
-                    Report.updateTestLog(Action, "Status code is : " + Data, Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Status code is : " + responsecodes.get(key) + " but should be " + Data,
-                            Status.FAILNS);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error in validating response code :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-
-----------------------
-
-
-## **assertResponsebodycontains**
-
-**Description**: This function is used to validate whether the response body of SOAP/REST request contains an expected text or not.
-
-**Input Format** : @Expected Text
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertResponsebodycontains`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertResponsebodycontains`](#)    | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertResponsebodycontains`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert Response Body contains ", input = InputType.YES)
-        public void assertResponsebodycontains() {
-            try {
-                if (responsebodies.get(key).contains(Data)) {
-                    Report.updateTestLog(Action, "Response body contains : " + Data, Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Response body does not contain : " + Data, Status.FAILNS);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error in validating response body :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-----------------------
-
 ## **postSoapRequest**
 
 **Description**: This function is used to perform POST action on a SOAP API.
@@ -320,222 +216,6 @@
         }
     ```
 ----------------------------------------
-
-## **storeXMLelement**
-
-**Description**: This function is used to store a certain XML tag value inside the response body of SOAP request, into a variable.
-
-**Input Format** : @`XPath` of the tag
-
-**Condition Format**: %variable%
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeXMLelement`](#)  | @`XPath`       |  %var%     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`storeXMLelement`](#)  | **Sheet:Column** containing `XPath`  |%var%| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`storeXMLelement`](#)   | %Var% containing `XPath` |%var%| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store XML Element", input = InputType.YES, condition = InputType.YES)
-        public void storeXMLelement() {
-            try {
-                String variableName = Condition;
-                String expression = Data;
-                if (variableName.matches("%.*%")) {
-                    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                    DocumentBuilder dBuilder;
-                    InputSource inputSource = new InputSource();
-                    inputSource.setCharacterStream(new StringReader(responsebodies.get(key)));
-                    dBuilder = dbFactory.newDocumentBuilder();
-                    Document doc = dBuilder.parse(inputSource);
-                    doc.getDocumentElement().normalize();
-                    XPath xPath = XPathFactory.newInstance().newXPath();
-                    NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-                    Node nNode = nodeList.item(0);
-                    String value = nNode.getNodeValue();
-                    addVar(variableName, value);
-                    Report.updateTestLog(Action, "XML element value stored", Status.DONE);
-                } else {
-                    Report.updateTestLog(Action, "Variable format is not correct", Status.DEBUG);
-                }
-            } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException
-                    | SAXException ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing XML element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-
-    ```
--------------------------------
-
-## **storeXMLelementInDataSheet**
-
-**Description**: This function is used to store a certain XML tag value inside the response body of SOAP request, into a respective column of a given datasheet.
-
-**Input Format** : @Expected datasheet name:column name
-
-**Condition Format**: XPath of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeXMLelementInDataSheet'](#)  | Sheet:Column      |  XPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
-
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store XML Element In DataSheet ", input = InputType.YES, condition = InputType.YES)
-        public void storeXMLelementInDataSheet() {
-
-            try {
-                String strObj = Input;
-                if (strObj.matches(".*:.*")) {
-                    try {
-                        String expression = "";
-                        System.out.println("Updating value in SubIteration " + userData.getSubIteration());
-                        String sheetName = strObj.split(":", 2)[0];
-                        String columnName = strObj.split(":", 2)[1];
-                        String xmlText = responsebodies.get(key);
-                        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                        DocumentBuilder dBuilder;
-                        InputSource inputSource = new InputSource();
-                        inputSource.setCharacterStream(new StringReader(xmlText));
-                        dBuilder = dbFactory.newDocumentBuilder();
-                        Document doc = dBuilder.parse(inputSource);
-                        doc.getDocumentElement().normalize();
-                        XPath xPath = XPathFactory.newInstance().newXPath();
-                        if (Condition.matches("%.*%"))
-                            expression = getVar(Condition);
-                        else
-                            expression = Condition;
-                        NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-                        Node nNode = nodeList.item(0);
-                        String value = nNode.getNodeValue();
-                        userData.putData(sheetName, columnName, value);
-                        Report.updateTestLog(Action, "Element text [" + value + "] is stored in " + strObj, Status.DONE);
-                    } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException| SAXException ex) {
-                        Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
-                        Report.updateTestLog(Action, "Error Storing XML element in datasheet :" + "\n" + ex.getMessage(),Status.DEBUG);
-                    }
-                } else {
-                    Report.updateTestLog(Action,
-                            "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing XML element in datasheet :" + "\n" + ex.getMessage(),Status.DEBUG);
-            }
-
-        }
-    ```
-
----------------------------------
-
-## **assertXMLelementEquals**
-
-**Description**: This function is used to validate whether a certain XML tag of the response body of SOAP request equals an expected text or not.
-
-**Input Format** : @Expected Text
-
-**Condition Format**: XPath of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert XML Element Equals ", input = InputType.YES, condition = InputType.YES)
-        public void assertXMLelementEquals() {
-
-            try {
-                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder dBuilder;
-                InputSource inputSource = new InputSource();
-                inputSource.setCharacterStream(new StringReader(responsebodies.get(key)));
-                dBuilder = dbFactory.newDocumentBuilder();
-                Document doc = dBuilder.parse(inputSource);
-                doc.getDocumentElement().normalize();
-                XPath xPath = XPathFactory.newInstance().newXPath();
-                String expression = Condition;
-                NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-                Node nNode = nodeList.item(0);
-                String value = nNode.getNodeValue();
-                if (value.equals(Data)) {
-                    Report.updateTestLog(Action, "Element text [" + value + "] is as expected", Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Element text [" + value + "] is not as expected", Status.FAILNS);
-                }
-            } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException
-                    | SAXException ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error validating XML element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-------------------------------------------
-
-## **assertXMLelementContains**
-
-**Description**: This function is used to validate whether a certain XML tag of the response body of SOAP request contains an expected text or not.
-
-**Input Format** : @Expected Text
-
-**Condition Format**: XPath of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertXMLelementContains`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertXMLelementContains`](#)    | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertXMLelementContains`](#)    | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert XML Element Contains ", input = InputType.YES, condition = InputType.YES)
-        public void assertXMLelementContains() {
-
-            try {
-                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder dBuilder;
-                InputSource inputSource = new InputSource();
-                inputSource.setCharacterStream(new StringReader(responsebodies.get(key)));
-                dBuilder = dbFactory.newDocumentBuilder();
-                Document doc = dBuilder.parse(inputSource);
-                doc.getDocumentElement().normalize();
-                XPath xPath = XPathFactory.newInstance().newXPath();
-                String expression = Condition;
-                NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-                Node nNode = nodeList.item(0);
-                String value = nNode.getNodeValue();
-                if (value.contains(Data)) {
-                    Report.updateTestLog(Action, "Element text contains [" + Data + "] is as expected", Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Element text [" + value + "] does not contain [" + Data + "]",
-                            Status.FAILNS);
-                }
-            } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException
-                    | SAXException ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error validating XML element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-----------------------
 
 ## **postRestRequest**
 
@@ -679,353 +359,31 @@
             }
         }
     ```
-
-
-
 -----------------------------
 
-## **storeJSONelement**
+## **deleteWithPayload**
 
-**Description**: This function is used to store a certain JSON tag value from the response body of REST request, into a variable.
+**Description**:  This function is used to perform DELETE action on a Rest API with payload.
 
-**Input Format** : @`JSONPath` of the tag
-
-**Condition Format**: %variable%
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
+| ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJSONelement`](#)   | @`JSONPath`       |  %var%     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`storeJSONelement`](#)   | **Sheet:Column** containing `JSONPath`  |%var%| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`storeJSONelement`](#)   | %Var% containing `JSONPath` |%var%| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Webservice     |:green_circle: [`deleteWithPayload`](#)   | @Payload (from Editor)      |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Webservice     |:green_circle: [`deleteWithPayload`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Webservice     |:green_circle: [`deleteWithPayload`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.      |         |
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store JSON Element", input = InputType.YES, condition = InputType.YES)
-        public void storeJSONelement() {
-            try {
-                String variableName = Condition;
-                String jsonpath = Data;
-                if (variableName.matches("%.*%")) {
-                    addVar(variableName, JsonPath.read(responsebodies.get(key), jsonpath).toString());
-                    Report.updateTestLog(Action, "JSON element value stored", Status.DONE);
-                } else {
-                    Report.updateTestLog(Action, "Variable format is not correct", Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing JSON element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
+    @Action(object = ObjectType.WEBSERVICE, desc = "DELETE with Payload ", input = InputType.YES)
+    public void deleteWithPayload() {
+        try {
+            createhttpRequest(RequestMethod.DELETEWITHPAYLOAD);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-
+    }
     ```
-------------------------------------------
-
-## **storeJSONelementInDataSheet**
-
-**Description**: This function is used to store a certain JSON tag value inside the response body of REST request, into a respective column of a given datasheet.
-
-**Input Format** : @Expected datasheet name:column name
-
-**Condition Format**: JSONPath of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJSONelementInDataSheet`](#)  | Sheet:Column      |  JSONPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
-
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store JSON Element In DataSheet ", input = InputType.YES, condition = InputType.YES)
-        public void storeJSONelementInDataSheet() {
-
-            try {
-                String strObj = Input;
-                if (strObj.matches(".*:.*")) {
-                    try {
-                        System.out.println("Updating value in SubIteration " + userData.getSubIteration());
-                        String sheetName = strObj.split(":", 2)[0];
-                        String columnName = strObj.split(":", 2)[1];
-                        String response = responsebodies.get(key);
-                        String jsonpath = Condition;
-                        String value = JsonPath.read(response, jsonpath).toString();
-                        userData.putData(sheetName, columnName, value);
-                        Report.updateTestLog(Action, "Element text [" + value + "] is stored in " + strObj, Status.DONE);
-                    } catch (Exception ex) {
-                        Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
-                        Report.updateTestLog(Action, "Error Storing JSON element in datasheet :" + "\n" + ex.getMessage(),
-                                Status.DEBUG);
-                    }
-                } else {
-                    Report.updateTestLog(Action,
-                            "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",
-                            Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing JSON element in datasheet :" + "\n" + ex.getMessage(),
-                        Status.DEBUG);
-            }
-        }
-    ```
-
-----------------------
-
-## **assertJSONelementEquals**
-
-**Description**:  This function is used to validate whether a certain JSON tag of the response body of REST request equals an expected text or not.
-
-**Input Format** : @Expected Text
-
-**Condition Format** : JSON Path of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertJSONelementEquals`](#)  | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertJSONelementEquals`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertJSONelementEquals`](#)  | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert JSON Element Equals ", input = InputType.YES, condition = InputType.YES)
-        public void assertJSONelementEquals() {
-            try {
-                String response = responsebodies.get(key);
-                String jsonpath = Condition;
-                String value = JsonPath.read(response, jsonpath).toString();
-                if (value.equals(Data)) {
-                    Report.updateTestLog(Action, "Element text [" + value + "] is as expected", Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Element text is [" + value + "] but is expected to be [" + Data + "]",
-                            Status.FAILNS);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error in validating JSON element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-
----------------------------------
-
-## **assertJSONelementContains**
-
-**Description**:  This function is used to validate whether a certain JSON tag of the response body of REST request contains an expected text or not.
-
-**Input Format** : @Expected Text
-
-**Condition Format** : JSON Path of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertJSONelementContains`](#)   | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertJSONelementContains`](#)   | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertJSONelementContains`](#)   | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert JSON Element Contains ", input = InputType.YES, condition = InputType.YES)
-        public void assertJSONelementContains() {
-            try {
-                String response = responsebodies.get(key);
-                String jsonpath = Condition;
-                String value = JsonPath.read(response, jsonpath).toString();
-                if (value.contains(Data)) {
-                    Report.updateTestLog(Action, "Element text contains [" + Data + "] is as expected", Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Element text [" + value + "] does not contain [" + Data + "]",
-                            Status.FAILNS);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error in validating JSON element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        }
-    ```
-
 -----------------------------
-
-## **storeJsonElementCount**
-
-**Description**: This function is used to store the count of JSON elements for a given JSON Path of REST request, into a variable.
-
-**Input Format** : @`JSONPath` of the tag
-
-**Condition Format**: %variable%
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJsonElementCount`](#)   | @`JSONPath`       |  %var%     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`storeJsonElementCount`](#)   | **Sheet:Column** containing `JSONPath`  |%var%| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`storeJsonElementCount`](#)   | %Var% containing `JSONPath` |%var%| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store JSON Element count in variable ", input = InputType.YES, condition = InputType.YES)
-        public void storeJsonElementCount() {
-
-            try {
-                String variableName = Condition;
-                Condition = Data;
-
-                if (variableName.matches("%.*%")) {
-                    try {
-                        System.out.println("Updating value in SubIteration " + userData.getSubIteration());
-                        int actualObjectCountInteger = 1;                                                       //getJsonElementCount();
-                        String actualObjectCount = Integer.toString(actualObjectCountInteger);
-                        addVar(variableName, actualObjectCount);
-                        Report.updateTestLog(Action, "Element count [" + actualObjectCount + "] is stored in " + variableName,
-                                Status.DONE);
-                    } catch (Exception ex) {
-                        Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
-                        Report.updateTestLog(Action, "Error Storing JSON element in Variable :" + "\n" + ex.getMessage(),
-                                Status.DEBUG);
-                    }
-                } else {
-                    Report.updateTestLog(Action,
-                            "Given condition [" + Condition + "] format is invalid. It should be [%Var%]",
-                            Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing JSON element in Variable :" + "\n" + ex.getMessage(),
-                        Status.DEBUG);
-            }
-
-        }
-    ```
----------------------------------
-
-## **storeJsonElementCountInDataSheet**
-
-**Description**:  This function is used to store in a datasheet the count of JSON elements for a given JSON Path of REST request.
-
-**Input Format** : @Expected datasheet name:column name
-
-**Condition Format** : JSON Path of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJsonElementCountInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
-
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store JSON Element count in Datasheet ", input = InputType.YES, condition = InputType.YES)
-        public void storeJsonElementCountInDataSheet() {
-
-            try {
-                String strObj = Input;
-                if (strObj.matches(".*:.*")) {
-                    try {
-                        System.out.println("Updating value in SubIteration " + userData.getSubIteration());
-                        String sheetName = strObj.split(":", 2)[0];
-                        String columnName = strObj.split(":", 2)[1];
-                        int actualObjectCountInteger = 1;                                                                         //getJsonElementCount();
-                        String actualObjectCount = Integer.toString(actualObjectCountInteger);
-                        userData.putData(sheetName, columnName, actualObjectCount);
-                        Report.updateTestLog(Action, "Element count [" + actualObjectCount + "] is stored in " + strObj,
-                                Status.DONE);
-                    } catch (Exception ex) {
-                        Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
-                        Report.updateTestLog(Action, "Error Storing JSON element in datasheet :" + "\n" + ex.getMessage(),
-                                Status.DEBUG);
-                    }
-                } else {
-                    Report.updateTestLog(Action,
-                            "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",
-                            Status.DEBUG);
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error Storing JSON element in datasheet :" + "\n" + ex.getMessage(),
-                        Status.DEBUG);
-            }
-
-        }
-    ```
----------------------------------
-
-## **assertJSONelementCount**
-
-**Description**:  This function is used to validate whether the count of JSON elements for a given JSON Path of REST request contains an expected value or not.
-
-**Input Format** : @Expected Value
-
-**Condition Format** : JSON Path of the tag
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`assertJSONelementCount`](#)   | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Webservice     |:green_circle: [`assertJSONelementCount`](#)    | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Webservice     |:green_circle: [`assertJSONelementCount`](#)    | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.WEBSERVICE, desc = "Assert JSON Element Count ", input = InputType.YES, condition = InputType.YES)
-        public void assertJSONelementCount() {
-
-            try {
-                String response = responsebodies.get(key);
-                int actualObjectCount = 0;
-                JSONParser parser = new JSONParser();
-                JSONObject json = (JSONObject) parser.parse(response);
-                try {
-                    Map<String, String> objectMap = JsonPath.read(json, Condition);
-                    actualObjectCount = objectMap.keySet().size();
-                } catch (Exception ex) {
-                    try {
-                        JSONArray objectMap = JsonPath.read(json, Condition);
-                        actualObjectCount = objectMap.size();
-                    } catch (Exception ex1) {
-                        try {
-                            net.minidev.json.JSONArray objectMap = JsonPath.read(json, Condition);
-                            actualObjectCount = objectMap.size();
-                        } catch (Exception ex2) {
-                            String objectMap = JsonPath.read(json, Condition);
-                            actualObjectCount = 1;
-                        }
-                    }
-                }
-
-                int expectedObjectCount = Integer.parseInt(Data);
-                if (actualObjectCount == expectedObjectCount) {
-                    Report.updateTestLog(Action, "Element count [" + expectedObjectCount + "] is as expected", Status.PASSNS);
-                } else {
-                    Report.updateTestLog(Action, "Element count is [" + actualObjectCount + "] but is expected to be [" + expectedObjectCount + "]", Status.FAILNS);
-                }
-
-            } catch (Exception ex) {
-                Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-                Report.updateTestLog(Action, "Error in validating JSON element :" + "\n" + ex.getMessage(), Status.DEBUG);
-            }
-        } 
-    ```
-----------------------
-
-
-
-
-

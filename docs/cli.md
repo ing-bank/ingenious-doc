@@ -80,12 +80,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@Smoke"
+    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@Smoke"
+    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 ---------------------- 
@@ -135,17 +135,28 @@ We can use by **`-setEnv`** to override these values too.
 
 For Example: `-setEnv "user.Key1=NewValue1"`
 
+Similarly, if we go to the **project location** and navigate to `Settings\` directory, the `KafkaSSLConfigurations.Properties` holds all the corresponding data that we enter via the UI of the framework.
+
+![kafkasettings](img/cli/4.png "kafkasettings")
+
+We can use by **`-setEnv`** to override these values too.
+
+For Example: `-setEnv "kafkaSSl.Producer_Key_Password=P@ssw0rd"`
+
 For the following settings, **`-setEnv`** can be used as follows :
 
 |Settings|option|
 |--------|-------|
-|Global settings| -setEnv "`exe`.SettingName=Value"|
+|Global Settings| -setEnv "`exe`.SettingName=Value"|
 Run Settings | -setEnv "`run`.SettingName=Value"|
 User Defined Settings | -setEnv "`user`.SettingName=Value"|
+Kafka SSL Configurations | -setEnv "`kafkaSSl`.SettingName=Value"|
 Driver Settings | -setEnv "`driver`.SettingName=Value"|
 Test Management Settings | -setEnv "`tm`.SettingName=Value"|
 Browser Capability Settings | -setEnv "`capability`.`browserName`.SettingName=Value"|
-Browser Context Settings |-setEnv "`context`.SettingName=Value"|
+Browser Context Settings |-setEnv "`context`.`aliasName`.SettingName=Value"|
+Database Settings | -setEnv "'`db`.`aliasName`.SettingName=Value"|
+API Settings | -setEnv "'`api`.`aliasName`.SettingName=Value"|
 
 Examples :
 
@@ -153,10 +164,8 @@ Examples :
 -setEnv "capability.chromium.setheadless=false"` 
 ```
 ```{ .shell .copy }
--setEnv "context.password=Value"
+-setEnv "context.test.password=Value"
 ```
-
-
 
 Multiple settings can be altered via a single command as well :
 

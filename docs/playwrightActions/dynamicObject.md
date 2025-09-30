@@ -2,8 +2,6 @@
 icon: material/atom
 ---
 
-
-
 # Dynamic Object
 
 ----------------------------------
@@ -47,6 +45,19 @@ icon: material/atom
             }
         }
     ```
+
+=== "Example"
+
+    For **standard usage**:
+
+    ![setObjectProperty Example](../img/playwrightActions/dynamicObjExample1.png "setObjectProperty Example")
+
+    For **parameterized usage**:
+
+    ![setObjectProperty Example](../img/playwrightActions/dynamicObjExample2.png "setObjectProperty Example")
+
+    In the example above, part of the locator can be parameterized in the format `#variableName`. *Note: This can also be done for all locators.* In the test steps, use `setObjectProperty`. Input column will have the `datasheet:column` reference or variable reference from where to take the data. Condition column will have the parameterized part `#variableName`. Next test step would be a click or any other action on that object.
+
 ----------------------------------
 
 ## **setglobalObjectProperty**
