@@ -122,6 +122,11 @@ nav:
     - Actions: 
         - General Actions: databaseTesting/dbActions.md
         - Data Storage: databaseTesting/storeActions.md
+ - SAP Testing:
+    - Premise: sapTesting/sap.md
+    - Actions: 
+        - General Actions: sapTesting/sapActions.md
+        - Dynamic Objects: sapTesting/sapdynamicObjects.md
  - Synthetic Data:
     - Premise: syntheticData/index.md
     - Synthetic Data Generation Actions: 
