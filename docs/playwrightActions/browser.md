@@ -217,7 +217,7 @@ icon: octicons/browser-16
 
 ## **setDefaultTimeout**
 
-**Description**: This function is used to **set default timeout (in milliseconds)** for all actions that use the timeout parameter
+**Description**: This function is used to **set default timeout (in milliseconds)** for all actions that use the timeout parameter on the current page
 
 **Input Format** : @timeout in milliseconds
 
