@@ -215,6 +215,37 @@ icon: octicons/browser-16
 
 ----------------------------------------------------
 
+## **setDefaultTimeout**
+
+**Description**: This function is used to **set default timeout (in milliseconds)** for all actions that use the timeout parameter on the current page
+
+**Input Format** : @timeout in milliseconds
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference| |
+    |------------|--------|--------------|-----------|---------|--|
+    | Browser     |:green_circle: [`setDefaultTimeout`](#)  | @value       || |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser     |:green_circle: [`setDefaultTimeout`](#)  | Sheet:Column || |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser     |:green_circle: [`setDefaultTimeout`](#)  | %dynamicVar% || |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.BROWSER, desc = "Set Default Timeout (in milliseconds)", input = InputType.YES)
+    public void setDefaultTimeout() {
+        if (Data != null && Data.matches("[0-9]+")) {
+            Double timeout = Double.valueOf(Data);
+            Page.setDefaultTimeout(timeout);
+            Report.updateTestLog(Action, "Default timeout changed to [" + Data + "] millisecond/s", Status.DONE);
+        } else {
+            Report.updateTestLog(Action, "Couldn't change default timeout (invalid input) " + Data, Status.DEBUG);            
+        }
+    }
+    ```   
+
+----------------------------------------------------
+
 ## **RecordFromHere**
 
 **Description**:  This function will start `recording` from the current page.
@@ -239,4 +270,3 @@ icon: octicons/browser-16
             }
         }
     ```
-----------------------------------
