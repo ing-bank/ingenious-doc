@@ -80,6 +80,37 @@ icon: material/cellphone
     ```
 ----------------------
 
+## **goToHomescreen**
+
+**Description**: This function navigates the user to the homescreen.
+
+=== "Usage"
+
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | Mobile |:green_circle: [`goToHomescreen`](#)|                             |           |         |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.MOBILE, desc = "Go to homescreen")
+    public void home() {
+        try {
+            if (mDriver instanceof AndroidDriver) {
+                ((AndroidDriver) mDriver).executeScript("mobile: pressButton", Map.of("name", "home"));
+            } else if (mDriver instanceof IOSDriver) {
+                ((IOSDriver) mDriver).executeScript("mobile: pressButton", Map.of("name", "home"));
+
+            }
+            Report.updateTestLog(Action, "Performed Homescreen Operation", Status.DONE);
+        } catch (Exception e) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, e);
+            Report.updateTestLog(Action, "Unable to perform Homescreen operation, Error: " + e.getMessage(), Status.FAIL);
+        }
+    }
+    ```
+----------------------
+
 ## **hideKeyboard**
 
 **Description**: This function is used to hide the keyboard.
@@ -705,4 +736,3 @@ icon: material/cellphone
     ```
 
 ---------------------------------
-
