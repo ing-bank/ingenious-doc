@@ -199,3 +199,51 @@
         }   
 
     ```
+
+       ----------------------
+
+## **executeStoredProcedureQuery()**
+
+**Description**:  This query will execute an PL/SQL stored procedure call provided in the Data field on  database and will commit the results back to the database
+
+**Input Format** : @`Stored Procedure Call`
+
+=== "Usage"
+
+    | ObjectName | Action | Input                                                     | Condition    |
+    |------------|-----------------------------------------------------------|--------------|---|
+    | Database   | :green_circle: [`executeStoredProcedureQuery`](#) |```@Begin  addemployee29; end; ``` |              |
+    | Database	 | :green_circle: [`executeStoredProcedureQuery`](#) |Sheet:Column                                              |          	|  
+    | Database   | :green_circle: [`executeStoredProcedureQuery`](#) |%dynamicVar%                                              |              |
+
+=== "Corresponding Code"
+
+    ```java
+   @Action(object = ObjectType.DATABASE, desc = "Execute the StoredProcedure Query in [<Input>]", input = InputType.YES)
+    public void executeStoredProcedureQuery() {
+        try {
+            // Validate that Data contains only a single stored procedure call
+            String trimmedData = (Data != null) ? Data.trim() : "";
+            // Simple check: should not contain multiple 'begin' or 'end' or multiple semicolons
+            int beginCount = trimmedData.toLowerCase().split("begin", -1).length - 1;
+            int endCount = trimmedData.toLowerCase().split("end", -1).length - 1;
+            int semicolonCount = trimmedData.length() - trimmedData.replace(";", "").length();
+
+            if (beginCount > 1 || endCount > 1 || semicolonCount > 1) {
+                Report.updateTestLog(Action, "Invalid stored procedure input: Only a single stored procedure call is allowed. Input: " + Data,                  Status.FAILNS);
+                return;
+            }
+
+            if (executeStoredProcedure()) {
+                Report.updateTestLog(Action, "StoredProcedure operation successful using: " + Data, Status.PASSNS);
+            } else {
+                Report.updateTestLog(Action, "StoredProcedure operation failed using: " + Data, Status.FAILNS);
+            }
+        } catch (SQLException ex) {
+            Report.updateTestLog(Action, "Error executing the StoredProcedure Query: " + ex.getMessage(),
+                    Status.FAILNS);
+        }
+    }
+
+    ```
+           ----------------------
