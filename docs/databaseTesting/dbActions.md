@@ -200,7 +200,7 @@
 
     ```
 
-       ----------------------
+----------------------
 
 ## **executeStoredProcedureQuery()**
 
@@ -218,7 +218,7 @@
 
 === "Corresponding Code"
 
-    ```java
+```java
    @Action(object = ObjectType.DATABASE, desc = "Execute the StoredProcedure Query in [<Input>]", input = InputType.YES)
       public void executeStoredProcedureQuery() {
         try {
@@ -227,7 +227,7 @@
             int endCount = trimmedData.toLowerCase().split("end", -1).length - 1;
             int semicolonCount = trimmedData.length() - trimmedData.replace(";", "").length();
             if (beginCount > 1 || endCount > 1 || semicolonCount > 1) {
-                Report.updateTestLog(Action, "Invalid stored procedure input: Only a single stored procedure call is allowed. Input: " + Data,                  Status.FAILNS);
+                Report.updateTestLog(Action, "Invalid stored procedure input: Only a single stored procedure call is allowed.                    Input: " + Data, Status.FAILNS);
                 return;
             }
             if (executeStoredProcedure()) {
@@ -241,8 +241,8 @@
         }
     }
 
-    ```
-           ----------------------
+```
+----------------------
 ## **assertDBResultContains**
 
 **Description**: This function will assert if the SQL result contains/partial text match expected data after the execution of a SQL select statement.
