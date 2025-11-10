@@ -403,3 +403,205 @@
 
 ```
 ----------------------
+
+## **assertDBXMLelementlistEqual**
+
+**Description**: This function will assert the actual  XML elements extracted via XPath expressions are exactly equal to the expected values. 
+
+**Input Format** : @ExpectedValue - A semicolon-separated list of expected XML element values.
+
+**Condition** : Actual Value of the DB column  which is actual result .A semicolon-separated list of XPath expressions to extract multiple XML element values.
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | Database     |:green_circle: [`assertDBXMLelementlistEqual`](#)   | @Data       | %ActualValueVariableName% or ActualValue | |<span style="color:Green"><< *Hardcoded Input*</span> 
+    | Database     |:green_circle: [`assertDBXMLelementlistEqual`](#)   | DatasheetName:ColumnName | %ActualValueVariableName% or ActualValue | |<span style="color:Blue"><< *Input from Datasheet*</span>
+    | Database     |:green_circle: [`assertDBXMLelementlistEqual`](#)   | %variableName% | %ActualValueVariableName% or ActualValue | |<span style="color:Brown"><<*Input from variable*</span>
+
+=== "Corresponding Code"
+
+```java
+  @Action(object = ObjectType.DATABASE, desc = "Assert DB XML Element List Equal", input = InputType.YES, condition = InputType.YES)
+    public void assertDBXMLelementlistEqual() {
+        try {
+            boolean ignoreCase = true; 
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            InputSource inputSource = new InputSource(new StringReader(replybodies.get(key)));
+            Document doc = dBuilder.parse(inputSource);
+            doc.getDocumentElement().normalize();
+            XPath xPath = XPathFactory.newInstance().newXPath();
+            String resolvedCondition = (Condition.startsWith("%") && Condition.endsWith("%"))
+                    ? getVar(Condition)
+                    : Condition;
+            List<String> xpathExpressions = Arrays.asList(resolvedCondition.split("\\s*;\\s*"));
+            List<String> expectedValues = Arrays.asList(Data.split("\\s*;\\s*"));
+            boolean allMatch = true;
+            int minLength = Math.min(xpathExpressions.size(), expectedValues.size());
+            for (int i = 0; i < minLength; i++) {
+                String expression = xpathExpressions.get(i);
+                String expectedValue = expectedValues.get(i);
+                try {
+                    Node node = (Node) xPath.compile(expression).evaluate(doc, XPathConstants.NODE);
+                    String actualValue = (node != null) ? node.getTextContent().trim() : null;
+                    boolean match = ignoreCase
+                            ? expectedValue.equalsIgnoreCase(actualValue)
+                            : expectedValue.equals(
+                            actualValue);
+                    if (!match) {
+                        Report.updateTestLog(Action, "XPath [" + expression + "] → actual [" + actualValue + "] ≠ expected [" + expectedValue +                         "]", Status.FAILNS);
+                        allMatch = false;
+                    } else {
+                        Report.updateTestLog(Action, "XPath [" + expression + "] → actual [" + actualValue + "] matches expected [" +                                    expectedValue + "]", Status.PASSNS);
+                    }
+                } catch (XPathExpressionException e) {
+                    Report.updateTestLog(Action, "Invalid XPath expression: " + expression + "\n" + e.getMessage(), Status.FAILNS);
+                    allMatch = false;
+                }
+            }
+            if (xpathExpressions.size() != expectedValues.size()) {
+                Report.updateTestLog(Action, "Mismatch in number of XPath expressions and expected values. XPath count: " +                                     xpathExpressions.size() + ", Expected count: " + expectedValues.size(), Status.FAILNS);
+            }
+
+        } catch (IOException | ParserConfigurationException | SAXException | DOMException ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            Report.updateTestLog(Action, "Error validating DB XML element List:\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+
+```
+----------------------
+
+## **assertDBXMLelementlistContains**
+
+**Description**: This function will assert the actual  XML elements extracted via XPath expressions contains( partial text) to the expected values. 
+
+**Input Format** : @ExpectedValue - A semicolon-separated list of expected XML element values.
+
+**Condition** : Actual Value of the DB column  which is actual result .A semicolon-separated list of XPath expressions to extract multiple XML element values.
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | Database     |:green_circle: [`assertDBXMLelementlistContains`](#)   | @Data       | %ActualValueVariableName% or ActualValue | |<span style="color:Green"><< *Hardcoded Input*</span> 
+    | Database     |:green_circle: [`assertDBXMLelementlistContains`](#)   | DatasheetName:ColumnName | %ActualValueVariableName% or ActualValue | |<span style="color:Blue"><< *Input from Datasheet*</span>
+    | Database     |:green_circle: [`assertDBXMLelementlistContains`](#)   | %variableName% | %ActualValueVariableName% or ActualValue | |<span style="color:Brown"><<*Input from variable*</span>
+
+=== "Corresponding Code"
+
+```java
+ @Action(object = ObjectType.DATABASE, desc = "Assert DB XML Element List Contains", input = InputType.YES, condition = InputType.YES)
+    public void assertDBXMLelementlistContains() {
+        try {
+            boolean ignoreCase = true;
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            InputSource inputSource = new InputSource(new StringReader(replybodies.get(key)));
+            Document doc = dBuilder.parse(inputSource);
+            doc.getDocumentElement().normalize();
+            XPath xPath = XPathFactory.newInstance().newXPath();
+            String resolvedCondition = (Condition.startsWith("%") && Condition.endsWith("%"))
+                    ? getVar(Condition)
+                    : Condition;
+            List<String> xpathExpressions = Arrays.asList(resolvedCondition.split("\\s*;\\s*"));
+            List<String> expectedValues = Arrays.asList(Data.split("\\s*;\\s*"));
+            boolean allMatch = true;
+            int minLength = Math.min(xpathExpressions.size(), expectedValues.size());
+            for (int i = 0; i < minLength; i++) {
+                String expression = xpathExpressions.get(i);
+                String expectedValue = expectedValues.get(i);
+                try {
+                    Node node = (Node) xPath.compile(expression).evaluate(doc, XPathConstants.NODE);
+                    String actualValue = (node != null) ? node.getTextContent().trim() : null;
+                    boolean match = ignoreCase
+                            ? actualValue != null && actualValue.toLowerCase().contains(expectedValue.toLowerCase())
+                            : actualValue != null && actualValue.contains(expectedValue);
+                    if (!match) {
+                        Report.updateTestLog(Action, "XPath [" + expression + "] → actual [" + actualValue + "] does not contain expected [" +                          expectedValue + "]", Status.FAILNS);
+                        allMatch = false;
+                    } else {
+                        Report.updateTestLog(Action, "XPath [" + expression + "] → actual [" + actualValue + "] contains expected [" +                                  expectedValue + "]", Status.PASSNS);
+                    }
+                } catch (XPathExpressionException e) {
+                    Report.updateTestLog(Action, "Invalid XPath expression: " + expression + "\n" + e.getMessage(), Status.FAILNS);
+                    allMatch = false;
+                }
+            }
+            if (xpathExpressions.size() != expectedValues.size()) {
+                Report.updateTestLog(Action, "Mismatch in number of XPath expressions and expected values. XPath count: " +
+                xpathExpressions.size() + ", Expected count: " + expectedValues.size(), Status.FAILNS);
+            }
+
+        } catch (IOException | ParserConfigurationException | SAXException | DOMException ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            Report.updateTestLog(Action, "Error validating DB XML element List:\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+```
+----------------------
+
+## **assertDBXMLTagorElementPresence**
+
+**Description**: This function will assert the the presence or absence of an XML tag or element in the stored XML reply.
+
+**Input Format** : @ExpectedValue -Data should be 'true' or 'false' (case-insensitive) indicating expected presence or absence.
+
+**Condition** : Actual Value of the DB column  which is actual result .The XML tag name or XPath expression to check for presence or abscence.
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | Database     |:green_circle: [`assertDBXMLTagorElementPresence`](#)   | @Data- @True/@False       | %ActualValueVariableName% or ActualValue | |<span style="color:Green"><< *Hardcoded Input*</span> 
+    | Database     |:green_circle: [`assertDBXMLTagorElementPresence`](#)   | DatasheetName:ColumnName | %ActualValueVariableName% or ActualValue | |<span style="color:Blue"><< *Input from Datasheet*</span>
+  
+=== "Corresponding Code"
+
+```java
+ @Action(object = ObjectType.DATABASE, desc = "Assert DB XML Tag or Element Presence", input = InputType.YES, condition = InputType.YES)
+    public void assertDBXMLTagorElementPresence() {
+        try {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder;
+            InputSource inputSource = new InputSource();
+            inputSource.setCharacterStream(new StringReader(replybodies.get(key)));
+            dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(inputSource);
+            doc.getDocumentElement().normalize();
+            XPath xPath = XPathFactory.newInstance().newXPath();
+            String expression;
+            if (Condition != null && (Condition.startsWith("%") || Condition.endsWith("%"))) {
+                expression = getVar(Condition);
+            } else {
+                expression = Condition;
+            }
+            NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
+            String trimmedData = Data.trim();
+            if (!trimmedData.equalsIgnoreCase("true") && !trimmedData.equalsIgnoreCase("false")) {
+                throw new IllegalArgumentException("Data must be 'true' or 'false' (case-insensitive), but was: " + Data);
+            }
+            boolean expectTagOrElementPresent = Boolean.parseBoolean(trimmedData);
+            String checkType = (expression.matches("^(/\\w+)+$") && !expression.contains("[")) ? "XML Tag" : "XML Element";
+            if (expectTagOrElementPresent) {
+                if (nodeList.getLength() > 0) {
+                    Report.updateTestLog(Action, checkType + " is present as expected (XPath: " + expression + ")", Status.PASSNS);
+                } else {
+                    Report.updateTestLog(Action, checkType + " is missing but was expected (XPath: " + expression + ")", Status.FAILNS);
+                }
+            } else {
+                if (nodeList.getLength() == 0) {
+                    Report.updateTestLog(Action, checkType + " is not present as expected (XPath: " + expression + ")", Status.PASSNS);
+                } else {
+                    Report.updateTestLog(Action, checkType + " is present but should not be (XPath: " + expression + ")", Status.FAILNS);
+                }
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            Report.updateTestLog(Action, "Error validating DB XML tag/element presence: " + ex.getMessage(), Status.DEBUG);
+        }
+    }
+```
+----------------------
