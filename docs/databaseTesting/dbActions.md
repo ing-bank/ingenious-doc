@@ -261,7 +261,7 @@
 
 === "Corresponding Code"
 
-    ```java
+```java
    @Action(object = ObjectType.DATABASE, desc = "Assert the value [<Input>] contains in the column [<Condition>] ", input = InputType.YES, condition = InputType.YES)
     public void assertDBResultContains() {
         if (Data == null || Data.trim().isEmpty()) {
@@ -275,9 +275,9 @@
         }
     }
 
-    ```
+```
 
-     ----------------------
+----------------------
 ## **assertDBDataNotNull**
 
 **Description**: This function will assert if the SQL result is not null or empty  after the execution of a SQL select statement.
@@ -296,7 +296,7 @@
 
 === "Corresponding Code"
 
-    ```java
+```java
   @Action(object = ObjectType.DATABASE, desc = "Assert DB Data Data Not Null ", input = InputType.YES)
     public void assertDBDataNotNull() {
         try {
@@ -313,8 +313,8 @@
         }
     }
 
-    ```
-               ----------------------
+```
+----------------------
 ## **assertDBDataStartsWith**
 
 **Description**: This function will assert if the SQL result matches the startswith/prefix Data after the execution of a SQL select statement.
@@ -333,7 +333,7 @@
 
 === "Corresponding Code"
 
-    ```java
+```java
    @Action(object = ObjectType.DATABASE, desc = "Assert DB Data Starts With ", input = InputType.YES, condition = InputType.YES)
     public void assertDBDataStartsWith() {
         try {
@@ -357,8 +357,8 @@
         }
     }
 
-    ```
-                   ----------------------
+ ```
+ ----------------------
 ## **assertDBDataPattern**
 
 **Description**: This function will assert if the SQL result matches the pattern/regular expression after the execution of a SQL select statement.
@@ -377,7 +377,7 @@
 
 === "Corresponding Code"
 
-    ```java
+```java
    @Action(object = ObjectType.DATABASE, desc = "Assert DB Data Pattern ", input = InputType.YES, condition = InputType.YES)
     public void assertDBDataPattern() {
         try {
@@ -401,4 +401,5 @@
         }
     }
 
-    ```
+```
+----------------------
