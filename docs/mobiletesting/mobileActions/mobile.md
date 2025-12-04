@@ -97,7 +97,7 @@ icon: material/cellphone
     public void goToHomescreen() {
         try {
             if (mDriver instanceof AndroidDriver) {
-                ((AndroidDriver) mDriver).executeScript("mobile: pressButton", Map.of("name", "home"));
+                ((AndroidDriver) mDriver).executeScript("mobile: pressKey", Map.of("keycode", 3));
             } else if (mDriver instanceof IOSDriver) {
                 ((IOSDriver) mDriver).executeScript("mobile: pressButton", Map.of("name", "home"));
             }
