@@ -6,7 +6,7 @@
 !!! abstract "Key Benefits:"
     * **Centralized element management** – All web objects live in one organized repository.
     * **Reduced duplication** – Reuse element definitions across test suites and frameworks.
-    * **Maintainability** – Update a selector once and apply the change everywhere.
+    * **Improved maintainability** – Update a selector once and apply the change everywhere.
     * **Consistent naming and structure** – Standardized element definitions promote cleaner automation design.
 
 ## Object Repository Structure
