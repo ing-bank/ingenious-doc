@@ -97,3 +97,5 @@ There are two types of Web OR that you may use:
 * To view all test cases that reference an Object, use the `Get Impacted Cases` option. This feature is available for both Project and Shared repositories.
 
     ![ExampleImpactedTC](../img/webOR/ExampleImpactedTC.png "ExampleImpactedTC")
+
+    *Suggestion: Before renaming or deleting an object, please use the `Get Impacted Cases` option for checking.*
