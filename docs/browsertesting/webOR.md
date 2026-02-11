@@ -15,16 +15,16 @@ Object repository follows the structure below:
 
     ```
     ├── ProjectName
-    │   └── PageName1
-    │       └── ObjectName1
+    │   ├── PageName1
+    │   │   └── ObjectName1
     │   └── PageName2
-    │       └── ObjectName1
+    │       ├── ObjectName1
     │       └── ObjectName2
     ```
 
 * A single project can include multiple Pages, and each Page can hold multiple Objects.
-* Page name must be unique within the project.
-* Object name must be unique within its page. 
+* Page names must be unique within the project.
+* Object names must be unique within their respective page. 
 * An object consists of the following attributes that define how it can be identified and interacted with:
 
     | **Attribute**      | **Description** | **Example Value** |
@@ -60,11 +60,11 @@ There are two types of Web OR that you may use:
 
 * **Shared Web OR**
 
-    Contains objects that **can be used across different projects** and managed from the `Shared` tab within the OR panel.
+    Contains objects that **can be used across different projects** and are managed from the `Shared` tab within the OR panel.
 
     ![ExampleSharedWebOR](../img/webOR/SharedWebOR.png "ExampleSharedWebOR")
     
-    A `SharedOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from the `Project` into `Shared`. Like `OR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedWebObjects\` directory.
+    A `SharedOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from `Project` to `Shared`. Like `OR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedWebObjects\` directory.
 
     ![SharedOR.object](../img/webOR/SharedORObject.png "SharedOR.object")
 
