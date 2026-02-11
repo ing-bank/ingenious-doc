@@ -79,6 +79,7 @@ nav:
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
+    - Web Objects Repository: browsertesting/webOR.md
  - Mobile App Testing:
     - Premise: mobiletesting/index.md
     - Base Setup: mobiletesting/basesetup.md
