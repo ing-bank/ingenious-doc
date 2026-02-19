@@ -380,7 +380,15 @@
 === "Corresponding Code"
 
     ```java
+<<<<<<< HEAD
+<<<<<<< HEAD
         @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+=======
+    @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
+=======
+        @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+>>>>>>> cbdb879 (update code tab (#36))
         public void storeResponseCookiesInVariable() {
             try {
                 String cookieKey = Data;
@@ -391,6 +399,8 @@
                     return;
                 }
                 
+<<<<<<< HEAD
+<<<<<<< HEAD
                 variableName = variableName.substring(1, variableName.length() - 1);
 
                 if (!response.containsKey(key) && response.get(key) == null) {
@@ -431,6 +441,54 @@
                         return; // early exit on success
                     }
                 }
+=======
+                String cookieValue = null;
+=======
+>>>>>>> cbdb879 (update code tab (#36))
+                variableName = variableName.substring(1, variableName.length() - 1);
+
+                if (!response.containsKey(key) && response.get(key) == null) {
+                    Report.updateTestLog(Action, "Response did not contain a valid HttpResponse for key [" + key + "]", Status.FAIL);
+                    return;
+                }
+
+<<<<<<< HEAD
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
+=======
+                HttpResponse<?> httpResponse = response.get(key);
+                HttpHeaders responseHeaders = httpResponse.headers();
+
+                List<String> cookieHeaders = !responseHeaders.allValues("set-cookie").isEmpty() ? responseHeaders.allValues("set-cookie") : responseHeaders.allValues("Set-Cookie");
+                
+                if (cookieHeaders.isEmpty()) {
+                    Report.updateTestLog(Action, "No cookies were retrieved from the endpoint", Status.FAIL);
+                    return;
+                }
+
+                for (String cookieHeader : cookieHeaders) {
+                    if (cookieHeader == null || cookieHeader.isEmpty()) continue;
+
+                    String[] cookieParts = cookieHeader.split(";");
+                    if (cookieParts.length == 0) continue;
+
+                    String[] keyValue = cookieParts[0].trim().split("=", 2);
+                    if (keyValue.length != 2) continue;
+
+                    String cookieName  = keyValue[0].trim();
+                    String cookieValue = keyValue[1].trim();
+
+                    if (cookieName.equals(cookieKey)) {
+                        addVar(variableName, cookieValue);
+                        Report.updateTestLog(
+                            Action,
+                            "Cookies with name [" + cookieKey + "] has been added in variable [" 
+                                + variableName + "] with value [" + cookieValue + "] ",
+                            Status.DONE
+                        );
+                        return; // early exit on success
+                    }
+                }
+>>>>>>> cbdb879 (update code tab (#36))
             } catch (Exception ex) {
                 Report.updateTestLog(Action, "Error in storing cookies with name in variable :"+ex.getMessage(), Status.FAIL);
                 ex.printStackTrace();
@@ -438,6 +496,10 @@
         }
     ```
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 248ba69 (Add store and assert response header actions (#34))
 ----------------------
 
 ## **storeHeaderByNameInVariable**
@@ -567,4 +629,11 @@
         }
     }
     ```
+<<<<<<< HEAD
 ---------------------------------
+=======
+----------------------
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
+=======
+---------------------------------
+>>>>>>> 248ba69 (Add store and assert response header actions (#34))
