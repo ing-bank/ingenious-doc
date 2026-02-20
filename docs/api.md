@@ -22,6 +22,21 @@
 
         ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
 
+??? note "API Configurations"
+
+    ### API Configurations
+
+    The following properties can be set while creating an API Configuration:
+
+    |<div style="width:250px">Property</div>     |Description|
+    |-------------|---------------|
+    |`api.alias`|The alias name for this API configuration. Used to reference the config in a test using #aliasName.|
+    |`httpClientRedirect`|Specifies how HTTP redirects are handled by the internal HTTP client. Allowed values are NEVER, NORMAL, ALWAYS. Default value is NEVER.|
+    |`useProxy`|Controls whether API requests should be routed through a proxy server.|
+    |`proxyHost`|Hostname (or IP) of the proxy server if useProxy = true.|
+    |`proxyPort`|Port number used when a proxy server is enabled. Only applies if useProxy = true.|
+    |`sslCertificateVerification`|Enables or disables SSL certificate verification.|
+
 -----------------------------------        
 
 ## Create New API Configuration
