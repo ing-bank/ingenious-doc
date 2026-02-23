@@ -6,7 +6,7 @@
 !!! abstract "Key Benefits:"
     * **Centralized element management** – All web objects live in one organized repository.
     * **Reduced duplication** – Reuse element definitions across test suites and frameworks.
-    * **Improved maintainability** – Update a selector once and apply the change everywhere.
+    * **Maintainability** – Update a selector once and apply the change everywhere.
     * **Consistent naming and structure** – Standardized element definitions promote cleaner automation design.
 
 ## Object Repository Structure
@@ -94,7 +94,7 @@ There are two types of Web OR that you may use:
 
 * Pages and Objects in both the Project and Shared repositories can be deleted using the `Delete Page` or `Delete Object` options. However, once deleted, any existing test steps that previously referenced an SWO or PWO will still attempt to use the removed Page or Object, which may result in errors during test execution.
 
-* To view all test cases that reference an Object, use the `Get Impacted Cases` option. This feature is available for both Project and Shared repositories.
+* To view all test cases that reference an Object within the project, use the `Get Impacted Cases` option. This feature is available for both Project and Shared repositories.
 
     ![ExampleImpactedTC](../img/webOR/ExampleImpactedTC.png "ExampleImpactedTC")
 
