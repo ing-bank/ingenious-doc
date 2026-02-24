@@ -362,3 +362,66 @@
         }
     ```
 ---------------------------------
+
+## **storeResponseCookiesInVariable**
+
+**Description**: This function is used to extract a specific cookie value from the HTTP response headers and store it in a variable.
+
+**Input Format**: @Expected CookieName
+
+**Condition Format**: %VariableName%
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`storeResponseCookiesInVariable`](#)  | @CookieName      |  %VariableName%     | |<span style="color:#349651">:arrow_left:   *Store cookie value in variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+        public void storeResponseCookiesInVariable() {
+            try {
+                String cookieKey = Data;
+                String variableName = Condition;
+                
+                if (!variableName.matches("%.*%")) {
+                    Report.updateTestLog(Action, "Variable format is not correct. Should be %variableName%", Status.DEBUG);
+                    return;
+                }
+                
+                String cookieValue = null;
+                variableName = variableName.substring(1, variableName.length() - 1);
+
+                if (response.containsKey(key) && response.get(key) != null) {
+                    java.net.http.HttpResponse<?> httpResponse = response.get(key);
+                    java.net.http.HttpHeaders responseHeaders = httpResponse.headers();
+
+                    List<String> cookieHeaders = !responseHeaders.allValues("set-cookie").isEmpty() ? responseHeaders.allValues("set-cookie") : responseHeaders.allValues("Set-Cookie");
+                    
+                    if (!cookieHeaders.isEmpty()) {
+                        for (String cookieHeader : cookieHeaders) {
+                            String[] cookieParts = cookieHeader.split(";");
+                            if (cookieParts.length > 0) {
+                                String[] keyValue = cookieParts[0].trim().split("=", 2);
+                                if (keyValue.length == 2 && keyValue[0].trim().equals(cookieKey)) {
+                                    cookieValue = keyValue[1].trim();
+                                    addVar(variableName, cookieValue);
+                                    Report.updateTestLog(Action, "Cookies with name ["+cookieKey+"] has been added in variable ["+variableName+"] with value ["+cookieValue+"] ", Status.DONE);
+                                    break;
+                                }
+                            }
+                        }
+                    } else Report.updateTestLog(Action, "No cookies were retrieved from the endpoint", Status.FAIL);
+                        
+                }
+
+            } catch (Exception ex) {
+                Report.updateTestLog(Action, "Error in storing cookies with name in variable :"+ex.getMessage(), Status.FAIL);
+                ex.printStackTrace();
+            }
+        }
+    ```
+
+----------------------
