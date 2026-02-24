@@ -487,7 +487,7 @@
 
 ## **storeHeaderByNameInDatasheet**
 
-**Description**:  This function is used to store a specific header value from the REST/SOAP response, into a respective column of a given datasheet.
+**Description**: This function is used to store a specific header value from the REST/SOAP response, into a respective column of a given datasheet.
 
 **Input Format** : @Expected datasheet name:column name
 

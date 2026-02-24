@@ -310,7 +310,7 @@
 
 ## **assertHeaderValueContains**
 
-**Description**:  This function is used to validate whether a specific header value from the REST/SOAP response contains an expected text or not.
+**Description**: This function is used to validate whether a specific header value from the REST/SOAP response contains an expected text or not.
 
 **Input Format** : @Expected Text
 
@@ -366,7 +366,7 @@
 
 ## **assertHeaderValueEquals**
 
-**Description**:  This function is used to validate whether a specific header value from the REST/SOAP response exactly equals an expected text or not.
+**Description**: This function is used to validate whether a specific header value from the REST/SOAP response exactly equals an expected text or not.
 
 **Input Format** : @Expected Text
 
