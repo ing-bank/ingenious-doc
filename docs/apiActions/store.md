@@ -380,7 +380,11 @@
 === "Corresponding Code"
 
     ```java
+<<<<<<< HEAD
         @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+=======
+    @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
         public void storeResponseCookiesInVariable() {
             try {
                 String cookieKey = Data;
@@ -391,6 +395,7 @@
                     return;
                 }
                 
+<<<<<<< HEAD
                 variableName = variableName.substring(1, variableName.length() - 1);
 
                 if (!response.containsKey(key) && response.get(key) == null) {
@@ -431,6 +436,34 @@
                         return; // early exit on success
                     }
                 }
+=======
+                String cookieValue = null;
+                variableName = variableName.substring(1, variableName.length() - 1);
+
+                if (response.containsKey(key) && response.get(key) != null) {
+                    java.net.http.HttpResponse<?> httpResponse = response.get(key);
+                    java.net.http.HttpHeaders responseHeaders = httpResponse.headers();
+
+                    List<String> cookieHeaders = !responseHeaders.allValues("set-cookie").isEmpty() ? responseHeaders.allValues("set-cookie") : responseHeaders.allValues("Set-Cookie");
+                    
+                    if (!cookieHeaders.isEmpty()) {
+                        for (String cookieHeader : cookieHeaders) {
+                            String[] cookieParts = cookieHeader.split(";");
+                            if (cookieParts.length > 0) {
+                                String[] keyValue = cookieParts[0].trim().split("=", 2);
+                                if (keyValue.length == 2 && keyValue[0].trim().equals(cookieKey)) {
+                                    cookieValue = keyValue[1].trim();
+                                    addVar(variableName, cookieValue);
+                                    Report.updateTestLog(Action, "Cookies with name ["+cookieKey+"] has been added in variable ["+variableName+"] with value ["+cookieValue+"] ", Status.DONE);
+                                    break;
+                                }
+                            }
+                        }
+                    } else Report.updateTestLog(Action, "No cookies were retrieved from the endpoint", Status.FAIL);
+                        
+                }
+
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
             } catch (Exception ex) {
                 Report.updateTestLog(Action, "Error in storing cookies with name in variable :"+ex.getMessage(), Status.FAIL);
                 ex.printStackTrace();
@@ -438,6 +471,7 @@
         }
     ```
 
+<<<<<<< HEAD
 ----------------------
 
 ## **storeHeaderByNameInVariable**
@@ -568,3 +602,6 @@
     }
     ```
 ---------------------------------
+=======
+----------------------
+>>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
