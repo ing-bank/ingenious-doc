@@ -34,7 +34,6 @@
 
 -------------------------------------
 
-
 ## Setup SSL certificates
 
 If Key Store Certificates are required, you may set it up by clicking on the **gear icon** :gear: to open up the **Run Settings** :material-arrow-right: **Kakfa ssl Configurations**
@@ -53,6 +52,18 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
 -------------------------------------
 
+## Schema Registry over SSL
+
+When `Schema Registry` is enabled and secured via SSL/TLS, the following configuration parameters are required to ensure encrypted communication and mutual authentication between clients and the Schema Registry service. You may set it up by clicking on the **gear icon** :gear: to open up the **Run Settings** :material-arrow-right: **Kakfa ssl Configurations**
+
+* **Schema_Registry_Truststore_Location** - Specifies the file path to the truststore used by the client.
+The truststore contains trusted Certificate Authority (CA) certificates that validate the SSL certificate presented by the Schema Registry server.
+* **Schema_Registry_Truststore_Password** - The password protecting the truststore file. This allows the application to access the CA certificates stored in the truststore.
+* **Schema_Registry_Keystore_Location** - Specifies the file path to the keystore used by the client. The keystore contains the client's private key and SSL certificate, required for mutual TLS authentication (mTLS) if enabled.
+* **Schema_Registry_Keystore_Password** - The password used to unlock the keystore file. It allows the application to read the client certificate and private key needed for SSL handshaking.
+* **Schema_Registry_Key_Password** - The password for the private key inside the keystore. This is required when the private key within the keystore has its own separate password (which is common in secure deployments).
+
+-------------------------------------
 
 ## Payload Data Parameterization
 
@@ -67,7 +78,6 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
  ![editor](../img/kafka/editor.gif "editor")
  
-
  -------------------------------------
 
 ## Assert/Store Response Tags
