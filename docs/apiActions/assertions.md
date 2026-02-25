@@ -307,3 +307,115 @@
         } 
     ```
 ----------------------
+
+## **assertHeaderValueContains**
+
+**Description**: This function is used to validate whether a specific header value from the REST/SOAP response contains an expected text or not.
+
+**Input Format** : @Expected Text
+
+**Condition Format** : Header Name
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`assertHeaderValueContains`](#)   | @value       |  Header Name     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Assert header", input = InputType.YES, condition = InputType.YES)
+    public void assertHeaderValueContains() {
+        try {
+            String headerName = Condition; // e.g., "Content-Type"
+
+            // First, populate maps for this scenario/test case
+            storeAllHeadersInMap();
+
+            // Check if headers exist for this key
+            if (!headerKeyValueMap.containsKey(key) || headerKeyValueMap.get(key).isEmpty()) {
+                Report.updateTestLog(Action, "No headers found for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.FAILNS);
+                return;
+            }
+
+            // Get headers for this scenario
+            Map<String, String> currentHeaders = headerKeyValueMap.get(key);
+
+            // Check if requested header exists
+            if (!currentHeaders.containsKey(headerName)) {
+                Report.updateTestLog(Action, "Header '" + headerName + "' does not exist in available headers.", Status.FAILNS);
+                return;
+            } 
+                
+            String headerValue = headerKeyValueMap.get(key).get(headerName);
+            if (headerValue.contains(Data)) {
+                Report.updateTestLog(Action, "Header value [" + headerValue + "] contains expected text [" + Data + "]", Status.PASSNS);
+            } else {
+                Report.updateTestLog(Action, "Header value [" + headerValue + "] does not contain expected text [" + Data + "]", Status.FAILNS);
+            }
+            
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Error to assert header value : " + ex.getMessage(), Status.FAILNS);
+        }
+    }
+    ```
+
+-----------------------------
+
+## **assertHeaderValueEquals**
+
+**Description**: This function is used to validate whether a specific header value from the REST/SOAP response exactly equals an expected text or not.
+
+**Input Format** : @Expected Text
+
+**Condition Format** : Header Name
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`assertHeaderValueEquals`](#)   | @value       |  Header Name     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Assert header", input = InputType.YES, condition = InputType.YES)
+    public void assertHeaderValueEquals() {
+        try {
+            String headerName = Condition; // e.g., "Content-Type"
+
+            // First, populate maps for this scenario/test case
+            storeAllHeadersInMap();
+
+            // Check if headers exist for this key
+            if (!headerKeyValueMap.containsKey(key) || headerKeyValueMap.get(key).isEmpty()) {
+                Report.updateTestLog(Action, "No headers found for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.FAILNS);
+                return;
+            }
+
+            // Get headers for this scenario
+            Map<String, String> currentHeaders = headerKeyValueMap.get(key);
+
+            // Check if requested header exists
+            if (!currentHeaders.containsKey(headerName)) {
+                Report.updateTestLog(Action, "Header '" + headerName + "' does not exist in available headers.", Status.FAILNS);
+                return;
+            } 
+                
+            String headerValue = headerKeyValueMap.get(key).get(headerName);
+            if (headerValue.equals(Data)) {
+                Report.updateTestLog(Action, "Header value [" + headerValue + "] equals expected text [" + Data + "]", Status.PASSNS);
+            } else {
+                Report.updateTestLog(Action, "Header value [" + headerValue + "] does not equal expected text [" + Data + "]", Status.FAILNS);
+            }
+            
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Error to assert header value : " + ex.getMessage(), Status.FAILNS);
+        }
+    }
+    ```
+----------------------
