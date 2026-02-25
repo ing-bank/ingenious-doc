@@ -472,6 +472,9 @@
     ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 248ba69 (Add store and assert response header actions (#34))
 ----------------------
 
 ## **storeHeaderByNameInVariable**
@@ -601,7 +604,11 @@
         }
     }
     ```
+<<<<<<< HEAD
 ---------------------------------
 =======
 ----------------------
 >>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
+=======
+---------------------------------
+>>>>>>> 248ba69 (Add store and assert response header actions (#34))
