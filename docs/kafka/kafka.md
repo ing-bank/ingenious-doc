@@ -34,7 +34,6 @@
 
 -------------------------------------
 
-
 ## Setup SSL certificates
 
 If Key Store Certificates are required, you may set it up by clicking on the **gear icon** :gear: to open up the **Run Settings** :material-arrow-right: **Kakfa ssl Configurations**
@@ -53,7 +52,6 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
 -------------------------------------
 
-
 ## Payload Data Parameterization
 
 
@@ -67,7 +65,6 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
  ![editor](../img/kafka/editor.gif "editor")
  
-
  -------------------------------------
 
 ## Assert/Store Response Tags

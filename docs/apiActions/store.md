@@ -362,3 +362,209 @@
         }
     ```
 ---------------------------------
+
+## **storeResponseCookiesInVariable**
+
+**Description**: This function is used to extract a specific cookie value from the HTTP response headers and store it in a variable.
+
+**Input Format**: @Expected CookieName
+
+**Condition Format**: %VariableName%
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`storeResponseCookiesInVariable`](#)  | @CookieName      |  %VariableName%     | |<span style="color:#349651">:arrow_left:   *Store cookie value in variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+        @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
+        public void storeResponseCookiesInVariable() {
+            try {
+                String cookieKey = Data;
+                String variableName = Condition;
+                
+                if (!variableName.matches("%.*%")) {
+                    Report.updateTestLog(Action, "Variable format is not correct. Should be %variableName%", Status.DEBUG);
+                    return;
+                }
+                
+                variableName = variableName.substring(1, variableName.length() - 1);
+
+                if (!response.containsKey(key) && response.get(key) == null) {
+                    Report.updateTestLog(Action, "Response did not contain a valid HttpResponse for key [" + key + "]", Status.FAIL);
+                    return;
+                }
+
+                HttpResponse<?> httpResponse = response.get(key);
+                HttpHeaders responseHeaders = httpResponse.headers();
+
+                List<String> cookieHeaders = !responseHeaders.allValues("set-cookie").isEmpty() ? responseHeaders.allValues("set-cookie") : responseHeaders.allValues("Set-Cookie");
+                
+                if (cookieHeaders.isEmpty()) {
+                    Report.updateTestLog(Action, "No cookies were retrieved from the endpoint", Status.FAIL);
+                    return;
+                }
+
+                for (String cookieHeader : cookieHeaders) {
+                    if (cookieHeader == null || cookieHeader.isEmpty()) continue;
+
+                    String[] cookieParts = cookieHeader.split(";");
+                    if (cookieParts.length == 0) continue;
+
+                    String[] keyValue = cookieParts[0].trim().split("=", 2);
+                    if (keyValue.length != 2) continue;
+
+                    String cookieName  = keyValue[0].trim();
+                    String cookieValue = keyValue[1].trim();
+
+                    if (cookieName.equals(cookieKey)) {
+                        addVar(variableName, cookieValue);
+                        Report.updateTestLog(
+                            Action,
+                            "Cookies with name [" + cookieKey + "] has been added in variable [" 
+                                + variableName + "] with value [" + cookieValue + "] ",
+                            Status.DONE
+                        );
+                        return; // early exit on success
+                    }
+                }
+            } catch (Exception ex) {
+                Report.updateTestLog(Action, "Error in storing cookies with name in variable :"+ex.getMessage(), Status.FAIL);
+                ex.printStackTrace();
+            }
+        }
+    ```
+
+----------------------
+
+## **storeHeaderByNameInVariable**
+
+**Description**: This function is used to store a specific header value from the REST/SOAP response, into a variable.
+
+**Input Format** : @Header Name
+
+**Condition Format**: %variable%
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`storeHeaderByNameInVariable`](#)   | @Header Name       |  %var%     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Store Header Element in Variable", input = InputType.YES, condition = InputType.YES)
+    public void storeHeaderByNameInVariable() {
+        try {
+            String variableName = Condition; // e.g., %Variable Name%
+            String headerName = Data;        // e.g., "Content-Type"
+
+            // storeAllHeadersInMap() will populate headerKeyValueMap with headers for the current scenario/test case (key)
+            storeAllHeadersInMap();
+
+            // Check if headers exist for this key
+            if (!headerKeyValueMap.containsKey(key) || headerKeyValueMap.get(key).isEmpty()) {
+                Report.updateTestLog(Action, "No headers found for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.DEBUG);
+                return;
+            }
+
+            // Get headers for this scenario
+            Map<String, String> currentHeaders = headerKeyValueMap.get(key);
+
+            // Check if requested header exists
+            if (!currentHeaders.containsKey(headerName)) {
+                Report.updateTestLog(Action, "Header '" + headerName + "' does not exist in available headers for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.DEBUG);
+                return;
+            }
+
+            // Validate variable format
+            if (variableName.matches("%.*%")) {
+                String headerValue = currentHeaders.get(headerName);
+                addVar(variableName, headerValue);
+                Report.updateTestLog(Action, "Header '" + headerName + "' stored in variable '" + variableName + "' with value: " + headerValue, Status.DONE);
+            } else {
+                Report.updateTestLog(Action, "Variable format is not correct", Status.DEBUG);
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Error storing header value: " + ex.getMessage(), Status.DEBUG);
+        }
+    }
+    ```
+---------------------------------
+
+## **storeHeaderByNameInDatasheet**
+
+**Description**: This function is used to store a specific header value from the REST/SOAP response, into a respective column of a given datasheet.
+
+**Input Format** : @Expected datasheet name:column name
+
+**Condition Format** : Header Name
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Webservice     |:green_circle: [`storeHeaderByNameInDatasheet`](#)   | Sheet:Column      |  Header Name     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
+
+    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.WEBSERVICE, desc = "Store Header value in Datasheet", input = InputType.YES, condition = InputType.YES)
+    public void storeHeaderByNameInDatasheet() {
+        try {
+            String headerName = Condition; // e.g., "Content-Type"
+
+            // First, populate maps for this scenario/test case
+            storeAllHeadersInMap();
+
+            // Check if headers exist for this key
+            if (!headerKeyValueMap.containsKey(key) || headerKeyValueMap.get(key).isEmpty()) {
+                Report.updateTestLog(Action, "No headers found for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.DEBUG);
+                return;
+            }
+
+            // Get headers for this scenario
+            Map<String, String> currentHeaders = headerKeyValueMap.get(key);
+
+            // Check if requested header exists
+            if (!currentHeaders.containsKey(headerName)) {
+                Report.updateTestLog(Action, "Header '" + headerName + "' does not exist in available headers for scenario: [" + userData.getScenario() + "] and test case: [" + userData.getTestCase() + "]", Status.DEBUG);
+                return;
+            }
+
+            // Early return if input format is invalid
+            if (!Input.matches(".*:.*")) {
+                Report.updateTestLog(Action, "Invalid input format [" + Input + "]. Expected format: sheetName:ColumnName", Status.DEBUG);
+                return;
+            }
+
+            try {
+                String sheetName = Input.split(":", 2)[0];
+                String columnName = Input.split(":", 2)[1];
+                String headerValue = currentHeaders.get(headerName);
+
+                // Store header value in datasheet
+                userData.putData(sheetName, columnName, headerValue);
+
+                Report.updateTestLog(Action, "Header value [" + headerValue + "] stored in datasheet [" + sheetName + ":" + columnName + "]", Status.DONE);
+            } catch (Exception ex) {
+                Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, ex.getMessage(), ex);
+                Report.updateTestLog(Action, "Error storing header value in datasheet: " + ex.getMessage(), Status.DEBUG);
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Error storing header value in datasheet: " + ex.getMessage(), Status.DEBUG);
+        }
+    }
+    ```
+---------------------------------

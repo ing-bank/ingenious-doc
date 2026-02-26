@@ -79,6 +79,7 @@ nav:
     - Webpage Performance: webpageperformance.md
     - Accessibility Testing: accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
+    - Web Objects Repository: browsertesting/webOR.md
  - Mobile App Testing:
     - Premise: mobiletesting/index.md
     - Base Setup: mobiletesting/basesetup.md
@@ -102,6 +103,7 @@ nav:
         #- Element Assertions: mobiletesting/mobileActions/elementAssertions.md    
         #- Basic: mobiletesting/mobileActions/basic.md 
         #- General: mobiletesting/mobileActions/commonActions.md
+    - Mobile Objects Repository: mobiletesting/mobileOR.md
  - API Testing:
     - Create Your First API Test: api.md
     - Actions: 
