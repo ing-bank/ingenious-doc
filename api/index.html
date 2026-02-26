@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../mobiletesting/mobileActions/wait/">
+        <link rel="prev" href="../mobiletesting/mobileOR/">
       
       
         <link rel="next" href="../apiActions/webservice/">
@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../doc_images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
   
@@ -1528,6 +1528,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browsertesting/webOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Objects Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2141,6 +2169,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobiletesting/mobileOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile Objects Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2277,6 +2333,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Set up API Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5960,6 +6033,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Set up API Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -6063,6 +6153,45 @@
 </ul>
 </li>
 </ul>
+<details class="note">
+<summary>API Configurations</summary>
+<h3 id="api-configurations">API Configurations</h3>
+<p>The following properties can be set while creating an API Configuration:</p>
+<table>
+<thead>
+<tr>
+<th><div style="width:250px">Property</div></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api.alias</code></td>
+<td>The alias name for this API configuration. Used to reference the config in a test using #aliasName.</td>
+</tr>
+<tr>
+<td><code>httpClientRedirect</code></td>
+<td>Specifies how HTTP redirects are handled by the internal HTTP client. Allowed values are NEVER, NORMAL, ALWAYS. Default value is NEVER.</td>
+</tr>
+<tr>
+<td><code>useProxy</code></td>
+<td>Controls whether API requests should be routed through a proxy server.</td>
+</tr>
+<tr>
+<td><code>proxyHost</code></td>
+<td>Hostname (or IP) of the proxy server if useProxy = true.</td>
+</tr>
+<tr>
+<td><code>proxyPort</code></td>
+<td>Port number used when a proxy server is enabled. Only applies if useProxy = true.</td>
+</tr>
+<tr>
+<td><code>sslCertificateVerification</code></td>
+<td>Enables or disables SSL certificate verification.</td>
+</tr>
+</tbody>
+</table>
+</details>
 <hr />
 <h2 id="create-new-api-configuration">Create New API Configuration</h2>
 <p>To create a new API configuration, follow the steps below :</p>
@@ -6269,10 +6398,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
