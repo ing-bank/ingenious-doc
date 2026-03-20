@@ -22,11 +22,11 @@
 
 -----
 
-??? example   "Execute A Reusable For Specific Set Of Data"
+??? example   "Execute a Reusable for a Specific Set of Data"
 
-    ## Execute A Reusable For Specific Set Of Data
+    ## Execute a Reusable for a Specific Set of Data
 
-    A reusable test case can be executed with a desired set of data by providing the sub iteration index in the Input column. It will fetch the data set from the data sheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set set of data passed each time.
+    A reusable test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the data sheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set set of data passed each time.
 
     ![subiteration](img/Things/SubIteration.png "subiteration")
 
@@ -36,40 +36,84 @@
 
     ## Looping
 
-    === "**With Data**"
-
-        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Subiterations
-
-        ![subiteration1](img/Things/Subiteration1.png "subiteration1")
-
-        * For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub iterations for Iteration 1)
-
-        * For first iteration, data will be taken from Iteration 1 and Subiteration 1
-
-        * For second iteration, data will be taken from Iteration 1 and Subiteration 2
-
-        * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
-
-        * To iterate through the entire Test Case for all the sub iterations of data in the data sheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
-
     === "**Without Data**"
 
         **Looping Without Test Datasheet**
 
-        * To repeat few steps, use Start Loop and **End Loop:@n**.
+        * To repeat a step a number of times, use the Start Loop and **End Loop:@n** condition.
 
         ![looping](img/Things/Looping.png "looping")
 
         * In the above image, Start Loop is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
+    
+    === "**With Data**"
+        
+        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Sub-iterations
+
+        ![subiteration1](img/Things/Subiteration1.png "subiteration1")
+
+        * For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub-iterations for Iteration 1)
+
+        * For the first iteration, data will be taken from Iteration 1 and SubIteration 1
+
+        * For the second iteration, data will be taken from Iteration 1 and SubIteration 2
+
+        * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
+
+        * To iterate through the entire Test Case for all the sub-iterations of data in the data sheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
+
+        * Specify an index with the **End Param** condition to terminate the loop at a specific data row.
+
+            > For example, **End Param:@3** would cause a Start/End Param block to consume data from the datasheet up to row 3 only.
+
+        * If the specified index is greater than the row count of Iteration 1, execution ends at the last available data row.
 
 
 -------
 
-??? example "Iterations And Subiterations In Test Execution Panel"
+??? example "Looping Reusable Components"
 
-    ## Iterations And Subiterations In Test Execution Panel
+    ## Looping Reusable Components
 
-    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub iterations.
+    **Reusable Components** can be used within loops to repeat a set of steps. A **Start/End Loop** block may be used to execute the first iteration and first sub-iteration repeatedly. While a **Start/End Param** block may be used when iterating through a datasheet.
+    
+    The following image shows a sample reusable component named AttemptLogin with a corresponding datasheet.
+    
+    ![loopedcomponents1](img/Things/LoopedComponents1.png "loopedcomponents1")
+
+    **NOTE:** For best practice, attach the Start and End conditions to a filler step.
+
+    === "**Without Data**"
+
+        **Looping without a Test Datasheet**
+
+        * Use the **Start Loop** and **End Loop:@n** conditions to repeat a reusable component **n** number of times.
+
+        ![loopedcomponents2](img/Things/LoopedComponents2.png "loopedcomponents2")
+
+        * In the above image, the reusable component will be executed 100 times. The data row labeled Iteration 1 and SubIteration 1 will be used each time.
+    
+    === "**With Data**"
+
+        * Iterate dynamically with a reusable component that uses data from a datasheet by using the **Start Param** and **End Param** conditions.
+        
+        ![loopedcomponents3](img/Things/LoopedComponents3.png "loopedcomponents3")
+        
+        * For the above image, the reusable component will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the data sheet.
+
+        * Specify an index with the **End Param** condition to terminate the loop at a specific data row.
+
+            > For example, **End Param:@2** would cause a Start/End Param block to consume data up to row 2 only.
+
+        * If the specified index is greater than the row count, execution ends at the last available data row.
+
+-------
+
+??? example "Iterations And Sub-iterations In Test Execution Panel"
+
+    ## Iterations And Sub-iterations In Test Execution Panel
+
+    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub-iterations.
 
     ![iterationOption](img/Things/IterationOption.png "iterationOption")
 
@@ -85,9 +129,9 @@
 
     * **n**: will allow you to Iterate a particular (nth) iteration in your datasheet.
 
-        > For example, if you use 5, then INGenious iterate only the 5th iteration and all its sub iterations.
+        > For example, if you use 5, then INGenious iterate only the 5th iteration and all its sub-iterations.
 
-    > **Note:** Subiterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
+    > **Note:** Sub-iterations will work according to the definition of **Start Param** and **End Param** in the Test Design panel.
 
 -------
 
