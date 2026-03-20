@@ -231,7 +231,7 @@ public class SampleScript extends General {
     public void executeTestCase(String scenarioName, String testCaseName, int subIteration);
     ```
 
-    The above method will execute the test case under the particular scenario and for that particular **subiteration**.
+    The above method will execute the test case under the particular scenario and for that particular **sub-iteration**.
 
 
 
@@ -415,14 +415,14 @@ public class SampleScript extends General {
                 public String getData(String DataSheetName, String ColumnName, String Iteration, String SubIteration);
                 ```
 
-                Provide the **sheet name, column, iteration and subiteration** values if you want
+                Provide the **sheet name, column, iteration and sub-iteration** values if you want
                 to be specific, as shown in the example below;
 
                 ```{.java .copy}
                 String input = userData.getData("Sample", "Data1", "1", "1");
                 ```
                 Here the data stored in the sheet **Sample**, under the column **Data1** having the
-                **subiteration** and **iteration** value as **1**, is stored in the input string variable.
+                **sub-iteration** and **iteration** value as **1**, is stored in the input string variable.
                 Another way is to provide all the information as given above in the argument list and
                 also include the scenario and test case name.
 
@@ -438,7 +438,7 @@ public class SampleScript extends General {
 
                 In the example above the data stored in the sheet **Sample** under the column **Data1**
                 and belonging to the testcase named **testcase** and **scenario** named scenario having
-                the iteration and subiteration value as **1**, is stored in input string.
+                the iteration and sub-iteration value as **1**, is stored in input string.
 
         !!! quote "Put Data"
             ##### **putData**
@@ -461,7 +461,7 @@ public class SampleScript extends General {
 
             === "Type 2"
 
-                You can also provide the **iteration** and **subiteration** values in the argument list.
+                You can also provide the **iteration** and **sub-iteration** values in the argument list.
 
                 ```{.java .copy}
                 userData.putData("DatasheetName", "ColumnName", "value to be written", "Iterationvalue", "SubIteration value");
@@ -473,7 +473,7 @@ public class SampleScript extends General {
                 ```
 
                 where **Sample** is the datasheet name, **Data1** is the column name and **John Doe** is the value
-                to be written under the respective column for the iteration value of **1** and subiteration value of **1**.
+                to be written under the respective column for the iteration value of **1** and sub-iteration value of **1**.
 
             === "Type 3"
 
@@ -491,7 +491,7 @@ public class SampleScript extends General {
 
                 where **Sample** is the datasheet name, **Data1** is the column name, **testcase** is the
                 testcase name,**scenario** is the scenario name and **John Doe** is the value to be written under
-                the respective column for the iteration and subiteration value of **1**.
+                the respective column for the iteration and sub-iteration value of **1**.
 
     ??? tip "Global Data Sheet"
         #### Global Data Sheet
@@ -564,8 +564,8 @@ public class SampleScript extends General {
 
 ------------------------------------------------
 
-??? example "Get Iteration/Subiteration Value Of The Current TestStep"
-    ### Get Iteration/Subiteration
+??? example "Get Iteration/Sub-iteration Value Of The Current TestStep"
+    ### Get Iteration/Sub-iteration
 
     It is possible to get the value of current iteration using the function **"getIteration"**
 
@@ -576,13 +576,13 @@ public class SampleScript extends General {
     This function returns a string value containing the **Iteration number** of the current iteration.
 
 
-    It is also possible to get the value of current subiteration using the function **getSubIteration**
+    It is also possible to get the value of current sub-iteration using the function **getSubIteration**
 
     ```{.java .copy}
-    String subiterationValue=userData.getSubIteration();
+    String sub-iterationValue=userData.getSubIteration();
     ```
 
-    This function returns a string value containing the **Subiteration number** of the current sub iteration that is in execution.
+    This function returns a string value containing the **Sub-iteration number** of the current sub-iteration that is in execution.
 
 ------------------------------------------------
 
@@ -899,15 +899,15 @@ public class SampleScript extends General {
 
         :warning: Don't pass GlobalData as inputsheet
 
-    12. To get values from specified Iteration and Subiteration   
-    13. To get values from specified Scenario, Testcase, Iteration and Subiteration
+    12. To get values from specified Iteration and Sub-iteration   
+    13. To get values from specified Scenario, Testcase, Iteration and Sub-iteration
     14. To write values into DataSheet pass DataSheetName and ColumnName as inputs.
        
         SheetName = **Sample**, Columnname = **Data1**, Data = **"John Doe"**
 
         :warning: Don't pass GlobalData as inputsheet
-    15. To write values for specified Iteration and Subiteration 
-    16. To write values for specified Scenario, Testcase, Iteration and Subiteration 
+    15. To write values for specified Iteration and Sub-iteration 
+    16. To write values for specified Scenario, Testcase, Iteration and Sub-iteration 
     17. Where **orderId** is a column in the data sheet
     18. To get value
     19. To put values in the sheet
@@ -920,12 +920,12 @@ public class SampleScript extends General {
     26. To get the current BrowserName
     27. To stop the current iteration if you want to... based on a condition
     28. Stop the execution
-    29. To execute other testcases - **scenario name**, **testcase name**, **subiteration**
+    29. To execute other testcases - **scenario name**, **testcase name**, **sub-iteration**
     30. **scenario name**, **testcase name**
     31. Basing the condition on a web locator being visible
     32. Calling another test case if the condition is matched
     
-        Pass the **Scenario name**, **Testcase name** and **Subiteration index**
+        Pass the **Scenario name**, **Testcase name** and **Sub-iteration index**
     33. If needed you can break the test case also by calling existing function **StopBrowser**  
 
 
