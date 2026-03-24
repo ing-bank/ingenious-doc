@@ -383,11 +383,11 @@ public class SampleScript extends General {
 
 -----------------------------------------------
 
-??? example "Access Test Data Sheet In Custom Method" 
-    ### Access Data Sheet from Code
+??? example "Access Test Datasheet In Custom Method" 
+    ### Access Datasheet from Code
 
-    ??? tip "Local Data Sheet"
-        #### Local Data Sheet
+    ??? tip "Local Datasheet"
+        #### Local Datasheet
 
         !!! quote "Get Data"
             ##### **getData**
@@ -493,8 +493,8 @@ public class SampleScript extends General {
                 testcase name,**scenario** is the scenario name and **John Doe** is the value to be written under
                 the respective column for the iteration and sub-iteration value of **1**.
 
-    ??? tip "Global Data Sheet"
-        #### Global Data Sheet
+    ??? tip "Global Datasheet"
+        #### Global Datasheet
 
         To access a global datasheet from the custom method to read a global data value, use the method below :
 
