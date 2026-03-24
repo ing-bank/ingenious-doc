@@ -18,7 +18,7 @@
 
     The **Open** option opens the project location in your system.
 
-    Right below these options, you have details on the total number of scenarios, test cases, reusable components and test data sheets present in the project.
+    Right below these options, you have details on the total number of scenarios, test cases, reusable components and test datasheets present in the project.
 
 -----
 
@@ -26,7 +26,7 @@
 
     ## Execute a Reusable for a Specific Set of Data
 
-    A reusable test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the data sheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set set of data passed each time.
+    A reusable test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set of data passed each time.
 
     ![subiteration](img/Things/SubIteration.png "subiteration")
 
@@ -48,7 +48,7 @@
     
     === "**With Data**"
         
-        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Sub-iterations
+        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Sub-Iterations
 
         ![subiteration1](img/Things/Subiteration1.png "subiteration1")
 
@@ -60,7 +60,7 @@
 
         * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
 
-        * To iterate through the entire Test Case for all the sub-iterations of data in the data sheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
+        * To iterate through the entire Test Case for all the sub-iterations of data in the datasheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
 
         * Specify an index with the **End Param** condition to terminate the loop at a specific data row.
 
@@ -99,7 +99,7 @@
         
         ![loopedcomponents3](img/Things/LoopedComponents3.png "loopedcomponents3")
         
-        * For the above image, the reusable component will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the data sheet.
+        * For the above image, the reusable component will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the datasheet.
 
         * Specify an index with the **End Param** condition to terminate the loop at a specific data row.
 
@@ -109,11 +109,11 @@
 
 -------
 
-??? example "Iterations And Sub-iterations In Test Execution Panel"
+??? example "Iterations and SubIterations in Test Execution Panel"
 
-    ## Iterations And Sub-iterations In Test Execution Panel
+    ## Iterations and Sub-Iterations in Test Execution Panel
 
-    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub-iterations.
+    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their SubIterations.
 
     ![iterationOption](img/Things/IterationOption.png "iterationOption")
 
@@ -173,21 +173,21 @@
         * **`afterStepExecution`**: Enter the code to handle the component here, if you want to perform the check **after** the execution of each step.
 
 ----
-??? example "How To Navigate between Test Data Sheets"
+??? example "How To Navigate between Test Datasheets"
 
-    ## How To Navigate between Test Data Sheets
+    ## How To Navigate between Test Datasheets
 
-    * Right click on any data sheet and choose the option **Search Test Data** from the context menu
+    * Right click on any datasheet and choose the option **Search Test Data** from the context menu
 
-    * In the **Go To Test Data** window, choose the test data sheet or the global data sheet to which you want to navigate
+    * In the **Go To Test Data** window, choose the test datasheet or the global datasheet to which you want to navigate
 
     * You will be navigated to the respective sheet after clicking on **[OK]**
 
 ----
 
-??? example "How To Search in Data Sheets"
+??? example "How To Search in Datasheets"
 
-    ## How To Search in Data Sheets
+    ## How To Search in Datasheets
 
 
     * To search for **values inside the cells**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green

@@ -32,7 +32,7 @@ A full list of keys can be found [here](https://developer.mozilla.org/en-US/docs
     | Object     |:green_circle: [`KeyPressOnElement`](#)   | Sheet:Column |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     | Object     |:green_circle: [`KeyPressOnElement`](#)   | %dynamicVar% |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -78,7 +78,7 @@ A full list of keys can be found [here](https://developer.mozilla.org/en-US/docs
     | Browser     |:green_circle: [`KeyPress`](#)   | Sheet:Column |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     | Browser     |:green_circle: [`KeyPress`](#)   | %dynamicVar% |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -111,7 +111,7 @@ A full list of keys can be found [here](https://developer.mozilla.org/en-US/docs
     | Browser     |:green_circle: [`KeyUp`](#)   | Sheet:Column |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     | Browser     |:green_circle: [`KeyUp`](#)   | %dynamicVar% |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -144,7 +144,7 @@ A full list of keys can be found [here](https://developer.mozilla.org/en-US/docs
     | Browser     |:green_circle: [`KeyDown`](#)   | Sheet:Column |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     | Browser     |:green_circle: [`KeyDown`](#)   | %dynamicVar% |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -177,7 +177,7 @@ A full list of keys can be found [here](https://developer.mozilla.org/en-US/docs
     | Browser     |:green_circle: [`KeyInsertText`](#)   | Sheet:Column |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     | Browser     |:green_circle: [`KeyInsertText`](#)   | %dynamicVar% |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 

@@ -54,7 +54,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`createAndSwitchToNewPage`](#)   | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`createAndSwitchToNewPage`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -91,7 +91,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`createAndSwitchToNewContext`](#)   | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`createAndSwitchToNewContext`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -129,7 +129,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`switchToPageByIndex`](#)   | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`switchToPageByIndex`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -166,7 +166,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`switchToContextByIndex`](#)   | Sheet:Column | `optional` page timeout in milliseconds      | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`switchToContextByIndex`](#)   | %dynamicVar% | `optional` page timeout in milliseconds      | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -210,7 +210,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`switchToContextByPageTitle`](#)   | Sheet:Column |  `optional` page timeout in milliseconds     | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`switchToContextByPageTitle`](#)   | %dynamicVar% | `optional` page timeout in milliseconds      | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -260,7 +260,7 @@ icon: octicons/arrow-switch-16
     | Browser     |:green_circle: [`switchToContextByPageURL`](#)   | Sheet:Column |  `optional` page timeout in milliseconds     | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`switchToContextByPageURL`](#)   | %dynamicVar% |  `optional` page timeout in milliseconds     | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
