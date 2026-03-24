@@ -15,7 +15,7 @@
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.DATABASE, desc = "Save DB value in Test Data Sheet", input = InputType.YES, condition = InputType.YES)
+    @Action(object = ObjectType.DATABASE, desc = "Save DB value in Test Datasheet", input = InputType.YES, condition = InputType.YES)
         public void storeDBValueinDataSheet() {
             try {
                 if (Condition != null && Input != null) {

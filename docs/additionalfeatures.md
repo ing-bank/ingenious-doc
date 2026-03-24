@@ -173,9 +173,9 @@
         * **`afterStepExecution`**: Enter the code to handle the component here, if you want to perform the check **after** the execution of each step.
 
 ----
-??? example "How To Navigate between Test Data Sheets"
+??? example "How To Navigate between Test Datasheets"
 
-    ## How To Navigate between Test Data Sheets
+    ## How To Navigate between Test Datasheets
 
     * Right click on any datasheet and choose the option **Search Test Data** from the context menu
 
@@ -185,9 +185,9 @@
 
 ----
 
-??? example "How To Search in Data Sheets"
+??? example "How To Search in Datasheets"
 
-    ## How To Search in Data Sheets
+    ## How To Search in Datasheets
 
 
     * To search for **values inside the cells**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green
