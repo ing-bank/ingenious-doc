@@ -20,7 +20,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementNotContainsText`](#) | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementNotContainsText`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -61,7 +61,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementAttributeNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementAttributeNotMatches`](#)    | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -103,7 +103,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementClassNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementClassNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -144,7 +144,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementCountNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementCountNotMatches`](#)  | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -183,7 +183,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementCSSNotMatches`](#)  | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementCSSNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -226,7 +226,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementIdNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementIdNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -267,7 +267,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementJSPropertyNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementJSPropertyNotMatches`](#)  | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -308,7 +308,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementRoleNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementRoleNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -345,7 +345,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementTextNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementTextNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -386,7 +386,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementValueNotMatches`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementValueNotMatches`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -428,7 +428,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementValuesNotMatch`](#)   | Sheet:Column | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementValuesNotMatch`](#)   | %dynamicVar% | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -672,7 +672,7 @@ icon: material/flask-empty-minus-outline
     | Object    |:green_circle: [`assertElementIsNotFocused`](#)   |  | `optional` timeout in milliseconds       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementIsNotFocused`](#)   | | `optional` timeout in milliseconds       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 

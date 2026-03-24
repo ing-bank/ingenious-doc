@@ -12,7 +12,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeResponseBodyInDataSheet`](#)  | Sheet:Column      |      | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is supposed to be stored*</span>
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -110,7 +110,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeXMLelementInDataSheet'](#)  | Sheet:Column      |  XPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -215,7 +215,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeJSONelementInDataSheet`](#)  | Sheet:Column      |  JSONPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -323,7 +323,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeJsonElementCountInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -513,7 +513,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeHeaderByNameInDatasheet`](#)   | Sheet:Column      |  Header Name     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
