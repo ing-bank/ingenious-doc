@@ -402,7 +402,7 @@ public class SampleScript extends General {
                 public String getData(String DataSheetName, String ColumnName);
                 ```
 
-                Provide the name of the data sheet (**Sample**) and column (**Data1**) that contains the data
+                Provide the name of the datasheet (**Sample**) and column (**Data1**) that contains the data
                 and this function will return a string which is the value of the required data. 
                 For instance:
 
@@ -443,7 +443,7 @@ public class SampleScript extends General {
         !!! quote "Put Data"
             ##### **putData**
 
-            It is also possible to write to the data sheet using **"putData"**.
+            It is also possible to write to the datasheet using **"putData"**.
             The **putData()** function is overloaded in the following ways,
 
             === "Type 1"
@@ -496,7 +496,7 @@ public class SampleScript extends General {
     ??? tip "Global Data Sheet"
         #### Global Data Sheet
 
-        To access a global data sheet from the custom method to read a global data value, use the method below :
+        To access a global datasheet from the custom method to read a global data value, use the method below :
 
         ```{.java .copy}
         userData.getGlobalData(globalDataID, columnName);
@@ -506,7 +506,7 @@ public class SampleScript extends General {
         String datavalue = userData.getGlobalData("Glob1", "username");
         ```
 
-        To write or update a global data sheet, call the method below in your custom method,
+        To write or update a global datasheet, call the method below in your custom method,
 
         ```{.java .copy}
         userData.putGlobalData(globalDataID, columnName, value);
@@ -519,7 +519,7 @@ public class SampleScript extends General {
     ??? tip "Test Data Model"
         #### TestDataModel
 
-        As an alternative, you can use the following code to access the data sheet by its name and update the same, traversing through every record in the test data sheet.
+        As an alternative, you can use the following code to access the datasheet by its name and update the same, traversing through every record in the test datasheet.
 
         ```{.java .copy}
         TestDataModel tdModel = Control.getCurrentProject().getTestData().getTestDataByName("TestDataSheetName");
@@ -527,7 +527,7 @@ public class SampleScript extends General {
         int rowsCount = tdModel.getRowCount();
         for (int row = 0; row < tdModel.getRowCount(); row++) {
 
-            // Where orderId is a column in my data sheet
+            // Where orderId is a column in my datasheet
             int colIndex = tdModel.getColumnIndex("orderId");
 
             //To get value
@@ -564,8 +564,8 @@ public class SampleScript extends General {
 
 ------------------------------------------------
 
-??? example "Get Iteration/Sub-iteration Value Of The Current TestStep"
-    ### Get Iteration/Sub-iteration
+??? example "Get Iteration/SubIteration Value Of The Current TestStep"
+    ### Get Iteration/SubIteration
 
     It is possible to get the value of current iteration using the function **"getIteration"**
 
@@ -908,7 +908,7 @@ public class SampleScript extends General {
         :warning: Don't pass GlobalData as inputsheet
     15. To write values for specified Iteration and Sub-iteration 
     16. To write values for specified Scenario, Testcase, Iteration and Sub-iteration 
-    17. Where **orderId** is a column in the data sheet
+    17. Where **orderId** is a column in the datasheet
     18. To get value
     19. To put values in the sheet
     20. To display in Report

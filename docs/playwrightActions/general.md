@@ -130,7 +130,7 @@ icon: octicons/browser-16
 
 ## **storeVariableInDataSheet**
 
-**Description**: This function will **store a variable** in a data sheet
+**Description**: This function will **store a variable** in a datasheet
 
 **Input Format** : DatasheetName:ColumnName
 
@@ -144,7 +144,7 @@ icon: octicons/browser-16
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.GENERAL, desc = "store variable value [<Condition>] in data sheet[<Data>]", input = InputType.YES, condition = InputType.YES)
+    @Action(object = ObjectType.GENERAL, desc = "store variable value [<Condition>] in datasheet[<Data>]", input = InputType.YES, condition = InputType.YES)
     public void storeVariableInDataSheet() {
         if (Input != null && Condition != null) {
             if (!getVar(Condition).isEmpty()) {
@@ -154,7 +154,7 @@ icon: octicons/browser-16
                 String columnName = sheetDetail[1];
                 userData.putData(sheetName, columnName, getVar(Condition));
                 Report.updateTestLog(Action,
-                        "Value of variable " + Condition + " has been stored into " + "the data sheet", Status.DONE);
+                        "Value of variable " + Condition + " has been stored into " + "the datasheet", Status.DONE);
             } else {
                 Report.updateTestLog(Action, "The variable " + Condition + " does not contain any value", Status.FAIL);
             }

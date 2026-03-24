@@ -22,7 +22,7 @@ icon: material/text
     | Object     |:green_circle: [`Fill`](#)  | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object     |:green_circle: [`Fill`](#)  | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -57,7 +57,7 @@ icon: material/text
     | Object     |:green_circle: [`FillIfDataExists`](#) | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object     |:green_circle: [`FillIfDataExists`](#)  | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -88,7 +88,7 @@ icon: material/text
     | Object     |:green_circle: [`FillIfVisible`](#)  | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object     |:green_circle: [`FillIfVisible`](#)  | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -155,7 +155,7 @@ icon: material/text
     | Object     |:green_circle: [`fillEncrypted`](#)| @value       |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Object     |:green_circle: [`fillEncrypted`](#)| Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
-    **Note**: If the data is passed from a data sheet, the data in the datasheet should be `encrypted`. To manually encrypt a data, select the data cell, **right click and select Encrypt**
+    **Note**: If the data is passed from a datasheet, the data in the datasheet should be `encrypted`. To manually encrypt a data, select the data cell, **right click and select Encrypt**
 
 === "Corresponding Code"
 
