@@ -579,7 +579,7 @@ public class SampleScript extends General {
     It is also possible to get the value of current sub-iteration using the function **getSubIteration**
 
     ```{.java .copy}
-    String sub-iterationValue=userData.getSubIteration();
+    String subiterationValue=userData.getSubIteration();
     ```
 
     This function returns a string value containing the **Sub-iteration number** of the current sub-iteration that is in execution.

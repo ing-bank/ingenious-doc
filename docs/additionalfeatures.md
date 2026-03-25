@@ -38,17 +38,15 @@
 
     === "**Without Data**"
 
-        **Looping Without Test Datasheet**
-
-        * To repeat a step a number of times, use the Start Loop and **End Loop:@n** condition.
+        * To repeat a step a number of times, use the **Start Loop** and **End Loop:@n** condition.
 
         ![looping](img/Things/Looping.png "looping")
 
-        * In the above image, Start Loop is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
+        * In the above image, **Start Loop** is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
     
     === "**With Data**"
         
-        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Sub-Iterations
+        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and all its Sub-Iterations
 
         ![subiteration1](img/Things/Subiteration1.png "subiteration1")
 
