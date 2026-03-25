@@ -45,7 +45,7 @@ icon: simple/databricks
 -----------------------------------------------------
 ## **storeElementTextinDataSheet**
 
-**Description**: This function will **store element text** in a data sheet
+**Description**: This function will **store element text** in a datasheet
 
 **Input Format** : DatasheetName:ColumnName
 
@@ -125,7 +125,7 @@ icon: simple/databricks
 
 ## **storeElementInnerHTMLinDataSheet**
 
-**Description**: This function will **store element innerHTML** in a data sheet
+**Description**: This function will **store element innerHTML** in a datasheet
 
 **Input Format** : DatasheetName:ColumnName
 
@@ -205,7 +205,7 @@ icon: simple/databricks
 
 ## **storeElementInnerTextinDataSheet**
 
-**Description**: This function will **store element innerText** in a data sheet
+**Description**: This function will **store element innerText** in a datasheet
 
 **Input Format** : DatasheetName:ColumnName
 
@@ -283,7 +283,7 @@ icon: simple/databricks
 
 ## **storeElementInputValueinDataSheet**
 
-**Description**: This function will **store element Input Value** in a data sheet
+**Description**: This function will **store element Input Value** in a datasheet
 
 **Input Format** : DatasheetName:ColumnName
 

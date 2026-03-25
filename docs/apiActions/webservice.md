@@ -117,7 +117,7 @@
     | Webservice     |:green_circle: [`setEndPoint`](#)  | Sheet:Column |  #apiConfigAlias (optional)      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`setEndPoint`](#)  | %dynamicVar% |  #apiConfigAlias (optional)      | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **Endpoint editor** which is capable of parameterising the Endpoint (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **Endpoint editor** which is capable of parameterising the Endpoint (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -200,7 +200,7 @@
     | Webservice     |:green_circle: [`postSoapRequest`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`postSoapRequest`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -231,7 +231,7 @@
     | Webservice     |:green_circle: [`postRestRequest`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`postRestRequest`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **JSON editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **JSON editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -262,7 +262,7 @@
     | Webservice     |:green_circle: [`putRestRequest`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`putRestRequest`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **JSON editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **JSON editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -293,7 +293,7 @@
     | Webservice     |:green_circle: [`patchRestRequest`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`patchRestRequest`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -371,7 +371,7 @@
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.      |         |
+    Inputs in the Input column can be either `hardcoded`, passed inside the **XML editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.      |         |
 
 === "Corresponding Code"
 

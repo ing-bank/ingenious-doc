@@ -2,7 +2,7 @@
 
 ## **storeDBValueinDataSheet**
 
-**Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in the data sheet
+**Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in the datasheet
 
 **Input Format** : @SheetName:ColumnName , Condition : DatabaseColumnName, ResultSetRowNumber
 
@@ -15,7 +15,7 @@
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.DATABASE, desc = "Save DB value in Test Data Sheet", input = InputType.YES, condition = InputType.YES)
+    @Action(object = ObjectType.DATABASE, desc = "Save DB value in Test Datasheet", input = InputType.YES, condition = InputType.YES)
         public void storeDBValueinDataSheet() {
             try {
                 if (Condition != null && Input != null) {
@@ -34,7 +34,7 @@
                     } else if (getColumnIndex(split[0]) != -1) {
                         value = result.getString(split[0]);
                         userData.putData(sheetName, columnName, value);
-                        Report.updateTestLog(Action, "Value from DB " + value + "  stored into " + "the data sheet", Status.DONE);
+                        Report.updateTestLog(Action, "Value from DB " + value + "  stored into " + "the datasheet", Status.DONE);
                     } else {
                         Report.updateTestLog(Action, "Column : " + split[0] + " doesn't exist", Status.FAILNS);
                     }
@@ -107,7 +107,7 @@
 
 ## **storeResultInDataSheet**
 
-**Description**:  This action will store the result of an SQL select statement in the test data sheet
+**Description**:  This action will store the result of an SQL select statement in the test datasheet
 
 **Input Format** : @`SQL Query` , Condition : DatasheetName
 

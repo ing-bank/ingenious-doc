@@ -37,7 +37,7 @@ input.
     | Browser     |:green_circle: [`testAccessibility`](#)   | @ReportName @Options{}                        |           |         |
 
 
-    Inputs in the Input column can be either **hardcoded** (in this case the data is preceded by a "**@**"), passed from the data sheet (**datasheet name : column name**) or passed from a variable value (**%variable name%**).
+    Inputs in the Input column can be either **hardcoded** (in this case the data is preceded by a "**@**"), passed from the datasheet (**datasheet name : column name**) or passed from a variable value (**%variable name%**).
 
 === "Internally Uses"
 

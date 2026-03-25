@@ -63,7 +63,7 @@
 
     ## Rename and Refactor
 
-    The tool comes with an option to rename and refactor the object, test case, data sheet and reusable component names.
+    The tool comes with an option to rename and refactor the object, test case, datasheet and reusable component names.
 
     Consider the example, given below,
 
@@ -81,7 +81,7 @@
 
     ![rename3](img/Things/RenameandRefactor3.png "rename3")
 
-    * The same procedure can be applied to test cases, test data sheets and reusable components as well.
+    * The same procedure can be applied to test cases, test datasheets and reusable components as well.
 
 ----------------------------------
 
@@ -115,9 +115,9 @@
 
     This feature really comes in handy when you have to use the same data across multiple test cases.
 
-    If you are using global data sheet to pass data which is common to various testcases, you will have to map the data in the global data sheet to test data sheets of the respective test cases, which is a bit cumbersome.
+    If you are using global datasheet to pass data which is common to various testcases, you will have to map the data in the global datasheet to test datasheets of the respective test cases, which is a bit cumbersome.
 
-    If you are using the user defined variable, you can directly pass the variable value to the test case i.e. mapping the data to the test data sheets in respective test cases can be skipped.
+    If you are using the user defined variable, you can directly pass the variable value to the test case i.e. mapping the data to the test datasheets in respective test cases can be skipped.
 
     **How To Pass The Data To Your Test Case Using The User Defined Variable?**
 

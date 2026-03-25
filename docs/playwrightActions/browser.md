@@ -19,7 +19,7 @@ icon: octicons/browser-16
     | Browser     |:green_circle: [`Open`](#)  | Sheet:Column |`optional` page timeout in milliseconds | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser     |:green_circle: [`Open`](#)  | %dynamicVar% | `optional` page timeout in milliseconds | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
