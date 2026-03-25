@@ -48,7 +48,7 @@
     
     === "**With Data**"
         
-        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and its various Sub-Iterations
+        **NOTE:** In Test Design panel, users are only given access to Iteration 1 and all its Sub-Iterations
 
         ![subiteration1](img/Things/Subiteration1.png "subiteration1")
 
