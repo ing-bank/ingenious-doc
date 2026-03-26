@@ -51,7 +51,7 @@ icon: simple/databricks
     |------------|--------|--------------|-----------|---------|--|
     | mobileObject     |:green_circle: [`storeTextinDataSheet`](#)   | Sheet:Column      |     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed to be stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 

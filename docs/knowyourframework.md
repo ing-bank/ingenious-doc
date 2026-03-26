@@ -116,7 +116,7 @@
       * **Step 2** : Click the **[+]** icon in the Data Section, to add a new Environment
       * **Step 3** : Enter the [Environment] Name
       * **Step 4** : Check **[Copy Data from Other Environments]**
-      * **Step 5** : Select the Environment and the corresponding Data sheets to be copied and then click **[Create] Button**
+      * **Step 5** : Select the Environment and the corresponding Datasheets to be copied and then click **[Create] Button**
 
 === ":five: Object Repository"
       This is the area where the Locators/Objects are present along with the multiple attributes/properties to be used to find that element on the Application.
