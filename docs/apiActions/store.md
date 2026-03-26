@@ -380,15 +380,7 @@
 === "Corresponding Code"
 
     ```java
-<<<<<<< HEAD
-<<<<<<< HEAD
         @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
-=======
-    @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
->>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
-=======
-        @Action(object = ObjectType.WEBSERVICE, desc = "Store Cookies In Variable ", input = InputType.YES, condition = InputType.YES)
->>>>>>> cbdb879 (update code tab (#36))
         public void storeResponseCookiesInVariable() {
             try {
                 String cookieKey = Data;
@@ -399,8 +391,6 @@
                     return;
                 }
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 variableName = variableName.substring(1, variableName.length() - 1);
 
                 if (!response.containsKey(key) && response.get(key) == null) {
@@ -444,16 +434,7 @@
 =======
                 String cookieValue = null;
 =======
->>>>>>> cbdb879 (update code tab (#36))
-                variableName = variableName.substring(1, variableName.length() - 1);
 
-                if (!response.containsKey(key) && response.get(key) == null) {
-                    Report.updateTestLog(Action, "Response did not contain a valid HttpResponse for key [" + key + "]", Status.FAIL);
-                    return;
-                }
-
-<<<<<<< HEAD
->>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
 =======
                 HttpResponse<?> httpResponse = response.get(key);
                 HttpHeaders responseHeaders = httpResponse.headers();
@@ -488,18 +469,8 @@
                         return; // early exit on success
                     }
                 }
->>>>>>> cbdb879 (update code tab (#36))
-            } catch (Exception ex) {
-                Report.updateTestLog(Action, "Error in storing cookies with name in variable :"+ex.getMessage(), Status.FAIL);
-                ex.printStackTrace();
-            }
-        }
-    ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> 248ba69 (Add store and assert response header actions (#34))
 ----------------------
 
 ## **storeHeaderByNameInVariable**
@@ -629,15 +600,4 @@
         }
     }
     ```
-<<<<<<< HEAD
-<<<<<<< HEAD
----------------------------------
-=======
-----------------------
->>>>>>> 431fe97 (Add new action storeResponseCookiesInVariable (#33))
-=======
----------------------------------
->>>>>>> 248ba69 (Add store and assert response header actions (#34))
-=======
----------------------------------
->>>>>>> 607c830 (Add new action storeResponseCookiesInVariable (#33))
+    
