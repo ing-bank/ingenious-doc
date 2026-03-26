@@ -431,11 +431,9 @@
                         return; // early exit on success
                     }
                 }
-=======
+                
                 String cookieValue = null;
-=======
 
-=======
                 HttpResponse<?> httpResponse = response.get(key);
                 HttpHeaders responseHeaders = httpResponse.headers();
 
@@ -470,7 +468,6 @@
                     }
                 }
 
-=======
 ----------------------
 
 ## **storeHeaderByNameInVariable**
