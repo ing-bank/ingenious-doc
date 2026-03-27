@@ -20,7 +20,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementContainsText`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementContainsText`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -61,7 +61,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementContainsTextIgnoreCase`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementContainsTextIgnoreCase`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -103,7 +103,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementHasAccessibleDescription`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementHasAccessibleDescription`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -143,7 +143,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementHasAccessibleName`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementHasAccessibleName`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -184,7 +184,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementAttributeMatches`](#)  | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementAttributeMatches`](#) | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -226,7 +226,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementClassMatches`](#)  | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementClassMatches`](#)  | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -266,7 +266,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementCountMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementCountMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -307,7 +307,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementCSSMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementCSSMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -351,7 +351,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementIdMatches`](#)  | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementIdMatches`](#)  | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -392,7 +392,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementJSPropertyMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementJSPropertyMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -433,7 +433,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementRoleMatches`](#)  | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementRoleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -472,7 +472,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementTextMatches`](#)  | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementTextMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -512,7 +512,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementValueMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementValueMatches`](#)  | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -554,7 +554,7 @@ icon: material/flask-empty-plus-outline
     | Object    |:green_circle: [`assertElementValuesMatch`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Object    |:green_circle: [`assertElementValuesMatch`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -967,7 +967,7 @@ icon: material/flask-empty-plus-outline
     | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -1006,7 +1006,7 @@ icon: material/flask-empty-plus-outline
     | Browser    |:green_circle: [`assertPageURLMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Browser    |:green_circle: [`assertPageURLMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 

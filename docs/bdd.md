@@ -44,7 +44,7 @@ In order to translate the feature files into an automation scenario, follow the 
     - [ ] The `Features` are imported as **Scenarios** 
     - [ ] All the `Scenarios` are imported as **Test cases**
     - [ ] All the `Steps` in each scenario are imported as **Reusable components** 
-    - [ ] All the `Examples` are imported into **Data Sheets** with the name of the test case
+    - [ ] All the `Examples` are imported into **Datasheets** with the name of the test case
 
  ![featureimport](img/bdd/importfeaturefile.gif "featureimport")   
 

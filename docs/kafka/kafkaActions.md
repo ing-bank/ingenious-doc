@@ -411,7 +411,7 @@
     | Kafka     |:green_circle: [`produceMessage`](#)  | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Kafka     |:green_circle: [`produceMessage`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
-    Inputs in the Input column can be either `hardcoded`, passed inside the **Payload editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the data sheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+    Inputs in the Input column can be either `hardcoded`, passed inside the **Payload editor** which is capable of parameterising the Payload (Press ctrl+space to see the list of variables available ), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -754,7 +754,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Kafka     |:green_circle: [`storeKafkaXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -914,7 +914,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Kafka     |:green_circle: [`storeKafkaResponseInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -1080,7 +1080,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Kafka     |:green_circle: [`storeKafkaJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces.
+    Note: Ensure that your datasheet doesn't contain column names with spaces.
 
 === "Corresponding Code"
 

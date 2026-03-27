@@ -12,7 +12,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeResponseBodyInDataSheet`](#)  | Sheet:Column      |      | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is supposed to be stored*</span>
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -110,7 +110,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeXMLelementInDataSheet'](#)  | Sheet:Column      |  XPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -215,7 +215,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeJSONelementInDataSheet`](#)  | Sheet:Column      |  JSONPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -323,7 +323,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeJsonElementCountInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 
@@ -390,7 +390,50 @@
                     Report.updateTestLog(Action, "Variable format is not correct. Should be %variableName%", Status.DEBUG);
                     return;
                 }
+
+                variableName = variableName.substring(1, variableName.length() - 1);
+
+                if (!response.containsKey(key) && response.get(key) == null) {
+                    Report.updateTestLog(Action, "Response did not contain a valid HttpResponse for key [" + key + "]", Status.FAIL);
+                    return;
+                }
+
+                HttpResponse<?> httpResponse = response.get(key);
+                HttpHeaders responseHeaders = httpResponse.headers();
+
+                List<String> cookieHeaders = !responseHeaders.allValues("set-cookie").isEmpty() ? responseHeaders.allValues("set-cookie") : responseHeaders.allValues("Set-Cookie");
                 
+                if (cookieHeaders.isEmpty()) {
+                    Report.updateTestLog(Action, "No cookies were retrieved from the endpoint", Status.FAIL);
+                    return;
+                }
+
+                for (String cookieHeader : cookieHeaders) {
+                    if (cookieHeader == null || cookieHeader.isEmpty()) continue;
+
+                    String[] cookieParts = cookieHeader.split(";");
+                    if (cookieParts.length == 0) continue;
+
+                    String[] keyValue = cookieParts[0].trim().split("=", 2);
+                    if (keyValue.length != 2) continue;
+
+                    String cookieName  = keyValue[0].trim();
+                    String cookieValue = keyValue[1].trim();
+
+                    if (cookieName.equals(cookieKey)) {
+                        addVar(variableName, cookieValue);
+                        Report.updateTestLog(
+                            Action,
+                            "Cookies with name [" + cookieKey + "] has been added in variable [" 
+                                + variableName + "] with value [" + cookieValue + "] ",
+                            Status.DONE
+                        );
+                        return; // early exit on success
+                    }
+                }
+
+                String cookieValue = null;
+
                 variableName = variableName.substring(1, variableName.length() - 1);
 
                 if (!response.containsKey(key) && response.get(key) == null) {
@@ -513,7 +556,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`storeHeaderByNameInDatasheet`](#)   | Sheet:Column      |  Header Name     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
 
-    Note: Ensure that your data sheet doesn't contain column names with spaces. 
+    Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
 === "Corresponding Code"
 

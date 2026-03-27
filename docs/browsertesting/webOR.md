@@ -98,4 +98,4 @@ There are two types of Web OR that you may use:
 
     ![ExampleImpactedTC](../img/webOR/ExampleImpactedTC.png "ExampleImpactedTC")
 
-    *Suggestion: Before renaming or deleting an object, please use the `Get Impacted Cases` option for checking.*
+    *Suggestion: Before renaming or deleting an object, please use the `Get Impacted TestCases` option for checking.*
