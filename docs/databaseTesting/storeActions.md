@@ -195,3 +195,179 @@
             }
         }
     ```
+
+## **storeDBXMLelementInVariable**
+
+**Description**: This action will evaluate the xml reply for the xpath expressions present in Data/Input - datasheet and store the XML element result into runtime variables. 
+
+**Input Format** : @SheetName:ColumnName  , Condition : %VariableName% 
+
+=== "Usage"
+
+    | ObjectName | Action | Input                             | Condition |
+    |------------|-----------------------------------|-----------|----|
+    | Database   | :green_circle: [`storeDBXMLelementInVariable`](#) | ```@SheetName:ColumnName```   | %variableName%     |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.DATABASE, desc = "Store DB XML Element", input = InputType.YES, condition = InputType.YES)
+    public void storeDBXMLelementInVariable() {
+        try {
+            String variableName = Condition;
+            String expression = Data;
+            if (variableName.matches("%.*%")) {
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder;
+                InputSource inputSource = new InputSource();
+                inputSource.setCharacterStream(new StringReader(replybodies.get(key)));
+                dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(inputSource);
+                doc.getDocumentElement().normalize();
+                XPath xPath = XPathFactory.newInstance().newXPath();
+                NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
+                Node nNode = nodeList.item(0);
+                String value = (nNode != null) ? nNode.getTextContent() : null;
+                addVar(variableName, value);
+                Report.updateTestLog(Action, "DB XML element value stored", Status.DONE);
+            } else {
+                Report.updateTestLog(Action, "Variable format is not correct", Status.DEBUG);
+            }
+        } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException
+                 | SAXException ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            Report.updateTestLog(Action, "Error Storing DB XML element :" + "\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+
+    ```
+
+## **storeResultDBXMLReplyInVariable**
+
+**Description**: This action will store the result- XML Reply if not null or empty of an SQL select statement in a user defined variable. The select query in this case should return a single column, the query may return multiple rows. In case the query returns a single value, the value will be stored in the variable name given (for eg:- var), In case if the select query returns multiple rows, multiple variables will be created by adding indexes to the variable name given and the value will be stored in these variables(for eg:- var1, var2, var3.....)
+
+**Input Format** : @`SQL Query` , Condition : %VariableName% 
+
+=== "Usage"
+
+    | ObjectName | Action | Input                             | Condition |
+    |------------|-----------------------------------|-----------|----|
+    | Database   | :green_circle: [`storeResultDBXMLReplyInVariable`](#) | ```@@select reply.xml_message from job where id=121;"```   | %variableName%     |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.DATABASE, desc = "Query and save the XMLReply in Datasheet ", input = InputType.YES, condition = InputType.YES)
+    public void storeResultDBXMLReplyInVariable() {
+        String variableName = Condition;
+        try {
+            executeSelect();
+            result.last();
+            int totalRows = result.getRow();
+            result.beforeFirst();
+            int totalCols = resultData.getColumnCount();
+            for (int colIndex = 0; colIndex < totalCols; colIndex++) {
+                result.beforeFirst();
+                replybodies.clear();
+                for (int rowIndex = 1; rowIndex <= totalRows; rowIndex++) {
+                    if (result.absolute(rowIndex)) {
+                        String xmlReply = result.getString(colIndex + 1);       
+                        Integer.toString(rowIndex));
+                        String varName = (rowIndex == 1)
+                                ? variableName
+                                : variableName.replaceAll("[%]$", rowIndex + "%");
+                        addVar(varName, result.getString(1));
+                        if (xmlReply != null) {
+                            replybodies.put(key, xmlReply);
+                        }
+                    } else {
+                        Report.updateTestLog(Action, "Row " + rowIndex + " doesn't exist",
+                                Status.FAILNS);
+                        return;
+                    }
+                }
+            }
+            Report.updateTestLog(Action, " SQL Query Reply has been saved in run time variable(s) ",
+                    Status.PASSNS);
+        } catch (SQLException ex) {
+            Report.updateTestLog(Action, "Error executing the SQL Query: " + ex.getMessage(),
+                    Status.FAILNS);
+        }
+
+    }
+    ```
+
+## **storeDBXMLelementListInDataSheet**
+
+**Description**: This action will store the XML element- single or list of XML element values into the specified Datasheet. 
+
+**Input Format** : @SheetName:ColumnName  , Condition : %VariableName% 
+
+=== "Usage"
+
+    | ObjectName | Action | Input                             | Condition |
+    |------------|-----------------------------------|-----------|----|
+    | Database   | :green_circle: [`storeDBXMLelementListInDataSheet`](#) | ```SheetName:ColumnName```   | %variableName%     |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.DATABASE, desc = "Store DB XML ElementList In DataSheet", input = InputType.YES, condition = InputType.YES)
+    public void storeDBXMLelementListInDataSheet() {
+        try {
+            String strObj = Input;
+            if (strObj.matches(".*:.*")) {
+                try {
+                    System.out.println("Updating value in SubIteration " + userData.getSubIteration());
+                    String sheetName = strObj.split(":", 2)[0];
+                    String columnName = strObj.split(":", 2)[1];
+                    String xmlText = replybodies.get(key);
+                    if (xmlText == null) {
+                        Report.updateTestLog(Action, "No XML found for key: " + key, Status.DEBUG);
+                        return;
+                    }
+                    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                    InputSource inputSource = new InputSource(new StringReader(xmlText));
+                    Document doc = dBuilder.parse(inputSource);
+                    doc.getDocumentElement().normalize();
+                    XPath xPath = XPathFactory.newInstance().newXPath();
+                    String[] expressions;
+                    if (Condition != null && (Condition.startsWith("%") || Condition.endsWith("%"))) {
+                        expressions = getVar(Condition).split(";");
+                    } else {
+                        expressions = Condition.split(";");
+                    }
+                    List<String> values = new ArrayList<>();
+                    for (String expr : expressions) {
+                        expr = expr.trim();
+                        if (!expr.isEmpty()) {
+                            System.out.println("Evaluating XPath Expression: " + expr);
+                            NodeList nodeList = (NodeList) xPath.compile(expr).evaluate(doc, XPathConstants.NODESET);
+                            Node nNode = (nodeList != null && nodeList.getLength() > 0) ? nodeList.item(0) : null;
+                            String value = (nNode != null && nNode.getTextContent() != null) ? nNode.getTextContent().trim() : "";
+                            values.add(value);
+                        } else {
+                            values.add(""); 
+                        }
+                    }
+                    String combinedValue = String.join(";", values);
+                    System.out.println("Combined value: " + combinedValue);            
+                    userData.putData(sheetName, columnName, combinedValue);
+                    Report.updateTestLog(Action, "Element texts [" + combinedValue + "] stored in " + strObj, Status.DONE);
+                } catch (IOException | ParserConfigurationException | XPathExpressionException | DOMException |
+                         SAXException ex) {
+                    Logger.getLogger(this.getClass().getName()).log(Level.OFF, ex.getMessage(), ex);
+                    Report.updateTestLog(Action, "Error storing DB XML element List in datasheet:\n" + ex.getMessage(), Status.DEBUG);
+                }
+            } else {
+                Report.updateTestLog(Action,
+                        "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",
+                        Status.DEBUG);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            Report.updateTestLog(Action, "Error storing DB XML element List in datasheet:\n" + ex.getMessage(), Status.DEBUG);
+        }
+    }
+    ```
