@@ -109,7 +109,7 @@ nav:
     - Actions: 
         - General: apiActions/webservice.md
         - Store: apiActions/store.md
-        - Positive Asssertions: apiActions/positiveassertions.md
+        - Positive Assertions: apiActions/positiveassertions.md
         - Negative Assertions: apiActions/negativeassertions.md
  - Message Testing:
     - Premise: messageTesting/index.md
