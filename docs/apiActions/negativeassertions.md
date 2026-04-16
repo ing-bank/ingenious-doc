@@ -41,7 +41,7 @@ icon: material/flask-empty-minus-outline
 
 ## **assertXMLelementNotEquals**
 
-**Description**: This function is used to validate that a certain XML tag of the response body of SOAP request does NOT equal a specified text.
+**Description**: This function is used to validate that a certain XML tag of the response body of SOAP response does NOT equal a specified text.
 
 **Input Format** : @Text that should NOT match
 
