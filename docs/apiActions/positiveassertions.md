@@ -1,4 +1,8 @@
-# Assertion Actions
+---
+icon: material/flask-empty-plus-outline
+---
+
+# Positive Assertions
 
 ## **assertResponseCode**
 
@@ -13,6 +17,8 @@
     | Webservice     |:green_circle: [`assertResponseCode`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`assertResponseCode`](#)  | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertResponseCode`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -50,6 +56,8 @@
     | Webservice     |:green_circle: [`assertResponsebodycontains`](#)    | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertResponsebodycontains`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
 === "Corresponding Code"
 
     ```java
@@ -84,6 +92,8 @@
     | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertXMLelementEquals`](#)   | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -133,6 +143,8 @@
     | Webservice     |:green_circle: [`assertXMLelementContains`](#)   | @value       |  XPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`assertXMLelementContains`](#)    | Sheet:Column |XPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertXMLelementContains`](#)    | %dynamicVar% |XPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -184,6 +196,8 @@
     | Webservice     |:green_circle: [`assertJSONelementEquals`](#)  | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertJSONelementEquals`](#)  | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
 === "Corresponding Code"
 
     ```java
@@ -224,6 +238,8 @@
     | Webservice     |:green_circle: [`assertJSONelementContains`](#)   | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertJSONelementContains`](#)   | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
 === "Corresponding Code"
 
     ```java
@@ -263,6 +279,8 @@
     | Webservice     |:green_circle: [`assertJSONelementCount`](#)   | @value       |  JSONPath     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`assertJSONelementCount`](#)    | Sheet:Column |JSONPath| |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | Webservice     |:green_circle: [`assertJSONelementCount`](#)    | %dynamicVar% |JSONPath| |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
@@ -322,6 +340,8 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`assertHeaderValueContains`](#)   | @value       |  Header Name     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
 
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
 === "Corresponding Code"
 
     ```java
@@ -378,6 +398,7 @@
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`assertHeaderValueEquals`](#)   | @value       |  Header Name     | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
 
+    Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
 === "Corresponding Code"
 
