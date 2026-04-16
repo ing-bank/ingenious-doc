@@ -144,7 +144,7 @@ icon: material/flask-empty-minus-outline
 
 ## **assertJSONelementNotEquals**
 
-**Description**:  This function is used to validate that a certain JSON tag of the response body of REST request does NOT equal a specified text.
+**Description**:  This function is used to validate that a certain JSON tag of the response body of REST reponse does NOT equal a specified text.
 
 **Input Format** : @Text that should NOT match
 
