@@ -186,7 +186,7 @@ icon: material/flask-empty-minus-outline
 
 ## **assertJSONelementNotContains**
 
-**Description**:  This function is used to validate that a certain JSON tag of the response body of REST request does NOT contain a specified text.
+**Description**:  This function is used to validate that a certain JSON tag of the response body of REST reponse does NOT contain a specified text.
 
 **Input Format** : @Text that should NOT be present
 
