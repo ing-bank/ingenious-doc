@@ -6,7 +6,7 @@ icon: material/flask-empty-minus-outline
 
 ## **assertResponsebodyNotContains**
 
-**Description**: This function is used to validate that the response body of SOAP/REST request does NOT contain a specified text.
+**Description**: This function is used to validate that the response body of SOAP/REST response does NOT contain a specified text.
 
 **Input Format** : @Text that should NOT be present
 
