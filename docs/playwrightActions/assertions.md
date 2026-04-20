@@ -294,15 +294,17 @@ icon: material/check-all
 
 **Description**:  This function will assert if the Element has the expected CSS attribute
 
-**Input Format** :   @Expected Text
+**Input Format** :   `CSS Name=CSS Value`
+
+**Condition Format** : (Optional)  Timeout Value (in ms)
 
 === "Usage"
 
-    | ObjectName | Action                     | Input         | Condition |Reference|  |
+    | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser     |:green_circle: [`assertElementCSSMatches`](#)  | @value       |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser     |:green_circle: [`assertElementCSSMatches`](#)   | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser     |:green_circle: [`assertElementCSSMatches`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Object    |:green_circle: [`assertElementCSSMatches`](#)  | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Object    |:green_circle: [`assertElementCSSMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Object    |:green_circle: [`assertElementCSSMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -310,18 +312,26 @@ icon: material/check-all
 
     ```java
     @Action(object = ObjectType.PLAYWRIGHT, desc = "Assert if [<Object>] has the CSS [<Data>]", input = InputType.YES)
-        public void assertElementCSSMatches() {
-            String attributeName = Data.split(",")[0];
-            String attributeValue = Data.split(",")[1];
-            try {
-                assertThat(Locator).hasCSS(attributeName, attributeValue);
-                Report.updateTestLog(Action, "[" + ObjectName + "] has CSS attribute '" + attributeName + "' with value '" + attributeValue + "'", Status.PASS);
-            } catch (PlaywrightException e) {
-                PlaywrightExceptionLogging(e);
-            } catch (AssertionFailedError err) {
-                assertionLogging(err, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'");
-            }
+    public void assertElementCSSMatches() {
+        String attributeName = Data.split("=", 2)[0];
+        String attributeValue = Data.split("=", 2)[1];
+        String value = "";
+        try {
+            LocatorAssertions.HasCSSOptions options = new LocatorAssertions.HasCSSOptions();
+            options.setTimeout(getTimeoutValue());
+            value = (String) Locator.evaluate("(element) => window.getComputedStyle(element).getPropertyValue('" + attributeName + "')");
+            highlightElement();
+            assertThat(Locator).hasCSS(attributeName, attributeValue, options);
+            Report.updateTestLog(Action, "[" + ObjectName + "] has CSS attribute '" + attributeName + "' with value '" + attributeValue + "'", Status.PASS);
+        } catch (PlaywrightException e) {
+            PlaywrightExceptionLogging(e);
+        } catch (AssertionFailedError err) {
+            assertionLogging(err, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'. Actual value is '" + value + "'");
+        } finally {
+            removeHighlightFromElement();
         }
+    }
+
     ```
 ----------------------------------
 
@@ -329,15 +339,17 @@ icon: material/check-all
 
 **Description**:  This function will assert if the Element does not have the expected CSS attribute
 
-**Input Format** :   @Expected Text
+**Input Format** :   `CSS Name=CSS Value`
+
+**Condition Format** : (Optional)  Timeout Value (in ms)
 
 === "Usage"
 
-    | ObjectName | Action                     | Input         | Condition |Reference|  |
+    | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser     |:green_circle: [`assertElementCSSNotMatches`](#)   | @value       |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser     |:green_circle: [`assertElementCSSNotMatches`](#)  | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser     |:green_circle: [`assertElementCSSNotMatches`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Object    |:green_circle: [`assertElementCSSNotMatches`](#)  | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Object    |:green_circle: [`assertElementCSSNotMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Object    |:green_circle: [`assertElementCSSNotMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -345,18 +357,25 @@ icon: material/check-all
 
     ```java
     @Action(object = ObjectType.PLAYWRIGHT, desc = "Assert if [<Object>] does not have the CSS [<Data>]", input = InputType.YES)
-        public void assertElementCSSNotMatches() {
-            String attributeName = Data.split(",")[0];
-            String attributeValue = Data.split(",")[1];
-            try {
-                assertThat(Locator).not().hasCSS(attributeName, attributeValue);
-                Report.updateTestLog(Action, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'", Status.PASS);
-            } catch (PlaywrightException e) {
-                PlaywrightExceptionLogging(e);
-            } catch (AssertionFailedError err) {
-                assertionLogging(err, "[" + ObjectName + "] has CSS attribute '" + attributeName + "' with value '" + attributeValue + "'");
-            }
+    public void assertElementCSSNotMatches() {
+        String attributeName = Data.split("=")[0];
+        String attributeValue = Data.split("=")[1];
+        String value = "";
+        try {
+            LocatorAssertions.HasCSSOptions options = new LocatorAssertions.HasCSSOptions();
+            options.setTimeout(getTimeoutValue());
+            value = (String) Locator.evaluate("(element) => window.getComputedStyle(element).getPropertyValue('" + attributeName + "')");
+            highlightElement();
+            assertThat(Locator).not().hasCSS(attributeName, attributeValue, options);
+            Report.updateTestLog(Action, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'. Actual value is '" + value + "'", Status.PASS);
+        } catch (PlaywrightException e) {
+            PlaywrightExceptionLogging(e);
+        } catch (AssertionFailedError err) {
+            assertionLogging(err, "[" + ObjectName + "] has CSS attribute '" + attributeName + "' with value '" + attributeValue + "'");
+        } finally {
+            removeHighlightFromElement();
         }
+    }
     ```
 ----------------------------------
 

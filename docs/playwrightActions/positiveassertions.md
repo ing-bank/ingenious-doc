@@ -314,21 +314,22 @@ icon: material/flask-empty-plus-outline
     ```java
     @Action(object = ObjectType.PLAYWRIGHT, desc = "Assert if [<Object>] has the CSS [<Data>]", input = InputType.YES)
     public void assertElementCSSMatches() {
-        String attributeName = Data.split("=",2)[0];
-        String attributeValue = Data.split("=",2)[1];
+        String attributeName = Data.split("=", 2)[0];
+        String attributeValue = Data.split("=", 2)[1];
         String value = "";
         try {
             LocatorAssertions.HasCSSOptions options = new LocatorAssertions.HasCSSOptions();
             options.setTimeout(getTimeoutValue());
-            assertThat(Locator).hasCSS(attributeName, attributeValue, options);
-            value = (String) Locator.evaluate("(element) => window.getComputetStyle(element).getPropertyValue("+attributeName+")");
+            value = (String) Locator.evaluate("(element) => window.getComputedStyle(element).getPropertyValue('" + attributeName + "')");
             highlightElement();
+            assertThat(Locator).hasCSS(attributeName, attributeValue, options);
             Report.updateTestLog(Action, "[" + ObjectName + "] has CSS attribute '" + attributeName + "' with value '" + attributeValue + "'", Status.PASS);
-            removeHighlightFromElement();
         } catch (PlaywrightException e) {
             PlaywrightExceptionLogging(e);
         } catch (AssertionFailedError err) {
-            assertionLogging(err, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'. Actual value is '"+value+"'");
+            assertionLogging(err, "[" + ObjectName + "] does not have CSS attribute '" + attributeName + "' with value '" + attributeValue + "'. Actual value is '" + value + "'");
+        } finally {
+            removeHighlightFromElement();
         }
     }
 
