@@ -1,3 +1,7 @@
+---
+icon: octicons/file-added-16
+---
+
 # Store Actions
 
 ## **storeResponseBodyInDataSheet**
