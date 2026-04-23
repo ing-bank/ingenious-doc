@@ -388,6 +388,54 @@ icon: simple/databricks
     ```
 ------------------------------------------------------
 
+## **storeElementCSSValueinVariable**
+
+**Description**: This function will **store element's CSS value** in a variable
+
+**Input Format** : DatasheetName:ColumnName
+
+**Condition** : Name of the **CSS attribute** to retrieve
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Object     |:green_circle: [`storeElementCSSValueinVariable`](#)  |  DatasheetName:ColumnName   |  CSSAttribute  | PageName|
+
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.PLAYWRIGHT, desc = "Store [<Object>] element's  CSS value  into Runtime variable: -> [<Data>]", input = InputType.YES, condition=InputType.YES)
+    public void storeElementCSSValueinVariable() {
+        
+        String cssValue = "";
+        String strObj = Input;
+        try {
+            cssValue = (String) Locator.evaluate("(element) => window.getComputedStyle(element).getPropertyValue('" + Condition + "')");
+            if (strObj.matches(".*:.*")) {
+                String sheetName = strObj.split(":", 2)[0];
+                String columnName = strObj.split(":", 2)[1];
+                userData.putData(sheetName, columnName, cssValue);
+                Report.updateTestLog(Action, "Element's '" + Condition + "' value [" + cssValue + "] is stored in " + strObj, Status.DONE);
+            } else {
+                Report.updateTestLog(Action,
+                        "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",
+                        Status.DEBUG);
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(JSCommands.class.getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Javascript execution failed", Status.DEBUG);
+
+        }
+    }
+
+    ```
+------------------------------------------------------
+
+
+
 ## **StoreElementCount**
 
 **Description**: This function will **store element's count** in a variable
