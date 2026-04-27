@@ -378,3 +378,27 @@
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
 
  ------   
+??? example "Store Epoch Timestamp In Variable"
+
+    ## Store Epoch Timestamp In Variable
+
+    This action allows you to store the current epoch timestamp (milliseconds since 1 January 1970 UTC) into a runtime variable or a target datasheet for use in your test case.
+
+    **When to use**
+
+    Use this when you need to capture the current time in your test execution, for example, to generate unique values, measure durations, or pass timestamps between steps or test cases.
+
+    **How to store the epoch timestamp**
+
+    - Use the action **storeEpochTimestampInVariable**.
+    - In the **Input** field, specify the variable name or target Test Datasheet column where you want to store the epoch timestamp.
+    - The action will automatically store the current epoch timestamp at the moment of execution.
+
+    **Example**
+
+    - Set **Input** to `%myEpoch%` to store the timestamp in a variable called `myEpoch`.
+    - Set **Input** to a datasheet column name to store the timestamp in the datasheet for the current iteration/sub-iteration.
+
+    ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
+
+    > **Note:** The stored value will be in milliseconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
