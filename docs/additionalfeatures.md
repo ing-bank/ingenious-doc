@@ -396,7 +396,7 @@
 
     **Example**
 
-    - Set **Input** to `%myEpoch%` to store the timestamp in a variable called `myEpoch`.
+    - Set **Input** to `%myEpoch%` to store the timestamp in a variable named `myEpoch`.
 
     ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
