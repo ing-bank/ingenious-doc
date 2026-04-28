@@ -382,7 +382,7 @@
 
     ## Store Epoch Timestamp In Variable
 
-    This action allows you to store the current epoch timestamp (milliseconds since 1 January 1970 UTC) into a runtime variable or a target datasheet for use in your test case.
+    This action allows you to store the current epoch timestamp (seconds since 1 January 1970 UTC) into a runtime variable or a target datasheet for use in your test case.
 
     **When to use**
 
@@ -397,8 +397,7 @@
     **Example**
 
     - Set **Input** to `%myEpoch%` to store the timestamp in a variable called `myEpoch`.
-    - Set **Input** to a datasheet column name to store the timestamp in the datasheet for the current iteration/sub-iteration.
 
     ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
-    > **Note:** The stored value will be in milliseconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
+    > **Note:** The stored value will be in seconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
