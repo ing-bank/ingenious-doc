@@ -400,4 +400,4 @@
 
     ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
-    > **Note:** The stored value will be in seconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
+    > **Note:** The stored value is in seconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
