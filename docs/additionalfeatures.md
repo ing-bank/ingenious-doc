@@ -382,7 +382,7 @@
 
     ## Store Epoch Timestamp In Variable
 
-    This action allows you to store the current epoch timestamp (seconds since 1 January 1970 UTC) into a runtime variable or a target datasheet for use in your test case.
+    This action allows you to store the current epoch timestamp (seconds since 1 January 1970 UTC) into a runtime variable for use in your test case.
 
     **When to use**
 
@@ -391,7 +391,7 @@
     **How to store the epoch timestamp**
 
     - Use the action **storeEpochTimestampInVariable**.
-    - In the **Input** field, specify the variable name or target Test Datasheet column where you want to store the epoch timestamp.
+    - In the **Input** field, specify the variable name where you want to store the epoch timestamp.
     - The action will automatically store the current epoch timestamp at the moment of execution.
 
     **Example**
