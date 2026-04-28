@@ -382,22 +382,39 @@
 
     ## Store Epoch Timestamp In Variable
 
-    This action allows you to store the current epoch timestamp (seconds since 1 January 1970 UTC) in a runtime variable for use in your test case.
+    This action allows you to store the current Unix/Epoch timestamp (time since 1 January 1970 00:00:00 UTC) into a runtime variable with flexible format options.
 
     **When to use**
 
-    Use this when you need to capture the current time in your test execution, for example, to generate unique values, measure durations, or pass timestamps between steps or test cases.
+    Use this when you need to capture the current time in your test execution, for example, to generate unique values, measure durations, compare timestamps, or pass time data between steps or test cases.
 
-    **How to store the epoch timestamp**
+    **Timestamp Format Options**
+
+    The action supports three different timestamp formats:
+
+    | Format | Description | Example Value |
+    |--------|-------------|---------------|
+    | **Seconds** | Epoch time in seconds | 1714176000 |
+    | **Milliseconds** | Epoch time in milliseconds | 1714176000000 |
+    | **Seconds+Milliseconds** | Epoch seconds with 3 decimal places for millisecond precision | 1714176000.123 |
+
+    **How to store the Unix timestamp**
 
     - Use the action **storeEpochTimestampInVariable**.
-    - In the **Input** field, specify the variable name where you want to store the epoch timestamp.
-    - The action stores the current epoch timestamp at execution time.
+    - In the **Input** field, specify the format option: `Seconds`, `Milliseconds`, or `Seconds+Milliseconds` (case-insensitive).
+    - In the **Condition** field, specify the variable name where you want to store the timestamp.
+    - The action will automatically capture and store the current timestamp at the moment of execution.
 
-    **Example**
+    **Examples**
 
-    - Set **Input** to `%myEpoch%` to store the timestamp in a variable named `myEpoch`.
+    === "Usage"
+        | Input (Format) | Condition (Variable) | Result |
+        |----------------|---------------------|--------|
+        | `seconds` | `%EpochSeconds%` | Stores epoch in seconds (e.g., 1714176000) |
+        | `milliseconds` | `%EpochMillis%` | Stores epoch in milliseconds (e.g., 1714176000000) |
+        | `seconds+milliseconds` | `%EpochPrecise%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
 
-    ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
+    === "Sample"
+        ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
-    > **Note:** The stored value is in seconds. You can use this variable in subsequent steps for assertions, calculations, or as part of generated data.
+    > **Note:** Choose the format based on your requirements. Use **Seconds** for most general purposes, **Milliseconds** for high-precision timing, or **Seconds+Milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
