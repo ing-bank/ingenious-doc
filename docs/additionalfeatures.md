@@ -391,9 +391,9 @@
 
     **Required Variables**
 
-    - `%filePath%`, `%filePath2%`, `%filePath3%`, ... : Each variable should contain the absolute path to a file you want to upload. You can define as many as needed for your scenario.
+    - `%filePath%`, `%filePath1%`, `%filePath2%`, ... : Each variable should contain the absolute path to a file you want to upload. You can define as many as needed for your scenario.
 
-    **How to upload files**
+    **How to use**
 
     1. Set the endpoint using `setEndPoint`.
     2. Add the header `Content-Type=multipart/form-data` using `addHeader`.
