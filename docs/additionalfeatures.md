@@ -392,7 +392,7 @@
 
     - Use the action **storeEpochTimestampInVariable**.
     - In the **Input** field, specify the variable name where you want to store the epoch timestamp.
-    - The action will automatically store the current epoch timestamp at the moment of execution.
+    - The action stores the current epoch timestamp at execution time.
 
     **Example**
 
