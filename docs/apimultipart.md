@@ -1,7 +1,7 @@
 # **API Multipart File Upload**
 -----------------------------
 
-!!! info "Multipart Files Upload"
+!!! info "Multipart File Upload"
     This feature allows you to upload one or more files in a single multipart request using the Webservice object. The `postRestRequest` action automatically detects variables representing file paths and includes them as multipart file parts in the request.
 
 -----------------------------------
