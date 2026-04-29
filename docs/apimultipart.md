@@ -23,7 +23,7 @@
 2. Add the header `Content-Type=multipart/form-data` using `addHeader`.
 3. Use `AddVar` to define each file path variable (e.g., `%filePath%`, `%filePath2%`).
 4. You can also use action `addUrlParam` (Input - `@key=value`) to add each text field to combine both files and text data in a single request.
-5. Call `postRestRequest` with `{}` as input. The engine will automatically include all file path variables as multipart file parts.
+5. Call `postRestRequest` with `{}` as input. The action will automatically include all file path variables as multipart file parts.
 6. Assert the response code and close the connection as usual.
 
 === "Single File Upload"
