@@ -111,6 +111,7 @@ nav:
         - Store: apiActions/store.md
         - Positive Assertions: apiActions/positiveassertions.md
         - Negative Assertions: apiActions/negativeassertions.md
+    - Multipart Files Upload: apimultipart.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
