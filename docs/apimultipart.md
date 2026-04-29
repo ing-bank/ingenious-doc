@@ -1,4 +1,4 @@
-# **API Multipart Files Upload**
+# **API Multipart File Upload**
 -----------------------------
 
 !!! info "Multipart Files Upload"
