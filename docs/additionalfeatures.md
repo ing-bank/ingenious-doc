@@ -394,14 +394,14 @@
 
     | Format | Description | Example Value |
     |--------|-------------|---------------|
-    | **Seconds** | Epoch time in seconds | 1714176000 |
-    | **Milliseconds** | Epoch time in milliseconds | 1714176000000 |
-    | **Seconds+Milliseconds** | Epoch seconds with 3 decimal places for millisecond precision | 1714176000.123 |
+    | **seconds** | Epoch time in seconds | 1714176000 |
+    | **milliseconds** | Epoch time in milliseconds | 1714176000000 |
+    | **seconds+milliseconds** | Epoch seconds with 3 decimal places for millisecond precision | 1714176000.123 |
 
     **How to store the Unix timestamp**
 
     - Use the action **storeEpochTimestampInVariable**.
-    - In the **Input** field, specify the format option: `Seconds`, `Milliseconds`, or `Seconds+Milliseconds` (case-insensitive).
+    - In the **Input** field, specify the format option: `seconds`, `milliseconds`, or `seconds+milliseconds` (case-insensitive).
     - In the **Condition** field, specify the variable name where you want to store the timestamp.
     - The action will automatically capture and store the current timestamp at the moment of execution.
 
@@ -417,4 +417,4 @@
     === "Sample"
         ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
-    > **Note:** Choose the format based on your requirements. Use **Seconds** for most general purposes, **Milliseconds** for high-precision timing, or **Seconds+Milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
+    > **Note:** Choose the format based on your requirements. Use **seconds** for most general purposes, **milliseconds** for high-precision timing, or **seconds+milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
