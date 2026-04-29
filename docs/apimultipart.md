@@ -17,7 +17,7 @@
     - `%filePath%`, `%filePath1%`, `%filePath2%`, ... : Each variable should contain the absolute path to a file you want to upload. You can define as many as needed for your scenario.
 
 -----------------------------------
-## How to use multipart files upload
+## How to use multipart file upload
 
 1. Set the endpoint using `setEndPoint`.
 2. Add the header `Content-Type=multipart/form-data` using `addHeader`.
