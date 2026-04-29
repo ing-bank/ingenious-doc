@@ -30,7 +30,7 @@
 
     ![singleFileUpload](img/api/multipart-single-upload.png "Single File Upload Example")
 
-=== "Multiple File Upload"
+=== "Multiple Files Upload"
 
     ![multipartUpload](img/api/multipart-multi-upload.png "Multiple Files Upload Example")
 
