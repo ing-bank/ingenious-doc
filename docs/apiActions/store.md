@@ -489,6 +489,8 @@ icon: octicons/file-added-16
 
 ## **storeHeaderByNameInVariable**
 
+**Since** <span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span>
+
 **Description**: This function is used to store a specific header value from the REST/SOAP response, into a variable.
 
 **Input Format** : @Header Name
