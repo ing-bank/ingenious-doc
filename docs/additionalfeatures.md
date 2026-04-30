@@ -400,19 +400,20 @@
 
     **How to store the Unix timestamp**
 
-    - Use the action **storeEpochTimestampInVariable**.
-    - In the **Input** field, specify the format option: `seconds`, `milliseconds`, or `seconds+milliseconds` (case-insensitive).
-    - In the **Condition** field, specify the variable name where you want to store the timestamp.
-    - The action will automatically capture and store the current timestamp at the moment of execution.
+    - In **ObjectName** field, select **General**.  
+    - In the **Action** field, select **storeEpochTimestampInVariable**.  
+    - In the **Input** field, specify the format option: `seconds`, `milliseconds`, or `seconds+milliseconds` (case-insensitive).  
+    - In the **Condition** field, specify the variable name where you want to store the timestamp.  
+    - The action will automatically capture and store the current timestamp at the moment of execution.  
 
     **Examples**
 
     === "Usage"
         | Input (Format) | Condition (Variable) | Result |
         |----------------|---------------------|--------|
-        | `seconds` | `%EpochSeconds%` | Stores epoch in seconds (e.g., 1714176000) |
-        | `milliseconds` | `%EpochMillis%` | Stores epoch in milliseconds (e.g., 1714176000000) |
-        | `seconds+milliseconds` | `%EpochPrecise%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
+        | `seconds` | `%varName%` | Stores epoch in seconds (e.g., 1714176000) |
+        | `milliseconds` | `%varName%` | Stores epoch in milliseconds (e.g., 1714176000000) |
+        | `seconds+milliseconds` | `%varName%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
 
     === "Sample"
         ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
