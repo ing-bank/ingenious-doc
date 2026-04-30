@@ -378,3 +378,44 @@
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
 
  ------   
+??? example "Store Epoch Timestamp In Variable"
+
+    ## Store Epoch Timestamp In Variable
+
+    This action allows you to store the current Unix/Epoch timestamp (time since 1 January 1970 00:00:00 UTC) into a runtime variable with flexible format options.
+
+    **When to use**
+
+    Use this when you need to capture the current time in your test execution, for example, to generate unique values, measure durations, compare timestamps, or pass time data between steps or test cases.
+
+    **Timestamp Format Options**
+
+    The action supports three different timestamp formats:
+
+    | Format | Description | Example Value |
+    |--------|-------------|---------------|
+    | **seconds** | Epoch time in seconds | 1714176000 |
+    | **milliseconds** | Epoch time in milliseconds | 1714176000000 |
+    | **seconds+milliseconds** | Epoch seconds with 3 decimal places for millisecond precision | 1714176000.123 |
+
+    **How to store the Unix timestamp**
+
+    - In **ObjectName** field, select **General**.  
+    - In the **Action** field, select **storeEpochTimestampInVariable**.  
+    - In the **Input** field, specify the format option: `seconds`, `milliseconds`, or `seconds+milliseconds` (case-insensitive).  
+    - In the **Condition** field, specify the variable name where you want to store the timestamp.  
+    - The action will automatically capture and store the current timestamp at the moment of execution.  
+
+    **Examples**
+
+    === "Usage"
+        | Input (Format) | Condition (Variable) | Result |
+        |----------------|---------------------|--------|
+        | `seconds` | `%varName%` | Stores epoch in seconds (e.g., 1714176000) |
+        | `milliseconds` | `%varName%` | Stores epoch in milliseconds (e.g., 1714176000000) |
+        | `seconds+milliseconds` | `%varName%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
+
+    === "Sample"
+        ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
+
+    > **Note:** Choose the format based on your requirements. Use **seconds** for most general purposes, **milliseconds** for high-precision timing, or **seconds+milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
