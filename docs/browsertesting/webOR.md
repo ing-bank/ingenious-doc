@@ -80,7 +80,7 @@ There are two types of Web OR that you may use:
 
     ![SharedWebORYAML](../img/webOR/SharedWebORYAML.png "SharedWebORYAML")
 
-    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `Shared\SharedXMLOR\.`
+    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `Shared\SharedXMLOR\`
 
     ![SharedWebORXMLconverted](../img/webOR/SharedWebORXMLconverted.png "SharedWebORXMLconverted")
 

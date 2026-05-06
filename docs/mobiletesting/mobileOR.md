@@ -72,17 +72,17 @@ INGenious supports the same two‑repository model for Mobile OR as it does for 
 
     ![ExampleSharedMobileOR](../img/mobileOR/SharedMobileOR.png "ExampleSharedMobileOR")
     
-    Similar to Project MobileOR, **for projects created before version 3.0**, a`SharedMobileOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from `Project` to `Shared`. Like `MobileOR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedMobileObjects\` directory.
+    Similar to Project MobileOR, **for projects created before version 3.0**, a `SharedMobileOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from `Project` to `Shared`. Like `MobileOR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedMobileObjects\` directory.
 
     ![SharedMOR.object](../img/mobileOR/SharedMORObject.png "SharedMOR.object")
 
-    **For projects created in version 3.0**, a YAML file is automatically generated for each page—either upon page creation under `Shared` or when pages or objects are moved from `Project` to `Shared`. This file contains the page’s objects and their corresponding attributes and is stored in the `Shared\SharedObjectRepository\Mobile` directory. The `mobileor-projectsdata.yaml` file maintains the list of projects that use the Shared Web Objects.
+    **For projects created in version 3.0**, a YAML file is automatically generated for each page—either upon page creation under `Shared` or when pages or objects are moved from `Project` to `Shared`. This file contains the page’s objects and their corresponding attributes and is stored in the `Shared\SharedObjectRepository\Mobile` directory. The `mobileor-projectsdata.yaml` file maintains the list of projects that use the Shared Mobile Objects.
 
     ![SharedMobileORYAML](../img/mobileOR/SharedMobileORYAML.png "SharedMobileORYAML")
 
-    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `Shared\SharedXMLOR\.`
+    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `Shared\SharedXMLOR\`
 
-    ![SharedMolbileORXMLconverted](../img/mobileOR/SharedMolbileORXMLconverted.png "SharedMolbileORXMLconverted")
+    ![SharedMobileORXMLconverted](../img/mobileOR/SharedMobileORXMLconverted.png "SharedMobileORXMLconverted")
 
     When a Shared Mobile Object (SMO) is used in a test step, the identifier **[Shared] PageName** will show as its reference.
 
