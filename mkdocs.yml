@@ -126,6 +126,26 @@ nav:
     - Actions: 
         - General Actions: databaseTesting/dbActions.md
         - Data Storage: databaseTesting/storeActions.md
+ - SAP Testing:
+    - Create your first SAP Test: sapTesting/sap.md
+    - Import SAP Scripting Recording: 
+        - Java / Java Shell: sapTesting/importsaprecording-java.md
+    - Actions: 
+        - Session transaction: sapTesting/actions/session-transaction.md
+        - Window: sapTesting/actions/window-management.md
+        - Text field: sapTesting/actions/text-field.md
+        - Button: sapTesting/actions/button.md
+        - Checkbox & Radio: sapTesting/actions/checkbox-radio.md
+        - ComboBox/Dropdown: sapTesting/actions/combobox-dropdown.md
+        - Tab: sapTesting/actions/tab.md
+        - Table Control: sapTesting/actions/table-control.md
+        - Grid/ALV: sapTesting/actions/grid-alv.md
+        - Menu & Toolbar: sapTesting/actions/menu-toolbar.md
+        - Context Menu: sapTesting/actions/context-menu.md
+        - Tree Control: sapTesting/actions/tree-control.md
+        - Status Bar: sapTesting/actions/status-bar.md
+        - General Element: sapTesting/actions/general-element.md
+        - Assert: sapTesting/actions/assert.md
  - Synthetic Data:
     - Premise: syntheticData/index.md
     - Synthetic Data Generation Actions: 
