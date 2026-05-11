@@ -6,7 +6,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapFill**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Enter the value in the field.
 
@@ -37,7 +37,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapEnter**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Press Enter key in the field.
 
@@ -66,7 +66,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapClick**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Click/Press button.
 
@@ -95,7 +95,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapDoubleClick**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Double-click on element.
 
@@ -124,7 +124,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapPressButton**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Press button by ID or function code.
 
@@ -156,7 +156,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 
 
 ### **sapSetFocus**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Set focus on element.
 
@@ -185,7 +185,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapMaximizeWindow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Input Format**: None
 
@@ -212,7 +212,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapMinimizeWindow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Minimize SAP window.
 
@@ -241,7 +241,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapRestoreWindow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Restore SAP window to normal size.
 
@@ -270,7 +270,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapExpandTreeNode**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Expand tree node.
 
@@ -301,7 +301,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapCollapseTreeNode**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Collapse tree node.
 
@@ -332,7 +332,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapGetStatusBarText**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Get status bar text.
 
@@ -361,7 +361,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ------
 
 ### **sapPressContextButton**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 
 **Description**: Press context button with parameter.
@@ -393,7 +393,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapOpenComboBox**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Open dropdown list.
 
@@ -422,7 +422,7 @@ This section documents general SAP element actions for SAP GUI automation in ING
 ---
 
 ### **sapCloseComboBox**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Close dropdown list.
 

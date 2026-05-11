@@ -6,6 +6,8 @@ This section documents SAP session and transaction management actions for SAP GU
 ---
 
 ### **sapExecuteTransaction**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
+
 **Description**: Execute an SAP transaction code (e.g., `VA01`, `ME23N`).
 
 **Input Format**: Transaction code (e.g., `VA01`)
@@ -35,6 +37,8 @@ This section documents SAP session and transaction management actions for SAP GU
 ---
 
 ### **sapEndTransaction**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
+
 **Description**: End the current SAP transaction.
 
 **Input Format**: None
@@ -62,6 +66,8 @@ This section documents SAP session and transaction management actions for SAP GU
 ---
 
 ### **sapRefreshSession**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
+
 **Description**: Refresh the SAP session.
 
 **Input Format**: None

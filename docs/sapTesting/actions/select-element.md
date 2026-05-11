@@ -6,7 +6,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectDropDownByText**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select dropdown value by visible text.
 
@@ -37,7 +37,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectDropDownByKey**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select dropdown value by key (internal value).
 
@@ -68,7 +68,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectDropDownByIndex**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select dropdown value by index.
 
@@ -99,7 +99,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectCheckBox**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select or deselect a checkbox.
 
@@ -130,7 +130,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectRadioButtonInRow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select radio button in table row.
 
@@ -161,7 +161,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectTableRow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select table row.
 
@@ -192,7 +192,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ------
 
 ### **sapSelect**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select a tab.
 
@@ -221,7 +221,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectMenuItem**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select menu item.
 
@@ -250,7 +250,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectGridRow**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select ALV grid row.
 
@@ -281,7 +281,7 @@ This section documents SAP general element select actions for SAP GUI automation
 ---
 
 ### **sapSelectContextMenuItem**
-**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: Select context menu item.
 
