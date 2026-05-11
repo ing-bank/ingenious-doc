@@ -13,6 +13,6 @@
 
  * The file is immediately rendered as a **Scenario** and **Test Case**. All the relevant **test steps** with all the **SAP objects** are imported.
 
- * All the objects are loaded in the **Object Repository**.
+ * All the objects are loaded in the **SAP Object Repository**.
 
  ![SAP Recorder Import .jsh file](../img/sap/SAPRecording.gif "SAP Recorder Import .jsh file")

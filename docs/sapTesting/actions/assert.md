@@ -6,6 +6,8 @@ This section documents SAP assert actions for SAP GUI automation in INGenious.
 ---
 
 ### **sapAssertElementTextContains**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v2.4" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">2.4</span></span></a>
+
 **Description**: Assert that an element contains the specified text.
 
 **Input Format**: Text value to assert (e.g., `Success`)
