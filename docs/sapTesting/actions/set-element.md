@@ -1,9 +1,8 @@
-# **General Element Set Actions**
-------------------------
-
-This section documents SAP general element set actions for SAP GUI automation in INGenious.
-
 ---
+icon: material/text
+---
+
+# **General Element Set Actions**
 
 ### **sapSetFocus**
 **Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>

@@ -1,9 +1,8 @@
-# **Assert Actions**
-------------------------
-
-This section documents SAP assert actions for SAP GUI automation in INGenious.
-
 ---
+icon: material/flask-empty-plus-outline
+---
+
+# **Assert Actions**
 
 ### **sapAssertElementTextContains**
 **Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>

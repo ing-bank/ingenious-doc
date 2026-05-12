@@ -1,7 +1,24 @@
-# **Working with SAP**
---------------------------------
+# **SAP Testing**
+-----------------------------
 
-## Create your first SAP Test
+!!! info "What is SAP Testing?"
+	SAP Testing is the process of validating business processes and workflows in SAP GUI applications to ensure they work as intended. Automated SAP Testing helps catch issues early, improves reliability, and accelerates delivery of SAP-based solutions.
+
+-----------------------------------
+
+!!! abstract "How does INGenious perform SAP Testing?"
+
+	INGenious automates SAP GUI testing by driving the SAP GUI client using Java and the JACOB (Java COM Bridge) library. It interacts with SAP GUI elements, performs actions (like fill, click, select), and validates results just as a user would. 
+
+    - The framework supports:
+        - Automated login and navigation
+        - Data entry and extraction
+        - Validation of SAP screen values and business rules
+        - Integration of SAP steps in a single test
+
+-----------------------------------
+
+## Set up SAP Configuration
 
 Follow the steps below to create an SAP-based test case in INGenious.
 
@@ -25,9 +42,10 @@ Follow the steps below to create an SAP-based test case in INGenious.
 
 * Click on **Save** button to save your SAP Configuration.
 
-> **Note:**   
- - Make sure you have the correct SAP connection details from your SAP GUI.   
- - SAP Testing in INGenious is integrated using the [JACOB (Java COM Bridge)](https://sourceforge.net/projects/jacob-project/) library. This is why you must provide the correct path to the JACOB DLL and library files in your configuration. JACOB enables Java to communicate with the SAP GUI via COM automation.
+
+!!! note "Note"
+	- Make sure you have the correct SAP connection details from your SAP GUI.
+	- SAP Testing in INGenious is integrated using the [JACOB (Java COM Bridge)](https://sourceforge.net/projects/jacob-project/) library to enable Java to communicate with the SAP GUI via COM automation. This is why you must provide the correct path to the JACOB DLL and library files in your configuration.
 
 ---------------------------     
 

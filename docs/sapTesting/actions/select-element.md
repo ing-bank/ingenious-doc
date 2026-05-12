@@ -1,9 +1,8 @@
-# **ComboBox/Dropdown Select Actions**
-------------------------
-
-This section documents SAP general element select actions for SAP GUI automation in INGenious.
-
 ---
+icon: simple/databricks
+---
+
+# **ComboBox/Dropdown Select Actions**
 
 ### **sapSelectDropDownByText**
 **Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
