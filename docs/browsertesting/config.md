@@ -27,7 +27,7 @@
     
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![context](../img/configurations/context.JPG "context")
+    ![context](../img/configurations/context.JPG "context"){ width="50%"}
 
 
 
@@ -48,7 +48,7 @@
 
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![emulator](../img/configurations/emulators.JPG "emulator")
+    ![emulator](../img/configurations/emulators.JPG "emulator"){ width="50%"}
 
     The complete list of Playwright supported device configurations can be found [here](https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/server/deviceDescriptorsSource.json)
 
@@ -69,7 +69,7 @@
 
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![locale](../img/configurations/locale.JPG "locale")
+    ![locale](../img/configurations/locale.JPG "locale"){ width="50%"}
 
 
 -------------------------------------------

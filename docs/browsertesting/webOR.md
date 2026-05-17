@@ -102,7 +102,7 @@ There are two types of Web OR that you may use:
 
     ![ExampleCopy](../img/webOR/ExampleCopy.gif "ExampleCopy")
 
-* **For version 3.0**, `Copy to Shared` option is replaced by `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Web Object (PWO) will not be automatically updated to use the Shared Web Object (SWO).*
+* **For version 3.0**, `Copy to Shared` option is replaced by `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Web Object (PWO) are updated to use the Shared Web Object (SWO) only for the currently opened test case within the project. Other test cases are not automatically updated.*
 
     ![ExampleMove](../img/webOR/ExampleMove.gif "ExampleMove")
 

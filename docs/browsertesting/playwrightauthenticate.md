@@ -10,10 +10,10 @@
 ![basicAuth](../img/specialfeatures/BasicAuth.png "basicAuth")
 
 When working with Basic authentication prompts, which are browser based popups, it is advisable to instantiate an "authenticated" playwright browser context.
-In INGenious Playwright Studio, you can do this, by simply navigating to **Run Settings** >> **Authenticate Context** and then fill up the details as below :
+In INGenious Playwright Studio, you can do this, by simply navigating to **Browser Configuration** >> **Context Configurations** and then fill up the details as below :
 
 
-![basicAuth1](../img/specialfeatures/BasicAuth1.png "basicAuth1")
+![basicAuth1](../img/specialfeatures/BasicAuth1.png "basicAuth1"){ width="75%" }
 
 After this, you can simply add a test step like :
 

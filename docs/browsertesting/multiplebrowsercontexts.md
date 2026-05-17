@@ -14,7 +14,7 @@ To modify these settings or options, follow the steps below :
 
 * Inside the **Context Configurations** tab, you will see the `Context Alias` as `default`. Change the values as per requirement.
   
-     ![defaultConfig](../img/toolui/defaultContext.png "defaultConfig")
+     ![defaultConfig](../img/toolui/defaultContext.png "defaultConfig"){ width="50%" }
 
 
 ## Create New Context Options
@@ -25,7 +25,7 @@ To create a new context configuration, follow the steps below :
 
 * Inside the **Context Configurations** tab, Enter the `Context Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
 
-     ![createConfig](../img/toolui/CreateContext.png "createConfig")
+     ![createConfig](../img/toolui/CreateContext.png "createConfig"){ width="50%" }
 
 
 -----------
