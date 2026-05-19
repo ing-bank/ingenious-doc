@@ -102,7 +102,7 @@ INGenious supports the same two‑repository model for Mobile OR as it does for 
 
     ![ExampleCopyMobile](../img/mobileOR/ExampleCopyMobile.gif "ExampleCopyMobile")
 
-* **For version 3.0**, `Copy to Shared` option is replaced by `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Mobile Object (PMO) will not be automatically updated to use the Shared Mobile Object (SMO).*
+* **For version 3.0**, `Copy to Shared` option is replaced by `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Mobile Object (PMO) are updated to use the Shared Mobile Object (SWO) within the project.*
 
     ![ExampleMoveMobile](../img/mobileOR/ExampleMoveMobile.gif "ExampleMoveMobile")
 

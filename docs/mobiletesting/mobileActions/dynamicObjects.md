@@ -62,9 +62,9 @@ icon: material/atom
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`setMobileglobalObjectProperty`](#)   | @Data       | #var | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`setMobileglobalObjectProperty`](#)   | DatasheetName:ColumnName | #var  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`setMobileglobalObjectProperty`](#)   | %variableName% | #var  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | @Data       | #var | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | DatasheetName:ColumnName | #var  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | %variableName% | #var  | PageName |<span style="color:Brown"><<*Input from variable*</span>
 
 === "Corresponding Code"
 
