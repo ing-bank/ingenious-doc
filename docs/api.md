@@ -20,7 +20,7 @@
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
     - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
 
-        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
+        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault"){ width="60%" }
 
 ??? note "API Configurations"
 
@@ -47,7 +47,7 @@ To create a new API configuration, follow the steps below :
 
 * Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
 
-     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig")
+     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig"){ width="60%" }
 
 * A new set of API configurations with default values will be added below.
 
@@ -58,7 +58,7 @@ To create a new API configuration, follow the steps below :
 * INGenious allows users to add API properties thru the API Configurations window. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons")
+![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons"){ width="60%" }
 
 * Add a new property 
     1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
