@@ -37,7 +37,7 @@
 * Then, there should be a step to set the **`file name`**. 
   This needs to be done by creating another variable called `%fileName%` and feeding the actual file name (with extension) to it. You can leverage built-in capabilities in INGenious like `Synthetic Data Generation` to create `file name`s to be fed to the variable.
 
-* Then there should be the **`populateData`** action to generate the file. The **`populateData`** action comes with an editor which makes parameterization of data in   the paylod very easy. This action is always marked in <span style="color:Green">**Green.**</span>. [See the section below]
+* Then there should be the **`populateData`** action to generate the file. The **`populateData`** action comes with an editor which makes parameterization of data in   the payload very easy.
 
 
  ![file](../img/flatfiles/file.png "file")
