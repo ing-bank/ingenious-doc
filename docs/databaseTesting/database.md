@@ -147,13 +147,13 @@ The list of **`Query`** steps is as follows :
 - **`storeResultInDataSheet`**
 - **`storeResultInVariable`**
 
- Inside this editor, we can write the **SQL statement** and then parameterize the the `table names`, `column names`, `where` clause etc. based on our needs.
+ Inside this editor, we can write the **SQL statement** and then parameterize the `table names`, `column names`, `where` clause etc. based on our needs.
 
  If we press ++ctrl+space++ the list of all available **DataSheets : ColumnNames** along with all **user-defined variables** show up. We can then select the appropriate item from where we want to parameterize.
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/db/editor.gif "editor")
+ ![editor](../img/db/editor-3.0.mov "editor")
  
 
 -----------------------------------
