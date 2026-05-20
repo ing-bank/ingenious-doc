@@ -13,9 +13,9 @@ icon: octicons/browser-16
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference| 
-    |------------|--------|--------------|-----------|---------|
-    | General     |:green_circle: [`pause`](#)  |@value   | | 
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | General     |:green_circle: [`pause`](#)  |@value   | | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
 
 
 === "Corresponding Code"
@@ -44,8 +44,8 @@ icon: octicons/browser-16
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference| 
-    |------------|--------|--------------|-----------|---------|
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
     | General     |:green_circle: [`print`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | General     |:green_circle: [`print`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | General     |:green_circle: [`print`](#)   | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
@@ -71,8 +71,8 @@ icon: octicons/browser-16
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference| 
-    |------------|--------|--------------|-----------|---------|
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
     | General     |:green_circle: [`AddVar`](#)   | @value       |%variableName%       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | General     |:green_circle: [`AddVar`](#)   | Sheet:Column |%variableName%       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | General     |:green_circle: [`AddVar`](#)   | %dynamicVar% |%variableName%       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
@@ -103,8 +103,8 @@ icon: octicons/browser-16
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference| 
-    |------------|--------|--------------|-----------|---------|
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
     | General     |:green_circle: [`AddGlobalVar`](#)   | @value       |%globalVariableName%       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | General     |:green_circle: [`AddGlobalVar`](#)   | Sheet:Column |%globalVariableName%       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
     | General     |:green_circle: [`AddGlobalVar`](#)   | %dynamicVar% |%globalVariableName%       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
@@ -138,7 +138,7 @@ icon: octicons/browser-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | General     |:green_circle: [`storeVariableInDataSheet`](#)  | Sheet:Column       |%variableName% | |
+    | General     |:green_circle: [`storeVariableInDataSheet`](#)  | Sheet:Column       |%variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 
 === "Corresponding Code"
