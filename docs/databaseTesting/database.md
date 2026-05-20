@@ -25,7 +25,7 @@
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
-        ![dbSettings](../img/db/dbsettings-3.0.png "dbSettings")
+        ![dbSettings](../img/db/dbsettings.png "dbSettings")
 
     - There are two ways to provide the property values:
         1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
@@ -37,7 +37,7 @@
         - The password could be defined as a runtime variable. 
         - The connection string might be a combination of both, allowing dynamic resolution based on context.
         
-        ![db_dynamic_config](../img/configurations/db_dynamic_config-3.0.png "db_dynamic_config")
+        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config")
 
 -----------------------------------        
 
@@ -49,7 +49,7 @@ To create a new database configuration, follow the steps below :
 
 * Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
 
-     ![createConfig](../img/db/createConfig-3.0.png "createConfig")
+     ![createConfig](../img/db/createConfig.png "createConfig")
 
 
 **In Java if you were to manually connect, you would invariably use the following :**
@@ -66,7 +66,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 * INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons-3.0.png "addAndRemovePropertyButtons")
+![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons")
 
 * Add a new property 
     1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
@@ -100,7 +100,7 @@ Below are examples of additional Database configuration properties.
     jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
     ```
     
-    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example-3.0.png)
+    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
 
 === "Oracle Example"
     Oracle JDBC connection string format
@@ -113,7 +113,7 @@ Below are examples of additional Database configuration properties.
     jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
     ```
 
-    ![alt text](../img/configurations/oracle_jdbc_connection_string_example-3.0.png)
+    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
     
 -----------------------------------
 
@@ -129,7 +129,7 @@ Below are examples of additional Database configuration properties.
 
 * A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
 
- ![database](../img/db/db-3.0.png "database")
+ ![database](../img/db/db.png "database")
 
  The above is an example of a Database Testcase.
 
@@ -153,7 +153,7 @@ The list of **`Query`** steps is as follows :
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/db/editor-3.0.gif "editor")
+ ![editor](../img/db/editor.gif "editor")
  
 
 -----------------------------------
