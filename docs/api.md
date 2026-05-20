@@ -61,14 +61,14 @@ To create a new API configuration, follow the steps below :
 ![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons"){ width="60%" }
 
 * Add a new property 
-    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
     3. Provide the corresponding **property value**.
     4. Click **Save** to apply the changes.
 
 * Remove a property
     1. Select the **property** you want to remove.
-    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
 -----------------------------------

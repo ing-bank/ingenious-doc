@@ -369,7 +369,9 @@ icon: octicons/browser-16
 
 **Description**:  This function is used to perform DELETE action on a Rest API with payload.
 
-| ObjectName | Action | Input        | Condition |Reference|  |
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | @Payload (from Editor)      |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
