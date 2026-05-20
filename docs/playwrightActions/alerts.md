@@ -204,9 +204,9 @@ icon: material/alert
 
 === "Usage"
 
-    | ObjectName | Action                     | Input         | Condition |Reference|  
-    |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeAlertMessageinVariable`](#)  |  %dynamicVar%     |       | |
+    | ObjectName | Action                     | Input         | Condition |Reference|  |
+    |------------|----------------------------|---------------|-----------|---------|--|
+    | Browser     |:green_circle: [`storeAlertMessageinVariable`](#)  |  %dynamicVar%     |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -240,9 +240,9 @@ icon: material/alert
 
 === "Usage"
 
-    | ObjectName | Action                     | Input         | Condition |Reference|  
-    |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeAlertTypeinVariable`](#)   |  %dynamicVar%     |       | |
+    | ObjectName | Action                     | Input         | Condition |Reference|  |
+    |------------|----------------------------|---------------|-----------|---------|--|
+    | Browser     |:green_circle: [`storeAlertTypeinVariable`](#)   |  %dynamicVar%     |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -276,9 +276,9 @@ icon: material/alert
 
 === "Usage"
 
-    | ObjectName | Action                     | Input         | Condition |Reference|  
-    |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeDefaultAlertValueinVariable`](#)   |  %dynamicVar%     |       | |
+    | ObjectName | Action                     | Input         | Condition |Reference|  |
+    |------------|----------------------------|---------------|-----------|---------|--|
+    | Browser     |:green_circle: [`storeDefaultAlertValueinVariable`](#)   |  %dynamicVar%     |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
