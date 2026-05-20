@@ -4,7 +4,7 @@
 
 Follow the steps below to create an Appium configuration in INGenious.
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 

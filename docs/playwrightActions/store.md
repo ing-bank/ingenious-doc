@@ -16,7 +16,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementTextinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementTextinVariable`](#)  | %dynamicVar%       | | PageName|
 
 
 === "Corresponding Code"
@@ -53,7 +53,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementTextinDataSheet`](#)   | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementTextinDataSheet`](#)   | Sheet:Column       | | PageName|
 
 
 === "Corresponding Code"
@@ -95,7 +95,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerHTMLinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerHTMLinVariable`](#)  | %dynamicVar%       | | PageName|
 
 
 === "Corresponding Code"
@@ -133,7 +133,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerHTMLinDataSheet`](#)   | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerHTMLinDataSheet`](#)   | Sheet:Column       | | PageName|
 
 
 === "Corresponding Code"
@@ -176,7 +176,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerTextinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerTextinVariable`](#)  | %dynamicVar%       | | PageName|
 
 
 === "Corresponding Code"
@@ -213,7 +213,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerTextinDataSheet`](#)  | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerTextinDataSheet`](#)  | Sheet:Column       | | PageName|
 
 
 === "Corresponding Code"
@@ -254,7 +254,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInputValueinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInputValueinVariable`](#)  | %dynamicVar%       | | PageName|
 
 
 === "Corresponding Code"
@@ -291,7 +291,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     | :green_circle: [`storeElementInputValueinDataSheet`](#)  | DatasheetName:ColumnName       | | PageName|
+    | Object     | :green_circle: [`storeElementInputValueinDataSheet`](#)  | Sheet:Column       | | PageName|
 
 
 === "Corresponding Code"
@@ -333,7 +333,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeNName |  %variableName%        | PageName|
+    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeName |  %dynamicVar%        | PageName|
 
 
 === "Corresponding Code"
@@ -363,7 +363,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementValueinVariable`](#)  |  %variableName%   |       | PageName|
+    | Object     |:green_circle: [`storeElementValueinVariable`](#)  |  %dynamicVar%   |       | PageName|
 
 
 === "Corresponding Code"
@@ -400,7 +400,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementCSSValueinVariable`](#)  |  DatasheetName:ColumnName   |  CSSAttribute  | PageName|
+    | Object     |:green_circle: [`storeElementCSSValueinVariable`](#)  |  Sheet:Column   |  CSSAttribute  | PageName|
 
 
 === "Corresponding Code"
@@ -446,7 +446,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`StoreElementCount`](#)  |  %variableName%   |       | PageName|
+    | Object     |:green_circle: [`StoreElementCount`](#)  |  %dynamicVar%   |       | PageName|
 
 
 === "Corresponding Code"

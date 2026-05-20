@@ -22,7 +22,7 @@
 
 * To configure a database connection from INGenious, follow the steps below:
 
-    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings")
@@ -45,9 +45,9 @@
 
 To create a new database configuration, follow the steps below :
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
      ![createConfig](../img/db/createConfig.png "createConfig")
 

@@ -138,7 +138,7 @@ icon: octicons/browser-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | General     |:green_circle: [`storeVariableInDataSheet`](#)  | DatasheetName:ColumnName       |%variableName% | |
+    | General     |:green_circle: [`storeVariableInDataSheet`](#)  | Sheet:Column       |%variableName% | |
 
 
 === "Corresponding Code"

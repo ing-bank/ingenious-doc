@@ -17,7 +17,7 @@
 
 * To configure an API configuration from INGenious, follow the steps below:
 
-    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
 
         ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
@@ -43,9 +43,9 @@
 
 To create a new API configuration, follow the steps below :
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+* Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
      ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig")
 

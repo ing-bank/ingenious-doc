@@ -206,7 +206,7 @@ icon: material/alert
 
     | ObjectName | Action                     | Input         | Condition |Reference|  
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeAlertMessageinVariable`](#)  |  %varname%     |       | |
+    | Browser     |:green_circle: [`storeAlertMessageinVariable`](#)  |  %dynamicVar%     |       | |
 
 
 === "Corresponding Code"
@@ -242,7 +242,7 @@ icon: material/alert
 
     | ObjectName | Action                     | Input         | Condition |Reference|  
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeAlertTypeinVariable`](#)   |  %varname%     |       | |
+    | Browser     |:green_circle: [`storeAlertTypeinVariable`](#)   |  %dynamicVar%     |       | |
 
 
 === "Corresponding Code"
@@ -278,7 +278,7 @@ icon: material/alert
 
     | ObjectName | Action                     | Input         | Condition |Reference|  
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser     |:green_circle: [`storeDefaultAlertValueinVariable`](#)   |  %varname%     |       | |
+    | Browser     |:green_circle: [`storeDefaultAlertValueinVariable`](#)   |  %dynamicVar%     |       | |
 
 
 === "Corresponding Code"
