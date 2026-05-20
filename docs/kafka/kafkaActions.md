@@ -752,7 +752,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Kafka     |:green_circle: [`storeKafkaXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Kafka     |:green_circle: [`storeKafkaXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -912,7 +912,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Kafka     |:green_circle: [`storeKafkaResponseInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Kafka     |:green_circle: [`storeKafkaResponseInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -1078,7 +1078,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Kafka     |:green_circle: [`storeKafkaJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Kafka     |:green_circle: [`storeKafkaJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
 
     Note: Ensure that your datasheet doesn't contain column names with spaces.
 

@@ -491,7 +491,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`storeQueueXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Queue     |:green_circle: [`storeQueueXMLtagInDataSheet`](#)   | Sheet:Column      |  XPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -765,7 +765,7 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Queue     |:green_circle: [`storeQueueJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:Blue">:arrow_left: *Datasheet to where value is supposed br stored*</span> 
+    | Queue     |:green_circle: [`storeQueueJSONtagInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
 
     Note: Ensure that your datasheet doesn't contain column names with spaces.
 
