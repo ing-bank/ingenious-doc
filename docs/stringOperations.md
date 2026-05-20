@@ -32,9 +32,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *Concat* | "Hello,"," World","!","!","!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *Concat* | {Sheet:Column}," World","!","!","!" | %variableName%  | |<span style="color:Blue"><< *Input from Datasheet*</span> 
-    | String Operations | *Concat* | %dynamicVar%," World","!","!","!" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span> 
+    | String Operations | :green_circle: [`Concat`](#) | "Hello,"," World","!","!","!" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`Concat`](#) | {Sheet:Column}," World","!","!","!" | %variableName%  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span> 
+    | String Operations | :green_circle: [`Concat`](#) | %dynamicVar%," World","!","!","!" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span> 
     
 === "Examples"
 
@@ -64,9 +64,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *GetLength* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *GetLength* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *GetLength* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    | String Operations | :green_circle: [`GetLength`](#) | "Hello, World!" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`GetLength`](#) | {Sheet:Column} | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`GetLength`](#) | %dynamicVar% | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     
 === "Examples"
 
@@ -98,9 +98,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *GetOccurence* | "Hello, World!","e" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *GetOccurence* | {Sheet:Column},"e" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *GetOccurence* | %dynamicVar%,"e" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    | String Operations | :green_circle: [`GetOccurence`](#) | "Hello, World!","e" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`GetOccurence`](#) | {Sheet:Column},"e" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`GetOccurence`](#) | %dynamicVar%,"e" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Examples"
 
@@ -136,18 +136,18 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *Replace* | "Hello, World!","o","a","first" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace first instance only*</span> 
-    | String Operations | *Replace* | {Sheet:Column},"o","a","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace first instance only*</span>
-    | String Operations | *Replace* | %dynamicVar%,"o","a","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace first instance only*</span>
-    | String Operations | *Replace* | "Hello, World!","o","a","all" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Single character replace all instance*</span> 
-    | String Operations | *Replace* | {Sheet:Column},"o","a","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Single character replace all instance*</span>
-    | String Operations | *Replace* | %dynamicVar%,"o","a","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Single character replace all instance*</span>
-    | String Operations | *Replace* | "apple pie pie","pie","cake","first" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Multi-character replace first instance only*</span>
-    | String Operations | *Replace* | {Sheet:Column},"pie","cake","first" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi-character replace first instance only*</span>
-    | String Operations | *Replace* | %dynamicVar%,"pie","cake","first" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi-character replace first instance only*</span>
-    | String Operations | *Replace* | "apple pie pie","pie","cake","all" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, Multi-character replace all instance*</span>
-    | String Operations | *Replace* | {Sheet:Column},"pie","cake","all" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, Multi-character replace all instance*</span>
-    | String Operations | *Replace* | %dynamicVar%,"pie","cake","all" | %variableName% | |<span style="color:Brown"><< *Input from variable, Multi-character replace all instance*</span>
+    | String Operations | :green_circle: [`Replace`](#) | "Hello, World!","o","a","first" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, Single character replace first instance only*</span> 
+    | String Operations | :green_circle: [`Replace`](#) | {Sheet:Column},"o","a","first" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, Single character replace first instance only*</span>
+    | String Operations | :green_circle: [`Replace`](#) | %dynamicVar%,"o","a","first" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, Single character replace first instance only*</span>
+    | String Operations | :green_circle: [`Replace`](#) | "Hello, World!","o","a","all" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, Single character replace all instance*</span> 
+    | String Operations | :green_circle: [`Replace`](#) | {Sheet:Column},"o","a","all" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, Single character replace all instance*</span>
+    | String Operations | :green_circle: [`Replace`](#) | %dynamicVar%,"o","a","all" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, Single character replace all instance*</span>
+    | String Operations | :green_circle: [`Replace`](#) | "apple pie pie","pie","cake","first" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, Multi-character replace first instance only*</span> 
+    | String Operations | :green_circle: [`Replace`](#) | {Sheet:Column},"pie","cake","first" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, Multi-character replace first instance only*</span>
+    | String Operations | :green_circle: [`Replace`](#) | %dynamicVar%,"pie","cake","first" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, Multi-character replace first instance only*</span>
+    | String Operations | :green_circle: [`Replace`](#) | "apple pie pie","pie","cake","all" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, Multi-character replace all instance*</span> 
+    | String Operations | :green_circle: [`Replace`](#) | {Sheet:Column},"pie","cake","all" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, Multi-character replace all instance*</span>
+    | String Operations | :green_circle: [`Replace`](#) | %dynamicVar%,"pie","cake","all" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, Multi-character replace all instance*</span>
     
 === "Examples"
 
@@ -183,12 +183,12 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *Split* | "one@two@three@four","@","1" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *Split* | {Sheet:Column},"@","1" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *Split* | %dynamicVar%,"@","1" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
-    | String Operations | *Split* | "one@two@three@four","@","1","2" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with limited no. of split*</span> 
-    | String Operations | *Split* | {Sheet:Column},"@","1","2" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with limited no. of split*</span>
-    | String Operations | *Split* | %dynamicVar%,"@","1","2"| %variableName% | |<span style="color:Brown"><< *Input from variable, with limited no. of split*</span>
+    | String Operations | :green_circle: [`Split`](#) | "one@two@three@four","@","1" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`Split`](#) | {Sheet:Column},"@","1" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`Split`](#) | %dynamicVar%,"@","1" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | String Operations | :green_circle: [`Split`](#) | "one@two@three@four","@","1","2" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, with limited no. of split*</span> 
+    | String Operations | :green_circle: [`Split`](#) | {Sheet:Column},"@","1","2" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, with limited no. of split*</span>
+    | String Operations | :green_circle: [`Split`](#) | %dynamicVar%,"@","1","2"| %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, with limited no. of split*</span>
     
 === "Examples"
 
@@ -222,12 +222,12 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *Substring* | "Hello, World!","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *Substring* | {Sheet:Column},"7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *Substring* | %dynamicVar%,"7" | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
-    | String Operations | *Substring* | "Hello, World!","1","7" | %variableName% | |<span style="color:Green"><< *Hardcoded Input, with end index*</span> 
-    | String Operations | *Substring* | {Sheet:Column},"1","7" | %variableName% | |<span style="color:Blue"><< *Input from Datasheet, with end index*</span>
-    | String Operations | *Substring* | %dynamicVar%,"1","7"| %variableName% | |<span style="color:Brown"><< *Input from variable, with end index*</span>
+    | String Operations | :green_circle: [`Substring`](#) | "Hello, World!","7" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`Substring`](#) | {Sheet:Column},"7" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`Substring`](#) | %dynamicVar%,"7" | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | String Operations | :green_circle: [`Substring`](#) | "Hello, World!","1","7" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input, with end index*</span> 
+    | String Operations | :green_circle: [`Substring`](#) | {Sheet:Column},"1","7" | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet, with end index*</span>
+    | String Operations | :green_circle: [`Substring`](#) | %dynamicVar%,"1","7"| %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable, with end index*</span>
     
 === "Examples"
 
@@ -257,9 +257,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *ToLower* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *ToLower* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *ToLower* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    | String Operations | :green_circle: [`ToLower`](#) | "Hello, World!" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`ToLower`](#) | {Sheet:Column} | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`ToLower`](#) | %dynamicVar% | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     
 === "Examples"
 
@@ -289,9 +289,9 @@
         
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *ToUpper* | "Hello, World!" | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *ToUpper* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *ToUpper* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    | String Operations | :green_circle: [`ToUpper`](#) | "Hello, World!" | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`ToUpper`](#) | {Sheet:Column} | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`ToUpper`](#) | %dynamicVar% | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     
 === "Examples"
 
@@ -321,9 +321,9 @@
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | String Operations | *Trim* | " Hello, World! " | %variableName% | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | String Operations | *Trim* | {Sheet:Column} | %variableName% | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | String Operations | *Trim* | %dynamicVar% | %variableName% | |<span style="color:Brown"><< *Input from variable*</span>
+    | String Operations | :green_circle: [`Trim`](#) | " Hello, World! " | %variableName% | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span>  
+    | String Operations | :green_circle: [`Trim`](#) | {Sheet:Column} | %variableName% | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | String Operations | :green_circle: [`Trim`](#) | %dynamicVar% | %variableName% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
     
 === "Examples"
 

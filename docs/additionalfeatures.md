@@ -8,7 +8,7 @@
 
     To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
 
-    ![details](img/Things/Details.png "details"){ width="40%" }
+    ![details](img/Things/Details.png "details"){ width="30%" }
 
     The **Project Details** window opens and the following options are available in the window, as shown below.
 
@@ -139,7 +139,7 @@
 
     * **Iteration Mode** can be found under the Run Settings.
 
-    ![iterationMode](img/Things/iterationMode.png "iterationMode")
+    ![iterationMode](img/Things/iterationMode.png "iterationMode"){ width="50%" }
 
     * If **ContinueOnError** is selected, Test Case will keep on running even if an error occurs during one of the iterations.
 
@@ -213,7 +213,7 @@
 
     In addition to these, we have certain actions that take variables as input and will store the corresponding result in the variable provided.
 
-----
+<!-- ----
 
 ??? example "How To Change Report Theme"
 
@@ -237,7 +237,7 @@
 
     **Sorting In Report**
 
-    You can sort the reports using the **up/down** arrows beside each column name.
+    You can sort the reports using the **up/down** arrows beside each column name. -->
 
 ----
 
