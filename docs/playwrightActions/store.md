@@ -333,7 +333,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeName |  %dynamicVar%        | PageName|
+    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeName |  %variableName%        | PageName|
 
 
 === "Corresponding Code"
