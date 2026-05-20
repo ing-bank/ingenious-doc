@@ -212,9 +212,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -234,9 +234,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrContains`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -256,9 +256,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -278,9 +278,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrEndsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -300,9 +300,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrMatches`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -364,9 +364,9 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -387,9 +387,9 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -410,9 +410,9 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -433,9 +433,9 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -456,9 +456,9 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 

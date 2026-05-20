@@ -12,9 +12,9 @@ icon: material/atom
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | @Data       | #var | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | DatasheetName:ColumnName | #var  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | %variableName% | #var  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | @value       | #var | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | Sheet:Column | #var  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`setMobileObjectProperty`](#)   | %dynamicVar% | #var  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -62,9 +62,9 @@ icon: material/atom
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | @Data       | #var | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | DatasheetName:ColumnName | #var  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | %variableName% | #var  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | @value       | #var | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | Sheet:Column | #var  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`setMobileglobalObjectProperty`](#)   | %dynamicVar% | #var  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 

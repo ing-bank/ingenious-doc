@@ -22,7 +22,7 @@ For running automated tests on a real physical device we need the following :
 
     * These command-line utilities are useful for managing SDK packages and other tasks  
 
-In case we need to run on emulators will need additional tools :
+In case we need to run on emulators, the following additional tools are needed:
 
 * **platforms**
 
@@ -43,7 +43,7 @@ We need to use its SDK manager (Settings :material-arrow-right: Languages & Fram
 
 If you wish, you can also download these items without Android Studio:
 
-* Android SDK Platform can be downloaded using sdkmanager included in [Android command-line tools](https://developer.android.com/studio#command-line-tools-only)
+* Android SDK Platform can be downloaded using the SDK Manager included in [Android command-line tools](https://developer.android.com/studio#command-line-tools-only)
 * [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)
 
 
