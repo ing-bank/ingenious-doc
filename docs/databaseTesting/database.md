@@ -3,7 +3,7 @@
 
 !!! info "What is Database Testing?"
 
-    Database testing involves validating the integrity, accuracy, and reliability of data stored in a database. It ensures that the database performs as expected under various conditions and that data is correctly stored, retrieved, and manipulated
+    Database testing involves validating the integrity, accuracy, and reliability of data stored in a database. It ensures that the database performs as expected under various conditions and that data is correctly stored, retrieved, and manipulated.
 
 
 !!! abstract "How does INGenious perform Database Testing?"
@@ -153,7 +153,7 @@ The list of **`Query`** steps is as follows :
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/db/editor-3.0.mov "editor")
+ ![editor](../img/db/editor-3.0.gif "editor")
  
 
 -----------------------------------
