@@ -8,11 +8,11 @@
 
     To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
 
-    ![details](img/Things/Details.png "details")
+    ![details](img/Things/Details.png "details"){ width="40%" }
 
     The **Project Details** window opens and the following options are available in the window, as shown below.
 
-    ![details1](img/Things/Details1.png "details1")
+    ![details1](img/Things/Details1.png "details1"){ width="50%" }
 
     To rename your project, give the new name in the **Project Name text box** and click on **Rename**. Your project will be renamed.
 

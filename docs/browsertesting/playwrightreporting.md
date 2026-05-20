@@ -7,11 +7,21 @@
 
     INGenious has a powerful built-in HTML Report that gets generated after every test execution.
 
-    ![html](../img/reports/html1.png "html")
+    === "Light Mode"
 
-    If we click on any of the test cases, it will show a detailed step-wise report like this : 
+        ![html](../img/reports/html1.png "html")
 
-    ![html](../img/reports/html2.png "html")
+         If we click on any of the test cases, it will show a detailed step-wise report like this: 
+
+        ![html](../img/reports/html2.png "html")
+
+    === "Dark Mode"
+
+        ![html](../img/reports/html1-dark.png "html")
+
+        If we click on any of the test cases, it will show a detailed step-wise report like this: 
+
+        ![html](../img/reports/html2-dark.png "html")
 
 -------
 
@@ -19,11 +29,11 @@
 
     ## Built-in Extent report
 
-    INGenious has built-in Extent Report that gets generated after every test execution when this checkbox is ticked :
+    INGenious has built-in Extent Report that gets generated after every test execution when this checkbox is ticked:
 
-    ![html](../img/reports/extent1.png "html")
+    ![html](../img/reports/extent1.png "html"){ width="50%" }
 
-    If we run the tests **only from the Execution Pane**, a detailed step-wise report will show up, like this : 
+    If we run the tests **only from the Execution Pane**, a detailed step-wise report will show up, like this: 
 
     ![html](../img/reports/extent2.png "html")
 
@@ -42,11 +52,11 @@
 
     From INGenious you can generate traces for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![trace1](../img/reports/trace.png "trace1")
+    ![trace1](../img/reports/trace.png "trace1"){ width="50%" }
 
     When you do this, the traces are saved in the `Results` location of the corresponding tests.
 
-    Traces are a great way for debugging your tests. You can open the saved trace using the following options :
+    Traces are a great way for debugging your tests. You can open the saved trace using the following options:
 
     * On your browser on `trace.playwright.dev` [**This is not recommended in ING as your tests contain details about you ING applications**]
     * Using Playwright CLI . Make sure to add the full path to where your `trace.zip` file is located. This should include the full path to your `trace.zip` file.
@@ -63,7 +73,7 @@
 
     From INGenious you can generate videos for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![videos](../img/reports/video.png "videos")
+    ![videos](../img/reports/video.png "videos"){ width="50%" }
 
     When you do this, the videos are saved in the `Results` location of the corresponding tests.
 
@@ -75,7 +85,7 @@
 
     From INGenious you can generate **HAR (Http Archive)** files for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![har](../img/reports/har.png "har")
+    ![har](../img/reports/har.png "har"){ width="50%" }
 
     When you do this, the HAR files are saved in the `Results` location of the corresponding tests.
 
