@@ -121,7 +121,7 @@
 
     **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'setHeadless' property with its value as 'False'** :material-arrow-right: **Save**
 
-    ![SetHeadlessConfiguration](img/faq/SetHeadlessConfiguration.png "SetHeadlessConfiguration") 
+    ![SetHeadlessConfiguration](img/faq/SetHeadlessConfiguration.png "SetHeadlessConfiguration"){ width="50%" }
     
 --------------------------------------- 
 
@@ -149,11 +149,11 @@
 
     * **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'startMaximized' property with its value as 'true'** :material-arrow-right: **Save**
 
-    ![StartMaximized](img/faq/StartMaximized.png "StartMaximized")
+    ![StartMaximized](img/faq/StartMaximized.png "StartMaximized"){ width="50%" }
 
     * **Navigate to Configuration** :material-arrow-right: **Select Browser Configuration** :material-arrow-right: **Manage Browsers** :material-arrow-right: **Capabilities/Options** :material-arrow-right: **Add 'setViewportSize' property with its value as width,height** :material-arrow-right: **Save**
 
-    ![SetViewportSize](img/faq/SetViewportSize.png "SetViewportSize")
+    ![SetViewportSize](img/faq/SetViewportSize.png "SetViewportSize"){ width="50%" }
 
     > **NOTE:** startMaximized and setViewportSize should not be set together at the same time.
   

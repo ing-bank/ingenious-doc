@@ -75,7 +75,7 @@
 
     * Go to the Object Repository section, select the object and perform a right click. Choose **Rename Object** or press **F2**.
 
-    ![rename2](img/Things/RenameandRefactor2.png "rename2")
+    ![rename2](img/Things/RenameandRefactor2.png "rename2"){ width="40%" }
 
     * The object gets refactored automatically in all the locations, wherever it is used.
 
@@ -136,7 +136,7 @@
     Add the variable and pass the value. 
 
 
-    ![var2](img/Things/UserDefinedVariables2.png "var2")
+    ![var2](img/Things/UserDefinedVariables2.png "var2"){ width="50%" }
 
     Now, you will be able to use the variable inside your test case as shown below.
 

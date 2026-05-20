@@ -108,10 +108,6 @@ There are **two primary methods** to implement and manage Global Data in your te
     **Sample Test Datasheet:**
 
     ![gd6](img/Things/GlobalDataSheet6.png "gd6")
-
-    **Sample Report:**
-
-    ![gd7](img/Things/GlobalDataSheet7.png "gd7")
     
 ---
 

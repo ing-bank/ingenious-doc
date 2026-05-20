@@ -44,10 +44,6 @@
 
     ![Concat Examples](../img/stringoperations/Concat-1.png "examples")
 
-    **Sample Report:**
-
-    ![Concat Examples](../img/stringoperations/Concat-2.png "report")
-
 -----------------------------------------------------
 
 ### **GetLength**
@@ -75,10 +71,6 @@
     **Sample Test Case:**
 
     ![GetLength Examples](../img/stringoperations/GetLength-1.png "examples")
-
-    **Sample Report:**
-
-    ![GetLength Examples](../img/stringoperations/GetLength-2.png "report")
 
 -----------------------------------------------------
 
@@ -109,10 +101,6 @@
     **Sample Test Case:**
 
     ![GetOccurence Examples](../img/stringoperations/GetOccurence-1.png "examples")
-
-    **Sample Report:**
-
-    ![GetOccurence Examples](../img/stringoperations/GetOccurence-2.png "report")
 
 -----------------------------------------------------
 
@@ -157,10 +145,6 @@
 
     ![Replace Examples](../img/stringoperations/Replace-1.png "examples")
 
-    **Sample Report:**
-
-    ![Replace Examples](../img/stringoperations/Replace-2.png "report")
-
 -----------------------------------------------------
 
 ### **Split**
@@ -198,10 +182,6 @@
 
     ![Split Examples](../img/stringoperations/Split-1.png "examples")
 
-    **Sample Report:**
-
-    ![Split Examples](../img/stringoperations/Split-2.png "report")
-
 -----------------------------------------------------
     
 ### **Substring**
@@ -237,10 +217,6 @@
 
     ![Substring Examples](../img/stringoperations/Substring-1.png "examples")
 
-    **Sample Report:**
-
-    ![Substring Examples](../img/stringoperations/Substring-2.png "examples")
-
 -----------------------------------------------------
 
 ### **ToLower**
@@ -268,10 +244,6 @@
     **Sample Test Case:**
 
     ![ToLower Examples](../img/stringoperations/ToLower-1.png "examples")
-
-    **Sample Report:**
-
-    ![ToLower Examples](../img/stringoperations/ToLower-2.png "report")
 
 -----------------------------------------------------
     
@@ -301,10 +273,6 @@
 
     ![ToUpper Examples](../img/stringoperations/ToUpper-1.png "examples")
 
-    **Sample Report:**
-
-    ![ToUpper Examples](../img/stringoperations/ToUpper-2.png "report")
-
 -----------------------------------------------------
     
 ### **Trim**
@@ -332,9 +300,5 @@
     **Sample Test Case:**
 
     ![Trim Examples](../img/stringoperations/Trim-1.png "examples")
-
-    **Sample Report:**
-
-    ![Trim Examples](../img/stringoperations/Trim-2.png "report")
 
 -------------------------
