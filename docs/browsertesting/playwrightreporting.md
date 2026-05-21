@@ -58,7 +58,7 @@
 
     Traces are a great way for debugging your tests. You can open the saved trace using the following options:
 
-    * On your browser on `trace.playwright.dev` [**This is not recommended in ING as your tests contain details about you ING applications**]
+    * On your browser on `trace.playwright.dev` [**This is not recommended in ING as your tests contain details about your ING applications**]
     * Using Playwright CLI . Make sure to add the full path to where your `trace.zip` file is located. This should include the full path to your `trace.zip` file.
 
     ```{.shell .copy}

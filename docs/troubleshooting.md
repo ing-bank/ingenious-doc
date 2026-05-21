@@ -24,7 +24,7 @@
 
     ## How To Set Java Path Variable For INGenious
 
-    > It is possible to set the java path in the **Run.bat** for Windows or the **Run.command** for Mac or Linux. Refer the section below on how it can be done.
+    > It is possible to set the java path in the **ingenious.bat** for Windows or the **ingenious.command** for Mac or Linux. Refer the section below on how it can be done.
 
     **Prerequisites**
 
@@ -46,7 +46,7 @@
 
     * Save the file.
 
-    * Double-click the **Run.bat** file and launch Application.
+    * Double-click the **ingenious.bat** file and launch Application.
 
  -----------------------------------------------
 
@@ -78,9 +78,9 @@
 
     `"C:\Program Files\Java\jdk-11.0.2\bin\keytool" -import -trustcacerts -keystore cacerts -storepass changeit -alias testApp -file testApp.crt`
 
-    e. Make sure in your INGenious `Run.bat` or/and `Run.command file`, the reference of the above `cacerts` is present.
+    e. Make sure in your INGenious `ingenious.bat` or/and `ingenious.command file`, the reference of the above `cacerts` is present.
 
-    **Run.bat**
+    **ingenious.bat**
 
     ```powershell
 
@@ -101,15 +101,15 @@
     ```
 
 ---------------------------------------
-??? example "Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on Run.bat file in Windows"
+??? example "Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on ingenious.bat file in Windows"
 
-    ## Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on Run.bat file in Windows.
+    ## Unable to launch INGenious, getting "Windows protected your PC" pop-up when clicking on ingenious.bat file in Windows.
 
-    **If you get the following pop-up when you click on Run.bat**
+    **If you get the following pop-up when you click on ingenious.bat**
 
     ![WindowsErrorPopUp](img/faq/WindowsErrorPopUp.png "WindowsErrorPopUp")
 
-    **Right click on **Run.bat :material-arrow-right: Properties :material-arrow-right:Unblock :material-arrow-right: Apply**
+    **Right click on **ingenious.bat :material-arrow-right: Properties :material-arrow-right:Unblock :material-arrow-right: Apply**
 
 ---------------------------------------
 ??? example "Browser not launching while running tests"
@@ -132,9 +132,9 @@
 
     While executing the test scripts, or while generating the BDD json reporter, sometimes the system throws `java.lang.OutOfMemoryError: Java heap space`. 
     
-    This happens because of the large number of test steps with screenshots. In order to handle it, **modify the Run.bat and/or Run.command file to increase the Java contiguous memory allocation before startup.**
+    This happens because of the large number of test steps with screenshots. In order to handle it, **modify the ingenious.bat and/or ingenious.command file to increase the Java contiguous memory allocation before startup.**
 
-    So, here is an example of the corresponding Run.bat file.
+    So, here is an example of the corresponding ingenious.bat file.
 
     ![JavaHeapSize](img/faq/JavaHeapSize.png "JavaHeapSize")
 
