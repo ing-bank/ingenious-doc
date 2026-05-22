@@ -31,7 +31,7 @@ steps:
 - script: chmod -R 755 ./ # (4)!
   displayName: 'Set Permissions'
 
-- script: ./Run.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1" -setEnv "run.AzureReport=true"
+- script: ./ingenious.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1" -setEnv "run.AzureReport=true"
   displayName: 'Run tests' # (5)!
 
 - task: PublishTestResults@2 # (6)!

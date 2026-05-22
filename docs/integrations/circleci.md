@@ -27,7 +27,7 @@ jobs:
       - run:    
           command: chmod -R 755 ./                        # (4)!
       - run:                                              # (5)!
-          command: ./Run.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1" 
+          command: ./ingenious.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1" 
       - store_artifacts:                                  # (6)!
           path: Projects/ING-Public-Web/Results/TestExecution/Release1/Set1/Latest/
 workflows:

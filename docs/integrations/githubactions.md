@@ -36,7 +36,7 @@ jobs:
     - name: Set Permissions      # (4)!
       run: chmod -R 755 ./
     - name: Run tests            # (5)!
-      run: ./Run.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1"
+      run: ./ingenious.command -run -project_location "Projects/ING-Public-Web" -release "Release1" -testset "Set1"
     - name: Upload Reports       # (6)!
       uses: actions/upload-artifact@v4.3.6
       with:
