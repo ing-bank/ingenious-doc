@@ -22,7 +22,7 @@
 
 Follow the steps below to create an SAP-based test case in INGenious.
 
-* Click on the Configuration icon <img src="/img/toolui/BrowserConfiguration3.0.png" alt="browserConfig" width="30px" style="vertical-align:middle" />
+* Click on the Configuration icon <img src="/img/toolui/BrowserConfiguration3.0.png" alt="SAPConfig" width="30px" style="vertical-align:middle" />
 
 * Inside the **Manage Browser** tab, enter the name of the **SAP Configuration** you want to create, in the `Browser` textbox and hit ++enter++
 
@@ -38,7 +38,7 @@ Follow the steps below to create an SAP-based test case in INGenious.
 	 * **`platformName`** - operating system platform for SAP GUI  
 		 <span style="color:#888">e.g: `Windows`</span>
 
-![sapConfig](../img/sap/sap-sample-config.png "SAP Config Example"){ width=35% }
+![sapConfig](../img/sap/sap-sample-config.png "SAP Config Example"){ width=50% }
 
 * Click on **Save** button to save your SAP Configuration.
 
@@ -53,7 +53,7 @@ Follow the steps below to create an SAP-based test case in INGenious.
 
 * Head over to the **Design Pane** of INGenious
 
-* Click SAP Object Repository icon <img src="/img/sap/sapicon.png" alt="SAP Object Repository" width="30px" style="vertical-align:middle" />
+* Click **SAP Object Repository** icon <img src="/img/sap/sapicon.png" alt="SAP Object Repository" width="30px" style="vertical-align:middle" />
 
 * Create **Objects** with appropriate attributes like `id`, `name` and `Text`. These can easily be captured using **SAP Sripting Tracker Tool**
 
@@ -61,7 +61,7 @@ Follow the steps below to create an SAP-based test case in INGenious.
 
 * Select appropriate **actions** for each relevant step like **`sapFill`, `sapClick`**, etc. 
 
-![sapConfig](../img/sap/sap-sample-tc.png "SAP Config Example"){ width=85% }
+![sapTestCase](../img/sap/sap-sample-tc.gif "SAP Test case Example"){ width=85% }
 
 ---------------------------     
 

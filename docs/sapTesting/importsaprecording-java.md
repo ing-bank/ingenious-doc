@@ -11,8 +11,8 @@
 
  * Locate the SAP recording file (e.g., `saprecording.jsh` or `saprecording.java`) and click [OK].
 
- * The file is immediately rendered as a **Scenario** and **Test Case**. All the relevant **test steps** with all the **SAP objects** are imported.
+ * The file is immediately rendered as a **Scenario** and **Test Case**. All relevant **test steps** and **SAP objects** are imported.
 
- * All the objects are loaded in the **SAP Object Repository**.
+ * Imported objects are displayed in the **SAP Object Repository**.
 
  ![SAP Recorder Import .jsh file](../img/sap/SAPRecording.gif "SAP Recorder Import .jsh file")
