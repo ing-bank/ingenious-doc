@@ -61,7 +61,7 @@ Follow the steps below to create an SAP-based test case in INGenious.
 
 * Select appropriate **actions** for each relevant step like **`sapFill`, `sapClick`**, etc. 
 
-![sapTestCase](../img/sap/sap-sample-tc.gif "SAP Test case Example"){ width=85% }
+![sapTestCase](../img/sap/sap-sample-tc.gif "SAP Test Case Example"){ width=85% }
 
 ---------------------------     
 
