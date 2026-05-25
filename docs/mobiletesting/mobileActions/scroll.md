@@ -12,9 +12,9 @@ icon: material/mouse-scroll-wheel
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | @Data       |  | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | DatasheetName:ColumnName |  | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | %variableName% |  | |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`scrollInAndroid`](#)   | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -41,9 +41,9 @@ icon: material/mouse-scroll-wheel
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`scrollInIOS`](#)   | @Data       |  | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`scrollInIOS`](#)   | DatasheetName:ColumnName |  | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`scrollInIOS`](#)   | %variableName% |  | |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`scrollInIOS`](#)   | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`scrollInIOS`](#)   | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`scrollInIOS`](#)   | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 

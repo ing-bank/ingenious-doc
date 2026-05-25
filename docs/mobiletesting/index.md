@@ -29,4 +29,4 @@ Make sure to check out the following topics :
 [Base Setup](basesetup.md){ .md-button }
 [Android Setup](androidsetup.md){ .md-button } 
 [iOS Setup](iOSsetup.md){ .md-button } 
-[Actions](../playwrightActions/browser.md){ .md-button }
+[Actions](mobileActions/alerts.md){ .md-button }

@@ -212,9 +212,9 @@ icon: simple/databricks
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 

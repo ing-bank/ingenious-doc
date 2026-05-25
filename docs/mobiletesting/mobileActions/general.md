@@ -205,9 +205,9 @@ icon: octicons/browser-16
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`sendKeysToElement`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -259,9 +259,9 @@ icon: octicons/browser-16
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`sendKeysToWindow`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
