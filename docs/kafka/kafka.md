@@ -42,13 +42,13 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
     For this example, **`Producer_ssl_Enabled` is set to `true`** then the following are required: **`Producer_Keystore_Location`, `Producer_Key_Password`, `Producer_Keystore_Password`**
 
-    ![With SSL configuration](../img/kafka/with_ssl.png "With SSL configuration")
+    ![With SSL configuration](../img/kafka/with_ssl.png "With SSL configuration"){ width="50%" }
 
 === "Without SSL certificate configuration example"
 
     For this example, **`Producer_ssl_Enabled` is set to `false`**
 
-    ![Without SSL configuration](../img/kafka/without_ssl.png "Without SSL configuration")
+    ![Without SSL configuration](../img/kafka/without_ssl.png "Without SSL configuration"){ width="50%" }
 
 -------------------------------------
 
