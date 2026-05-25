@@ -10,7 +10,7 @@
   
 
 === ":octicons-play-16: Execution options"
-      ![execution](img/toolui/2.JPG "execution")     
+      ![execution](img/toolui/2.JPG "execution"){ width="60%" }
 
  <br>
 ----------------------------------------------------------------------
@@ -37,7 +37,7 @@
 
       If you select a Scenario or Test Case and **Right Click**, you will have some interesting and handy options to work with :
 
-      ![testplan2](img/toolui/TestPlan2.JPG "testplan2")
+      ![testplan2](img/toolui/TestPlan2.JPG "testplan2"){ width="75%" }
   
 
 === ":two: Reusable Components"
@@ -74,7 +74,7 @@
 
       If you select a Reusable Scenario or Reusable Test Case and **Right Click**, you will have some interesting and handy options to work with :
 
-      ![reusable1](img/toolui/Reusables2.JPG "reusables1")
+      ![reusable1](img/toolui/Reusables2.JPG "reusables1"){ width="75%" }
 
 === ":three: Test Steps"
 
@@ -94,8 +94,6 @@
       You can also drag and drop the Reusables to create test cases like this :
 
       ![drag_drop2](img/toolui/draganddrop2.gif "drag_drop2")
-      
-  
 
 === ":four: Test Data"
       This is the area where you can set up your test data in multiple sheets.
@@ -104,11 +102,11 @@
 
       If you select a data cell and **Right Click**, you will have some interesting and handy options to work with :
 
-      ![data3](img/toolui/data3.JPG "data3")
+      ![data3](img/toolui/data3.JPG "data3"){ width="75%" }
 
       **Set up Multiple Test Environments**
 
-      To set up environment based execution, you can set up mutiple environments following the 5 steps as below :
+      To set up environment based execution, you can set up multiple environments following the 5 steps as below :
 
       ![data2](img/toolui/data2.JPG "data2")
 
@@ -121,7 +119,7 @@
 === ":five: Object Repository"
       This is the area where the Locators/Objects are present along with the multiple attributes/properties to be used to find that element on the Application.
 
-      ![or1](img/toolui/OR1.JPG "or1")
+      ![or1](img/toolui/OR1.JPG "or1"){ width="75%" }
       
       If you select a Property and **Right Click**, you will have some interesting and handy options to work with. These options are applicable to used for :
 
@@ -131,9 +129,6 @@
 
 
       ![or2](img/toolui/OR2.JPG "or2")
-
- 
-
 
  <br>
 ----------------------------------------------------------------------
