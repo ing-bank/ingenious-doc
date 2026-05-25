@@ -75,7 +75,7 @@
 
  * Navigate to **Configuration** :material-arrow-right: **Run Settings** and check the **Performance Reporting** and **Har** check boxes under the **Run settings tab**.
 
- ![perf1](img/perf/1.JPG "perf1")
+ ![perf1](img/perf/1.JPG "perf1"){ width="75%" }
 
  * Once this configuration is saved, run your test set and post the execution you will get a report.Expand the report by clicking on your test case and this time the **console** icon on the bottom right will change into the **Performance Report icon**.
 
@@ -94,7 +94,7 @@
 
 * To Compare your **Har** files, navigate to **Tools** :material-arrow-right: **Har Compare** and you will be redirected to the **Har Comparator** site.
 
-![perf4](img/perf/4.JPG "perf4")
+![perf4](img/perf/4.JPG "perf4"){ width="75%" }
 
 * Here you compare the **Har** files that you have in your project.
 
