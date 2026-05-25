@@ -1,15 +1,13 @@
-
 # **SAP Objects Repository**
 
 !!! info 
-    The SAP Object Repository (SAP OR) in INGenious provides a centralized and reusable location for storing SAP UI elements used in automated tests. Instead of manually defining SAP element locators in test steps, the repository allows teams to store, manage, and maintain selectors in one place for Android and iOS applications.
+    The SAP Object Repository (SAP OR) in INGenious provides a centralized and reusable location for storing SAP UI elements used in automated tests. Instead of manually defining SAP element locators in test steps, the repository allows teams to store, manage, and maintain selectors in one place for SAP testing.
 
 !!! abstract "Key Benefits:"
     * **Centralized element management** – All SAP objects live in one organized repository.
-    * **Cross‑platform support** – Store Android and iOS locators in the same or separate pages.
+    * **Reduced duplication** – Reuse element definitions across test suites and frameworks.
     * **Maintainability** – Update a selector once and apply the change everywhere.
     * **Consistent naming and structure** – Standardized element definitions promote cleaner automation design.
-
 
 ## Object Repository Structure
     
@@ -24,7 +22,7 @@ SAP OR follows a structure identical to Web OR:
     │       └── ObjectName2
     ```
 
-    * A project may contain multiple Pages, and each Page can hold multiple Objects, each representing a SAP screen or UI section.
+* A project may contain multiple Pages, and each Page can hold multiple Objects, each representing a SAP screen or UI section.
 * Page names must be unique within the project.
 * Object names must be unique within their respective page. 
 * A SAP Object consists of a set of attributes that define how it can be uniquely identified on a device:
@@ -35,11 +33,9 @@ SAP OR follows a structure identical to Web OR:
     | **name**   | Element name of the SAP Object in SAP GUI | ctxtVDARL_BUKRS |
     | **Text**             | Element text value of the SAP Object in SAP GUI | Some text value |
 
-
 ## Project and Shared SAP OR
 
 INGenious supports the same two‑repository model for SAP OR as it does for Web OR:
-
 
 * **Project SAP OR**
 
@@ -63,7 +59,6 @@ INGenious supports the same two‑repository model for SAP OR as it does for Web
 
     ![PSOTestStep](../img/sapOR/PSPOTestStep.png "PSPOTestStep")
 
-
 * **Shared SAP OR**
 
     Contains SAP objects that **can be used across different projects** and are managed from the `Shared` tab within the OR panel.
@@ -78,8 +73,6 @@ INGenious supports the same two‑repository model for SAP OR as it does for Web
 
     ![SSOTestStep](../img/sapOR/SSPOTestStep.png "SSPOTestStep")
 
-
-
 ## How to use Project and Shared SAP OR
 
 * Pages and Objects can be added directly within the Project and Shared repositories using the `Add Page` or `Add Object` options.
@@ -93,7 +86,6 @@ INGenious supports the same two‑repository model for SAP OR as it does for Web
 
     ![ExampleMoveSAP](../img/sapOR/ExampleMoveSAP.gif "ExampleMoveSAP")
 
-
 * Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.
 
     ![ExampleSameNames](../img/sapOR/ExampleSameNames.png "ExampleSameNames")
@@ -101,9 +93,7 @@ INGenious supports the same two‑repository model for SAP OR as it does for Web
 
 * Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. However, after renaming, any existing test steps that previously referenced an SSPO will continue to use its old name, which may result in errors during test execution.
 
-
 * Pages and Objects in both the Project and Shared repositories can be deleted using the `Delete Page` or `Delete Object` options. However, once deleted, any existing test steps that previously referenced an SSO or PSPO will still attempt to use the removed Page or Object, which may result in errors during test execution.
-
 
 * To view all test cases that reference an Object within the project, use the `Get Impacted Cases` option. This feature is available for both Project and Shared repositories.
 
