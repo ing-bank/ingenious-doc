@@ -15,7 +15,7 @@
 -----------------------------------
 ## Set up API Configuration
 
-* To configure an API configuration from INGenious, follow the steps below:
+* To set up an API configuration in INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
     - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
@@ -53,7 +53,7 @@ To create a new API configuration, follow the steps below :
 
 -----------------------------------        
 
-## User Added API Configuration Property
+## User-Added API Configuration Property
 
 * INGenious allows users to add API properties thru the API Configurations window. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
@@ -85,7 +85,7 @@ To create a new API configuration, follow the steps below :
 
 * You can have steps to validate/store response **status codes**, **specific tags** or even the **entire response body.**
 
-* A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:Brown">**Brown.**</span>
+* A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:#8f7000">**Brown.**</span>
 
  ![api_testcase_example](img/api/api_testcase_example.png "api_testcase_example")
 
@@ -202,7 +202,9 @@ To create a new API configuration, follow the steps below :
 
     JSON Path for retrieving **byron.fields@ing.com** is `$.data[3].email` [Index starts with 0]
 
->To learn more about JSONPath visit this [GitHub](https://github.com/json-path/JsonPath) page.
+>To learn more about JSONPath, visit this [GitHub](https://github.com/json-path/JsonPath) page.
+
+>To learn more about XPath, visit the [XPath Syntax](https://www.w3schools.com/xml/xpath_syntax.asp) page.
 
 -------------------------------------
 
