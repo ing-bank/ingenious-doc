@@ -223,7 +223,7 @@ icon: octicons/browser-16
 
 ## **postRestRequest**
 
-**Description**: This function is used to perform POST action on a Rest API.
+**Description**: This function is used to perform POST action on a REST API.
 
 **Input Format** : @Expected Payload
 
@@ -254,7 +254,7 @@ icon: octicons/browser-16
 
 ## **putRestRequest**
 
-**Description**: This function is used to perform PUT action on a Rest API.
+**Description**: This function is used to perform PUT action on a REST API.
 
 **Input Format** : @Expected Payload
 
@@ -285,7 +285,7 @@ icon: octicons/browser-16
 ----------------------
 ## **patchRestRequest**
 
-**Description**: This function is used to perform PATCH action on a Rest API.
+**Description**: This function is used to perform PATCH action on a REST API.
 
 **Input Format** : @Expected Payload
 
@@ -316,7 +316,7 @@ icon: octicons/browser-16
 
 ## **getRestRequest**
 
-**Description**: This function is used to perform GET action on a Rest API.
+**Description**: This function is used to perform GET action on a REST API.
 
 === "Usage"
 
@@ -342,7 +342,7 @@ icon: octicons/browser-16
 
 ## **deleteRestRequest**
 
-**Description**:  This function is used to perform DELETE action on a Rest API.
+**Description**:  This function is used to perform DELETE action on a REST API.
 
 === "Usage"
 
@@ -367,9 +367,11 @@ icon: octicons/browser-16
 
 ## **deleteWithPayload**
 
-**Description**:  This function is used to perform DELETE action on a Rest API with payload.
+**Description**:  This function is used to perform DELETE action on a REST API with payload.
 
-| ObjectName | Action | Input        | Condition |Reference|  |
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | @Payload (from Editor)      |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
     | Webservice     |:green_circle: [`deleteWithPayload`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>

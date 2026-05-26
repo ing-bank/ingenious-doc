@@ -15,12 +15,12 @@
 -----------------------------------
 ## Set up API Configuration
 
-* To configure an API configuration from INGenious, follow the steps below:
+* To set up an API configuration in INGenious, follow the steps below:
 
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
 
-        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault")
+        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault"){ width="60%" }
 
 ??? note "API Configurations"
 
@@ -47,28 +47,28 @@ To create a new API configuration, follow the steps below :
 
 * Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
-     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig")
+     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig"){ width="60%" }
 
 * A new set of API configurations with default values will be added below.
 
 -----------------------------------        
 
-## User Added API Configuration Property
+## User-Added API Configuration Property
 
 * INGenious allows users to add API properties thru the API Configurations window. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons")
+![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons"){ width="60%" }
 
 * Add a new property 
-    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
     3. Provide the corresponding **property value**.
     4. Click **Save** to apply the changes.
 
 * Remove a property
     1. Select the **property** you want to remove.
-    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty").
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
 -----------------------------------
@@ -85,7 +85,7 @@ To create a new API configuration, follow the steps below :
 
 * You can have steps to validate/store response **status codes**, **specific tags** or even the **entire response body.**
 
-* A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:Brown">**Brown.**</span>
+* A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:#8f7000">**Brown.**</span>
 
  ![api_testcase_example](img/api/api_testcase_example.png "api_testcase_example")
 
@@ -202,7 +202,9 @@ To create a new API configuration, follow the steps below :
 
     JSON Path for retrieving **byron.fields@ing.com** is `$.data[3].email` [Index starts with 0]
 
->To learn more about JSONPath visit this [GitHub](https://github.com/json-path/JsonPath) page.
+>To learn more about JSONPath, visit this [GitHub](https://github.com/json-path/JsonPath) page.
+
+>To learn more about XPath, visit the [XPath Syntax](https://www.w3schools.com/xml/xpath_syntax.asp) page.
 
 -------------------------------------
 

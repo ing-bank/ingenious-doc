@@ -158,7 +158,9 @@ If Key Store Certificates are required, you may set it up by clicking on the **g
 
     JSON Path for retrieving **byron.fields@ing.com** is `$.data[3].email` [Index starts with 0]
 
->To learn more about JSONPath visit this [GitHub](https://github.com/json-path/JsonPath) page.
+>To learn more about JSONPath, visit this [GitHub](https://github.com/json-path/JsonPath) page.
+
+>To learn more about XPath, visit the [XPath Syntax](https://www.w3schools.com/xml/xpath_syntax.asp) page.
 
 -------------------------------------
 
