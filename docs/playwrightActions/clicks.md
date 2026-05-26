@@ -111,7 +111,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |*DoubleClick*   |     | | PageName|
+    | Object     |:green_circle: [`DoubleClick`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -140,7 +140,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |*RightClick*   |     | | PageName|
+    | Object     |:green_circle: [`RightClick`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -169,7 +169,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |*ShiftClick*   |     | | PageName|
+    | Object     |:green_circle: [`ShiftClick`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -199,7 +199,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |*MouseHover*   |     | | PageName|
+    | Object     |:green_circle: [`MouseHover`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -229,7 +229,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Browser     |*MouseUp*   |     | | PageName|
+    | Browser     |:green_circle: [`MouseUp`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -259,7 +259,7 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Browser     |*MouseDown*   |     | | PageName|
+    | Browser     |:green_circle: [`MouseDown`](#)   |     | | PageName|
 
 
 === "Corresponding Code"
@@ -289,9 +289,9 @@ icon: material/cursor-default-click
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |*DragElementTo*   | @value       |       | PageName|<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Object     |*DragElementTo*   | Sheet:Column |       | PageName|<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Object     |*DragElementTo*   | %dynamicVar% |       | PageName|<span style="color:Brown"><<*Input from variable*</span>
+    | Object     |:green_circle: [`DragElementTo`](#)   | @value       |       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Object     |:green_circle: [`DragElementTo`](#)   | Sheet:Column |       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Object     |:green_circle: [`DragElementTo`](#)   | %dynamicVar% |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"

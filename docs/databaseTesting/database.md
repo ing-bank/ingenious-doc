@@ -22,7 +22,7 @@
 
 * To configure a database connection from INGenious, follow the steps below:
 
-    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
         ![dbSettings](../img/db/dbsettings.png "dbSettings"){ width="75%" }
@@ -45,9 +45,9 @@
 
 To create a new database configuration, follow the steps below :
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add") icon.
+* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
      ![createConfig](../img/db/createConfig.png "createConfig"){ width="75%" }
 
@@ -69,14 +69,14 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 ![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons"){ width="75%" }
 
 * Add a new property 
-    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty").
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
     3. Provide the corresponding **property value**.
     4. Click **Save** to apply the changes.
 
 * Remove a property
     1. Select the **property** you want to remove.
-    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty")
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
 -----------------------------------        

@@ -14,7 +14,7 @@ icon: octicons/file-added-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeResponseBodyInDataSheet`](#)  | Sheet:Column      |      | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is supposed to be stored*</span>
+    | Webservice     |:green_circle: [`storeResponseBodyInDataSheet`](#)  | Sheet:Column      |      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -112,7 +112,7 @@ icon: octicons/file-added-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeXMLelementInDataSheet'](#)  | Sheet:Column      |  XPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
+    | Webservice     |:green_circle: [`storeXMLelementInDataSheet'](#)  | Sheet:Column      |  XPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -217,7 +217,7 @@ icon: octicons/file-added-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJSONelementInDataSheet`](#)  | Sheet:Column      |  JSONPath     | |<span style="color:Blue"><< *Datasheet to where value is supposed br stored*</span> 
+    | Webservice     |:green_circle: [`storeJSONelementInDataSheet`](#)  | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -325,7 +325,7 @@ icon: octicons/file-added-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeJsonElementCountInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
+    | Webservice     |:green_circle: [`storeJsonElementCountInDataSheet`](#)   | Sheet:Column      |  JSONPath     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
@@ -558,7 +558,7 @@ icon: octicons/file-added-16
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Webservice     |:green_circle: [`storeHeaderByNameInDatasheet`](#)   | Sheet:Column      |  Header Name     | |<span style="color:#559BD1">:arrow_left:   *Datasheet where value is to be stored*</span> 
+    | Webservice     |:green_circle: [`storeHeaderByNameInDatasheet`](#)   | Sheet:Column      |  Header Name     | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
     Note: Ensure that your datasheet doesn't contain column names with spaces. 
 
