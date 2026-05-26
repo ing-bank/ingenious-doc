@@ -22,7 +22,7 @@
 
 Follow the steps below to create an SAP-based test case in INGenious.
 
-* Click on the Configuration icon <img src="/img/toolui/BrowserConfiguration3.0.png" alt="SAPConfig" width="30px" style="vertical-align:middle" />
+* Click on the Configuration icon <img src="/img/toolui/BrowserConfiguration.png" alt="SAPConfig" width="30px" style="vertical-align:middle" />
 
 * Inside the **Manage Browser** tab, enter the name of the **SAP Configuration** you want to create, in the `Browser` textbox and hit ++enter++
 
