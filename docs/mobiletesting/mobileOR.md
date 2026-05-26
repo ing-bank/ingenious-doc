@@ -110,7 +110,7 @@ INGenious supports the same two‑repository model for Mobile OR as it does for 
 
     ![ExampleSameNames](../img/mobileOR/ExampleSameNames.png "ExampleSameNames")
 
-* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. However, after renaming, any existing test steps that previously referenced an SMO will continue to use its old name, which may result in errors during test execution.
+* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. After renaming, any existing test steps in the current project that previously referenced an SMO using the old name will be updated automatically.
 
 * Pages and Objects in both the Project and Shared repositories can be deleted using the `Delete Page` or `Delete Object` options. However, once deleted, any existing test steps that previously referenced an SMO or PMO will still attempt to use the removed Page or Object, which may result in errors during test execution.
 
@@ -119,3 +119,4 @@ INGenious supports the same two‑repository model for Mobile OR as it does for 
     ![ExampleImpactedTC](../img/mobileOR/ExampleImpactedTC.png "ExampleImpactedTC")
 
     *Suggestion: Before renaming or deleting an object, please use the `Get Impacted Cases` option for checking.*
+    

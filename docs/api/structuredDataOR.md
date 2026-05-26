@@ -82,7 +82,7 @@ INGenious supports the same two‑repository model for Structured Data OR as it 
 
     ![ExampleSameNames](../img/api/structuredDataOR/ExampleTestScenario.png "ExampleSameNames")
 
-* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. However, after renaming, any existing test steps that previously referenced an SSDO will continue to use its old name, which may result in errors during test execution.
+* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. After renaming, any existing test steps in the current project that previously referenced an SSDO using the old name will be updated automatically.
 
 * Pages and Objects in both the Project and Shared repositories can be deleted using the `Delete Page` or `Delete Object` options. However, once deleted, any existing test steps that previously referenced an SSDO or PSDO will still attempt to use the removed Page or Object, which may result in errors during test execution.
 

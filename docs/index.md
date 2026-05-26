@@ -65,7 +65,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages **Java HTTP Client** to create API tests.
 
-    [:octicons-arrow-right-24: API Testing](api/)
+    [:octicons-arrow-right-24: API Testing](api/api)
 
 
 -   :material-text-box-multiple:{ .lg .middle .cicd} __Message/File Based Testing__
