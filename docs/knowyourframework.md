@@ -175,9 +175,6 @@ The **Latest Summary Report** tab looks like this :
 
 ![dashboard2](img/toolui/Dashboard2.JPG "dashboard2")
 
-[Browser Testing](browsertesting/index.md){ .md-button } [API Testing](api.md){ .md-button } [Mobile App Testing](mobiletesting/index.md){ .md-button }
-
-
  <br>
 ----------------------------------------------------------------------
 ------------------------------------ 
@@ -208,6 +205,8 @@ To do a search on Table headers or Column Names, just prepend the **@** symbol b
 ----------------------------------------------------------------------
 ------------------------------------ 
  </br>
+
+[Browser Testing](browsertesting/index.md){ .md-button } [API Testing](api.md){ .md-button } [Mobile App Testing](mobiletesting/index.md){ .md-button }
 
 ### Inspiration
 
