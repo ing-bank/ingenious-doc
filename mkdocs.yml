@@ -112,6 +112,7 @@ nav:
         - Positive Assertions: apiActions/positiveassertions.md
         - Negative Assertions: apiActions/negativeassertions.md
     - Multipart File Upload: apimultipart.md
+    - Structured Data Objects Repository: apiActions/structuredDataOR.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
