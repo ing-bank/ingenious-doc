@@ -87,7 +87,7 @@ To create a new API configuration, follow the steps below :
 
 * A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:#8f7000">**Brown.**</span>
 
- ![api_testcase_example](img/api/api_testcase_example.png "api_testcase_example")
+ ![api_testcase_example](../img/api/api_testcase_example.png "api_testcase_example")
 
  The above is an example of a **`postRestRequest`** and then **`assertResponseCode`** followed by **`storeJSONelementInDataSheet`**
 
@@ -106,7 +106,7 @@ To create a new API configuration, follow the steps below :
 
  We need to press ++escape++ to close the editor
 
- ![editor](img/api/editor.gif "editor")
+ ![editor](../img/api/editor.gif "editor")
  
 
  -------------------------------------
@@ -117,7 +117,7 @@ To create a new API configuration, follow the steps below :
 
  The corresponding **`xpath`** or **`jsonPath`** for the tag, should be entered in the **Condition** column like as shown below :
 
- ![api2](img/api/2.JPG "api2")
+ ![api2](../img/api/2.JPG "api2")
 
 ??? note "Example for writing Xpath"
 
@@ -211,4 +211,4 @@ To create a new API configuration, follow the steps below :
 
 
 
-[Actions](apiActions/webservice.md){ .md-button }
+[Actions](../api/apiActions/webservice.md){ .md-button }
