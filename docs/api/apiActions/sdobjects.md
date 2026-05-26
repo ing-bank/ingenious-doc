@@ -1,10 +1,11 @@
 ---
-icon: octicons/browser-16
+icon: material/code-json
 ---
 
 # Structured Data Object Actions
 
 ## **assertJsonPathResultContains**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the JSON response contains the specified text.
 
@@ -45,6 +46,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertJsonPathResultNotContains**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the JSON does not contain the specified text.
 
@@ -85,6 +87,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertJsonPathResultEquals**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the JSON response exactly matches the expected text.
 
@@ -125,6 +128,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertJsonPathResultNotEquals**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the JSON response does not exactly match the specified expected text.
 
@@ -165,6 +169,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertJsonPathResultCount**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the number of elements selected from JSON response matches the expected count. Supports both arrays and objects.
 
@@ -225,6 +230,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeJsonPathResultInVariable**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to extract a value from the JSON response and store it in a variable.
 
@@ -259,6 +265,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeJsonPathResultInDataSheet**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to extract a value from the JSON response and store it in a datasheet.
 
@@ -307,6 +314,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeJsonPathResultCountInVariable**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to select elements from the JSON response, count them, and store the resulting count in a variable.
 
@@ -353,6 +361,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeJsonPathResultCountInDataSheet**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to select elements from the JSON response, count them, and store the resulting count in a datasheet.
 
@@ -401,6 +410,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertXmlPathResultContains**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the XML response contains the specified text.
 
@@ -451,6 +461,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertXmlPathResultNotContains**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the XML does not contain the specified text.
 
@@ -500,6 +511,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertXmlPathResultEquals**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the XML response exactly matches the expected text.
 
@@ -549,6 +561,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **assertXmlPathResultNotEquals**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to validate that the value extracted from the XML response does not exactly match the specified expected text.
 
@@ -598,6 +611,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeXmlPathResultInVariable**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to extract a value from the XML response and store it in a variable.
 
@@ -644,6 +658,7 @@ icon: octicons/browser-16
 ------------------------------------------
 
 ## **storeXmlPathResultInDataSheet**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v3.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">3.0</span></span></a>
 
 **Description**: This function is used to extract a value from the XML response and store it in a datasheet.
 

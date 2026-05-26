@@ -9,10 +9,6 @@ The API Workbench can be accessed via the Menu Ribbon:
 
 ![APIWorkbenchMenuRibbon](../img/api/APIWorkbenchMenuRibbon.png "APIWorkbenchMenuRibbon"){ width="60%" }
 
-It is also accessible via Window > API Workbench
-
-![APIWorkbenchWindow](../img/api/APIWorkbenchWindow.png "APIWorkbenchWindow"){ width="25%" }
-
 Once selected, you will be navigated to API Workbench window. See example below:
 
 ![APIWorkbenchExample](../img/api/APIWorkbenchExample.png "APIWorkbenchExample")
