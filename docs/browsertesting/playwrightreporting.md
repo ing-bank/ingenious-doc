@@ -39,10 +39,8 @@
 
 -------
 
-!!! info "Additional Reporting and Debugging Capabilities"
 
-    The following are the **built-in capabilities** within the framework to perform report analysis for Playwright-Java tests, in addition to the already available reporting in INGenious
-
+## **Additional Reporting and Debugging Capabilities**
 --------------------------------------------
 
 ??? example "Tracing"
@@ -56,14 +54,18 @@
 
     When you do this, the traces are saved in the `Results` location of the corresponding tests.
 
+    ![trace2](../img/reports/traceLocation.png "trace2"){ width="50%" }
+
     Traces are a great way for debugging your tests. You can open the saved trace using the following options:
 
     * On your browser on `trace.playwright.dev` [**This is not recommended in ING as your tests contain details about your ING applications**]
-    * Using Playwright CLI . Make sure to add the full path to where your `trace.zip` file is located. This should include the full path to your `trace.zip` file.
+    * Using Playwright CLI . Go to the Engine folder. Make sure to add the full path to where your `trace.zip` file is located. This should include the full path to your `trace.zip` file.
 
     ```{.shell .copy}
     mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="show-trace <full/path/to/trace.zip>"
     ```
+
+    ![trace3](../img/reports/traceViewer.png "trace3")
 
  
 
@@ -77,6 +79,13 @@
 
     When you do this, the videos are saved in the `Results` location of the corresponding tests.
 
+    ![videos](../img/reports/videoLocation.png "videos"){ width="50%" }
+
+    You can also play the video from the test results.
+
+    ![editor](../img/reports/video.gif  "videos")
+
+
 
 
 
@@ -88,6 +97,8 @@
     ![har](../img/reports/har.png "har"){ width="50%" }
 
     When you do this, the HAR files are saved in the `Results` location of the corresponding tests.
+
+    ![har](../img/reports/harLocation.png "har"){ width="50%" }
 
 
 
