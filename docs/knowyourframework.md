@@ -43,17 +43,15 @@
 === ":two: Reusable Components"
        This is where the **Reusable** Test Scenarios and Test Cases (**logical grouping of test steps**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
 
-      To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `Test Plan`
+      To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `ReusableComponents`
 
       ![reusables](img/toolui/Reusables.JPG "reusables")
 
-      What differentiates the Scenarios and Test Cases in the Test Plan compared to those in the Reusable Component is the purpose :
-      * **Test Plan** is supposed contain Functional/Regression/E2E/Business Test Cases
+      What differentiates the Scenarios and Test Cases in the Test Plan compared to those in the Reusable Component is the purpose:  
+      * **Test Plan** is supposed contain Functional/Regression/E2E/Business Test Cases  
       * **Reusable Component** is supposed contain logical test step groupings, to be used in multiple test cases in the test plan.
 
-      The tool makes use of the **`ReusableComponent.xml`** located in the Project Location, to differentiate between the above 2 type :
-
-      Here is the `ReusableComponent.xml` for the above example :
+      **For projects created before version 3.0**, the tool makes use of the **`ReusableComponent.xml`** located in the Project Location to differentiate between the above 2 types. Here is the `ReusableComponent.xml` for the above example:
 
       ``` xml
 
@@ -72,7 +70,11 @@
 
       ```
 
-      If you select a Reusable Scenario or Reusable Test Case and **Right Click**, you will have some interesting and handy options to work with :
+      **For projects loaded in version 3.0**, legacy `ReusableComponent.xml` file is automatically migrated to reorganized into the new folder structure in ReusableComponents folder. The original `ReusableComponent.xml` file is preserved as .bak files under `<ProjectName>`.
+
+      ![reusable3](img/toolui/Reusables3.JPG "reusables3"){ width="40%" }
+
+      If you select a Reusable Scenario or Reusable Test Case and **Right Click**, you will have some interesting and handy options to work with:
 
       ![reusable1](img/toolui/Reusables2.JPG "reusables1"){ width="75%" }
 
