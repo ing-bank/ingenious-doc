@@ -1,4 +1,4 @@
-# **Browser Testing** - <span style="color:#FF6200">(powered by Playwright-Java)</span>  
+# **Browser Testing** <span style="color:#FF6200">(powered by Playwright-Java)</span>  
 
 
 !!! info "What is Browser Testing?"

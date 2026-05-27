@@ -73,3 +73,32 @@
 
 
 -------------------------------------------
+
+??? note "LambdaTest Configuration"
+
+    ### LambdaTest Configuration
+
+    To run web automation tests via LambdaTest, set configurations in the Run Settings panel under the **LambdaTest Capabilities** tab.<br>
+
+    Provide the following required fields and other execution properties. 
+
+    * `user`
+    * `accessKey`
+
+    To get your **Username** and **Access Key**<br>
+
+    * Login to LambdaTest Portal, go to **Home** > **Account Settings** > **Password & Security**
+    * Under **Username and Access Key**, copy **Username** and **Access Key** as shown in this example:
+
+    ![createConfig](../img/lambdatest/lambdatest-creds.png "user-token"){ width=60% }
+
+    Specify necessary property values in the **Run Settings** Window like this :
+
+    ![lambda-config](../img/lambdatest/lambdatest-config.png "lambda-config"){ width="50%" }
+
+    Under the **Run Settings** tab, select **Grid** as the **Execution Mode** and set **Remote Grid Url** as **wss://cdp.lambdatest.com**
+
+    ![lambda-setting](../img/lambdatest/lambdatest-run-settings.png "lambda-setting"){ width="50%" }
+
+
+-------------------------------------------
