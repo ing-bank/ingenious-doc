@@ -35,7 +35,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
       ![RequestLevelOptions](../img/api/RequestLevelOptions.png "RequestLevelOptions"){ width="75%" }
   
 === ":two: Workbench Pane"
-       This section allows you to select and configure the API request you want to execute. You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
+       This section allows you to select and configure the API request you want to execute.
        
        ![WorkbenchPane](../img/api/WorkbenchPane.png "WorkbenchPane")
 
@@ -56,6 +56,10 @@ Once selected, you will be navigated to API Workbench window. See example below:
        * **Body** – Specify the request payload sent to the server, typically used with POST, PUT, or PATCH requests to create or update data.
        * **Auth** – Configure authentication details (e.g., API keys, tokens, or basic auth) required to securely access the API.
        * **Settings** – Customize request behavior, such as timeouts, redirects, or other advanced configuration options.
+
+       You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
+
+       ![ExampleConvertoTC](../img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
 
 === ":three: Response Body Pane"
 
