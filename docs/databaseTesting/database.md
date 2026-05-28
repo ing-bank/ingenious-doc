@@ -3,7 +3,7 @@
 
 !!! info "What is Database Testing?"
 
-    Database testing involves validating the integrity, accuracy, and reliability of data stored in a database. It ensures that the database performs as expected under various conditions and that data is correctly stored, retrieved, and manipulated
+    Database testing involves validating the integrity, accuracy, and reliability of data stored in a database. It ensures that the database performs as expected under various conditions and that data is correctly stored, retrieved, and manipulated.
 
 
 !!! abstract "How does INGenious perform Database Testing?"
@@ -25,7 +25,7 @@
     - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
-        ![dbSettings](../img/db/dbsettings.png "dbSettings")
+        ![dbSettings](../img/db/dbsettings.png "dbSettings"){ width="75%" }
 
     - There are two ways to provide the property values:
         1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
@@ -37,7 +37,7 @@
         - The password could be defined as a runtime variable. 
         - The connection string might be a combination of both, allowing dynamic resolution based on context.
         
-        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config")
+        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config"){ width="75%" }
 
 -----------------------------------        
 
@@ -49,7 +49,7 @@ To create a new database configuration, follow the steps below :
 
 * Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
-     ![createConfig](../img/db/createConfig.png "createConfig")
+     ![createConfig](../img/db/createConfig.png "createConfig"){ width="75%" }
 
 
 **In Java if you were to manually connect, you would invariably use the following :**
@@ -66,7 +66,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 * INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons")
+![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons"){ width="75%" }
 
 * Add a new property 
     1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
@@ -83,7 +83,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 
 ## Additional Database Configuration Property
 
-Below are examples of additiona Database configuration properties.
+Below are examples of additional Database configuration properties.
 
 * You can add your database configuration by including the necessary settings directly in the JDBC connection string, allowing you to manage parameters such as session variables at the time of connection.
 
@@ -100,7 +100,7 @@ Below are examples of additiona Database configuration properties.
     jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
     ```
     
-    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png)
+    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png){ width="75%" }
 
 === "Oracle Example"
     Oracle JDBC connection string format
@@ -113,7 +113,7 @@ Below are examples of additiona Database configuration properties.
     jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
     ```
 
-    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png)
+    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png){ width="75%" }
     
 -----------------------------------
 
@@ -129,7 +129,7 @@ Below are examples of additiona Database configuration properties.
 
 * A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
 
- ![database](../img/db/db.png "database")
+ ![database](../img/db/db.png "database"){ width="75%" }
 
  The above is an example of a Database Testcase.
 
@@ -147,13 +147,13 @@ The list of **`Query`** steps is as follows :
 - **`storeResultInDataSheet`**
 - **`storeResultInVariable`**
 
- Inside this editor, we can write the **SQL statement** and then parameterize the the `table names`, `column names`, `where` clause etc. based on our needs.
+ Inside this editor, we can write the **SQL statement** and then parameterize the `table names`, `column names`, `where` clause etc. based on our needs.
 
  If we press ++ctrl+space++ the list of all available **DataSheets : ColumnNames** along with all **user-defined variables** show up. We can then select the appropriate item from where we want to parameterize.
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/db/editor.gif "editor")
+ ![editor](../img/db/editor.gif "editor"){ width="75%" }
  
 
 -----------------------------------

@@ -93,9 +93,9 @@
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Database     |:green_circle: [`assertDBResult`](#)   | @Data       | nameOfDBColumn | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Database     |:green_circle: [`assertDBResult`](#)   | DatasheetName:ColumnName | nameOfDBColumn | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Database     |:green_circle: [`assertDBResult`](#)   | %variableName% | nameOfDBColumn | |<span style="color:Brown"><<*Input from variable*</span>
+    | Database     |:green_circle: [`assertDBResult`](#)   | @value      | nameOfDBColumn | |<span style="color:#349651">:arrow_left:* Hardcoded Input*</span> 
+    | Database     |:green_circle: [`assertDBResult`](#)   | Sheet:Column | nameOfDBColumn | |<span style="color:Blue">:arrow_left: *Input from Datasheet*</span>
+    | Database     |:green_circle: [`assertDBResult`](#)   | %dynamicVar% | nameOfDBColumn | |<span style="color:Brown">:arrow_left: *Input from variable*</span>
 
 === "Corresponding Code"
 

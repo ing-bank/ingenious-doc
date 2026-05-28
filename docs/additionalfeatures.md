@@ -290,7 +290,7 @@
 
     * Once the execution starts, the debug toolbar will appear on top of the screen as shown below. The execution will pause at the step where the breakpoint has been added. You can then debug your test case accordingly.
 
-    ![debug](img/Things/debug.JPG "debug")
+    ![debug](img/Things/debug.JPG "debug"){ width="30%" }
 
     * To view the console log, click the button.
 
