@@ -107,13 +107,16 @@ nav:
         #- General: mobiletesting/mobileActions/commonActions.md
     - Mobile Objects Repository: mobiletesting/mobileOR.md
  - API Testing:
-    - Create Your First API Test: api.md
+    - Create Your First API Test: api/api.md
     - Actions: 
-        - General: apiActions/webservice.md
-        - Store: apiActions/store.md
-        - Positive Assertions: apiActions/positiveassertions.md
-        - Negative Assertions: apiActions/negativeassertions.md
-    - Multipart File Upload: apimultipart.md
+        - General: api/apiActions/webservice.md
+        - Store: api/apiActions/store.md
+        - Positive Assertions: api/apiActions/positiveassertions.md
+        - Negative Assertions: api/apiActions/negativeassertions.md
+        - Structured Data Objects Actions: api/apiActions/sdobjects.md
+    - Multipart File Upload: api/apimultipart.md
+    - Structured Data Objects Repository: api/structuredDataOR.md
+    - API Workbench: api/apiworkbench.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
