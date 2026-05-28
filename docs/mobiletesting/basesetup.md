@@ -100,5 +100,5 @@
 
 
 
-[Android Setup](androidsetup.md){ .md-button } 
-[iOS Setup](iOSsetup.md){ .md-button }    
+[Android Setup](tools/androidsetup.md){ .md-button } 
+[iOS Setup](tools/iOSsetup.md){ .md-button }    

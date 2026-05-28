@@ -1,7 +1,6 @@
 # **Appium Inspector**
 
 ## **Installation**
--------
 
 * Download and install **Appium Inspector** from [this GitHub location](https://github.com/appium/appium-inspector)
 
@@ -12,11 +11,10 @@
 
 * Add the Desired Capabilities as per the device/simulator connected to the system and start session
 
-
-## **Desired Capabilities for Android**
 -----------------------
+## **Desired Capabilities for Android**
 
-![android](../img/mobiletesting/appiuminspectorAndroid.png "android")
+![android](../../img/mobiletesting/appiuminspectorAndroid.png "android")
 
 * To get **deviceName** execute the command `adb devices` from a terminal and choose the correct device name from the list
 * **automationName** is `UIAutomator2`
@@ -30,13 +28,13 @@
 
 In the example below, the **Clock** application is open in the device.
 
-![appdetails](../img/mobiletesting/androidapp.png "appdetails")
+![appdetails](../../img/mobiletesting/androidapp.png "appdetails")
 
 
-## **Desired Capabilities for iOS**
 -----------------------
+## **Desired Capabilities for iOS**
 
-![iOS](../img/mobiletesting/appiuminspectoriOS.png "iOS")
+![iOS](../../img/mobiletesting/appiuminspectoriOS.png "iOS")
 
 * To get **udid** execute the command `xcrun simctl list | egrep '(Booted)'` from a terminal
 * **automationName** is `XCUITest`
@@ -46,3 +44,7 @@ In the example below, the **Clock** application is open in the device.
   ```{ .shell .copy }
   osascript -e 'id of app "<path of the .app file>"'
   ```
+-----------------------
+[Android Setup](../tools/androidsetup.md){ .md-button } 
+[iOS Setup](../tools/iOSsetup.md){ .md-button }
+[Appium Inspector](../tools/appiuminspector.md){ .md-button }

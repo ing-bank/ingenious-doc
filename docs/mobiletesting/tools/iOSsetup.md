@@ -1,15 +1,15 @@
-# **Prepare to test iOS devices**
+# **Prepare to Test iOS Devices**
 
-## **Prerequisites**
 -------
+## **Prerequisites**
 
 * **You need a Mac OS system**
 
-* Make sure you have performed the [Base Setup](basesetup.md){ .md-button }
+* Make sure you have performed the [Base Setup](../basesetup.md){ .md-button }
 
-
-## **Xcode and Xcode command line tools**
 -----------------------
+## **Xcode and Xcode command line tools**
+
 
 #### Xcode
 
@@ -22,17 +22,13 @@
 * Open and check **Xcode**
 
 
-
 #### Xcode Command Line Tools
-
 
 * Check if **Xcode CLT** is already available  using :
 
-   `Xcode-select -p`   or    `Xcode-select --print-path`
-
+    `Xcode-select -p`   or    `Xcode-select --print-path`
 
 * If not available, download the command-line tool compatible with your **Xcode** version from the [Apple Developer website](https://developer.apple.com/download/all/)
-
 
 * Alternatively, you can install the command-line tool for **Xcode** from terminal using following commands:
 
@@ -41,8 +37,8 @@
    `sudo Xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 
-## **Check available iOS Simulators**
 -----------------------
+## **Check available iOS Simulators**
 
 ??? example "Using Xcode"
 
@@ -76,5 +72,7 @@
     xcrun simctl shutdown <UUID>
     ```
 
-[Android Setup](androidsetup.md){ .md-button } 
-[iOS Setup](iOSsetup.md){ .md-button }    
+-----------------------
+[Android Setup](../tools/androidsetup.md){ .md-button } 
+[iOS Setup](../tools/iOSsetup.md){ .md-button }
+[Appium Inspector](../tools/appiuminspector.md){ .md-button }

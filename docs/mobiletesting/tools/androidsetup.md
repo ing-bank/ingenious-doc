@@ -1,8 +1,9 @@
-# **Prepare to test Android devices**
+# **Prepare to Test Android Devices**
 
-## **Prerequisites**
 -------
-Make sure you have performed the [Base Setup](basesetup.md){ .md-button }
+## **Prerequisites**
+
+Make sure you have performed the [Base Setup](../basesetup.md){ .md-button }
 
 #### Download Required Tools
 
@@ -30,9 +31,8 @@ In case we need to run on emulators, the following additional tools are needed:
 
 * **skins**
 
-
-## **Android SDK**
 -----------------------
+## **Android SDK**
 
 The easiest way to set up the Android SDK requirements is by downloading [Android Studio](https://developer.android.com/studio). 
 
@@ -46,9 +46,9 @@ If you wish, you can also download these items without Android Studio:
 * Android SDK Platform can be downloaded using the SDK Manager included in [Android command-line tools](https://developer.android.com/studio#command-line-tools-only)
 * [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)
 
-
-## **Setting up ANDROID_HOME**
 -----------------------
+## **Setting up ANDROID_HOME**
+
 
 ??? info "Windows"
 
@@ -75,5 +75,7 @@ If you wish, you can also download these items without Android Studio:
     export PATH=$PATH:$ANDROID_HOME/emulator
     ```
 
-[Android Setup](androidsetup.md){ .md-button } 
-[iOS Setup](iOSsetup.md){ .md-button }    
+-----------------------
+[Android Setup](../tools/androidsetup.md){ .md-button } 
+[iOS Setup](../tools/iOSsetup.md){ .md-button }
+[Appium Inspector](../tools/appiuminspector.md){ .md-button }

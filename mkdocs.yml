@@ -73,7 +73,7 @@ nav:
         - Mocking: playwrightActions/fulfill.md
         - Dynamic Objects: playwrightActions/dynamicObject.md
         - General: playwrightActions/general.md
-    - Browser Configurations: browsertesting/config.md 
+    - Browser Configurations: browsertesting/config.md
     - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
     - Authentication: browsertesting/playwrightauthenticate.md
     - Webpage Performance: webpageperformance.md
@@ -83,10 +83,12 @@ nav:
  - Mobile App Testing:
     - Premise: mobiletesting/index.md
     - Base Setup: mobiletesting/basesetup.md
-    - Android Setup : mobiletesting/androidsetup.md
-    - iOS Setup : mobiletesting/iOSsetup.md
-    - Appium Inspector : mobiletesting/appiuminspector.md
-    - Create Your First Mobile Test: mobiletesting/emulatorsetup.md
+    - Additional Tools:
+        - Android Setup : mobiletesting/tools/androidsetup.md
+        - iOS Setup : mobiletesting/tools/iOSsetup.md
+        - Appium Inspector : mobiletesting/tools/appiuminspector.md
+    - Appium Configuration: mobiletesting/emulatorsetup.md
+    - Create Your First Mobile Test: mobiletesting/mobileTest.md
     - Actions:
         - Alerts: mobiletesting/mobileActions/alerts.md
         - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
