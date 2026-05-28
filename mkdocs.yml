@@ -73,7 +73,7 @@ nav:
         - Mocking: playwrightActions/fulfill.md
         - Dynamic Objects: playwrightActions/dynamicObject.md
         - General: playwrightActions/general.md
-    - Browser Configurations: browsertesting/config.md 
+    - Browser Configurations: browsertesting/config.md
     - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
     - Authentication: browsertesting/playwrightauthenticate.md
     - Webpage Performance: webpageperformance.md
@@ -83,10 +83,12 @@ nav:
  - Mobile App Testing:
     - Premise: mobiletesting/index.md
     - Base Setup: mobiletesting/basesetup.md
-    - Android Setup : mobiletesting/androidsetup.md
-    - iOS Setup : mobiletesting/iOSsetup.md
-    - Appium Inspector : mobiletesting/appiuminspector.md
-    - Create Your First Mobile Test: mobiletesting/emulatorsetup.md
+    - Additional Tools:
+        - Android Setup : mobiletesting/tools/androidsetup.md
+        - iOS Setup : mobiletesting/tools/iOSsetup.md
+        - Appium Inspector : mobiletesting/tools/appiuminspector.md
+    - Appium Configuration: mobiletesting/emulatorsetup.md
+    - Create Your First Mobile Test: mobiletesting/mobileTest.md
     - Actions:
         - Alerts: mobiletesting/mobileActions/alerts.md
         - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
@@ -105,11 +107,16 @@ nav:
         #- General: mobiletesting/mobileActions/commonActions.md
     - Mobile Objects Repository: mobiletesting/mobileOR.md
  - API Testing:
-    - Create Your First API Test: api.md
+    - Create Your First API Test: api/api.md
     - Actions: 
-        - General: apiActions/webservice.md
-        - Store: apiActions/store.md
-        - Assertions: apiActions/assertions.md
+        - General: api/apiActions/webservice.md
+        - Store: api/apiActions/store.md
+        - Positive Assertions: api/apiActions/positiveassertions.md
+        - Negative Assertions: api/apiActions/negativeassertions.md
+        - Structured Data Objects Actions: api/apiActions/sdobjects.md
+    - Multipart File Upload: api/apimultipart.md
+    - Structured Data Objects Repository: api/structuredDataOR.md
+    - API Workbench: api/apiworkbench.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
@@ -124,6 +131,16 @@ nav:
     - Actions: 
         - General Actions: databaseTesting/dbActions.md
         - Data Storage: databaseTesting/storeActions.md
+ - SAP Testing:
+    - Create Your First SAP Test: sapTesting/sap.md
+    - Import SAP Scripting Recording: sapTesting/importsaprecording-java.md
+    - Actions: 
+        - General: sapTesting/actions/general-element.md
+        - Select: sapTesting/actions/select-element.md
+        - Set: sapTesting/actions/set-element.md
+        - Session transaction: sapTesting/actions/session-transaction.md
+        - Assert: sapTesting/actions/assert.md
+    - SAP Objects Repository: sapTesting/sapOR.md
  - Synthetic Data:
     - Premise: syntheticData/index.md
     - Synthetic Data Generation Actions: 
@@ -201,10 +218,16 @@ nav:
         - Zelda: syntheticData/syntheticDataActions/zelda.md
         - Miscellaneous: syntheticData/syntheticDataActions/misc.md
  - Customizations:
-    - Full flexibility: customizations/index.md
-    - Engine: customizations/engine.md
-    - Custom functions: customizations/customfunction.md
-    - Command Line Interface: cli.md            
+    # - Full flexibility: customizations/index.md
+    # - Engine: customizations/engine.md
+    # - Custom functions: customizations/customfunction.md
+    - INGenious Plugins: 
+        - Plugins: plugins/plugins.md 
+        - Plugins API: plugins/pluginApi.md
+        - Plugin Templates: plugins/pluginTemplates.md
+        - Version Compatibility: plugins/pluginCompatibility.md   
+        - Troubleshooting: plugins/pluginTroubleshooting.md
+    - Command Line Interface: cli.md
  - Integrations :
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md

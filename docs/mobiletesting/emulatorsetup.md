@@ -1,10 +1,10 @@
-# **Creating Mobile App Tests**
+# **Appium Configuration**
 
 ## Set up an Appium Configuration
 
 Follow the steps below to create an Appium configuration in INGenious.
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig")
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
 * Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
 
@@ -20,10 +20,13 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Click on **Save** button to save your Appium Configuration.
 
-> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](appiuminspector.md) for more details.  
+> **Note:** Make sure you have already tested your configurations from Appium Inspector. See section [Appium Inspector](tools/appiuminspector.md) for more details.  
+
+-----------------------
+## Sample Emulator Configurations
 
 === "Sample Android Emulator Configurations"
-
+    
     **Sample Android Emulator INGenious Configurations**
 
     Remote URL:
@@ -77,6 +80,8 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     ***Remote URL***
 
+    > **Note:** Make sure you have an active account in [TestMu AI / LambdaTest](https://www.testmuai.com/){:target="_blank"}
+    
     Your remote url to make connection with **LAMBDATEST** is your connection URL with combination of your Lambda **Username**, **Access key** and extends with `@mobile-hub.lambdatest.com/wd/hub`
 
     * For this example, remote url is set to `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`
@@ -130,39 +135,3 @@ Follow the steps below to create an Appium configuration in INGenious.
                "autoGrantPermissions": "true",
           }
     ```
-
----------------------------     
-
-## Write Tests
-
-* Head over to the **Design Pane** of INGenious
-
-* Create **Objects** in the Object Repository with appropriate selectors like `xpath`, `AccessibilityId` etc. These can easily be captured from **Appium Inspector**
-
-* Drag and drop the objects into the test case canvas
-
-* Select appropriate **actions** like **`Tap`, `Scroll`** or **`Set`** for each relevant step
-
-=== "Sample Android Test Case"
-
-    ![testcase](../img/mobiletesting/testcase-android.png "testcase")  
-
-=== "Sample iOS Test Case"
-
-    ![testcase](../img/mobiletesting/testcase-ios.png "testcase")  
-
----------------------------     
-
-## Test Execution - Design Pane
-
-While running the test from the Design Pane, make sure to select the appropriate **Appium Configuration** that was created for the test. You can do that by right clicking on the Run Button and selecting the Configuration.
-
-![execution](../img/mobiletesting/testexecution1.png "execution")  
-
----------------------------     
-
-## Test Execution - Execution Pane
-
-While running the test from the Execution Pane, make sure to select the appropriate **Appium Configuration** that was created for the test. You can do that by selecting the Configuration in the `Browser` Column.
-
-![execution](../img/mobiletesting/testexecution2.png "execution")  

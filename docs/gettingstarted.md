@@ -13,7 +13,7 @@
 
 #### Software Requirements
 
- * Java 11 or above
+ * Java 17 or above
  * For customizations and contributions:
     * Maven [Installation guide can be found [here](https://maven.apache.org/install.html)]
     * Any IDE which supports Java Development (eg. Eclipse, Netbeans, IntelliJ etc.)
@@ -34,15 +34,15 @@
 
 === "Windows"
 
-    Double click on the [`Run.bat`](#) in the framework location
+    Double click on the [`ingenious.bat`](#) in the framework location
 
 === "Mac or Ubuntu"
 
     1. Open Terminal in the installation location and then type 
     ```{ .shell .copy }
-    chmod +x Run.command
+    chmod +x ingenious.command
     ```
-    2. Then double click on the [`Run.command`](#)
+    2. Then double click on the [`ingenious.command`](#)
     3. If you see **It's Downloaded From Internet** warning then enter the following command in terminal: 
      ```{ .shell .copy }
      xattr -d -r com.apple.quarantine "/path/to/the framework"
@@ -73,17 +73,17 @@
 
  * You will see the steps getting recorded in the **Playwright Inspector**. Make sure to select the **Java Library** as the Target.
 
- * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording.txt` file under `Projects/ProjectName/Recording`.
+ * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording_<timestamp>.txt` file under `Projects/ProjectName/Recording`.
  
  * A notification will appear upon successful copy of the recorded steps.
 
 #### Import recording from Playwright Recorder
 
- * Once the recorded steps have been succesfully copied, close the Playwright Recorder.
+ * Once the recorded steps have been successfully copied, close the Playwright Recorder.
 
  * A prompt will appear asking whether to proceed with the import. Select Yes.
 
- * Specify a **Test Scenario Name** or use the default **NewScenario**. The provided name will be used to rename the `recording.txt` file.
+ * Specify a **Test Scenario Name** or use the default **NewScenario**. The provided name will be used to rename the `recording_<timestamp>.txt` file.
 
  * Once completed, the recording will be imported and displayed as a **Scenario** and **Test Case** . All relevant **test steps**, along with associated **web objects** and **test data**, will be included. The objects will be loaded into the **Object Repository**.
 
@@ -93,15 +93,15 @@
 
 #### Import from `.txt` file
 
- * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording.txt` file under `Projects/ProjectName/Recording`.
+ * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording_<timestamp>.txt` file under `Projects/ProjectName/Recording`.
 
- * Once the recorded steps have been succesfully copied, close the Playwright Recorder.
+ * Once the recorded steps have been successfully copied, close the Playwright Recorder.
 
  * A prompt will appear asking whether to proceed with the import. Select No.
 
  * From **INGenious Playwright Studio**, navigate to **Tools** :material-arrow-right: **Import Playwright Recording** :material-arrow-right: **Import Playwright Recording**.
 
- * Locate the **recording.txt file** under `Projects/ProjectName/Recording` and click [OK].
+ * Locate the **recording_&lt;timestamp&gt;.txt file** under `Projects/ProjectName/Recording` and click [OK].
 
  * The file is immediately rendered as **Scenario** and **Test Case**. All the relevant **test steps** with all the **web objects** and **test data** are imported.
 

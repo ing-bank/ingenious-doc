@@ -49,12 +49,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
+    ingenious.bat -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
+    ./ingenious.command -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
     ```
 
 ---------------------- 
@@ -65,12 +65,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
     ```
 
 ---------------------- 
@@ -80,12 +80,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 ---------------------- 
@@ -95,12 +95,12 @@
 === "Windows"
 
     ```{ .powershell .copy }
-    Run.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
     ```
 
 === "Mac/Linux"
     ```{ .shell .copy }
-    ./Run.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
     ```
 In the above example, the test set will be forced to be executed on `Acceptance` Environment
 

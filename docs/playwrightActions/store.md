@@ -16,7 +16,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementTextinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementTextinVariable`](#)  | %dynamicVar%       | | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -53,7 +53,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementTextinDataSheet`](#)   | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementTextinDataSheet`](#)   | Sheet:Column       | | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 
 === "Corresponding Code"
@@ -95,7 +95,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerHTMLinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerHTMLinVariable`](#)  | %dynamicVar%       | | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -133,7 +133,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerHTMLinDataSheet`](#)   | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerHTMLinDataSheet`](#)   | Sheet:Column       | | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 
 === "Corresponding Code"
@@ -176,7 +176,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerTextinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerTextinVariable`](#)  | %dynamicVar%       | | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -213,7 +213,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInnerTextinDataSheet`](#)  | DatasheetName:ColumnName       | | PageName|
+    | Object     |:green_circle: [`storeElementInnerTextinDataSheet`](#)  | Sheet:Column       | | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 
 === "Corresponding Code"
@@ -254,7 +254,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementInputValueinVariable`](#)  | %variableName%       | | PageName|
+    | Object     |:green_circle: [`storeElementInputValueinVariable`](#)  | %dynamicVar%       | | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -291,7 +291,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     | :green_circle: [`storeElementInputValueinDataSheet`](#)  | DatasheetName:ColumnName       | | PageName|
+    | Object     | :green_circle: [`storeElementInputValueinDataSheet`](#)  | Sheet:Column       | | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 
 === "Corresponding Code"
@@ -333,7 +333,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeNName |  %variableName%        | PageName|
+    | Object     |:green_circle: [`storeElementAttributeinVariable`](#)  | @AttributeName |  %variableName%        | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
 
 
 === "Corresponding Code"
@@ -363,7 +363,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`storeElementValueinVariable`](#)  |  %variableName%   |       | PageName|
+    | Object     |:green_circle: [`storeElementValueinVariable`](#)  |  %dynamicVar%   |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -388,6 +388,54 @@ icon: simple/databricks
     ```
 ------------------------------------------------------
 
+## **storeElementCSSValueinVariable**
+
+**Description**: This function will **store element's CSS value** in a variable
+
+**Input Format** : %variableName%  
+
+**Condition** : Name of the **CSS attribute** to retrieve
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Object     |:green_circle: [`storeElementCSSValueinVariable`](#)  |  %dynamicVar%   |  CSSAttribute  | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.PLAYWRIGHT, desc = "Store [<Object>] element's  CSS value  into Runtime variable: -> [<Data>]", input = InputType.YES, condition=InputType.YES)
+    public void storeElementCSSValueinVariable() {
+        
+        String cssValue = "";
+        String strObj = Input;
+        try {
+            cssValue = (String) Locator.evaluate("(element) => window.getComputedStyle(element).getPropertyValue('" + Condition + "')");
+            if (strObj.matches(".*:.*")) {
+                String sheetName = strObj.split(":", 2)[0];
+                String columnName = strObj.split(":", 2)[1];
+                userData.putData(sheetName, columnName, cssValue);
+                Report.updateTestLog(Action, "Element's '" + Condition + "' value [" + cssValue + "] is stored in " + strObj, Status.DONE);
+            } else {
+                Report.updateTestLog(Action,
+                        "Given input [" + Input + "] format is invalid. It should be [sheetName:ColumnName]",
+                        Status.DEBUG);
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(JSCommands.class.getName()).log(Level.SEVERE, null, ex);
+            Report.updateTestLog(Action, "Javascript execution failed", Status.DEBUG);
+
+        }
+    }
+
+    ```
+------------------------------------------------------
+
+
+
 ## **StoreElementCount**
 
 **Description**: This function will **store element's count** in a variable
@@ -398,7 +446,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Object     |:green_circle: [`StoreElementCount`](#)  |  %variableName%   |       | PageName|
+    | Object     |:green_circle: [`StoreElementCount`](#)  |  %dynamicVar%   |       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 
 === "Corresponding Code"
@@ -433,7 +481,7 @@ icon: simple/databricks
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Browser     |:green_circle: [`StoreStorageState`](#)  | @FilePath       | | |
+    | Browser     |:green_circle: [`StoreStorageState`](#)  | @FilePath       | | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
 
 
 === "Corresponding Code"

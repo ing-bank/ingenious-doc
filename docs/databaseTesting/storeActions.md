@@ -4,13 +4,13 @@
 
 **Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in the datasheet
 
-**Input Format** : @SheetName:ColumnName , Condition : DatabaseColumnName, ResultSetRowNumber
+**Input Format** : Sheet:Column, Condition: DatabaseColumnName, ResultSetRowNumber
 
 === "Usage"
 
-    | ObjectName | Action | Input          | Condition        |
-    |------------|----------------|------------------|---|
-    | Database   | :green_circle: [`storeDBValueinDataSheet`](#) | DatasheetName:ColumnName  | DatabaseColumnName, ResultSetRowNumber   |
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Database   | :green_circle: [`storeDBValueinDataSheet`](#) | Sheet:Column  | DatabaseColumnName, ResultSetRowNumber   | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
 
 === "Corresponding Code"
 
@@ -53,13 +53,13 @@
 
 **Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in a user defined variable
 
-**Input Format** : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber
+**Input Format** : %dynamicVar%, Condition: DatabaseColumnName, ResultSetRowNumber
 
 === "Usage"
 
-    | ObjectName | Action |Input        | Condition          |
-    |------------|--------------|--------------------|---|
-    | Database   | :green_circle: [`storeValueInVariable`](#) | %variableName%        | DatabaseColumnName,ResultSetRowNumber     |
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Database   | :green_circle: [`storeValueInVariable`](#) | %dynamicVar%       | DatabaseColumnName, ResultSetRowNumber     ||<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -81,7 +81,7 @@
 
 **Description**: This action will store the value of a specific cell(from specific row and column) from the result of an SQL select statement in global variable
 
-**Input Format** : %variableName% , Condition : DatabaseColumnName,ResultSetRowNumber
+**Input Format** : %variableName%, Condition: DatabaseColumnName, ResultSetRowNumber
 
 === "Usage"
 
@@ -109,7 +109,7 @@
 
 **Description**:  This action will store the result of an SQL select statement in the test datasheet
 
-**Input Format** : @`SQL Query` , Condition : DatasheetName
+**Input Format** : @`SQL Query`, Condition: DatasheetName
 
 === "Usage"
 

@@ -190,9 +190,9 @@ icon: material/timer
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | @Data       |  | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | DatasheetName:ColumnName |  | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | %variableName% |  | |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`waitForTitleToBe`](#)   | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -214,9 +214,9 @@ icon: material/timer
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | @Data       |  | |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | DatasheetName:ColumnName |  | |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | %variableName% |  | |<span style="color:Brown"><<*Input from variable*</span>
+    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | @value       |  | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | Sheet:Column |  | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`waitForTitleToContain`](#)   | %dynamicVar% |  | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
@@ -274,9 +274,9 @@ icon: material/timer
 
     | ObjectName | Action            | Input        | Condition |Reference|  |
     |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | @Data       |  | PageName |<span style="color:Green"><< *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | DatasheetName:ColumnName |  | PageName |<span style="color:Blue"><< *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | %variableName% |  | PageName |<span style="color:Brown"><<*Input from variable*</span>
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 

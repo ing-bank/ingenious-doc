@@ -1,4 +1,4 @@
-# **Mobile Application Testing** - <span style="color:#FF6200">(powered by Appium-Java)</span>  
+# **Mobile Application Testing** <span style="color:#FF6200">(powered by Appium-Java)</span>  
 
 
 !!! info "What is Mobile App Testing?"
@@ -27,6 +27,5 @@
 Make sure to check out the following topics :
 
 [Base Setup](basesetup.md){ .md-button }
-[Android Setup](androidsetup.md){ .md-button } 
-[iOS Setup](iOSsetup.md){ .md-button } 
-[Actions](../playwrightActions/browser.md){ .md-button }
+[Write Tests](mobileTest.md){ .md-button }
+[Actions](mobileActions/alerts.md){ .md-button }

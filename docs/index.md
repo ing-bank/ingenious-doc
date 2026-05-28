@@ -65,7 +65,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages **Java HTTP Client** to create API tests.
 
-    [:octicons-arrow-right-24: API Testing](api/)
+    [:octicons-arrow-right-24: API Testing](api/api)
 
 
 -   :material-text-box-multiple:{ .lg .middle .cicd} __Message/File Based Testing__
@@ -84,7 +84,6 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     [:octicons-arrow-right-24: Synthetic Data Generation](syntheticData/)    
 
-
 -   :octicons-database-16:{ .lg .middle .cicd} __Database Testing__
 
     ---
@@ -93,13 +92,21 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     [:octicons-arrow-right-24: Database Testing](databaseTesting/database/)
 
--   :material-code-json:{ .lg .middle .customization } __Full Customization__
+-   :octicons-device-desktop-24:{ .lg .middle .cicd} __SAP Testing__
 
     ---
 
-    <span style="color:#FF6200">INGenious</span> comes with a full blown `maven` project which can be easily customized based on project needs.
+    <span style="color:#FF6200">INGenious</span> leverages **Java JACOB Library** to connect and test SAP GUI.
 
-    [:octicons-arrow-right-24: Customizations](customizations/)
+    [:octicons-arrow-right-24: SAP Testing](sapTesting/sap/)
+
+-   :material-code-json:{ .lg .middle .customization } __Customization__
+
+    ---
+
+    <span style="color:#FF6200">INGenious</span> features a powerful <b>Plugin System</b> that lets you extend the framework with custom automation actions, new object types, and integrations—across browser, database, mobile, web services, and more.
+
+    [:octicons-arrow-right-24: Customizations](plugins/plugins)
 
 -   :simple-cucumber:{ .lg .middle .cucumber} __Integrated BDD__
 

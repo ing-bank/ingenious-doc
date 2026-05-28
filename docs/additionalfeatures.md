@@ -8,11 +8,11 @@
 
     To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
 
-    ![details](img/Things/Details.png "details")
+    ![details](img/Things/Details.png "details"){ width="30%" }
 
     The **Project Details** window opens and the following options are available in the window, as shown below.
 
-    ![details1](img/Things/Details1.png "details1")
+    ![details1](img/Things/Details1.png "details1"){ width="50%" }
 
     To rename your project, give the new name in the **Project Name text box** and click on **Rename**. Your project will be renamed.
 
@@ -55,8 +55,6 @@
         * For the first iteration, data will be taken from Iteration 1 and SubIteration 1
 
         * For the second iteration, data will be taken from Iteration 1 and SubIteration 2
-
-        * In the above image, we have used **End Param**. This will execute Step 2 to 4, once and not twice.
 
         * To iterate through the entire Test Case for all the sub-iterations of data in the datasheet, keep **Start Param** in the first step and **End Param** in the last step of your Test Case.
 
@@ -107,11 +105,11 @@
 
 -------
 
-??? example "Iterations and SubIterations in Test Execution Panel"
+??? example "Iterations and Sub-Iterations in Test Execution Panel"
 
     ## Iterations and Sub-Iterations in Test Execution Panel
 
-    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their SubIterations.
+    * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub-Iterations.
 
     ![iterationOption](img/Things/IterationOption.png "iterationOption")
 
@@ -139,7 +137,7 @@
 
     * **Iteration Mode** can be found under the Run Settings.
 
-    ![iterationMode](img/Things/iterationMode.png "iterationMode")
+    ![iterationMode](img/Things/iterationMode.png "iterationMode"){ width="50%" }
 
     * If **ContinueOnError** is selected, Test Case will keep on running even if an error occurs during one of the iterations.
 
@@ -148,9 +146,9 @@
 
 -----
 
-??? example "Handle actions before and after a step"
+??? example "Handle Actions Before and After a Step"
 
-    ## Handle actions before and after a step
+    ## Handle Actions Before and After a Step
 
     In some applications, there may be components which will originate at random ie. the origination of such components cannot be predicted. This section will describe how to handle such components.
 
@@ -171,15 +169,17 @@
         * **`afterStepExecution`**: Enter the code to handle the component here, if you want to perform the check **after** the execution of each step.
 
 ----
-??? example "How To Navigate between Test Datasheets"
+??? example "How to Navigate Between Test Datasheets"
 
-    ## How To Navigate between Test Datasheets
+    ## How to Navigate Between Test Datasheets
 
     * Right click on any datasheet and choose the option **Search Test Data** from the context menu
 
     * In the **Go To Test Data** window, choose the test datasheet or the global datasheet to which you want to navigate
 
     * You will be navigated to the respective sheet after clicking on **[OK]**
+
+    ![navigateDatasheets](img/Things/navigateDatasheets.png "navigateDatasheets"){ width="75%" }
 
 ----
 
@@ -197,23 +197,7 @@
 
     ![search](img/Things/colheadersearch.png "search")
 
-----
-
-??? example "User Defined Variables"
-
-    ## User Defined Variables
-
-    User Defined variables can be created and defined by two ways as given below.
-
-    * Using the actions **AddVar** and **AddGlobalVar**. **AddVar** action will let you define a variable whose scope is throughout the execution of your test case and is valid for all the sub-iterations of the iteration 1 of your test case. But **AddGlobalVar** action will let you define a variable whose scope is throughout the execution of your test set.
-
-    * Navigate to **Configuration** :material-arrow-right: **Run Settings** tab and provide your variable name and value under **the Property Name** and **Value** columns respectively, as shown in the screenshot below. Click on **save** for saving your settings.
-
-    These variables can now be used anywhere in your project.
-
-    In addition to these, we have certain actions that take variables as input and will store the corresponding result in the variable provided.
-
-----
+<!-- ----
 
 ??? example "How To Change Report Theme"
 
@@ -237,7 +221,7 @@
 
     **Sorting In Report**
 
-    You can sort the reports using the **up/down** arrows beside each column name.
+    You can sort the reports using the **up/down** arrows beside each column name. -->
 
 ----
 
@@ -263,14 +247,16 @@
     | [`=Date`](#)   | =Date("0", dd/MM/YYYY)      |Will return the **date** in the specified format |
     | [`=Date`](#)   | =Date("+n or -n", dd/MM/YYYY) |Will **add or subtract n days from the current date** and display it in the specified format |
     
+    ![generateRunTimeData](img/Things/generateRunTimeData.png "generateRunTimeData")
 
     > **Note:** It is also possible to combine two relevant functions for optimum usage.| Example1: **=Concat(Diaphragm,=Round(360.45))** Result: **Diaphragm360** <br> Example2: **=Concat(James_,=Round(=Random(3)))** Result: **James_155**. 
 
+
 ----
 
-??? example "Add Custom Functions For Run Time Data Generation"
+??? example "Add Custom Functions for Run Time Data Generation"
 
-    ## Add Custom Functions For Run Time Data Generation
+    ## Add Custom Functions for Run Time Data Generation
 
     Navigate to :
 
@@ -292,25 +278,9 @@
 
 ----
 
-??? example "Enabling/Disabling screenshots for Pass/Fail"
+??? example "Execution in Debug Mode"
 
-    ## Enabling/Disabling screenshots for Pass/Fail
-
-    In the report, you will be able to view the screenshots for the steps whose Status is **PASS** or **FAIL**. However, you have the option to enable/disable the screenshots for such steps.
-
-    * In the INGenious IDE, go to **Configurations** :material-arrow-right: **Run Settings**.
-
-    * Under Screenshot section, you can check/uncheck the **Pass** or **Fail** checkboxes in order to enable/disable the screenshots in the report.
-
-    * To enable/disable the screenshots for the entire page, check/uncheck the **Take Full Page Screenshot** checkbox.
-
-    > **Note**: Give the status as **PASSNS** or **FAILNS** under the **Report.updateTestLog()** method for **PASS status without screenshot** or **FAIL status without screenshot** respectively.
-
-----
-
-??? example "Execution in debug mode"
-
-    ## Execution in debug mode
+    ## Execution in Debug Mode
 
     You can debug the errors in your test case by adding breakpoints to the desired test steps and running the test case in debug mode.
 
@@ -320,7 +290,7 @@
 
     * Once the execution starts, the debug toolbar will appear on top of the screen as shown below. The execution will pause at the step where the breakpoint has been added. You can then debug your test case accordingly.
 
-    ![debug](img/Things/debug.JPG "debug")
+    ![debug](img/Things/debug.JPG "debug"){ width="30%" }
 
     * To view the console log, click the button.
 
@@ -337,13 +307,13 @@
 
 ----
 
-??? example "Store Data From Previous Test Case"
+??? example "Store Data from Previous Test Case"
 
-    ## Store Data From Previous Test Case
+    ## Store Data from Previous Test Case
 
     This action retrieves data from a previous test case execution and stores it either in a runtime variable or a target datasheet for use in the current test case.
 
-    **When to use**
+    **When to Use**
 
     Used in data-driven test automation where **test cases depend on the output data of previously executed test cases**. This enables chaining of test scenarios and dynamic data reuse.
 
@@ -354,7 +324,7 @@
     - `%PreviousIteration%` - The previous Test Case Iteration to fetch the data. If not set, by defaut it will use the current test case iteration.   
     - `%PreviousSubIteration%` - The previous Test Case Sub-Iteration to fetch the data. If not set, by defaut it will use the current test case sub-iteration.   
 
-    **How to store Data from previous Test Case**
+    **How to Store Data from Previous Test Case**
 
     - To store data from previous test case, make sure to set your required variables properly to your desired test case data or keep the default values.
     - You can use action **storeDataFromPreviousTestCaseData** that requires Input and Condition field
@@ -378,3 +348,44 @@
     ![storeDataFromPreviousTestCaseData](img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
 
  ------   
+??? example "Store Epoch Timestamp in a Variable"
+
+    ## Store Epoch Timestamp in a Variable
+
+    This action allows you to store the current Unix/Epoch timestamp (time since 1 January 1970 00:00:00 UTC) into a runtime variable with flexible format options.
+
+    **When to Use**
+
+    Use this when you need to capture the current time in your test execution, for example, to generate unique values, measure durations, compare timestamps, or pass time data between steps or test cases.
+
+    **Timestamp Format Options**
+
+    The action supports three different timestamp formats:
+
+    | Format | Description | Example Value |
+    |--------|-------------|---------------|
+    | **seconds** | Epoch time in seconds | 1714176000 |
+    | **milliseconds** | Epoch time in milliseconds | 1714176000000 |
+    | **seconds+milliseconds** | Epoch seconds with 3 decimal places for millisecond precision | 1714176000.123 |
+
+    **How to Store the Unix Timestamp**
+
+    - In **ObjectName** field, select **General**.  
+    - In the **Action** field, select **storeEpochTimestampInVariable**.  
+    - In the **Input** field, specify the format option: `seconds`, `milliseconds`, or `seconds+milliseconds` (case-insensitive).  
+    - In the **Condition** field, specify the variable name where you want to store the timestamp.  
+    - The action will automatically capture and store the current timestamp at the moment of execution.  
+
+    **Examples**
+
+    === "Usage"
+        | Input (Format) | Condition (Variable) | Result |
+        |----------------|---------------------|--------|
+        | `seconds` | `%varName%` | Stores epoch in seconds (e.g., 1714176000) |
+        | `milliseconds` | `%varName%` | Stores epoch in milliseconds (e.g., 1714176000000) |
+        | `seconds+milliseconds` | `%varName%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
+
+    === "Sample"
+        ![storeEpochTimestampInVariable](img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
+
+    > **Note:** Choose the format based on your requirements. Use **seconds** for most general purposes, **milliseconds** for high-precision timing, or **seconds+milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.

@@ -50,9 +50,17 @@ There are two types of Web OR that you may use:
 
     ![ExampleProjectWebOR](../img/webOR/ProjectWebOR.png "ExampleProjectWebOR")
 
-    An `OR.object` file is automatically generated whenever a project containing Objects is saved. It stores the Page and Object attributes in XML format and is located inside the respective project directory.
+    **For projects created before version 3.0**, an `OR.object` file is automatically generated whenever a project containing Objects is saved. It stores the Page and Object attributes in XML format and is located inside the respective project directory.
 
     ![OR.object](../img/webOR/ORobject.png "OR.object")
+
+    **For projects created in version 3.0**, a YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory `<ProjectName>\ObjectRepository\Web\`.
+
+    ![ProjWebORYAML](../img/webOR/ProjWebORYAML.png "ProjWebORYAML")
+
+    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `<ProjectName>\ProjectXMLOR\`.
+
+    ![ProjWebORXMLconverted](../img/webOR/ProjWebORXMLconverted.png "ProjWebORXMLconverted")
 
     When a Project Web Object (PWO) is used in a test step, the identifier **[Project] PageName** will show as its reference.
 
@@ -64,9 +72,17 @@ There are two types of Web OR that you may use:
 
     ![ExampleSharedWebOR](../img/webOR/SharedWebOR.png "ExampleSharedWebOR")
     
-    A `SharedOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from `Project` to `Shared`. Like `OR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedWebObjects\` directory.
+    Similar to Project WebOR, **for projects created before version 3.0**, a `SharedOR.object` file is automatically generated whenever a project saves Objects created under `Shared` or when Objects are copied from `Project` to `Shared`. Like `OR.object`, it stores Page and Object attributes in XML format and is located in the `Shared\SharedWebObjects\` directory.
 
     ![SharedOR.object](../img/webOR/SharedORObject.png "SharedOR.object")
+
+    **For projects created in version 3.0**, a YAML file is automatically generated for each page—either upon page creation under `Shared` or when pages or objects are moved from `Project` to `Shared`. This file contains the page’s objects and their corresponding attributes and is stored in the `Shared\SharedObjectRepository\Web` directory. The `webor-projectsdata.yaml` file maintains the list of projects that use the Shared Web Objects.
+
+    ![SharedWebORYAML](../img/webOR/SharedWebORYAML.png "SharedWebORYAML")
+
+    **For projects loaded in version 3.0**, legacy `.object` files are automatically converted to YAML and reorganized into the new folder structure. The original `.object` files are preserved as `.bak` files under `Shared\SharedXMLOR\`
+
+    ![SharedWebORXMLconverted](../img/webOR/SharedWebORXMLconverted.png "SharedWebORXMLconverted")
 
     When a Shared Web Object (SWO) is used in a test step, the identifier **[Shared] PageName** will show as its reference.
 
@@ -82,15 +98,19 @@ There are two types of Web OR that you may use:
     For example:
     ![ExampleTestScenario](../img/webOR/ExampleTestScenario.png "ExampleTestScenario")
 
-* Pages and Objects created under the `Project` tab can be copied to the `Shared` section by using the `Copy to Shared` option. When an entire Page is copied, all Objects under that Page—including their attributes—are copied. When copying a single Object, only that Object and its corresponding Page are copied. *Note that existing test steps using the Project‑level Web Object (PWO) will not be automatically updated to use the Shared Web Object (SWO).*
+* **For versions 2.4 and 2.4.1**, Pages and Objects created under the `Project` tab can be copied to the `Shared` section by using the `Copy to Shared` option. When an entire Page is copied, all Objects under that Page—including their attributes—are copied. When copying a single Object, only that Object and its corresponding Page are copied. *Note that existing test steps using the Project‑level Web Object (PWO) will not be automatically updated to use the Shared Web Object (SWO).*
 
     ![ExampleCopy](../img/webOR/ExampleCopy.gif "ExampleCopy")
+
+* **For version 3.0**, `Copy to Shared` option is replaced by `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Web Object (PWO) are automatically updated to use the Shared Web Object (SWO) within the project.*
+
+    ![ExampleMove](../img/webOR/ExampleMove.gif "ExampleMove")
 
 * Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.
 
     ![ExampleSameNames](../img/webOR/ExampleSameNames.png "ExampleSameNames")
 
-* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. However, after renaming, any existing test steps that previously referenced an SWO will continue to use its old name, which may result in errors during test execution.
+* Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. After renaming, any existing test steps in the current project that previously referenced an SWO using the old name will be updated automatically.
 
 * Pages and Objects in both the Project and Shared repositories can be deleted using the `Delete Page` or `Delete Object` options. However, once deleted, any existing test steps that previously referenced an SWO or PWO will still attempt to use the removed Page or Object, which may result in errors during test execution.
 
