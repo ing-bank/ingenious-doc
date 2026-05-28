@@ -100,7 +100,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     [:octicons-arrow-right-24: SAP Testing](sapTesting/sap/)
 
--   :material-code-json:{ .lg .middle .customization } __Full Customization__
+-   :material-code-json:{ .lg .middle .customization } __Customization__
 
     ---
 
