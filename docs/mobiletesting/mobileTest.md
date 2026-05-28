@@ -21,7 +21,7 @@
 === "Sample LambdaTest Test Case"
 
     > Any Android and iOS Test Case can be used as a LambdaTest.<br>
-    Setup a LambdaTest configuration by following the steps in [Sample Lambda Configurations](../emulatorSetup/#__tabbed_1_3)
+    Setup a LambdaTest configuration by following the steps in [Sample Lambda Configurations](../emulatorsetup/#__tabbed_1_3)
 
     ![testcase](../img/mobiletesting/testcase-ios.png "testcase")
 
