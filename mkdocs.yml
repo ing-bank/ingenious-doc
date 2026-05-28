@@ -49,7 +49,6 @@ plugins:
 nav:
  - Home:
     - Premise : index.md
-    - News: news/newFeatures.md
     - Getting Started: gettingstarted.md
     - Know the framework: knowyourframework.md
  - Browser Testing: 
@@ -222,13 +221,13 @@ nav:
     # - Full flexibility: customizations/index.md
     # - Engine: customizations/engine.md
     # - Custom functions: customizations/customfunction.md
-    - Command Line Interface: cli.md    
     - INGenious Plugins: 
         - Plugins: plugins/plugins.md 
         - Plugins API: plugins/pluginApi.md
         - Plugin Templates: plugins/pluginTemplates.md
         - Version Compatibility: plugins/pluginCompatibility.md   
-        - Troubleshooting: plugins/pluginTroubleshooting.md    
+        - Troubleshooting: plugins/pluginTroubleshooting.md
+    - Command Line Interface: cli.md
  - Integrations :
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md

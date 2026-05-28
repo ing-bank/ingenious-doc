@@ -281,10 +281,6 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
 
     import com.ing.samp.dependency.SampDependency;
 
-    /**
-     *
-     * @author qs01nn
-     */
     public class BrowserTestPlugin {
 
         GeneralBrApi gen;

@@ -1,23 +1,26 @@
 # Troubleshooting
 
-- **Duplicate Action Error**
+-------------------------------
+??? example "Duplicate Action Error"
+
+    ## Duplicate Action Error
 
     If you define multiple actions with the same name and object type, INGenious will report a duplicate action error during plugin loading and the application will exit. Ensure that each action method within an object type has a unique name to avoid this issue.
 
     Below is an example of the error you might encounter:
 
     ```
-    Duplicate action 'assertOddNumberDataSheet' for object type 'Numeric Assert' detected:
-    - Original found in: text-assertion-plugin (class: com.ing.plugin2.Plugin2)
-    - Duplicate found in: sample-plugin (class: com.ing.plugin.cloader.PluginCloader)
-    Duplicate action 'GetOccurence' for object type 'String Operations' detected:
-    - Original found in: core (class: com.ing.engine.commands.stringOperations.StringOperations)
-    - Duplicate found in: sample-plugin (class: com.ing.plugin.cloader.PluginCloader)
-    Duplicate method names detected in the loaded actions. Please resolve the conflicts.
+        Duplicate action 'assertOddNumberDataSheet' for object type 'Numeric Assert' detected:
+        - Original found in: text-assertion-plugin (class: com.ing.plugin2.Plugin2)
+        - Duplicate found in: sample-plugin (class: com.ing.plugin.cloader.PluginCloader)
+        Duplicate action 'GetOccurence' for object type 'String Operations' detected:
+        - Original found in: core (class: com.ing.engine.commands.stringOperations.StringOperations)
+        - Duplicate found in: sample-plugin (class: com.ing.plugin.cloader.PluginCloader)
+        Duplicate method names detected in the loaded actions. Please resolve the conflicts.
     ```
 
-- **ClassCastException Error**
 
+??? example "ClassCastException Error"
     If you encounter a `ClassCastException` when casting Playwright objects, check the following:
 
     1. **Dependency Scope**: Ensure Playwright dependency uses `<scope>provided</scope>` in your pom.xml
@@ -36,8 +39,7 @@
     page.navigate("https://example.com"); // NullPointerException if null
     ```
 
-- **Java Version Error (UnsupportedClassVersionError)**
-
+??? example "Java Version Error (UnsupportedClassVersionError)"
     If you see an error like:
 
     ```
@@ -45,21 +47,20 @@
     com/example/plugin/MyAction has been compiled by a more recent version of the Java Runtime
     ```
 
-    **Cause**: You are using a plugin that was compiled with a newer Java version than your machine's JVM supports.
+    **Cause:** You are using a plugin that was compiled with a newer Java version than your machine's JVM supports.
 
-    **Solution**: Upgrade machine's JRE.
+    **Solution:** Upgrade machine's JRE.
 
-- **NoSuchMethodError**
-
+??? example "NoSuchMethodError"
     If you encounter `NoSuchMethodError` at runtime:
 
     ```
     java.lang.NoSuchMethodError: com.microsoft.playwright.Page.someNewMethod()
     ```
 
-    **Cause**: Your plugin is trying to use a Playwright API method that doesn't exist in the framework's Playwright version.
+    **Cause:** Your plugin is trying to use a Playwright API method that doesn't exist in the framework's Playwright version.
 
-    **Solution**: 
+    **Solution:**
     1. Check the framework's Playwright version (currently 1.50.0)
     2. Update your plugin's Playwright dependency to match:
 
@@ -74,14 +75,13 @@
 
     3. Use only APIs available in Playwright 1.50.0
 
-- **NoClassDefFoundError for Playwright Classes**
-
+??? example "NoClassDefFoundError for Playwright Classes"
     If you see:
 
     ```
     java.lang.NoClassDefFoundError: com/microsoft/playwright/Page
     ```
 
-    **Cause**: Missing Playwright dependency in your plugin's `pom.xml`.
+    **Cause:** Missing Playwright dependency in your plugin's `pom.xml`.
 
-    **Solution**: Add Playwright dependency with `provided` scope (see Step 1 of [How to Create Your Plugin](#how-to-create-your-plugin)).
+    **Solution:** Add Playwright dependency with `provided` scope (see Step 1 of [How to Create Your Plugin](#how-to-create-your-plugin)).

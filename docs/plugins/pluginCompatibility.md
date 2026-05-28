@@ -35,6 +35,8 @@ Please see [INGenious Version History](ingeniousVersions.md) for the version tab
 
 !!!Note "Same pattern applies with appium dependency."
 
-!!!Note "During development, your IDE may show and allow you to use new Playwright APIs if your plugin's dependency is set to a newer version. However, at runtime, only the Playwright version loaded by the main app is actually present. If your plugin tries to use a newer API that does not exist in the main app’s Playwright version (even if the code compiles), it will result in runtime errors such as `NoSuchMethodError`."
+!!!Note "IDE May Suggest APIs Not Available at Runtime"
+    During development, your IDE may show and allow you to use new Playwright APIs if your plugin's dependency is set to a newer version. However, at runtime, only the Playwright version loaded by the main app is actually present. If your plugin tries to use a newer API that does not exist in the main app’s Playwright version (even if the code compiles), it will result in runtime errors such as `NoSuchMethodError`.
 
-!!!Note "**Always set your plugin's Playwright dependency version to exactly match the main app, and use `<scope>provided</scope>`. This ensures that what you see in development matches what will work at runtime, and prevents subtle, hard-to-debug errors.**"
+!!!Note "Match Plugin Playwright Version and Use Provided Scope"
+    **Always set your plugin's Playwright dependency version to exactly match the main app, and use `<scope>provided</scope>`. This ensures that what you see in development matches what will work at runtime, and prevents subtle, hard-to-debug errors.**

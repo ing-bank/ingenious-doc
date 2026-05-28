@@ -106,7 +106,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> features a powerful <b>Plugin System</b> that lets you extend the framework with custom automation actions, new object types, and integrations—across browser, database, mobile, web services, and more.
 
-    [:octicons-arrow-right-24: Customizations](customizations/)
+    [:octicons-arrow-right-24: Customizations](plugins/plugins)
 
 -   :simple-cucumber:{ .lg .middle .cucumber} __Integrated BDD__
 
