@@ -218,10 +218,16 @@ nav:
         - Zelda: syntheticData/syntheticDataActions/zelda.md
         - Miscellaneous: syntheticData/syntheticDataActions/misc.md
  - Customizations:
-    - Full flexibility: customizations/index.md
-    - Engine: customizations/engine.md
-    - Custom functions: customizations/customfunction.md
-    - Command Line Interface: cli.md            
+    # - Full flexibility: customizations/index.md
+    # - Engine: customizations/engine.md
+    # - Custom functions: customizations/customfunction.md
+    - INGenious Plugins: 
+        - Plugins: plugins/plugins.md 
+        - Plugins API: plugins/pluginApi.md
+        - Plugin Templates: plugins/pluginTemplates.md
+        - Version Compatibility: plugins/pluginCompatibility.md   
+        - Troubleshooting: plugins/pluginTroubleshooting.md
+    - Command Line Interface: cli.md
  - Integrations :
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md
