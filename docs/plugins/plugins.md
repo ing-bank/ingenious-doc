@@ -173,7 +173,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
                 </goals>
                 <configuration>
                     <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                    <includeScope>compile</includeScope>
+                    <excludeScope>provided</excludeScope>
                     <excludeTransitive>true</excludeTransitive>
                 </configuration>
             </execution>
@@ -181,9 +181,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
     </plugin>
     ```
 
-    !!! note "Since `ingenious-api` and `playwright` use `provided` scope, they are automatically excluded from the `lib` folder. Only `compile` scoped dependencies will be copied."
-
-    !!!tip "Optionally, you can skip this step entirely if your plugin has no additional dependencies beyond the required `provided` ones."
+    !!! note "Since `ingenious-api` and `playwright` use `provided` scope, they are automatically excluded from the `lib` folder. Other dependencies will be copied."
 
 3. Declare Plugin Entry Classes
     Entry classes contain your action methods and are dynamically instantiated by INGenious. Specify them in the JAR manifest using the Maven JAR plugin:
@@ -208,7 +206,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
 
     List fully qualified class names (Package.ClassName), separated by commas.
 
-4. Automate Deployment (Optional)
+4. Automate Deployment
 
     To automatically copy your JAR and dependencies to the plugin directory, use the Maven Antrun plugin. Update `deploy.dir` to your target plugin folder:
 
@@ -224,15 +222,15 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
                 <configuration>
                     <target>
                         <!-- Destination directory -->
-                        <property name="deploy.dir" value="/path/to/INGenious/plugins/${project.artifactId}"/>
+                        <property name="deploy.dir" value="/path/to/INGenious"/>
                         
                         <!-- Copy and rename JAR -->
                         <copy file="${project.build.directory}/${project.build.finalName}.jar"
-                            tofile="${deploy.dir}/${project.artifactId}.jar"/>
+                            tofile="${deploy.dir}/plugins/${project.artifactId}/${project.artifactId}.jar"/>
 
                         <!-- Copy lib folder only if it exists -->
-                        <mkdir dir="${deploy.dir}/lib"/>
-                        <copy todir="${deploy.dir}/lib">
+                        <mkdir dir="${deploy.dir}/plugins/${project.artifactId}/lib"/>
+                        <copy todir="${deploy.dir}/plugins/${project.artifactId}/lib">
                             <fileset dir="${project.build.directory}/lib"/>
                         </copy>
                     </target>
@@ -255,41 +253,33 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
     package com.ing.plugin.browser;
 
     import com.ing.ingenious.api.annotation.Action;
-    import com.ing.ingenious.api.contract.GeneralBrApi;
+    import com.ing.ingenious.api.contract.BrowserPluginApi;
+    import com.ing.ingenious.api.contract.data.UserDataAccessApi;
     import com.ing.ingenious.api.contract.reports.TestCaseReportApi;
+    import com.ing.ingenious.api.exception.ForcedException;
     import com.ing.ingenious.api.types.ObjectType;
     import com.ing.ingenious.api.types.InputType;
     import com.ing.ingenious.api.status.Status;
 
     import com.microsoft.playwright.Page;
     import com.microsoft.playwright.Page.NavigateOptions;
-    import com.microsoft.playwright.PlaywrightException;
     import com.microsoft.playwright.TimeoutError;
-    import com.microsoft.playwright.assertions.LocatorAssertions;
     import com.microsoft.playwright.Locator;
-    import com.microsoft.playwright.PlaywrightException;
-    import com.microsoft.playwright.assertions.LocatorAssertions;
-    import com.microsoft.playwright.assertions.PageAssertions;
-    import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-    import com.microsoft.playwright.options.AriaRole;
 
     import java.util.logging.Level;
     import java.util.logging.Logger;
     import org.apache.commons.lang3.StringUtils;
-    import org.opentest4j.AssertionFailedError;
-    import java.util.regex.Pattern;
-
-    import com.ing.samp.dependency.SampDependency;
 
     public class BrowserTestPlugin {
 
-        GeneralBrApi gen;
+        BrowserPluginApi gen;
 
         public String Data;
         public String Action;
         public String Input;
         public String Condition;
-        public TestCaseReportApi report;
+        public TestCaseReportApi Report;
+        public UserDataAccessApi UserData;
         public String ObjectName;
 
         // Playwright objects
@@ -297,24 +287,23 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
         public Locator Locator;
 
         public BrowserTestPlugin(BrowserPluginApi gen) {
+            System.out.println("BrowserTestPlugin initialized with GeneralBrApi: " + gen);
             this.gen = gen;
             this.Data = gen.getData();
             this.Action = gen.getAction();
             this.Input = gen.getInput();
             this.Condition = gen.getCondition();
             this.Report = gen.getReport();
-            this.userData = gen.getUserData();
-            
+            this.UserData = gen.getUserData();
             this.ObjectName = gen.getObjectName();
-            
             this.Page = (Page) gen.getPage();
             this.Locator = (Locator) gen.getLocator();
-            
+                
         }
 
         @Action(object = ObjectType.BROWSER, desc = "Open the Url [<Data>] in the Browser", input = InputType.YES, condition = InputType.OPTIONAL)
-        public void OpenTest() {
-            
+        public void Open_PluginVersion() {
+                
             Boolean pageTimeOut = false;
             NavigateOptions navigateOptions = new NavigateOptions();
             try {
@@ -322,18 +311,41 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
                     navigateOptions.setTimeout(Double.parseDouble(Condition));
                 }
                 Page.navigate(Data, navigateOptions);
-                report.updateTestLog("Open", "Opened Url: " + Data, Status.DONE);
+                Report.updateTestLog("Open", "Opened Url: " + Data, Status.DONE);
             } catch (TimeoutError e) {
-                report.updateTestLog("Open",
+                Report.updateTestLog("Open",
                         "Opened Url: " + Data + " and cancelled page load after " + Condition + " seconds", Status.DONE);
             } catch (Exception e) {
                 Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, e);
-                report.updateTestLog("Open", e.getMessage(), Status.FAIL);
+                Report.updateTestLog("Open", e.getMessage(), Status.FAIL);
+            throw new ForcedException("Open", e.getMessage());
             }
             if (pageTimeOut) {
                 setPageTimeOut(300);
             }
         }
+
+        private double getTimeoutValue() {
+            double timeout = 5000;
+            if (StringUtils.isNotBlank(Condition)) {
+                try {
+                    timeout = Double.parseDouble(Condition.trim());
+                } catch (NumberFormatException e) {
+                    Report.updateTestLog(Action, "'" + Condition + "' cannot be converted to timeout of type Double", Status.DEBUG);
+                }
+            }
+            return timeout;
+        }
+
+        private void setPageTimeOut(double sec) {
+            try {
+                Page.setDefaultNavigationTimeout(sec);
+            } catch (Exception ex) {
+                System.out.println("Couldn't set PageTimeOut to " + sec);
+            }
+        }
+            
+            
     }
     ```
 
@@ -345,7 +357,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
     mvn clean install
     ```
 
-    If you configured automated deployment (Step 4), your plugin JAR and `lib` folder will be copied to the INGenious plugin directory. Otherwise, copy them manually to:
+    Your plugin JAR and `lib` folder will be copied to the INGenious plugin directory.
 
     ```
     plugins/
