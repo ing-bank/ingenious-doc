@@ -22,7 +22,7 @@
 ---
 
 
-## Plugin Class Examples
+## Plugin Class Templates
 
 Below are complete, production-ready plugin entry class templates for different use cases. Each demonstrates proper initialization, error handling, and reporting patterns.
 #### General Purpose Plugin Template
