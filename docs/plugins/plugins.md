@@ -184,6 +184,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
     !!! note "Since `ingenious-api` and `playwright` use `provided` scope, they are automatically excluded from the `lib` folder. Other dependencies will be copied."
 
 3. Declare Plugin Entry Classes
+
     Entry classes contain your action methods and are dynamically instantiated by INGenious. Specify them in the JAR manifest using the Maven JAR plugin:
 
     ```{.xml .copy}
