@@ -34,6 +34,38 @@
 
 ---------------------------------------
 
+??? example "Assertion Timeout"
+
+    ## Assertion Timeout
+
+    INGenious provides an option to set the **Assertion timeout** for validation steps during execution. This helps when the application takes time to display or update the expected value before the assertion is performed.
+
+    **When is it useful?**
+
+    Suppose, your application takes a few seconds to load a particular element or update the expected text/value after an action is performed. In such cases, the assertion step might fail immediately because the expected condition is not yet met. Setting an assertion timeout allows the framework to wait for the specified duration before marking the step as failed.
+
+    **How to set it?**
+
+    To set the assertion timeout, add a new step/row in your test case.
+
+    * Set the **ObjectName** column value to **Browser**.
+
+    * Set the **Action** column value to **setAssertionTimeout**.
+
+    * Provide the timeout value in the input column in **milliseconds**.
+
+    Example:
+
+    * **@10000** = 10 seconds
+
+    ![assertiontimeout](img/Things/assertiontimeout.png "assertiontimeout")
+
+    > **Note**: The timeout value must always be provided in **milliseconds**.
+
+    > **Note**: This setting is configured through a test step/row and not through **Run settings**.
+
+----------------------------------
+
 ??? example "Full Page Screenshots"
 
     ## Full Page Screenshots
