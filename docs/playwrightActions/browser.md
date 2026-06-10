@@ -246,6 +246,50 @@ icon: octicons/browser-16
 
 ----------------------------------------------------
 
+## **setAssertionTimeout**
+
+**Description**: This function is used to **set assertion timeout (in milliseconds)** for all assertions and validations on the current page.
+
+**Input Format** : @timeout in milliseconds
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference| |
+    |------------|--------|--------------|-----------|---------|--|
+    | Browser     |:green_circle: [`setAssertionTimeout`](#)  | @value       || |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser     |:green_circle: [`setAssertionTimeout`](#)  | Sheet:Column || |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser     |:green_circle: [`setAssertionTimeout`](#)  | %dynamicVar% || |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(
+            object = ObjectType.BROWSER,
+            desc = "Set Assertion Timeout (in milliseconds)",
+            input = InputType.YES
+        )
+        public void setAssertionTimeout() {
+            if (Data != null && Data.matches("[0-9]+")) {
+                double timeout = Double.parseDouble(Data);
+                setDefaultAssertionTimeout(timeout);
+
+                Report.updateTestLog(
+                    Action,
+                    "Assertion timeout changed to [" + Data + "] millisecond/s",
+                    Status.DONE
+                );
+            } else {
+                Report.updateTestLog(
+                    Action,
+                    "Couldn't change assertion timeout (invalid input) " + Data,
+                    Status.DEBUG
+                );
+            }
+        }
+    ```
+
+----------------------------------------------------
+
 ## **RecordFromHere**
 
 **Description**:  This function will start `recording` from the current page.
