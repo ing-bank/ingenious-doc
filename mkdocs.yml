@@ -3,12 +3,20 @@ theme:
  name: material
  favicon: doc_images/favicon.ico
  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.sections
+     - navigation.indexes
+     - navigation.tracking
+    - toc.integrate
+     - toc.follow
+    - navigation.top
     - search.suggest
     - search.highlight
     - search.share
+    - content.tabs.link
     - content.code.annotate
+    - content.code.copy
+    - content.footnote.tooltips
+    - content.action.edit
  logo: img/logo/SmallLogoWhite.png 
  custom_dir: overrides
  user_color_mode_toggle: true
@@ -47,231 +55,146 @@ plugins:
     - search
 
 nav:
- - Home:
-    - Premise : index.md
-    - Getting Started: gettingstarted.md
+ - Welcome to INGenious:
+    - Home: index.md
+ - 🚀 Getting started:
+    - Overview: getting-started/index.md
+    - Legacy quick start: gettingstarted.md
+ - 🎯 How to…:
+    - Overview: how-to/index.md
+    - Browser testing:
+        - Create your first browser test: browsertesting/index.md
+        - Locator strategies: browsertesting/playwrightlocatorstrategy.md
+        - Auto-waiting: browsertesting/autowaiting.md
+        - Browser configurations: browsertesting/config.md
+        - Multiple browser contexts: browsertesting/multiplebrowsercontexts.md
+        - Authentication: browsertesting/playwrightauthenticate.md
+        - Mocking: browsertesting/playwrightmocking.md
+    - Mobile app testing:
+        - Premise: mobiletesting/index.md
+        - Base setup: mobiletesting/basesetup.md
+        - Additional tools:
+            - Android setup: mobiletesting/tools/androidsetup.md
+            - iOS setup: mobiletesting/tools/iOSsetup.md
+            - Appium Inspector: mobiletesting/tools/appiuminspector.md
+        - Appium configuration: mobiletesting/emulatorsetup.md
+        - Create your first mobile test: mobiletesting/mobileTest.md
+    - API testing:
+        - Create your first API test: api/api.md
+        - Multipart file upload: api/apimultipart.md
+        - API workbench: api/apiworkbench.md
+    - Message testing:
+        - Premise: messageTesting/index.md
+        - Create your first JMS test: jms/jms.md
+        - Create your first Kafka test: kafka/kafka.md
+        - Flat files: messageTesting/flatfiles.md
+    - Database testing:
+        - Premise: databaseTesting/database.md
+    - SAP testing:
+        - Create your first SAP test: sapTesting/sap.md
+        - Import SAP scripting recording: sapTesting/importsaprecording-java.md
+    - Synthetic data:
+        - Premise: syntheticData/index.md
+    - Integrations:
+        - BDD: bdd.md
+        - Azure DevOps test plan: testplan.md
+        - Continuous integration:
+            - Getting started: integrations/ci.md
+            - Azure DevOps: integrations/azuredevops.md
+            - GitHub Actions: integrations/githubactions.md
+            - Circle CI: integrations/circleci.md
+ - 💡 Explanation:
+    - Overview: explanation/index.md
     - Know the framework: knowyourframework.md
- - Browser Testing: 
-    - Create Your First Browser Test: browsertesting/index.md
-    - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
-    - Auto-waiting: browsertesting/autowaiting.md
-    - Actions: 
+    - Engine: engine.md
+    - Comparison: comparison.md
+    - Best practices: bestpractices.md
+    - Additional features: additionalfeatures.md
+    - Tips: tips.md
+ - 🛠️ Troubleshooting:
+    - Overview: troubleshooting/index.md
+    - General troubleshooting: troubleshooting.md
+    - Plugin troubleshooting: plugins/pluginTroubleshooting.md
+ - 📖 Reference:
+    - Overview: reference/index.md
+    - Browser actions:
         - Browser/Page: playwrightActions/browser.md
         - Click: playwrightActions/clicks.md
         - Text: playwrightActions/textinput.md
         - Dropdown: playwrightActions/dropdowns.md
-        - Data Storage: playwrightActions/store.md
+        - Data storage: playwrightActions/store.md
         - Focus: playwrightActions/focus.md
         - JavaScript: playwrightActions/js.md
         - Keyboard: playwrightActions/keyboard.md
         - Upload/Download: playwrightActions/fileuploads.md
-        - Positive Assertions: playwrightActions/positiveassertions.md
-        - Negative Assertions: playwrightActions/negativeassertions.md
+        - Positive assertions: playwrightActions/positiveassertions.md
+        - Negative assertions: playwrightActions/negativeassertions.md
         - Alerts: playwrightActions/alerts.md
         - Waits: playwrightActions/waitfor.md
         - Switch: playwrightActions/switch.md
         - Mocking: playwrightActions/fulfill.md
-        - Dynamic Objects: playwrightActions/dynamicObject.md
+        - Dynamic objects: playwrightActions/dynamicObject.md
         - General: playwrightActions/general.md
-    - Browser Configurations: browsertesting/config.md
-    - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
-    - Authentication: browsertesting/playwrightauthenticate.md
-    - Webpage Performance: webpageperformance.md
-    - Accessibility Testing: accessibility.md
-    - Mocking: browsertesting/playwrightmocking.md
-    - Web Objects Repository: browsertesting/webOR.md
- - Mobile App Testing:
-    - Premise: mobiletesting/index.md
-    - Base Setup: mobiletesting/basesetup.md
-    - Additional Tools:
-        - Android Setup : mobiletesting/tools/androidsetup.md
-        - iOS Setup : mobiletesting/tools/iOSsetup.md
-        - Appium Inspector : mobiletesting/tools/appiuminspector.md
-    - Appium Configuration: mobiletesting/emulatorsetup.md
-    - Create Your First Mobile Test: mobiletesting/mobileTest.md
-    - Actions:
+    - Mobile actions:
         - Alerts: mobiletesting/mobileActions/alerts.md
-        - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
+        - Dynamic objects: mobiletesting/mobileActions/dynamicObjects.md
         - General: mobiletesting/mobileActions/general.md
-        - Mobile : mobiletesting/mobileActions/mobile.md
-        - Positive Assertions : mobiletesting/mobileActions/positiveAssertions.md
-        - Negative Assertions : mobiletesting/mobileActions/negativeAssertions.md
+        - Mobile: mobiletesting/mobileActions/mobile.md
+        - Positive assertions: mobiletesting/mobileActions/positiveAssertions.md
+        - Negative assertions: mobiletesting/mobileActions/negativeAssertions.md
         - Scroll: mobiletesting/mobileActions/scroll.md
         - Set: mobiletesting/mobileActions/set.md
-        - Store : mobiletesting/mobileActions/store.md
-        - Tap : mobiletesting/mobileActions/tap.md
+        - Store: mobiletesting/mobileActions/store.md
+        - Tap: mobiletesting/mobileActions/tap.md
         - Wait: mobiletesting/mobileActions/wait.md
-        #- Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
-        #- Element Assertions: mobiletesting/mobileActions/elementAssertions.md    
-        #- Basic: mobiletesting/mobileActions/basic.md 
-        #- General: mobiletesting/mobileActions/commonActions.md
-    - Mobile Objects Repository: mobiletesting/mobileOR.md
- - API Testing:
-    - Create Your First API Test: api/api.md
-    - Actions: 
+    - API actions:
         - General: api/apiActions/webservice.md
         - Store: api/apiActions/store.md
-        - Positive Assertions: api/apiActions/positiveassertions.md
-        - Negative Assertions: api/apiActions/negativeassertions.md
-        - Structured Data Objects Actions: api/apiActions/sdobjects.md
-    - Multipart File Upload: api/apimultipart.md
-    - Structured Data Objects Repository: api/structuredDataOR.md
-    - API Workbench: api/apiworkbench.md
- - Message Testing:
-    - Premise: messageTesting/index.md
-    - JMS (Queues): 
-        - Create your first JMS Test: jms/jms.md
-        - Queue Actions: jms/queueActions.md
-    - Kafka: 
-        - Create your first Kafka Test: kafka/kafka.md
-        - Kafka Actions: kafka/kafkaActions.md
-    - Flat Files: messageTesting/flatfiles.md
- - Database Testing:
-    - Premise: databaseTesting/database.md
-    - Actions: 
-        - General Actions: databaseTesting/dbActions.md
-        - Data Storage: databaseTesting/storeActions.md
- - SAP Testing:
-    - Create Your First SAP Test: sapTesting/sap.md
-    - Import SAP Scripting Recording: sapTesting/importsaprecording-java.md
-    - Actions: 
+        - Positive assertions: api/apiActions/positiveassertions.md
+        - Negative assertions: api/apiActions/negativeassertions.md
+        - Structured data objects actions: api/apiActions/sdobjects.md
+    - Message actions:
+        - JMS queue actions: jms/queueActions.md
+        - Kafka actions: kafka/kafkaActions.md
+    - Database actions:
+        - General actions: databaseTesting/dbActions.md
+        - Data storage: databaseTesting/storeActions.md
+    - SAP actions:
         - General: sapTesting/actions/general-element.md
         - Select: sapTesting/actions/select-element.md
         - Set: sapTesting/actions/set-element.md
         - Session transaction: sapTesting/actions/session-transaction.md
         - Assert: sapTesting/actions/assert.md
-    - SAP Objects Repository: sapTesting/sapOR.md
- - Synthetic Data:
-    - Premise: syntheticData/index.md
-    - Synthetic Data Generation Actions: 
-        - Locale Setup: syntheticData/syntheticDataActions/locale.md
-        - Address: syntheticData/syntheticDataActions/address.md
-        - Ancient: syntheticData/syntheticDataActions/ancient.md
-        - App: syntheticData/syntheticDataActions/app.md
-        - Artist: syntheticData/syntheticDataActions/artist.md
-        - Avatar: syntheticData/syntheticDataActions/avatar.md
-        - Aviation: syntheticData/syntheticDataActions/aviation.md
-        - Back to the future: syntheticData/syntheticDataActions/backToTheFuture.md
-        - Beer: syntheticData/syntheticDataActions/beer.md
-        - Book: syntheticData/syntheticDataActions/book.md
-        - Bool: syntheticData/syntheticDataActions/bool.md
-        - Business: syntheticData/syntheticDataActions/business.md
-        - Cat: syntheticData/syntheticDataActions/cat.md
-        - Chunk Norris: syntheticData/syntheticDataActions/chunkNorris.md
-        - Code: syntheticData/syntheticDataActions/code.md
-        - Color: syntheticData/syntheticDataActions/color.md
-        - Commerce: syntheticData/syntheticDataActions/commerce.md
-        - Company: syntheticData/syntheticDataActions/company.md
-        - Country: syntheticData/syntheticDataActions/country.md
-        - Crypto: syntheticData/syntheticDataActions/crypto.md
-        - Currency: syntheticData/syntheticDataActions/currency.md
-        - Date and Time: syntheticData/syntheticDataActions/dateAndTime.md
-        - Demographic: syntheticData/syntheticDataActions/demographic.md
-        - Dog: syntheticData/syntheticDataActions/dog.md
-        - Dragon Ball: syntheticData/syntheticDataActions/dragonBall.md
-        - Educator: syntheticData/syntheticDataActions/educator.md
-        - Esports: syntheticData/syntheticDataActions/esports.md
-        - File: syntheticData/syntheticDataActions/file.md
-        - Finance: syntheticData/syntheticDataActions/finance.md
-        - Food: syntheticData/syntheticDataActions/food.md
-        - Friends: syntheticData/syntheticDataActions/friends.md
-        - Funny Name: syntheticData/syntheticDataActions/funnyName.md
-        - Game of Thrones: syntheticData/syntheticDataActions/gameOfThrones.md
-        - Hacker: syntheticData/syntheticDataActions/hacker.md
-        - Harry Potter: syntheticData/syntheticDataActions/harryPotter.md
-        - Hipster: syntheticData/syntheticDataActions/hipster.md
-        - Hitch Hikers Guide to the Galaxy: syntheticData/syntheticDataActions/hitchhikersGuideToTheGalaxy.md
-        - Hobbit: syntheticData/syntheticDataActions/hobbit.md
-        - How I met your mother: syntheticData/syntheticDataActions/howIMetYourMother.md
-        - ID Number: syntheticData/syntheticDataActions/idNumber.md
-        - Internet: syntheticData/syntheticDataActions/internet.md
-        - Job: syntheticData/syntheticDataActions/job.md
-        - League of Legends: syntheticData/syntheticDataActions/leagueOfLegends.md
-        - Lebowski: syntheticData/syntheticDataActions/lebowski.md
-        - Lord of the Rings: syntheticData/syntheticDataActions/lordOfTheRings.md
-        - Lorem: syntheticData/syntheticDataActions/lorem.md
-        - Matz: syntheticData/syntheticDataActions/matz.md
-        - Medical: syntheticData/syntheticDataActions/medical.md
-        - Music: syntheticData/syntheticDataActions/music.md
-        - Name: syntheticData/syntheticDataActions/name.md
-        - Number: syntheticData/syntheticDataActions/number.md
-        - Options: syntheticData/syntheticDataActions/options.md
-        - Overwatch: syntheticData/syntheticDataActions/overwatch.md
-        - Phone Number: syntheticData/syntheticDataActions/phoneNumber.md
-        - Pokemon: syntheticData/syntheticDataActions/pokemon.md
-        - Random Service: syntheticData/syntheticDataActions/randomService.md
-        - Rick and Morty: syntheticData/syntheticDataActions/rickAndMorty.md
-        - Robin: syntheticData/syntheticDataActions/robin.md
-        - Rock Band: syntheticData/syntheticDataActions/rockBand.md
-        - Shakespeare: syntheticData/syntheticDataActions/shakespeare.md
-        - Slack Emoji: syntheticData/syntheticDataActions/slackEmoji.md
-        - Space: syntheticData/syntheticDataActions/space.md
-        - StarTrek: syntheticData/syntheticDataActions/starTrek.md
-        - Stock: syntheticData/syntheticDataActions/stock.md
-        - Super Hero: syntheticData/syntheticDataActions/superHero.md
-        - Team: syntheticData/syntheticDataActions/team.md
-        - Twin Peaks: syntheticData/syntheticDataActions/twinPeaks.md
-        - University: syntheticData/syntheticDataActions/university.md
-        - Weather: syntheticData/syntheticDataActions/weather.md
-        - Witcher: syntheticData/syntheticDataActions/witcher.md
-        - Yoda: syntheticData/syntheticDataActions/yoda.md
-        - Zelda: syntheticData/syntheticDataActions/zelda.md
-        - Miscellaneous: syntheticData/syntheticDataActions/misc.md
- - Customizations:
-    # - Full flexibility: customizations/index.md
-    # - Engine: customizations/engine.md
-    # - Custom functions: customizations/customfunction.md
-    - INGenious Plugins: 
-        - Plugins: plugins/plugins.md 
-        - Plugins API: plugins/pluginApi.md
-        - Plugin Templates: plugins/pluginTemplates.md
-        - Version Compatibility: plugins/pluginCompatibility.md   
-        - Troubleshooting: plugins/pluginTroubleshooting.md
-    - Command Line Interface: cli.md
- - Integrations :
-    - BDD: bdd.md
-    - Azure DevOps Test Plan: testplan.md
-    - Continuous Integration: 
-        - Getting Started: integrations/ci.md 
-        - Azure DevOps: integrations/azuredevops.md
-        - GitHub Actions: integrations/githubactions.md
-        - Circle CI: integrations/circleci.md      
- - Hidden Gems :
-    - Reporting: browsertesting/playwrightreporting.md
-    - Shortcuts: shortcuts.md
-    - Additional features: additionalfeatures.md
-    - String Operations: stringOperations.md
-    - Global Datasheets: globalDataSheet.md
-    - Tips: tips.md
-    - Troubleshooting: troubleshooting.md 
+    - Object repositories:
+        - Web object repository: browsertesting/webOR.md
+        - Mobile object repository: mobiletesting/mobileOR.md
+        - SAP object repository: sapTesting/sapOR.md
+        - Structured data object repository: api/structuredDataOR.md
+    - Plugins and extensibility:
+        - Plugins: plugins/plugins.md
+        - Plugin API: plugins/pluginApi.md
+        - Plugin templates: plugins/pluginTemplates.md
+        - Version compatibility: plugins/pluginCompatibility.md
+    - Misc reference:
+        - Command line interface: cli.md
+        - Reporting: browsertesting/playwrightreporting.md
+        - Accessibility testing: accessibility.md
+        - Webpage performance: webpageperformance.md
+        - Shortcuts: shortcuts.md
+        - String operations: stringOperations.md
+        - Global datasheets: globalDataSheet.md
+ - 📣 Releases:
+    - Overview: releases/index.md
          
-extra:
-  footer:
-     - text: |
-           hellooooooooo
-      
-
-
 extra_css:
   - ing.css
 
-copyright: Created and maintained by ING INGenious Team 
-
-features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
-    - content.footnote.tooltips
-    - content.action.edit
+copyright: Created and maintained by ING INGenious Team
 extra:
-  generator: false  
+  footer:
+    - text: |
+        hellooooooooo
+  generator: false
 
 markdown_extensions:
   - admonition
@@ -288,11 +211,11 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
-  - md_in_html   
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.keys   
+  - pymdownx.keys
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys

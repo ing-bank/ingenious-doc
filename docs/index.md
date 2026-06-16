@@ -14,6 +14,17 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     The idea behind INGenious is to enable engineers, business analysts and even non-technical stakeholders to design high quality automated tests which focus on the business goals, without them having to worry about coding.
 
+## Documentation map
+
+This documentation is organized by reader intent:
+
+- **Learn**: concept and feature explanations in [Explanation](explanation/index.md).
+- **Do**: practical walkthroughs in [How to](how-to/index.md).
+- **Fix**: issue resolution guidance in [Troubleshooting](troubleshooting/index.md).
+- **Reference**: concise lookup pages in [Reference](reference/index.md).
+
+If you are new to INGenious, begin with [Getting started](getting-started/index.md).
+
 
 
 
