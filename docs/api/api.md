@@ -36,6 +36,9 @@
     |`proxyHost`|Hostname (or IP) of the proxy server if useProxy = true.|
     |`proxyPort`|Port number used when a proxy server is enabled. Only applies if useProxy = true.|
     |`sslCertificateVerification`|Enables or disables SSL certificate verification.|
+    |`selfSigned`|Allows use of self-signed SSL certificates when true.|
+    |`keyStorePath`|Path to the keystore file for SSL certificates.|
+    |`keyStorePassword`|Password for accessing the keystore.|
 
 -----------------------------------        
 
