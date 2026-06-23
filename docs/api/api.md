@@ -35,10 +35,13 @@
     |`useProxy`|Controls whether API requests should be routed through a proxy server.|
     |`proxyHost`|Hostname (or IP) of the proxy server if useProxy = true.|
     |`proxyPort`|Port number used when a proxy server is enabled. Only applies if useProxy = true.|
-    |`sslCertificateVerification`|Enables or disables SSL certificate verification.|
-    |`selfSigned`|Allows use of self-signed SSL certificates when true.|
-    |`keyStorePath`|Path to the keystore file for SSL certificates.|
-    |`keyStorePassword`|Password for accessing the keystore.|
+    |`sslCertificateVerification`|Set to `false` to enable SSL certificate verification.|
+    |[*] `selfSigned`|Set to `true` to use self-signed SSL certificates. Applies when `sslCertificateVerification` is set to `false`|
+    |[*] `keyStorePath`|Path to the keystore file for SSL certificates. Applies when `sslCertificateVerification` is set to `false`|
+    |[*] `keyStorePassword`|Password for accessing the keystore. Applies when `sslCertificateVerification` is set to `false`|
+
+    Legend:
+    [*] Property is not added by default. To add, follow steps in User-Added API Configuration Property.
 
 -----------------------------------        
 
