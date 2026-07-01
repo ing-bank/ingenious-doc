@@ -64,3 +64,29 @@ Once selected, you will be navigated to API Workbench window. See example below:
 === ":three: Response Body Pane"
 
       This is section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
+
+=== ":four: API Environments"
+
+      API Environments allow you to store reusable variables for different testing contexts such as Development, QA, Staging, or Production.
+
+      Variables can be referenced using the syntax:
+
+      ```text
+      {{variableName}}
+      ```
+
+      This allows the same request to be reused across multiple environments without manually changing values such as URLs, tokens, usernames, passwords, proxy settings, or certificate paths.
+
+      **Environment List**
+
+      ![APIEnvironmentList](../img/api/APIEnvironmentList.png "APIEnvironmentList")
+
+      **Environment Variable Setup**
+
+      ![APIEnvironmentVariables](../img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
+
+      **Request Using Variables and Response**
+
+      ![APIEnvironmentRequestExample](../img/api/APIEnvironmentRequestExample.png "APIEnvironmentRequestExample")
+
+      When a request is executed, all referenced variables are automatically resolved using the currently selected environment.
