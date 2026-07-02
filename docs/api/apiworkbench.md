@@ -81,7 +81,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       ![APIEnvironmentList](../img/api/APIEnvironmentList.png "APIEnvironmentList")
 
-      **Environment Variable Setup**
+      **Environment Variable Configuration**
 
       ![APIEnvironmentVariables](../img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
 
@@ -90,3 +90,25 @@ Once selected, you will be navigated to API Workbench window. See example below:
       ![APIEnvironmentRequestExample](../img/api/APIEnvironmentRequestExample.png "APIEnvironmentRequestExample")
 
       When a request is executed, all referenced variables are automatically resolved using the currently selected environment.
+
+=== ":five: API Request Conversion to Test Case"
+
+      API requests can be converted directly into INGenious test cases, allowing API validations to be incorporated into automated test suites with minimal effort.
+
+      During conversion, all configured request details are preserved, including:
+
+      * Endpoint URL and query parameters
+      * Request headers
+      * Authentication settings (Basic Auth, Bearer Token, and API Keys)
+      * Request body
+      * Assertions
+
+      If the request contains environment variables (for example `{{baseUrl}}` or `{{token}}`), the values are resolved using the **currently active environment** during conversion. If regular text values are used instead of variables, those values are converted as-is.
+
+      The original API request is not modified. Variable placeholders are retained in the collection, while the generated test case receives the resolved values.
+
+      **Converted Test Case Example (Basic Authentication)**
+
+      ![APIRequestToTestCase](../img/api/APIRequestToTestCase.png "APIRequestToTestCase")
+
+      The generated test case performs the same API call as the API Workbench request and can be executed within INGenious to validate the expected response and assertions.
