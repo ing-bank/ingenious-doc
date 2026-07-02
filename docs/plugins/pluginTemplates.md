@@ -34,6 +34,7 @@ package com.ing.plugin.general;
 
 import com.ing.ingenious.api.contract.CommandPluginApi;
 import com.ing.ingenious.api.contract.reports.TestCaseReportApi;
+import com.ing.ingenious.api.contract.data.UserDataAccessApi;
 import com.ing.ingenious.api.status.Status;
 import com.ing.ingenious.api.types.InputType;
 import com.ing.ingenious.api.types.ObjectType;
@@ -51,6 +52,7 @@ public class TextAsserts {
     public String Action;
     public String Input;
     public TestCaseReportApi Report;
+    public UserDataAccessApi UserData;
 
     public TextAsserts(CommandPluginApi gen) {
         System.out.println("TextAsserts Plugin initialized with CommandPluginApi: " + gen);
@@ -147,7 +149,7 @@ public class BrowserTestPlugin {
     public String Input;
     public String Condition;
     public TestCaseReportApi Report;
-    public UserDataAccessApi userData;
+    public UserDataAccessApi UserData;
     public String ObjectName;
     
     public Page Page;
@@ -161,7 +163,7 @@ public class BrowserTestPlugin {
         this.Input = gen.getInput();
         this.Condition = gen.getCondition();
         this.Report = gen.getReport();
-        this.userData = gen.getUserData();
+        this.UserData = gen.getUserData();
         this.ObjectName = gen.getObjectName();
         this.Page = (Page) gen.getPage();
         this.Locator = (Locator) gen.getLocator();
@@ -276,7 +278,7 @@ public class BrowserTestPlugin {
             String text = Locator.textContent();
             String sheetName = Data;
             String columnName = Input;
-            userData.putData(sheetName, columnName, text);
+            UserData.putData(sheetName, columnName, text);
             Report.updateTestLog(Action, "Stored text '" + text + "' in data sheet '" + sheetName + "' under column '" + columnName + "'", Status.DONE);
         } catch (PlaywrightException e) {
             PlaywrightExceptionLogging(e);
@@ -365,7 +367,7 @@ public class DatabasePlugin {
     public String Input;
     public String Condition;
     public TestCaseReportApi Report;
-    public UserDataAccessApi userData;
+    public UserDataAccessApi UserData;
     public String ObjectName;
 
     /**
@@ -378,7 +380,7 @@ public class DatabasePlugin {
         this.Input = gen.getInput();
         this.Condition = gen.getCondition();
         this.Report = gen.getReport();
-        this.userData = gen.getUserData();
+        this.UserData = gen.getUserData();
         this.ObjectName = gen.getObjectName();
     }
 
@@ -559,7 +561,7 @@ public class MobileTestPlugin {
     public String Input;
     public String Condition;
     public TestCaseReportApi Report;
-    public UserDataAccessApi userData;
+    public UserDataAccessApi UserData;
     public String ObjectName;
     
     public WebDriver mDriver;
@@ -574,7 +576,7 @@ public class MobileTestPlugin {
         this.Input = gen.getInput();
         this.Condition = gen.getCondition();
         this.Report = gen.getReport();
-        this.userData = gen.getUserData();
+        this.UserData = gen.getUserData();
         this.ObjectName = gen.getObjectName();
         this.Element = (WebElement) gen.getElement();
         this.mDriver = (WebDriver) gen.getMDriver();
@@ -708,7 +710,7 @@ public class WebserviceTestPlugin {
     public String Input;
     public String Condition;
     public TestCaseReportApi Report;
-    public UserDataAccessApi userData;
+    public UserDataAccessApi UserData;
     public String ObjectName;
 
     // Webservice-specific fields
@@ -736,7 +738,7 @@ public class WebserviceTestPlugin {
         this.Input = gen.getInput();
         this.Condition = gen.getCondition();
         this.Report = gen.getReport();
-        this.userData = gen.getUserData();
+        this.UserData = gen.getUserData();
         this.ObjectName = gen.getObjectName();
         
         // Initialize webservice-specific fields from API
@@ -828,7 +830,7 @@ public class WebserviceTestPlugin {
                 String sheetName = datasheetMatcher.group(1);
                 String columnName = datasheetMatcher.group(2);
                 try {
-                    String value = userData.getData(sheetName, columnName);
+                    String value = UserData.getData(sheetName, columnName);
                     if (value != null) {
                         headerData = headerData.replace("{" + sheetName + ":" + columnName + "}", value);
                     }
@@ -1111,8 +1113,8 @@ Here is a comprehensive `pom.xml` template for creating plugins:
                         </goals>
                         <configuration>
                             <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                            <includeScope>compile</includeScope>
-                            <excludeTransitive>false</excludeTransitive>
+                            <excludeScope>provided</excludeScope>
+                            <excludeTransitive>true</excludeTransitive>
                         </configuration>
                     </execution>
                 </executions>
@@ -1131,8 +1133,7 @@ Here is a comprehensive `pom.xml` template for creating plugins:
                         <manifestEntries>
                             <!-- Comma-separated list of fully qualified class names -->
                             <pluginEntryClasses>com.ing.plugin.browser.BrowserTestPlugin,com.ing.plugin.database.DatabasePlugin,com.ing.plugin.mobile.MobileTestPlugin,com.ing.plugin.webservice.WebserviceTestPlugin</pluginEntryClasses>
-                            <Implementation-Version>${project.version}</Implementation-Version>
-                            <Implementation-Title>${project.name}</Implementation-Title>
+                            <ImplementationVersion>${project.version}</Implementation-Version>
                         </manifestEntries>
                     </archive>
                 </configuration>
@@ -1154,22 +1155,18 @@ Here is a comprehensive `pom.xml` template for creating plugins:
                             <target>
                                 <!-- ⚠️ UPDATE THIS PATH to your INGenious plugins directory -->
                                 <property name="deploy.dir" 
-                                          value="/path/to/INGenious/plugins/${project.artifactId}"/>
-                                
-                                <!-- Create plugin directory if it doesn't exist -->
-                                <mkdir dir="${deploy.dir}"/>
-                                <mkdir dir="${deploy.dir}/lib"/>
+                                          value="/path/to/INGenious"/>
                                 
                                 <!-- Copy plugin JAR -->
                                 <copy file="${project.build.directory}/${project.build.finalName}.jar"
-                                      tofile="${deploy.dir}/${project.artifactId}.jar"
-                                      overwrite="true"/>
-                                
-                                <!-- Copy dependencies to lib folder -->
-                                <copy todir="${deploy.dir}/lib" overwrite="true">
+                                    tofile="${deploy.dir}/plugins/${project.artifactId}/${project.artifactId}.jar"/>
+
+                                <!-- Copy lib folder only if it exists -->
+                                <mkdir dir="${deploy.dir}/plugins/${project.artifactId}/lib"/>
+                                <copy todir="${deploy.dir}/plugins/${project.artifactId}/lib">
                                     <fileset dir="${project.build.directory}/lib"/>
                                 </copy>
-                                
+
                                 <echo message="Plugin deployed to: ${deploy.dir}"/>
                             </target>
                         </configuration>
