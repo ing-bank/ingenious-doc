@@ -63,7 +63,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
 === ":three: Response Body Pane"
 
-      This is section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
+      This section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
 
 === ":four: API Environments"
 
