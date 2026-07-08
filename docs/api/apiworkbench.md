@@ -91,7 +91,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       When a request is executed, all referenced variables are automatically resolved using the currently selected environment.
 
-=== ":five: API Request Conversion to Test Case"
+=== ":five: Convert API Request to Test Case"
 
       API requests can be converted directly into INGenious test cases, allowing API validations to be incorporated into automated test suites with minimal effort.
 
