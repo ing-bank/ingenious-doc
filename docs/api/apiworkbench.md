@@ -84,7 +84,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       **Environment Variable Configuration**
 
-      Variables are configured by entering a **Name** and **Value**. The **Secret** option can be enabled for sensitive information such as passwords, tokens, and API keys. After adding or updating variables, click **Save** to persist the environment configuration.
+      Variables are configured by entering a **Name** and **Value**. The **Secret** option can be enabled for sensitive information such as passwords, tokens, and API keys. Secret values are masked in the UI and are not displayed in plain text. After adding or updating variables, click **Save** to persist the environment configuration.
 
       ![APIEnvironmentVariables](../img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
 
