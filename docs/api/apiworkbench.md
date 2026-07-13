@@ -104,7 +104,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       When a request is executed, all referenced variables are automatically resolved using the currently selected environment. Switching to a different environment allows the same request to be executed against a different set of values without modifying the request itself. If a referenced variable does not exist in the active environment, the request execution may fail or use the unresolved placeholder value.
 
-      :material-lightbulb-on: **Best Practice**
+      **Best Practice**
 
       Store environment-specific values such as URLs, credentials, API keys, and tokens as environment variables instead of hardcoding them in requests. This improves maintainability and portability.
 
