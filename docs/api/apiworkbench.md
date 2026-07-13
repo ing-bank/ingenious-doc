@@ -116,7 +116,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
       * Request body
       * Assertions
 
-      If the request contains environment variables (for example `{{baseUrl}}` or `{{token}}`), the values are resolved using the **currently active environment** during conversion. If regular text values are used instead of variables, those values are converted as-is.
+      If the request contains environment variables (for example `{{baseUrl}}` or `{{token}}`), the values are resolved using the **currently active environment** during conversion. Literal values that do not reference environment variables are copied directly into the generated test case.
 
       The original API request is not modified. Variable placeholders are retained in the collection, while the generated test case receives the resolved values.
 
