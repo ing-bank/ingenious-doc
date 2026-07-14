@@ -13,6 +13,9 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
 ![APIWorkbenchExample](../img/api/APIWorkbenchExample.png "APIWorkbenchExample")
 
+!!! tip ""
+    The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the API Workbench.
+
 === ":one: Collection/Requests Pane"
       This is where the Collections and Requests are created and organized. Every `Collection` in the INGenious IDE , is a JSON file in the backend.
 
