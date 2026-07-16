@@ -13,6 +13,9 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
 ![APIWorkbenchExample](../img/api/APIWorkbenchExample.png "APIWorkbenchExample")
 
+!!! tip ""
+    The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the API Workbench.
+
 === ":one: Collection/Requests Pane"
       This is where the Collections and Requests are created and organized. Every `Collection` in the INGenious IDE , is a JSON file in the backend.
 
@@ -63,4 +66,69 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
 === ":three: Response Body Pane"
 
-      This is section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
+      This section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
+
+=== ":four: API Environments"
+
+      API Environments allow you to store reusable variables for different testing contexts such as Development, QA, Staging, or Production. This enables the same API request to be reused across multiple environments without manually changing values such as URLs, tokens, usernames, passwords, proxy settings, or certificate paths.
+
+      The **Environment Dropdown** allows you to switch between environments. To open the **Environment Configuration Window** click **Configure**.
+
+      ![APIEnvironmentDropdown](../img/api/APIEnvironmentDropdown.png "APIEnvironmentDropdown")
+
+      The Environment Configuration Window displays all available environments and provides several actions:
+
+      * **+ New** – Create a new environment.
+      * **Rename** – Change the name of the selected environment.
+      * **Duplicate** – Create a copy of the selected environment, including all configured variables.
+      * **Delete** – Remove the selected environment.
+
+      ![APIEnvironmentActions](../img/api/APIEnvironmentActions.png "APIEnvironmentActions")
+
+      **Environment Variable Configuration**
+
+      Variables are configured by entering a **Name** and **Value**. The **Secret** option can be enabled for sensitive information such as passwords, tokens, and API keys. Secret values are masked in the UI and are not displayed in plain text. After adding or updating variables, click **Save** to persist the environment configuration.
+
+      ![APIEnvironmentVariables](../img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
+
+      Variables can be referenced throughout API requests using double curly braces:
+
+      ```text
+      {{variableName}}
+      ```
+
+      For example:
+
+      ```text
+      {{baseUrl}}/users
+      ```
+
+      ![APIEnvironmentRequestExample](../img/api/APIEnvironmentRequestExample.png "APIEnvironmentRequestExample")
+
+      When a request is executed, all referenced variables are automatically resolved using the currently selected environment. Switching to a different environment allows the same request to be executed against a different set of values without modifying the request itself. If a referenced variable does not exist in the active environment, the request execution may fail or use the unresolved placeholder value.
+
+      **Best Practice**
+
+      Store environment-specific values such as URLs, credentials, API keys, and tokens as environment variables instead of hardcoding them in requests. This improves maintainability and portability.
+
+=== ":five: Convert API Request to Test Case"
+
+      API requests can be converted directly into INGenious test cases, allowing API validations to be incorporated into automated test suites with minimal effort.
+
+      During conversion, all configured request details are preserved, including:
+
+      * Endpoint URL and query parameters
+      * Request headers
+      * Authentication settings (Basic Auth, Bearer Token, and API Keys)
+      * Request body
+      * Assertions
+
+      If the request contains environment variables (for example `{{baseUrl}}` or `{{token}}`), the values are resolved using the **currently active environment** during conversion. Literal values that do not reference environment variables are copied directly into the generated test case.
+
+      The original API request is not modified. Variable placeholders are retained in the collection, while the generated test case receives the resolved values.
+
+      **Converted Test Case Example (Basic Authentication)**
+
+      ![APIRequestToTestCase](../img/api/APIRequestToTestCase.png "APIRequestToTestCase")
+
+      The generated test case performs the same API call as the API Workbench request and can be executed within INGenious to validate the expected response and assertions.
