@@ -964,9 +964,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | @value       | `optional` timeout (in ms)       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -1012,9 +1012,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | @value       | `optional` timeout (in ms)       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -1026,7 +1026,7 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action                     | Input         | Condition |Reference|
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html |        | PageName|
+    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html |        | |
     
     !!! note
         Special characters like `.` need to be escaped with `\\` for exact matching.
@@ -1037,7 +1037,7 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action                     | Input         | Condition |Reference|
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser    | assertPageURLMatches   | @https://example\\.com/search\\?.*product.*    |        | PageName|
+    | Browser    | assertPageURLMatches   | @https://example\\.com/search\\?.*product.*    |        | |
 
     **Example 3: Dynamic URL with ID**
     
@@ -1045,7 +1045,7 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action                     | Input         | Condition |Reference|
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser    | assertPageURLMatches   | @https://example\\.com/product/\\d+    |        | PageName|
+    | Browser    | assertPageURLMatches   | @https://example\\.com/product/\\d+    |        | |
 
     **Example 4: With Timeout**
     
@@ -1053,7 +1053,7 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action                     | Input         | Condition |Reference|
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html    | 10000     | PageName|
+    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html    | 10000     | |
 
     **Example 5: Using Variable**
     
@@ -1061,7 +1061,7 @@ icon: material/flask-empty-plus-outline
     
     | ObjectName | Action                     | Input         | Condition |Reference|
     |------------|----------------------------|---------------|-----------|---------|
-    | Browser    | assertPageURLMatches   | %expectedURL%    |      | PageName|
+    | Browser    | assertPageURLMatches   | %expectedURL%    |      | |
 
 === "Corresponding Code"
 
