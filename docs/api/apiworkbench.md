@@ -38,31 +38,63 @@ Once selected, you will be navigated to API Workbench window. See example below:
       ![RequestLevelOptions](../img/api/RequestLevelOptions.png "RequestLevelOptions"){ width="75%" }
   
 === ":two: Workbench Pane"
-       This section allows you to select and configure the API request you want to execute.
-       
-       ![WorkbenchPane](../img/api/WorkbenchPane.png "WorkbenchPane")
+      This section allows you to select and configure the API request you want to execute.
+      
+      ![WorkbenchPane](../img/api/WorkbenchPane.png "WorkbenchPane")
 
-       It supports multiple HTTP methods commonly used for interacting with web services:
+      It supports multiple HTTP methods commonly used for interacting with web services:
 
-       * **GET** – Retrieve data from a server
-       * **POST** – Create new resources
-       * **PUT** – Update or replace existing resources
-       * **PATCH** – Partially update existing resources
-       * **DELETE** – Remove resources
-       * **HEAD** – Retrieve response headers without the body
-       * **OPTIONS** – Discover supported operations and communication options for an endpoint
-       
-       Several tabs are provided for configuration:
+      * **GET** – Retrieve data from a server
+      * **POST** – Create new resources
+      * **PUT** – Update or replace existing resources
+      * **PATCH** – Partially update existing resources
+      * **DELETE** – Remove resources
+      * **HEAD** – Retrieve response headers without the body
+      * **OPTIONS** – Discover supported operations and communication options for an endpoint
+      
+      Several tabs are provided for configuration:
 
-       * **Params** – Define query parameters that are appended to the request URL. Useful for filtering, searching, or passing dynamic values to the API.
-       * **Headers** – Add key-value pairs to the request header, such as content type, authorization tokens, or custom metadata required by the API.
-       * **Body** – Specify the request payload sent to the server, typically used with POST, PUT, or PATCH requests to create or update data.
-       * **Auth** – Configure authentication details (e.g., API keys, tokens, or basic auth) required to securely access the API.
-       * **Settings** – Customize request behavior, such as timeouts, redirects, or other advanced configuration options.
+      * **Params** – Define query parameters that are appended to the request URL. Useful for filtering, searching, or passing dynamic values to the API.
+      * **Headers** – Add key-value pairs to the request header, such as content type, authorization tokens, or custom metadata required by the API.
+      * **Body** – Specify the request payload sent to the server, typically used with POST, PUT, or PATCH requests to create or update data.
+      * **Auth** – Configure authentication details (e.g., API keys, tokens, or basic auth) required to securely access the API.
+      * **Settings** – Customize request behavior, such as timeouts, redirects, or other advanced configuration options.
 
-       You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
+      You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
 
-       ![ExampleConvertoTC](../img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
+      ![ExampleConvertoTC](../img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
+
+      #### Importing cURL Commands
+      
+      The API Workbench supports importing requests directly from a cURL command.
+
+      Simply paste a valid cURL command into the **Request URL Bar** and the Workbench will automatically parse and populate the request configuration, including:
+
+      * HTTP Method
+      * Endpoint URL
+      * Query Parameters
+      * Headers
+      * Authentication Settings
+      * Request Body
+
+      **Example**
+
+      ```bash
+      curl -X POST "https://postman-echo.com/post" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer test-token" \
+      -d '{"name":"John Doe"}'
+      ```
+
+      After importing, the API Workbench automatically populates:
+
+      * Method: `POST`
+      * URL: `https://postman-echo.com/post`
+      * Headers tab
+      * Auth tab (when applicable)
+      * Body tab with the request payload
+
+      This allows existing cURL commands to be quickly converted into editable API requests without manually configuring each request setting.
 
 === ":three: Response Body Pane"
 
