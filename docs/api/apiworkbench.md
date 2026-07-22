@@ -64,7 +64,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       ![ExampleConvertoTC](../img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
 
-      #### Importing cURL Commands
+      **Importing cURL Commands**
       
       The API Workbench supports importing requests directly from a cURL command.
 
