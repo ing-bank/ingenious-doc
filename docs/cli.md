@@ -5,7 +5,85 @@
     INGenious has a rich set of command line options for execution with parameters, retrieving execution details, setting variables, change settings etc.
 
 
-### CLI Options
+## CLI Options (Modern)
+
+### Project Management
+
+Use [`ingenious project`](#) to use project management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`list`](#)          |List all projects in a directory
+|[`info`](#)          |Show project information
+|[`validate`](#)          |Show a health dashboard for the project
+|[`create`](#)          |Create a new project
+|[`upgrade`](#)          |Interactive upgrade wizard: modernise ORs, test cases, and clean up legacy files
+
+---------------------------
+
+### Run
+
+Use [`ingenious run`](#) to run from the CLI. You can append [`--help`](#) to the commands below to display usage.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`testcase`](#)          |Run a specific test case
+|[`testset`](#)          |Run a specific test set
+|[`tags`](#)          |Run tests with matching tags
+|[`rerun`](#)          |Rerun failed tests from last execution
+
+---------------------------
+
+### Configuration Management
+
+Use [`ingenious config`](#) to use configuration management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`show`](#)          |Show all configuration settings
+|[`get`](#)          |Get a configuration value
+|[`set`](#)          |Set a configuration value
+|[`drivers`](#)          |Manage browser drivers
+|[`reset`](#)          |Reset configuration to defaults
+|[`prefixes`](#)          |List all recognised -setEnv / set-env override prefixes
+
+---------------------------
+
+### Report Management
+
+Use [`ingenious report`](#) to use report management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`latest`](#)          |Show latest test execution results
+|[`history`](#)         |Show test execution history
+|[`show`](#)          |Show details of a specific run
+|[`export`](#)          |Export report in various formats
+|[`compare`](#)          |Compare two test runs
+
+---------------------------
+
+### Server Commands
+
+Use [`ingenious server`](#) to use server commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`mcp`](#)          |Start MCP (Model Context Protocol) server
+|[`rest`](#)         |Start REST API Server
+|[`status`](#)          |Check server status
+
+---------------------------
+
+---------------------------
+
+### Shell Session
+
+Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to display usage.
+
+---------------------------
+
+## CLI Options (Legacy)
 
 |<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
 |-------------------------------|---------------------------
@@ -41,6 +119,7 @@
 |[`-standalone_report`](#)           |Create Standalone Report instead of Relative one
 
 ---------------------------
+
 
 ### Examples 
 
@@ -157,6 +236,8 @@ Browser Capability Settings | -setEnv "`capability`.`browserName`.SettingName=Va
 Browser Context Settings |-setEnv "`context`.`aliasName`.SettingName=Value"|
 Database Settings | -setEnv "'`db`.`aliasName`.SettingName=Value"|
 API Settings | -setEnv "'`api`.`aliasName`.SettingName=Value"|
+
+**NOTE:** These prefixes can also be showed in the console with command 'config prefixes'
 
 Examples :
 
