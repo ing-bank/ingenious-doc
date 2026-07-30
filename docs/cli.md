@@ -90,193 +90,281 @@ Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to di
 
 ---------------------------
 
-## CLI Options (Legacy)
-
-|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
-|-------------------------------|---------------------------
-|[`-v`](#),[`-version`](#)              |Display current build details
-|[`-run`](#)                         |Run with the given details
-|[`-rerun`](#)                       |Rerun the last execution
-|[`-project_location`](#) <arg>      |Project Location for Execution
-|[`-scenario`](#) <arg>              |Scenario Name
-|[`-testcase`](#) <arg>              |Testcase Name
-|[`-browser`](#) <arg>               |Browser Name (Not applicable for Testset Execution)
-|[`-release`](#) <arg>               |Release Name
-|[`-testset`](#) <arg>               |Testset Name
-|[`-tags`](#) <arg>                  |Tags of Test Cases to be exceuted
-|[`-bDate`](#)                       |Display current build date
-|[`-bTime`](#)                       |Display current build time
-|[`-bVersion`](#)                    |Display current build version
-|[`-dont_launch_report`](#)          |Disables launching summary report after execution
-|[`-help`](#)                        |Help
-|[`-hi`](#)                          |Says Hello!
-|[`-t`](#)                           |Display Current Time
-|[`-latest_exe`](#) <arg>            |Returns the given property value for the latest execution
-|[`-latest_exe_loc`](#)              |Returns the results folder for the latest execution
-|[`-latest_exe_status`](#)           |Returns the status for the latest execution
-|[`-latest_exe_data_loc`](#)         |Returns the Report data location for the latest execution
-|[`-latest_exe_data_raw`](#)         |Returns the Report data for the latest execution
-|[`-latest_exe_log_loc`](#)          |Returns the log file location for the latest execution
-|[`-latest_exe_log_raw`](#)          |Returns the log file for the latest execution
-|[`-latest_exe_perf_status`](#) <arg>|Returns the page load performance results for latest execution
-|[`-latest_exe_perf_report`](#) <arg>|Returns the page load performance report for latest execution
-|[`-checkPagePerf`](#) <arg>         |Returns the page load performance results after Run
-|[`-setVar`](#) <arg>                |Create/Set user defined variable [[`-setVar "var=value"]`](#)
-|[`-setEnv`](#) <arg>                |Create/Set Env settings <override>
-|[`-standalone_report`](#)           |Create Standalone Report instead of Relative one
-
----------------------------
-
-
-### Examples 
-
-#### Modern Commands
+### Modern Examples
 
 :octicons-check-24: **Single Test Case Execution**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo/NewScenario/NewTestCase --browser Chromium
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewScenario/NewTestCase --browser Chromium
+    ./ingenious.command run Demo/NewScenario/NewTestCase --browser Chromium
     ```
 
 The modern `run` command **auto-detects** whether the path refers to a test case or a test set. The above is equivalent to the explicit:
 
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run testcase --project "Projects\Demo" --scenario NewScenario --testcase NewTestCase --browser Chromium
+    ```
+
+=== "Mac/Linux"
+
     ```{ .shell .copy }
-    ingenious run testcase --project "Projects/Demo" --scenario NewScenario --testcase NewTestCase --browser Chromium
+    ./ingenious.command run testcase --project "Projects/Demo" --scenario NewScenario --testcase NewTestCase --browser Chromium
     ```
 
 ---------------------- 
 
 :material-check-all: **Test Set Execution**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewRelease/NewTestSet
+    ./ingenious.command run Demo/NewRelease/NewTestSet
     ```
 
 Or explicitly:
 
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run testset --project "Projects\Demo" --release NewRelease --testset NewTestSet
+    ```
+
+=== "Mac/Linux"
+
     ```{ .shell .copy }
-    ingenious run testset --project "Projects/Demo" --release NewRelease --testset NewTestSet
+    ./ingenious.command run testset --project "Projects/Demo" --release NewRelease --testset NewTestSet
     ```
 
 ---------------------- 
 
 :octicons-tag-16: **Test Set Execution with specific tags**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --tags @smoke
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewRelease/NewTestSet --tags @smoke
+    ./ingenious.command run Demo/NewRelease/NewTestSet --tags @smoke
     ```
 
 Or explicitly:
 
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run testset --project "Projects\Demo" --release NewRelease --testset NewTestSet --tags @smoke
+    ```
+
+=== "Mac/Linux"
+
     ```{ .shell .copy }
-    ingenious run testset --project "Projects/Demo" --release NewRelease --testset NewTestSet --tags @smoke
+    ./ingenious.command run testset --project "Projects/Demo" --release NewRelease --testset NewTestSet --tags @smoke
     ```
 
 ---------------------- 
 
 :octicons-gear-24: **Test Set Execution with Updated Environment Settings**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --set-env "run.TestEnv=Acceptance"
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewRelease/NewTestSet --set-env "run.TestEnv=Acceptance"
+    ./ingenious.command run Demo/NewRelease/NewTestSet --set-env "run.TestEnv=Acceptance"
     ```
 
 In the above example, the test set will be forced to be executed on `Acceptance` Environment.
 
 ---------------------- 
 
-:octicons-sync-24: **Rerun Failed Tests**
+:octicons-check-24: **Rerun Failed Tests**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --rerun
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewRelease/NewTestSet --rerun
+    ./ingenious.command run Demo/NewRelease/NewTestSet --rerun
     ```
 
 Re-executes only the test cases that failed in the last run of the given target.
 
 ---------------------- 
 
-:octicons-browser-16: **Headless Execution**
+:material-check-all: **Headless Execution**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewScenario\NewTestCase --browser Chromium --headless
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewScenario/NewTestCase --browser Chromium --headless
+    ./ingenious.command run Demo/NewScenario/NewTestCase --browser Chromium --headless
     ```
 
 ---------------------- 
 
-:octicons-versions-16: **Parallel Test Set Execution**
+**Parallel Test Set Execution**
 
-=== "Windows / Mac / Linux"
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --parallel 4
+    ```
+
+=== "Mac/Linux"
 
     ```{ .shell .copy }
-    ingenious run Demo/NewRelease/NewTestSet --parallel 4
+    ./ingenious.command run Demo/NewRelease/NewTestSet --parallel 4
     ```
 
 Runs the test set across 4 parallel threads.
 
 ---------------------- 
 
-:octicons-project-16: **Project Management**
+**Project Management**
 
-List all projects:
+=== "Windows"
 
-```{ .shell .copy }
-ingenious project list
-```
+    ```{ .powershell .copy }
+    ingenious project list
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project list
+    ```
 
 List projects in a specific directory:
 
-```{ .shell .copy }
-ingenious project list "Projects"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project list "Projects"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project list "Projects"
+    ```
 
 Show project information:
 
-```{ .shell .copy }
-ingenious project info Demo
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project info Demo
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project info Demo
+    ```
 
 Validate project health:
 
-```{ .shell .copy }
-ingenious project validate Demo
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project validate Demo
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project validate Demo
+    ```
 
 Create a new project:
 
-```{ .shell .copy }
-ingenious project create NewProject --directory "Projects"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project create NewProject --directory "Projects"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project create NewProject --directory "Projects"
+    ```
 
 ---------------------- 
 
-:octicons-rocket-24: **Upgrade Wizard**
+**Upgrade Wizard**
 
-```{ .shell .copy }
-ingenious project upgrade Demo
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project upgrade Demo
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project upgrade Demo
+    ```
 
 Automatically accept all defaults:
 
-```{ .shell .copy }
-ingenious project upgrade Demo --yes
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project upgrade Demo --yes
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project upgrade Demo --yes
+    ```
 
 Preview changes without modifying files:
 
-```{ .shell .copy }
-ingenious project upgrade Demo --dry-run
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious project upgrade Demo --dry-run
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command project upgrade Demo --dry-run
+    ```
 
 The upgrade wizard walks through:
 1. **Test Data Migration** — adds the `Scope` field to test datasheets
@@ -287,145 +375,305 @@ The upgrade wizard walks through:
 
 ---------------------- 
 
-:octicons-config-24: **Configuration Management**
+:octicons-gear-24: **Configuration Management**
 
 Show all configuration:
 
-```{ .shell .copy }
-ingenious config show --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config show --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config show --project "Projects/Demo"
+    ```
 
 Get a specific value:
 
-```{ .shell .copy }
-ingenious config get browser --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config get browser --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config get browser --project "Projects/Demo"
+    ```
 
 Set a value:
 
-```{ .shell .copy }
-ingenious config set timeout 60 --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config set timeout 60 --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config set timeout 60 --project "Projects/Demo"
+    ```
 
 List all recognised override prefixes:
 
-```{ .shell .copy }
-ingenious config prefixes
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config prefixes
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config prefixes
+    ```
 
 Check browser drivers:
 
-```{ .shell .copy }
-ingenious config drivers --check
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config drivers --check
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config drivers --check
+    ```
 
 ---------------------- 
 
-:octicons-report-24: **Report Management**
+**Report Management**
 
 Show latest execution results:
 
-```{ .shell .copy }
-ingenious report latest --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious report latest --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command report latest --project "Projects/Demo"
+    ```
 
 Show test execution history (last 10 runs):
 
-```{ .shell .copy }
-ingenious report history --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious report history --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command report history --project "Projects/Demo"
+    ```
 
 Show details of a specific run:
 
-```{ .shell .copy }
-ingenious report show Run_2024_01_15_10_30_00 --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious report show Run_2024_01_15_10_30_00 --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command report show Run_2024_01_15_10_30_00 --project "Projects/Demo"
+    ```
 
 Export report to JSON:
 
-```{ .shell .copy }
-ingenious report export --project "Projects/Demo" --format json --output report.json
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious report export --project "Projects\Demo" --format json --output report.json
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command report export --project "Projects/Demo" --format json --output report.json
+    ```
 
 Compare two runs:
 
-```{ .shell .copy }
-ingenious report compare Run_2024_01_15_10_30_00 Run_2024_01_16_14_00_00 --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious report compare Run_2024_01_15_10_30_00 Run_2024_01_16_14_00_00 --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command report compare Run_2024_01_15_10_30_00 Run_2024_01_16_14_00_00 --project "Projects/Demo"
+    ```
 
 ---------------------- 
 
-:octicons-server-24: **Server Commands**
+**Server Commands**
 
 Start the REST API server:
 
-```{ .shell .copy }
-ingenious server rest --port 8090 --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious server rest --port 8090 --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command server rest --port 8090 --project "Projects/Demo"
+    ```
 
 Start the MCP server (for AI agent integration):
 
-```{ .shell .copy }
-ingenious server mcp --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious server mcp --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command server mcp --project "Projects/Demo"
+    ```
 
 Check server status:
 
-```{ .shell .copy }
-ingenious server status --port 8090
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious server status --port 8090
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command server status --port 8090
+    ```
 
 ---------------------- 
 
-:octicons-terminal-24: **Interactive Shell**
+**Interactive Shell**
 
-```{ .shell .copy }
-ingenious shell
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious shell
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command shell
+    ```
 
 Start with a pre-set project:
 
-```{ .shell .copy }
-ingenious shell --project "Projects/Demo"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious shell --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command shell --project "Projects/Demo"
+    ```
 
 Inside the shell you can use shorter commands like `run Login/Smoke`, `scenario list`, `config show`, etc.
 
 ---------------------- 
 
-:octicons-info-24: **Version Information**
+**Version Information**
 
-```{ .shell .copy }
-ingenious --version
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious --version
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command --version
+    ```
 
 ---------------------- 
 
-:octicons-code-24: **Action Discovery**
+**Action Discovery**
 
 List all available Browser actions:
 
-```{ .shell .copy }
-ingenious action list Browser
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious action list Browser
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command action list Browser
+    ```
 
 Search for actions by keyword:
 
-```{ .shell .copy }
-ingenious action search click
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious action search click
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command action search click
+    ```
 
 Show detailed action information:
 
-```{ .shell .copy }
-ingenious action info Click
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious action info Click
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command action info Click
+    ```
 
 List action categories with counts:
 
-```{ .shell .copy }
-ingenious action categories
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious action categories
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command action categories
+    ```
 
 ---------------------- 
 
@@ -585,22 +833,54 @@ The modern CLI provides **typed override flags** as a more ergonomic alternative
 
 **Examples using typed overrides:**
 
-```{ .shell .copy }
-ingenious run Demo/NewRelease/NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
-```
+=== "Windows"
 
-```{ .shell .copy }
-ingenious run Demo/NewScenario/NewTestCase --browser Chromium --headless --db "mydb.ConnectionString=jdbc:mysql://localhost:3306/test"
-```
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command run Demo/NewRelease/NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ```
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewScenario\NewTestCase --browser Chromium --headless --db "mydb.ConnectionString=jdbc:mysql://localhost:3306/test"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command run Demo/NewScenario/NewTestCase --browser Chromium --headless --db "mydb.ConnectionString=jdbc:mysql://localhost:3306/test"
+    ```
 
 Multiple overrides can be combined:
 
-```{ .shell .copy }
-ingenious run Demo/NewRelease/NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command run Demo/NewRelease/NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ```
 
 Find all recognised prefix names at any time with:
 
-```{ .shell .copy }
-ingenious config prefixes
-```
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config prefixes
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config prefixes
+    ```
