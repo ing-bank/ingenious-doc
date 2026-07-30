@@ -89,6 +89,45 @@ Use [`ingenious server`](#) to use server commands. You can append [`--help`](#)
 Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to display usage.
 
 ---------------------------
+---------------------------
+
+## CLI Options (Legacy)
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`-v`](#),[`-version`](#)              |Display current build details
+|[`-run`](#)                         |Run with the given details
+|[`-rerun`](#)                       |Rerun the last execution
+|[`-project_location`](#) <arg>      |Project Location for Execution
+|[`-scenario`](#) <arg>              |Scenario Name
+|[`-testcase`](#) <arg>              |Testcase Name
+|[`-browser`](#) <arg>               |Browser Name (Not applicable for Testset Execution)
+|[`-release`](#) <arg>               |Release Name
+|[`-testset`](#) <arg>               |Testset Name
+|[`-tags`](#) <arg>                  |Tags of Test Cases to be exceuted
+|[`-bDate`](#)                       |Display current build date
+|[`-bTime`](#)                       |Display current build time
+|[`-bVersion`](#)                    |Display current build version
+|[`-dont_launch_report`](#)          |Disables launching summary report after execution
+|[`-help`](#)                        |Help
+|[`-hi`](#)                          |Says Hello!
+|[`-t`](#)                           |Display Current Time
+|[`-latest_exe`](#) <arg>            |Returns the given property value for the latest execution
+|[`-latest_exe_loc`](#)              |Returns the results folder for the latest execution
+|[`-latest_exe_status`](#)           |Returns the status for the latest execution
+|[`-latest_exe_data_loc`](#)         |Returns the Report data location for the latest execution
+|[`-latest_exe_data_raw`](#)         |Returns the Report data for the latest execution
+|[`-latest_exe_log_loc`](#)          |Returns the log file location for the latest execution
+|[`-latest_exe_log_raw`](#)          |Returns the log file for the latest execution
+|[`-latest_exe_perf_status`](#) <arg>|Returns the page load performance results for latest execution
+|[`-latest_exe_perf_report`](#) <arg>|Returns the page load performance report for latest execution
+|[`-checkPagePerf`](#) <arg>         |Returns the page load performance results after Run
+|[`-setVar`](#) <arg>                |Create/Set user defined variable [[`-setVar "var=value"]`](#)
+|[`-setEnv`](#) <arg>                |Create/Set Env settings <override>
+|[`-standalone_report`](#)           |Create Standalone Report instead of Relative one
+
+---------------------------
+
 
 ### Modern Examples
 
