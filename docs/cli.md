@@ -7,19 +7,6 @@
 
 ## CLI Options (Modern)
 
-### Project Management
-
-Use [`ingenious project`](#) to use project management commands. You can append [`--help`](#) to the command to display possible commands.
-
-|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
-|-------------------------------|---------------------------
-|[`list`](#)          |List all projects in a directory
-|[`info`](#)          |Show project information
-|[`validate`](#)          |Show a health dashboard for the project
-|[`create`](#)          |Create a new project
-|[`upgrade`](#)          |Interactive upgrade wizard: modernise ORs, test cases, and clean up legacy files
-
----------------------------
 
 ### Run
 
@@ -38,59 +25,6 @@ The `run` command also supports **auto-detection** — you can pass a path direc
 ingenious run <Project>/<Scenario>/<TestCase>
 ingenious run <Project>/<Release>/<TestSet>
 ```
-
----------------------------
-
-### Configuration Management
-
-Use [`ingenious config`](#) to use configuration management commands. You can append [`--help`](#) to the command to display possible commands.
-
-|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
-|-------------------------------|---------------------------
-|[`show`](#)          |Show all configuration settings
-|[`get`](#)          |Get a configuration value
-|[`set`](#)          |Set a configuration value
-|[`drivers`](#)          |Manage browser drivers
-|[`reset`](#)          |Reset configuration to defaults
-|[`prefixes`](#)          |List all recognised -setEnv / set-env override prefixes
-
----------------------------
-
-### Report Management
-
-Use [`ingenious report`](#) to use report management commands. You can append [`--help`](#) to the command to display possible commands.
-
-|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
-|-------------------------------|---------------------------
-|[`latest`](#)          |Show latest test execution results
-|[`history`](#)         |Show test execution history
-|[`show`](#)          |Show details of a specific run
-|[`export`](#)          |Export report in various formats
-|[`compare`](#)          |Compare two test runs
-
----------------------------
-
-### Server Commands
-
-Use [`ingenious server`](#) to use server commands. You can append [`--help`](#) to the command to display possible commands.
-
-|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
-|-------------------------------|---------------------------
-|[`mcp`](#)          |Start MCP (Model Context Protocol) server
-|[`rest`](#)         |Start REST API Server
-|[`status`](#)          |Check server status
-
----------------------------
-
----------------------------
-
-### Shell Session
-
-Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to display usage.
-
----------------------------
-
-### Examples (Modern)
 
 :octicons-check-24: **Single Test Case Execution**
 
@@ -250,9 +184,19 @@ Re-executes only the test cases that failed in the last run of the given target.
 
 Runs the test set across 4 parallel threads.
 
----------------------- 
+---------------------------
 
-**Project Management**
+### Project Management
+
+Use [`ingenious project`](#) to use project management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`list`](#)          |List all projects in a directory
+|[`info`](#)          |Show project information
+|[`validate`](#)          |Show a health dashboard for the project
+|[`create`](#)          |Create a new project
+|[`upgrade`](#)          |Interactive upgrade wizard: modernise ORs, test cases, and clean up legacy files
 
 === "Windows"
 
@@ -322,8 +266,6 @@ Create a new project:
     ./ingenious.command project create NewProject --directory "Projects"
     ```
 
----------------------- 
-
 **Upgrade Wizard**
 
 === "Windows"
@@ -367,15 +309,28 @@ Preview changes without modifying files:
     ```
 
 The upgrade wizard walks through:
+
 1. **Test Data Migration** — adds the `Scope` field to test datasheets
 2. **Object Repository Conversion** — converts XML ORs to YAML
 3. **Test Case Migration** — converts CSV test cases to YAML
 4. **Deprecated File Cleanup** — removes legacy XML stubs
 5. **Reusable Relocation** — moves mislocated reusables to `ReusableComponents/`
 
----------------------- 
 
-:octicons-gear-24: **Configuration Management**
+---------------------------
+
+### Configuration Management
+
+Use [`ingenious config`](#) to use configuration management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`show`](#)          |Show all configuration settings
+|[`get`](#)          |Get a configuration value
+|[`set`](#)          |Set a configuration value
+|[`drivers`](#)          |Manage browser drivers
+|[`reset`](#)          |Reset configuration to defaults
+|[`prefixes`](#)          |List all recognised -setEnv / set-env override prefixes
 
 Show all configuration:
 
@@ -447,9 +402,21 @@ Check browser drivers:
     ./ingenious.command config drivers --check
     ```
 
----------------------- 
 
-**Report Management**
+---------------------------
+
+### Report Management
+
+Use [`ingenious report`](#) to use report management commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`latest`](#)          |Show latest test execution results
+|[`history`](#)         |Show test execution history
+|[`show`](#)          |Show details of a specific run
+|[`export`](#)          |Export report in various formats
+|[`compare`](#)          |Compare two test runs
+
 
 Show latest execution results:
 
@@ -567,9 +534,24 @@ Check server status:
     ./ingenious.command server status --port 8090
     ```
 
----------------------- 
+---------------------------
 
-**Interactive Shell**
+### Server Commands
+
+Use [`ingenious server`](#) to use server commands. You can append [`--help`](#) to the command to display possible commands.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`mcp`](#)          |Start MCP (Model Context Protocol) server
+|[`rest`](#)         |Start REST API Server
+|[`status`](#)          |Check server status
+
+
+---------------------------
+
+### Shell Session
+
+Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to display usage.
 
 === "Windows"
 
@@ -599,7 +581,77 @@ Start with a pre-set project:
 
 Inside the shell you can use shorter commands like `run Login/Smoke`, `scenario list`, `config show`, etc.
 
----------------------- 
+---------------------------
+
+### Modern Override Settings
+
+The modern CLI provides **typed override flags** as a more ergonomic alternative to `-setEnv`. These are available on all `ingenious run …` subcommands and accept `key=value` pairs for their respective bucket.
+
+|Flag|Bucket|Example|
+|--------|-------|-------|
+|[`--set-env`](#) |Raw pass-through | `--set-env "run.var=value"`
+|[`--driver`](#) |Driver / Launch Configurations | `--driver "RemoteURL=http://hub:4444"`
+|[`--user`](#) |User Defined Settings | `--user "Key1=NewValue1"`
+|[`--tm`](#) |Test Management Settings | `--tm "ProjectKey=DEMO"`
+|[`--capability`](#) |Per-browser capability | `--capability "Chrome.headless=true"`
+|[`--db`](#) |Database properties | `--db "mydb.ConnectionString=server=..."`
+|[`--context`](#) |Browser Context | `--context "test.password=secret"`
+|[`--api`](#) |API properties | `--api "myapi.BaseURL=https://api.example.com"`
+|[`--kafka-ssl`](#) |Kafka SSL Config | `--kafka-ssl "Producer_Key_Password=P@ssw0rd"`
+|[`--lambdatest-cap`](#) |LambdaTest Grid Capabilities | `--lambdatest-cap "build=ci-1234"`
+|[`--browser-arg`](#) |Per-browser launch flag | `--browser-arg "Chrome.1=--headless=new"`
+|[`--browser-set`](#) |Per-browser property | `--browser-set "Chrome.mySetting=value"`
+|[`--device`](#) |Per-device override | `--device "Pixel5.RemoteURL=http://hub:4723"`
+|[`--tm-module`](#) |AzureDevOps TestPlan module | `--tm-module "AzureDO.__enabled=true"`
+
+**Examples using typed overrides:**
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command run Demo/NewRelease/NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ```
+
+
+Multiple overrides can be combined:
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious run Demo\NewRelease\NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command run Demo/NewRelease/NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ```
+
+Find all recognised prefix names at any time with:
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious config prefixes
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command config prefixes
+    ```
+
+---------------------------
+
+### Examples (Modern)
+
+
 
 **Version Information**
 
@@ -676,6 +728,7 @@ List action categories with counts:
     ```
 ---------------------------
 
+
 ## CLI Options (Legacy)
 
 |<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
@@ -711,77 +764,11 @@ List action categories with counts:
 |[`-setEnv`](#) <arg>                |Create/Set Env settings <override>
 |[`-standalone_report`](#)           |Create Standalone Report instead of Relative one
 
----------------------------
 
-
-
-
-
-#### Examples (Legacy)
-
-:octicons-check-24: **Single Test Case Execution**
-
-=== "Windows"
-
-    ```{ .powershell .copy }
-    ingenious.bat -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
-    ```
-
-=== "Mac/Linux"
-    ```{ .shell .copy }
-    ./ingenious.command -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
-    ```
 
 ---------------------- 
 
-:material-check-all: **Test Set Execution**
-
-
-=== "Windows"
-
-    ```{ .powershell .copy }
-    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
-    ```
-
-=== "Mac/Linux"
-    ```{ .shell .copy }
-    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
-    ```
-
----------------------- 
-
-:octicons-tag-16: **Test Set Execution with specific tags**
-
-=== "Windows"
-
-    ```{ .powershell .copy }
-    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
-    ```
-
-=== "Mac/Linux"
-    ```{ .shell .copy }
-    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
-    ```
-
----------------------- 
-
-:octicons-gear-24: **Test Set Execution with Updated Environment Settings**
-
-=== "Windows"
-
-    ```{ .powershell .copy }
-    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
-    ```
-
-=== "Mac/Linux"
-    ```{ .shell .copy }
-    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
-    ```
-In the above example, the test set will be forced to be executed on `Acceptance` Environment
-
----------------------- 
-
-### Override Settings
+### Legacy Override Settings
 
 **`-setEnv`** is a very powerful command to override all the environment settings and userdefined variables.
 This can override the values in all of these settings :
@@ -850,77 +837,64 @@ Multiple settings can be altered via a single command as well :
 -setEnv "run.var=value;exe.var=value;user.var=value"
 ```
 
-### Modern Override Settings
+### Examples (Legacy)
 
-The modern CLI provides **typed override flags** as a more ergonomic alternative to `-setEnv`. These are available on all `ingenious run …` subcommands and accept `key=value` pairs for their respective bucket.
-
-|Flag|Bucket|Example|
-|--------|-------|-------|
-|[`--set-env`](#) |Raw pass-through | `--set-env "run.var=value"`
-|[`--driver`](#) |Driver / Launch Configurations | `--driver "RemoteURL=http://hub:4444"`
-|[`--user`](#) |User Defined Settings | `--user "Key1=NewValue1"`
-|[`--tm`](#) |Test Management Settings | `--tm "ProjectKey=DEMO"`
-|[`--capability`](#) |Per-browser capability | `--capability "Chrome.headless=true"`
-|[`--db`](#) |Database properties | `--db "mydb.ConnectionString=server=..."`
-|[`--context`](#) |Browser Context | `--context "test.password=secret"`
-|[`--api`](#) |API properties | `--api "myapi.BaseURL=https://api.example.com"`
-|[`--kafka-ssl`](#) |Kafka SSL Config | `--kafka-ssl "Producer_Key_Password=P@ssw0rd"`
-|[`--lambdatest-cap`](#) |LambdaTest Grid Capabilities | `--lambdatest-cap "build=ci-1234"`
-|[`--browser-arg`](#) |Per-browser launch flag | `--browser-arg "Chrome.1=--headless=new"`
-|[`--browser-set`](#) |Per-browser property | `--browser-set "Chrome.mySetting=value"`
-|[`--device`](#) |Per-device override | `--device "Pixel5.RemoteURL=http://hub:4723"`
-|[`--tm-module`](#) |AzureDevOps TestPlan module | `--tm-module "AzureDO.__enabled=true"`
-
-**Examples using typed overrides:**
+:octicons-check-24: **Single Test Case Execution**
 
 === "Windows"
 
     ```{ .powershell .copy }
-    ingenious run Demo\NewRelease\NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ingenious.bat -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
     ```
 
 === "Mac/Linux"
-
     ```{ .shell .copy }
-    ./ingenious.command run Demo/NewRelease/NewTestSet --capability "Chromium.headless=true" --user "TestEnv=Acceptance"
+    ./ingenious.command -run -project_location "Projects\Demo" -scenario "NewScenario" -testcase "NewTestCase" -browser "Chrome"
     ```
+
+---------------------- 
+
+:material-check-all: **Test Set Execution**
+
 
 === "Windows"
 
     ```{ .powershell .copy }
-    ingenious run Demo\NewScenario\NewTestCase --browser Chromium --headless --db "mydb.ConnectionString=jdbc:mysql://localhost:3306/test"
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
     ```
 
 === "Mac/Linux"
-
     ```{ .shell .copy }
-    ./ingenious.command run Demo/NewScenario/NewTestCase --browser Chromium --headless --db "mydb.ConnectionString=jdbc:mysql://localhost:3306/test"
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet"
     ```
 
-Multiple overrides can be combined:
+---------------------- 
+
+:octicons-tag-16: **Test Set Execution with specific tags**
 
 === "Windows"
 
     ```{ .powershell .copy }
-    ingenious run Demo\NewRelease\NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
 === "Mac/Linux"
-
     ```{ .shell .copy }
-    ./ingenious.command run Demo/NewRelease/NewTestSet --device "Pixel5.RemoteURL=http://hub:4723" --tm-module "AzureDO.__enabled=true" --lambdatest-cap "build=ci-5678"
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -tags "@smoke"
     ```
 
-Find all recognised prefix names at any time with:
+---------------------- 
+
+:octicons-gear-24: **Test Set Execution with Updated Environment Settings**
 
 === "Windows"
 
     ```{ .powershell .copy }
-    ingenious config prefixes
+    ingenious.bat -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
     ```
 
 === "Mac/Linux"
-
     ```{ .shell .copy }
-    ./ingenious.command config prefixes
+    ./ingenious.command -run -project_location "Projects\Demo" -release "NewRelease" -testset "NewTestSet" -setEnv "run.TestEnv=Acceptance"
     ```
+In the above example, the test set will be forced to be executed on `Acceptance` Environment
