@@ -31,7 +31,7 @@ ingenious run <Project>/<Release>/<TestSet>
 === "Windows"
 
     ```{ .powershell .copy }
-    ingenious run Demo/NewScenario/NewTestCase --browser Chromium
+    ingenious run Demo\NewScenario\NewTestCase --browser Chromium
     ```
 
 === "Mac/Linux"
