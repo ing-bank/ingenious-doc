@@ -820,7 +820,7 @@ Browser Context Settings |-setEnv "`context`.`aliasName`.SettingName=Value"|
 Database Settings | -setEnv "'`db`.`aliasName`.SettingName=Value"|
 API Settings | -setEnv "'`api`.`aliasName`.SettingName=Value"|
 
-**NOTE:** These prefixes can also be showed in the console with command 'config prefixes'
+**NOTE:** These prefixes can also be shown in the console with command 'config prefixes'
 
 Examples :
 
