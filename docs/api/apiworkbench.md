@@ -59,6 +59,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
       * **Body** – Specify the request payload sent to the server, typically used with POST, PUT, or PATCH requests to create or update data.
       * **Auth** – Configure authentication details (e.g., API keys, tokens, or basic auth) required to securely access the API.
       * **Settings** – Customize request behavior, such as timeouts, redirects, or other advanced configuration options.
+      * **Proxy** – Configure HTTP proxy settings for the current request.
 
       You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
 
@@ -96,9 +97,37 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       This allows existing cURL commands to be quickly converted into editable API requests without manually configuring each request setting.
 
+      API Workbench supports importing cURL commands that contain commonly used browser-generated headers such as `Host` and `Connection`.
+
+      Some client-managed headers such as `Content-Length` and `Accept-Encoding` are automatically handled by INGenious and may not appear exactly as defined in the original cURL command.
+
 === ":three: Response Body Pane"
 
       This section displays the API response content in a formatted (Pretty) or raw view, allowing you to easily inspect, copy, and analyze returned data for validation and troubleshooting.
+
+      **Creating Assertions from Response Data**
+
+      After executing a request, you can right-click directly on JSON or XML response content to quickly create assertions.
+
+      Depending on the selected value, API Workbench automatically identifies the corresponding JSONPath or XPath and provides assertion options such as:
+
+      * Assert path exists
+      * Assert value equals
+      * Assert value contains
+      * Assert value starts with
+      * Assert value ends with
+      * Assert value matches a regular expression
+      * Assert value is greater than
+      * Assert value is less than
+      * Assert path does not exist
+
+      The detected JSONPath or XPath is displayed in the context menu and can be copied to the clipboard for reuse.
+
+      Once an assertion is selected, it is automatically added to the current API request and saved.
+
+      When the request is executed again, the assertion results are displayed in the **Test Results** tab.
+
+      Assertions created from the Response Body Pane are also preserved when converting an API request into an INGenious test case.
 
 === ":four: API Environments"
 
@@ -152,12 +181,31 @@ Once selected, you will be navigated to API Workbench window. See example below:
       * Endpoint URL and query parameters
       * Request headers
       * Authentication settings (Basic Auth, Bearer Token, and API Keys)
+      * Proxy settings
       * Request body
       * Assertions
+
+      **Variables**
 
       If the request contains environment variables (for example `{{baseUrl}}` or `{{token}}`), the values are resolved using the **currently active environment** during conversion. Literal values that do not reference environment variables are copied directly into the generated test case.
 
       The original API request is not modified. Variable placeholders are retained in the collection, while the generated test case receives the resolved values.
+
+      **Proxy**
+
+      When an API request uses a proxy, INGenious prompts you to choose how the proxy configuration should be stored during test case conversion.
+      
+      * Save the proxy settings to the default API configuration.
+      * Create a new API configuration specifically for the proxy settings.
+      * Cancel the conversion.
+
+      Once converted, the generated test case automatically uses the selected API configuration when executing the request.
+
+      **Assertions**
+
+      Assertions configured in API Workbench, including those created by right-clicking JSON or XML response data, are automatically included when the request is converted into a test case.
+
+      Response paths and expected values are preserved, allowing the same validations to be reused during automated test execution.
 
       **Converted Test Case Example (Basic Authentication)**
 

@@ -117,6 +117,7 @@ nav:
     - Multipart File Upload: api/apimultipart.md
     - Structured Data Objects Repository: api/structuredDataOR.md
     - API Workbench: api/apiworkbench.md
+    - Import Collections: api/importCollections.md
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
