@@ -551,7 +551,7 @@ Use [`ingenious server`](#) to use server commands. You can append [`--help`](#)
 
 ### Shell Session
 
-Use [`ingenious shell`](#) to  You can append [`--help`](#) to the command to display usage.
+Use [`ingenious shell`](#) to use shell commands. You can append [`--help`](#) to the command to display usage.
 
 === "Windows"
 
