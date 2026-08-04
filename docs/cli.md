@@ -490,7 +490,7 @@ Compare two runs:
 
 ---------------------- 
 
-**Server Commands**
+<!-- **Server Commands**
 
 Start the REST API server:
 
@@ -536,7 +536,7 @@ Check server status:
 
 ---------------------------
 
-<!-- ### Server Commands
+### Server Commands
 
 Use [`ingenious server`](#) to use server commands. You can append [`--help`](#) to the command to display possible commands.
 
