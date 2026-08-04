@@ -50,58 +50,63 @@
 
 -----------------------
 
-## **Quick Start with Recording** - <span style="color:#FF6200">**Playwright Recorder (CodeGen)**</span>  
+## **Quick Start with Recording** - <span style="color:#FF6200">**Live Playwright Recorder (CodeGen)**</span>  
+
+As you interact with the browser, each action is captured and added to the Test Case editor in real time.
 
 ### Steps for recording
 
  * Launch **INGenious Playwright Studio**
 
- * Click on the **Recorder** icon
+ * Click on the **Record** icon in the Test Case toolbar
 
    ![record](img/recording/1.JPG "record")
- 
- * A loader will show up while the playwright-recorder is being loaded
+
+ * The **Choose Recording Target** dialog appears. Pick where the recording should be saved:
+
+    * **New test case under Test Scenario** — provide a **Scenario** name (defaults to `LiveRecordingScenario`) and a **Test case** name (defaults to `LiveRecordingTestCase`)
+    * **New test case under Reusable Scenario** — provide a **Reusable scenario** name (defaults to `LiveRecordingReusable`) and a **Test case** name (defaults to `LiveRecordingReusableTestCase`)
+    * Click **Start Recording** to continue, or **Cancel** to abort.
+
+    ![ChooseRecordingDialogueBox](img/recording/ChooseRecordingDialogueBox.png "Choose Recording Target")
+
+ * A loader will show up while the Playwright recorder is being loaded
 
 !!! warning 
     
     For **first time usage**, Playwright will download its required binaries. If network connection is slow, this may cause the recorder to time out.
     Several dialog boxes might appear during setup, **just click 'OK' to proceed**. Once the recorder opens, **close it and start a new recording**.
 
- * The **Playwright Inspector** will launch along with **Chromium** browser
+ * INGenious creates/opens the target scenario and test case, then launches the **Playwright Inspector** together with a **Chromium** browser window.
 
- * Enter the URL of the Application Under Test (AUT) in the **Chromium** browser and perform the actions you want to perform on the application
+ * Once the recorder is ready, INGenious automatically hides its own recording console and minimizes the Playwright Inspector window, leaving the Chromium browser in focus so you can go straight into interacting with playwright recorder.
 
- * You will see the steps getting recorded in the **Playwright Inspector**. Make sure to select the **Java Library** as the Target.
 
- * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording_<timestamp>.txt` file under `Projects/ProjectName/Recording`.
- 
- * A notification will appear upon successful copy of the recorded steps.
+ * Every action you perform is streamed live into the **Test Case editor** as you go:
 
-#### Import recording from Playwright Recorder
+    * Each recorded step is inserted into the step grid immediately and highlighted in **green**, so you can see exactly what was just captured
+    * Any web object you interact with is automatically added to the **Object Repository**, under a page named after your test case
+    * A running log of captured steps (e.g. `Step 3 captured: Click on 'Login' [Login_button]`) is shown in the recording console
 
- * Once the recorded steps have been successfully copied, close the Playwright Recorder.
+ * When you're done, click the same toolbar icon again — it now shows **Stop Recording** — to end the session. This closes the Chromium browser and the Playwright process, and saves the recorded steps into your test case.
 
- * A prompt will appear asking whether to proceed with the import. Select Yes.
+    ![LiveRecording](img/recording/LiveRecording.gif "LiveRecording")
 
- * Specify a **Test Scenario Name** or use the default **NewScenario**. The provided name will be used to rename the `recording_<timestamp>.txt` file.
+!!! tip
 
- * Once completed, the recording will be imported and displayed as a **Scenario** and **Test Case** . All relevant **test steps**, along with associated **web objects** and **test data**, will be included. The objects will be loaded into the **Object Repository**.
+    You can also close the Chromium browser window directly instead of clicking **Stop Recording** — INGenious detects this and finalizes the recording the same way. Using **Stop Recording** is recommended.
 
- ![Playwright Recorder Auto-Import](img/recorder/autoimport.gif "Playwright Recorder Auto-Import")
+ * Your recording is now available as a fully populated **Scenario** (or **Reusable Scenario**) and **Test Case**, with all relevant test steps, web objects, and test data already in place, ready to run or edit further.
 
  ---
 
-#### Import from `.txt` file
+#### Import a recording file manually
 
- * After recording, use the **Copy button in the Playwright Inspector** to manually copy the recorded steps. This action will save the recorded steps as `recording_<timestamp>.txt` file under `Projects/ProjectName/Recording`.
-
- * Once the recorded steps have been successfully copied, close the Playwright Recorder.
-
- * A prompt will appear asking whether to proceed with the import. Select No.
+If you have a Playwright codegen recording saved as a file (for example, exported from outside INGenious), you can still import it manually instead of recording live:
 
  * From **INGenious Playwright Studio**, navigate to **Tools** :material-arrow-right: **Import Playwright Recording** :material-arrow-right: **Import Playwright Recording**.
 
- * Locate the **recording_&lt;timestamp&gt;.txt file** under `Projects/ProjectName/Recording` and click [OK].
+ * Locate the recording file (`.txt` or `.java`) and click [OK].
 
  * The file is immediately rendered as **Scenario** and **Test Case**. All the relevant **test steps** with all the **web objects** and **test data** are imported.
 
