@@ -536,7 +536,7 @@ Check server status:
 
 ---------------------------
 
-### Server Commands
+<!-- ### Server Commands
 
 Use [`ingenious server`](#) to use server commands. You can append [`--help`](#) to the command to display possible commands.
 
@@ -547,7 +547,7 @@ Use [`ingenious server`](#) to use server commands. You can append [`--help`](#)
 |[`status`](#)          |Check server status
 
 
----------------------------
+--------------------------- -->
 
 ### Shell Session
 
