@@ -79,7 +79,7 @@ As you interact with the browser, each action is captured and added to the Test 
 
  * INGenious creates/opens the target scenario and test case, then launches the **Playwright Inspector** together with a **Chromium** browser window.
 
- * Once the recorder is ready, INGenious automatically hides its own recording console and minimizes the Playwright Inspector window, leaving the Chromium browser in focus so you can go straight into interacting with playwright recorder.
+ * Once the recorder is ready, INGenious automatically hides the recording console and minimizes the Playwright Inspector window. This leaves the Chromium browser in focus so you can immediately begin interacting with the Playwright recorder.
 
 
  * Every action you perform is streamed live into the **Test Case editor** as you go:
