@@ -75,7 +75,7 @@ As you interact with the browser, each action is captured and added to the Test 
 !!! warning 
     
     **On first use**, Playwright downloads the required browser binaries. If the network connection is slow, the recorder may time out during setup.
-    Several dialog boxes might appear during setup, **just click 'OK' to proceed**. Once the recorder opens, **close it and start a new recording**.
+    Several dialog boxes may appear during setup. Click **OK** to continue. Once the recorder opens successfully, **close it and start a new recording session**.
 
  * INGenious creates/opens the target scenario and test case, then launches the **Playwright Inspector** together with a **Chromium** browser window.
 
