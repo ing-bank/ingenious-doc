@@ -94,7 +94,7 @@ As you interact with the browser, each action is captured and added to the Test 
 
 !!! tip
 
-    You can also close the Chromium browser window directly instead of clicking **Stop Recording** — INGenious detects this and finalizes the recording the same way. Using **Stop Recording** is recommended.
+    You can also close the Chromium browser window directly instead of clicking **Stop Recording**. INGenious detects this and finalizes the recording automatically.. Using **Stop Recording** is recommended.
 
  * Your recording is now available as a fully populated **Scenario** (or **Reusable Scenario**) and **Test Case**, with all relevant test steps, web objects, and test data already in place, ready to run or edit further.
 
