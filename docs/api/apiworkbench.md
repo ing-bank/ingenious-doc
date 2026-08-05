@@ -121,7 +121,9 @@ Once selected, you will be navigated to API Workbench window. See example below:
       * Assert value is less than
       * Assert path does not exist
 
-      The detected JSONPath or XPath is displayed in the context menu and can be copied to the clipboard for reuse.
+      The detected JSONPath or XPath is shown in the right-click menu and can be copied for reuse.
+
+      ![APIWorkbenchResponsePath](../img/api/APIWorkbenchResponsePath.png "APIWorkbenchResponsePath"){ width="60%" }
 
       Once an assertion is selected, it is automatically added to the current API request and saved.
 

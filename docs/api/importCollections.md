@@ -34,7 +34,7 @@ INGenious automatically converts the imported requests into reusable API compone
 
 ## Converted Content
 
-The importer automatically converts common request settings, including:
+The importer automatically converts commonly used request settings, including:
 
 * Request URLs
 * Query Parameters
@@ -61,7 +61,7 @@ Import reports are stored under:
 
 ## Best Practice
 
-Review the generated import report after each import. While most requests are converted automatically, some custom scripts or advanced collection features may require manual adjustment.
+Always review the generated import report after an import completes. While most requests are converted automatically, some custom scripts or advanced collection features may require manual adjustment.
 
 ## Next Steps
 
