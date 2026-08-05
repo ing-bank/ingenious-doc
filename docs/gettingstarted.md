@@ -88,7 +88,7 @@ As you interact with the browser, each action is captured and added to the Test 
     * Any web object you interact with is automatically added to the **Object Repository**, under a page named after your test case
     * A running log of captured steps (e.g. `Step 3 captured: Click on 'Login' [Login_button]`) is shown in the recording console
 
- * When you're done, click the same toolbar icon again — it now shows **Stop Recording** — to end the session. This closes the Chromium browser and the Playwright process, and saves the recorded steps into your test case.
+ * When recording is complete, click the same toolbar icon again. The icon now displays **Stop Recording**. Clicking it ends the recording session. This closes the Chromium browser, stops the Playwright recording process, and saves the recorded steps to the test case.
 
     ![LiveRecording](img/recording/LiveRecording.gif "LiveRecording")
 
