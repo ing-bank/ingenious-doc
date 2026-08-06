@@ -39,6 +39,7 @@ Object repository follows the structure below:
     | **Title**          | The title attribute of the element. | View Details |
     | **TestID**         | A stable identifier intended for automated testing. | data-testid="username-input" |
     | **ChainedLocator** | Locator that finds the element relative to a parent or nested element. | Parent: div.user-form → Child: input[type='password'] |
+    | **JSPath [Discouraged]** | JavaScript path copied from browser developer tools (for example, Copy JS Path). | document.querySelector("#login-button") |
 
 ## Project and Shared Web OR
 
