@@ -74,11 +74,11 @@
 
 -------------------------------------------
 
-??? note "LambdaTest Configuration"
+??? note "LambdaTest Grid Configuration"
 
-    ### LambdaTest Configuration
+    ### LambdaTest Grid Configuration
 
-    To run web automation tests via LambdaTest, set configurations in the Run Settings panel under the **LambdaTest Capabilities** tab.<br>
+    To run web automation tests via LambdaTest, set configurations in the Run Settings panel under the **LambdaTest Grid Capabilities** tab.<br>
 
     Provide the following required fields and other execution properties. 
 
