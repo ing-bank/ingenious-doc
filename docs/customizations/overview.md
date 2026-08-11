@@ -50,7 +50,7 @@ Engine customization offers **full flexibility** by allowing direct access to th
 
 ### Recommendations
 
-- **For new customizations**: Use plugins whenever possibles
+- **For new customizations**: Use plugins whenever possible
 - **For existing customizations**: Begin evaluating plugin migration paths
 
 ---
