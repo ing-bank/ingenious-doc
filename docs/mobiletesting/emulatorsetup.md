@@ -6,15 +6,11 @@ Follow the steps below to create an Appium configuration in INGenious.
 
 * Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **Manage Browser** tab, Enter the name of the **Appium Configuation** you want to create, in the `Browser` textbox and hit ++enter++ 
+* In the **Manage Devices** tab, click the `+` icon beside the **Device** dropdown, and enter the name of the **Appium Configuation** you want to create and hit ++enter++ 
 
-* Inside the **Mobile Tab**, you can set your **Remote URL/Appium** from the textbox. By default, it is set to `http://127.0.0.1:4723/`
+* Inside the same tab, you can set your **Appium Capabilities/Options** and **Remote URL/Appium** from the textbox. By default, it's set to `http://127.0.0.1:4723/`
 
-     ![createConfig](../img/mobiletesting/sampleRemoteURL.jpeg "remoteurl"){ width=50% }
-
-* Inside the **Capabilities/Options Tab**, you can set your **Appium Capabilities/Options**
-
-     ![createConfig](../img/mobiletesting/sampleCapabilities.jpeg "createConfig"){ width=50% }
+     ![createConfig](../img/mobiletesting/sampleRemoteURL.png "remoteurl"){ width=50% }
 
 * By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
 
@@ -28,12 +24,6 @@ Follow the steps below to create an Appium configuration in INGenious.
 === "Sample Android Emulator Configurations"
     
     **Sample Android Emulator INGenious Configurations**
-
-    Remote URL:
-
-    ![createConfig](../img/mobiletesting/remoteurl-android.png "remoteUrl"){ width=50% }
-    
-    Appium Capabilities/Options:
 
     ![createConfig](../img/mobiletesting/config-android.png "createConfig"){ width=50% }
    
@@ -53,12 +43,6 @@ Follow the steps below to create an Appium configuration in INGenious.
 === "Sample iOS Emulator Configurations"
 
     **Sample iOS Emulator INGenious Configurations**
-
-    Remote URL:
-
-    ![createConfig](../img/mobiletesting/remoteurl-ios.png "remoteUrl"){ width=50% }
-
-    Appium Capabilities/Options:
 
     ![createConfig](../img/mobiletesting/config-ios.png "createConfig"){ width=50% }
 
@@ -96,7 +80,7 @@ Follow the steps below to create an Appium configuration in INGenious.
     
     ***Appium Capabilities/Options***
 
-    * For this example, you can set the capabilities as below:
+    * For this example, you can set the capabilities as seen below:
 
         ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
 
