@@ -21,7 +21,10 @@ steps:
     echo "##vso[task.setvariable variable=JAVA_HOME]$(JAVA_HOME_11_X64)"
     echo "##vso[task.setvariable variable=PATH]$(JAVA_HOME_11_X64)/bin:$(PATH)"
   displayName: "Set java version to 11" 
-  
+
+- script: mvn initialize --file Engine/pom.xml  
+  displayName: 'Maven Initialize'
+
 - script: mvn initialize --file Engine/pom.xml  # (2)!
   displayName: 'Maven Initialize'
 
