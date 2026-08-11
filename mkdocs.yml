@@ -234,11 +234,12 @@ nav:
  - Integrations :
     - BDD: bdd.md
     - Azure DevOps Test Plan: testplan.md
+    - LambdaTest (TestMu AI) Test Manager: testmuai/testmuai.md
     - Continuous Integration: 
         - Getting Started: integrations/ci.md 
         - Azure DevOps: integrations/azuredevops.md
         - GitHub Actions: integrations/githubactions.md
-        - Circle CI: integrations/circleci.md      
+        - Circle CI: integrations/circleci.md
  - Hidden Gems :
     - Reporting: browsertesting/playwrightreporting.md
     - Shortcuts: shortcuts.md
