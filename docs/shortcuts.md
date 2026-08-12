@@ -12,7 +12,14 @@
 
 ------------------------------
 
-<!-- Shortcut for Start Recording Here -->
+## **Launch Utilities**
+
+| Shortcut Keys  | Description                                 |
+|----------------|---------------------------------------------|           
+| ++ctrl+alt+r++ | Start Recording                             |
+
+------------------------------
+
 
 ## **Navigation**
 

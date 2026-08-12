@@ -964,9 +964,9 @@ icon: material/flask-empty-plus-outline
 
     | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | @value       | `optional` timeout (in ms)       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser    |:green_circle: [`assertPageTitleMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
@@ -993,21 +993,75 @@ icon: material/flask-empty-plus-outline
 
 ## **assertPageURLMatches**
 
-**Description**:  This function will assert the Page URL.
+**Description**:  This action asserts that the current page URL matches the expected pattern. The assertion supports both exact URL matching and regex pattern matching, making it flexible for validating navigation and page state.
 
-**Input Format** :   @Expected Text
+**Input Format** :   @Expected URL or Regex Pattern
 
 **Condition Format** : (Optional)  Timeout Value (in ms)
+
+!!! info "Pattern Matching"
+    The input is treated as a regex pattern. For exact URL matching, ensure special regex characters (like `.`, `?`, `=`, `&`) are properly escaped. For flexible matching, use regex patterns like `.*`, `\\d+`, etc.
+
+!!! example "Common Use Cases"
+    - Verify successful navigation to a specific page
+    - Validate dynamic URLs with query parameters
+    - Check URL patterns after login or form submission
+    - Confirm correct routing in single-page applications
 
 === "Usage"
 
     | ObjectName | Action                     | Input         | Condition <br> (Optional) |Reference|  |
     |------------|----------------------------|---------------|-----------|---------|--|
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | @value       | `optional` timeout (in ms)       | PageName|<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | PageName|<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | PageName|<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | @value       | `optional` timeout (in ms)       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | Sheet:Column | `optional` timeout (in ms)       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Browser    |:green_circle: [`assertPageURLMatches`](#)   | %dynamicVar% |`optional` timeout (in ms)       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
+
+=== "Examples"
+
+    **Example 1: Exact URL Match**
+    
+    Verify the page navigated to the exact inventory URL:
+    
+    | ObjectName | Action                     | Input         | Condition |Reference|
+    |------------|----------------------------|---------------|-----------|---------|
+    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html |        | |
+    
+    !!! note
+        Special characters like `.` need to be escaped with `\\` for exact matching.
+
+    **Example 2: Pattern Matching with Query Parameters**
+    
+    Verify URL contains specific path and accepts any query parameters:
+    
+    | ObjectName | Action                     | Input         | Condition |Reference|
+    |------------|----------------------------|---------------|-----------|---------|
+    | Browser    | assertPageURLMatches   | @https://example\\.com/search\\?.*product.*    |        | |
+
+    **Example 3: Dynamic URL with ID**
+    
+    Verify URL pattern for product page with any numeric ID:
+    
+    | ObjectName | Action                     | Input         | Condition |Reference|
+    |------------|----------------------------|---------------|-----------|---------|
+    | Browser    | assertPageURLMatches   | @https://example\\.com/product/\\d+    |        | |
+
+    **Example 4: With Timeout**
+    
+    Assert URL match with custom timeout of 10 seconds:
+    
+    | ObjectName | Action                     | Input         | Condition |Reference|
+    |------------|----------------------------|---------------|-----------|---------|
+    | Browser    | assertPageURLMatches   | @https://www\\.saucedemo\\.com/inventory\\.html    | 10000     | |
+
+    **Example 5: Using Variable**
+    
+    Assert URL using a previously stored variable:
+    
+    | ObjectName | Action                     | Input         | Condition |Reference|
+    |------------|----------------------------|---------------|-----------|---------|
+    | Browser    | assertPageURLMatches   | %expectedURL%    |      | |
 
 === "Corresponding Code"
 

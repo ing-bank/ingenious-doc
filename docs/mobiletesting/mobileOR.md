@@ -6,8 +6,10 @@
 !!! abstract "Key Benefits:"
     * **Centralized element management** – All mobile objects live in one organized repository.
     * **Cross‑platform support** – Store Android and iOS locators in the same or separate pages.
+    * **Platform specific properties** - Mobile OR supports platform specific properties for both Android and iOS.
     * **Maintainability** – Update a selector once and apply the change everywhere.
     * **Consistent naming and structure** – Standardized element definitions promote cleaner automation design.
+
 
 ## Object Repository Structure
     

@@ -102,3 +102,14 @@
 
 
 
+??? example "Console Logs"
+    ## Console Logs
+
+    On the bottom left of the Report HTML, the console button allows you to access console logs.
+
+    ![report-console](../img/reports/report-console.png "report-console"){ width="80%" }
+
+    This will open the console:
+
+    ![console](../img/reports/console.png "console"){ width="80%" }
+

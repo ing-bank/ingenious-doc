@@ -353,7 +353,32 @@
 
     ![multipleframes](../img/playwrightLocators/multipleframes.JPG "multipleframes")
 
+-------------------------------------------
 
+??? note "JSPath"
+
+    ### Locate by JSPath
+
+    JSPath allows you to identify an element using a JavaScript path copied from browser developer tools.
+
+    For example, in Chrome or Edge DevTools:
+
+    ```text
+    Right-click Element → Copy → Copy JS Path
+    ```
+
+    Example JSPath:
+
+    ```javascript
+    document.querySelector("#app > div > button")
+    ```
+
+    In **INGenious Playwright Studio**, you can paste this value into the **JSPath** attribute of a Web Object.
+
+    !!! warning "Discouraged"
+        The JSPath attribute can be used with JavaScript paths copied directly from browser developer tools.
+
+        While supported, this locator strategy is generally less reliable and maintainable than attributes such as **Role**, **Text**, **Label**, **CSS**, or **XPath**. For this reason, JSPath is marked as **[Discouraged]** in the Object Repository UI and should only be used when other locator strategies are not suitable.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
