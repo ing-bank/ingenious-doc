@@ -33,7 +33,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     Download <span style="color:#FF6200">INGenious</span> and get up and running in minutes. Create and execute your test cases in no time. 
 
-    [:octicons-arrow-right-24: Getting started](gettingstarted.md)
+    [:octicons-arrow-right-24: Getting started](home/gettingstarted.md)
 
 -   :fontawesome-brands-codepen:{ .lg .middle .ing-indigo} __No Code/Low Code__
 
@@ -41,7 +41,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> comes with an intuitive IDE which makes test designing simple, easy and fun.
 
-    [:octicons-arrow-right-24: IDE](knowyourframework.md)
+    [:octicons-arrow-right-24: IDE](home/knowyourframework.md)
 
 -   :fontawesome-brands-chrome:{ .lg .middle .ing-sky} __Browser Automation__
 
@@ -65,7 +65,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> leverages **Java HTTP Client** to create API tests.
 
-    [:octicons-arrow-right-24: API Testing](api/api)
+    [:octicons-arrow-right-24: API Testing](api/)
 
 
 -   :material-text-box-multiple:{ .lg .middle .cicd} __Message/File Based Testing__
@@ -106,7 +106,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> features a powerful <b>Plugin System</b> that lets you extend the framework with custom automation actions, new object types, and integrations—across browser, database, mobile, web services, and more.
 
-    [:octicons-arrow-right-24: Customizations](plugins/plugins)
+    [:octicons-arrow-right-24: Customizations](customizations/plugins)
 
 -   :simple-cucumber:{ .lg .middle .cucumber} __Integrated BDD__
 
@@ -114,7 +114,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     <span style="color:#FF6200">INGenious</span> supports BDD way of working and comes with a built-in feature file editor.
 
-    [:octicons-arrow-right-24: BDD Support](bdd/)
+    [:octicons-arrow-right-24: BDD Support](integrations/bdd)
 
 -   :material-microsoft-azure-devops:{ .lg .middle .azure } __Seamless Azure Test Plan Integration__
 
@@ -122,7 +122,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 
     Test Case and Defect Management via Azure DevOps Test Plan can be done with <span style="color:#FF6200">INGenious</span> very easily
 
-    [:octicons-arrow-right-24: Test Plan](testplan/)
+    [:octicons-arrow-right-24: Test Plan](integrations/testplan/)
 
 -   :material-rocket-launch:{ .lg .middle .cicd} __Seamless Integration with any CI Tool__
 
@@ -156,10 +156,9 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 ## Architecture
 -----------------------
 
-![architecture](img/architecture/architecture_layers.png "architecture")
+![architecture](/img/architecture/architecture_layers.png "architecture")
 
-
-[Getting Started](gettingstarted.md){ .md-button }
+[Getting Started](home/gettingstarted.md){ .md-button }
 
 
 ---------

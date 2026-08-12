@@ -27,7 +27,7 @@
 Make sure to check out the following topics :
 
 [Locator Strategies](playwrightlocatorstrategy.md){ .md-button } 
-[Actions](../playwrightActions/browser.md){ .md-button } 
-[Web Page Performance](../webpageperformance.md){ .md-button }
-[Accessibility Testing](../accessibility.md){ .md-button }
+[Actions](playwrightActions/browser){ .md-button } 
+[Web Page Performance](webpageperformance){ .md-button }
+[Accessibility Testing](accessibility){ .md-button }
 [Mocking](playwrightmocking.md){ .md-button } 

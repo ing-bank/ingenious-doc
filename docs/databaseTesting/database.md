@@ -22,10 +22,10 @@
 
 * To configure a database connection from INGenious, follow the steps below:
 
-    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+    - Click on the Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **Database Configurations** you will see the `Database Alias` as `default`. Change the values as per requirement.
 
-        ![dbSettings](../img/db/dbsettings.png "dbSettings"){ width="75%" }
+        ![dbSettings](/img/db/dbsettings.png "dbSettings"){ width="75%" }
 
     - There are two ways to provide the property values:
         1. Hardcoded values – These are values explicitly defined within the configuration. They remain constant and do not change across environments.
@@ -37,7 +37,7 @@
         - The password could be defined as a runtime variable. 
         - The connection string might be a combination of both, allowing dynamic resolution based on context.
         
-        ![db_dynamic_config](../img/configurations/db_dynamic_config.png "db_dynamic_config"){ width="75%" }
+        ![db_dynamic_config](/img/configurations/db_dynamic_config.png "db_dynamic_config"){ width="75%" }
 
 -----------------------------------        
 
@@ -45,11 +45,11 @@
 
 To create a new database configuration, follow the steps below :
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+* Click on the Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
+* Inside the **Database Configurations** tab, Enter the `Database Alias` and hit ++enter++ . Alternatively you can also click on the ![add](/img/toolui/addIcon.png "add"){ width="20px" } icon.
 
-     ![createConfig](../img/db/createConfig.png "createConfig"){ width="75%" }
+     ![createConfig](/img/db/createConfig.png "createConfig"){ width="75%" }
 
 
 **In Java if you were to manually connect, you would invariably use the following :**
@@ -66,17 +66,17 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
 * INGenious allows users to add database properties thru the Database Configurations window. This give users flexibility in connecting to their preferred data sources. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](../img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons"){ width="75%" }
+![addAndRemovePropertyButtons](/img/db/addAndRemovePropertyButtons.png "addAndRemovePropertyButtons"){ width="75%" }
 
 * Add a new property 
-    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
+    1. Click the **Add Property** button ![addProperty](/img/toolui/add.png "addProperty"){ width="20px" }.
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
     3. Provide the corresponding **property value**.
     4. Click **Save** to apply the changes.
 
 * Remove a property
     1. Select the **property** you want to remove.
-    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty"){ width="20px" }.
+    2. Click the **Remove Property** button ![renmoveProperty](/img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
 -----------------------------------        
@@ -100,7 +100,7 @@ Below are examples of additional Database configuration properties.
     jdbc:mysql://localhost:3306/mydatabase?autoReconnect=true&characterEncoding=UTF-8
     ```
     
-    ![jdbc_connection_string_example](../img/configurations/jdbc_connection_string_example.png){ width="75%" }
+    ![jdbc_connection_string_example](/img/configurations/jdbc_connection_string_example.png){ width="75%" }
 
 === "Oracle Example"
     Oracle JDBC connection string format
@@ -113,7 +113,7 @@ Below are examples of additional Database configuration properties.
     jdbc:oracle:thin:@'(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS_LIST=(LOAD_BALANCE=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=localHost)(PORT=8080)))(CONNECT_DATA=(SERVICE_NAME=My Service)))'
     ```
 
-    ![alt text](../img/configurations/oracle_jdbc_connection_string_example.png){ width="75%" }
+    ![alt text](/img/configurations/oracle_jdbc_connection_string_example.png){ width="75%" }
     
 -----------------------------------
 
@@ -129,7 +129,7 @@ Below are examples of additional Database configuration properties.
 
 * A Database test case should contain a **`closeDBConnection`** action at the end for clean-up.
 
- ![database](../img/db/db.png "database"){ width="75%" }
+ ![database](/img/db/db.png "database"){ width="75%" }
 
  The above is an example of a Database Testcase.
 
@@ -153,7 +153,7 @@ The list of **`Query`** steps is as follows :
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/db/editor.gif "editor"){ width="75%" }
+ ![editor](/img/db/editor.gif "editor"){ width="75%" }
  
 
 -----------------------------------

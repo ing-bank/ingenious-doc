@@ -49,35 +49,35 @@ plugins:
 nav:
  - Home:
     - Premise : index.md
-    - Getting Started: gettingstarted.md
-    - Know the framework: knowyourframework.md
+    - Getting Started: home/gettingstarted.md
+    - Know the framework: home/knowyourframework.md
  - Browser Testing: 
     - Create Your First Browser Test: browsertesting/index.md
     - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
     - Auto-waiting: browsertesting/autowaiting.md
     - Actions: 
-        - Browser/Page: playwrightActions/browser.md
-        - Click: playwrightActions/clicks.md
-        - Text: playwrightActions/textinput.md
-        - Dropdown: playwrightActions/dropdowns.md
-        - Data Storage: playwrightActions/store.md
-        - Focus: playwrightActions/focus.md
-        - JavaScript: playwrightActions/js.md
-        - Keyboard: playwrightActions/keyboard.md
-        - Upload/Download: playwrightActions/fileuploads.md
-        - Positive Assertions: playwrightActions/positiveassertions.md
-        - Negative Assertions: playwrightActions/negativeassertions.md
-        - Alerts: playwrightActions/alerts.md
-        - Waits: playwrightActions/waitfor.md
-        - Switch: playwrightActions/switch.md
-        - Mocking: playwrightActions/fulfill.md
-        - Dynamic Objects: playwrightActions/dynamicObject.md
-        - General: playwrightActions/general.md
+        - Browser/Page: browsertesting/playwrightActions/browser.md
+        - Click: browsertesting/playwrightActions/clicks.md
+        - Text: browsertesting/playwrightActions/textinput.md
+        - Dropdown: browsertesting/playwrightActions/dropdowns.md
+        - Data Storage: browsertesting/playwrightActions/store.md
+        - Focus: browsertesting/playwrightActions/focus.md
+        - JavaScript: browsertesting/playwrightActions/js.md
+        - Keyboard: browsertesting/playwrightActions/keyboard.md
+        - Upload/Download: browsertesting/playwrightActions/fileuploads.md
+        - Positive Assertions: browsertesting/playwrightActions/positiveassertions.md
+        - Negative Assertions: browsertesting/playwrightActions/negativeassertions.md
+        - Alerts: browsertesting/playwrightActions/alerts.md
+        - Waits: browsertesting/playwrightActions/waitfor.md
+        - Switch: browsertesting/playwrightActions/switch.md
+        - Mocking: browsertesting/playwrightActions/fulfill.md
+        - Dynamic Objects: browsertesting/playwrightActions/dynamicObject.md
+        - General: browsertesting/playwrightActions/general.md
     - Browser Configurations: browsertesting/config.md
     - Multiple Browser Contexts: browsertesting/multiplebrowsercontexts.md
     - Authentication: browsertesting/playwrightauthenticate.md
-    - Webpage Performance: webpageperformance.md
-    - Accessibility Testing: accessibility.md
+    - Webpage Performance: browsertesting/webpageperformance.md
+    - Accessibility Testing: browsertesting/accessibility.md
     - Mocking: browsertesting/playwrightmocking.md
     - Web Objects Repository: browsertesting/webOR.md
  - Mobile App Testing:
@@ -101,13 +101,9 @@ nav:
         - Store : mobiletesting/mobileActions/store.md
         - Tap : mobiletesting/mobileActions/tap.md
         - Wait: mobiletesting/mobileActions/wait.md
-        #- Attribute Assertions: mobiletesting/mobileActions/attributeAssertions.md
-        #- Element Assertions: mobiletesting/mobileActions/elementAssertions.md    
-        #- Basic: mobiletesting/mobileActions/basic.md 
-        #- General: mobiletesting/mobileActions/commonActions.md
     - Mobile Objects Repository: mobiletesting/mobileOR.md
  - API Testing:
-    - Create Your First API Test: api/api.md
+    - Create Your First API Test: api/index.md
     - Actions: 
         - General: api/apiActions/webservice.md
         - Store: api/apiActions/store.md
@@ -121,11 +117,11 @@ nav:
  - Message Testing:
     - Premise: messageTesting/index.md
     - JMS (Queues): 
-        - Create your first JMS Test: jms/jms.md
-        - Queue Actions: jms/queueActions.md
+        - Create your first JMS Test: messageTesting/jms/jms.md
+        - Queue Actions: messageTesting/jms/queueActions.md
     - Kafka: 
-        - Create your first Kafka Test: kafka/kafka.md
-        - Kafka Actions: kafka/kafkaActions.md
+        - Create your first Kafka Test: messageTesting/kafka/kafka.md
+        - Kafka Actions: messageTesting/kafka/kafkaActions.md
     - Flat Files: messageTesting/flatfiles.md
  - Database Testing:
     - Premise: databaseTesting/database.md
@@ -219,35 +215,35 @@ nav:
         - Zelda: syntheticData/syntheticDataActions/zelda.md
         - Miscellaneous: syntheticData/syntheticDataActions/misc.md
  - Customizations:
-    - Customization Overview: customizations/overview.md
+    - Customization Overview: customizations/index.md
     - INGenious Plugins: 
-        - Plugins: plugins/plugins.md 
-        - Plugins API: plugins/pluginApi.md
-        - Plugin Templates: plugins/pluginTemplates.md
-        - Version Compatibility: plugins/pluginCompatibility.md   
-        - Troubleshooting: plugins/pluginTroubleshooting.md
+        - Plugins: customizations/plugins/index.md 
+        - Plugins API: customizations/plugins/pluginApi.md
+        - Plugin Templates: customizations/plugins/pluginTemplates.md
+        - Version Compatibility: customizations/plugins/pluginCompatibility.md   
+        - Troubleshooting: customizations/plugins/pluginTroubleshooting.md
     - Engine Customization: 
-        - Full flexibility: customizations/index.md
-        - Engine: customizations/engine.md
-        - Custom functions: customizations/customfunction.md
-    - Command Line Interface: cli.md
+        - Full flexibility: customizations/engine/index.md
+        - Engine: customizations/engine/engine.md
+        - Custom functions: customizations/engine/customfunction.md
+    - Command Line Interface: customizations/cli/index.md
  - Integrations :
-    - BDD: bdd.md
-    - Azure DevOps Test Plan: testplan.md
-    - LambdaTest (TestMu AI) Test Manager: testmuai/testmuai.md
+    - BDD: integrations/bdd.md
+    - Azure DevOps Test Plan: integrations/testplan.md
+    - LambdaTest (TestMu AI) Test Manager: integrations/testmuai/testmuai.md
     - Continuous Integration: 
-        - Getting Started: integrations/ci.md 
-        - Azure DevOps: integrations/azuredevops.md
-        - GitHub Actions: integrations/githubactions.md
-        - Circle CI: integrations/circleci.md
+        - Getting Started: integrations/ci/index.md 
+        - Azure DevOps: integrations/ci/azuredevops.md
+        - GitHub Actions: integrations/ci/githubactions.md
+        - Circle CI: integrations/ci/circleci.md
  - Hidden Gems :
-    - Reporting: browsertesting/playwrightreporting.md
-    - Shortcuts: shortcuts.md
-    - Additional features: additionalfeatures.md
-    - String Operations: stringOperations.md
-    - Global Datasheets: globalDataSheet.md
-    - Tips: tips.md
-    - Troubleshooting: troubleshooting.md 
+    - Reporting: hiddengems/playwrightreporting.md
+    - Shortcuts: hiddengems/shortcuts.md
+    - Additional features: hiddengems/additionalfeatures.md
+    - String Operations: hiddengems/stringOperations.md
+    - Global Datasheets: hiddengems/globalDataSheet.md
+    - Tips: hiddengems/tips.md
+    - Troubleshooting: hiddengems/troubleshooting.md 
          
 extra:
   footer:
