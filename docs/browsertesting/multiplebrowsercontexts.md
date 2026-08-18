@@ -10,22 +10,22 @@ By default, the first context of the browser test, will always use the options, 
 
 To modify these settings or options, follow the steps below :
 
-* Click on the Browser Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+* Click on the Browser Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
 * Inside the **Context Configurations** tab, you will see the `Context Alias` as `default`. Change the values as per requirement.
   
-     ![defaultConfig](../img/toolui/defaultContext.png "defaultConfig"){ width="50%" }
+     ![defaultConfig](/img/toolui/defaultContext.png "defaultConfig"){ width="50%" }
 
 
 ## Create New Context Options
 
 To create a new context configuration, follow the steps below :
 
-* Click on the Browser Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+* Click on the Browser Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **Context Configurations** tab, Enter the `Context Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
+* Inside the **Context Configurations** tab, Enter the `Context Alias` and hit ++enter++ . Alternatively you can also click on the ![add](/img/toolui/addIcon.png "add"){ width="20px" } icon.
 
-     ![createConfig](../img/toolui/CreateContext.png "createConfig"){ width="50%" }
+     ![createConfig](/img/toolui/CreateContext.png "createConfig"){ width="50%" }
 
 
 -----------
@@ -34,8 +34,8 @@ To create a new context configuration, follow the steps below :
 
 In Test Cases, when you use the action `createAndSwitchToNewContext`, in the condition column, all the available **Context Aliases** start to show up. Select the one that you want to use.
      
-![selectConfig](../img/toolui/contextsPrompts.png "selectConfig")
+![selectConfig](/img/toolui/contextsPrompts.png "selectConfig")
 
 A complete test case with multiple browser context would possibly look like this :
 
-![fullTest](../img/toolui/fullTestUsingContexts.png "fullTest")
+![fullTest](/img/toolui/fullTestUsingContexts.png "fullTest")

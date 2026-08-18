@@ -40,7 +40,7 @@
 * Then there should be the **`populateData`** action to generate the file. The **`populateData`** action comes with an editor which makes parameterization of data in   the payload very easy.
 
 
- ![file](../img/flatfiles/file.png "file")
+ ![file](/img/flatfiles/file.png "file")
 
  The above is an example of a File Generation Testcase.
 
@@ -59,7 +59,7 @@
 
  We need to press ++escape++ to close the editor
 
- ![editor](../img/flatfiles/editor.gif "editor")
+ ![editor](/img/flatfiles/editor.gif "editor")
  
 
  -------------------------------------

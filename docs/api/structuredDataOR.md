@@ -40,29 +40,29 @@ INGenious supports the same two‑repository model for Structured Data OR as it 
 
     Contains objects that **can be used within the project** and managed from the `Project` tab within the OR panel.
 
-    ![ExampleProjectStructuredDataOR](../img/api/structuredDataOR/ProjectStructuredDataOR.png "ExampleProjectStructuredDataOR"){ width="28%" }
+    ![ExampleProjectStructuredDataOR](/img/api/structuredDataOR/ProjectStructuredDataOR.png "ExampleProjectStructuredDataOR"){ width="28%" }
 
     A YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory `<ProjectName>\ObjectRepository\StructuredData\`.
 
-    ![ProjStructuredDataORYAML](../img/api/structuredDataOR/ProjStructuredDataORYAML.png "ProjStructuredDataORYAML")
+    ![ProjStructuredDataORYAML](/img/api/structuredDataOR/ProjStructuredDataORYAML.png "ProjStructuredDataORYAML")
 
     When a Project Structured Data Object (PSDO) is used in a test step, the identifier **[Project] PageName** will show as its reference.
 
-    ![PSDOTestStep](../img/api/structuredDataOR/PSDOTestStep.png "PSDOTestStep")
+    ![PSDOTestStep](/img/api/structuredDataOR/PSDOTestStep.png "PSDOTestStep")
 
 * **Shared Structured Data OR**
 
     Contains objects that **can be used across different projects** and are managed from the `Shared` tab within the OR panel.
 
-    ![ExampleSharedStructuredDataOR](../img/api/structuredDataOR/SharedStructuredDataOR.png "ExampleSharedStructuredDataOR"){ width="28%" }
+    ![ExampleSharedStructuredDataOR](/img/api/structuredDataOR/SharedStructuredDataOR.png "ExampleSharedStructuredDataOR"){ width="28%" }
     
     Similar to Project StructuredDataOR, a YAML file is automatically generated for each page—either upon page creation under `Shared` or when pages or objects are moved from `Project` to `Shared`. This file contains the page’s objects and their corresponding attributes and is stored in the `Shared\SharedObjectRepository\StructuredData` directory. The `structuredDataor-projectsdata.yaml` file maintains the list of projects that use the Shared Structured Data Objects.
 
-    ![SharedStructuredDataORYAML](../img/api/structuredDataOR/SharedStructuredDataORYAML.png "SharedStructuredDataORYAML")
+    ![SharedStructuredDataORYAML](/img/api/structuredDataOR/SharedStructuredDataORYAML.png "SharedStructuredDataORYAML")
 
     When a Shared Structured Data Object (SSDO) is used in a test step, the identifier **[Shared] PageName** will show as its reference.
 
-    ![SSDOTestStep](../img/api/structuredDataOR/SSDOTestStep.png "SSDOTestStep")
+    ![SSDOTestStep](/img/api/structuredDataOR/SSDOTestStep.png "SSDOTestStep")
 
 
 ## How to use Project and Shared Structured Data OR
@@ -72,15 +72,15 @@ INGenious supports the same two‑repository model for Structured Data OR as it 
 * Objects from Project and Shared Structured Data OR can be used in a single Test Scenario.
 
     For example:
-    ![ExampleTestScenario](../img/api/structuredDataOR/ExampleTestScenario.png "ExampleTestScenario")
+    ![ExampleTestScenario](/img/api/structuredDataOR/ExampleTestScenario.png "ExampleTestScenario")
 
 * Pages and Objects created under the `Project` tab can moved using the `Move to Shared` option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. *Note that existing test steps using the Project‑level Structured Data Object (PSDO) are automatically updated to use the Shared Structured Data Object (SSDO) within the project.*
 
-    ![ExampleMove](../img/api/structuredDataOR/ExampleMoveSD.gif "ExampleMove"){ width="30%" }
+    ![ExampleMove](/img/api/structuredDataOR/ExampleMoveSD.gif "ExampleMove"){ width="30%" }
 
 * Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.
 
-    ![ExampleSameNames](../img/api/structuredDataOR/ExampleTestScenario.png "ExampleSameNames")
+    ![ExampleSameNames](/img/api/structuredDataOR/ExampleTestScenario.png "ExampleSameNames")
 
 * Pages and Objects in both the Project and Shared repositories can be renamed using the `Rename Page` or `Rename Object` options. After renaming, any existing test steps in the current project that previously referenced an SSDO using the old name will be updated automatically.
 
@@ -88,6 +88,6 @@ INGenious supports the same two‑repository model for Structured Data OR as it 
 
 * To view all test cases that reference an Object within the project, use the `Get Impacted Cases` option. This feature is available for both Project and Shared repositories.
 
-    ![ExampleImpactedTC](../img/api/structuredDataOR/ExampleImpactedTC.png "ExampleImpactedTC"){ width="50%" }
+    ![ExampleImpactedTC](/img/api/structuredDataOR/ExampleImpactedTC.png "ExampleImpactedTC"){ width="50%" }
 
     *Suggestion: Before renaming or deleting an object, please use the `Get Impacted TestCases` option for checking.*

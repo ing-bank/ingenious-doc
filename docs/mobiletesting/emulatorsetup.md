@@ -4,13 +4,13 @@
 
 Follow the steps below to create an Appium configuration in INGenious.
 
-* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+* Click on the Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
 * In the **Manage Devices** tab, click the `+` icon beside the **Device** dropdown, and enter the name of the **Appium Configuation** you want to create and hit ++enter++ 
 
 * Inside the same tab, you can set your **Appium Capabilities/Options** and **Remote URL/Appium** from the textbox. By default, it's set to `http://127.0.0.1:4723/`
 
-     ![createConfig](../img/mobiletesting/sampleRemoteURL.png "remoteurl"){ width=50% }
+     ![createConfig](/img/mobiletesting/sampleRemoteURL.png "remoteurl"){ width=50% }
 
 * By default, `automationName`, `deviceName`, `platformName` and `platformVersion` are the required key-value pairs for **Appium configuration** when creating new emulators. Additional Appium configurations can be included as needed.
 
@@ -25,7 +25,7 @@ Follow the steps below to create an Appium configuration in INGenious.
     
     **Sample Android Emulator INGenious Configurations**
 
-    ![createConfig](../img/mobiletesting/config-android.png "createConfig"){ width=50% }
+    ![createConfig](/img/mobiletesting/config-android.png "createConfig"){ width=50% }
    
     **Sample Android Appium Capabilities Set**
 
@@ -44,7 +44,7 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     **Sample iOS Emulator INGenious Configurations**
 
-    ![createConfig](../img/mobiletesting/config-ios.png "createConfig"){ width=50% }
+    ![createConfig](/img/mobiletesting/config-ios.png "createConfig"){ width=50% }
 
     **Sample iOS Appium Capabilities Set**
 
@@ -70,19 +70,19 @@ Follow the steps below to create an Appium configuration in INGenious.
 
     * For this example, remote url is set to `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`
 
-        ![createConfig](../img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
+        ![createConfig](/img/mobiletesting/remoteurl-lambda.png "remoteUrl"){ width=50% }
 
     * To get your **Username** and **Access Key**
         * Login to LAMBDATEST Portal, go to **Home** > **Account Settings** > **Password & Security**
         * Under **Username and Access Key**, copy **Username** and **Access Key** as shown from example `https://<UserName>:<AccessKey>@mobile-hub.lambdatest.com/wd/hub`.
 
-            ![createConfig](../img/mobiletesting/Lambda-user-token.jpeg "user-token"){ width=60% }
+            ![createConfig](/img/mobiletesting/Lambda-user-token.jpeg "user-token"){ width=60% }
     
     ***Appium Capabilities/Options***
 
     * For this example, you can set the capabilities as seen below:
 
-        ![createConfig](../img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
+        ![createConfig](/img/mobiletesting/config-lambda.png "createConfig"){ width=50% }
 
     * To get **`app` capability**   
         * To load application and get **App Id**, follow step from Lambda Official Documentaion 

@@ -7,11 +7,11 @@
 
 The API Workbench can be accessed via the Menu Ribbon:
 
-![APIWorkbenchMenuRibbon](../img/api/APIWorkbenchMenuRibbon.png "APIWorkbenchMenuRibbon"){ width="60%" }
+![APIWorkbenchMenuRibbon](/img/api/APIWorkbenchMenuRibbon.png "APIWorkbenchMenuRibbon"){ width="60%" }
 
 Once selected, you will be navigated to API Workbench window. See example below:
 
-![APIWorkbenchExample](../img/api/APIWorkbenchExample.png "APIWorkbenchExample")
+![APIWorkbenchExample](/img/api/APIWorkbenchExample.png "APIWorkbenchExample")
 
 !!! tip ""
     The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the API Workbench.
@@ -21,26 +21,26 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `api` :material-arrow-right: `collections`
 
-      ![APIWorkbenchBackend](../img/api/APIWorkbenchBackend.png "APIWorkbenchBackend")
+      ![APIWorkbenchBackend](/img/api/APIWorkbenchBackend.png "APIWorkbenchBackend")
 
       If you click on the `+`, this will allow you to create a new collection.
 
-      ![APIWorkbenchCollection](../img/api/APIWorkbenchCollection.png "APIWorkbenchCollection"){ width="30%" }
+      ![APIWorkbenchCollection](/img/api/APIWorkbenchCollection.png "APIWorkbenchCollection"){ width="30%" }
 
       If you select a Collection or Request and **Right Click**, you will have some interesting and handy options to work with:
 
       **Collection level**
       
-      ![CollectionLevelOptions](../img/api/CollectionLevelOptions.png "CollectionLevelOptions"){ width="75%" }
+      ![CollectionLevelOptions](/img/api/CollectionLevelOptions.png "CollectionLevelOptions"){ width="75%" }
 
       **Request level**
       
-      ![RequestLevelOptions](../img/api/RequestLevelOptions.png "RequestLevelOptions"){ width="75%" }
+      ![RequestLevelOptions](/img/api/RequestLevelOptions.png "RequestLevelOptions"){ width="75%" }
   
 === ":two: Workbench Pane"
       This section allows you to select and configure the API request you want to execute.
       
-      ![WorkbenchPane](../img/api/WorkbenchPane.png "WorkbenchPane")
+      ![WorkbenchPane](/img/api/WorkbenchPane.png "WorkbenchPane")
 
       It supports multiple HTTP methods commonly used for interacting with web services:
 
@@ -63,7 +63,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       You may also **convert the configured API request into a test case**, capturing all request details for quick integration into your test suite.
 
-      ![ExampleConvertoTC](../img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
+      ![ExampleConvertoTC](/img/api/ExampleConvertoTC.gif "ExampleConvertoTC")
 
       **Importing cURL Commands**
       
@@ -123,7 +123,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       The detected JSONPath or XPath is shown in the right-click menu and can be copied for reuse.
 
-      ![APIWorkbenchResponsePath](../img/api/APIWorkbenchResponsePath.png "APIWorkbenchResponsePath"){ width="60%" }
+      ![APIWorkbenchResponsePath](/img/api/APIWorkbenchResponsePath.png "APIWorkbenchResponsePath"){ width="60%" }
 
       Once an assertion is selected, it is automatically added to the current API request and saved.
 
@@ -137,7 +137,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       The **Environment Dropdown** allows you to switch between environments. To open the **Environment Configuration Window** click **Configure**.
 
-      ![APIEnvironmentDropdown](../img/api/APIEnvironmentDropdown.png "APIEnvironmentDropdown")
+      ![APIEnvironmentDropdown](/img/api/APIEnvironmentDropdown.png "APIEnvironmentDropdown")
 
       The Environment Configuration Window displays all available environments and provides several actions:
 
@@ -146,13 +146,13 @@ Once selected, you will be navigated to API Workbench window. See example below:
       * **Duplicate** – Create a copy of the selected environment, including all configured variables.
       * **Delete** – Remove the selected environment.
 
-      ![APIEnvironmentActions](../img/api/APIEnvironmentActions.png "APIEnvironmentActions")
+      ![APIEnvironmentActions](/img/api/APIEnvironmentActions.png "APIEnvironmentActions")
 
       **Environment Variable Configuration**
 
       Variables are configured by entering a **Name** and **Value**. The **Secret** option can be enabled for sensitive information such as passwords, tokens, and API keys. Secret values are masked in the UI and are not displayed in plain text. After adding or updating variables, click **Save** to persist the environment configuration.
 
-      ![APIEnvironmentVariables](../img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
+      ![APIEnvironmentVariables](/img/api/APIEnvironmentVariables.png "APIEnvironmentVariables")
 
       Variables can be referenced throughout API requests using double curly braces:
 
@@ -166,7 +166,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
       {{baseUrl}}/users
       ```
 
-      ![APIEnvironmentRequestExample](../img/api/APIEnvironmentRequestExample.png "APIEnvironmentRequestExample")
+      ![APIEnvironmentRequestExample](/img/api/APIEnvironmentRequestExample.png "APIEnvironmentRequestExample")
 
       When a request is executed, all referenced variables are automatically resolved using the currently selected environment. Switching to a different environment allows the same request to be executed against a different set of values without modifying the request itself. If a referenced variable does not exist in the active environment, the request execution may fail or use the unresolved placeholder value.
 
@@ -211,6 +211,6 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       **Converted Test Case Example (Basic Authentication)**
 
-      ![APIRequestToTestCase](../img/api/APIRequestToTestCase.png "APIRequestToTestCase")
+      ![APIRequestToTestCase](/img/api/APIRequestToTestCase.png "APIRequestToTestCase")
 
       The generated test case performs the same API call as the API Workbench request and can be executed within INGenious to validate the expected response and assertions.
