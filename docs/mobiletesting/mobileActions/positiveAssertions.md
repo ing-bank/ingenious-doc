@@ -5,83 +5,55 @@ icon: material/flask-empty-plus-outline
 # Positive Assertions
 ------------------------
 
-## **assertTextPresentInPage**
+## **assertAdbShellOutput**
 
-**Description**: This function will assert if the expected text is present on the page.
+**Description**: This function is used to execute adb shell <Input> command and assert output contains [Condition] text.
 
 **Input Format** : @Expected Text
+
+**Condition Format** : @Expected Text
 
 === "Usage"
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | Sheet:Column |      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | Mobile     |:green_circle: [`assertAdbShellOutput`](#)  | @value       | @value      | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`assertAdbShellOutput`](#)  | Sheet:Column | Sheet:Column | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`assertAdbShellOutput`](#)  | %dynamicVar% | %dynamicVar% | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.MOBILE, desc = "Assert if text: [<Data>] is present on the page", input = InputType.YES)
-	public void assertTextPresentInPage() throws RuntimeException {
-
-		try {
-			String strObj = Data;
-			if (mDriver.findElement(By.tagName("html")).getText().contains(strObj)) {
-				System.out.println("assertTextPresent passed");
-				Report.updateTestLog("assertTextPresentInPage",
-						"Expected text '" + strObj + "' is  present in the page", Status.PASS);
-
-			} else {
-				System.out.println("assertTextPresentInPage failed");
-				throw new Exception("Expected text  '" + strObj + "' is not present in the page");
-			}
-
-		} catch (Exception e) {
-			Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, e);
-			throw new ForcedException("assertTextPresentInPage", e.getMessage());
-		}
-	}
+    @Action(
+            object = ObjectType.MOBILE,
+            desc = "Execute adb shell <Input> command and assert output contains [Condition] text",
+            input = InputType.YES,
+            condition = InputType.YES
+        )
+        public void assertAdbShellOutput() {
+            if (!isAndroid()) return;
+            try {
+                String output = runShell(Data);
+                if (output.contains(Condition)) {
+                    Report.updateTestLog(
+                        Action,
+                        "Output contained '" + Condition + "': " + output,
+                        Status.PASS
+                    );
+                } else {
+                    Report.updateTestLog(
+                        Action,
+                        "Expected output to contain '" + Condition + "' but got: " + output,
+                        Status.FAIL
+                    );
+                }
+            } catch (Exception e) {
+                LOG.log(Level.OFF, null, e);
+                Report.updateTestLog(Action, "adb shell failed: " + e.getMessage(), Status.FAIL);
+            }
+        }
     ```
-----------------------------------------
-
-## **assertCookiePresent**
-
-**Description**: This function will assert if the cookie is present.
-
-**Input Format** : @Expected Text
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | Sheet:Column |   | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | %dynamicVar% |   | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.MOBILE, desc = "Assert if cookie name: [<Data>] is present", input = InputType.YES)
-	public void assertCookiePresent() {
-		try {
-			String strCookieName = Data;
-			if ((mDriver.manage().getCookieNamed(strCookieName) != null)) {
-				System.out.println("assertCookiePresent Passed");
-				Report.updateTestLog("assertCookiePresent", "Cookie name matched with the data provided", Status.PASS);
-			} else {
-				throw new Exception("Cookie name did not match with data provided");
-			}
-		} catch (Exception ex) {
-			System.out.println("assertCookiePresent Failed");
-			Logger.getLogger(Assertions.class.getName()).log(Level.SEVERE, null, ex);
-			throw new ForcedException("assertCookiePresent", ex.getMessage());
-		}
-	}
-    ```
--------------------------------
-
-## **assertCookieByName**
+----------------------## **assertCookieByName**
 
 **Description**: This function will assert if the cookie has the expected name.
 
@@ -123,108 +95,41 @@ icon: material/flask-empty-plus-outline
 	}
     ```
 ----------------------
-## **assertElementPresent**
+## **assertCookiePresent**
 
-**Description**: This function will assert if the Element is present.
+**Description**: This function will assert if the cookie is present.
+
+**Input Format** : @Expected Text
 
 === "Usage"
 
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | mobileObject |:green_circle: [`assertElementPresent`](#)|                             |           |         |
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | Sheet:Column |   | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`assertCookiePresent`](#)   | %dynamicVar% |   | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] is present")
-    public void assertElementPresent() {
-        assertElement(elementPresent());
+    @Action(object = ObjectType.MOBILE, desc = "Assert if cookie name: [<Data>] is present", input = InputType.YES)
+	public void assertCookiePresent() {
+		try {
+			String strCookieName = Data;
+			if ((mDriver.manage().getCookieNamed(strCookieName) != null)) {
+				System.out.println("assertCookiePresent Passed");
+				Report.updateTestLog("assertCookiePresent", "Cookie name matched with the data provided", Status.PASS);
+			} else {
+				throw new Exception("Cookie name did not match with data provided");
+			}
+		} catch (Exception ex) {
+			System.out.println("assertCookiePresent Failed");
+			Logger.getLogger(Assertions.class.getName()).log(Level.SEVERE, null, ex);
+			throw new ForcedException("assertCookiePresent", ex.getMessage());
+		}
+	}
     ```
-
-----------------------
-## **assertElementSelected**
-
-**Description**: This function will assert if the Element is selected.
-
-=== "Usage"
-
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | mobileObject |:green_circle: [`assertElementSelected`](#)|                             |           |         |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] element is selected")
-    public void assertElementSelected() {
-        assertElement(elementSelected());
-    }
-    ```
-
-----------------------
-
-## **assertElementDisplayed**
-
-**Description**: This function will assert if the Element is displayed.
-
-=== "Usage"
-
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | mobileObject |:green_circle: [`assertElementDisplayed`](#)|                             |           |         |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] element is displayed")
-    public void assertElementDisplayed() {
-        assertElement(elementDisplayed());
-    }
-    ```
-
-----------------------
-## **assertElementEnabled**
-
-**Description**: This function will assert if the Element is enabled.
-
-=== "Usage"
-
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | mobileObject |:green_circle: [`assertElementEnabled`](#)|                             |           |         |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] is enabled on the current page")
-
-    public void assertElementEnabled() {
-        assertElement(elementEnabled());
-    }
-    ```
-----------------------
-
-## **assertElementAttrEquals**
-
-**Description**: This function will assert if element attribute equals given data in input column
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute Equals [<Data>]", input =InputType.YES)
-    public void assertElementAttrEquals() {
-        assertElementAttr(SpecText.Type.IS);
-    }
-    ```
-----------------------
+-------------------------------
 
 ## **assertElementAttrContains**
 
@@ -244,28 +149,6 @@ icon: material/flask-empty-plus-outline
     @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute Contains [<Data>]", input =InputType.YES)
     public void assertElementAttrContains() {
         assertElementAttr(SpecText.Type.CONTAINS);
-    }
-    ```
-----------------------
-
-## **assertElementAttrStartsWith**
-
-**Description**: This function will assert if element attribute starts with given data in input column
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute StartsWith [<Data>]", input =InputType.YES)
-    public void assertElementAttrStartsWith() {
-        assertElementAttr(SpecText.Type.STARTS);
     }
     ```
 ----------------------
@@ -292,6 +175,28 @@ icon: material/flask-empty-plus-outline
     ```
 ----------------------
 
+## **assertElementAttrEquals**
+
+**Description**: This function will assert if element attribute equals given data in input column
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute Equals [<Data>]", input =InputType.YES)
+    public void assertElementAttrEquals() {
+        assertElementAttr(SpecText.Type.IS);
+    }
+    ```
+----------------------
+
 ## **assertElementAttrMatches**
 
 **Description**: This function will assert if element attribute matches given data in input column
@@ -310,6 +215,28 @@ icon: material/flask-empty-plus-outline
     @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute Matches [<Data>]", input =InputType.YES)
     public void assertElementAttrMatches() {
         assertElementAttr(SpecText.Type.MATCHES);
+    }
+    ```
+----------------------
+
+## **assertElementAttrStartsWith**
+
+**Description**: This function will assert if element attribute starts with given data in input column
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementAttrStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc ="Assert if [<Object>]'s Attribute StartsWith [<Data>]", input =InputType.YES)
+    public void assertElementAttrStartsWith() {
+        assertElementAttr(SpecText.Type.STARTS);
     }
     ```
 ----------------------
@@ -355,119 +282,85 @@ icon: material/flask-empty-plus-outline
     ```
 ----------------------
 
-## **assertElementTextEquals**
+## **assertElementDisplayed**
 
-**Description**: This function will assert if element text equals given text in input column
+**Description**: This function will assert if the Element is displayed.
 
 === "Usage"
 
-    
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | mobileObject |:green_circle: [`assertElementDisplayed`](#)|                             |           |         |
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP,desc = "Assert if [<Object>]'s Text Equals [<Data>]",input = InputType.YES)
-    public void assertElementTextEquals() {
-        assertElementText(Type.IS);
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] element is displayed")
+    public void assertElementDisplayed() {
+        assertElement(elementDisplayed());
+    }
+    ```
+
+----------------------
+## **assertElementEnabled**
+
+**Description**: This function will assert if the Element is enabled.
+
+=== "Usage"
+
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | mobileObject |:green_circle: [`assertElementEnabled`](#)|                             |           |         |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] is enabled on the current page")
+
+    public void assertElementEnabled() {
+        assertElement(elementEnabled());
     }
     ```
 ----------------------
 
-## **assertElementTextContains**
+## **assertElementPresent**
 
-**Description**: This function will assert if element text contains given text in input column
+**Description**: This function will assert if the Element is present.
 
 === "Usage"
 
-    
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | mobileObject |:green_circle: [`assertElementPresent`](#)|                             |           |         |
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text Contains [<Data>]", input = InputType.YES)
-    public void assertElementTextContains() {
-        assertElementText(Type.CONTAINS);
-    }
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] is present")
+    public void assertElementPresent() {
+        assertElement(elementPresent());
     ```
+
 ----------------------
+## **assertElementSelected**
 
-## **assertElementTextStartsWith**
-
-**Description**: This function will assert if element text starts with given text in input column
+**Description**: This function will assert if the Element is selected.
 
 === "Usage"
 
-    
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | mobileObject |:green_circle: [`assertElementSelected`](#)|                             |           |         |
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text StartsWith [<Data>]", input = InputType.YES)
-    public void assertElementTextStartsWith() {
-        assertElementText(Type.STARTS);
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>] element is selected")
+    public void assertElementSelected() {
+        assertElement(elementSelected());
     }
     ```
-----------------------
 
-## **assertElementTextEndsWith**
-
-**Description**: This function will assert if element text ends with given text in input column
-
-=== "Usage"
-
-    
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text EndsWith [<Data>]", input = InputType.YES)
-    public void assertElementTextEndsWith() {
-        assertElementText(Type.ENDS);
-    }
-    ```
-----------------------
-
-## **assertElementTextMatchesWith**
-
-**Description**: This function will assert if element text matches with given text in input column
-
-=== "Usage"
-
-    
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text Matches [<Data>]", input = InputType.YES)
-    public void assertElementTextMatchesWith() {
-        assertElementText(Type.MATCHES);
-    }
-    ```
 ----------------------
 
 ## **assertElementTextByLabel**
@@ -495,6 +388,29 @@ icon: material/flask-empty-plus-outline
     ```
 ----------------------
 
+## **assertElementTextContains**
+
+**Description**: This function will assert if element text contains given text in input column
+
+=== "Usage"
+
+    
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextContains`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text Contains [<Data>]", input = InputType.YES)
+    public void assertElementTextContains() {
+        assertElementText(Type.CONTAINS);
+    }
+    ```
+----------------------
+
 ## **assertElementTextContainsByLabel**
 
 **Description**: This function is used to assert if the element text adjacent to provided label element contains the expected data.
@@ -519,3 +435,136 @@ icon: material/flask-empty-plus-outline
 	}
     ```
 ----------------------
+
+## **assertElementTextEndsWith**
+
+**Description**: This function will assert if element text ends with given text in input column
+
+=== "Usage"
+
+    
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEndsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text EndsWith [<Data>]", input = InputType.YES)
+    public void assertElementTextEndsWith() {
+        assertElementText(Type.ENDS);
+    }
+    ```
+----------------------
+
+## **assertElementTextEquals**
+
+**Description**: This function will assert if element text equals given text in input column
+
+=== "Usage"
+
+    
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextEquals`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP,desc = "Assert if [<Object>]'s Text Equals [<Data>]",input = InputType.YES)
+    public void assertElementTextEquals() {
+        assertElementText(Type.IS);
+    }
+    ```
+----------------------
+
+## **assertElementTextMatchesWith**
+
+**Description**: This function will assert if element text matches with given text in input column
+
+=== "Usage"
+
+    
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextMatchesWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text Matches [<Data>]", input = InputType.YES)
+    public void assertElementTextMatchesWith() {
+        assertElementText(Type.MATCHES);
+    }
+    ```
+----------------------
+
+## **assertElementTextStartsWith**
+
+**Description**: This function will assert if element text starts with given text in input column
+
+=== "Usage"
+
+    
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`assertElementTextStartsWith`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Assert if [<Object>]'s Text StartsWith [<Data>]", input = InputType.YES)
+    public void assertElementTextStartsWith() {
+        assertElementText(Type.STARTS);
+    }
+    ```
+----------------------
+
+## **assertTextPresentInPage**
+
+**Description**: This function will assert if the expected text is present on the page.
+
+**Input Format** : @Expected Text
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | Sheet:Column |      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`assertTextPresentInPage`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.MOBILE, desc = "Assert if text: [<Data>] is present on the page", input = InputType.YES)
+	public void assertTextPresentInPage() throws RuntimeException {
+
+		try {
+			String strObj = Data;
+			if (mDriver.findElement(By.tagName("html")).getText().contains(strObj)) {
+				System.out.println("assertTextPresent passed");
+				Report.updateTestLog("assertTextPresentInPage",
+						"Expected text '" + strObj + "' is  present in the page", Status.PASS);
+
+			} else {
+				System.out.println("assertTextPresentInPage failed");
+				throw new Exception("Expected text  '" + strObj + "' is not present in the page");
+			}
+
+		} catch (Exception e) {
+			Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, e);
+			throw new ForcedException("assertTextPresentInPage", e.getMessage());
+		}
+	}
+    ```
+----------------------------------------
+

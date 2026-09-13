@@ -148,6 +148,51 @@ icon: material/atom
 
     Inputs in the Input column can be either `hardcoded` (in this case the data is preceded by a "**@**"), passed from the datasheet (`datasheet name : column name`) or passed from a variable value (`%variable name%`), as given in the above example.
 
+    ### Inline Object Property Override
+
+    Instead of adding a separate `setObjectProperty` step, the override can be supplied **inline** in the **Condition** column of the locator-based step itself (`Click`, `Fill`, `selectSingleByVisibleText`, an assertion, etc.). The engine resolves and applies the override just *before* the element is located, so the placeholders in the locator are substituted for that step only.
+
+    **Syntax**
+
+    ```
+    setProp: #token=value[; #token2=value2 ...]
+    setGlobalProp: #token=value[; #token2=value2 ...]
+    ```
+
+    | Marker | Scope |
+    |--------|-------|
+    | `setProp:` | Object-scoped — applies only to the element used in that step. Requires an Object Repository element (ObjectName + Reference). |
+    | `setGlobalProp:` | Global — applies the token to every object that uses it, like `setglobalObjectProperty`. |
+
+    **Rules**
+
+    - Tokens are the `#variableName` placeholders defined in the object's locator.
+    - Multiple pairs are separated by `;`.
+    - Each pair splits on the **first** `=` only, so the value itself may contain `=` (for example a URL query string).
+    - Values accept the same formats as the Input column: a hardcoded literal, `Sheet:Column`, `%runtimeVar%` or `#globalDataId`. They are resolved through the normal data pipeline.
+    - An optional `|subiter=N` suffix on a value picks a specific datasheet sub-iteration for that token, overriding the step's own sub-iteration.
+    - Markers are case-insensitive (`setProp:`, `SETPROP:`, `setprop:` all work).
+    - Malformed pairs are ignored; if no valid pair remains the override is skipped and logged as `DEBUG`.
+
+    **Usage**
+
+    | ObjectName | Action | Input        | Condition | Reference |  |
+    |------------|--------|--------------|-----------|-----------|--|
+    | Object |:green_circle: [`Click`](#) |  | `setProp: #id=@submitBtn` | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded value*</span>
+    | Object |:green_circle: [`Click`](#) |  | `setProp: #id=Products:SKU` | PageName |<span style="color:#559BD1">:arrow_left:   *Value from Datasheet*</span>
+    | Object |:green_circle: [`Click`](#) |  | `setProp: #id=%dynamicVar%` | PageName |<span style="color:#AB0066">:arrow_left:   *Value from variable*</span>
+    | Object |:green_circle: [`Fill`](#) | Sheet:Column | `setProp: #row=%currentRow%; #status=Data:State` | PageName |<span style="color:#9C27B0">:arrow_left:   *Multiple tokens*</span>
+    | Object |:green_circle: [`Click`](#) |  | `setProp: #id=Products:SKU\|subiter=3` | PageName |<span style="color:#9C27B0">:arrow_left:   *Specific sub-iteration*</span>
+    | Object |:green_circle: [`Click`](#) |  | `setGlobalProp: #env=Prod` | PageName |<span style="color:#9C27B0">:arrow_left:   *Global scope*</span>
+
+    !!! tip "Building the expression in the IDE"
+        While editing the **Condition** cell of an eligible step, type `*` to open the inline-property builder instead of typing the expression by hand. In the dialog you pick the **scope** (*Object (this element)* or *Global (all elements)*), choose a **token** from the dropdown (populated from the selected object's locator attributes in the Object Repository), supply the **value** (with suggestions for `Sheet:Column` references and `%variables%`), and optionally set the **sub-iteration**. An existing expression is loaded back into the dialog for editing.
+
+        A step is eligible when it references an Object Repository element (both ObjectName and Reference are filled) and its action does not already use the Condition column for its own semantics.
+
+    !!! note
+        The applied override is reported as a separate `setObjectProperty` (or `setGlobalObjectProperty`) log entry so the report does not repeat the real action name for the property-setting sub-step.
+
 === "Corresponding Code"
 
     ```java

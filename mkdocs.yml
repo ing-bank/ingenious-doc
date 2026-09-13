@@ -91,6 +91,7 @@ nav:
     - Create Your First Mobile Test: mobiletesting/mobileTest.md
     - Actions:
         - Alerts: mobiletesting/mobileActions/alerts.md
+        - Context: mobiletesting/mobileActions/context.md
         - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
         - General: mobiletesting/mobileActions/general.md
         - Mobile : mobiletesting/mobileActions/mobile.md
@@ -101,7 +102,6 @@ nav:
         - Store : mobiletesting/mobileActions/store.md
         - Tap : mobiletesting/mobileActions/tap.md
         - Wait: mobiletesting/mobileActions/wait.md
-        - New: mobiletesting/mobileActions/newactions.md
     - Mobile Objects Repository: mobiletesting/mobileOR.md
  - API Testing:
     - Create Your First API Test: api/index.md
