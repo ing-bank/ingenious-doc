@@ -3,6 +3,9 @@
 !!! info
     INGenious can import Postman and Bruno collections and automatically convert them into reusable API components. This allows existing API requests to be migrated into INGenious without manually recreating each request.
 
+!!! tip ""
+    During import, you can choose to convert each request into a **Test Case** or a **Reusable (User Intent)**. Choosing **Reusable (User Intent)** creates a [Reusable Component](../home/reusableComponents.md) that can be executed from any number of test cases via the `Execute` action, instead of a standalone test case. See [Reusable Components](../home/reusableComponents.md) for details.
+
 ## Supported Formats
 
 The importer supports:
