@@ -26,6 +26,8 @@
 
     ## Execute a Reusable for a Specific Set of Data
 
+    > See [Reusable Components](../home/reusableComponents.md) for an overview of Project (User Intent) and Shared Reusables, and how to create and execute them.
+
     A reusable test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set of data passed each time.
 
     ![subiteration](/img/Things/SubIteration.png "subiteration")
@@ -70,6 +72,8 @@
 ??? example "Looping Reusable Components"
 
     ## Looping Reusable Components
+
+    > See [Reusable Components](../home/reusableComponents.md) for an overview of Project (User Intent) and Shared Reusables, and how to create and execute them.
 
     **Reusable Components** can be used within loops to repeat a set of steps. A **Start/End Loop** block may be used to execute the first iteration and first sub-iteration repeatedly. While a **Start/End Param** block may be used when iterating through a datasheet.
     

@@ -41,7 +41,9 @@
   
 
 === ":two: Reusable Components"
-       This is where the **Reusable** Test Scenarios and Test Cases (**logical grouping of test steps**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
+       This is where the **Reusable** Test Scenarios and Test Cases (**logical grouping of test steps**, also referred to as a **User Intent**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
+
+      This panel is split into a **`User Intent`** tab (Reusables scoped to the current project) and a **`Shared Reusables`** tab (Reusables that can be executed from any project). See [Reusable Components](reusableComponents.md) for the full breakdown of both scopes, how to create and execute a Reusable, and how to move one between scopes.
 
       To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `ReusableComponents`
 

@@ -178,6 +178,11 @@ Once selected, you will be navigated to API Workbench window. See example below:
 
       API requests can be converted directly into INGenious test cases, allowing API validations to be incorporated into automated test suites with minimal effort.
 
+      During conversion, you can choose the target artifact type:
+
+      * **Test Case** – creates a standalone test case in the Test Plan.
+      * **User Intent (Reusable)** – creates a [Reusable Component](../home/reusableComponents.md) instead, so the converted request can be executed from any number of test cases via the `Execute` action.
+
       During conversion, all configured request details are preserved, including:
 
       * Endpoint URL and query parameters
