@@ -51,6 +51,7 @@ nav:
     - Premise : index.md
     - Getting Started: home/gettingstarted.md
     - Know the framework: home/knowyourframework.md
+    - Test Data: home/testData.md
  - Browser Testing: 
     - Create Your First Browser Test: browsertesting/index.md
     - Locator Strategies: browsertesting/playwrightlocatorstrategy.md
