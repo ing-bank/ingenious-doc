@@ -6,8 +6,9 @@ icon: material/cellphone
 ------------------------
 
 ## **activateApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to activate app by package/bundle id [<Data>].
+**Description**: This function is used to activate app by package/bundle id [Data].
 
 **Input Format** : @Expected Text
 
@@ -57,8 +58,9 @@ icon: material/cellphone
 ----------------------
 
 ## **clearAppData**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to clear data for app with package name <Input>.
+**Description**: This function is used to clear data for app with package name [Input].
 
 **Input Format** : @Expected Text
 
@@ -93,8 +95,9 @@ icon: material/cellphone
 ----------------------
 
 ## **doubleTap**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to double tap the [<Object>].
+**Description**: This function is used to double tap the [Object].
 
 === "Usage"
 
@@ -152,8 +155,9 @@ icon: material/cellphone
 ----------------------
 
 ## **dragByCoordinates**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to drag using coordinates from [<Data>] to [<Condition>] where each is x,y.
+**Description**: This function is used to drag using coordinates from [Data] to [Condition] where each is x,y.
 
 **Input Format** : @Expected Text
 
@@ -202,8 +206,9 @@ icon: material/cellphone
     ```
 ----------------------
 ## **dragElementToObject**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to drag [<Object>] to target object [<Condition>].
+**Description**: This function is used to drag [Object] to target object [Condition].
 
 **Condition Format** : @Expected Text
 
@@ -304,6 +309,7 @@ icon: material/cellphone
 ----------------------
 
 ## **executeAdbShellCommand**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to execute adb shell command
 
@@ -343,8 +349,9 @@ icon: material/cellphone
 ----------------------
 
 ## **forceStopApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to force-stop app with package name <Input>.
+**Description**: This function is used to force-stop app with package name [Input].
 
 **Input Format** : @Expected Text
 
@@ -379,8 +386,9 @@ icon: material/cellphone
 ----------------------
 
 ## **getDeviceProperty**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to get Android system property <Input> and store in [Condition] variable.
+**Description**: This function is used to get Android system property [Input] and store in [Condition] variable.
 
 **Input Format** : @Expected Text
 
@@ -519,8 +527,9 @@ icon: material/cellphone
 ---------------------------------
 
 ## **installMobileApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to install app from local path [<Data>].
+**Description**: This function is used to install app from local path [Data].
 
 **Input Format** : @Expected Text
 
@@ -819,8 +828,9 @@ icon: material/cellphone
 ---------------------------------
 
 ## **pressMobileKeyOrButton**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to press mobile key/button [<Data>] (Android: back/home/recent/menu/enter or keycode, iOS: home).
+**Description**: This function is used to press mobile key/button [Data] (Android: back/home/recent/menu/enter or keycode, iOS: home).
 
 **Input Format** : @Expected Text
 
@@ -910,8 +920,9 @@ icon: material/cellphone
 ----------------------
 
 ## **pullFileFromDevice**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to pull file from device path <Input> to local path [Condition].
+**Description**: This function is used to pull file from device path [Input] to local path [Condition].
 
 **Input Format** : @Expected Text
 
@@ -960,8 +971,9 @@ icon: material/cellphone
 ----------------------
 
 ## **pushFileToDevice**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to push local file <Input> to device path [Condition].
+**Description**: This function is used to push local file [Input] to device path [Condition].
 
 **Input Format** : @Expected Text
 
@@ -1002,8 +1014,9 @@ icon: material/cellphone
 ----------------------
 
 ## **queryAppState**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to query app state for package/bundle id [<Data>] and optionally store in [Condition].
+**Description**: This function is used to query app state for package/bundle id [Data] and optionally store in [Condition].
 
 **Input Format** : @Expected Text
 
@@ -1059,8 +1072,9 @@ icon: material/cellphone
 ----------------------
 
 ## **removeMobileApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to uninstall app by package/bundle id [<Data>].
+**Description**: This function is used to uninstall app by package/bundle id [Data].
 
 **Input Format** : @Expected Text
 
@@ -1132,8 +1146,9 @@ icon: material/cellphone
 ----------------------
 
 ## **runAppInBackground**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to run app in background for [<Data>] seconds (default 5).
+**Description**: This function is used to run app in background for [Data] seconds (default 5).
 
 **Input Format** : @Expected Text
 
@@ -1193,8 +1208,9 @@ icon: material/cellphone
 ----------------------
 
 ## **setAirplaneMode**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to set Android airplane mode with [<Data>] as on|off.
+**Description**: This function is used to set Android airplane mode with [Data] as on|off.
 
 **Input Format** : @Expected Text
 
@@ -1274,8 +1290,9 @@ icon: material/cellphone
 ----------------------
 
 ## **setClipboardText**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to set clipboard text to [<Data>].
+**Description**: This function is used to set clipboard text to [Data].
 
 **Input Format** : @Expected Text
 
@@ -1321,8 +1338,9 @@ icon: material/cellphone
 ----------------------
 
 ## **setDeviceLocation**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to set device location using [<Data>] as latitude,longitude[,altitude].
+**Description**: This function is used to set device location using [Data] as latitude,longitude[,altitude].
 
 **Input Format** : @Expected Text
 
@@ -1423,8 +1441,9 @@ icon: material/cellphone
 ---------------------------------
 
 ## **simulateBiometricMatch**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to simulate biometric match with [<Data>] (iOS: true/false, Android: fingerprint id).
+**Description**: This function is used to simulate biometric match with [Data] (iOS: true/false, Android: fingerprint id).
 
 **Input Format** : @Expected Text
 
@@ -1490,6 +1509,7 @@ icon: material/cellphone
 ----------------------
 
 ## **startScreenRecording**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to start screen recording.
 
@@ -1525,8 +1545,9 @@ icon: material/cellphone
 ----------------------
 
 ## **stopScreenRecording**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to stop screen recording and save to [<Data>] path (mp4).
+**Description**: This function is used to stop screen recording and save to [Data] path (mp4).
 
 **Input Format** : @Expected Text
 
@@ -1735,8 +1756,9 @@ icon: material/cellphone
 ----------------------
 
 ## **terminateApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to terminate app by package/bundle id [<Data>].
+**Description**: This function is used to terminate app by package/bundle id [Data].
 
 **Input Format** : @Expected Text
 
@@ -1925,8 +1947,9 @@ icon: material/cellphone
 ---------------------------------
 
 ## **updateRuntimePermission**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to update Android runtime permission using [<Data>] format package:permission:grant|revoke.
+**Description**: This function is used to update Android runtime permission using [Data] format package:permission:grant|revoke.
 
 **Input Format** : @Expected Text
 

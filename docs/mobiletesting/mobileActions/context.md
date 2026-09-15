@@ -6,6 +6,7 @@ icon: material/swap-horizontal
 ------------------------
 
 ## **closeDeviceSession**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to close a device session by alias.
 
@@ -76,6 +77,7 @@ icon: material/swap-horizontal
     ```
 ----------------------
 ## **launchAndSwitchToDevice**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to launch a new device session and switch to it.
 
@@ -142,6 +144,7 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **listAvailableContexts**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to list all available contexts (logged to report).
 
@@ -181,8 +184,9 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **switchContextByIndex**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to switch to context by index [<Data>] (0-based).
+**Description**: This function is used to switch to context by index [Data] (0-based).
 
 **Input Format** : @Expected Text
 
@@ -252,6 +256,7 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **switchToDevice**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to switch to an already-launched device session.
 
@@ -310,6 +315,7 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **switchToNativeApp**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to switch to Native App context.
 
@@ -405,6 +411,7 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **switchToWebView**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
 **Description**: This function is used to switch to first available WebView context.
 
@@ -458,8 +465,9 @@ icon: material/swap-horizontal
 ----------------------
 
 ## **waitForWebViewAndSwitch**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to wait up to [<Condition>] seconds for a WebView to appear then switch to it.
+**Description**: This function is used to wait up to [Condition] seconds for a WebView to appear then switch to it.
 
 **Condition Format** : @Expected Text
 

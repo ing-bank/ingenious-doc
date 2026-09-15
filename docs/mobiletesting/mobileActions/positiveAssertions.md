@@ -6,8 +6,9 @@ icon: material/flask-empty-plus-outline
 ------------------------
 
 ## **assertAdbShellOutput**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to execute adb shell <Input> command and assert output contains [Condition] text.
+**Description**: This function is used to execute adb shell [Input] command and assert output contains [Condition] text.
 
 **Input Format** : @Expected Text
 

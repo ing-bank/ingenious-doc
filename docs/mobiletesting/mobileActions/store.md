@@ -6,8 +6,9 @@ icon: simple/databricks
 ------------------------
 
 ## **storeAppInstalledState**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to store whether app [<Data>] is installed into runtime variable [<Condition>].
+**Description**: This function is used to store whether app [Data] is installed into runtime variable [Condition].
 
 **Input Format** : @Expected Text
 
@@ -65,8 +66,9 @@ icon: simple/databricks
 ----------------------
 
 ## **storeAvailableContexts**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to store all available contexts into runtime variable [<Data>] (comma-separated).
+**Description**: This function is used to store all available contexts into runtime variable [Data] (comma-separated).
 
 **Input Format** : @Expected Text
 
@@ -110,8 +112,9 @@ icon: simple/databricks
 ----------------------
 
 ## **storeClipboardText**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to store clipboard text into runtime variable [<Data>].
+**Description**: This function is used to store clipboard text into runtime variable [Data].
 
 **Input Format** : @Expected Text
 
@@ -154,8 +157,9 @@ icon: simple/databricks
 ----------------------
 
 ## **storeCurrentContext**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to store current context name into runtime variable [<Data>].
+**Description**: This function is used to store current context name into runtime variable [Data].
 
 **Input Format** : @Expected Text
 
@@ -198,8 +202,9 @@ icon: simple/databricks
 ----------------------
 
 ## **storeDeviceLocation**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to store device location into runtime variable [<Data>].
+**Description**: This function is used to store device location into runtime variable [Data].
 
 **Input Format** : @Expected Text
 

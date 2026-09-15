@@ -69,8 +69,9 @@ icon: material/mouse-scroll-wheel
 ----------------------
 
 ## **scrollToElement**
+**Since:** <a href="https://github.com/ing-bank/INGenious/releases/tag/v4.0.0" target="_blank"><span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span></a>
 
-**Description**: This function is used to scroll to element using [<Data>] as strategy=value and optional [Condition] direction:attempts.
+**Description**: This function is used to scroll to element using [Data] as strategy=value and optional [Condition] direction:attempts.
 
 **Input Format** : @Expected Text
 
