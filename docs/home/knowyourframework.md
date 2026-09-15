@@ -106,6 +106,8 @@
 
       ![data3](/img/toolui/data3.JPG "data3"){ width="75%" }
 
+      The Test Data pane is split into a **`Project`** tab (data scoped to this project) and a **`Shared`** tab (data reusable across every project) — mirroring the Reusable Components tabs above. See [Test Data](testData.md) for how to promote a datasheet to Shared and how to reference it from a test step.
+
       **Set up Multiple Test Environments**
 
       To set up environment based execution, you can set up multiple environments following the 5 steps as below :
