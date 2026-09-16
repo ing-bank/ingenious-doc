@@ -6,7 +6,46 @@ icon: material/timer
 ----------------------
 
 
-## **waitForAppElementToBeVisible**
+## **changeWaitTime**
+
+**Description**: This function is used to change the wait time by the expected input in seconds.
+
+**Input Format** : @Expected time in seconds
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Mobile     |:green_circle: [`changeWaitTime`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile     |:green_circle: [`changeWaitTime`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile     |:green_circle: [`changeWaitTime`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.MOBILE, desc = "changing wait time by [<Data>] seconds", input = InputType.YES)
+    public void changeWaitTime() {
+        try {
+            Duration t = Duration.ofSeconds(Integer.parseInt(Data));
+            if (Integer.parseInt(Data) > 0) {
+                SystemDefaults.waitTime = t;
+                Report.updateTestLog("changeWaitTime", "Wait time changed to "
+                        + Data + " second/s", Status.DONE);
+            } else {
+                Report.updateTestLog("changeWaitTime",
+                        "Couldn't change Wait time (invalid input)",
+                        Status.DEBUG);
+            }
+
+        } catch (NumberFormatException ex) {
+            Report.updateTestLog("changeWaitTime",
+                    "Couldn't change Wait time ", Status.DEBUG);
+            Logger.getLogger(Basic.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    ```
+
+---------------------------------## **waitForAppElementToBeVisible**
 
 **Description**: This function will wait for element to be visible
 
@@ -24,6 +63,50 @@ icon: material/timer
         waitForElement(WaitType.VISIBLE, "'"
                 + this.ObjectName
                 + "' Element becomes visible in stipulated time");
+    }
+    ```
+----------------------
+
+## **waitForElementSelectionToBeFalse**
+
+**Description**: This function will wait for element to be deselected 
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|
+    |------------|--------|--------------|-----------|---------|
+    | mobileObject   |:green_circle: [`waitForElementSelectionToBeFalse`](#)| | |  PageName |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] element to be deselected", condition = InputType.OPTIONAL)
+    public void waitForElementSelectionToBeFalse() {
+        waitForElement(WaitType.EL_SELECT_FALSE, "'"
+                + this.ObjectName
+                + "' Element got Deselected in the stipulated time");
+    }
+    ```
+----------------------
+
+## **waitForElementSelectionToBeTrue**
+
+**Description**: This function will wait for element to be selected 
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|
+    |------------|--------|--------------|-----------|---------|
+    | mobileObject   |:green_circle: [`waitForElementSelectionToBeTrue`](#)| | |  PageName |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] element to be selected: [<Data>]", condition = InputType.OPTIONAL)
+    public void waitForElementSelectionToBeTrue() {
+        waitForElement(WaitType.EL_SELECT_TRUE, "'"
+                + this.ObjectName
+                + "' Element got Selected in the stipulated time");
     }
     ```
 ----------------------
@@ -50,25 +133,39 @@ icon: material/timer
     ```
 ----------------------
 
-## **waitForElementToBeTapable**
+## **waitForElementToBePresent**
 
-**Description**: This function will wait for element to be tapable
+**Description**: This function will wait for element to be present 
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference|
-    |------------|--------|--------------|-----------|---------|
-    | mobileObject   |:green_circle: [`waitForElementToBeTapable`](#)| | |  PageName |
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`waitForElementToBePresent`](#)   |       |  | PageName |    
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] to be Tapable ", condition = InputType.OPTIONAL)
-    public void waitForElementToBeTapable() {
-        waitForElement(WaitType.CLICKABLE, "'"
-                + this.ObjectName
-                + "' Element becomes Tapable in stipulated time");
+    @Action(object = ObjectType.APP, desc = "Wait  for the element [<Object>] to be present", condition = InputType.OPTIONAL)
+    public void waitForElementToBePresent() {
+        MObject.setWaitTime(getWaitTime());
+        try {
+            Element = mObject.findElement(ObjectName, Reference);
+            MObject.resetWaitTime();
+            if (Element != null) {
+                Report.updateTestLog(Action, "'" + this.ObjectName
+                        + "' Element Present in the stipulated time", Status.PASS);
+            } else {
+                throw new ElementException(ElementException.ExceptionType.Element_Not_Found, ObjectName);
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
+            throw new ForcedException(Action,
+                    ex.getMessage());
+        }
     }
+
     ```
 ----------------------
 
@@ -90,6 +187,28 @@ icon: material/timer
         waitForElement(WaitType.SELECTED, "'"
                 + this.ObjectName
                 + "' Element Selected in stipulated time");
+    }
+    ```
+----------------------
+
+## **waitForElementToBeTapable**
+
+**Description**: This function will wait for element to be tapable
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|
+    |------------|--------|--------------|-----------|---------|
+    | mobileObject   |:green_circle: [`waitForElementToBeTapable`](#)| | |  PageName |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] to be Tapable ", condition = InputType.OPTIONAL)
+    public void waitForElementToBeTapable() {
+        waitForElement(WaitType.CLICKABLE, "'"
+                + this.ObjectName
+                + "' Element becomes Tapable in stipulated time");
     }
     ```
 ----------------------
@@ -138,50 +257,39 @@ icon: material/timer
     ```
 ----------------------
 
-## **waitForElementSelectionToBeTrue**
+## **waitForFrameAndSwitch**
 
-**Description**: This function will wait for element to be selected 
+**Description**: This function will wait for frame to be available and switch to it 
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference|
-    |------------|--------|--------------|-----------|---------|
-    | mobileObject   |:green_circle: [`waitForElementSelectionToBeTrue`](#)| | |  PageName |
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] element to be selected: [<Data>]", condition = InputType.OPTIONAL)
-    public void waitForElementSelectionToBeTrue() {
-        waitForElement(WaitType.EL_SELECT_TRUE, "'"
-                + this.ObjectName
-                + "' Element got Selected in the stipulated time");
+    @Action(object = ObjectType.APP, desc = "Wait for Frame To Be Available and Switch to it", input = InputType.OPTIONAL,
+            condition = InputType.OPTIONAL)
+    public void waitForFrameAndSwitch() {
+        if (Element != null) {
+            waitFor(WaitType.FRAME_EL, "Switched to Frame By Object '"
+                    + ObjectName + "' in stipulated Time");
+        } else if (Data != null) {
+            if (Data.matches("[0-9]+")) {
+                waitFor(WaitType.FRAME_IND, "Switched to Frame By Index '"
+                        + Data + "' in stipulated Time");
+            } else {
+                waitFor(WaitType.FRAME_STR, "Switched to Frame By Value '"
+                        + Data + "' in stipulated Time");
+            }
+        }
     }
     ```
 ----------------------
-
-## **waitForElementSelectionToBeFalse**
-
-**Description**: This function will wait for element to be deselected 
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|
-    |------------|--------|--------------|-----------|---------|
-    | mobileObject   |:green_circle: [`waitForElementSelectionToBeFalse`](#)| | |  PageName |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Wait for [<Object>] element to be deselected", condition = InputType.OPTIONAL)
-    public void waitForElementSelectionToBeFalse() {
-        waitForElement(WaitType.EL_SELECT_FALSE, "'"
-                + this.ObjectName
-                + "' Element got Deselected in the stipulated time");
-    }
-    ```
-----------------------
-
 ## **waitForTitleToBe**
 
 **Description**: This function will wait for page's title to match value given in Input column 
@@ -230,112 +338,3 @@ icon: material/timer
     ```
 ----------------------
 
-## **waitForElementToBePresent**
-
-**Description**: This function will wait for element to be present 
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`waitForElementToBePresent`](#)   |       |  | PageName |    
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Wait  for the element [<Object>] to be present", condition = InputType.OPTIONAL)
-    public void waitForElementToBePresent() {
-        MObject.setWaitTime(getWaitTime());
-        try {
-            Element = mObject.findElement(ObjectName, Reference);
-            MObject.resetWaitTime();
-            if (Element != null) {
-                Report.updateTestLog(Action, "'" + this.ObjectName
-                        + "' Element Present in the stipulated time", Status.PASS);
-            } else {
-                throw new ElementException(ElementException.ExceptionType.Element_Not_Found, ObjectName);
-            }
-
-        } catch (Exception ex) {
-            Logger.getLogger(this.getClass().getName()).log(Level.OFF, null, ex);
-            throw new ForcedException(Action,
-                    ex.getMessage());
-        }
-    }
-
-    ```
-----------------------
-
-## **waitForFrameAndSwitch**
-
-**Description**: This function will wait for frame to be available and switch to it 
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`waitForFrameAndSwitch`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Wait for Frame To Be Available and Switch to it", input = InputType.OPTIONAL,
-            condition = InputType.OPTIONAL)
-    public void waitForFrameAndSwitch() {
-        if (Element != null) {
-            waitFor(WaitType.FRAME_EL, "Switched to Frame By Object '"
-                    + ObjectName + "' in stipulated Time");
-        } else if (Data != null) {
-            if (Data.matches("[0-9]+")) {
-                waitFor(WaitType.FRAME_IND, "Switched to Frame By Index '"
-                        + Data + "' in stipulated Time");
-            } else {
-                waitFor(WaitType.FRAME_STR, "Switched to Frame By Value '"
-                        + Data + "' in stipulated Time");
-            }
-        }
-    }
-    ```
-----------------------
-## **changeWaitTime**
-
-**Description**: This function is used to change the wait time by the expected input in seconds.
-
-**Input Format** : @Expected time in seconds
-
-=== "Usage"
-
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | Mobile     |:green_circle: [`changeWaitTime`](#)   | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Mobile     |:green_circle: [`changeWaitTime`](#)   | Sheet:Column |       | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Mobile     |:green_circle: [`changeWaitTime`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.MOBILE, desc = "changing wait time by [<Data>] seconds", input = InputType.YES)
-    public void changeWaitTime() {
-        try {
-            Duration t = Duration.ofSeconds(Integer.parseInt(Data));
-            if (Integer.parseInt(Data) > 0) {
-                SystemDefaults.waitTime = t;
-                Report.updateTestLog("changeWaitTime", "Wait time changed to "
-                        + Data + " second/s", Status.DONE);
-            } else {
-                Report.updateTestLog("changeWaitTime",
-                        "Couldn't change Wait time (invalid input)",
-                        Status.DEBUG);
-            }
-
-        } catch (NumberFormatException ex) {
-            Report.updateTestLog("changeWaitTime",
-                    "Couldn't change Wait time ", Status.DEBUG);
-            Logger.getLogger(Basic.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    ```
-
----------------------------------

@@ -91,6 +91,7 @@ nav:
     - Create Your First Mobile Test: mobiletesting/mobileTest.md
     - Actions:
         - Alerts: mobiletesting/mobileActions/alerts.md
+        - Context: mobiletesting/mobileActions/context.md
         - Dynamic Objects: mobiletesting/mobileActions/dynamicObjects.md
         - General: mobiletesting/mobileActions/general.md
         - Mobile : mobiletesting/mobileActions/mobile.md
