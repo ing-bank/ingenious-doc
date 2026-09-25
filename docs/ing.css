@@ -162,3 +162,21 @@ body > .container {
   vertical-align: middle;
   margin-bottom: 0.5em;
 }
+
+.badge-icon-legacy {
+  background-color: #B5651D;
+  color: white;
+  padding: 3px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-version-legacy {
+  background-color: #FBE9DA;
+  color: #B5651D;
+  padding: 3px 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}

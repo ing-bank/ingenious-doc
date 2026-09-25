@@ -2,25 +2,34 @@
 
 ## How to create a Kafka - based Test Case?
 
+Kafka testing in INGenious lets you produce messages to a topic and consume/validate messages from a topic as part of a test case. This page is structured to walk through that setup for both the current and legacy approach: the **v4.0.0 and up** tab covers the named-configuration model (aliases referenced via `#alias`), while the **Prior to v4.0.0** tab covers the earlier per-step configuration model.
+
 === "v4.0.0 and up"
 
     <span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span>
+
     Kafka connectivity is defined once per **named configuration** — not per test step — and referenced
     from a step using the `#alias` syntax. See [Kafka Configurations](#kafka-configurations) below.
 
-    * Create a **Producer** and a **Consumer** alias under **Settings** :material-arrow-right: **Kafka Configurations**.
+    #### 1. Configure the aliases
 
-    * Then there should be steps to create the **`message`**. You can leverage built-in capabilities in INGenious like `Synthetic Data Generation` to create `UUID`s and other data to be fed into the message.
+    1. Create a **Producer** and a **Consumer** alias under **Settings** :material-arrow-right: **Kafka Configurations**.
 
-    * The **`produceMessage`** action comes with an editor which makes parameterization of data in the payload very easy. This action is always marked in <span style="color:Green">**Green.**</span> [See the section below]. Put the producer alias (e.g. `#OrdersProducer`) in the **Condition** column.
+    #### 2. Produce a message
 
-    * Then there should be the **`sendKafkaMessage`** action to push the message to the producer topic.
+    1. Create the **`message`**. You can leverage built-in capabilities in INGenious like `Synthetic Data Generation` to create `UUID`s and other data to be fed into the message.
 
-    * To consume a specific target message, use the **`identifyTargetMessage`** action and provide a unique value along with its corresponding JSON Path or X-Path.
+    2. Use the **`produceMessage`** action, which comes with an editor that makes parameterization of data in the payload very easy. This action is always marked in <span style="color:Green">**Green.**</span> [See the section below]. Put the producer alias (e.g. `#OrdersProducer`) in the **Condition** column.
 
-    * Then use **`consumeKafkaMessage`** with the consumer alias (e.g. `#OrdersConsumer`) in the **Condition** column, and validate/store message **details**, **specific tags** or even the **entire message body.**
+    3. Use the **`sendKafkaMessage`** action to push the message to the producer topic.
 
-    * Always finish with **`closeConsumer`** to release consumer state and resources, even on assertion failure paths.
+    #### 3. Consume a message
+
+    1. Use the **`identifyTargetMessage`** action to consume a specific target message, and provide a unique value along with its corresponding JSON Path or X-Path.
+
+    2. Use **`consumeKafkaMessage`** with the consumer alias (e.g. `#OrdersConsumer`) in the **Condition** column, and validate/store message **details**, **specific tags** or even the **entire message body.**
+
+    3. Always finish with **`closeConsumer`** to release consumer state and resources, even on assertion failure paths.
 
     **Minimal produce flow**
 
@@ -68,21 +77,34 @@
 
 === "Prior to v4.0.0"
 
-    * At the beginning, there should be steps to set up the configurations for the **`Kafka Producer`**.
-      For instance setting the **`server`, `producerTopic`, `keySerializer`, `valueSerializer`, `partition`, `headers`** etc. are required.
+    <span class="version-badge"><span class="badge-icon-legacy">:octicons-tag-16:</span><span class="badge-version-legacy">Legacy</span></span>
+    
+    Kafka connectivity is configured per test step —
+    the producer and consumer settings are set up directly as steps before producing or consuming a message.
 
-    * Then there should be steps to create the **`message`**. You can leverage built-in capabilities in INGenious like `Synthetic Data Generation` to create `UUID`s and other data to be fed into the message.
+    #### 1. Configure the producer
 
-    * The **`produceMessage`** action comes with an editor which makes parameterization of data in the paylod very easy. This action is always marked in <span style="color:Green">**Green.**</span>. [See the section below]
+    1. Set up the configurations for the **`Kafka Producer`**.
+       For instance setting the **`server`, `producerTopic`, `keySerializer`, `valueSerializer`, `partition`, `headers`** etc. are required.
 
-    * Then there should be the **`sendKafkaMessage`** action to push the message to the producer topic.
+    #### 2. Produce a message
 
-    * Then there should be steps to configure the **`Kafka Consumer`**.
-      For instance setting the **`consumerGroupId`, `consumerTopic`, `valueDeserializer`, `pollIntervals`** etc. are required.
+    1. Create the **`message`**. You can leverage built-in capabilities in INGenious like `Synthetic Data Generation` to create `UUID`s and other data to be fed into the message.
 
-    * To consume a specific target message, use the **`identifyTargetMessage`** action and provide a unique value along with its corresponding JSON Path or X-Path.
+    2. Use the **`produceMessage`** action, which comes with an editor that makes parameterization of data in the paylod very easy. This action is always marked in <span style="color:Green">**Green.**</span>. [See the section below]
 
-    * Eventually there should be steps to consume the message and validate/store message **details**, **specific tags** or even the **entire message body.**
+    3. Use the **`sendKafkaMessage`** action to push the message to the producer topic.
+
+    #### 3. Configure the consumer
+
+    1. Set up the configurations for the **`Kafka Consumer`**.
+       For instance setting the **`consumerGroupId`, `consumerTopic`, `valueDeserializer`, `pollIntervals`** etc. are required.
+
+    #### 4. Consume a message
+
+    1. Use the **`identifyTargetMessage`** action to consume a specific target message, and provide a unique value along with its corresponding JSON Path or X-Path.
+
+    2. Consume the message and validate/store message **details**, **specific tags** or even the **entire message body.**
 
     === "String Serializer Example"
 
@@ -104,6 +126,7 @@
 === "v4.0.0 and up"
 
     <span class="version-badge"><span class="badge-icon">:octicons-tag-16:</span><span class="badge-version">4.0.0</span></span>
+
     Open the **gear icon** :gear: :material-arrow-right: **Settings** :material-arrow-right: **Kafka Configurations**.
     This single tab replaces the legacy **Kafka SSL Configurations** tab and hosts two sides:
 
@@ -147,6 +170,8 @@
         topic exists) without producing or consuming a real message.
 
 === "Prior to v4.0.0"
+
+    <span class="version-badge"><span class="badge-icon-legacy">:octicons-tag-16:</span><span class="badge-version-legacy">Legacy</span></span>
 
     If Key Store Certificates are required, you may set it up by clicking on the **gear icon** :gear: to open up the **Run Settings** :material-arrow-right: **Kakfa ssl Configurations**
 
