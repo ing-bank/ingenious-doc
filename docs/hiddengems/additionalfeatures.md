@@ -389,3 +389,44 @@
         ![storeEpochTimestampInVariable](/img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
     > **Note:** Choose the format based on your requirements. Use **seconds** for most general purposes, **milliseconds** for high-precision timing, or **seconds+milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
+
+ ------   
+??? example "Store UTC Timestamp in a Variable"
+
+    ## Store UTC Timestamp in a Variable
+
+    This action allows you to store the current UTC date and time into a runtime variable using commonly used UTC timestamp formats.
+
+    **When to Use**
+
+    Use this when you need a timezone-independent timestamp in your test execution, for example, to generate request payloads, create unique API data, validate date/time fields, or pass UTC values between test steps and reusable components.
+
+    **Timestamp Format Options**
+
+    The action supports three different UTC timestamp formats:
+
+    | Format | Description | Example Value |
+    |--------|-------------|---------------|
+    | `iso` | ISO-8601 UTC timestamp | 2026-08-03T12:34:56Z |
+    | `iso+milliseconds` | ISO-8601 UTC timestamp with milliseconds | 2026-08-03T12:34:56.123Z |
+    | `date` | UTC date only | 2026-08-03 |
+
+    **How to Store the UTC Timestamp**
+
+    - In **ObjectName** field, select **General**.
+    - In the **Action** field, select **storeUTCTimestampInVariable**.
+    - In the **Input** field, specify the format option: `iso`, `iso+milliseconds`, or `date`.
+    - In the **Condition** field, specify the variable name where you want to store the timestamp.
+    - The action will automatically capture and store the current UTC date/time at the moment of execution.
+
+    **Examples**
+
+    === "Usage"
+    | Input (Format) | Condition (Variable) | Result |
+    |----------------|---------------------|--------|
+    | `@iso` | `%varName%` | 2026-08-03T12:34:56Z |
+    | `@iso+milliseconds` | `%varName%` | 2026-08-03T12:34:56.123Z |
+    | `@date` | `%varName%` | 2026-08-03 |
+
+
+    > **Note:** UTC timestamps are not affected by the local machine timezone and provide a consistent time reference across environments. Use **iso** for standard API integrations, **iso+milliseconds** when higher timestamp precision is required, and **date** when only the UTC date value is needed. The stored variable can be used in subsequent test steps for assertions, parameterization, request payload generation, or test data creation.
