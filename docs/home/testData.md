@@ -1,7 +1,7 @@
 # **Test Data**
 
 !!! info
-    **Test Data** is how INGenious drives data-driven testing: instead of hardcoding values into test steps, you store them in datasheets and reference them from your test cases. Every project gets its own Test Data, and a datasheet (or an entire environment) can be promoted to **Shared Test Data** so it can be reused by any other project opened in the same INGenious installation — the same **Project** / **Shared** scoping already used for [Reusable Components](knowyourframework.md#test-design-pane) and the Object Repositories.
+    **Test Data** is how INGenious drives data-driven testing: instead of hardcoding values into test steps, you store them in datasheets and reference them from your test cases. Every project gets its own Test Data, and a datasheet (or an entire environment) can be promoted to **Shared Test Data** so it can be reused by any other project opened in the same INGenious installation — the same **Project** / **Shared** scoping already used for [User Intent](knowyourframework.md#test-design-pane) and the Object Repositories.
 
 !!! abstract "Key Benefits:"
     * **Data-driven test cases** – Keep values out of your steps and drive the same test case with different rows of data.
@@ -30,7 +30,7 @@ Test Data is organized as follows:
     |------------|------------------|
     | **Scenario** | The Scenario the row's data belongs to. |
     | **Flow** | The Test Case the row's data belongs to. |
-    | **Scope** | Read-only. Auto-populated as `[Project]`, `[Shared]`, or empty (Test Plan) based on where the selected Scenario/Test Case lives. |
+    | **Scope** | Read-only. Auto-populated as `@Project`, `@Shared`, or empty (Test Plan) based on where the selected Scenario/Test Case lives. |
     | **Iteration** | The iteration number the row belongs to. |
     | **SubIteration** | The sub-iteration number the row belongs to. |
 
@@ -46,7 +46,7 @@ There are two scopes of Test Data:
 
     They live under `<ProjectName>\TestData\<Environment>\` in the project directory.
 
-    When a Project datasheet is used in a test step, it can be referenced as **`Sheet:Column`** (the default, unchanged behavior) or explicitly as **`[Project] Sheet:Column`**.
+    When a Project datasheet is used in a test step, it can be referenced as **`Sheet:Column`** (the default, unchanged behavior) or explicitly as **`Sheet:Column@Project`**.
 
 * **Shared Test Data**
 
@@ -54,23 +54,28 @@ There are two scopes of Test Data:
 
     They live outside any single project, under `Shared\SharedTestData\<Environment>\` at the application level — so any project can reference the same Shared datasheet without copying it.
 
-    A `projects.items` manifest tracks which projects currently reference Shared Test Data. INGenious uses this list to warn you before a rename or delete affects other projects (see [Renaming and Deleting Shared Test Data](#renaming-and-deleting-shared-test-data)) — the same convention used by Shared Reusable Components and the Shared Object Repository.
+    A `projects.items` manifest tracks which projects currently reference Shared Test Data. INGenious uses this list to warn you before a rename or delete affects other projects (see [Renaming and Deleting Shared Test Data](#renaming-and-deleting-shared-test-data)) — the same convention used by Shared User Intent and the Shared Object Repository.
 
-    When a Shared datasheet is used in a test step, it is referenced as **`[Shared] Sheet:Column`**.
+    When a Shared datasheet is used in a test step, it is referenced as **`Sheet:Column@Shared`**.
 
 * Datasheets may share the same names across the Project and Shared scopes. However, names must remain unique within each individual scope.
+
+![Test Data Scope](/img/home/testdata/testdata-proj-shared.gif "testdata-scope")
 
 ## Referencing Test Data in Test Steps
 
 | **Reference form** | **Resolves against** |
 |---------------------|-----------------------|
 | `Sheet:Column` | The project's own Test Data (unchanged, canonical form). |
-| `[Project] Sheet:Column` | The project's own Test Data — tag explicit. |
-| `[Shared] Sheet:Column` | The app-root Shared Test Data store. |
+| `Sheet:Column@Project` | The project's own Test Data — tag explicit. |
+| `Sheet:Column@Shared` | The app-root Shared Test Data store. |
 
-* The easiest way to add a reference is to **drag and drop** a column header from either the `Project` or `Shared` Test Data tab onto a step's Input/Condition field — INGenious inserts the correctly tagged reference (`[Project] Sheet:Column` or `[Shared] Sheet:Column`) automatically.
-* Inside a larger value — a webservice payload, SQL text, a URL, a file template — a Test Data reference must be wrapped in curly braces to tell it apart from the surrounding text, for example `{Sheet:Column}` or `{[Shared] Sheet:Column}`.
-* An **untagged** or `[Project]`-tagged reference only ever resolves against the project's own Test Data — it will never silently fall back to Shared Test Data. Only an explicit `[Shared]` tag resolves against the Shared store.
+* The scope tag **trails** the whole `Sheet:Column` reference — it is appended after the column, never before the sheet name (so it stays clear of the sheet name itself).
+* The easiest way to add a reference is to **drag and drop** a column header from either the `Project` or `Shared` Test Data tab onto a step's Input/Condition field — INGenious inserts the correctly tagged reference (`Sheet:Column@Project` or `Sheet:Column@Shared`) automatically.
+* Inside a larger value — a webservice payload, SQL text, a URL, a file template — a Test Data reference must be wrapped in curly braces to tell it apart from the surrounding text, for example `{Sheet:Column}` or `{Sheet:Column@Shared}`.
+* An **untagged** or `@Project`-tagged reference only ever resolves against the project's own Test Data — it will never silently fall back to Shared Test Data. Only an explicit `@Shared` tag resolves against the Shared store.
+
+![Test Data Reference](/img/home/testdata/testdata-reference.gif "testdata-reference")
 
 ## Making Test Data Shared
 
@@ -82,13 +87,16 @@ A Project datasheet is promoted to Shared Test Data using **`Make As Shared Test
 
 When you confirm the move:
 
-1. If Test Plan or Project Reusable test cases use the data being moved, INGenious lists them and asks whether to **also convert them to Shared Reusables** so other projects can actually run them, not just read their data.
-    * **Yes** converts the listed test cases to Shared Reusables and rewrites their references to `[Shared]` as well.
+1. If Test Plan or Project User Intent test cases use the data being moved, INGenious lists them and asks whether to **also convert them to Shared User Intents** so other projects can actually run them, not just read their data.
+    * **Yes** converts the listed test cases to Shared User Intents and rewrites their references to `@Shared` as well.
     * **No** moves only the Test Data — INGenious then warns that other consumers of the shared data may not be able to run those test cases.
     * Dismissing the dialog cancels the whole operation.
-2. The datasheet (or environment) is moved to `Shared\SharedTestData\`, and every existing reference to it — in the Test Plan, Project Reusables, and Shared Reusables — is rewritten from `Sheet:Column` to `[Shared] Sheet:Column`.
+    * When a test case is converted to a Shared User Intent, INGenious also detects any Project-scoped Object Repository items it uses and offers to move those to the Shared Object Repository as well, the same way the tree's **Make As Shared User Intent** flow does.
+2. The datasheet (or environment) is moved to `Shared\SharedTestData\`, and every existing reference to it — in the Test Plan, Project User Intents, and Shared User Intents — is rewritten from `Sheet:Column` to `Sheet:Column@Shared`.
 3. If the same sheet name still exists in another environment of the project, its references are **left untouched** (retagging them would break that other environment) — INGenious warns you which sheets were only partially moved so you can move those environments too.
-4. A summary notification reports how many sheets moved, how many references were updated, and how many test cases were converted to Shared Reusables.
+4. A summary notification reports how many sheets moved, how many references were updated, and how many test cases were converted to Shared User Intents.
+
+![Make As Shared](/img/home/testdata/make-as-shared-td.gif "makeAsShared")
 
 ## Importing Test Data
 
@@ -99,14 +107,18 @@ Use **Test Data → Import TestData** from the menu bar to import one or more CS
 3. Tick one or more target **Environments** (or **Select all**).
 4. Click **Import**. The file is imported into every checked environment; an environment that already has a sheet with the same name is skipped, and the outcome is reported in a notification.
 
+![Import Testdata](/img/home/testdata/import-td.gif "import-testdata")
+
 ## Shared Environment (Execution Setting)
 
 Because Project and Shared Test Data are independent stores, a test run resolves them against **two separate environment settings** in Run Settings / Quick Settings:
 
 * **Environment** – which Project Test Data environment to use (as before).
-* **Shared Environment** – which Shared Test Data environment `[Shared]` references resolve against.
+* **Shared Environment** – which Shared Test Data environment `@Shared` references resolve against.
 
-This lets a run use, for example, Project environment `QA` while resolving all `[Shared]` references against Shared environment `Default`.
+This lets a run use, for example, Project environment `QA` while resolving all `@Shared` references against Shared environment `Default`.
+
+![Test Data Reference](/img/home/testdata/run-settings-td.png "testdata-reference"){ width="50%" }
 
 ## Renaming and Deleting Shared Test Data
 

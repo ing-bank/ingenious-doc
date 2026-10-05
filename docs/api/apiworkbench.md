@@ -181,7 +181,7 @@ Once selected, you will be navigated to API Workbench window. See example below:
       During conversion, you can choose the target artifact type:
 
       * **Test Case** – creates a standalone test case in the Test Plan.
-      * **User Intent (Reusable)** – creates a [Reusable Component](../home/reusableComponents.md) instead, so the converted request can be executed from any number of test cases via the `Execute` action.
+      * **User Intent** – creates a [User Intent](../home/userIntent.md) instead, so the converted request can be executed from any number of test cases via the `Execute` action.
 
       During conversion, all configured request details are preserved, including:
 

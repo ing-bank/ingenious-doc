@@ -65,7 +65,7 @@ As you interact with the browser, each action is captured and added to the Test 
  * The **Choose Recording Target** dialog appears. Pick where the recording should be saved:
 
     * **New test case under Test Scenario** — provide a **Scenario** name (defaults to `LiveRecordingScenario`) and a **Test case** name (defaults to `LiveRecordingTestCase`)
-    * **New test case under Reusable Scenario** — provide a **Reusable scenario** name (defaults to `LiveRecordingReusable`) and a **Test case** name (defaults to `LiveRecordingReusableTestCase`)
+    * **New test case under User Intent Scenario** — provide a **User Intent scenario** name (defaults to `LiveRecordingReusable`) and a **Test case** name (defaults to `LiveRecordingReusableTestCase`)
     * Click **Start Recording** to begin recording, or **Cancel** to close the dialog.
 
     ![ChooseRecordingDialogueBox](/img/recording/ChooseRecordingDialogueBox.png "Choose Recording Target")
@@ -96,7 +96,7 @@ As you interact with the browser, each action is captured and added to the Test 
 
     You can also close the Chromium browser window directly instead of clicking **Stop Recording**. INGenious detects this and finalizes the recording automatically.. Using **Stop Recording** is recommended.
 
- * Your recording is now available as a fully populated **Scenario** (or **Reusable Scenario**) and **Test Case**. All relevant test steps, web objects, and test data are automatically created and ready for execution or further editing.
+ * Your recording is now available as a fully populated **Scenario** (or **User Intent Scenario**) and **Test Case**. All relevant test steps, web objects, and test data are automatically created and ready for execution or further editing.
 
  ---
 
