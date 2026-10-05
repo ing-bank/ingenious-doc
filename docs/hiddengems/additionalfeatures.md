@@ -18,15 +18,17 @@
 
     The **Open** option opens the project location in your system.
 
-    Right below these options, you have details on the total number of scenarios, test cases, reusable components and test datasheets present in the project.
+    Right below these options, you have details on the total number of scenarios, test cases, user intents and test datasheets present in the project.
 
 -----
 
-??? example   "Execute a Reusable for a Specific Set of Data"
+??? example   "Execute a User Intent for a Specific Set of Data"
 
-    ## Execute a Reusable for a Specific Set of Data
+    ## Execute a User Intent for a Specific Set of Data
 
-    A reusable test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same reusable component, inside a single test case, with different set of data passed each time.
+    > See [User Intent](../home/userIntent.md) for an overview of Project and Shared User Intent, and how to create and execute them.
+
+    A User Intent test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same User Intent, inside a single test case, with different set of data passed each time.
 
     ![subiteration](/img/Things/SubIteration.png "subiteration")
 
@@ -67,13 +69,15 @@
 
 -------
 
-??? example "Looping Reusable Components"
+??? example "Looping User Intent"
 
-    ## Looping Reusable Components
+    ## Looping User Intent
 
-    **Reusable Components** can be used within loops to repeat a set of steps. A **Start/End Loop** block may be used to execute the first iteration and first sub-iteration repeatedly. While a **Start/End Param** block may be used when iterating through a datasheet.
+    > See [User Intent](../home/userIntent.md) for an overview of Project and Shared User Intent, and how to create and execute them.
+
+    **User Intents** can be used within loops to repeat a set of steps. A **Start/End Loop** block may be used to execute the first iteration and first sub-iteration repeatedly. While a **Start/End Param** block may be used when iterating through a datasheet.
     
-    The following image shows a sample reusable component named AttemptLogin with a corresponding datasheet.
+    The following image shows a sample User Intent named AttemptLogin with a corresponding datasheet.
     
     ![loopedcomponents1](/img/Things/LoopedComponents1.png "loopedcomponents1")
 
@@ -83,19 +87,19 @@
 
         **Looping without a Test Datasheet**
 
-        * Use the **Start Loop** and **End Loop:@n** conditions to repeat a reusable component **n** number of times.
+        * Use the **Start Loop** and **End Loop:@n** conditions to repeat a User Intent **n** number of times.
 
         ![loopedcomponents2](/img/Things/LoopedComponents2.png "loopedcomponents2")
 
-        * In the above image, the reusable component will be executed 100 times. The data row labeled Iteration 1 and SubIteration 1 will be used each time.
+        * In the above image, the User Intent will be executed 100 times. The data row labeled Iteration 1 and SubIteration 1 will be used each time.
     
     === "**With Data**"
 
-        * Iterate dynamically with a reusable component that uses data from a datasheet by using the **Start Param** and **End Param** conditions.
+        * Iterate dynamically with a User Intent that uses data from a datasheet by using the **Start Param** and **End Param** conditions.
         
         ![loopedcomponents3](/img/Things/LoopedComponents3.png "loopedcomponents3")
         
-        * For the above image, the reusable component will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the datasheet.
+        * For the above image, the User Intent will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the datasheet.
 
         * Specify an index with the **End Param** condition to terminate the loop at a specific data row.
 

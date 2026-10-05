@@ -63,7 +63,7 @@
 
     ## Rename and Refactor
 
-    The tool comes with an option to rename and refactor the object, test case, datasheet and reusable component names.
+    The tool comes with an option to rename and refactor the object, test case, datasheet and user intent names.
 
     Consider the example, given below,
 
@@ -81,7 +81,7 @@
 
     ![rename3](/img/Things/RenameandRefactor3.png "rename3")
 
-    * The same procedure can be applied to test cases, test datasheets and reusable components as well.
+    * The same procedure can be applied to test cases, test datasheets and user intents as well.
 
 ----------------------------------
 

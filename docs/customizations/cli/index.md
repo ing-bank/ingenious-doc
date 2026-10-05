@@ -314,7 +314,7 @@ The upgrade wizard walks through:
 2. **Object Repository Conversion** — converts XML ORs to YAML
 3. **Test Case Migration** — converts CSV test cases to YAML
 4. **Deprecated File Cleanup** — removes legacy XML stubs
-5. **Reusable Relocation** — moves mislocated reusables to `ReusableComponents/`
+5. **User Intent Relocation** — moves mislocated User Intents to `ReusableComponents/`
 
 
 ---------------------------

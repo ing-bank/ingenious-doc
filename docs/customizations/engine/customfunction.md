@@ -367,7 +367,7 @@ public class SampleScript extends General {
 
             //Pass the Scenario name,Test case name and sub-iteration index
             executeTestCase("testscenario1", "cancelTicket", 1);
-            Report.updateTestLog("Userdefined Action ", "inside reusable", Status.PASS);
+            Report.updateTestLog("Userdefined Action ", "inside user intent", Status.PASS);
 
 
             //If needed you can break the test case also by calling existing functions
@@ -595,10 +595,10 @@ public class SampleScript extends General {
     String scenarioName=userData.getScenario();
     ```
 
-    The **getCurrentScenario** function returns a string value containing the name of the current `Reusable` scenario that is in execution.
+    The **getCurrentScenario** function returns a string value containing the name of the current `User Intent` scenario that is in execution.
 
     ```{.java .copy}
-    String reusableScenarioName=userData.getCurrentScenario();
+    String userIntentScenarioName=userData.getCurrentScenario();
     ```
 
     The **getTestCase** function returns a string value containing the name of the current test case in execution.
@@ -607,7 +607,7 @@ public class SampleScript extends General {
     String testcaseName= userData.getTestCase();
     ```
 
-    The **getCurrentTestCase** function returns a string value containing the name of the current `Reusable` test case in execution.
+    The **getCurrentTestCase** function returns a string value containing the name of the current `User Intent` test case in execution.
 
     ```{.java .copy}
     String testcaseName= userData.getCurrentTestCase();
@@ -857,7 +857,7 @@ public class SampleScript extends General {
             if (locator.isVisible()) { // (31)!
 
                 executeTestCase("testscenario1", "cancelTicket", 1); //(32)!
-                Report.updateTestLog("Userdefined Action ", "inside reusable", Status.PASS);
+                Report.updateTestLog("Userdefined Action ", "inside user intent", Status.PASS);
                 executeMethod("StopBrowser"); //(33)!
             } else {
                 Report.updateTestLog("Userdefined Action ", "switch to origional", Status.DONE);
