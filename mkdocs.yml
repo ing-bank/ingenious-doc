@@ -228,6 +228,13 @@ nav:
         - Engine: customizations/engine/engine.md
         - Custom functions: customizations/engine/customfunction.md
     - Command Line Interface: customizations/cli/index.md
+ - AI & MCP:
+    - Premise: ai/index.md
+    - Prerequisites: ai/prerequisites.md
+    - INGenie (AI Assistant): ai/assistant.md
+    - MCP Server: ai/mcpserver.md
+    - Examples: ai/examples.md
+    - Best Practices: ai/bestpractices.md
  - Integrations :
     - BDD: integrations/bdd.md
     - Azure DevOps Test Plan: integrations/testplan.md
