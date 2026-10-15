@@ -40,16 +40,18 @@
       ![testplan2](/img/toolui/TestPlan2.JPG "testplan2"){ width="75%" }
   
 
-=== ":two: Reusable Components"
-       This is where the **Reusable** Test Scenarios and Test Cases (**logical grouping of test steps**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
+=== ":two: User Intent"
+       This is where the **User Intent** Test Scenarios and Test Cases (**logical grouping of test steps**, previously called **Reusable Components**) are created and organized. Every `Scenario` in the INGenious IDE , is a `Directory` in the backend and every `Test case` is a `.csv` file.
+
+      This panel is split into a **`Project`** tab (scoped to the current project) and a **`Shared`** tab (User Intents that can be executed from any project). See [User Intent](userIntent.md) for the full breakdown of both scopes, how to create and execute a User Intent, and how to move one between scopes.
 
       To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `ReusableComponents`
 
       ![reusables](/img/toolui/Reusables.JPG "reusables")
 
-      What differentiates the Scenarios and Test Cases in the Test Plan compared to those in the Reusable Component is the purpose:  
+      What differentiates the Scenarios and Test Cases in the Test Plan compared to those in the User Intent is the purpose:  
       * **Test Plan** is supposed contain Functional/Regression/E2E/Business Test Cases  
-      * **Reusable Component** is supposed contain logical test step groupings, to be used in multiple test cases in the test plan.
+      * **User Intent** is supposed contain logical test step groupings, to be used in multiple test cases in the test plan.
 
       **For projects created before version 3.0**, the tool makes use of the **`ReusableComponent.xml`** located in the Project Location to differentiate between the above 2 types. Here is the `ReusableComponent.xml` for the above example:
 
@@ -74,7 +76,7 @@
 
       ![reusable3](/img/toolui/Reusables3.JPG "reusables3"){ width="40%" }
 
-      If you select a Reusable Scenario or Reusable Test Case and **Right Click**, you will have some interesting and handy options to work with:
+      If you select a User Intent Scenario or User Intent Test Case and **Right Click**, you will have some interesting and handy options to work with:
 
       ![reusable1](/img/toolui/Reusables2.JPG "reusables1"){ width="75%" }
 
@@ -86,14 +88,14 @@
 
       To make working simple, intuitive and easy, you can also use the **drag and drop** to create test steps.
 
-      In the following example, we can create the **Login** Reusable simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
+      In the following example, we can create the **Login** User Intent simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
 
       ![drag_drop1](/img/toolui/draganddrop1.gif "drag_drop1")
      
 
-      As a best practice, it is advisable to compose your test case **only with Reusables** and not have any loose (orphan) steps.
+      As a best practice, it is advisable to compose your test case **only with User Intents** and not have any loose (orphan) steps.
 
-      You can also drag and drop the Reusables to create test cases like this :
+      You can also drag and drop the User Intents to create test cases like this :
 
       ![drag_drop2](/img/toolui/draganddrop2.gif "drag_drop2")
 
@@ -105,6 +107,8 @@
       If you select a data cell and **Right Click**, you will have some interesting and handy options to work with :
 
       ![data3](/img/toolui/data3.JPG "data3"){ width="75%" }
+
+      The Test Data pane is split into a **`Project`** tab (data scoped to this project) and a **`Shared`** tab (data reusable across every project) — mirroring the User Intent tabs above. See [Test Data](testData.md) for how to promote a datasheet to Shared and how to reference it from a test step.
 
       **Set up Multiple Test Environments**
 

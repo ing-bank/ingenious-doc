@@ -20,6 +20,9 @@
     - Across **multiple test scenarios**   
     - Across **multiple environments**
 
+!!! note
+    Every Test Data Environment — Project or Shared — has its own Global Datasheet. Promoting an environment to Shared Test Data (see [Test Data](../home/testData.md#making-test-data-shared)) moves that environment's Global Datasheet along with its regular datasheets, making its Global Data IDs available to every project that references the Shared environment.
+
 ---
 
 ## How to Implement Global Data in INGenious
