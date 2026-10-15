@@ -3,18 +3,15 @@
 !!! note
     **User Intent** is the current name for what was previously called a **Reusable Component** (you may still see "Reusable"/"Reusable Component" used interchangeably in older material, menus, and file/folder names).
 
-!!! info
-    A **User Intent** is a self-contained, named group of test steps that represents a single discrete action a user performs in the application under test, such as `Login`, `Add to Cart`, or `Submit Form`. Instead of duplicating the same steps in every test case that needs them, you build the action once as a User Intent and **`Execute`** it from any number of other test cases.
+## What is a User Intent?
+
+A **User Intent** is a self-contained, named group of test steps that represents a single discrete action a user performs in the application under test, such as `Login`, `Add to Cart`, or `Submit Form`. Instead of duplicating the same steps in every test case that needs them, you build the action once as a User Intent and **`Execute`** it from any number of other test cases. It's also the label used for the panel in the Test Design pane where these are created and organized — see [Know the Framework](knowyourframework.md#test-design-pane) for where this fits among the other Test Design panels.
 
 !!! abstract "Key Benefits:"
     * **Eliminate duplication** – Author a user intent once and call it from as many test cases as needed.
     * **Centralized maintenance** – Update the User Intent once and every test case that executes it picks up the change automatically.
     * **Faster authoring** – Compose new test cases largely out of existing User Intents instead of raw steps.
     * **Cross-project reuse** – Promote a User Intent to **Shared** so it can be executed from any project opened in the same INGenious installation.
-
-## What is a User Intent?
-
-**User Intent** is simply the label used for the panel in the Test Design pane where these are created and organized — see [Know the Framework](knowyourframework.md#test-design-pane) for where this fits among the other Test Design panels.
 
 User Intent Scenarios and Test Cases follow the same structure as the Test Plan:
 
@@ -59,7 +56,7 @@ There are two scopes of User Intent:
 
     **For projects loaded in version 3.0**, the legacy `ReusableComponent.xml` is automatically migrated and reorganized into the `ReusableComponents` folder structure. The original file is preserved as a `.bak` file under `<ProjectName>`.
 
-    When a Project User Intent is used in a test step, it is referenced as **`[Project] Scenario:TestCase`**.
+    When a Project User Intent is used in a test step, the **Action** is `Scenario:TestCase` and the **Reference** is `[Project]`.
 
 * **Shared User Intent**
 
@@ -69,7 +66,7 @@ There are two scopes of User Intent:
 
     A manifest file tracks which projects currently reference each Shared User Intent. INGenious uses this list to warn you before a rename or delete affects other projects (see [Renaming and Deleting Shared User Intent](#renaming-and-deleting-shared-user-intent)).
 
-    When a Shared User Intent is used in a test step, it is referenced as **`[Shared] Scenario:TestCase`**.
+    When a Shared User Intent is used in a test step, the **Action** is `Scenario:TestCase` and the **Reference** is `[Shared]`.
 
 * User Intent Scenarios and Test Cases may share the same names across the Project and Shared scopes. However, names must remain unique within each individual scope.
 
@@ -77,7 +74,7 @@ There are two scopes of User Intent:
 
 There are a few ways to create a User Intent:
 
-* **Create User Intent** – Right-click a Test Case (or selection of steps) in the Test Plan and choose **Create User Intent**. In the dialog, choose the target scope (**Project User Intent** or **Shared User Intent**), pick or create the target **User Intent Scenario Name**, and give it a **User Intent Name**.
+* **Create User Intent** – Right-click a Test Case (or selection of steps) in the Test Plan and choose **Create User Intent**. In the dialog, choose the target scope (**Project** or **Shared**), pick or create the target **Scenario Name**, and give it a **Test Case Name**.
 * **Make As Project User Intent / Make As Shared User Intent** – Right-click an existing Test Plan test case and promote it directly into either scope.
 * **Convert to Automation (API Workbench)** – When converting an API request into an automated artifact, choose **User Intent** instead of **Test Case** as the target type.
 * **Import Collections** – When importing a Postman or Bruno collection, choose **User Intent** instead of **Test Case** as the target type for the imported requests. See [Import Postman and Bruno Collections](../api/importCollections.md).

@@ -1,7 +1,7 @@
 # **Test Data**
 
 !!! info
-    **Test Data** is how INGenious drives data-driven testing: instead of hardcoding values into test steps, you store them in datasheets and reference them from your test cases. Every project gets its own Test Data, and a datasheet (or an entire environment) can be promoted to **Shared Test Data** so it can be reused by any other project opened in the same INGenious installation — the same **Project** / **Shared** scoping already used for [User Intent](knowyourframework.md#test-design-pane) and the Object Repositories.
+    Every project maintains its own test data. A datasheet, or even an entire environment, can be promoted to Shared Test Data, making it available for reuse across any project within the same INGenious installation. This follows the same Project and Shared scoping model used by User Intent and Object Repositories.
 
 !!! abstract "Key Benefits:"
     * **Data-driven test cases** – Keep values out of your steps and drive the same test case with different rows of data.
@@ -14,10 +14,9 @@
 Test Data is organized as follows:
 
     ```
-    ├── TestData
-    │   ├── Default (Environment)
-    │   │   ├── Sheet1.csv
-    │   │   └── Sheet2.csv
+    ├── TestData (Default)
+    │   ├── Sheet1.csv
+    │   └── Sheet2.csv
     │   └── QA (Environment)
     │       ├── Sheet1.csv
     │       └── Sheet2.csv
