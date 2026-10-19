@@ -54,6 +54,101 @@ public class SampleScript extends General {
 }
 ```
 
+----------------------
+
+### `@Args` — optional input grammar for IDE/AI assistance
+
+!!! info "For custom action authors"
+
+    This is an optional, additive annotation for authors of custom actions/plugins. It has no effect on execution — it only describes the shape of a method's `Input`/`Condition` values so the IDE can offer better auto-suggestion and validation, and so AI-assisted step authoring understands how to fill them in.
+
+Pair `@Args` with `@Action` to declare the expected **input type** (and, if applicable, **condition type**) of your custom method:
+
+```{.java .copy}
+import com.ing.ingenious.api.annotation.Args;
+import com.ing.ingenious.api.types.ArgType;
+import com.ing.ingenious.api.types.ConditionKind;
+
+@Action(object = ObjectType.BROWSER, desc = "Enters text into a field", input = InputType.YES)
+@Args(
+    input = ArgType.TEXT,
+    inputExample = "@Hello World",
+    condition = ConditionKind.NONE,
+    help = "Enters the given text into the located element."
+)
+public void customfunction() {
+    // ...
+}
+```
+
+`@Args` fields:
+
+|Field|Default|Description|
+|---|---|---|
+|`input()`|`ArgType.TEXT`|Grammar of the primary input value|
+|`inputExample()`|—|Canonical example input, e.g. `@200`|
+|`inputAllowsData()`|`true`|Whether the input may be a data-driven reference (`Sheet:Column`, `%var%`, `=function`). Set to `false` to force a literal only|
+|`secondObject()`|`ArgType.TEXT`|Grammar of the second object value, for two-object actions|
+|`condition()`|`ConditionKind.NONE`|Semantic category of the condition field|
+|`conditionValues()`|—|Allowed condition values when `condition()` is `ENUM`|
+|`conditionExample()`|—|Canonical example condition, e.g. `#PetStore`|
+|`help()`|—|One-line human hint surfaced in IDE tooltips and `action_info`|
+|`inputHelp()`|—|Field-specific ghost text for the **Input** column when the cell is empty. Falls back to the `input()` type label plus `inputExample()` when blank|
+|`conditionHelp()`|—|Field-specific ghost text for the **Condition** column when the cell is empty. Falls back to a hint derived from `condition()` / `conditionExample()` when blank|
+
+#### `ArgType` values
+
+|Value|Meaning|Example|
+|---|---|---|
+|`TEXT`|text|`@value`|
+|`URL`|URL|`@https://example.com`|
+|`HTTP_STATUS`|HTTP status code|`@200`|
+|`INTEGER`|integer|`@10`|
+|`NUMBER`|number|`@10.5`|
+|`BOOLEAN`|boolean (true/false)|`@true`|
+|`JSONPATH`|JSONPath|`@$.store.book[0].title`|
+|`XPATH`|XPath|`@//div[@id='x']`|
+|`CSS_SELECTOR`|CSS selector|`@#id .class`|
+|`LOCATOR`|locator|`role=button[name="Login"]`|
+|`SQL`|SQL statement (multi-line body)|`@SELECT * FROM users`|
+|`JSON_BODY`|JSON request body (multi-line body)|`{ "key": "{Sheet:Column}" }`|
+|`XML_BODY`|XML request body (multi-line body)|`<root/>`|
+|`HEADER_KV`|header (key=value)|`@Content-Type=application/json`|
+|`TOPIC`|topic name|`@orders`|
+|`PARTITION`|partition|`@0`|
+|`TIMEOUT_MS`|timeout in ms|`@5000`|
+|`DURATION`|duration|`@5000`|
+|`FILE_PATH`|file path|`@/tmp/data.csv`|
+|`REGEX`|regular expression|`@[A-Z]+`|
+|`ENUM`|one of a fixed set|—|
+|`DATA_REF`|`Sheet:Column` data reference|`LoginData:Username`|
+|`ALIAS_DB`|`#dbAlias`|`#PostgresMain`|
+|`ALIAS_API`|`#apiAlias`|`#PetStore`|
+|`ALIAS_CONTEXT`|`#contextAlias`|`#mobileCtx`|
+|`ALIAS_KAFKA_PRODUCER`|`#producerAlias`|`#OrdersProducer`|
+|`ALIAS_KAFKA_CONSUMER`|`#consumerAlias`|`#OrdersConsumer`|
+|`GLOBAL_ID`|GlobalData id|`#test`|
+|`DIRECTIVE`|engine directive|`@Enter`|
+
+!!! note
+    `SQL`, `JSON_BODY` and `XML_BODY` are flagged as **body** types, meaning the IDE treats their value as a multi-line block rather than a single-line field.
+
+#### `ConditionKind` values
+
+|Value|Meaning|
+|---|---|
+|`NONE`|Action takes no condition|
+|`PARAM`|Parameter markers (`Start Param` / `End Param`)|
+|`LOOP`|Loop markers (`Start Loop` / `End Loop:@n`)|
+|`ALIAS_API`|An `#apiAlias` selecting the API context|
+|`ALIAS_CONTEXT`|A `#contextAlias` selecting a context|
+|`ALIAS_KAFKA_PRODUCER`|A `#producerAlias` selecting the Kafka producer config|
+|`ALIAS_KAFKA_CONSUMER`|A `#consumerAlias` selecting the Kafka consumer config|
+|`ENUM`|One of a fixed set of values supplied by `conditionValues()`|
+|`VIEWPORT`|Viewport target (`screen` / `viewport`)|
+|`GLOBAL_OBJECT`|`GlobalObject` marker|
+|`TEXT`|Free text|
+
 ---------------------- 
 
 ??? example "Reporting" 
