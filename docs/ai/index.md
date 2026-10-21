@@ -32,9 +32,9 @@ INGenious implements an MCP server so that **any** MCP-capable assistant becomes
 
 |<div style="color:#349651;width:200px">Surface</div>|<div style="color:#AB0066;width:420px">What it is</div>|
 |-----------------------------------|-------------------------------------------|
-|[`INGenie`](#)|The AI assistant built into the INGenious Studio. A chat panel that calls the MCP tools **in-process** — no server to start.|
-|[`ingenious ai`](#)|INGenie as a conversational REPL in your terminal, over the same tool set.|
-|[`ingenious server mcp`](#)|A standalone MCP server on stdio, for external clients such as VS Code, Claude Desktop or Cursor.|
+|`INGenie`|The AI assistant built into the INGenious Studio. A chat panel that calls the MCP tools **in-process** — no server to start.|
+|`ingenious ai`|INGenie as a conversational REPL in your terminal, over the same tool set.|
+|`ingenious server mcp`|A standalone MCP server on stdio, for external clients such as VS Code, Claude Desktop or Cursor.|
 
 !!! tip "Same engine, same tools"
     All three surfaces share one implementation. Whatever INGenie can do, an external MCP client can do as well — and vice versa.

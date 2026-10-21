@@ -20,8 +20,8 @@
 
 |<div style="color:#349651;width:200px">Option</div>|<div style="color:#AB0066;width:420px">Description</div>|
 |-----------------------------------|-------------------------------------------|
-|[`-p, --project`](#)|Default project — name or absolute path. Optional; tools accept a `project` argument too.|
-|[`-v, --verbose`](#)|Diagnostic logging **to stderr**.|
+|`-p, --project`|Default project — name or absolute path. Optional; tools accept a `project` argument too.|
+|`-v, --verbose`|Diagnostic logging **to stderr**.|
 
 !!! warning "stdout belongs to the protocol"
     The server writes nothing but JSON-RPC frames to stdout — all diagnostics go to stderr. Don't pipe anything else into the process' stdout, and don't wrap the launcher in a script that prints a banner.
@@ -43,12 +43,12 @@ ingenious server status --port 8090
 
     |<div style="color:#349651;width:220px">Setting</div>|<div style="color:#AB0066;width:140px">Default</div>|<div style="color:#AB0066;width:260px">Description</div>|
     |------------------------|------------|-------------------------|
-    |[`ingenious.mcp.autoStart`](#)|`true`|Start the MCP server on activation.|
-    |[`ingenious.cliPath`](#)|`ingenious`|Path to the launcher.|
-    |[`ingenious.javaHome`](#)|*(empty)*|Optional `JAVA_HOME` override.|
-    |[`ingenious.defaultBrowser`](#)|`Chromium`|Browser used for runs.|
-    |[`ingenious.headless`](#)|`false`|Run headless by default.|
-    |[`ingenious.report.openOnRunEnd`](#)|`true`|Open the report when a run ends.|
+    |`ingenious.mcp.autoStart`|`true`|Start the MCP server on activation.|
+    |`ingenious.cliPath`|`ingenious`|Path to the launcher.|
+    |`ingenious.javaHome`|*(empty)*|Optional `JAVA_HOME` override.|
+    |`ingenious.defaultBrowser`|`Chromium`|Browser used for runs.|
+    |`ingenious.headless`|`false`|Run headless by default.|
+    |`ingenious.report.openOnRunEnd`|`true`|Open the report when a run ends.|
 
     Use **INGenious: Restart MCP Server** from the Command Palette after changing the launcher or rebuilding the engine.
 
@@ -93,8 +93,8 @@ ingenious server status --port 8090
 
 |<div style="color:#349651;width:260px">Variable / property</div>|<div style="color:#AB0066;width:140px">Default</div>|<div style="color:#AB0066;width:260px">Purpose</div>|
 |--------------------------|------------|-----------------------|
-|[`INGENIOUS_MCP_IDLE_REAP_MS`](#)|`900000`|Idle timeout after which orphaned runs and browser sessions are reaped. `0` disables reaping.|
-|[`-Dingenious.mcp.idleReapMs`](#)|`900000`|System-property equivalent of the above.|
+|`INGENIOUS_MCP_IDLE_REAP_MS`|`900000`|Idle timeout after which orphaned runs and browser sessions are reaped. `0` disables reaping.|
+|`-Dingenious.mcp.idleReapMs`|`900000`|System-property equivalent of the above.|
 
 ## Tool catalog
 
@@ -129,13 +129,13 @@ Read-only context the model can pull on demand, under the `ingenious://` scheme:
 
 |<div style="color:#349651;width:300px">URI</div>|<div style="color:#AB0066;width:340px">Content</div>|
 |----------------------------|---------------------------|
-|[`ingenious://docs/conventions`](#)|**Authoritative** authoring reference — step grammar, prefixes, naming.|
-|[`ingenious://docs/getting-started`](#)|Workflow primer.|
-|[`ingenious://docs/step-schema`](#)|Step field layout.|
-|[`ingenious://docs/best-practices`](#)|Locator, wait and assertion conventions.|
-|[`ingenious://catalog/actions`](#)|Full action catalog with categories.|
-|[`ingenious://catalog/archetypes`](#)|Test archetype templates.|
-|[`ingenious://project/<name>/summary`](#)|Summary of the default project, when one is set.|
+|`ingenious://docs/conventions`|**Authoritative** authoring reference — step grammar, prefixes, naming.|
+|`ingenious://docs/getting-started`|Workflow primer.|
+|`ingenious://docs/step-schema`|Step field layout.|
+|`ingenious://docs/best-practices`|Locator, wait and assertion conventions.|
+|`ingenious://catalog/actions`|Full action catalog with categories.|
+|`ingenious://catalog/archetypes`|Test archetype templates.|
+|`ingenious://project/<name>/summary`|Summary of the default project, when one is set.|
 
 ## Prompts
 
@@ -143,20 +143,20 @@ The server also publishes ready-made prompt templates. In most clients they show
 
 |<div style="color:#349651;width:240px">Prompt</div>|<div style="color:#AB0066;width:400px">Purpose</div>|
 |--------------------------|------------------------------|
-|[`create_test_case`](#)|Build a test case from a plain-English description.|
-|[`convert_manual_steps`](#)|Turn a numbered manual test into INGenious steps.|
-|[`record_browser_test`](#)|Author a browser test hands-free from a live session.|
-|[`discover_browser_flow`](#)|Deterministically discover a flow and generate the Web OR objects.|
-|[`author_by_archetype`](#)|Generate from a template, validate and run.|
-|[`make_data_driven`](#) / [`build_data_driven_suite`](#)|Externalise hard-coded values into data sheets.|
-|[`extract_reusable`](#)|Find repeated sequences and extract reusable components.|
-|[`harden_test`](#)|Replace brittle locators and sleeps, add waits and assertions.|
-|[`review_test_case`](#) / [`debug_test`](#)|Best-practice review and step-by-step risk analysis.|
-|[`explain_failure`](#) / [`triage_run`](#)|Diagnose failures and regressions, propose fixes.|
-|[`run_and_summarize`](#)|Run a target and summarise the outcome.|
-|[`suggest_locator`](#)|Propose a stable Playwright locator.|
-|[`author_load_test`](#)|Export, validate and run a k6 load test.|
-|[`bootstrap_project`](#)|Create a project seeded with sample tests.|
+|`create_test_case`|Build a test case from a plain-English description.|
+|`convert_manual_steps`|Turn a numbered manual test into INGenious steps.|
+|`record_browser_test`|Author a browser test hands-free from a live session.|
+|`discover_browser_flow`|Deterministically discover a flow and generate the Web OR objects.|
+|`author_by_archetype`|Generate from a template, validate and run.|
+|`make_data_driven` / `build_data_driven_suite`|Externalise hard-coded values into data sheets.|
+|`extract_reusable`|Find repeated sequences and extract reusable components.|
+|`harden_test`|Replace brittle locators and sleeps, add waits and assertions.|
+|`review_test_case` / `debug_test`|Best-practice review and step-by-step risk analysis.|
+|`explain_failure` / `triage_run`|Diagnose failures and regressions, propose fixes.|
+|`run_and_summarize`|Run a target and summarise the outcome.|
+|`suggest_locator`|Propose a stable Playwright locator.|
+|`author_load_test`|Export, validate and run a k6 load test.|
+|`bootstrap_project`|Create a project seeded with sample tests.|
 
 ## Assistants that are not MCP clients
 
@@ -164,9 +164,9 @@ If your tool cannot speak MCP, ship it the conventions manually. The distributab
 
 |<div style="color:#349651;width:260px">File</div>|<div style="color:#AB0066;width:380px">Use it for</div>|
 |--------------------------|-------------------------------|
-|[`INGenious.skill.md`](#)|Drop into a skills folder, e.g. `.github/skills/ingenious-authoring/SKILL.md`.|
-|[`copilot-instructions.md`](#)|Append to your repository's `.github/copilot-instructions.md`.|
-|[`skills/`](#)|Task-specific, tool-first skills: browser tests, API tests, plugin creation, customization detection.|
+|`INGenious.skill.md`|Drop into a skills folder, e.g. `.github/skills/ingenious-authoring/SKILL.md`.|
+|`copilot-instructions.md`|Append to your repository's `.github/copilot-instructions.md`.|
+|`skills/`|Task-specific, tool-first skills: browser tests, API tests, plugin creation, customization detection.|
 
 !!! note "Single source of truth"
     These files mirror `ConventionCatalog` in the engine. An MCP-connected client receives the same content automatically — you only need the copies for tools outside the protocol.

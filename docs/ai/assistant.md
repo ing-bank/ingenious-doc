@@ -18,12 +18,12 @@ The panel offers:
 
 |<div style="color:#349651;width:180px">Control</div>|<div style="color:#AB0066;width:440px">Purpose</div>|
 |---------------------------|----------------------------------------------|
-|[`Model selector`](#)|Switch the provider/model for the current session.|
-|[`Agent mode`](#)|Let INGenie chain tool calls on its own instead of answering a single question.|
-|[`Attended mode`](#)|Pause at checkpoints and ask you before applying changes. Turn it off for autonomous runs.|
-|[`Prompt library`](#)|One-click starter prompts (create test case, convert manual steps, explain failure, suggest locator, review test case, …).|
-|[`History`](#)|Reload a previous conversation. Conversations are stored as JSON under `~/.ingenious/aichat/`.|
-|[`Connection bulb`](#)|Shows whether the provider is reachable and signed in.|
+|`Model selector`|Switch the provider/model for the current session.|
+|`Agent mode`|Let INGenie chain tool calls on its own instead of answering a single question.|
+|`Attended mode`|Pause at checkpoints and ask you before applying changes. Turn it off for autonomous runs.|
+|`Prompt library`|One-click starter prompts (create test case, convert manual steps, explain failure, suggest locator, review test case, …).|
+|`History`|Reload a previous conversation. Conversations are stored as JSON under `~/.ingenious/aichat/`.|
+|`Connection bulb`|Shows whether the provider is reachable and signed in.|
 
 !!! tip "In-process, not over a socket"
     In the Studio, INGenie calls the tool facade directly inside the IDE process. There is no MCP server to start, no port to open, and the tool behaviour is identical to the stdio server.
@@ -38,27 +38,27 @@ ingenious ai --project Demo
 
 |<div style="color:#349651;width:200px">Option</div>|<div style="color:#AB0066;width:420px">Description</div>|
 |-----------------------------------|-------------------------------------------|
-|[`-p, --project`](#)|Project to work with (name or absolute path).|
-|[`--mode`](#)|`attended` (pause at checkpoints) or `unattended` (work autonomously). Skips the startup prompt.|
-|[`--no-banner`](#)|Suppress the welcome banner — handy in CI logs.|
+|`-p, --project`|Project to work with (name or absolute path).|
+|`--mode`|`attended` (pause at checkpoints) or `unattended` (work autonomously). Skips the startup prompt.|
+|`--no-banner`|Suppress the welcome banner — handy in CI logs.|
 
 ### Slash commands
 
 |<div style="color:#349651;width:160px">Command</div>|<div style="color:#AB0066;width:440px">Description</div>|
 |-------------------------|----------------------------------------------|
-|[`/help`](#)|Overview of everything below.|
-|[`/login`](#)|Sign in with GitHub (device flow).|
-|[`/project`](#)|Switch the active project.|
-|[`/tools`](#)|List the available INGenious tools.|
-|[`/workflows`](#)|Deterministic workflows that need no model at all.|
-|[`/plan`](#) / [`/approve`](#)|Inspect the pending plan, then execute it.|
-|[`/mode`](#)|Toggle attended / unattended.|
-|[`/model`](#)|Switch provider, model or base URL — e.g. `/model provider openai`, `/model url https://…`.|
-|[`/context`](#) / [`/history`](#)|Session memory and recent turns.|
-|[`/undo`](#) / [`/redo`](#)|Roll a change back or forward.|
-|[`/status`](#) / [`/config`](#)|Provider, project, pending plan, undo depth.|
-|[`/clear`](#)|Start a fresh conversation.|
-|[`/exit`](#)|Quit.|
+|`/help`|Overview of everything below.|
+|`/login`|Sign in with GitHub (device flow).|
+|`/project`|Switch the active project.|
+|`/tools`|List the available INGenious tools.|
+|`/workflows`|Deterministic workflows that need no model at all.|
+|`/plan` / `/approve`|Inspect the pending plan, then execute it.|
+|`/mode`|Toggle attended / unattended.|
+|`/model`|Switch provider, model or base URL — e.g. `/model provider openai`, `/model url https://…`.|
+|`/context` / `/history`|Session memory and recent turns.|
+|`/undo` / `/redo`|Roll a change back or forward.|
+|`/status` / `/config`|Provider, project, pending plan, undo depth.|
+|`/clear`|Start a fresh conversation.|
+|`/exit`|Quit.|
 
 ### Example session
 

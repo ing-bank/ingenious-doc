@@ -8,9 +8,9 @@
 
 |<div style="color:#349651;width:200px">Requirement</div>|<div style="color:#AB0066;width:420px">Notes</div>|
 |-----------------------------------|-------------------------------------------|
-|[`Java 17+`](#)|Same requirement as the rest of INGenious. Verify with `java -version`.|
-|[`ingenious launcher`](#)|`ingenious` / `ingenious.bat` / `ingenious.command` must be on your `PATH`, or referenced by an absolute path.|
-|[`A project`](#)|The tools operate on an INGenious project folder. Create one with the IDE or `ingenious project create`.|
+|`Java 17+`|Same requirement as the rest of INGenious. Verify with `java -version`.|
+|`ingenious launcher`|`ingenious` / `ingenious.bat` / `ingenious.command` must be on your `PATH`, or referenced by an absolute path.|
+|`A project`|The tools operate on an INGenious project folder. Create one with the IDE or `ingenious project create`.|
 
 ## 2. Model provider
 
@@ -41,9 +41,9 @@ The MCP **server** itself needs no model — it only exposes tools. The model is
 
     |<div style="color:#349651;width:140px">provider</div>|<div style="color:#AB0066;width:420px">Authentication</div>|
     |-------------------|---------------------------------------|
-    |[`copilot`](#) *(default)*|GitHub **device flow**. Run `/login` in the REPL, or sign in from the INGenie panel. A browser opens, you paste the code — no token to manage by hand.|
+    |`copilot` *(default)*|GitHub **device flow**. Run `/login` in the REPL, or sign in from the INGenie panel. A browser opens, you paste the code — no token to manage by hand.|
     |[`copilot-sdk`](#setting-up-the-copilot-sdk-provider)|Reuses the **GitHub Copilot CLI** login on your machine (`copilot auth login`). The INGenious MCP server is exposed to it automatically — see [setup below](#setting-up-the-copilot-sdk-provider).|
-    |[`openai`](#)|Any OpenAI-compatible chat-completions endpoint (OpenAI, Azure OpenAI, a local gateway). Set `baseUrl`, `model` and put the key in the environment variable named by `apiKeyEnv`.|
+    |`openai`|Any OpenAI-compatible chat-completions endpoint (OpenAI, Azure OpenAI, a local gateway). Set `baseUrl`, `model` and put the key in the environment variable named by `apiKeyEnv`.|
 
 ### Setting up the `copilot-sdk` provider
 
@@ -132,10 +132,10 @@ Only needed by the corresponding tool families:
 
 |<div style="color:#349651;width:200px">Runtime</div>|<div style="color:#AB0066;width:420px">Needed for</div>|
 |-----------------------------------|-------------------------------------------|
-|[`Playwright browsers`](#)|Browser discovery sessions and browser test execution. Downloaded on first use.|
-|[`Appium`](#)|Mobile test execution.|
-|[`k6`](#)|Performance tooling (`ingenious_perf_*`).|
-|[`Node.js`](#)|The GitHub Copilot CLI (`copilot-sdk` provider, needs Node 22+), and building the VS Code extension from source.|
+|`Playwright browsers`|Browser discovery sessions and browser test execution. Downloaded on first use.|
+|`Appium`|Mobile test execution.|
+|`k6`|Performance tooling (`ingenious_perf_*`).|
+|`Node.js`|The GitHub Copilot CLI (`copilot-sdk` provider, needs Node 22+), and building the VS Code extension from source.|
 
 !!! tip "One command to check them all"
     Ask INGenie to *"run doctor"* — or call the `ingenious_doctor` tool / `ingenious doctor` command. It reports the detected JDK, Playwright browsers, drivers and k6 in one go.
