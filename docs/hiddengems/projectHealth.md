@@ -24,7 +24,7 @@ The analysis runs instantly against the project in memory and opens in a modal r
 
 ## Reading the Report
 
-The report is laid out in four sections.
+The report is laid out in five sections.
 
 ### :one: Grade and summary
 
