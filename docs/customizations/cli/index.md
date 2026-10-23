@@ -490,6 +490,212 @@ Compare two runs:
 
 ---------------------- 
 
+### Import Commands
+
+Use `ingenious import` to pull external assets into a project and convert them into test cases or User Intents. You can append [`--help`](#) to the command to display possible commands.
+
+!!! info
+    The same Postman and Bruno importers are also available from the IDE through **Tools → Import Collection**. See [Import Postman and Bruno Collections](/api/importCollections) for the wizard-driven workflow.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|[`curl`](#)          |Import a single curl command as an API test case
+|[`postman`](#)       |Import a Postman collection as test cases or User Intents
+|[`bruno`](#)         |Import a Bruno collection (file or directory) as test cases or User Intents
+|`curl`          |Import a single curl command as an API test case
+|`postman`      |Import a Postman collection as test cases or User Intents
+|`bruno`       |Import a Bruno collection (file or directory) as test cases or User Intents
+|`playwright`    |Import a Playwright recording as a test case
+
+#### Import a curl command
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious import curl "curl -X POST https://api.example.com/login -d '{\"user\":\"demo\"}'" --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command import curl "curl -X POST https://api.example.com/login -d '{\"user\":\"demo\"}'" --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, `-p` |Project path
+|`--scenario`|Target scenario name (default: `Imported`)
+|`--testcase` |Target test case name (default: derived from the request)
+|`--reusable` |Create the import as a User Intent instead of a test case
+
+#### Import a Postman or Bruno collection
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious import postman "C:\Collections\Orders.postman_collection.json" --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command import postman "/Collections/Orders.postman_collection.json" --project "Projects/Demo"
+    ```
+
+Bruno accepts either a single `.bru` file or the collection root directory:
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious import bruno "C:\Collections\Orders" --project "Projects\Demo" --reusable
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command import bruno "/Collections/Orders" --project "Projects/Demo" --reusable
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, [`-p`](#) |Project path
+|`--scenario` |Target scenario name (default: `Postman` or `Bruno`)
+|`--reusable` |Import as User Intents
+|`--conflict` |Behaviour on name conflict &mdash; `skip`, `overwrite` or `rename` (default: `rename`)
+
+#### Import a Playwright recording
+
+Imports the Java source emitted by `playwright codegen` (a `.java` or `.txt` file) and converts it into an INGenious test case.
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious import playwright "C:\Recordings\Checkout.java" --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command import playwright "/Recordings/Checkout.java" --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, [`-p`](#) |Project path
+|`--scenario` |Target scenario name (default: derived from the file name)
+|`--testcase` |Test case name (default: derived from the file name)
+
+---------------------- 
+
+### API Collection Commands
+
+Use [`ingenious apicollection`](#) for a collection-first API workflow &mdash; **import → run → to-testcase**. Collections let you ingest and execute API requests before deciding which of them should become permanent test cases.
+
+!!! info
+    Collections, environments and run history are persisted inside the project under `api/collections`, `api/environments` and `api/history` as `.json` files.
+
+|<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
+|-------------------------------|---------------------------
+|`import`        |Ingest a Postman/Bruno file or a curl command as a collection
+|`list`          |List persisted API collections
+|`show`          |Show a collection's requests
+|`env-set`      |Create or update an API environment
+|`run`           |Execute all requests against an environment
+|`request-run`   |Execute a single named request
+|`to-testcase`  |Convert a collection into an INGenious test case
+
+#### Importing and inspecting a collection
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious apicollection import Orders --file "C:\Collections\Orders.postman_collection.json" --project "Projects\Demo"
+    ingenious apicollection list --project "Projects\Demo"
+    ingenious apicollection show Orders --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command apicollection import Orders --file "/Collections/Orders.postman_collection.json" --project "Projects/Demo"
+    ./ingenious.command apicollection list --project "Projects/Demo"
+    ./ingenious.command apicollection show Orders --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, [`-p`](#) |Project path
+|`--format` |Source format &mdash; `postman`, `bruno` or `curl` (default: auto-detected)
+|`--file` |Postman or Bruno collection file
+|`--curl` |A curl command string, used when the format is `curl`
+
+#### Defining an environment
+
+Environments supply the `{{variable}}` values used while running a collection. `--base-url` is stored as the variable `baseUrl`, and `--var` can be repeated for additional values.
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious apicollection env-set QA --base-url "https://qa.example.com" --var "token=abc123" --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command apicollection env-set QA --base-url "https://qa.example.com" --var "token=abc123" --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, `-p` |Project path
+|`--base-url` |Base URL, stored as the variable `baseUrl`
+|`--var`, `-v` |Extra variable as `key=value` (repeatable)
+
+#### Running a collection
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious apicollection run Orders --env QA --project "Projects\Demo"
+    ingenious apicollection request-run Orders "Create Order" --env QA --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command apicollection run Orders --env QA --project "Projects/Demo"
+    ./ingenious.command apicollection request-run Orders "Create Order" --env QA --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, `-p` |Project path
+|`--env` |Environment name used to resolve `{{vars}}`
+
+#### Converting a collection into a test case
+
+=== "Windows"
+
+    ```{ .powershell .copy }
+    ingenious apicollection to-testcase Orders --scenario "API" --testcase "OrderFlow" --env QA --project "Projects\Demo"
+    ```
+
+=== "Mac/Linux"
+
+    ```{ .shell .copy }
+    ./ingenious.command apicollection to-testcase Orders --scenario "API" --testcase "OrderFlow" --env QA --project "Projects/Demo"
+    ```
+
+|Option|Description|
+|--------|-------|
+|`--project`, [`-p`](#) |Project path
+|`--scenario` |Target scenario (default: the collection name)
+|`--testcase` |Test case name (default: the collection name)
+|`--env` |Environment name used to seed assertions from a run
+|`--reusable` |Create the result under a User Intent scenario
+
+---------------------- 
+
 <!-- **Server Commands**
 
 Start the REST API server:

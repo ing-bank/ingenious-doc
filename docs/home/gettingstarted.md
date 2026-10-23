@@ -50,6 +50,16 @@
 
 -----------------------
 
+## **Guided Starter Tour**
+
+The first time you launch INGenious, a **guided Starter Tour** automatically walks you through the IDE: Test Design (Test Plan, Test Steps Canvas, Test Data, User Intents, Object Repository, Object Properties), Test Execution (Test Lab, Test Set Canvas, quick settings panels, Test Plan Tree), Dashboard & Reports, API Workbench, and the Toolbar & Navigation — before pointing you to `Projects/Tutorial` and **Help → Help** for the full documentation.
+
+![Guided Starter Tour overlay](/img/tour/tour-overlay.png "Guided Starter Tour overlay")
+
+Replay the tour at any time from **Help** :material-arrow-right: **Start Tour**.
+
+-----------------------
+
 ## **Quick Start with Recording** - <span style="color:#FF6200">**Live Playwright Recorder (CodeGen)**</span>  
 
 As you interact with the browser, each action is captured and added to the Test Case editor in real time.

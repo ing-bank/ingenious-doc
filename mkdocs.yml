@@ -132,6 +132,8 @@ nav:
     - Actions: 
         - General Actions: databaseTesting/dbActions.md
         - Data Storage: databaseTesting/storeActions.md
+ - Performance Studio:
+    - Create Your First Performance Test: performancestudio/index.md
  - SAP Testing:
     - Create Your First SAP Test: sapTesting/sap.md
     - Import SAP Scripting Recording: sapTesting/importsaprecording-java.md
@@ -251,6 +253,7 @@ nav:
     - Reporting: hiddengems/playwrightreporting.md
     - Shortcuts: hiddengems/shortcuts.md
     - Additional features: hiddengems/additionalfeatures.md
+    - Project Health: hiddengems/projectHealth.md
     - String Operations: hiddengems/stringOperations.md
     - Global Datasheets: hiddengems/globalDataSheet.md
     - Tips: hiddengems/tips.md
