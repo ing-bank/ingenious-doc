@@ -492,7 +492,7 @@ Compare two runs:
 
 ### Import Commands
 
-Use [`ingenious import`](#) to pull external assets into a project and convert them into test cases or User Intents. You can append [`--help`](#) to the command to display possible commands.
+Use `ingenious import` to pull external assets into a project and convert them into test cases or User Intents. You can append [`--help`](#) to the command to display possible commands.
 
 !!! info
     The same Postman and Bruno importers are also available from the IDE through **Tools → Import Collection**. See [Import Postman and Bruno Collections](/api/importCollections) for the wizard-driven workflow.
