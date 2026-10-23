@@ -502,7 +502,10 @@ Use `ingenious import` to pull external assets into a project and convert them i
 |[`curl`](#)          |Import a single curl command as an API test case
 |[`postman`](#)       |Import a Postman collection as test cases or User Intents
 |[`bruno`](#)         |Import a Bruno collection (file or directory) as test cases or User Intents
-|[`playwright`](#)    |Import a Playwright recording as a test case
+|`curl`          |Import a single curl command as an API test case
+|`postman`      |Import a Postman collection as test cases or User Intents
+|`bruno`       |Import a Bruno collection (file or directory) as test cases or User Intents
+|`playwright`    |Import a Playwright recording as a test case
 
 #### Import a curl command
 
