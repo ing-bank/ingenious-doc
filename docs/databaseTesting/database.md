@@ -79,6 +79,9 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/produc
     2. Click the **Remove Property** button ![renmoveProperty](/img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
+!!! note "Properties reserved by the DB Workbench"
+    Connections created or edited in the [DB Workbench](dbWorkbench.md) are stored in this same configuration, so they appear here alongside manually created ones. In addition to the standard properties, the DB Workbench writes a `readOnly` property (`true` / `false`). When set to `true`, DML statements (`INSERT` / `UPDATE` / `DELETE` / `MERGE`) are blocked from being executed through the DB Workbench for that alias. This property only guards the Workbench—it does **not** restrict test execution at runtime.
+
 -----------------------------------        
 
 ## Additional Database Configuration Property
@@ -160,5 +163,5 @@ The list of **`Query`** steps is as follows :
 
 Make sure to check out the following topics :
 
-[Database Actions](dbActions.md){ .md-button } 
+[Database Actions](dbActions.md){ .md-button } [DB Workbench](dbWorkbench.md){ .md-button }
 

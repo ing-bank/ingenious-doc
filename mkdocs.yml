@@ -132,6 +132,7 @@ nav:
     - Actions: 
         - General Actions: databaseTesting/dbActions.md
         - Data Storage: databaseTesting/storeActions.md
+    - DB Workbench: databaseTesting/dbWorkbench.md
  - Performance Studio:
     - Create Your First Performance Test: performancestudio/index.md
  - SAP Testing:
