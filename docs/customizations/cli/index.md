@@ -690,7 +690,7 @@ Environments supply the `{{variable}}` values used while running a collection. `
 |--------|-------|
 |[`--project`](#), [`-p`](#) |Project path
 |`--scenario` |Target scenario (default: the collection name)
-|[`--testcase`](#) |Test case name (default: the collection name)
+|`--testcase` |Test case name (default: the collection name)
 |[`--env`](#) |Environment name used to seed assertions from a run
 |[`--reusable`](#) |Create the result under a User Intent scenario
 
