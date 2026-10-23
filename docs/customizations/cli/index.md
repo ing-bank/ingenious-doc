@@ -688,7 +688,7 @@ Environments supply the `{{variable}}` values used while running a collection. `
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
+|`--project`, [`-p`](#) |Project path
 |`--scenario` |Target scenario (default: the collection name)
 |`--testcase` |Test case name (default: the collection name)
 |[`--env`](#) |Environment name used to seed assertions from a run
