@@ -558,10 +558,10 @@ Bruno accepts either a single `.bru` file or the collection root directory:
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
-|[`--scenario`](#) |Target scenario name (default: `Postman` or `Bruno`)
-|[`--reusable`](#) |Import as User Intents
-|[`--conflict`](#) |Behaviour on name conflict &mdash; `skip`, `overwrite` or `rename` (default: `rename`)
+|`--project`, [`-p`](#) |Project path
+|`--scenario` |Target scenario name (default: `Postman` or `Bruno`)
+|`--reusable` |Import as User Intents
+|`--conflict` |Behaviour on name conflict &mdash; `skip`, `overwrite` or `rename` (default: `rename`)
 
 #### Import a Playwright recording
 
@@ -581,9 +581,9 @@ Imports the Java source emitted by `playwright codegen` (a `.java` or `.txt` fil
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
-|[`--scenario`](#) |Target scenario name (default: derived from the file name)
-|[`--testcase`](#) |Test case name (default: derived from the file name)
+|`--project`, [`-p`](#) |Project path
+|`--scenario` |Target scenario name (default: derived from the file name)
+|`--testcase` |Test case name (default: derived from the file name)
 
 ---------------------- 
 
@@ -596,13 +596,13 @@ Use [`ingenious apicollection`](#) for a collection-first API workflow &mdash; *
 
 |<div style="color:#349651;width:100px">Options</div>|<div style="color:#AB0066;width:400px">Output</div>
 |-------------------------------|---------------------------
-|[`import`](#)        |Ingest a Postman/Bruno file or a curl command as a collection
-|[`list`](#)          |List persisted API collections
-|[`show`](#)          |Show a collection's requests
-|[`env-set`](#)       |Create or update an API environment
-|[`run`](#)           |Execute all requests against an environment
-|[`request-run`](#)   |Execute a single named request
-|[`to-testcase`](#)   |Convert a collection into an INGenious test case
+|`import`        |Ingest a Postman/Bruno file or a curl command as a collection
+|`list`          |List persisted API collections
+|`show`          |Show a collection's requests
+|`env-set`      |Create or update an API environment
+|`run`           |Execute all requests against an environment
+|`request-run`   |Execute a single named request
+|`to-testcase`  |Convert a collection into an INGenious test case
 
 #### Importing and inspecting a collection
 
@@ -624,10 +624,10 @@ Use [`ingenious apicollection`](#) for a collection-first API workflow &mdash; *
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
-|[`--format`](#) |Source format &mdash; `postman`, `bruno` or `curl` (default: auto-detected)
-|[`--file`](#) |Postman or Bruno collection file
-|[`--curl`](#) |A curl command string, used when the format is `curl`
+|`--project`, [`-p`](#) |Project path
+|`--format` |Source format &mdash; `postman`, `bruno` or `curl` (default: auto-detected)
+|`--file` |Postman or Bruno collection file
+|`--curl` |A curl command string, used when the format is `curl`
 
 #### Defining an environment
 
@@ -647,9 +647,9 @@ Environments supply the `{{variable}}` values used while running a collection. `
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
-|[`--base-url`](#) |Base URL, stored as the variable `baseUrl`
-|[`--var`](#), [`-v`](#) |Extra variable as `key=value` (repeatable)
+|`--project`, `-p` |Project path
+|`--base-url` |Base URL, stored as the variable `baseUrl`
+|`--var`, `-v` |Extra variable as `key=value` (repeatable)
 
 #### Running a collection
 
@@ -669,8 +669,8 @@ Environments supply the `{{variable}}` values used while running a collection. `
 
 |Option|Description|
 |--------|-------|
-|[`--project`](#), [`-p`](#) |Project path
-|[`--env`](#) |Environment name used to resolve `{{vars}}`
+|`--project`, `-p` |Project path
+|`--env` |Environment name used to resolve `{{vars}}`
 
 #### Converting a collection into a test case
 
