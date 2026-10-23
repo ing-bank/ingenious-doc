@@ -524,7 +524,7 @@ Use `ingenious import` to pull external assets into a project and convert them i
 |Option|Description|
 |--------|-------|
 |[`--project`](#), [`-p`](#) |Project path
-|[`--scenario`](#) |Target scenario name (default: `Imported`)
+|`--scenario`|Target scenario name (default: `Imported`)
 |[`--testcase`](#) |Target test case name (default: derived from the request)
 |[`--reusable`](#) |Create the import as a User Intent instead of a test case
 
