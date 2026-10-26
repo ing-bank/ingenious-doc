@@ -15,4 +15,4 @@
 
  * Imported objects are displayed in the **SAP Object Repository**.
 
- ![SAP Recorder Import .jsh file](../img/sap/SAPRecording.gif "SAP Recorder Import .jsh file")
+ ![SAP Recorder Import .jsh file](/img/sap/SAPRecording.gif "SAP Recorder Import .jsh file")

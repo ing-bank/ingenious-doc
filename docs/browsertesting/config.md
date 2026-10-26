@@ -27,7 +27,7 @@
     
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![context](../img/configurations/context.JPG "context"){ width="50%" }
+    ![context](/img/configurations/context.JPG "context"){ width="50%" }
 
 
 
@@ -48,7 +48,7 @@
 
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![emulator](../img/configurations/emulators.JPG "emulator"){ width="50%" }
+    ![emulator](/img/configurations/emulators.JPG "emulator"){ width="50%" }
 
     The complete list of Playwright supported device configurations can be found [here](https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/server/deviceDescriptorsSource.json)
 
@@ -69,7 +69,7 @@
 
     In **INGenious Playwright Studio** you can specify all of these in the **Configuration** Window like this :
 
-    ![locale](../img/configurations/locale.JPG "locale"){ width="50%" }
+    ![locale](/img/configurations/locale.JPG "locale"){ width="50%" }
 
 
 -------------------------------------------
@@ -90,15 +90,15 @@
     * Login to LambdaTest Portal, go to **Home** > **Account Settings** > **Password & Security**
     * Under **Username and Access Key**, copy **Username** and **Access Key** as shown in this example:
 
-    ![createConfig](../img/lambdatest/lambdatest-creds.png "user-token"){ width=60% }
+    ![createConfig](/img/lambdatest/lambdatest-creds.png "user-token"){ width=60% }
 
     Specify necessary property values in the **Run Settings** Window like this :
 
-    ![lambda-config](../img/lambdatest/lambdatest-config.png "lambda-config"){ width="50%" }
+    ![lambda-config](/img/lambdatest/lambdatest-config.png "lambda-config"){ width="50%" }
 
     Under the **Run Settings** tab, select **Grid** as the **Execution Mode** and set **Remote Grid Url** as **wss://cdp.lambdatest.com**
 
-    ![lambda-setting](../img/lambdatest/lambdatest-run-settings.png "lambda-setting"){ width="50%" }
+    ![lambda-setting](/img/lambdatest/lambdatest-run-settings.png "lambda-setting"){ width="50%" }
 
 
 -------------------------------------------

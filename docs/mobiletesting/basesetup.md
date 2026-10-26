@@ -68,7 +68,7 @@
     
     A proper set up would look like this :
 
-    ![appiumdoctor](../img/mobiletesting/appiumdoctor.png "appiumdoctor"){ width="75%" }
+    ![appiumdoctor](/img/mobiletesting/appiumdoctor.png "appiumdoctor"){ width="75%" }
 
 
 ## **Setting of Java Home**
@@ -78,14 +78,14 @@
 
     * Create a system variable `JAVA_HOME` with the value as the path where your **Java** is installed. This should be the root location of your **Java** installation
 
-        ![javahome](../img/mobiletesting/javahome1.png "javahome"){ width="50%" }
+        ![javahome](/img/mobiletesting/javahome1.png "javahome"){ width="50%" }
 
 
     <br>
 
     * Add the **Java** bin path to the `PATH` variable
 
-        ![javahome](../img/mobiletesting/javahome2.png "javahome"){ width="50%" }
+        ![javahome](/img/mobiletesting/javahome2.png "javahome"){ width="50%" }
 
 
 ??? info "Mac OS"

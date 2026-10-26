@@ -33,6 +33,50 @@ icon: material/gesture-tap
 ----------------------
 
 
+## **Tap_Relative**
+
+**Description**: This function will tap on element based on parent object
+
+=== "Usage"
+
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`Tap_Relative`](#)   |        |  | PageName |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Tap on element based on parent [<Object>]", condition = InputType.YES)
+    public void Tap_Relative() {
+        doRelative(RelativeAction.TAP);
+    }
+    ```
+----------------------## **TapAndHoldElement**
+
+**Description**: This function is used to perform tap and hold operation on an element.
+
+
+=== "Usage"
+
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | mobileObject |:green_circle: [`TapAndHoldElement`](#)|                             |           |         |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.APP, desc = "Tap and hold the [<Object>] element ")
+	public void TapAndHoldElement() {
+		if (elementEnabled()) {
+			new Actions(mDriver).clickAndHold(Element).build().perform();
+			Report.updateTestLog(Action, "Tap and hold done", Status.DONE);
+		} else {
+			throw new ElementException(ElementException.ExceptionType.Element_Not_Enabled, ObjectName);
+		}
+	}
+    ```
+----------------------
+
 ## **TapIfExists**
 
 **Description**: This function will tap the element if it exists.
@@ -85,32 +129,6 @@ icon: material/gesture-tap
     ```
 ----------------------
 
-## **TapAndHoldElement**
-
-**Description**: This function is used to perform tap and hold operation on an element.
-
-
-=== "Usage"
-
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | mobileObject |:green_circle: [`TapAndHoldElement`](#)|                             |           |         |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Tap and hold the [<Object>] element ")
-	public void TapAndHoldElement() {
-		if (elementEnabled()) {
-			new Actions(mDriver).clickAndHold(Element).build().perform();
-			Report.updateTestLog(Action, "Tap and hold done", Status.DONE);
-		} else {
-			throw new ElementException(ElementException.ExceptionType.Element_Not_Enabled, ObjectName);
-		}
-	}
-    ```
-----------------------
-
 ## **TapInputByLabel**
 
 **Description**: This function will tap on an element whose label is provided in the element.
@@ -157,22 +175,3 @@ icon: material/gesture-tap
     ```
 ----------------------
 
-## **Tap_Relative**
-
-**Description**: This function will tap on element based on parent object
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`Tap_Relative`](#)   |        |  | PageName |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Tap on element based on parent [<Object>]", condition = InputType.YES)
-    public void Tap_Relative() {
-        doRelative(RelativeAction.TAP);
-    }
-    ```
-----------------------

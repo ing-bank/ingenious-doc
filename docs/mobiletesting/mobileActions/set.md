@@ -36,35 +36,29 @@ icon: simple/databricks
     ```
 ----------------------------------------
 
-## **SetIfExists**
+## **set_Relative**
 
-**Description**: This function is used to set the value if the element exists.
+**Description**: This function will set given data from input column on element based on parent object
 
 **Input Format** : @Expected Text
 
 === "Usage"
 
-    | ObjectName | Action | Input        | Condition |Reference|  |
-    |------------|--------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`SetIfExists`](#)  | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`SetIfExists`](#)  | Sheet:Column |      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`SetIfExists`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | ObjectName | Action            | Input        | Condition |Reference|  |
+    |------------|-------------------|--------------|-----------|---------|--|
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`set_Relative`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.APP, desc = "Enter the value [<Data>] in the [<Object>] if it exists", input = InputType.YES)
-    public void SetIfExists() {
-        if (Element != null) {
-            Set();
-        } else {
-            Report.updateTestLog(Action, "Element [" + ObjectName + "] not Exists", Status.DONE);
-        }
+    @Action(object = ObjectType.APP, desc = "Set [<Data>] on element based on parent [<Object>]", input = InputType.YES, condition = InputType.YES)
+    public void set_Relative() {
+        doRelative(RelativeAction.SET);
     }
     ```
-----------------------------------------
-
-## **SetAndCheck**
+----------------------## **SetAndCheck**
 
 **Description**: This function is used to set the value and check the expected text matches with element value.
 
@@ -99,6 +93,40 @@ icon: simple/databricks
     }
     ```
 -------------------------------
+
+## **setElementTimeOut**
+
+**Description**: This function is used to change default element finding wait time by input data in seconds
+
+**Input Format** : @Expected data in seconds
+
+=== "Usage"
+
+    | ObjectName | Action | Input        | Condition |Reference|  |
+    |------------|--------|--------------|-----------|---------|--|
+    | Mobile   |:green_circle: [`setElementTimeOut`](#)   | @value       || |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | Mobile  |:green_circle: [`setElementTimeOut`](#)   | Sheet:Column || |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | Mobile   |:green_circle: [`setElementTimeOut`](#)  | %dynamicVar% || |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.MOBILE, desc = "Change Default Element finding wait time by [<Data>] seconds",
+            input = InputType.YES)
+    public void setElementTimeOut() {
+        if (Data != null && Data.matches("[0-9]+")) {
+            SystemDefaults.elementWaitTime = Duration.ofSeconds(Integer.valueOf(Data));
+            Report.updateTestLog(Action, "Element Wait time changed to "
+                    + Data + " second/s", Status.DONE);
+        } else {
+            Report.updateTestLog(Action,
+                    "Couldn't change Element Wait time (invalid input) " + Data,
+                    Status.DEBUG);
+        }
+
+    }
+    ```
+----------------------  
 
 ## **setEncrypted**
 
@@ -142,39 +170,33 @@ icon: simple/databricks
 
 ---------------------------------
 
-## **setElementTimeOut**
+## **SetIfExists**
 
-**Description**: This function is used to change default element finding wait time by input data in seconds
+**Description**: This function is used to set the value if the element exists.
 
-**Input Format** : @Expected data in seconds
+**Input Format** : @Expected Text
 
 === "Usage"
 
     | ObjectName | Action | Input        | Condition |Reference|  |
     |------------|--------|--------------|-----------|---------|--|
-    | Mobile   |:green_circle: [`setElementTimeOut`](#)   | @value       || |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | Mobile  |:green_circle: [`setElementTimeOut`](#)   | Sheet:Column || |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | Mobile   |:green_circle: [`setElementTimeOut`](#)  | %dynamicVar% || |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
+    | mobileObject     |:green_circle: [`SetIfExists`](#)  | @value       |       | |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
+    | mobileObject     |:green_circle: [`SetIfExists`](#)  | Sheet:Column |      | |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
+    | mobileObject     |:green_circle: [`SetIfExists`](#)  | %dynamicVar% |       | |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
 
 === "Corresponding Code"
 
     ```java
-    @Action(object = ObjectType.MOBILE, desc = "Change Default Element finding wait time by [<Data>] seconds",
-            input = InputType.YES)
-    public void setElementTimeOut() {
-        if (Data != null && Data.matches("[0-9]+")) {
-            SystemDefaults.elementWaitTime = Duration.ofSeconds(Integer.valueOf(Data));
-            Report.updateTestLog(Action, "Element Wait time changed to "
-                    + Data + " second/s", Status.DONE);
+    @Action(object = ObjectType.APP, desc = "Enter the value [<Data>] in the [<Object>] if it exists", input = InputType.YES)
+    public void SetIfExists() {
+        if (Element != null) {
+            Set();
         } else {
-            Report.updateTestLog(Action,
-                    "Couldn't change Element Wait time (invalid input) " + Data,
-                    Status.DEBUG);
+            Report.updateTestLog(Action, "Element [" + ObjectName + "] not Exists", Status.DONE);
         }
-
     }
     ```
-----------------------  
+----------------------------------------
 
 ## **setInputByLabel**
 
@@ -202,26 +224,3 @@ icon: simple/databricks
 
 ----------------------
 
-## **set_Relative**
-
-**Description**: This function will set given data from input column on element based on parent object
-
-**Input Format** : @Expected Text
-
-=== "Usage"
-
-    | ObjectName | Action            | Input        | Condition |Reference|  |
-    |------------|-------------------|--------------|-----------|---------|--|
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | @value       |  | PageName |<span style="color:#349651">:arrow_left:   *Hardcoded Input*</span> 
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | Sheet:Column |  | PageName |<span style="color:#559BD1">:arrow_left:   *Input from Datasheet*</span>
-    | mobileObject     |:green_circle: [`set_Relative`](#)   | %dynamicVar% |  | PageName |<span style="color:#AB0066">:arrow_left:   *Input from variable*</span>
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.APP, desc = "Set [<Data>] on element based on parent [<Object>]", input = InputType.YES, condition = InputType.YES)
-    public void set_Relative() {
-        doRelative(RelativeAction.SET);
-    }
-    ```
-----------------------

@@ -12,7 +12,7 @@
 
     Consider this DOM example :
 
-    ![role1](../img/playwrightLocators/role1.JPG "role1")
+    ![role1](/img/playwrightLocators/role1.JPG "role1")
 
     You can locate each element by its implicit role:
 
@@ -23,7 +23,7 @@
         ```
         In **INGenious Playwright Studio**, you will add it as this :
 
-        ![role2](../img/playwrightLocators/role2.JPG "role2")
+        ![role2](/img/playwrightLocators/role2.JPG "role2")
 
     === ":two: Subscribe checkbox"
 
@@ -32,7 +32,7 @@
         ```
         In **INGenious Playwright Studio**, you will add it as this :
 
-        ![role3](../img/playwrightLocators/role3.JPG "role3")
+        ![role3](/img/playwrightLocators/role3.JPG "role3")
 
     === ":three: Submit Button"
 
@@ -41,7 +41,7 @@
         ```
         In **INGenious Playwright Studio**, you will add it as this :
 
-        ![role4](../img/playwrightLocators/role4.JPG "role4")
+        ![role4](/img/playwrightLocators/role4.JPG "role4")
 
         * `Exact` Option
 
@@ -57,7 +57,7 @@
         ```
         In **INGenious Playwright Studio**, you will add it as this :
 
-        ![role5](../img/playwrightLocators/role5.JPG "role5")
+        ![role5](/img/playwrightLocators/role5.JPG "role5")
 
 
 --------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@
 
     Consider this DOM example :
 
-    ![label1](../img/playwrightLocators/label1.JPG "label1")
+    ![label1](/img/playwrightLocators/label1.JPG "label1")
 
     You can locate the element by the label text:
 
@@ -80,7 +80,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![label2](../img/playwrightLocators/label2.JPG "label2")
+    ![label2](/img/playwrightLocators/label2.JPG "label2")
 
     * `Exact` Option
 
@@ -96,7 +96,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![label3](../img/playwrightLocators/label3.JPG "label3")
+    ![label3](/img/playwrightLocators/label3.JPG "label3")
 
 
 
@@ -108,7 +108,7 @@
 
     Consider this DOM example :
 
-    ![placeholder1](../img/playwrightLocators/placeholder1.JPG "placeholder1")
+    ![placeholder1](/img/playwrightLocators/placeholder1.JPG "placeholder1")
 
     You can locate the element by the placeholder text:
 
@@ -119,7 +119,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![placeholder2](../img/playwrightLocators/placeholder2.JPG "placeholder2")
+    ![placeholder2](/img/playwrightLocators/placeholder2.JPG "placeholder2")
 
     * `Exact` Option
 
@@ -135,7 +135,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![placeholder3](../img/playwrightLocators/placeholder3.JPG "placeholder3")
+    ![placeholder3](/img/playwrightLocators/placeholder3.JPG "placeholder3")
 
 
 
@@ -147,7 +147,7 @@
 
     Consider this DOM example :
 
-    ![text1](../img/playwrightLocators/text1.JPG "text1")
+    ![text1](/img/playwrightLocators/text1.JPG "text1")
 
     You can locate the element by the text it contains:
 
@@ -158,7 +158,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![text2](../img/playwrightLocators/text2.JPG "text2")
+    ![text2](/img/playwrightLocators/text2.JPG "text2")
 
     * `Exact` Option
 
@@ -174,7 +174,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![text3](../img/playwrightLocators/text3.JPG "text3")
+    ![text3](/img/playwrightLocators/text3.JPG "text3")
 
 
 
@@ -186,7 +186,7 @@
 
     Consider this DOM example :
 
-    ![alttext1](../img/playwrightLocators/alttext1.JPG "alttext1")
+    ![alttext1](/img/playwrightLocators/alttext1.JPG "alttext1")
 
     You can locate the element by the alt text:
 
@@ -197,7 +197,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![alttext2](../img/playwrightLocators/alttext2.JPG "alttext2")
+    ![alttext2](/img/playwrightLocators/alttext2.JPG "alttext2")
 
     * `Exact` Option
 
@@ -213,7 +213,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![alttext3](../img/playwrightLocators/alttext3.JPG "alttext3")
+    ![alttext3](/img/playwrightLocators/alttext3.JPG "alttext3")
 
 
 
@@ -226,7 +226,7 @@
 
     Consider this DOM example :
 
-    ![title1](../img/playwrightLocators/title1.JPG "title1")
+    ![title1](/img/playwrightLocators/title1.JPG "title1")
 
     You can locate the element by the title :
 
@@ -237,7 +237,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![title2](../img/playwrightLocators/title2.JPG "title2")
+    ![title2](/img/playwrightLocators/title2.JPG "title2")
 
     * `Exact` Option
 
@@ -253,7 +253,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![title3](../img/playwrightLocators/title3.JPG "title3")
+    ![title3](/img/playwrightLocators/title3.JPG "title3")
 
 
 
@@ -265,7 +265,7 @@
 
     Consider this DOM example :
 
-    ![testid1](../img/playwrightLocators/testid1.JPG "testid1")
+    ![testid1](/img/playwrightLocators/testid1.JPG "testid1")
 
     You can locate the element by the title :
 
@@ -276,7 +276,7 @@
     ```
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![testid2](../img/playwrightLocators/testid2.JPG "testid2")
+    ![testid2](/img/playwrightLocators/testid2.JPG "testid2")
 
 
 -------------------------------------------
@@ -290,13 +290,13 @@
 
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![css](../img/playwrightLocators/css.JPG "css")
+    ![css](/img/playwrightLocators/css.JPG "css")
 
     * For Xpath :
 
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![xpath](../img/playwrightLocators/xpath.JPG "xpath")
+    ![xpath](/img/playwrightLocators/xpath.JPG "xpath")
 
 
 
@@ -328,7 +328,7 @@
 
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![shadowDom](../img/playwrightLocators/shadowdom.JPG "shadowDom")
+    ![shadowDom](/img/playwrightLocators/shadowdom.JPG "shadowDom")
 
 
 -------------------------------------------
@@ -347,11 +347,11 @@
 
     In **INGenious Playwright Studio**, you will add it as this :
 
-    ![singleframe](../img/playwrightLocators/singleframe.JPG "singleframe")
+    ![singleframe](/img/playwrightLocators/singleframe.JPG "singleframe")
 
     If there are nested frames, then just add the frame locators separated by semicolon, in the Frame box :
 
-    ![multipleframes](../img/playwrightLocators/multipleframes.JPG "multipleframes")
+    ![multipleframes](/img/playwrightLocators/multipleframes.JPG "multipleframes")
 
 -------------------------------------------
 

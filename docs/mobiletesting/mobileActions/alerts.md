@@ -5,6 +5,31 @@ icon: material/alert
 # Alert Actions
 ------------------------
 
+## **acceptAlert**
+
+**Description**: This function is used to accept the alert.
+
+=== "Usage"
+
+    | ObjectName | Action          | Input                       | Condition |Reference|
+    |------------|-----------------|-----------------------------|-----------|---------|
+    | Mobile |:green_circle: [`acceptAlert`](#)|                             |           |         |
+
+=== "Corresponding Code"
+
+    ```java
+    @Action(object = ObjectType.MOBILE, desc = "Accept the alert present")
+	public void acceptAlert() {
+		try {
+			mDriver.switchTo().alert().accept();
+			Report.updateTestLog(Action, "Alert is accepted", Status.DONE);
+		} catch (Exception e) {
+			Report.updateTestLog(Action, e.getMessage(), Status.FAILNS);
+			Logger.getLogger(CommonMethods.class.getName()).log(Level.SEVERE, null, e);
+		}
+	}
+    ```
+----------------------
 ## **answerAlert**
 
 **Description**: This function is used to answer the alert present with the expected text.
@@ -28,31 +53,6 @@ icon: material/alert
 		try {
 			mDriver.switchTo().alert().sendKeys(setAlertText);
 			Report.updateTestLog(Action, "Message '" + setAlertText + "' is set in the alert window", Status.DONE);
-		} catch (Exception e) {
-			Report.updateTestLog(Action, e.getMessage(), Status.FAILNS);
-			Logger.getLogger(CommonMethods.class.getName()).log(Level.SEVERE, null, e);
-		}
-	}
-    ```
-----------------------
-## **acceptAlert**
-
-**Description**: This function is used to accept the alert.
-
-=== "Usage"
-
-    | ObjectName | Action          | Input                       | Condition |Reference|
-    |------------|-----------------|-----------------------------|-----------|---------|
-    | Mobile |:green_circle: [`acceptAlert`](#)|                             |           |         |
-
-=== "Corresponding Code"
-
-    ```java
-    @Action(object = ObjectType.MOBILE, desc = "Accept the alert present")
-	public void acceptAlert() {
-		try {
-			mDriver.switchTo().alert().accept();
-			Report.updateTestLog(Action, "Alert is accepted", Status.DONE);
 		} catch (Exception e) {
 			Report.updateTestLog(Action, e.getMessage(), Status.FAILNS);
 			Logger.getLogger(CommonMethods.class.getName()).log(Level.SEVERE, null, e);

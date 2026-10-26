@@ -41,7 +41,7 @@ In the example below, we are intercepting an API call to [`http://localhost:3001
 
 In INGenious Playwright Studio, the steps will look like this :
 
- ![mocking](../img/specialfeatures/mocking.png "mocking")
+ ![mocking](/img/specialfeatures/mocking.png "mocking")
 
  The data in the payload can be parameterized from datasheets as well.
 
