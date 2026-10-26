@@ -22,7 +22,7 @@
 
 Follow the steps below to create an SAP-based test case in INGenious.
 
-* Click on the Configuration icon <img src="../../img/toolui/BrowserConfiguration.png" alt="SAPConfig" width="30px" style="vertical-align:middle" />
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
 * Inside the **Manage Browser** tab, enter the name of the **SAP Configuration** you want to create, in the `Browser` textbox and hit ++enter++
 
@@ -53,7 +53,7 @@ Follow the steps below to create an SAP-based test case in INGenious.
 
 * Head over to the **Design Pane** of INGenious
 
-* Click **SAP Object Repository** icon <img src="../../img/sap/sapicon.png" alt="SAP Object Repository" width="30px" style="vertical-align:middle" />
+* Click **SAP Object Repository** icon ![browserConfig](../img/sap/sapicon.png "browserConfig"){ width="20px" }
 
 * Create **Objects** with appropriate attributes like `id`, `name` and `Text`. These can easily be captured using **SAP Sripting Tracker Tool**
 
