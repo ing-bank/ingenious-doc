@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/customizations/engine/engine/">
+      
       
         <link rel="prev" href="../">
       
@@ -7558,11 +7560,11 @@ After making modifications to the engine, the users can compile the engine using
 <blockquote>
 <p>The process is exactly the same for IntelliJ or any other IDE.</p>
 </blockquote>
-<p><img alt="import" src="/img/engine/Import_MavenProject.gif" title="import" /></p>
+<p><img alt="import" src="../../../img/engine/Import_MavenProject.gif" title="import" /></p>
 <hr />
 <h3 id="where-to-write-custom-method">Where to write custom method?</h3>
 <p>Create a custom package in the <strong>Engine</strong> under <strong>src</strong> and create your <strong>.java</strong> files containing the custom methods in it. <strong>This is the best practice to add your custom method.</strong> In this way, you can always keep track of all your customizations.</p>
-<p><img alt="package" src="/img/engine/1.JPG" title="package" /></p>
+<p><img alt="package" src="../../../img/engine/1.JPG" title="package" /></p>
 <hr />
 <p>Learn how to create customizations here  <a class="md-button" href="../customfunction/">Custom functions</a> </p>
 <hr />
@@ -7578,23 +7580,23 @@ After making modifications to the engine, the users can compile the engine using
 </li>
 </ul>
 <p>Let's take the example below. Let's assume the custom function is added like this :</p>
-<p><img alt="addpackage" src="/img/engine/3.JPG" title="addpackage" /></p>
+<p><img alt="addpackage" src="../../../img/engine/3.JPG" title="addpackage" /></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Navigate to the location where the framework is installed <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Go to <strong><code>Configuration</code></strong> folder <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Inside <strong><code>package.properties</code></strong> add the package name like this :</li>
 </ul>
-<p><img alt="addpackage" src="/img/engine/2.JPG" title="addpackage" /></p>
+<p><img alt="addpackage" src="../../../img/engine/2.JPG" title="addpackage" /></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> In the same <strong><code>Configuration</code></strong> folder <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Open the <strong><code>Global Settings.properties</code></strong> file and provide the details as shown in the image below:</li>
 </ul>
-<p><img alt="settings" src="/img/engine/4.JPG" title="settings" /></p>
+<p><img alt="settings" src="../../../img/engine/4.JPG" title="settings" /></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add the custom method name in the test case as shown below. It will show in <span style="color:Red"><strong>Red</strong></span> in the UI of the framework, but thats expected as you have not yet built a JAR file. You are only testing the custom method.</li>
 </ul>
-<p><img alt="control" src="/img/engine/6.JPG" title="control" /></p>
+<p><img alt="control" src="../../../img/engine/6.JPG" title="control" /></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> In the Eclipse IDE,run the <strong>control.java</strong> file from the <strong>com.ing.engine.core</strong> package.</li>
 </ul>
-<p><img alt="control" src="/img/engine/5.JPG" title="control" /></p>
+<p><img alt="control" src="../../../img/engine/5.JPG" title="control" /></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> You can also keep break points wherever required and debug the test case after triggering the execution form the <strong>control.java</strong> file.</li>
 </ul>

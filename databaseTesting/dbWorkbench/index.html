@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/databaseTesting/dbWorkbench/">
+      
       
         <link rel="prev" href="../storeActions/">
       
@@ -7485,9 +7487,9 @@
 </div>
 <h2 id="how-to-use-the-db-workbench">How to use the DB Workbench:</h2>
 <p>The DB Workbench can be accessed via the Menu Ribbon:</p>
-<p><img alt="DBWorkbenchMenuRibbon" src="/img/db/workbench/DBWorkbenchMenuRibbon.png" title="DBWorkbenchMenuRibbon" width="60%" /></p>
+<p><img alt="DBWorkbenchMenuRibbon" src="../../img/db/workbench/DBWorkbenchMenuRibbon.png" title="DBWorkbenchMenuRibbon" width="60%" /></p>
 <p>Once selected, you will be navigated to the DB Workbench window. See example below:</p>
-<p><img alt="DBWorkbenchExample" src="/img/db/workbench/DBWorkbenchExample.png" title="DBWorkbenchExample" /></p>
+<p><img alt="DBWorkbenchExample" src="../../img/db/workbench/DBWorkbenchExample.png" title="DBWorkbenchExample" /></p>
 <div class="admonition tip">
 <p>The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the DB Workbench.</p>
 </div>
@@ -7495,7 +7497,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>This is where database <strong>Connections</strong> are created, organized, and browsed. Every connection is backed by a <code>Settings/Databases/&lt;alias&gt;.properties</code> file in the project—the same connection store used by the <a href="../database/">Database</a> engine actions, so a connection created here can be reused directly by generated tests.</p>
-<p><img alt="ConnectionsPane" src="/img/db/workbench/ConnectionsPane.png" title="ConnectionsPane" /></p>
+<p><img alt="ConnectionsPane" src="../../img/db/workbench/ConnectionsPane.png" title="ConnectionsPane" /></p>
 <p>Use the <strong>New</strong>, <strong>Edit</strong>, <strong>Delete</strong>, and <strong>Test</strong> buttons at the bottom of the pane to manage connections:</p>
 <ul>
 <li><strong>New</strong> – Opens the connection dialog to configure a new database connection.</li>
@@ -7503,7 +7505,7 @@
 <li><strong>Delete</strong> – Removes the selected connection. The <code>default</code> connection is protected and cannot be deleted.</li>
 <li><strong>Test</strong> – Attempts to connect using the currently saved details and reports success or failure.</li>
 </ul>
-<p><img alt="ConnectionDialog" src="/img/db/workbench/ConnectionDialog.png" title="ConnectionDialog" width="60%" /></p>
+<p><img alt="ConnectionDialog" src="../../img/db/workbench/ConnectionDialog.png" title="ConnectionDialog" width="60%" /></p>
 <p>The connection dialog supports common vendor presets, which automatically fill in the driver class and a connection-string template:</p>
 <ul>
 <li><strong>PostgreSQL</strong></li>
@@ -7534,11 +7536,11 @@
 </div>
 <p><strong>Browsing the Schema</strong></p>
 <p>Expanding a connection in the tree lazily loads its tables and views. <strong>Double-clicking</strong> a table automatically generates a <code>SELECT * FROM &lt;table&gt;</code> statement into the Query Editor, and the table/column names are added to the SQL editor's autocomplete suggestions.</p>
-<p><img alt="SchemaBrowsing" src="/img/db/workbench/SchemaBrowsing.png" title="SchemaBrowsing" width="60%" /></p>
+<p><img alt="SchemaBrowsing" src="../../img/db/workbench/SchemaBrowsing.png" title="SchemaBrowsing" width="60%" /></p>
 </div>
 <div class="tabbed-block">
 <p>This section allows you to select a connection and write the SQL statement you want to execute.</p>
-<p><img alt="QueryEditorPane" src="/img/db/workbench/QueryEditorPane.png" title="QueryEditorPane" /></p>
+<p><img alt="QueryEditorPane" src="../../img/db/workbench/QueryEditorPane.png" title="QueryEditorPane" /></p>
 <p>The toolbar provides the following actions:</p>
 <ul>
 <li><strong>Connection</strong> – Select which saved connection the query should run against.</li>
@@ -7558,7 +7560,7 @@
 </div>
 <div class="tabbed-block">
 <p>This section displays the outcome of the executed statement. The pane is organised into three tabs—<strong>Grid</strong>, <strong>Messages</strong>, and <strong>Validations</strong>—and a status bar at the bottom that always reflects the most recent execution.</p>
-<p><img alt="ResultGridPane" src="/img/db/workbench/ResultGridPane.png" title="ResultGridPane" /></p>
+<p><img alt="ResultGridPane" src="../../img/db/workbench/ResultGridPane.png" title="ResultGridPane" /></p>
 <p><strong>Grid Tab</strong></p>
 <p>For <code>SELECT</code> statements, the Grid tab renders the returned result set, with one column per column in the result and one row per record returned.</p>
 <ul>
@@ -7598,7 +7600,7 @@
 <p>Validations are the bridge between exploratory querying and automated testing. Each validation is a rule describing something that must be true about the result set—or a value that should be captured for later use—and each one becomes a single test step when the query is converted to automation.</p>
 <p><strong>Creating a Validation</strong></p>
 <p>After executing a <code>SELECT</code> query, <strong>right-click</strong> directly on a cell in the Grid tab. The Workbench reads the cell's <strong>column name</strong>, <strong>row number</strong>, and <strong>value</strong>, and pre-fills the rule for you, so in most cases a validation can be created in a single click.</p>
-<p><img alt="ResultGridContextMenu" src="/img/db/workbench/ResultGridContextMenu.png" title="ResultGridContextMenu" width="60%" /></p>
+<p><img alt="ResultGridContextMenu" src="../../img/db/workbench/ResultGridContextMenu.png" title="ResultGridContextMenu" width="60%" /></p>
 <p>The context menu also offers <strong>Copy value</strong>, which copies just the selected cell's value to the clipboard.</p>
 <p><strong>Assertion Options</strong></p>
 <table>
@@ -7689,7 +7691,7 @@
 <li><strong>Operator</strong> – The type of rule, for example <code>EQUALS</code>, <code>CELL_EQUALS</code>, <code>IS_NULL</code>, <code>ROW_COUNT</code>, or <code>STORE_VAR</code>.</li>
 <li><strong>Expected / Target</strong> – The expected value for assertions, or the target variable / data-sheet reference for store rules.</li>
 </ul>
-<p><img alt="ValidationsTab" src="/img/db/workbench/ValidationsTab.png" title="ValidationsTab" /></p>
+<p><img alt="ValidationsTab" src="../../img/db/workbench/ValidationsTab.png" title="ValidationsTab" /></p>
 <p>To delete a rule, <strong>right-click</strong> it in the Validations tab and choose <strong>Remove selected validation</strong>.</p>
 <p><strong>Persistence and Conversion</strong></p>
 <p>Validations belong to the query, not to a single execution:</p>
@@ -7711,7 +7713,7 @@
 <li><strong>Test Case</strong> – creates a standalone test case in the Test Plan.</li>
 <li><strong>User Intent</strong> – creates a <a href="../../home/userIntent/">User Intent</a> instead, so the converted query can be executed from any number of test cases via the <code>Execute</code> action.</li>
 </ul>
-<p><img alt="ConvertToAutomationDialog" src="/img/db/workbench/ConvertToAutomationDialog.png" title="ConvertToAutomationDialog" width="60%" /></p>
+<p><img alt="ConvertToAutomationDialog" src="../../img/db/workbench/ConvertToAutomationDialog.png" title="ConvertToAutomationDialog" width="60%" /></p>
 <p>During conversion, the following <a href="../database/">Database</a> engine steps are generated automatically:</p>
 <ol>
 <li><strong>Initiate the DB transaction</strong> (<code>initDBConnection</code>) – opens the connection using the selected alias.</li>
@@ -7723,7 +7725,7 @@
 <p>If a validation stores a value into a runtime variable, global variable, or data sheet, that reference (for example <code>%dbValue%</code> or <code>Sheet:Column</code>) is carried over as-is into the generated test case, so it can be reused by later steps.</p>
 <p>The original saved query is not modified by the conversion; it remains available to be opened, edited, or converted again.</p>
 <p><strong>Converted Test Case Example</strong></p>
-<p><img alt="DBQueryToTestCase" src="/img/db/workbench/DBQueryToTestCase.png" title="DBQueryToTestCase" /></p>
+<p><img alt="DBQueryToTestCase" src="../../img/db/workbench/DBQueryToTestCase.png" title="DBQueryToTestCase" /></p>
 <p>The generated test case performs the same SQL execution as the DB Workbench query and can be executed within INGenious to validate the expected data and assertions.</p>
 </div>
 </div>

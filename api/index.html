@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/api/">
+      
       
         <link rel="prev" href="../mobiletesting/mobileOR/">
       
@@ -7640,10 +7642,10 @@
 <li>
 <p>To set up an API configuration in INGenious, follow the steps below:</p>
 <ul>
-<li>Click on the Configuration icon <img alt="browserConfig" src="/img/toolui/BrowserConfiguration.png" title="browserConfig" width="20px" /></li>
+<li>Click on the Configuration icon <img alt="browserConfig" src="../img/toolui/BrowserConfiguration.png" title="browserConfig" width="20px" /></li>
 <li>
 <p>Under <strong>API Configurations</strong> you will see the <code>API Alias</code> as <code>default</code>. Change the values as per requirement.</p>
-<p><img alt="apiDefault" src="/img/configurations/api_configurations_default.png" title="apiDefault" width="60%" /></p>
+<p><img alt="apiDefault" src="../img/configurations/api_configurations_default.png" title="apiDefault" width="60%" /></p>
 </li>
 </ul>
 </li>
@@ -7706,11 +7708,11 @@
 <p>To create a new API configuration, follow the steps below :</p>
 <ul>
 <li>
-<p>Click on the Configuration icon <img alt="browserConfig" src="/img/toolui/BrowserConfiguration.png" title="browserConfig" width="20px" /></p>
+<p>Click on the Configuration icon <img alt="browserConfig" src="../img/toolui/BrowserConfiguration.png" title="browserConfig" width="20px" /></p>
 </li>
 <li>
-<p>Inside the <strong>API Configurations</strong> tab, Enter the <code>API Alias</code> and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> . Alternatively you can also click on the <img alt="add" src="/img/toolui/addIcon.png" title="add" width="20px" /> icon.</p>
-<p><img alt="apinewconfig" src="/img/configurations/api_configurations_new.png" title="apinewconfig" width="60%" /></p>
+<p>Inside the <strong>API Configurations</strong> tab, Enter the <code>API Alias</code> and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> . Alternatively you can also click on the <img alt="add" src="../img/toolui/addIcon.png" title="add" width="20px" /> icon.</p>
+<p><img alt="apinewconfig" src="../img/configurations/api_configurations_new.png" title="apinewconfig" width="60%" /></p>
 </li>
 <li>
 <p>A new set of API configurations with default values will be added below.</p>
@@ -7724,12 +7726,12 @@
 <div class="admonition important">
 <p class="admonition-title">Handling and integration of these configurations on the backend is the responsibility of the user.</p>
 </div>
-<p><img alt="addAndRemovePropertyButtons" src="/img/configurations/api_config_add_remove_prop.png" title="addAndRemovePropertyButtons" width="60%" /></p>
+<p><img alt="addAndRemovePropertyButtons" src="../img/configurations/api_config_add_remove_prop.png" title="addAndRemovePropertyButtons" width="60%" /></p>
 <ul>
 <li>
 <p>Add a new property </p>
 <ol>
-<li>Click the <strong>Add Property</strong> button <img alt="addProperty" src="/img/toolui/add.png" title="addProperty" width="20px" />.</li>
+<li>Click the <strong>Add Property</strong> button <img alt="addProperty" src="../img/toolui/add.png" title="addProperty" width="20px" />.</li>
 <li>Add the <strong>property key</strong> (e.g., autoReconnect, timeout, sslMode).</li>
 <li>Provide the corresponding <strong>property value</strong>.</li>
 <li>Click <strong>Save</strong> to apply the changes.</li>
@@ -7739,7 +7741,7 @@
 <p>Remove a property</p>
 <ol>
 <li>Select the <strong>property</strong> you want to remove.</li>
-<li>Click the <strong>Remove Property</strong> button <img alt="renmoveProperty" src="/img/toolui/remove.png" title="renmoveProperty" width="20px" />.</li>
+<li>Click the <strong>Remove Property</strong> button <img alt="renmoveProperty" src="../img/toolui/remove.png" title="renmoveProperty" width="20px" />.</li>
 <li>Click <strong>Save</strong> to apply the changes.</li>
 </ol>
 </li>
@@ -7766,7 +7768,7 @@
 <p>A request should contain a <strong><code>closeConnection</code></strong> action. This action is always marked in <span style="color:#8f7000"><strong>Brown.</strong></span></p>
 </li>
 </ul>
-<p><img alt="api_testcase_example" src="/img/api/api_testcase_example.png" title="api_testcase_example" /></p>
+<p><img alt="api_testcase_example" src="../img/api/api_testcase_example.png" title="api_testcase_example" /></p>
 <p>The above is an example of a <strong><code>postRestRequest</code></strong> and then <strong><code>assertResponseCode</code></strong> followed by <strong><code>storeJSONelementInDataSheet</code></strong></p>
 <hr />
 <h2 id="payload-data-parameterization">Payload Data Parameterization</h2>
@@ -7774,12 +7776,12 @@
 <p>Inside this editor, we can paste the entire Payload and then parameterize the specific JSON/XML tags based on our needs.</p>
 <p>If we press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span> the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
 <p>We need to press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to close the editor</p>
-<p><img alt="editor" src="/img/api/editor.gif" title="editor" /></p>
+<p><img alt="editor" src="../img/api/editor.gif" title="editor" /></p>
 <hr />
 <h2 id="assertstore-response-tags">Assert/Store Response Tags</h2>
 <p>We can access the Response Tags using <strong><code>xpath</code></strong> for XMLs and <strong><code>jsonPath</code></strong> for JSONs.</p>
 <p>The corresponding <strong><code>xpath</code></strong> or <strong><code>jsonPath</code></strong> for the tag, should be entered in the <strong>Condition</strong> column like as shown below :</p>
-<p><img alt="api2" src="/img/api/2.JPG" title="api2" /></p>
+<p><img alt="api2" src="../img/api/2.JPG" title="api2" /></p>
 <details class="note">
 <summary>Example for writing Xpath</summary>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;root</span><span class="w"> </span><span class="na">xmlns:foo=</span><span class="s">"http://www.foo.org/"</span><span class="w"> </span><span class="na">xmlns:bar=</span><span class="s">"http://www.bar.org"</span><span class="nt">&gt;</span>

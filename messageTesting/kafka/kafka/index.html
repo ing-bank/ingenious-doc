@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/messageTesting/kafka/kafka/">
+      
       
         <link rel="prev" href="../../jms/queueActions/">
       
@@ -7825,13 +7827,13 @@ per-step overrides.</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For String Serializer, the following are required: <strong><code>bootstrap.servers</code>, <code>producer.topic</code>, <code>value.serializer</code>, <code>key.serializer</code></strong></p>
-<p><img alt="kafka string configuration" src="/img/kafka/string_serializer_config_v4.png" title="kafka string configuration" width="50%" /></p>
-<p><img alt="kafka string sample" src="/img/kafka/string_serializer_sample_v4.png" title="kafka string sample" /></p>
+<p><img alt="kafka string configuration" src="../../../img/kafka/string_serializer_config_v4.png" title="kafka string configuration" width="50%" /></p>
+<p><img alt="kafka string sample" src="../../../img/kafka/string_serializer_sample_v4.png" title="kafka string sample" /></p>
 </div>
 <div class="tabbed-block">
 <p>For Avro Serializer, the following are required: <strong><code>bootstrap.servers</code>, <code>producer.topic</code>, <code>value.serializer</code>, <code>key.serializer</code>, <code>schema.registry.url</code>, <code>addSchema</code></strong></p>
-<p><img alt="kafka avro configuration" src="/img/kafka/avro_serializer_config_v4.png" title="kafka avro configuration" width="50%" /></p>
-<p><img alt="kafka avro sample" src="/img/kafka/avro_serializer_sample_v4.png" title="kafka avro sample" /></p>
+<p><img alt="kafka avro configuration" src="../../../img/kafka/avro_serializer_config_v4.png" title="kafka avro configuration" width="50%" /></p>
+<p><img alt="kafka avro sample" src="../../../img/kafka/avro_serializer_sample_v4.png" title="kafka avro sample" /></p>
 </div>
 </div>
 </div>
@@ -7875,11 +7877,11 @@ the producer and consumer settings are set up directly as steps before producing
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For String Serializer, the following are required: <strong><code>server</code>, <code>producerTopic</code>, <code>valueSerializer</code>, <code>keySerializer</code></strong></p>
-<p><img alt="kafka string serializer" src="/img/kafka/string_serializer.png" title="kafka string serializer" /></p>
+<p><img alt="kafka string serializer" src="../../../img/kafka/string_serializer.png" title="kafka string serializer" /></p>
 </div>
 <div class="tabbed-block">
 <p>For Avro Serializer, the following are required: <strong><code>server</code>, <code>producerTopic</code>, <code>valueSerializer</code>, <code>keySerializer</code>, <code>setSchemaRegistryURL</code>, <code>addSchema</code></strong></p>
-<p><img alt="kafka avro serializer" src="/img/kafka/avro_serializer.png" title="kafka avro serializer" /></p>
+<p><img alt="kafka avro serializer" src="../../../img/kafka/avro_serializer.png" title="kafka avro serializer" /></p>
 </div>
 </div>
 </div>
@@ -7991,11 +7993,11 @@ topic exists) without producing or consuming a real message.</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For this example, <strong><code>Producer_ssl_Enabled</code> is set to <code>true</code></strong> then the following are required: <strong><code>Producer_Keystore_Location</code>, <code>Producer_Key_Password</code>, <code>Producer_Keystore_Password</code></strong></p>
-<p><img alt="With SSL configuration" src="/img/kafka/with_ssl.png" title="With SSL configuration" width="50%" /></p>
+<p><img alt="With SSL configuration" src="../../../img/kafka/with_ssl.png" title="With SSL configuration" width="50%" /></p>
 </div>
 <div class="tabbed-block">
 <p>For this example, <strong><code>Producer_ssl_Enabled</code> is set to <code>false</code></strong></p>
-<p><img alt="Without SSL configuration" src="/img/kafka/without_ssl.png" title="Without SSL configuration" width="50%" /></p>
+<p><img alt="Without SSL configuration" src="../../../img/kafka/without_ssl.png" title="Without SSL configuration" width="50%" /></p>
 </div>
 </div>
 </div>
@@ -8008,12 +8010,12 @@ topic exists) without producing or consuming a real message.</p>
 <p>Inside this editor, we can paste the entire Payload and then parameterize the specific JSON/XML tags based on our needs.</p>
 <p>If we press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span> the list of all available <strong>DataSheets : ColumnNames</strong> along with all <strong>user-defined variables</strong> show up. We can then select the appropriate item from where we want to parameterize.</p>
 <p>We need to press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to close the editor</p>
-<p><img alt="editor" src="/img/kafka/editor.gif" title="editor" /></p>
+<p><img alt="editor" src="../../../img/kafka/editor.gif" title="editor" /></p>
 <hr />
 <h2 id="assertstore-response-tags">Assert/Store Response Tags</h2>
 <p>We can access the Response Tags using <strong><code>xpath</code></strong> for XMLs and <strong><code>jsonPath</code></strong> for JSONs.</p>
 <p>The corresponding <strong><code>xpath</code></strong> or <strong><code>jsonPath</code></strong> for the tag, should be entered in the <strong>Condition</strong> column like as shown below :</p>
-<p><img alt="assertions" src="/img/kafka/assertions.png" title="assertions" /></p>
+<p><img alt="assertions" src="../../../img/kafka/assertions.png" title="assertions" /></p>
 <details class="note">
 <summary>Example for writing Xpath</summary>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;root</span><span class="w"> </span><span class="na">xmlns:foo=</span><span class="s">"http://www.foo.org/"</span><span class="w"> </span><span class="na">xmlns:bar=</span><span class="s">"http://www.bar.org"</span><span class="nt">&gt;</span>

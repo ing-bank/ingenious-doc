@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/integrations/bdd/">
+      
       
         <link rel="prev" href="../../ai/bestpractices/">
       
@@ -7569,7 +7571,7 @@
 <p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> After designing the <code>features</code> and <code>scenarios</code>, each story can be exported as a <strong><code>feature file</code></strong> , by clicking on <strong>up arrow</strong></p>
 </li>
 </ul>
-<p><img alt="featurecreation" src="/img/bdd/createfeaturefile.gif" title="featurecreation" /></p>
+<p><img alt="featurecreation" src="../../img/bdd/createfeaturefile.gif" title="featurecreation" /></p>
 <blockquote>
 <p><strong>Note:</strong> Projects created from BDD editor are saved as <strong>json</strong> files and internally <strong>Gherkin</strong> language is used to create feature files.</p>
 <p>It is also possible to open an existing feature file in the BDD editor using the <strong>down arrow</strong> icon and edit the same and save.</p>
@@ -7591,7 +7593,7 @@
 </ul>
 </li>
 </ul>
-<p><img alt="featureimport" src="/img/bdd/importfeaturefile.gif" title="featureimport" />   </p>
+<p><img alt="featureimport" src="../../img/bdd/importfeaturefile.gif" title="featureimport" />   </p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The corresponding steps can then be automated accordingly either through Recording or otherwise</li>
 </ul>
@@ -7601,7 +7603,7 @@
 <hr />
 <h2 id="bdd-reports-via-azure-devops">BDD Reports via Azure DevOps</h2>
 <p>In order to generate BDD Style Reporting post execution, from the Run Settings, make sure <strong>Bdd Reporting</strong> checkbox is checked.</p>
-<p><img alt="checkbox" src="/img/bdd/4.png" title="checkbox" /></p>
+<p><img alt="checkbox" src="../../img/bdd/4.png" title="checkbox" /></p>
 <p>This will generate <strong>bdd-report.json</strong> file post execution and this json file can then be fed to Azure DevOps Yaml Task to generate BDD Style Reporting.</p>
 <p>For this we need to use the following Yaml commands :</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishCucumberReport@1</span>
@@ -7614,7 +7616,7 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">'BDD</span><span class="nv"> </span><span class="s">Results'</span>
 </span></code></pre></div>
 <p>In Azure DevOps, the feature wise report can be viwed under the <code>Cucumber</code> Tab like the following :</p>
-<p><img alt="report" src="/img/bdd/5.JPG" title="report" /></p>
+<p><img alt="report" src="../../img/bdd/5.JPG" title="report" /></p>
 
 
 

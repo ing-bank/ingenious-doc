@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/api/apiworkbench/">
+      
       
         <link rel="prev" href="../structuredDataOR/">
       
@@ -7485,9 +7487,9 @@
 </div>
 <h2 id="how-to-use-the-api-workbench">How to use the API Workbench:</h2>
 <p>The API Workbench can be accessed via the Menu Ribbon:</p>
-<p><img alt="APIWorkbenchMenuRibbon" src="/img/api/APIWorkbenchMenuRibbon.png" title="APIWorkbenchMenuRibbon" width="60%" /></p>
+<p><img alt="APIWorkbenchMenuRibbon" src="../../img/api/APIWorkbenchMenuRibbon.png" title="APIWorkbenchMenuRibbon" width="60%" /></p>
 <p>Once selected, you will be navigated to API Workbench window. See example below:</p>
-<p><img alt="APIWorkbenchExample" src="/img/api/APIWorkbenchExample.png" title="APIWorkbenchExample" /></p>
+<p><img alt="APIWorkbenchExample" src="../../img/api/APIWorkbenchExample.png" title="APIWorkbenchExample" /></p>
 <div class="admonition tip">
 <p>The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the API Workbench.</p>
 </div>
@@ -7496,18 +7498,18 @@
 <div class="tabbed-block">
 <p>This is where the Collections and Requests are created and organized. Every <code>Collection</code> in the INGenious IDE , is a JSON file in the backend.</p>
 <p>To see this, you can navigate to the location of your tool, then <code>Projects</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <code>Your Project</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <code>api</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <code>collections</code></p>
-<p><img alt="APIWorkbenchBackend" src="/img/api/APIWorkbenchBackend.png" title="APIWorkbenchBackend" /></p>
+<p><img alt="APIWorkbenchBackend" src="../../img/api/APIWorkbenchBackend.png" title="APIWorkbenchBackend" /></p>
 <p>If you click on the <code>+</code>, this will allow you to create a new collection.</p>
-<p><img alt="APIWorkbenchCollection" src="/img/api/APIWorkbenchCollection.png" title="APIWorkbenchCollection" width="30%" /></p>
+<p><img alt="APIWorkbenchCollection" src="../../img/api/APIWorkbenchCollection.png" title="APIWorkbenchCollection" width="30%" /></p>
 <p>If you select a Collection or Request and <strong>Right Click</strong>, you will have some interesting and handy options to work with:</p>
 <p><strong>Collection level</strong></p>
-<p><img alt="CollectionLevelOptions" src="/img/api/CollectionLevelOptions.png" title="CollectionLevelOptions" width="75%" /></p>
+<p><img alt="CollectionLevelOptions" src="../../img/api/CollectionLevelOptions.png" title="CollectionLevelOptions" width="75%" /></p>
 <p><strong>Request level</strong></p>
-<p><img alt="RequestLevelOptions" src="/img/api/RequestLevelOptions.png" title="RequestLevelOptions" width="75%" /></p>
+<p><img alt="RequestLevelOptions" src="../../img/api/RequestLevelOptions.png" title="RequestLevelOptions" width="75%" /></p>
 </div>
 <div class="tabbed-block">
 <p>This section allows you to select and configure the API request you want to execute.</p>
-<p><img alt="WorkbenchPane" src="/img/api/WorkbenchPane.png" title="WorkbenchPane" /></p>
+<p><img alt="WorkbenchPane" src="../../img/api/WorkbenchPane.png" title="WorkbenchPane" /></p>
 <p>It supports multiple HTTP methods commonly used for interacting with web services:</p>
 <ul>
 <li><strong>GET</strong> – Retrieve data from a server</li>
@@ -7528,7 +7530,7 @@
 <li><strong>Proxy</strong> – Configure HTTP proxy settings for the current request.</li>
 </ul>
 <p>You may also <strong>convert the configured API request into a test case</strong>, capturing all request details for quick integration into your test suite.</p>
-<p><img alt="ExampleConvertoTC" src="/img/api/ExampleConvertoTC.gif" title="ExampleConvertoTC" /></p>
+<p><img alt="ExampleConvertoTC" src="../../img/api/ExampleConvertoTC.gif" title="ExampleConvertoTC" /></p>
 <p><strong>Importing cURL Commands</strong></p>
 <p>The API Workbench supports importing requests directly from a cURL command.</p>
 <p>Simply paste a valid cURL command into the <strong>Request URL Bar</strong> and the Workbench will automatically parse and populate the request configuration, including:</p>
@@ -7575,7 +7577,7 @@
 <li>Assert path does not exist</li>
 </ul>
 <p>The detected JSONPath or XPath is shown in the right-click menu and can be copied for reuse.</p>
-<p><img alt="APIWorkbenchResponsePath" src="/img/api/APIWorkbenchResponsePath.png" title="APIWorkbenchResponsePath" width="60%" /></p>
+<p><img alt="APIWorkbenchResponsePath" src="../../img/api/APIWorkbenchResponsePath.png" title="APIWorkbenchResponsePath" width="60%" /></p>
 <p>Once an assertion is selected, it is automatically added to the current API request and saved.</p>
 <p>When the request is executed again, the assertion results are displayed in the <strong>Test Results</strong> tab.</p>
 <p>Assertions created from the Response Body Pane are also preserved when converting an API request into an INGenious test case.</p>
@@ -7583,7 +7585,7 @@
 <div class="tabbed-block">
 <p>API Environments allow you to store reusable variables for different testing contexts such as Development, QA, Staging, or Production. This enables the same API request to be reused across multiple environments without manually changing values such as URLs, tokens, usernames, passwords, proxy settings, or certificate paths.</p>
 <p>The <strong>Environment Dropdown</strong> allows you to switch between environments. To open the <strong>Environment Configuration Window</strong> click <strong>Configure</strong>.</p>
-<p><img alt="APIEnvironmentDropdown" src="/img/api/APIEnvironmentDropdown.png" title="APIEnvironmentDropdown" /></p>
+<p><img alt="APIEnvironmentDropdown" src="../../img/api/APIEnvironmentDropdown.png" title="APIEnvironmentDropdown" /></p>
 <p>The Environment Configuration Window displays all available environments and provides several actions:</p>
 <ul>
 <li><strong>+ New</strong> – Create a new environment.</li>
@@ -7591,17 +7593,17 @@
 <li><strong>Duplicate</strong> – Create a copy of the selected environment, including all configured variables.</li>
 <li><strong>Delete</strong> – Remove the selected environment.</li>
 </ul>
-<p><img alt="APIEnvironmentActions" src="/img/api/APIEnvironmentActions.png" title="APIEnvironmentActions" /></p>
+<p><img alt="APIEnvironmentActions" src="../../img/api/APIEnvironmentActions.png" title="APIEnvironmentActions" /></p>
 <p><strong>Environment Variable Configuration</strong></p>
 <p>Variables are configured by entering a <strong>Name</strong> and <strong>Value</strong>. The <strong>Secret</strong> option can be enabled for sensitive information such as passwords, tokens, and API keys. Secret values are masked in the UI and are not displayed in plain text. After adding or updating variables, click <strong>Save</strong> to persist the environment configuration.</p>
-<p><img alt="APIEnvironmentVariables" src="/img/api/APIEnvironmentVariables.png" title="APIEnvironmentVariables" /></p>
+<p><img alt="APIEnvironmentVariables" src="../../img/api/APIEnvironmentVariables.png" title="APIEnvironmentVariables" /></p>
 <p>Variables can be referenced throughout API requests using double curly braces:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{{variableName}}
 </span></code></pre></div>
 <p>For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{{baseUrl}}/users
 </span></code></pre></div>
-<p><img alt="APIEnvironmentRequestExample" src="/img/api/APIEnvironmentRequestExample.png" title="APIEnvironmentRequestExample" /></p>
+<p><img alt="APIEnvironmentRequestExample" src="../../img/api/APIEnvironmentRequestExample.png" title="APIEnvironmentRequestExample" /></p>
 <p>When a request is executed, all referenced variables are automatically resolved using the currently selected environment. Switching to a different environment allows the same request to be executed against a different set of values without modifying the request itself. If a referenced variable does not exist in the active environment, the request execution may fail or use the unresolved placeholder value.</p>
 <p><strong>Best Practice</strong></p>
 <p>Store environment-specific values such as URLs, credentials, API keys, and tokens as environment variables instead of hardcoding them in requests. This improves maintainability and portability.</p>
@@ -7637,7 +7639,7 @@
 <p>Assertions configured in API Workbench, including those created by right-clicking JSON or XML response data, are automatically included when the request is converted into a test case.</p>
 <p>Response paths and expected values are preserved, allowing the same validations to be reused during automated test execution.</p>
 <p><strong>Converted Test Case Example (Basic Authentication)</strong></p>
-<p><img alt="APIRequestToTestCase" src="/img/api/APIRequestToTestCase.png" title="APIRequestToTestCase" /></p>
+<p><img alt="APIRequestToTestCase" src="../../img/api/APIRequestToTestCase.png" title="APIRequestToTestCase" /></p>
 <p>The generated test case performs the same API call as the API Workbench request and can be executed within INGenious to validate the expected response and assertions.</p>
 </div>
 </div>

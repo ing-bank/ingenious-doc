@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/hiddengems/additionalfeatures/">
+      
       
         <link rel="prev" href="../shortcuts/">
       
@@ -7792,9 +7794,9 @@
 <summary>Rename a Project</summary>
 <h2 id="rename-a-project">Rename a Project</h2>
 <p>To rename your project, right click on the project name from the <strong>Test Plan</strong> section and choose <strong>Details</strong> from the context menu option.</p>
-<p><img alt="details" src="/img/Things/Details.png" title="details" width="30%" /></p>
+<p><img alt="details" src="../../img/Things/Details.png" title="details" width="30%" /></p>
 <p>The <strong>Project Details</strong> window opens and the following options are available in the window, as shown below.</p>
-<p><img alt="details1" src="/img/Things/Details1.png" title="details1" width="50%" /></p>
+<p><img alt="details1" src="../../img/Things/Details1.png" title="details1" width="50%" /></p>
 <p>To rename your project, give the new name in the <strong>Project Name text box</strong> and click on <strong>Rename</strong>. Your project will be renamed.</p>
 <p>The <strong>Open</strong> option opens the project location in your system.</p>
 <p>Right below these options, you have details on the total number of scenarios, test cases, user intents and test datasheets present in the project.</p>
@@ -7807,7 +7809,7 @@
 <p>See <a href="../../home/userIntent/">User Intent</a> for an overview of Project and Shared User Intent, and how to create and execute them.</p>
 </blockquote>
 <p>A User Intent test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same User Intent, inside a single test case, with different set of data passed each time.</p>
-<p><img alt="subiteration" src="/img/Things/SubIteration.png" title="subiteration" /></p>
+<p><img alt="subiteration" src="../../img/Things/SubIteration.png" title="subiteration" /></p>
 </details>
 <hr />
 <details class="example">
@@ -7819,14 +7821,14 @@
 <ul>
 <li>To repeat a step a number of times, use the <strong>Start Loop</strong> and <strong>End Loop:@n</strong> condition.</li>
 </ul>
-<p><img alt="looping" src="/img/Things/Looping.png" title="looping" /></p>
+<p><img alt="looping" src="../../img/Things/Looping.png" title="looping" /></p>
 <ul>
 <li>In the above image, <strong>Start Loop</strong> is at Step 3 and <strong>End Loop:@5</strong> is at Step 7. So, Step 3 to 7 will be repeated 5 times.</li>
 </ul>
 </div>
 <div class="tabbed-block">
 <p><strong>NOTE:</strong> In Test Design panel, users are only given access to Iteration 1 and all its Sub-Iterations</p>
-<p><img alt="subiteration1" src="/img/Things/Subiteration1.png" title="subiteration1" /></p>
+<p><img alt="subiteration1" src="../../img/Things/Subiteration1.png" title="subiteration1" /></p>
 <ul>
 <li>
 <p>For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub-iterations for Iteration 1)</p>
@@ -7863,7 +7865,7 @@
 </blockquote>
 <p><strong>User Intents</strong> can be used within loops to repeat a set of steps. A <strong>Start/End Loop</strong> block may be used to execute the first iteration and first sub-iteration repeatedly. While a <strong>Start/End Param</strong> block may be used when iterating through a datasheet.</p>
 <p>The following image shows a sample User Intent named AttemptLogin with a corresponding datasheet.</p>
-<p><img alt="loopedcomponents1" src="/img/Things/LoopedComponents1.png" title="loopedcomponents1" /></p>
+<p><img alt="loopedcomponents1" src="../../img/Things/LoopedComponents1.png" title="loopedcomponents1" /></p>
 <p><strong>NOTE:</strong> For best practice, attach the Start and End conditions to a filler step.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><strong>Without Data</strong></label><label for="__tabbed_2_2"><strong>With Data</strong></label></div>
 <div class="tabbed-content">
@@ -7872,7 +7874,7 @@
 <ul>
 <li>Use the <strong>Start Loop</strong> and <strong>End Loop:@n</strong> conditions to repeat a User Intent <strong>n</strong> number of times.</li>
 </ul>
-<p><img alt="loopedcomponents2" src="/img/Things/LoopedComponents2.png" title="loopedcomponents2" /></p>
+<p><img alt="loopedcomponents2" src="../../img/Things/LoopedComponents2.png" title="loopedcomponents2" /></p>
 <ul>
 <li>In the above image, the User Intent will be executed 100 times. The data row labeled Iteration 1 and SubIteration 1 will be used each time.</li>
 </ul>
@@ -7881,7 +7883,7 @@
 <ul>
 <li>Iterate dynamically with a User Intent that uses data from a datasheet by using the <strong>Start Param</strong> and <strong>End Param</strong> conditions.</li>
 </ul>
-<p><img alt="loopedcomponents3" src="/img/Things/LoopedComponents3.png" title="loopedcomponents3" /></p>
+<p><img alt="loopedcomponents3" src="../../img/Things/LoopedComponents3.png" title="loopedcomponents3" /></p>
 <ul>
 <li>
 <p>For the above image, the User Intent will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the datasheet.</p>
@@ -7907,7 +7909,7 @@
 <ul>
 <li><strong>NOTE:</strong> In the Test Execution panel, you are given access to all Iterations and their Sub-Iterations.</li>
 </ul>
-<p><img alt="iterationOption" src="/img/Things/IterationOption.png" title="iterationOption" /></p>
+<p><img alt="iterationOption" src="../../img/Things/IterationOption.png" title="iterationOption" /></p>
 <ul>
 <li>
 <p>In the above image, there are some options given under the Iteration column</p>
@@ -7942,7 +7944,7 @@
 <ul>
 <li><strong>Iteration Mode</strong> can be found under the Run Settings.</li>
 </ul>
-<p><img alt="iterationMode" src="/img/Things/iterationMode.png" title="iterationMode" width="50%" /></p>
+<p><img alt="iterationMode" src="../../img/Things/iterationMode.png" title="iterationMode" width="50%" /></p>
 <ul>
 <li>
 <p>If <strong>ContinueOnError</strong> is selected, Test Case will keep on running even if an error occurs during one of the iterations.</p>
@@ -7995,7 +7997,7 @@
 <p>You will be navigated to the respective sheet after clicking on <strong>[OK]</strong></p>
 </li>
 </ul>
-<p><img alt="navigateDatasheets" src="/img/Things/navigateDatasheets.png" title="navigateDatasheets" width="75%" /></p>
+<p><img alt="navigateDatasheets" src="../../img/Things/navigateDatasheets.png" title="navigateDatasheets" width="75%" /></p>
 </details>
 <hr />
 <details class="example">
@@ -8004,11 +8006,11 @@
 <ul>
 <li>To search for <strong>values inside the cells</strong>, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green</li>
 </ul>
-<p><img alt="search" src="/img/Things/cellsearch.png" title="search" /></p>
+<p><img alt="search" src="../../img/Things/cellsearch.png" title="search" /></p>
 <ul>
 <li>To search for <strong>Columns using the Column Header</strong>, simply enter the search string (or even partial string) with '@' as prefix in the [Search Bar], and the search results will immediately show in green</li>
 </ul>
-<p><img alt="search" src="/img/Things/colheadersearch.png" title="search" /></p>
+<p><img alt="search" src="../../img/Things/colheadersearch.png" title="search" /></p>
 </details>
 <!-- ----
 
@@ -8026,7 +8028,7 @@
 
     * Show or hide columns in the report using the **show/hide columns** option. Check the respective column name checkbox to display that column or **uncheck** the respective column name checkbox to hide it.
 
-    ![reporttheme](/img/Things/reporttheme.png "reporttheme")
+    ![reporttheme](../img/Things/reporttheme.png "reporttheme")
 
     **Filtering In Report**
 
@@ -8096,7 +8098,7 @@
 </tr>
 </tbody>
 </table>
-<p><img alt="generateRunTimeData" src="/img/Things/generateRunTimeData.png" title="generateRunTimeData" /></p>
+<p><img alt="generateRunTimeData" src="../../img/Things/generateRunTimeData.png" title="generateRunTimeData" /></p>
 <blockquote>
 <p><strong>Note:</strong> It is also possible to combine two relevant functions for optimum usage.| Example1: <strong>=Concat(Diaphragm,=Round(360.45))</strong> Result: <strong>Diaphragm360</strong> <br> Example2: <strong>=Concat(James_,=Round(=Random(3)))</strong> Result: <strong>James_155</strong>. </p>
 </blockquote>
@@ -8135,7 +8137,7 @@
 <p>Once the execution starts, the debug toolbar will appear on top of the screen as shown below. The execution will pause at the step where the breakpoint has been added. You can then debug your test case accordingly.</p>
 </li>
 </ul>
-<p><img alt="debug" src="/img/Things/debug.JPG" title="debug" width="30%" /></p>
+<p><img alt="debug" src="../../img/Things/debug.JPG" title="debug" width="30%" /></p>
 <ul>
 <li>
 <p>To view the console log, click the button.</p>
@@ -8190,14 +8192,14 @@
 </ul>
 </li>
 </ul>
-<p><img alt="storeDataFromPreviousTestCaseData" src="/img/Things/storeDataFromPreviousTestCaseData-1.png" title="storeDataFromPreviousTestCaseData1" /></p>
+<p><img alt="storeDataFromPreviousTestCaseData" src="../../img/Things/storeDataFromPreviousTestCaseData-1.png" title="storeDataFromPreviousTestCaseData1" /></p>
 <blockquote>
 <p><strong>Note:</strong> Ensure that both Source and Target Test Datasheets have been created before using this action.</p>
 </blockquote>
 <p>Source Datasheet:
-<img alt="storeDataFromPreviousTestCaseData" src="/img/Things/storeDataFromPreviousTestCaseData-2.png" title="storeDataFromPreviousTestCaseData2" /></p>
+<img alt="storeDataFromPreviousTestCaseData" src="../../img/Things/storeDataFromPreviousTestCaseData-2.png" title="storeDataFromPreviousTestCaseData2" /></p>
 <p>Target Datasheet:
-<img alt="storeDataFromPreviousTestCaseData" src="/img/Things/storeDataFromPreviousTestCaseData-3.png" title="storeDataFromPreviousTestCaseData3" /></p>
+<img alt="storeDataFromPreviousTestCaseData" src="../../img/Things/storeDataFromPreviousTestCaseData-3.png" title="storeDataFromPreviousTestCaseData3" /></p>
 </details>
 <hr />
 <details class="example">
@@ -8274,7 +8276,7 @@
 </table>
 </div>
 <div class="tabbed-block">
-<p><img alt="storeEpochTimestampInVariable" src="/img/Things/storeEpochTimestampInVariable-1.png" title="storeEpochTimestampInVariable1" /></p>
+<p><img alt="storeEpochTimestampInVariable" src="../../img/Things/storeEpochTimestampInVariable-1.png" title="storeEpochTimestampInVariable1" /></p>
 </div>
 </div>
 </div>

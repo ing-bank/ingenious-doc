@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/api/structuredDataOR/">
+      
       
         <link rel="prev" href="../apimultipart/">
       
@@ -7582,20 +7584,20 @@
 <li>
 <p><strong>Project Structured Data OR</strong></p>
 <p>Contains objects that <strong>can be used within the project</strong> and managed from the <code>Project</code> tab within the OR panel.</p>
-<p><img alt="ExampleProjectStructuredDataOR" src="/img/api/structuredDataOR/ProjectStructuredDataOR.png" title="ExampleProjectStructuredDataOR" width="28%" /></p>
+<p><img alt="ExampleProjectStructuredDataOR" src="../../img/api/structuredDataOR/ProjectStructuredDataOR.png" title="ExampleProjectStructuredDataOR" width="28%" /></p>
 <p>A YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory <code>&lt;ProjectName&gt;\ObjectRepository\StructuredData\</code>.</p>
-<p><img alt="ProjStructuredDataORYAML" src="/img/api/structuredDataOR/ProjStructuredDataORYAML.png" title="ProjStructuredDataORYAML" /></p>
+<p><img alt="ProjStructuredDataORYAML" src="../../img/api/structuredDataOR/ProjStructuredDataORYAML.png" title="ProjStructuredDataORYAML" /></p>
 <p>When a Project Structured Data Object (PSDO) is used in a test step, the identifier <strong>[Project] PageName</strong> will show as its reference.</p>
-<p><img alt="PSDOTestStep" src="/img/api/structuredDataOR/PSDOTestStep.png" title="PSDOTestStep" /></p>
+<p><img alt="PSDOTestStep" src="../../img/api/structuredDataOR/PSDOTestStep.png" title="PSDOTestStep" /></p>
 </li>
 <li>
 <p><strong>Shared Structured Data OR</strong></p>
 <p>Contains objects that <strong>can be used across different projects</strong> and are managed from the <code>Shared</code> tab within the OR panel.</p>
-<p><img alt="ExampleSharedStructuredDataOR" src="/img/api/structuredDataOR/SharedStructuredDataOR.png" title="ExampleSharedStructuredDataOR" width="28%" /></p>
+<p><img alt="ExampleSharedStructuredDataOR" src="../../img/api/structuredDataOR/SharedStructuredDataOR.png" title="ExampleSharedStructuredDataOR" width="28%" /></p>
 <p>Similar to Project StructuredDataOR, a YAML file is automatically generated for each page—either upon page creation under <code>Shared</code> or when pages or objects are moved from <code>Project</code> to <code>Shared</code>. This file contains the page’s objects and their corresponding attributes and is stored in the <code>Shared\SharedObjectRepository\StructuredData</code> directory. The <code>structuredDataor-projectsdata.yaml</code> file maintains the list of projects that use the Shared Structured Data Objects.</p>
-<p><img alt="SharedStructuredDataORYAML" src="/img/api/structuredDataOR/SharedStructuredDataORYAML.png" title="SharedStructuredDataORYAML" /></p>
+<p><img alt="SharedStructuredDataORYAML" src="../../img/api/structuredDataOR/SharedStructuredDataORYAML.png" title="SharedStructuredDataORYAML" /></p>
 <p>When a Shared Structured Data Object (SSDO) is used in a test step, the identifier <strong>[Shared] PageName</strong> will show as its reference.</p>
-<p><img alt="SSDOTestStep" src="/img/api/structuredDataOR/SSDOTestStep.png" title="SSDOTestStep" /></p>
+<p><img alt="SSDOTestStep" src="../../img/api/structuredDataOR/SSDOTestStep.png" title="SSDOTestStep" /></p>
 </li>
 </ul>
 <h2 id="how-to-use-project-and-shared-structured-data-or">How to use Project and Shared Structured Data OR</h2>
@@ -7606,15 +7608,15 @@
 <li>
 <p>Objects from Project and Shared Structured Data OR can be used in a single Test Scenario.</p>
 <p>For example:
-<img alt="ExampleTestScenario" src="/img/api/structuredDataOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
+<img alt="ExampleTestScenario" src="../../img/api/structuredDataOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
 </li>
 <li>
 <p>Pages and Objects created under the <code>Project</code> tab can moved using the <code>Move to Shared</code> option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. <em>Note that existing test steps using the Project‑level Structured Data Object (PSDO) are automatically updated to use the Shared Structured Data Object (SSDO) within the project.</em></p>
-<p><img alt="ExampleMove" src="/img/api/structuredDataOR/ExampleMoveSD.gif" title="ExampleMove" width="30%" /></p>
+<p><img alt="ExampleMove" src="../../img/api/structuredDataOR/ExampleMoveSD.gif" title="ExampleMove" width="30%" /></p>
 </li>
 <li>
 <p>Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.</p>
-<p><img alt="ExampleSameNames" src="/img/api/structuredDataOR/ExampleTestScenario.png" title="ExampleSameNames" /></p>
+<p><img alt="ExampleSameNames" src="../../img/api/structuredDataOR/ExampleTestScenario.png" title="ExampleSameNames" /></p>
 </li>
 <li>
 <p>Pages and Objects in both the Project and Shared repositories can be renamed using the <code>Rename Page</code> or <code>Rename Object</code> options. After renaming, any existing test steps in the current project that previously referenced an SSDO using the old name will be updated automatically.</p>
@@ -7624,7 +7626,7 @@
 </li>
 <li>
 <p>To view all test cases that reference an Object within the project, use the <code>Get Impacted Cases</code> option. This feature is available for both Project and Shared repositories.</p>
-<p><img alt="ExampleImpactedTC" src="/img/api/structuredDataOR/ExampleImpactedTC.png" title="ExampleImpactedTC" width="50%" /></p>
+<p><img alt="ExampleImpactedTC" src="../../img/api/structuredDataOR/ExampleImpactedTC.png" title="ExampleImpactedTC" width="50%" /></p>
 <p><em>Suggestion: Before renaming or deleting an object, please use the <code>Get Impacted TestCases</code> option for checking.</em></p>
 </li>
 </ul>

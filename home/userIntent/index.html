@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/home/userIntent/">
+      
       
         <link rel="prev" href="../testData/">
       
@@ -7639,7 +7641,7 @@
 <li><strong>Import Postman/Bruno Collections</strong> – when importing a collection, each request can be converted into a <strong>Test Case</strong> or a <strong>User Intent</strong>.</li>
 </ul>
 <p>Choosing the User Intent option in either flow creates the result directly as a User Intent Test Case, ready to be executed from other test cases, instead of a standalone Test Plan test case.</p>
-<p><img alt="User Intent" src="/img/home/userIntent/testDesign-ui-tp.png" title="testDesign-ui-tp" /></p>
+<p><img alt="User Intent" src="../../img/home/userIntent/testDesign-ui-tp.png" title="testDesign-ui-tp" /></p>
 <h2 id="project-and-shared-user-intent">Project and Shared User Intent</h2>
 <p>There are two scopes of User Intent:</p>
 <ul>
@@ -7709,7 +7711,7 @@
 </table>
 <p>As a best practice, compose your test cases <strong>only from User Intents</strong> rather than mixing in loose, one-off steps — this keeps maintenance centralized and makes larger flows easier to read.</p>
 <p>To jump to the definition of a User Intent that's called from a test step, right-click the step and choose <strong>Go To User Intent</strong>.</p>
-<p><img alt="Execute" src="/img/home/userIntent/execute.png" title="execute" /></p>
+<p><img alt="Execute" src="../../img/home/userIntent/execute.png" title="execute" /></p>
 <h2 id="moving-and-promoting-user-intent">Moving and Promoting User Intent</h2>
 <p>A User Intent is not locked to the scope it was created in. Right-click a User Intent (or a Shared User Intent) to move it between scopes:</p>
 <ul>
@@ -7717,7 +7719,7 @@
 <li><strong>Move to Project User Intent</strong> – Demotes a Shared User Intent back to a single project's scope.</li>
 <li>Copy variants of both operations are also available when you want to keep the original in place.</li>
 </ul>
-<p><img alt="User Intent Context Menu" src="/img/home/userIntent/context-menu-user-intent.png" title="user-intent-context-menu" width="75%" /></p>
+<p><img alt="User Intent Context Menu" src="../../img/home/userIntent/context-menu-user-intent.png" title="user-intent-context-menu" width="75%" /></p>
 <p>Whenever a User Intent is moved or renamed, INGenious automatically rewrites every <code>Execute</code> reference to it elsewhere in the project, and confirms with a message such as:</p>
 <blockquote>
 <p><em>"Moved to Shared User Intent completed. All impacted test cases have been updated (N)."</em></p>

@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/archive/engine/">
+      
       
       
       
@@ -7462,7 +7464,7 @@
 <p>After performing the above steps, you can see the entire <strong>project structure</strong></p>
 </li>
 </ul>
-<p><img alt="import" src="/img/engine/import.gif" title="import" /></p>
+<p><img alt="import" src="../../img/engine/import.gif" title="import" /></p>
 <p>If you see <strong>Build Path</strong> errors after importing the engine, then you can fix this by removing all the libraries and readding them.</p>
 <p><strong>Step 1 :</strong> Remove All the libraries
 - Right Click on the Project Name
@@ -7478,7 +7480,7 @@
 <hr />
 <h3 id="where-to-write-your-custom-methods">Where to write your custom method(s)?</h3>
 <p>Create a custom package in the <strong>Engine</strong> under <strong>src</strong> and place all your <strong>.java</strong> files containing the custom methods in it. <strong>This is the best practice to add your custom method.</strong></p>
-<p><img alt="package" src="/img/engine/1.JPG" title="package" /></p>
+<p><img alt="package" src="../../img/engine/1.JPG" title="package" /></p>
 <hr />
 <h3 id="how-to-use-your-custom-methods-in-the-ui-of-the-framework">How to use your custom method(s) in the UI of the framework?</h3>
 <p>You can create your custom method in the Engine (as explained in the above section) and <strong>export the Engine as a Jar file</strong> for the changes to be visible in the UI of the framework.</p>
@@ -7503,7 +7505,7 @@
 <p>Restart the framework to load the updated jar with new methods</p>
 </li>
 </ul>
-<p><img alt="export" src="/img/engine/export.gif" title="export" /></p>
+<p><img alt="export" src="../../img/engine/export.gif" title="export" /></p>
 <hr />
 <h3 id="how-to-test-your-custom-methods-by-runningdebugging-a-test-case-from-engine">How to test your custom method(s) by running/debugging a test case from Engine?</h3>
 <p>It is a best practice to run or debug your flow from the Engine, before exporting the jar. In case of any errors or exceptions, you can redesign your flow and finally export the jar once the errors have been fixed.</p>
@@ -7517,20 +7519,20 @@
 </li>
 </ul>
 <p>For example, if your custom method is added like this :</p>
-<p><img alt="addpackage" src="/img/engine/3.JPG" title="addpackage" /></p>
+<p><img alt="addpackage" src="../../img/engine/3.JPG" title="addpackage" /></p>
 <p>Navigate to the location where the framework is installed <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Go to <strong><code>Configuration</code></strong> folder <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Inside <strong><code>package.properties</code></strong> add the package name like this :</p>
-<p><img alt="addpackage" src="/img/engine/2.JPG" title="addpackage" /></p>
+<p><img alt="addpackage" src="../../img/engine/2.JPG" title="addpackage" /></p>
 <ul>
 <li>In the same <strong><code>Configuration</code></strong> folder <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Open the <strong><code>Global Settings.properties</code></strong> file and provide the details as shown in the image below:</li>
 </ul>
-<p><img alt="settings" src="/img/engine/4.JPG" title="settings" /></p>
+<p><img alt="settings" src="../../img/engine/4.JPG" title="settings" /></p>
 <ul>
 <li>For executing the test case with your custom method:</li>
 </ul>
 <p>Add the custom method name in the test case as shown below. It will show in <span style="color:Red"><strong>Red</strong></span> in the UI of the framework, but thats expected as you have not yet built a JAR file. You are only testing the custom method.</p>
-<p><img alt="control" src="/img/engine/6.JPG" title="control" /></p>
+<p><img alt="control" src="../../img/engine/6.JPG" title="control" /></p>
 <p>Run the <strong>control.java</strong> file from the <strong>com.ing.engine.core</strong> package.</p>
-<p><img alt="control" src="/img/engine/5.JPG" title="control" /></p>
+<p><img alt="control" src="../../img/engine/5.JPG" title="control" /></p>
 <ul>
 <li>You can also keep break points wherever required and debug the test case after triggering the execution form the <strong>control.java</strong> file.</li>
 </ul>

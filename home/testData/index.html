@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/home/testData/">
+      
       
         <link rel="prev" href="../knowyourframework/">
       
@@ -7696,7 +7698,7 @@
 <p>Datasheets may share the same names across the Project and Shared scopes. However, names must remain unique within each individual scope.</p>
 </li>
 </ul>
-<p><img alt="Test Data Scope" src="/img/home/testdata/testdata-proj-shared.gif" title="testdata-scope" /></p>
+<p><img alt="Test Data Scope" src="../../img/home/testdata/testdata-proj-shared.gif" title="testdata-scope" /></p>
 <h2 id="referencing-test-data-in-test-steps">Referencing Test Data in Test Steps</h2>
 <table>
 <thead>
@@ -7726,7 +7728,7 @@
 <li>Inside a larger value — a webservice payload, SQL text, a URL, a file template — a Test Data reference must be wrapped in curly braces to tell it apart from the surrounding text, for example <code>{Sheet:Column}</code> or <code>{Sheet:Column@Shared}</code>.</li>
 <li>An <strong>untagged</strong> or <code>@Project</code>-tagged reference only ever resolves against the project's own Test Data — it will never silently fall back to Shared Test Data. Only an explicit <code>@Shared</code> tag resolves against the Shared store.</li>
 </ul>
-<p><img alt="Test Data Reference" src="/img/home/testdata/testdata-reference.gif" title="testdata-reference" /></p>
+<p><img alt="Test Data Reference" src="../../img/home/testdata/testdata-reference.gif" title="testdata-reference" /></p>
 <h2 id="making-test-data-shared">Making Test Data Shared</h2>
 <p>A Project datasheet is promoted to Shared Test Data using <strong><code>Make As Shared TestData</code></strong>:</p>
 <ul>
@@ -7747,7 +7749,7 @@
 <li>If the same sheet name still exists in another environment of the project, its references are <strong>left untouched</strong> (retagging them would break that other environment) — INGenious warns you which sheets were only partially moved so you can move those environments too.</li>
 <li>A summary notification reports how many sheets moved, how many references were updated, and how many test cases were converted to Shared User Intents.</li>
 </ol>
-<p><img alt="Make As Shared" src="/img/home/testdata/make-as-shared-td.gif" title="makeAsShared" /></p>
+<p><img alt="Make As Shared" src="../../img/home/testdata/make-as-shared-td.gif" title="makeAsShared" /></p>
 <h2 id="importing-test-data">Importing Test Data</h2>
 <p>Use <strong>Test Data → Import TestData</strong> from the menu bar to import one or more CSV datasheets:</p>
 <ol>
@@ -7756,7 +7758,7 @@
 <li>Tick one or more target <strong>Environments</strong> (or <strong>Select all</strong>).</li>
 <li>Click <strong>Import</strong>. The file is imported into every checked environment; an environment that already has a sheet with the same name is skipped, and the outcome is reported in a notification.</li>
 </ol>
-<p><img alt="Import Testdata" src="/img/home/testdata/import-td.gif" title="import-testdata" /></p>
+<p><img alt="Import Testdata" src="../../img/home/testdata/import-td.gif" title="import-testdata" /></p>
 <h2 id="shared-environment-execution-setting">Shared Environment (Execution Setting)</h2>
 <p>Because Project and Shared Test Data are independent stores, a test run resolves them against <strong>two separate environment settings</strong> in Run Settings / Quick Settings:</p>
 <ul>
@@ -7764,7 +7766,7 @@
 <li><strong>Shared Environment</strong> – which Shared Test Data environment <code>@Shared</code> references resolve against.</li>
 </ul>
 <p>This lets a run use, for example, Project environment <code>QA</code> while resolving all <code>@Shared</code> references against Shared environment <code>Default</code>.</p>
-<p><img alt="Test Data Reference" src="/img/home/testdata/run-settings-td.png" title="testdata-reference" width="50%" /></p>
+<p><img alt="Test Data Reference" src="../../img/home/testdata/run-settings-td.png" title="testdata-reference" width="50%" /></p>
 <h2 id="renaming-and-deleting-shared-test-data">Renaming and Deleting Shared Test Data</h2>
 <p>Because a Shared datasheet or environment may be referenced by several different projects, INGenious checks the <code>projects.items</code> manifest before a destructive change and warns you if other projects depend on it, listing every project on disk that currently references it before you confirm the rename or delete.</p>
 <p>Review the listed projects before proceeding — test steps in other projects that reference the Shared datasheet by its old name will not resolve until they are updated.</p>

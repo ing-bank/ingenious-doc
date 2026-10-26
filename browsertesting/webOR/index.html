@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/browsertesting/webOR/">
+      
       
         <link rel="prev" href="../playwrightmocking/">
       
@@ -7627,28 +7629,28 @@
 <li>
 <p><strong>Project Web OR</strong></p>
 <p>Contains objects that <strong>can be used within the project</strong> and managed from the <code>Project</code> tab within the OR panel.</p>
-<p><img alt="ExampleProjectWebOR" src="/img/webOR/ProjectWebOR.png" title="ExampleProjectWebOR" /></p>
+<p><img alt="ExampleProjectWebOR" src="../../img/webOR/ProjectWebOR.png" title="ExampleProjectWebOR" /></p>
 <p><strong>For projects created before version 3.0</strong>, an <code>OR.object</code> file is automatically generated whenever a project containing Objects is saved. It stores the Page and Object attributes in XML format and is located inside the respective project directory.</p>
-<p><img alt="OR.object" src="/img/webOR/ORobject.png" title="OR.object" /></p>
+<p><img alt="OR.object" src="../../img/webOR/ORobject.png" title="OR.object" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory <code>&lt;ProjectName&gt;\ObjectRepository\Web\</code>.</p>
-<p><img alt="ProjWebORYAML" src="/img/webOR/ProjWebORYAML.png" title="ProjWebORYAML" /></p>
+<p><img alt="ProjWebORYAML" src="../../img/webOR/ProjWebORYAML.png" title="ProjWebORYAML" /></p>
 <p><strong>For projects loaded in version 3.0</strong>, legacy <code>.object</code> files are automatically converted to YAML and reorganized into the new folder structure. The original <code>.object</code> files are preserved as <code>.bak</code> files under <code>&lt;ProjectName&gt;\ProjectXMLOR\</code>.</p>
-<p><img alt="ProjWebORXMLconverted" src="/img/webOR/ProjWebORXMLconverted.png" title="ProjWebORXMLconverted" /></p>
+<p><img alt="ProjWebORXMLconverted" src="../../img/webOR/ProjWebORXMLconverted.png" title="ProjWebORXMLconverted" /></p>
 <p>When a Project Web Object (PWO) is used in a test step, the identifier <strong>[Project] PageName</strong> will show as its reference.</p>
-<p><img alt="PWOTestStep" src="/img/webOR/PWOTestStep.png" title="PWOTestStep" /></p>
+<p><img alt="PWOTestStep" src="../../img/webOR/PWOTestStep.png" title="PWOTestStep" /></p>
 </li>
 <li>
 <p><strong>Shared Web OR</strong></p>
 <p>Contains objects that <strong>can be used across different projects</strong> and are managed from the <code>Shared</code> tab within the OR panel.</p>
-<p><img alt="ExampleSharedWebOR" src="/img/webOR/SharedWebOR.png" title="ExampleSharedWebOR" /></p>
+<p><img alt="ExampleSharedWebOR" src="../../img/webOR/SharedWebOR.png" title="ExampleSharedWebOR" /></p>
 <p>Similar to Project WebOR, <strong>for projects created before version 3.0</strong>, a <code>SharedOR.object</code> file is automatically generated whenever a project saves Objects created under <code>Shared</code> or when Objects are copied from <code>Project</code> to <code>Shared</code>. Like <code>OR.object</code>, it stores Page and Object attributes in XML format and is located in the <code>Shared\SharedWebObjects\</code> directory.</p>
-<p><img alt="SharedOR.object" src="/img/webOR/SharedORObject.png" title="SharedOR.object" /></p>
+<p><img alt="SharedOR.object" src="../../img/webOR/SharedORObject.png" title="SharedOR.object" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page—either upon page creation under <code>Shared</code> or when pages or objects are moved from <code>Project</code> to <code>Shared</code>. This file contains the page’s objects and their corresponding attributes and is stored in the <code>Shared\SharedObjectRepository\Web</code> directory. The <code>webor-projectsdata.yaml</code> file maintains the list of projects that use the Shared Web Objects.</p>
-<p><img alt="SharedWebORYAML" src="/img/webOR/SharedWebORYAML.png" title="SharedWebORYAML" /></p>
+<p><img alt="SharedWebORYAML" src="../../img/webOR/SharedWebORYAML.png" title="SharedWebORYAML" /></p>
 <p><strong>For projects loaded in version 3.0</strong>, legacy <code>.object</code> files are automatically converted to YAML and reorganized into the new folder structure. The original <code>.object</code> files are preserved as <code>.bak</code> files under <code>Shared\SharedXMLOR\</code></p>
-<p><img alt="SharedWebORXMLconverted" src="/img/webOR/SharedWebORXMLconverted.png" title="SharedWebORXMLconverted" /></p>
+<p><img alt="SharedWebORXMLconverted" src="../../img/webOR/SharedWebORXMLconverted.png" title="SharedWebORXMLconverted" /></p>
 <p>When a Shared Web Object (SWO) is used in a test step, the identifier <strong>[Shared] PageName</strong> will show as its reference.</p>
-<p><img alt="SWOTestStep" src="/img/webOR/SWOTestStep.png" title="SWOTestStep" /></p>
+<p><img alt="SWOTestStep" src="../../img/webOR/SWOTestStep.png" title="SWOTestStep" /></p>
 </li>
 </ul>
 <h2 id="how-to-use-project-and-shared-web-or">How to use Project and Shared Web OR</h2>
@@ -7659,19 +7661,19 @@
 <li>
 <p>Objects from Project and Shared Web OR can be used in a single Test Scenario.</p>
 <p>For example:
-<img alt="ExampleTestScenario" src="/img/webOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
+<img alt="ExampleTestScenario" src="../../img/webOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
 </li>
 <li>
 <p><strong>For versions 2.4 and 2.4.1</strong>, Pages and Objects created under the <code>Project</code> tab can be copied to the <code>Shared</code> section by using the <code>Copy to Shared</code> option. When an entire Page is copied, all Objects under that Page—including their attributes—are copied. When copying a single Object, only that Object and its corresponding Page are copied. <em>Note that existing test steps using the Project‑level Web Object (PWO) will not be automatically updated to use the Shared Web Object (SWO).</em></p>
-<p><img alt="ExampleCopy" src="/img/webOR/ExampleCopy.gif" title="ExampleCopy" /></p>
+<p><img alt="ExampleCopy" src="../../img/webOR/ExampleCopy.gif" title="ExampleCopy" /></p>
 </li>
 <li>
 <p><strong>For version 3.0</strong>, <code>Copy to Shared</code> option is replaced by <code>Move to Shared</code> option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. <em>Note that existing test steps using the Project‑level Web Object (PWO) are automatically updated to use the Shared Web Object (SWO) within the project.</em></p>
-<p><img alt="ExampleMove" src="/img/webOR/ExampleMove.gif" title="ExampleMove" /></p>
+<p><img alt="ExampleMove" src="../../img/webOR/ExampleMove.gif" title="ExampleMove" /></p>
 </li>
 <li>
 <p>Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.</p>
-<p><img alt="ExampleSameNames" src="/img/webOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
+<p><img alt="ExampleSameNames" src="../../img/webOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
 </li>
 <li>
 <p>Pages and Objects in both the Project and Shared repositories can be renamed using the <code>Rename Page</code> or <code>Rename Object</code> options. After renaming, any existing test steps in the current project that previously referenced an SWO using the old name will be updated automatically.</p>
@@ -7681,7 +7683,7 @@
 </li>
 <li>
 <p>To view all test cases that reference an Object within the project, use the <code>Get Impacted Cases</code> option. This feature is available for both Project and Shared repositories.</p>
-<p><img alt="ExampleImpactedTC" src="/img/webOR/ExampleImpactedTC.png" title="ExampleImpactedTC" /></p>
+<p><img alt="ExampleImpactedTC" src="../../img/webOR/ExampleImpactedTC.png" title="ExampleImpactedTC" /></p>
 <p><em>Suggestion: Before renaming or deleting an object, please use the <code>Get Impacted TestCases</code> option for checking.</em></p>
 </li>
 </ul>

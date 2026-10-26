@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/customizations/cli/">
+      
       
         <link rel="prev" href="../engine/customfunction/">
       
@@ -9248,20 +9250,20 @@ Use [`ingenious server`](#) to use server commands. You can append [`--help`](#)
 <h3 id="legacy-override-settings">Legacy Override Settings</h3>
 <p><strong><code>-setEnv</code></strong> is a very powerful command to override all the environment settings and userdefined variables.
 This can override the values in all of these settings :</p>
-<p><img alt="settings" src="/img/cli/3.png" title="settings" /></p>
+<p><img alt="settings" src="../../img/cli/3.png" title="settings" /></p>
 <p>Lets look at the <code>Run Settings</code> for a Test Set. If we enter into the project location and navigate to the following location :</p>
 <p><code>Settings\TestExecution\</code>&lt;<code>ReleaseName</code>&gt;<code>\</code>&lt;<code>TestSetName</code>&gt; </p>
 <p>We will find the <code>RunSettings.Properties</code> and the <code>TestMgmtSettings.Properties</code> files.</p>
 <p>The <code>RunSettings.Properties</code> holds all the corresponding settings that we enter via the UI of the framework.</p>
-<p><img alt="runsettings" src="/img/cli/1.png" title="runsettings" /></p>
+<p><img alt="runsettings" src="../../img/cli/1.png" title="runsettings" /></p>
 <p>Any of these properties can be overriden by <strong><code>-setEnv</code></strong>. </p>
 <p>For Example: <code>-setEnv "run.TakeFullPageScreenShot=False"</code></p>
 <p>Similarly, if we go to the <strong>project location</strong> and navigate to <code>Settings\</code> directory, the <code>userDefinedSettings.Properties</code> holds all the corresponding data that we enter via the UI of the framework.</p>
-<p><img alt="usersettings" src="/img/cli/2.png" title="usersettings" /></p>
+<p><img alt="usersettings" src="../../img/cli/2.png" title="usersettings" /></p>
 <p>We can use by <strong><code>-setEnv</code></strong> to override these values too.</p>
 <p>For Example: <code>-setEnv "user.Key1=NewValue1"</code></p>
 <p>Similarly, if we go to the <strong>project location</strong> and navigate to <code>Settings\</code> directory, the <code>KafkaSSLConfigurations.Properties</code> holds all the corresponding data that we enter via the UI of the framework.</p>
-<p><img alt="kafkasettings" src="/img/cli/4.png" title="kafkasettings" /></p>
+<p><img alt="kafkasettings" src="../../img/cli/4.png" title="kafkasettings" /></p>
 <p>We can use by <strong><code>-setEnv</code></strong> to override these values too.</p>
 <p>For Example: <code>-setEnv "kafkaSSl.Producer_Key_Password=P@ssw0rd"</code></p>
 <p>For the following settings, <strong><code>-setEnv</code></strong> can be used as follows :</p>

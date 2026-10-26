@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/mobiletesting/mobileOR/">
+      
       
         <link rel="prev" href="../mobileActions/wait/">
       
@@ -7623,28 +7625,28 @@
 <li>
 <p><strong>Project Mobile OR</strong></p>
 <p>Contains mobile objects that <strong>can be used within the project</strong> and managed from the <code>Project</code> tab within the OR panel.</p>
-<p><img alt="ExampleProjectMobileOR" src="/img/mobileOR/ProjectMobileOR.png" title="ExampleProjectMobileOR" /></p>
+<p><img alt="ExampleProjectMobileOR" src="../../img/mobileOR/ProjectMobileOR.png" title="ExampleProjectMobileOR" /></p>
 <p><strong>For projects created before version 3.0</strong>, an <code>MOR.object</code> file is automatically generated whenever a project containing Objects is saved. It stores the Page and Object attributes in XML format and is located inside the respective project directory.</p>
-<p><img alt="MOR.object" src="/img/mobileOR/MORobject.png" title="MOR.object" /></p>
+<p><img alt="MOR.object" src="../../img/mobileOR/MORobject.png" title="MOR.object" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory <code>&lt;ProjectName&gt;\ObjectRepository\Mobile\</code></p>
-<p><img alt="ProjMobileORYAML" src="/img/mobileOR/ProjMobileORYAML.png" title="ProjMobileORYAML" /></p>
+<p><img alt="ProjMobileORYAML" src="../../img/mobileOR/ProjMobileORYAML.png" title="ProjMobileORYAML" /></p>
 <p><strong>For projects loaded in version 3.0</strong>, legacy <code>.object</code> files are automatically converted to YAML and reorganized into the new folder structure. The original <code>.object</code> files are preserved as <code>.bak</code> files under <code>&lt;ProjectName&gt;\ProjectXMLOR\.</code></p>
-<p><img alt="ProjMobileORXMLconverted" src="/img/mobileOR/ProjMobileORXMLconverted.png" title="ProjMobileORXMLconverted" /></p>
+<p><img alt="ProjMobileORXMLconverted" src="../../img/mobileOR/ProjMobileORXMLconverted.png" title="ProjMobileORXMLconverted" /></p>
 <p>When a Project Mobile Object (PMO) is used in a test step, the identifier <strong>[Project] PageName</strong> will show as its reference.</p>
-<p><img alt="PMOTestStep" src="/img/mobileOR/PMOTestStep.png" title="PMOTestStep" /></p>
+<p><img alt="PMOTestStep" src="../../img/mobileOR/PMOTestStep.png" title="PMOTestStep" /></p>
 </li>
 <li>
 <p><strong>Shared Mobile OR</strong></p>
 <p>Contains mobile objects that <strong>can be used across different projects</strong> and are managed from the <code>Shared</code> tab within the OR panel.</p>
-<p><img alt="ExampleSharedMobileOR" src="/img/mobileOR/SharedMobileOR.png" title="ExampleSharedMobileOR" /></p>
+<p><img alt="ExampleSharedMobileOR" src="../../img/mobileOR/SharedMobileOR.png" title="ExampleSharedMobileOR" /></p>
 <p>Similar to Project MobileOR, <strong>for projects created before version 3.0</strong>, a <code>SharedMobileOR.object</code> file is automatically generated whenever a project saves Objects created under <code>Shared</code> or when Objects are copied from <code>Project</code> to <code>Shared</code>. Like <code>MobileOR.object</code>, it stores Page and Object attributes in XML format and is located in the <code>Shared\SharedMobileObjects\</code> directory.</p>
-<p><img alt="SharedMOR.object" src="/img/mobileOR/SharedMORObject.png" title="SharedMOR.object" /></p>
+<p><img alt="SharedMOR.object" src="../../img/mobileOR/SharedMORObject.png" title="SharedMOR.object" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page—either upon page creation under <code>Shared</code> or when pages or objects are moved from <code>Project</code> to <code>Shared</code>. This file contains the page’s objects and their corresponding attributes and is stored in the <code>Shared\SharedObjectRepository\Mobile</code> directory. The <code>mobileor-projectsdata.yaml</code> file maintains the list of projects that use the Shared Mobile Objects.</p>
-<p><img alt="SharedMobileORYAML" src="/img/mobileOR/SharedMobileORYAML.png" title="SharedMobileORYAML" /></p>
+<p><img alt="SharedMobileORYAML" src="../../img/mobileOR/SharedMobileORYAML.png" title="SharedMobileORYAML" /></p>
 <p><strong>For projects loaded in version 3.0</strong>, legacy <code>.object</code> files are automatically converted to YAML and reorganized into the new folder structure. The original <code>.object</code> files are preserved as <code>.bak</code> files under <code>Shared\SharedXMLOR\</code></p>
-<p><img alt="SharedMobileORXMLconverted" src="/img/mobileOR/SharedMobileORXMLconverted.png" title="SharedMobileORXMLconverted" /></p>
+<p><img alt="SharedMobileORXMLconverted" src="../../img/mobileOR/SharedMobileORXMLconverted.png" title="SharedMobileORXMLconverted" /></p>
 <p>When a Shared Mobile Object (SMO) is used in a test step, the identifier <strong>[Shared] PageName</strong> will show as its reference.</p>
-<p><img alt="SMOTestStep" src="/img/mobileOR/SMOTestStep.png" title="SMOTestStep" /></p>
+<p><img alt="SMOTestStep" src="../../img/mobileOR/SMOTestStep.png" title="SMOTestStep" /></p>
 </li>
 </ul>
 <h2 id="how-to-use-project-and-shared-mobile-or">How to use Project and Shared Mobile OR</h2>
@@ -7655,19 +7657,19 @@
 <li>
 <p>Objects from Project and Shared Mobile OR can be used in a single Test Scenario.</p>
 <p>For example:
-<img alt="ExampleTestScenario" src="/img/mobileOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
+<img alt="ExampleTestScenario" src="../../img/mobileOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
 </li>
 <li>
 <p><strong>For versions 2.4 and 2.4.1</strong>, Pages and Objects created under the <code>Project</code> tab can be copied to the <code>Shared</code> section by using the <code>Copy to Shared</code> option. When an entire Page is copied, all Objects under that Page—including their attributes—are copied. When copying a single Object, only that Object and its corresponding Page are copied. <em>Note that existing test steps using the Project‑level Mobile Object (PMO) will not be automatically updated to use the Shared Mobiles Object (SMO).</em></p>
-<p><img alt="ExampleCopyMobile" src="/img/mobileOR/ExampleCopyMobile.gif" title="ExampleCopyMobile" /></p>
+<p><img alt="ExampleCopyMobile" src="../../img/mobileOR/ExampleCopyMobile.gif" title="ExampleCopyMobile" /></p>
 </li>
 <li>
 <p><strong>For version 3.0</strong>, <code>Copy to Shared</code> option is replaced by <code>Move to Shared</code> option. When an entire Page is moved, all Objects under that Page—including their attributes—are moved. When moving a single Object, only that Object and its corresponding Page are moved. <em>Note that existing test steps using the Project‑level Mobile Object (PMO) are automatically updated to use the Shared Mobile Object (SMO) within the project.</em></p>
-<p><img alt="ExampleMoveMobile" src="/img/mobileOR/ExampleMoveMobile.gif" title="ExampleMoveMobile" /></p>
+<p><img alt="ExampleMoveMobile" src="../../img/mobileOR/ExampleMoveMobile.gif" title="ExampleMoveMobile" /></p>
 </li>
 <li>
 <p>Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.</p>
-<p><img alt="ExampleSameNames" src="/img/mobileOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
+<p><img alt="ExampleSameNames" src="../../img/mobileOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
 </li>
 <li>
 <p>Pages and Objects in both the Project and Shared repositories can be renamed using the <code>Rename Page</code> or <code>Rename Object</code> options. After renaming, any existing test steps in the current project that previously referenced an SMO using the old name will be updated automatically.</p>
@@ -7677,7 +7679,7 @@
 </li>
 <li>
 <p>To view all test cases that reference an Object within the project, use the <code>Get Impacted Cases</code> option. This feature is available for both Project and Shared repositories.</p>
-<p><img alt="ExampleImpactedTC" src="/img/mobileOR/ExampleImpactedTC.png" title="ExampleImpactedTC" /></p>
+<p><img alt="ExampleImpactedTC" src="../../img/mobileOR/ExampleImpactedTC.png" title="ExampleImpactedTC" /></p>
 <p><em>Suggestion: Before renaming or deleting an object, please use the <code>Get Impacted Cases</code> option for checking.</em></p>
 </li>
 </ul>

@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/browsertesting/playwrightauthenticate/">
+      
       
         <link rel="prev" href="../multiplebrowsercontexts/">
       
@@ -7505,10 +7507,10 @@
 <p><span style="color:Green">There are 2 interesting Authentication techniques in INGenious Playwright Studio</span></p>
 <hr />
 <h2 id="basic-authentication">Basic Authentication</h2>
-<p><img alt="basicAuth" src="/img/specialfeatures/BasicAuth.png" title="basicAuth" /></p>
+<p><img alt="basicAuth" src="../../img/specialfeatures/BasicAuth.png" title="basicAuth" /></p>
 <p>When working with Basic authentication prompts, which are browser based popups, it is advisable to instantiate an "authenticated" playwright browser context.
 In INGenious Playwright Studio, you can do this, by simply navigating to <strong>Browser Configuration</strong> &gt;&gt; <strong>Context Configurations</strong> and then fill up the details as below :</p>
-<p><img alt="basicAuth1" src="/img/specialfeatures/BasicAuth1.png" title="basicAuth1" width="50%" /></p>
+<p><img alt="basicAuth1" src="../../img/specialfeatures/BasicAuth1.png" title="basicAuth1" width="50%" /></p>
 <p>After this, you can simply add a test step like :</p>
 <p><code>Browser</code> <code>Open</code> <code>@yourURL</code></p>
 <p>You will see, your browser gets logged in to the system without the actual prompts as shown above.</p>
@@ -7516,7 +7518,7 @@ In INGenious Playwright Studio, you can do this, by simply navigating to <strong
 <p>Playwright executes tests in isolated environments called browser contexts. This isolation model improves reproducibility and prevents cascading test failures. Tests can load existing authenticated state. This eliminates the need to authenticate in every test and speeds up test execution.</p>
 <p><strong>Signing in before each test</strong></p>
 <p>The following example logs into an application. Once these steps are executed, the browser context will be authenticated.</p>
-<p><img alt="Login" src="/img/specialfeatures/Login.png" title="Login" /></p>
+<p><img alt="Login" src="../../img/specialfeatures/Login.png" title="Login" /></p>
 <p>Redoing login for every test can slow down test execution. To mitigate that, reuse existing authentication state instead.</p>
 <p>The last step (<code>StoreStorageState</code>) in the above example, stores the authenticated state in a file <code>a.json</code></p>
 <p><strong>Reusing signed in state</strong></p>
@@ -7524,7 +7526,7 @@ In INGenious Playwright Studio, you can do this, by simply navigating to <strong
 <p>Web apps use cookie-based or token-based authentication, where authenticated state is stored as cookies or in local storage. Playwright provides BrowserContext.storageState() method that can be used to retrieve storage state from authenticated contexts and then create new contexts with pre-populated state.</p>
 <p>Cookies and local storage state can be used across different browsers. They depend on your application's authentication model: some apps might require both cookies and local storage.</p>
 <p>The following setting snippet retrieves state from an authenticated context and creates a new context with that state.</p>
-<p><img alt="authenticate" src="/img/specialfeatures/Authenticate.png" title="authenticate" width="50%" /></p>
+<p><img alt="authenticate" src="../../img/specialfeatures/Authenticate.png" title="authenticate" width="50%" /></p>
 
 
 

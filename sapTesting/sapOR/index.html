@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/sapTesting/sapOR/">
+      
       
         <link rel="prev" href="../actions/assert/">
       
@@ -7587,24 +7589,24 @@
 <li>
 <p><strong>Project SAP OR</strong></p>
 <p>Contains SAP objects that <strong>can be used within the project</strong> and managed from the <code>Project</code> tab within the OR panel.</p>
-<p><img alt="ExampleProjectSAPOR" src="/img/sapOR/ProjectSAPOR.png" title="ExampleProjectSAPOR" width="20%" /></p>
+<p><img alt="ExampleProjectSAPOR" src="../../img/sapOR/ProjectSAPOR.png" title="ExampleProjectSAPOR" width="20%" /></p>
 <p><strong>For projects created before version 3.0</strong>, an <code>SapOR.object</code> file is automatically generated whenever a project containing Objects is saved. It stores the Page and Object attributes in XML format and is located inside the respective project directory.</p>
-<p><img alt="SOR.object" src="/img/sapOR/SapORobject.png" title="SapOR.object" width="20%" /></p>
+<p><img alt="SOR.object" src="../../img/sapOR/SapORobject.png" title="SapOR.object" width="20%" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page at the time of page creation. This file contains the objects within the page along with their corresponding attributes and is stored in the project’s directory <code>&lt;ProjectName&gt;\ObjectRepository\SAP\</code></p>
-<p><img alt="ProjSAPORYAML" src="/img/sapOR/ProjSapORYAML.png" title="ProjSAPORYAML" width="20%" /></p>
+<p><img alt="ProjSAPORYAML" src="../../img/sapOR/ProjSapORYAML.png" title="ProjSAPORYAML" width="20%" /></p>
 <p><strong>For projects loaded in version 3.0</strong>, legacy <code>.object</code> files are automatically converted to YAML and reorganized into the new folder structure. The original <code>.object</code> files are preserved as <code>.bak</code> files under <code>&lt;ProjectName&gt;\ProjectXMLOR\.</code></p>
-<p><img alt="ProjSAPORXMLconverted" src="/img/sapOR/ProjSapORXMLconverted.png" title="ProjSAPORXMLconverted" width="25%" /></p>
+<p><img alt="ProjSAPORXMLconverted" src="../../img/sapOR/ProjSapORXMLconverted.png" title="ProjSAPORXMLconverted" width="25%" /></p>
 <p>When a Project SAP Object (PSPO) is used in a test step, the identifier <strong>[Project] PageName</strong> will show as its reference.</p>
-<p><img alt="PSOTestStep" src="/img/sapOR/PSPOTestStep.png" title="PSPOTestStep" /></p>
+<p><img alt="PSOTestStep" src="../../img/sapOR/PSPOTestStep.png" title="PSPOTestStep" /></p>
 </li>
 <li>
 <p><strong>Shared SAP OR</strong></p>
 <p>Contains SAP objects that <strong>can be used across different projects</strong> and are managed from the <code>Shared</code> tab within the OR panel.</p>
-<p><img alt="ExampleSharedSAPOR" src="/img/sapOR/SharedSapOR.png" title="ExampleSharedSapOR" width="25%" /></p>
+<p><img alt="ExampleSharedSAPOR" src="../../img/sapOR/SharedSapOR.png" title="ExampleSharedSapOR" width="25%" /></p>
 <p><strong>For projects created in version 3.0</strong>, a YAML file is automatically generated for each page—either upon page creation under <code>Shared</code> or when pages or objects are moved from <code>Project</code> to <code>Shared</code>. This file contains the page’s objects and their corresponding attributes and is stored in the <code>Shared\SharedObjectRepository\SAP</code> directory. The <code>sapor-projectsdata.yaml</code> file maintains the list of projects that use the Shared SAP Objects.</p>
-<p><img alt="SharedSAPORYAML" src="/img/sapOR/SharedSAPORYAML.png" title="SharedSAPORYAML" width="20%" /></p>
+<p><img alt="SharedSAPORYAML" src="../../img/sapOR/SharedSAPORYAML.png" title="SharedSAPORYAML" width="20%" /></p>
 <p>When a Shared SAP Object (SSPO) is used in a test step, the identifier <strong>[Shared] PageName</strong> will show as its reference.</p>
-<p><img alt="SSOTestStep" src="/img/sapOR/SSPOTestStep.png" title="SSPOTestStep" /></p>
+<p><img alt="SSOTestStep" src="../../img/sapOR/SSPOTestStep.png" title="SSPOTestStep" /></p>
 </li>
 </ul>
 <h2 id="how-to-use-project-and-shared-sap-or">How to use Project and Shared SAP OR</h2>
@@ -7615,15 +7617,15 @@
 <li>
 <p>Objects from Project and Shared SAP OR can be used in a single Test Scenario.</p>
 <p>For example:
-<img alt="ExampleTestScenario" src="/img/sapOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
+<img alt="ExampleTestScenario" src="../../img/sapOR/ExampleTestScenario.png" title="ExampleTestScenario" /></p>
 </li>
 <li>
 <p><strong>For version 3.0</strong>, the <code>Move to Shared</code> option is introduced as a new feature for SAP. This allows you to move an entire Page (along with all its Objects and attributes) or a single Object (and its corresponding Page) from the Project repository to the Shared repository. <em>Note: Existing test steps that reference a Project-level SAP Object (PSPO) will be automatically updated to use the Shared SAP Object (SSPO) after moving within the opened project.</em></p>
-<p><img alt="ExampleMoveSAP" src="/img/sapOR/ExampleMoveSAP.gif" title="ExampleMoveSAP" /></p>
+<p><img alt="ExampleMoveSAP" src="../../img/sapOR/ExampleMoveSAP.gif" title="ExampleMoveSAP" /></p>
 </li>
 <li>
 <p>Pages and Objects may share the same names across the Project and Shared repositories. However, names must remain unique within each individual repository.</p>
-<p><img alt="ExampleSameNames" src="/img/sapOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
+<p><img alt="ExampleSameNames" src="../../img/sapOR/ExampleSameNames.png" title="ExampleSameNames" /></p>
 </li>
 <li>
 <p>Pages and Objects in both the Project and Shared repositories can be renamed using the <code>Rename Page</code> or <code>Rename Object</code> options. However, after renaming, any existing test steps that previously referenced an SSPO will continue to use its old name, which may result in errors during test execution.</p>
@@ -7633,7 +7635,7 @@
 </li>
 <li>
 <p>To view all test cases that reference an Object within the project, use the <code>Get Impacted Cases</code> option. This feature is available for both Project and Shared repositories.</p>
-<p><img alt="ExampleImpactedTC" src="/img/sapOR/ExampleImpactedTC.png" title="ExampleImpactedTC" width="45%" /></p>
+<p><img alt="ExampleImpactedTC" src="../../img/sapOR/ExampleImpactedTC.png" title="ExampleImpactedTC" width="45%" /></p>
 <p><em>Suggestion: Before renaming or deleting an object, please use the <code>Get Impacted Cases</code> option for checking.</em></p>
 </li>
 </ul>

@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ing-bank.github.io/ingenious-doc/browsertesting/playwrightlocatorstrategy/">
+      
       
         <link rel="prev" href="../">
       
@@ -7709,7 +7711,7 @@
 <summary>Role</summary>
 <h3 id="locate-by-role"><strong>Locate by Role</strong></h3>
 <p>Consider this DOM example :</p>
-<p><img alt="role1" src="/img/playwrightLocators/role1.JPG" title="role1" /></p>
+<p><img alt="role1" src="../../img/playwrightLocators/role1.JPG" title="role1" /></p>
 <p>You can locate each element by its implicit role:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/31-20e3.svg" title=":one:" /> Heading</label><label for="__tabbed_1_2"><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/32-20e3.svg" title=":two:" /> Subscribe checkbox</label><label for="__tabbed_1_3"><img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/33-20e3.svg" title=":three:" /> Submit Button</label></div>
 <div class="tabbed-content">
@@ -7717,19 +7719,19 @@
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByRole</span><span class="p">(</span><span class="n">AriaRole</span><span class="p">.</span><span class="na">HEADING</span><span class="p">,</span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByRoleOptions</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">"Sign up"</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="role2" src="/img/playwrightLocators/role2.JPG" title="role2" /></p>
+<p><img alt="role2" src="../../img/playwrightLocators/role2.JPG" title="role2" /></p>
 </div>
 <div class="tabbed-block">
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByRole</span><span class="p">(</span><span class="n">AriaRole</span><span class="p">.</span><span class="na">CHECKBOX</span><span class="p">,</span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByRoleOptions</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">"Subscribe"</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="role3" src="/img/playwrightLocators/role3.JPG" title="role3" /></p>
+<p><img alt="role3" src="../../img/playwrightLocators/role3.JPG" title="role3" /></p>
 </div>
 <div class="tabbed-block">
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByRole</span><span class="p">(</span><span class="n">AriaRole</span><span class="p">.</span><span class="na">BUTTON</span><span class="p">,</span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByRoleOptions</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">"Submit"</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="role4" src="/img/playwrightLocators/role4.JPG" title="role4" /></p>
+<p><img alt="role4" src="../../img/playwrightLocators/role4.JPG" title="role4" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7742,7 +7744,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByRole</span><span class="p">(</span><span class="n">AriaRole</span><span class="p">.</span><span class="na">BUTTON</span><span class="p">,</span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByRoleOptions</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">"Submit"</span><span class="p">).</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="role5" src="/img/playwrightLocators/role5.JPG" title="role5" /></p>
+<p><img alt="role5" src="../../img/playwrightLocators/role5.JPG" title="role5" /></p>
 </div>
 </div>
 </div>
@@ -7752,7 +7754,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <summary>Label</summary>
 <h3 id="locate-by-label"><strong>Locate by Label</strong></h3>
 <p>Consider this DOM example :</p>
-<p><img alt="label1" src="/img/playwrightLocators/label1.JPG" title="label1" /></p>
+<p><img alt="label1" src="../../img/playwrightLocators/label1.JPG" title="label1" /></p>
 <p>You can locate the element by the label text:</p>
 <ul>
 <li>Password Input Box</li>
@@ -7760,7 +7762,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByLabel</span><span class="p">(</span><span class="s">"Password"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="label2" src="/img/playwrightLocators/label2.JPG" title="label2" /></p>
+<p><img alt="label2" src="../../img/playwrightLocators/label2.JPG" title="label2" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7773,14 +7775,14 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByLabel</span><span class="p">(</span><span class="s">"Address"</span><span class="p">,</span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByLabelOptions</span><span class="p">().</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="label3" src="/img/playwrightLocators/label3.JPG" title="label3" /></p>
+<p><img alt="label3" src="../../img/playwrightLocators/label3.JPG" title="label3" /></p>
 </details>
 <hr />
 <details class="note">
 <summary>Placeholder</summary>
 <h3 id="locate-by-placeholder">Locate by Placeholder</h3>
 <p>Consider this DOM example :</p>
-<p><img alt="placeholder1" src="/img/playwrightLocators/placeholder1.JPG" title="placeholder1" /></p>
+<p><img alt="placeholder1" src="../../img/playwrightLocators/placeholder1.JPG" title="placeholder1" /></p>
 <p>You can locate the element by the placeholder text:</p>
 <ul>
 <li>Input Box</li>
@@ -7788,7 +7790,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByPlaceholder</span><span class="p">(</span><span class="s">"name@example.com"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="placeholder2" src="/img/playwrightLocators/placeholder2.JPG" title="placeholder2" /></p>
+<p><img alt="placeholder2" src="../../img/playwrightLocators/placeholder2.JPG" title="placeholder2" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7801,14 +7803,14 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByPlaceholder</span><span class="p">(</span><span class="s">"Email"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByPlaceholderOptions</span><span class="p">().</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="placeholder3" src="/img/playwrightLocators/placeholder3.JPG" title="placeholder3" /></p>
+<p><img alt="placeholder3" src="../../img/playwrightLocators/placeholder3.JPG" title="placeholder3" /></p>
 </details>
 <hr />
 <details class="note">
 <summary>Text</summary>
 <h3 id="locate-by-text">Locate by Text</h3>
 <p>Consider this DOM example :</p>
-<p><img alt="text1" src="/img/playwrightLocators/text1.JPG" title="text1" /></p>
+<p><img alt="text1" src="../../img/playwrightLocators/text1.JPG" title="text1" /></p>
 <p>You can locate the element by the text it contains:</p>
 <ul>
 <li>Span</li>
@@ -7816,7 +7818,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByText</span><span class="p">(</span><span class="s">"Welcome, John"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="text2" src="/img/playwrightLocators/text2.JPG" title="text2" /></p>
+<p><img alt="text2" src="../../img/playwrightLocators/text2.JPG" title="text2" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7829,14 +7831,14 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByText</span><span class="p">(</span><span class="s">"Welcome"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByTextOptions</span><span class="p">().</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="text3" src="/img/playwrightLocators/text3.JPG" title="text3" /></p>
+<p><img alt="text3" src="../../img/playwrightLocators/text3.JPG" title="text3" /></p>
 </details>
 <hr />
 <details class="note">
 <summary>Alt Text</summary>
 <h3 id="locate-by-alt-text">Locate by Alt Text</h3>
 <p>Consider this DOM example :</p>
-<p><img alt="alttext1" src="/img/playwrightLocators/alttext1.JPG" title="alttext1" /></p>
+<p><img alt="alttext1" src="../../img/playwrightLocators/alttext1.JPG" title="alttext1" /></p>
 <p>You can locate the element by the alt text:</p>
 <ul>
 <li>Image</li>
@@ -7844,7 +7846,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByAltText</span><span class="p">(</span><span class="s">"playwright logo"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="alttext2" src="/img/playwrightLocators/alttext2.JPG" title="alttext2" /></p>
+<p><img alt="alttext2" src="../../img/playwrightLocators/alttext2.JPG" title="alttext2" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7857,14 +7859,14 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByAltText</span><span class="p">(</span><span class="s">"ING"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByAltTextOptions</span><span class="p">().</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="alttext3" src="/img/playwrightLocators/alttext3.JPG" title="alttext3" /></p>
+<p><img alt="alttext3" src="../../img/playwrightLocators/alttext3.JPG" title="alttext3" /></p>
 </details>
 <hr />
 <details class="note">
 <summary>Title</summary>
 <h3 id="locate-by-title">Locate by Title</h3>
 <p>Consider this DOM example :</p>
-<p><img alt="title1" src="/img/playwrightLocators/title1.JPG" title="title1" /></p>
+<p><img alt="title1" src="../../img/playwrightLocators/title1.JPG" title="title1" /></p>
 <p>You can locate the element by the title :</p>
 <ul>
 <li>Image</li>
@@ -7872,7 +7874,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByTitle</span><span class="p">(</span><span class="s">"Issues count"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="title2" src="/img/playwrightLocators/title2.JPG" title="title2" /></p>
+<p><img alt="title2" src="../../img/playwrightLocators/title2.JPG" title="title2" /></p>
 <ul>
 <li><code>Exact</code> Option</li>
 </ul>
@@ -7885,14 +7887,14 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByTitle</span><span class="p">(</span><span class="s">"Payments"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="p">.</span><span class="na">GetByTitleOptions</span><span class="p">().</span><span class="na">setExact</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="title3" src="/img/playwrightLocators/title3.JPG" title="title3" /></p>
+<p><img alt="title3" src="../../img/playwrightLocators/title3.JPG" title="title3" /></p>
 </details>
 <hr />
 <details class="note">
 <summary>Test Id</summary>
 <h3 id="locate-by-test-id">Locate by Test Id</h3>
 <p>Consider this DOM example :</p>
-<p><img alt="testid1" src="/img/playwrightLocators/testid1.JPG" title="testid1" /></p>
+<p><img alt="testid1" src="../../img/playwrightLocators/testid1.JPG" title="testid1" /></p>
 <p>You can locate the element by the title :</p>
 <ul>
 <li>Button</li>
@@ -7900,7 +7902,7 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByTestId</span><span class="p">(</span><span class="s">"directions"</span><span class="p">)</span>
 </span></code></pre></div>
 In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="testid2" src="/img/playwrightLocators/testid2.JPG" title="testid2" /></p>
+<p><img alt="testid2" src="../../img/playwrightLocators/testid2.JPG" title="testid2" /></p>
 </details>
 <hr />
 <details class="note">
@@ -7910,12 +7912,12 @@ In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
 <li>For CSS :</li>
 </ul>
 <p>In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="css" src="/img/playwrightLocators/css.JPG" title="css" /></p>
+<p><img alt="css" src="../../img/playwrightLocators/css.JPG" title="css" /></p>
 <ul>
 <li>For Xpath :</li>
 </ul>
 <p>In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="xpath" src="/img/playwrightLocators/xpath.JPG" title="xpath" /></p>
+<p><img alt="xpath" src="../../img/playwrightLocators/xpath.JPG" title="xpath" /></p>
 </details>
 <hr />
 <details class="note">
@@ -7937,7 +7939,7 @@ You can locate in the same way as if the shadow root was not present at all.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">page</span><span class="p">.</span><span class="na">getByText</span><span class="p">(</span><span class="s">"Details"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="shadowDom" src="/img/playwrightLocators/shadowdom.JPG" title="shadowDom" /></p>
+<p><img alt="shadowDom" src="../../img/playwrightLocators/shadowdom.JPG" title="shadowDom" /></p>
 </details>
 <hr />
 <details class="note">
@@ -7948,9 +7950,9 @@ You can locate in the same way as if the shadow root was not present at all.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">page</span><span class="p">.</span><span class="na">frameLocator</span><span class="p">(</span><span class="s">"iframe[name='firstFr']"</span><span class="p">).</span><span class="na">getByPlaceholder</span><span class="p">(</span><span class="s">"Enter name"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In <strong>INGenious Playwright Studio</strong>, you will add it as this :</p>
-<p><img alt="singleframe" src="/img/playwrightLocators/singleframe.JPG" title="singleframe" /></p>
+<p><img alt="singleframe" src="../../img/playwrightLocators/singleframe.JPG" title="singleframe" /></p>
 <p>If there are nested frames, then just add the frame locators separated by semicolon, in the Frame box :</p>
-<p><img alt="multipleframes" src="/img/playwrightLocators/multipleframes.JPG" title="multipleframes" /></p>
+<p><img alt="multipleframes" src="../../img/playwrightLocators/multipleframes.JPG" title="multipleframes" /></p>
 </details>
 <hr />
 <details class="note">
