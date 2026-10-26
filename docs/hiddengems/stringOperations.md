@@ -42,7 +42,7 @@
 
     **Sample Test Case:**
 
-    ![Concat Examples](/img/stringoperations/Concat-1.png "examples")
+    ![Concat Examples](../img/stringoperations/Concat-1.png "examples")
 
 -----------------------------------------------------
 
@@ -70,7 +70,7 @@
 
     **Sample Test Case:**
 
-    ![GetLength Examples](/img/stringoperations/GetLength-1.png "examples")
+    ![GetLength Examples](../img/stringoperations/GetLength-1.png "examples")
 
 -----------------------------------------------------
 
@@ -100,7 +100,7 @@
 
     **Sample Test Case:**
 
-    ![GetOccurence Examples](/img/stringoperations/GetOccurence-1.png "examples")
+    ![GetOccurence Examples](../img/stringoperations/GetOccurence-1.png "examples")
 
 -----------------------------------------------------
 
@@ -143,7 +143,7 @@
 
     **Sample Test Case:**
 
-    ![Replace Examples](/img/stringoperations/Replace-1.png "examples")
+    ![Replace Examples](../img/stringoperations/Replace-1.png "examples")
 
 -----------------------------------------------------
 
@@ -180,7 +180,7 @@
 
     **Sample Test Case:**
 
-    ![Split Examples](/img/stringoperations/Split-1.png "examples")
+    ![Split Examples](../img/stringoperations/Split-1.png "examples")
 
 -----------------------------------------------------
     
@@ -215,7 +215,7 @@
 
     **Sample Test Case:**
 
-    ![Substring Examples](/img/stringoperations/Substring-1.png "examples")
+    ![Substring Examples](../img/stringoperations/Substring-1.png "examples")
 
 -----------------------------------------------------
 
@@ -243,7 +243,7 @@
 
     **Sample Test Case:**
 
-    ![ToLower Examples](/img/stringoperations/ToLower-1.png "examples")
+    ![ToLower Examples](../img/stringoperations/ToLower-1.png "examples")
 
 -----------------------------------------------------
     
@@ -271,7 +271,7 @@
 
     **Sample Test Case:**
 
-    ![ToUpper Examples](/img/stringoperations/ToUpper-1.png "examples")
+    ![ToUpper Examples](../img/stringoperations/ToUpper-1.png "examples")
 
 -----------------------------------------------------
     
@@ -299,6 +299,6 @@
 
     **Sample Test Case:**
 
-    ![Trim Examples](/img/stringoperations/Trim-1.png "examples")
+    ![Trim Examples](../img/stringoperations/Trim-1.png "examples")
 
 -------------------------

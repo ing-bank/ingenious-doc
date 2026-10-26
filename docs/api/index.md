@@ -17,10 +17,10 @@
 
 * To set up an API configuration in INGenious, follow the steps below:
 
-    - Click on the Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+    - Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
     - Under **API Configurations** you will see the `API Alias` as `default`. Change the values as per requirement.
 
-        ![apiDefault](/img/configurations/api_configurations_default.png "apiDefault"){ width="60%" }
+        ![apiDefault](../img/configurations/api_configurations_default.png "apiDefault"){ width="60%" }
 
 ??? note "API Configurations"
 
@@ -49,11 +49,11 @@
 
 To create a new API configuration, follow the steps below :
 
-* Click on the Configuration icon ![browserConfig](/img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
+* Click on the Configuration icon ![browserConfig](../img/toolui/BrowserConfiguration.png "browserConfig"){ width="20px" }
 
-* Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](/img/toolui/addIcon.png "add"){ width="20px" } icon.
+* Inside the **API Configurations** tab, Enter the `API Alias` and hit ++enter++ . Alternatively you can also click on the ![add](../img/toolui/addIcon.png "add"){ width="20px" } icon.
 
-     ![apinewconfig](/img/configurations/api_configurations_new.png "apinewconfig"){ width="60%" }
+     ![apinewconfig](../img/configurations/api_configurations_new.png "apinewconfig"){ width="60%" }
 
 * A new set of API configurations with default values will be added below.
 
@@ -64,17 +64,17 @@ To create a new API configuration, follow the steps below :
 * INGenious allows users to add API properties thru the API Configurations window. 
 !!! important "Handling and integration of these configurations on the backend is the responsibility of the user."
     
-![addAndRemovePropertyButtons](/img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons"){ width="60%" }
+![addAndRemovePropertyButtons](../img/configurations/api_config_add_remove_prop.png "addAndRemovePropertyButtons"){ width="60%" }
 
 * Add a new property 
-    1. Click the **Add Property** button ![addProperty](/img/toolui/add.png "addProperty"){ width="20px" }.
+    1. Click the **Add Property** button ![addProperty](../img/toolui/add.png "addProperty"){ width="20px" }.
     2. Add the **property key** (e.g., autoReconnect, timeout, sslMode).
     3. Provide the corresponding **property value**.
     4. Click **Save** to apply the changes.
 
 * Remove a property
     1. Select the **property** you want to remove.
-    2. Click the **Remove Property** button ![renmoveProperty](/img/toolui/remove.png "renmoveProperty"){ width="20px" }.
+    2. Click the **Remove Property** button ![renmoveProperty](../img/toolui/remove.png "renmoveProperty"){ width="20px" }.
     3. Click **Save** to apply the changes.
 
 -----------------------------------
@@ -93,7 +93,7 @@ To create a new API configuration, follow the steps below :
 
 * A request should contain a **`closeConnection`** action. This action is always marked in <span style="color:#8f7000">**Brown.**</span>
 
- ![api_testcase_example](/img/api/api_testcase_example.png "api_testcase_example")
+ ![api_testcase_example](../img/api/api_testcase_example.png "api_testcase_example")
 
  The above is an example of a **`postRestRequest`** and then **`assertResponseCode`** followed by **`storeJSONelementInDataSheet`**
 
@@ -112,7 +112,7 @@ To create a new API configuration, follow the steps below :
 
  We need to press ++escape++ to close the editor
 
- ![editor](/img/api/editor.gif "editor")
+ ![editor](../img/api/editor.gif "editor")
  
 
  -------------------------------------
@@ -123,7 +123,7 @@ To create a new API configuration, follow the steps below :
 
  The corresponding **`xpath`** or **`jsonPath`** for the tag, should be entered in the **Condition** column like as shown below :
 
- ![api2](/img/api/2.JPG "api2")
+ ![api2](../img/api/2.JPG "api2")
 
 ??? note "Example for writing Xpath"
 

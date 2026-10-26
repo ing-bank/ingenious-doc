@@ -6,11 +6,11 @@
 
 
 === ":gear: Setting options"
-     ![tools](/img/toolui/01.png "tools")
+     ![tools](../img/toolui/01.png "tools")
   
 
 === ":octicons-play-16: Execution options"
-      ![execution](/img/toolui/2.JPG "execution"){ width="60%" }
+      ![execution](../img/toolui/2.JPG "execution"){ width="60%" }
 
  <br>
 ----------------------------------------------------------------------
@@ -22,7 +22,7 @@
 
  This is where the test cases are designed and debugged. On opening the framework, the user, by default, lands on this pane.
 
- ![design](/img/toolui/design.png "design")
+ ![design](../img/toolui/design.png "design")
 
  **The Design Pane is composed of the following 5 sections (as shown in the picture above):**
 
@@ -33,11 +33,11 @@
 
       To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `Test Plan`
 
-      ![testplan1](/img/toolui/TestPlan1.JPG "testplan1")
+      ![testplan1](../img/toolui/TestPlan1.JPG "testplan1")
 
       If you select a Scenario or Test Case and **Right Click**, you will have some interesting and handy options to work with :
 
-      ![testplan2](/img/toolui/TestPlan2.JPG "testplan2"){ width="75%" }
+      ![testplan2](../img/toolui/TestPlan2.JPG "testplan2"){ width="75%" }
   
 
 === ":two: User Intent"
@@ -47,7 +47,7 @@
 
       To see this, you can navigate to the location of your tool, then `Projects` :material-arrow-right: `Your Project` :material-arrow-right: `ReusableComponents`
 
-      ![reusables](/img/toolui/Reusables.JPG "reusables")
+      ![reusables](../img/toolui/Reusables.JPG "reusables")
 
       What differentiates the Scenarios and Test Cases in the Test Plan compared to those in the User Intent is the purpose:  
       * **Test Plan** is supposed contain Functional/Regression/E2E/Business Test Cases  
@@ -74,39 +74,39 @@
 
       **For projects loaded in version 3.0**, legacy `ReusableComponent.xml` file is automatically migrated to reorganized into the new folder structure in ReusableComponents folder. The original `ReusableComponent.xml` file is preserved as .bak files under `<ProjectName>`.
 
-      ![reusable3](/img/toolui/Reusables3.JPG "reusables3"){ width="40%" }
+      ![reusable3](../img/toolui/Reusables3.JPG "reusables3"){ width="40%" }
 
       If you select a User Intent Scenario or User Intent Test Case and **Right Click**, you will have some interesting and handy options to work with:
 
-      ![reusable1](/img/toolui/Reusables2.JPG "reusables1"){ width="75%" }
+      ![reusable1](../img/toolui/Reusables2.JPG "reusables1"){ width="75%" }
 
 === ":three: Test Steps"
 
       This is the canvas where you have your test steps in sequential order
 
-      ![steps1](/img/toolui/TestSteps1.JPG "steps1")
+      ![steps1](../img/toolui/TestSteps1.JPG "steps1")
 
       To make working simple, intuitive and easy, you can also use the **drag and drop** to create test steps.
 
       In the following example, we can create the **Login** User Intent simply by **dragging and dropping the objects** from the Object Repository and parameterizing them by **dragging and dropping the datasheet columns**
 
-      ![drag_drop1](/img/toolui/draganddrop1.gif "drag_drop1")
+      ![drag_drop1](../img/toolui/draganddrop1.gif "drag_drop1")
      
 
       As a best practice, it is advisable to compose your test case **only with User Intents** and not have any loose (orphan) steps.
 
       You can also drag and drop the User Intents to create test cases like this :
 
-      ![drag_drop2](/img/toolui/draganddrop2.gif "drag_drop2")
+      ![drag_drop2](../img/toolui/draganddrop2.gif "drag_drop2")
 
 === ":four: Test Data"
       This is the area where you can set up your test data in multiple sheets.
 
-      ![data1](/img/toolui/Data1.JPG "data1")
+      ![data1](../img/toolui/Data1.JPG "data1")
 
       If you select a data cell and **Right Click**, you will have some interesting and handy options to work with :
 
-      ![data3](/img/toolui/data3.JPG "data3"){ width="75%" }
+      ![data3](../img/toolui/data3.JPG "data3"){ width="75%" }
 
       The Test Data pane is split into a **`Project`** tab (data scoped to this project) and a **`Shared`** tab (data reusable across every project) — mirroring the User Intent tabs above. See [Test Data](testData.md) for how to promote a datasheet to Shared and how to reference it from a test step.
 
@@ -114,7 +114,7 @@
 
       To set up environment based execution, you can set up multiple environments following the 5 steps as below :
 
-      ![data2](/img/toolui/data2.JPG "data2")
+      ![data2](../img/toolui/data2.JPG "data2")
 
       * **Step 1** : From **Test Data** >> Make sure **Multiple Environments** is selected
       * **Step 2** : Click the **[+]** icon in the Data Section, to add a new Environment
@@ -125,7 +125,7 @@
 === ":five: Object Repository"
       This is the area where the Locators/Objects are present along with the multiple attributes/properties to be used to find that element on the Application.
 
-      ![or1](/img/toolui/OR1.JPG "or1"){ width="75%" }
+      ![or1](../img/toolui/OR1.JPG "or1"){ width="75%" }
       
       If you select a Property and **Right Click**, you will have some interesting and handy options to work with. These options are applicable to used for :
 
@@ -134,7 +134,7 @@
       * All Objects in the OR 
 
 
-      ![or2](/img/toolui/OR2.JPG "or2")
+      ![or2](../img/toolui/OR2.JPG "or2")
 
  <br>
 ----------------------------------------------------------------------
@@ -143,11 +143,11 @@
 
 ### **Test Execution Pane**
 
- ![nav1](/img/toolui/NavigateToExecute.png "nav1")
+ ![nav1](../img/toolui/NavigateToExecute.png "nav1")
 
 In this pane we can club our test cases together into logical **test sets** or **test suites** and execute them - Either locally (on the workstation) or via a CICD pipeline.
 
- ![execution](/img/toolui/execution.JPG "execution")
+ ![execution](../img/toolui/execution.JPG "execution")
 
  * **Step 1** : Right Click on the Project Name :material-arrow-right: **Add Release** :material-arrow-right: Right Click on the Release Name :material-arrow-right: **Add TestSet**
  * **Step 2** : Select the test cases that you want to add to the set. You can do individual selections or bulk selection by simply selecting the entire Scenario. Once selected, click on the <span style="color:Green">**Green :material-arrow-left: Arrow**</span> to pull your selections into the set.
@@ -166,18 +166,18 @@ Once done, we are good to start our execution by clicking on the <span style="co
 
 ### **Report/Dashboard Pane**
 
- ![nav2](/img/toolui/NavigateToDashboard.png "nav2")
+ ![nav2](../img/toolui/NavigateToDashboard.png "nav2")
 
 In this pane we can view the detailed summary report and even access historical individual reports.
 
 The **Detailed Summary Report** tab looks like this :
 
-![dashboard1](/img/toolui/Dashboard1.JPG "dashboard1")
+![dashboard1](../img/toolui/Dashboard1.JPG "dashboard1")
 
 
 The **Latest Summary Report** tab looks like this :
 
-![dashboard2](/img/toolui/Dashboard2.JPG "dashboard2")
+![dashboard2](../img/toolui/Dashboard2.JPG "dashboard2")
 
  <br>
 ----------------------------------------------------------------------
@@ -186,7 +186,7 @@ The **Latest Summary Report** tab looks like this :
 
 ### **Search Functionality**
 
- ![search](/img/toolui/Search1.png "search")
+ ![search](../img/toolui/Search1.png "search")
 
 In the above image you can see how INGenious allows you to search for your assets very easily.
 
@@ -203,7 +203,7 @@ To activate the **Search Bar**, simply click on the corresponding pane and press
 
 To do a search on Table headers or Column Names, just prepend the **@** symbol before your search text :
 
-![headersearch](/img/toolui/Search2.png "headersearch")
+![headersearch](../img/toolui/Search2.png "headersearch")
 
   <br>
 ----------------------------------------------------------------------

@@ -59,7 +59,7 @@ There are two scopes of Test Data:
 
 * Datasheets may share the same names across the Project and Shared scopes. However, names must remain unique within each individual scope.
 
-![Test Data Scope](/img/home/testdata/testdata-proj-shared.gif "testdata-scope")
+![Test Data Scope](../img/home/testdata/testdata-proj-shared.gif "testdata-scope")
 
 ## Referencing Test Data in Test Steps
 
@@ -74,7 +74,7 @@ There are two scopes of Test Data:
 * Inside a larger value — a webservice payload, SQL text, a URL, a file template — a Test Data reference must be wrapped in curly braces to tell it apart from the surrounding text, for example `{Sheet:Column}` or `{Sheet:Column@Shared}`.
 * An **untagged** or `@Project`-tagged reference only ever resolves against the project's own Test Data — it will never silently fall back to Shared Test Data. Only an explicit `@Shared` tag resolves against the Shared store.
 
-![Test Data Reference](/img/home/testdata/testdata-reference.gif "testdata-reference")
+![Test Data Reference](../img/home/testdata/testdata-reference.gif "testdata-reference")
 
 ## Making Test Data Shared
 
@@ -95,7 +95,7 @@ When you confirm the move:
 3. If the same sheet name still exists in another environment of the project, its references are **left untouched** (retagging them would break that other environment) — INGenious warns you which sheets were only partially moved so you can move those environments too.
 4. A summary notification reports how many sheets moved, how many references were updated, and how many test cases were converted to Shared User Intents.
 
-![Make As Shared](/img/home/testdata/make-as-shared-td.gif "makeAsShared")
+![Make As Shared](../img/home/testdata/make-as-shared-td.gif "makeAsShared")
 
 ## Importing Test Data
 
@@ -106,7 +106,7 @@ Use **Test Data → Import TestData** from the menu bar to import one or more CS
 3. Tick one or more target **Environments** (or **Select all**).
 4. Click **Import**. The file is imported into every checked environment; an environment that already has a sheet with the same name is skipped, and the outcome is reported in a notification.
 
-![Import Testdata](/img/home/testdata/import-td.gif "import-testdata")
+![Import Testdata](../img/home/testdata/import-td.gif "import-testdata")
 
 ## Shared Environment (Execution Setting)
 
@@ -117,7 +117,7 @@ Because Project and Shared Test Data are independent stores, a test run resolves
 
 This lets a run use, for example, Project environment `QA` while resolving all `@Shared` references against Shared environment `Default`.
 
-![Test Data Reference](/img/home/testdata/run-settings-td.png "testdata-reference"){ width="50%" }
+![Test Data Reference](../img/home/testdata/run-settings-td.png "testdata-reference"){ width="50%" }
 
 ## Renaming and Deleting Shared Test Data
 

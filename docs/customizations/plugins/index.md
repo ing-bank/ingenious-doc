@@ -95,7 +95,7 @@ To add new Object Type, declare it inside the @Action annotation as the object. 
 
 
 Below is how it should appear in the INGenious Playwright Studio IDE.
-![new object type shown in IDE](/img/plugins/new-object-and-action-shown-in-IDE.png)
+![new object type shown in IDE](../../img/plugins/new-object-and-action-shown-in-IDE.png)
 
 ---
 ### Dependency Isolation
@@ -372,7 +372,7 @@ Follow these steps to build and deploy a custom plugin for the INGenious Playwri
     Launch INGenious Playwright Studio. Your plugin’s object types and actions will appear in the autosuggest dropdowns for their corresponding columns in the UI.
 
 
-    ![new object type shown in IDE](/img/plugins/new-objects-show-in-IDE.png)
+    ![new object type shown in IDE](../../img/plugins/new-objects-show-in-IDE.png)
 
 !!!Tip "Refer to [Plugin Templates](pluginTemplates.md) for more complete templates."
 ---

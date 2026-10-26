@@ -9,19 +9,19 @@
 
     === "Light Mode"
 
-        ![html](/img/reports/html1.png "html")
+        ![html](../img/reports/html1.png "html")
 
          If we click on any of the test cases, it will show a detailed step-wise report like this: 
 
-        ![html](/img/reports/html2.png "html")
+        ![html](../img/reports/html2.png "html")
 
     === "Dark Mode"
 
-        ![html](/img/reports/html1-dark.png "html")
+        ![html](../img/reports/html1-dark.png "html")
 
         If we click on any of the test cases, it will show a detailed step-wise report like this: 
 
-        ![html](/img/reports/html2-dark.png "html")
+        ![html](../img/reports/html2-dark.png "html")
 
 -------
 
@@ -31,11 +31,11 @@
 
     INGenious has built-in Extent Report that gets generated after every test execution when this checkbox is ticked:
 
-    ![html](/img/reports/extent1.png "html"){ width="50%" }
+    ![html](../img/reports/extent1.png "html"){ width="50%" }
 
     If we run the tests **only from the Execution Pane**, a detailed step-wise report will show up, like this: 
 
-    ![html](/img/reports/extent2.png "html")
+    ![html](../img/reports/extent2.png "html")
 
 -------
 
@@ -50,11 +50,11 @@
 
     From INGenious you can generate traces for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![trace1](/img/reports/trace.png "trace1"){ width="50%" }
+    ![trace1](../img/reports/trace.png "trace1"){ width="50%" }
 
     When you do this, the traces are saved in the `Results` location of the corresponding tests.
 
-    ![trace2](/img/reports/traceLocation.png "trace2"){ width="50%" }
+    ![trace2](../img/reports/traceLocation.png "trace2"){ width="50%" }
 
     Traces are a great way for debugging your tests. You can open the saved trace using the following options:
 
@@ -65,7 +65,7 @@
     mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="show-trace <full/path/to/trace.zip>"
     ```
 
-    ![trace3](/img/reports/traceViewer.png "trace3")
+    ![trace3](../img/reports/traceViewer.png "trace3")
 
  
 
@@ -75,15 +75,15 @@
 
     From INGenious you can generate videos for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![videos](/img/reports/video.png "videos"){ width="50%" }
+    ![videos](../img/reports/video.png "videos"){ width="50%" }
 
     When you do this, the videos are saved in the `Results` location of the corresponding tests.
 
-    ![videos](/img/reports/videoLocation.png "videos"){ width="50%" }
+    ![videos](../img/reports/videoLocation.png "videos"){ width="50%" }
 
     You can also play the video from the test results.
 
-    ![editor](/img/reports/video.gif  "videos")
+    ![editor](../img/reports/video.gif  "videos")
 
 
 
@@ -94,11 +94,11 @@
 
     From INGenious you can generate **HAR (Http Archive)** files for all playwright tests that are being executed. You can do this from the **Run Settings**
 
-    ![har](/img/reports/har.png "har"){ width="50%" }
+    ![har](../img/reports/har.png "har"){ width="50%" }
 
     When you do this, the HAR files are saved in the `Results` location of the corresponding tests.
 
-    ![har](/img/reports/harLocation.png "har"){ width="50%" }
+    ![har](../img/reports/harLocation.png "har"){ width="50%" }
 
 
 
@@ -107,9 +107,9 @@
 
     On the bottom left of the Report HTML, the console button allows you to access console logs.
 
-    ![report-console](/img/reports/report-console.png "report-console"){ width="80%" }
+    ![report-console](../img/reports/report-console.png "report-console"){ width="80%" }
 
     This will open the console:
 
-    ![console](/img/reports/console.png "console"){ width="80%" }
+    ![console](../img/reports/console.png "console"){ width="80%" }
 

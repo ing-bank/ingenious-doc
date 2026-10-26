@@ -7,11 +7,11 @@
 
 The DB Workbench can be accessed via the Menu Ribbon:
 
-![DBWorkbenchMenuRibbon](/img/db/workbench/DBWorkbenchMenuRibbon.png "DBWorkbenchMenuRibbon"){ width="60%" }
+![DBWorkbenchMenuRibbon](../img/db/workbench/DBWorkbenchMenuRibbon.png "DBWorkbenchMenuRibbon"){ width="60%" }
 
 Once selected, you will be navigated to the DB Workbench window. See example below:
 
-![DBWorkbenchExample](/img/db/workbench/DBWorkbenchExample.png "DBWorkbenchExample")
+![DBWorkbenchExample](../img/db/workbench/DBWorkbenchExample.png "DBWorkbenchExample")
 
 !!! tip ""
     The numbered areas highlighted in the image above are explained in the sections below. Use the tabs to explore the purpose and functionality of each part of the DB Workbench.
@@ -19,7 +19,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
 === ":one: Connections Pane"
     This is where database **Connections** are created, organized, and browsed. Every connection is backed by a `Settings/Databases/<alias>.properties` file in the project—the same connection store used by the [Database](database.md) engine actions, so a connection created here can be reused directly by generated tests.
 
-    ![ConnectionsPane](/img/db/workbench/ConnectionsPane.png "ConnectionsPane")
+    ![ConnectionsPane](../img/db/workbench/ConnectionsPane.png "ConnectionsPane")
 
     Use the **New**, **Edit**, **Delete**, and **Test** buttons at the bottom of the pane to manage connections:
 
@@ -28,7 +28,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
     * **Delete** – Removes the selected connection. The `default` connection is protected and cannot be deleted.
     * **Test** – Attempts to connect using the currently saved details and reports success or failure.
 
-    ![ConnectionDialog](/img/db/workbench/ConnectionDialog.png "ConnectionDialog"){ width="60%" }
+    ![ConnectionDialog](../img/db/workbench/ConnectionDialog.png "ConnectionDialog"){ width="60%" }
 
     The connection dialog supports common vendor presets, which automatically fill in the driver class and a connection-string template:
 
@@ -61,12 +61,12 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
 
     Expanding a connection in the tree lazily loads its tables and views. **Double-clicking** a table automatically generates a `SELECT * FROM <table>` statement into the Query Editor, and the table/column names are added to the SQL editor's autocomplete suggestions.
 
-    ![SchemaBrowsing](/img/db/workbench/SchemaBrowsing.png "SchemaBrowsing"){ width="60%" }
+    ![SchemaBrowsing](../img/db/workbench/SchemaBrowsing.png "SchemaBrowsing"){ width="60%" }
 
 === ":two: Query Editor Pane"
     This section allows you to select a connection and write the SQL statement you want to execute.
 
-    ![QueryEditorPane](/img/db/workbench/QueryEditorPane.png "QueryEditorPane")
+    ![QueryEditorPane](../img/db/workbench/QueryEditorPane.png "QueryEditorPane")
 
     The toolbar provides the following actions:
 
@@ -89,7 +89,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
 
     This section displays the outcome of the executed statement. The pane is organised into three tabs—**Grid**, **Messages**, and **Validations**—and a status bar at the bottom that always reflects the most recent execution.
 
-    ![ResultGridPane](/img/db/workbench/ResultGridPane.png "ResultGridPane")
+    ![ResultGridPane](../img/db/workbench/ResultGridPane.png "ResultGridPane")
 
     **Grid Tab**
 
@@ -137,7 +137,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
 
     After executing a `SELECT` query, **right-click** directly on a cell in the Grid tab. The Workbench reads the cell's **column name**, **row number**, and **value**, and pre-fills the rule for you, so in most cases a validation can be created in a single click.
 
-    ![ResultGridContextMenu](/img/db/workbench/ResultGridContextMenu.png "ResultGridContextMenu"){ width="60%" }
+    ![ResultGridContextMenu](../img/db/workbench/ResultGridContextMenu.png "ResultGridContextMenu"){ width="60%" }
 
     The context menu also offers **Copy value**, which copies just the selected cell's value to the clipboard.
 
@@ -179,7 +179,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
     * **Operator** – The type of rule, for example `EQUALS`, `CELL_EQUALS`, `IS_NULL`, `ROW_COUNT`, or `STORE_VAR`.
     * **Expected / Target** – The expected value for assertions, or the target variable / data-sheet reference for store rules.
 
-    ![ValidationsTab](/img/db/workbench/ValidationsTab.png "ValidationsTab")
+    ![ValidationsTab](../img/db/workbench/ValidationsTab.png "ValidationsTab")
 
     To delete a rule, **right-click** it in the Validations tab and choose **Remove selected validation**.
 
@@ -204,7 +204,7 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
     * **Test Case** – creates a standalone test case in the Test Plan.
     * **User Intent** – creates a [User Intent](../home/userIntent.md) instead, so the converted query can be executed from any number of test cases via the `Execute` action.
 
-    ![ConvertToAutomationDialog](/img/db/workbench/ConvertToAutomationDialog.png "ConvertToAutomationDialog"){ width="60%" }
+    ![ConvertToAutomationDialog](../img/db/workbench/ConvertToAutomationDialog.png "ConvertToAutomationDialog"){ width="60%" }
 
     During conversion, the following [Database](database.md) engine steps are generated automatically:
 
@@ -221,6 +221,6 @@ Once selected, you will be navigated to the DB Workbench window. See example bel
 
     **Converted Test Case Example**
 
-    ![DBQueryToTestCase](/img/db/workbench/DBQueryToTestCase.png "DBQueryToTestCase")
+    ![DBQueryToTestCase](../img/db/workbench/DBQueryToTestCase.png "DBQueryToTestCase")
 
     The generated test case performs the same SQL execution as the DB Workbench query and can be executed within INGenious to validate the expected data and assertions.

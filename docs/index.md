@@ -156,7 +156,7 @@ Developed and perfected by <span style="color:#FF6200;width:100px">**ING Bank**<
 ## Architecture
 -----------------------
 
-![architecture](/img/architecture/architecture_layers.png "architecture")
+![architecture](img/architecture/architecture_layers.png "architecture")
 
 [Getting Started](home/gettingstarted.md){ .md-button }
 

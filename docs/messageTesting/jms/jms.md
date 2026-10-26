@@ -13,7 +13,7 @@
 
 * A Queue based test case should contain a **`closeContext`** action at the end for clean-up.
 
- ![JMS](/img/jms/JMS.png "JMS")
+ ![JMS](../../img/jms/JMS.png "JMS")
 
  The above is an example of a Queue based Testcase.
 
@@ -32,7 +32,7 @@
 
  We need to press ++escape++ to close the editor
 
- ![editor](/img/jms/editor.gif "editor")
+ ![editor](../../img/jms/editor.gif "editor")
  
 
  -------------------------------------
@@ -43,7 +43,7 @@
 
  The corresponding **`xpath`** or **`jsonPath`** for the tag, should be entered in the **Condition** column like as shown below :
 
- ![assertions](/img/jms/assertions.png "assertions")
+ ![assertions](../../img/jms/assertions.png "assertions")
 
 ??? note "Example for writing Xpath"
 

@@ -7,7 +7,7 @@
 
  * Click on the **Recorder** icon
 
-   ![record](/img/recording/1.JPG "record")
+   ![record](../../img/recording/1.JPG "record")
  
  * A loader will show up while the playwright-recorder is being loaded
 
@@ -36,7 +36,7 @@
 
  * Once completed, the recording will be imported and displayed as a **Scenario** and **Test Case** . All relevant **test steps**, along with associated **web objects** and **test data**, will be included. The objects will be loaded into the **Object Repository**.
 
- ![Playwright Recorder Auto-Import](/img/recorder/autoimport.gif "Playwright Recorder Auto-Import")
+ ![Playwright Recorder Auto-Import](../../img/recorder/autoimport.gif "Playwright Recorder Auto-Import")
 
  ---
 
@@ -56,6 +56,6 @@
 
  * All the objects are loaded in the **Object Repository**.
 
- ![Playwright Recorder Import .txt file](/img/recorder/importtxtfile.gif "Playwright Recorder Import .txt file")
+ ![Playwright Recorder Import .txt file](../../img/recorder/importtxtfile.gif "Playwright Recorder Import .txt file")
 
  

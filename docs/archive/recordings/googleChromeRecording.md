@@ -11,7 +11,7 @@
 
  
 
-   ![chromerecording](/img/chromerecording/Inspect.JPG "chromerecording")
+   ![chromerecording](../../img/chromerecording/Inspect.JPG "chromerecording")
 
  
 
@@ -21,7 +21,7 @@
 
  
 
-   ![chromerecording](/img/chromerecording/StartRecorder.JPG "chromerecording")
+   ![chromerecording](../../img/chromerecording/StartRecorder.JPG "chromerecording")
 
  
 
@@ -31,7 +31,7 @@
 
  
 
-   ![chromerecording](/img/chromerecording/CreateNewRecording.JPG "chromerecording")
+   ![chromerecording](../../img/chromerecording/CreateNewRecording.JPG "chromerecording")
 
  
 
@@ -41,7 +41,7 @@
 
  
 
-   ![chromerecording](/img/chromerecording/EndRecording.JPG "chromerecording")
+   ![chromerecording](../../img/chromerecording/EndRecording.JPG "chromerecording")
 
  
 
@@ -49,7 +49,7 @@
 
  
 
-   ![chromerecording](/img/chromerecording/JSONDownload.JPG "chromerecording")
+   ![chromerecording](../../img/chromerecording/JSONDownload.JPG "chromerecording")
 
 
  
@@ -65,6 +65,6 @@
 
    
 
-   ![jsonimport](/img/chromerecording/importjson.gif "jsonimport")
+   ![jsonimport](../../img/chromerecording/importjson.gif "jsonimport")
 
  

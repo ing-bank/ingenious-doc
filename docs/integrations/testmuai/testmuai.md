@@ -32,7 +32,7 @@ As a prerequisite to using the Project Manager integration, you must create a pr
 1. In the LambdaTest web portal, select **Test Manager** > **Projects** from the sidebar menu.
 2. If you do not have an existing project, click **Create Project** and enter your desired values.
 3. Open the project and retrieve the **ProjectID** from the URL.
-![projectid](/img/testmuai/testmu-project-id.png "projectid")
+![projectid](../../img/testmuai/testmu-project-id.png "projectid")
 
 
 ---------------------------------------------- 
@@ -40,7 +40,7 @@ As a prerequisite to using the Project Manager integration, you must create a pr
 
 To ensure that all INGenious executions are reported and consolidated into the correct TestMu AI project, configure the following settings. 
 
-![tmsettings](/img/testmuai/testmu-tm-settings.png "tmsettings"){ width="90%" }
+![tmsettings](../../img/testmuai/testmu-tm-settings.png "tmsettings"){ width="90%" }
 
 1. Go to **Configurations** > **Settings** > **TM Settings**
 2. Select **Test Manager** in the dropdown menu then tick **Update Results back to**
@@ -56,7 +56,7 @@ To ensure that all INGenious executions are reported and consolidated into the c
 
 Optional: You may click **Test Connection** to validate the inputs. The bulb should turn green once connection is successful.
 
-![testconnection](/img/testmuai/testmu-test-connect-success.png "testconnection"){ width="70%" }
+![testconnection](../../img/testmuai/testmu-test-connect-success.png "testconnection"){ width="70%" }
 
 ---------------------------------------------- 
 ## Test Execution
@@ -70,9 +70,9 @@ After configuring the integration, you can execute tests directly from INGenious
 5. Monitor the execution progress until completion.
 6. Open TestMu AI and navigate to the configured project and view the test results.
 
-![testconnection](/img/testmuai/testmu-test-execution-config.png "testconnection")
+![testconnection](../../img/testmuai/testmu-test-execution-config.png "testconnection")
 
 The complete execution set should be published to the configured TestMu AI project, allowing stakeholders to review execution results and historical trends from a centralized location.
 
 Here's a sample view of a completed test displayed within the configured project.
-![testconnection](/img/testmuai/testmu-sample-completed-run.png "testconnection")
+![testconnection](../../img/testmuai/testmu-sample-completed-run.png "testconnection")

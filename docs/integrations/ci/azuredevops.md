@@ -1,4 +1,4 @@
-# ![Azure DevOps](/img/cicd/AzDo.png){ width="50" } Azure DevOps Integration
+# ![Azure DevOps](../../img/cicd/AzDo.png){ width="50" } Azure DevOps Integration
 
 -------
 
@@ -55,15 +55,15 @@ steps:
 
 * [x] After the execution is over, the test reports immediately appear on the **Tests** tab of the pipeline
 
- ![report](/img/cicd/azurereport1.png "Report")
+ ![report](../../img/cicd/azurereport1.png "Report")
 
 * [x] If we click on any of the tests, a detailed log will be available in the **Debug** tab 
   
-  ![report](/img/cicd/azurereport2.png "Report")
+  ![report](../../img/cicd/azurereport2.png "Report")
 
 * [x] If we click on the **Attachments** tab, we will find the **log.txt**, **screenshots**, **execution videos**, and **API requests** and **responses** (for API tests)   
 
- ![report](/img/cicd/azurereport3.png "Report")
+ ![report](../../img/cicd/azurereport3.png "Report")
 
 -----
 
@@ -71,7 +71,7 @@ steps:
 
 If we click on the `Pipeline Name` and navigate to the **`Analytics`** tab of the Azure DevOps Pipeline, we will see the report like this :
 
-  ![analytics](/img/azdo/6.PNG "analytics")
+  ![analytics](../../img/azdo/6.PNG "analytics")
 
 We can use this feature to determine the health of the pipeline and analysis of historical test reports.
 

@@ -979,7 +979,7 @@ List action categories with counts:
 **`-setEnv`** is a very powerful command to override all the environment settings and userdefined variables.
 This can override the values in all of these settings :
 
-![settings](/img/cli/3.png "settings")
+![settings](../../img/cli/3.png "settings")
 
 Lets look at the `Run Settings` for a Test Set. If we enter into the project location and navigate to the following location :
 
@@ -989,7 +989,7 @@ We will find the `RunSettings.Properties` and the `TestMgmtSettings.Properties` 
 
 The `RunSettings.Properties` holds all the corresponding settings that we enter via the UI of the framework.
 
-![runsettings](/img/cli/1.png "runsettings")
+![runsettings](../../img/cli/1.png "runsettings")
 
 Any of these properties can be overriden by **`-setEnv`**. 
 
@@ -997,7 +997,7 @@ For Example: `-setEnv "run.TakeFullPageScreenShot=False"`
 
 Similarly, if we go to the **project location** and navigate to `Settings\` directory, the `userDefinedSettings.Properties` holds all the corresponding data that we enter via the UI of the framework.
 
-![usersettings](/img/cli/2.png "usersettings")
+![usersettings](../../img/cli/2.png "usersettings")
 
 We can use by **`-setEnv`** to override these values too.
 
@@ -1005,7 +1005,7 @@ For Example: `-setEnv "user.Key1=NewValue1"`
 
 Similarly, if we go to the **project location** and navigate to `Settings\` directory, the `KafkaSSLConfigurations.Properties` holds all the corresponding data that we enter via the UI of the framework.
 
-![kafkasettings](/img/cli/4.png "kafkasettings")
+![kafkasettings](../../img/cli/4.png "kafkasettings")
 
 We can use by **`-setEnv`** to override these values too.
 
