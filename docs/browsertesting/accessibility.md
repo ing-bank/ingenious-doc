@@ -72,19 +72,19 @@ Here is an example of how to test the accessibility of all elements in a page.
 
 * In the framework, the command is as follows :
 
- ![axe1](/img/accessibility/1.JPG "axe1")
+ ![axe1](../img/accessibility/1.JPG "axe1")
 
 * On running this, a report will be generated which will have the **[axe]** icon as shown below.
 
-![axe2](/img/accessibility/2.JPG "axe2")
+![axe2](../img/accessibility/2.JPG "axe2")
 
 * On clicking this **[axe]** icon, the Accessibility Test report will open up which will show all the **Passes** as below :
 
-![axe3](/img/accessibility/passes.JPG "axe3")
+![axe3](../img/accessibility/passes.JPG "axe3")
 
 * The report will also show all the **Violations** like this :
 
-![axe4](/img/accessibility/violations.JPG "axe4")
+![axe4](../img/accessibility/violations.JPG "axe4")
 
 * In the above example the Report failed as it had the following **Violations** as seen in the report :
 

@@ -54,7 +54,7 @@
 
 The first time you launch INGenious, a **guided Starter Tour** automatically walks you through the IDE: Test Design (Test Plan, Test Steps Canvas, Test Data, User Intents, Object Repository, Object Properties), Test Execution (Test Lab, Test Set Canvas, quick settings panels, Test Plan Tree), Dashboard & Reports, API Workbench, and the Toolbar & Navigation — before pointing you to `Projects/Tutorial` and **Help → Help** for the full documentation.
 
-![Guided Starter Tour overlay](/img/tour/tour-overlay.png "Guided Starter Tour overlay")
+![Guided Starter Tour overlay](../img/tour/tour-overlay.png "Guided Starter Tour overlay")
 
 Replay the tour at any time from **Help** :material-arrow-right: **Start Tour**.
 
@@ -70,7 +70,7 @@ As you interact with the browser, each action is captured and added to the Test 
 
  * Click on the **Record** icon in the Test Case toolbar
 
-   ![record](/img/recording/1.JPG "record")
+   ![record](../img/recording/1.JPG "record")
 
  * The **Choose Recording Target** dialog appears. Pick where the recording should be saved:
 
@@ -78,7 +78,7 @@ As you interact with the browser, each action is captured and added to the Test 
     * **New test case under User Intent Scenario** — provide a **User Intent scenario** name (defaults to `LiveRecordingReusable`) and a **Test case** name (defaults to `LiveRecordingReusableTestCase`)
     * Click **Start Recording** to begin recording, or **Cancel** to close the dialog.
 
-    ![ChooseRecordingDialogueBox](/img/recording/ChooseRecordingDialogueBox.png "Choose Recording Target")
+    ![ChooseRecordingDialogueBox](../img/recording/ChooseRecordingDialogueBox.png "Choose Recording Target")
 
  * A loader will show up while the Playwright recorder is being loaded
 
@@ -100,7 +100,7 @@ As you interact with the browser, each action is captured and added to the Test 
 
  * When recording is complete, click the same toolbar icon again. The icon now displays **Stop Recording**. Clicking it ends the recording session. This closes the Chromium browser, stops the Playwright recording process, and saves the recorded steps to the test case.
 
-    ![LiveRecording](/img/recording/LiveRecording.gif "LiveRecording")
+    ![LiveRecording](../img/recording/LiveRecording.gif "LiveRecording")
 
 !!! tip
 
@@ -122,7 +122,7 @@ If you have a Playwright codegen recording saved as a file (for example, exporte
 
  * All the objects are loaded in the **Object Repository**.
 
- ![Playwright Recorder Import .txt file](/img/recorder/importtxtfile.gif "Playwright Recorder Import .txt file")
+ ![Playwright Recorder Import .txt file](../img/recorder/importtxtfile.gif "Playwright Recorder Import .txt file")
 
  Before you begin, its important that you [Know the Framework](knowyourframework.md){ .md-button }
 

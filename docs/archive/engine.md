@@ -17,7 +17,7 @@ After making modifications to the engine, the users can compile the engine and e
 
 - After performing the above steps, you can see the entire **project structure**
 
-![import](/img/engine/import.gif "import")
+![import](../img/engine/import.gif "import")
 
 
 If you see **Build Path** errors after importing the engine, then you can fix this by removing all the libraries and readding them.
@@ -42,7 +42,7 @@ If you see **Build Path** errors after importing the engine, then you can fix th
 Create a custom package in the **Engine** under **src** and place all your **.java** files containing the custom methods in it. **This is the best practice to add your custom method.**
 
 
-![package](/img/engine/1.JPG "package")
+![package](../img/engine/1.JPG "package")
 
 ----------
 
@@ -65,7 +65,7 @@ Follow the steps below to export and  replace the **engine.jar** in the `lib` fo
 
 - Restart the framework to load the updated jar with new methods
 	
-![export](/img/engine/export.gif "export")
+![export](../img/engine/export.gif "export")
 
 
 ----------
@@ -82,26 +82,26 @@ Follow the steps below to execute test case from the Engine.
 
 For example, if your custom method is added like this :
 
-![addpackage](/img/engine/3.JPG "addpackage")
+![addpackage](../img/engine/3.JPG "addpackage")
 
 Navigate to the location where the framework is installed :material-arrow-right: Go to **`Configuration`** folder :material-arrow-right: Inside **`package.properties`** add the package name like this :
 
-![addpackage](/img/engine/2.JPG "addpackage")
+![addpackage](../img/engine/2.JPG "addpackage")
 
 
 - In the same **`Configuration`** folder :material-arrow-right: Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
 
-![settings](/img/engine/4.JPG "settings")
+![settings](../img/engine/4.JPG "settings")
 
 - For executing the test case with your custom method:
 
 Add the custom method name in the test case as shown below. It will show in <span style="color:Red">**Red**</span> in the UI of the framework, but thats expected as you have not yet built a JAR file. You are only testing the custom method.
 
-![control](/img/engine/6.JPG "control")
+![control](../img/engine/6.JPG "control")
 
 Run the **control.java** file from the **com.ing.engine.core** package.
 
-![control](/img/engine/5.JPG "control")
+![control](../img/engine/5.JPG "control")
 
 - You can also keep break points wherever required and debug the test case after triggering the execution form the **control.java** file.
 

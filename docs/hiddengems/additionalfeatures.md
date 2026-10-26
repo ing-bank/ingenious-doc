@@ -8,11 +8,11 @@
 
     To rename your project, right click on the project name from the **Test Plan** section and choose **Details** from the context menu option.
 
-    ![details](/img/Things/Details.png "details"){ width="30%" }
+    ![details](../img/Things/Details.png "details"){ width="30%" }
 
     The **Project Details** window opens and the following options are available in the window, as shown below.
 
-    ![details1](/img/Things/Details1.png "details1"){ width="50%" }
+    ![details1](../img/Things/Details1.png "details1"){ width="50%" }
 
     To rename your project, give the new name in the **Project Name text box** and click on **Rename**. Your project will be renamed.
 
@@ -30,7 +30,7 @@
 
     A User Intent test case can be executed with a desired set of data by providing the sub-iteration index in the Input column. It will fetch the data set from the datasheet with the desired index and use it within the test case. This is very useful when you want to execute the same User Intent, inside a single test case, with different set of data passed each time.
 
-    ![subiteration](/img/Things/SubIteration.png "subiteration")
+    ![subiteration](../img/Things/SubIteration.png "subiteration")
 
 ----
 
@@ -42,7 +42,7 @@
 
         * To repeat a step a number of times, use the **Start Loop** and **End Loop:@n** condition.
 
-        ![looping](/img/Things/Looping.png "looping")
+        ![looping](../img/Things/Looping.png "looping")
 
         * In the above image, **Start Loop** is at Step 3 and **End Loop:@5** is at Step 7. So, Step 3 to 7 will be repeated 5 times.
     
@@ -50,7 +50,7 @@
         
         **NOTE:** In Test Design panel, users are only given access to Iteration 1 and all its Sub-Iterations
 
-        ![subiteration1](/img/Things/Subiteration1.png "subiteration1")
+        ![subiteration1](../img/Things/Subiteration1.png "subiteration1")
 
         * For the above image, Steps 2 to 4 will be executed 2 times (equal to the number of Sub-iterations for Iteration 1)
 
@@ -79,7 +79,7 @@
     
     The following image shows a sample User Intent named AttemptLogin with a corresponding datasheet.
     
-    ![loopedcomponents1](/img/Things/LoopedComponents1.png "loopedcomponents1")
+    ![loopedcomponents1](../img/Things/LoopedComponents1.png "loopedcomponents1")
 
     **NOTE:** For best practice, attach the Start and End conditions to a filler step.
 
@@ -89,7 +89,7 @@
 
         * Use the **Start Loop** and **End Loop:@n** conditions to repeat a User Intent **n** number of times.
 
-        ![loopedcomponents2](/img/Things/LoopedComponents2.png "loopedcomponents2")
+        ![loopedcomponents2](../img/Things/LoopedComponents2.png "loopedcomponents2")
 
         * In the above image, the User Intent will be executed 100 times. The data row labeled Iteration 1 and SubIteration 1 will be used each time.
     
@@ -97,7 +97,7 @@
 
         * Iterate dynamically with a User Intent that uses data from a datasheet by using the **Start Param** and **End Param** conditions.
         
-        ![loopedcomponents3](/img/Things/LoopedComponents3.png "loopedcomponents3")
+        ![loopedcomponents3](../img/Things/LoopedComponents3.png "loopedcomponents3")
         
         * For the above image, the User Intent will be executed three times corresponding to the number of sub-iterations of Iteration 1 in the datasheet.
 
@@ -115,7 +115,7 @@
 
     * **NOTE:** In the Test Execution panel, you are given access to all Iterations and their Sub-Iterations.
 
-    ![iterationOption](/img/Things/IterationOption.png "iterationOption")
+    ![iterationOption](../img/Things/IterationOption.png "iterationOption")
 
     * In the above image, there are some options given under the Iteration column
 
@@ -141,7 +141,7 @@
 
     * **Iteration Mode** can be found under the Run Settings.
 
-    ![iterationMode](/img/Things/iterationMode.png "iterationMode"){ width="50%" }
+    ![iterationMode](../img/Things/iterationMode.png "iterationMode"){ width="50%" }
 
     * If **ContinueOnError** is selected, Test Case will keep on running even if an error occurs during one of the iterations.
 
@@ -183,7 +183,7 @@
 
     * You will be navigated to the respective sheet after clicking on **[OK]**
 
-    ![navigateDatasheets](/img/Things/navigateDatasheets.png "navigateDatasheets"){ width="75%" }
+    ![navigateDatasheets](../img/Things/navigateDatasheets.png "navigateDatasheets"){ width="75%" }
 
 ----
 
@@ -194,12 +194,12 @@
 
     * To search for **values inside the cells**, simply enter the search string (or even partial string) in the [Search Bar], and the search results will immediately show in green
 
-    ![search](/img/Things/cellsearch.png "search")
+    ![search](../img/Things/cellsearch.png "search")
 
 
     * To search for **Columns using the Column Header**, simply enter the search string (or even partial string) with '@' as prefix in the [Search Bar], and the search results will immediately show in green
 
-    ![search](/img/Things/colheadersearch.png "search")
+    ![search](../img/Things/colheadersearch.png "search")
 
 <!-- ----
 
@@ -217,7 +217,7 @@
 
     * Show or hide columns in the report using the **show/hide columns** option. Check the respective column name checkbox to display that column or **uncheck** the respective column name checkbox to hide it.
 
-    ![reporttheme](/img/Things/reporttheme.png "reporttheme")
+    ![reporttheme](../img/Things/reporttheme.png "reporttheme")
 
     **Filtering In Report**
 
@@ -251,7 +251,7 @@
     | [`=Date`](#)   | =Date("0", dd/MM/YYYY)      |Will return the **date** in the specified format |
     | [`=Date`](#)   | =Date("+n or -n", dd/MM/YYYY) |Will **add or subtract n days from the current date** and display it in the specified format |
     
-    ![generateRunTimeData](/img/Things/generateRunTimeData.png "generateRunTimeData")
+    ![generateRunTimeData](../img/Things/generateRunTimeData.png "generateRunTimeData")
 
     > **Note:** It is also possible to combine two relevant functions for optimum usage.| Example1: **=Concat(Diaphragm,=Round(360.45))** Result: **Diaphragm360** <br> Example2: **=Concat(James_,=Round(=Random(3)))** Result: **James_155**. 
 
@@ -294,7 +294,7 @@
 
     * Once the execution starts, the debug toolbar will appear on top of the screen as shown below. The execution will pause at the step where the breakpoint has been added. You can then debug your test case accordingly.
 
-    ![debug](/img/Things/debug.JPG "debug"){ width="30%" }
+    ![debug](../img/Things/debug.JPG "debug"){ width="30%" }
 
     * To view the console log, click the button.
 
@@ -341,15 +341,15 @@
             - `%PreviousIteration%`
             - `%PreviousSubIteration%`
 
-    ![storeDataFromPreviousTestCaseData](/img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
+    ![storeDataFromPreviousTestCaseData](../img/Things/storeDataFromPreviousTestCaseData-1.png "storeDataFromPreviousTestCaseData1")
 
     > **Note:** Ensure that both Source and Target Test Datasheets have been created before using this action.
 
     Source Datasheet:
-    ![storeDataFromPreviousTestCaseData](/img/Things/storeDataFromPreviousTestCaseData-2.png "storeDataFromPreviousTestCaseData2")
+    ![storeDataFromPreviousTestCaseData](../img/Things/storeDataFromPreviousTestCaseData-2.png "storeDataFromPreviousTestCaseData2")
 
     Target Datasheet:
-    ![storeDataFromPreviousTestCaseData](/img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
+    ![storeDataFromPreviousTestCaseData](../img/Things/storeDataFromPreviousTestCaseData-3.png "storeDataFromPreviousTestCaseData3")
 
  ------   
 ??? example "Store Epoch Timestamp in a Variable"
@@ -390,7 +390,7 @@
         | `seconds+milliseconds` | `%varName%` | Stores epoch with decimal precision (e.g., 1714176000.123) |
 
     === "Sample"
-        ![storeEpochTimestampInVariable](/img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
+        ![storeEpochTimestampInVariable](../img/Things/storeEpochTimestampInVariable-1.png "storeEpochTimestampInVariable1")
 
     > **Note:** Choose the format based on your requirements. Use **seconds** for most general purposes, **milliseconds** for high-precision timing, or **seconds+milliseconds** for decimal representation. The stored variable can be used in subsequent steps for assertions, calculations, or as part of generated data.
 

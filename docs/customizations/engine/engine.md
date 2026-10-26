@@ -24,7 +24,7 @@ After performing the above steps, you can see the Project imported in your IDE.
 
 >The process is exactly the same for IntelliJ or any other IDE.
 
-![import](/img/engine/Import_MavenProject.gif "import")
+![import](../../img/engine/Import_MavenProject.gif "import")
 
 ----------
 
@@ -33,7 +33,7 @@ After performing the above steps, you can see the Project imported in your IDE.
 Create a custom package in the **Engine** under **src** and create your **.java** files containing the custom methods in it. **This is the best practice to add your custom method.** In this way, you can always keep track of all your customizations.
 
 
-![package](/img/engine/1.JPG "package")
+![package](../../img/engine/1.JPG "package")
 
 ------------
 
@@ -56,25 +56,25 @@ Follow the steps below to execute test case from the Engine.
 
 Let's take the example below. Let's assume the custom function is added like this :
 
-![addpackage](/img/engine/3.JPG "addpackage")
+![addpackage](../../img/engine/3.JPG "addpackage")
 
 - [X] Navigate to the location where the framework is installed :material-arrow-right: Go to **`Configuration`** folder :material-arrow-right: Inside **`package.properties`** add the package name like this :
 
-![addpackage](/img/engine/2.JPG "addpackage")
+![addpackage](../../img/engine/2.JPG "addpackage")
 
 
 - [x] In the same **`Configuration`** folder :material-arrow-right: Open the **`Global Settings.properties`** file and provide the details as shown in the image below:
 
-![settings](/img/engine/4.JPG "settings")
+![settings](../../img/engine/4.JPG "settings")
 
 
 - [x] Add the custom method name in the test case as shown below. It will show in <span style="color:Red">**Red**</span> in the UI of the framework, but thats expected as you have not yet built a JAR file. You are only testing the custom method.
 
-![control](/img/engine/6.JPG "control")
+![control](../../img/engine/6.JPG "control")
 
 - [x] In the Eclipse IDE,run the **control.java** file from the **com.ing.engine.core** package.
 
-![control](/img/engine/5.JPG "control")
+![control](../../img/engine/5.JPG "control")
 
 - [x] You can also keep break points wherever required and debug the test case after triggering the execution form the **control.java** file.
 

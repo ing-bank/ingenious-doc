@@ -24,7 +24,7 @@
 
       > **Note**: To save the settings for the individual test sets, click on the test set and open the Run settings to save or use the **Quick settings** option in the execution panel.
 
-      ![executiontimeout](/img/Things/executiontimeout.JPG "executiontimeout")
+      ![executiontimeout](../img/Things/executiontimeout.JPG "executiontimeout")
 
       * To check if the settings have been saved, go to 
 
@@ -54,7 +54,7 @@
 
     * You can also enable/disable the screenshots for the Pass or Fail steps by checking/unchecking the **Pass** or **Fail** checkboxes respectively.
 
-    ![screenshot](/img/Things/screenshot.png "screenshot")
+    ![screenshot](../img/Things/screenshot.png "screenshot")
 
 -----------------------------------
 
@@ -70,16 +70,16 @@
     * I want to refactor the object **billName**.
 
 
-    ![rename1](/img/Things/RenameandRefactor1.png "rename1")
+    ![rename1](../img/Things/RenameandRefactor1.png "rename1")
 
 
     * Go to the Object Repository section, select the object and perform a right click. Choose **Rename Object** or press **F2**.
 
-    ![rename2](/img/Things/RenameandRefactor2.png "rename2"){ width="40%" }
+    ![rename2](../img/Things/RenameandRefactor2.png "rename2"){ width="40%" }
 
     * The object gets refactored automatically in all the locations, wherever it is used.
 
-    ![rename3](/img/Things/RenameandRefactor3.png "rename3")
+    ![rename3](../img/Things/RenameandRefactor3.png "rename3")
 
     * The same procedure can be applied to test cases, test datasheets and user intents as well.
 
@@ -95,7 +95,7 @@
 
     If you just share the **.html** files, your report will open as shown below.
 
-    ![report](/img/Things/ReportSharing1.png "report")
+    ![report](../img/Things/ReportSharing1.png "report")
 
     This is because of the absence of the media folder found in the **<installationlocation>\Projects\<your project>\Results location**. The media folder contains all the necessary **js, css** and other files required to present the report file.
 
@@ -125,7 +125,7 @@
 
     **Please note** there might be some cases where the URL is environment dependent i.e. the URL is different for different environment. In that case you will have to go to each and every test case in your project and change the URL in all the test cases manually.
 
-    ![var1](/img/Things/UserDefinedVariables1.png "var1")
+    ![var1](../img/Things/UserDefinedVariables1.png "var1")
 
     These issues can be eliminated by using user defined variables to pass the common data (URL in this case).
 
@@ -136,11 +136,11 @@
     Add the variable and pass the value. 
 
 
-    ![var2](/img/Things/UserDefinedVariables2.png "var2"){ width="50%" }
+    ![var2](../img/Things/UserDefinedVariables2.png "var2"){ width="50%" }
 
     Now, you will be able to use the variable inside your test case as shown below.
 
-    ![var4](/img/Things/UserDefinedVariables3.png "var4")
+    ![var4](../img/Things/UserDefinedVariables3.png "var4")
 
     If you wish to run the test case in different environment now, you can simply change the value for the user defined variable and the change will be reflected in all your test cases where the variable is used.
 

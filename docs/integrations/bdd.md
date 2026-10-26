@@ -23,7 +23,7 @@ The framework comes with a BDD editor that lets user to **create/edit** feature 
 
  * [x] After designing the `features` and `scenarios`, each story can be exported as a **`feature file`** , by clicking on **up arrow**
 
- ![featurecreation](/img/bdd/createfeaturefile.gif "featurecreation")
+ ![featurecreation](../img/bdd/createfeaturefile.gif "featurecreation")
 
 
 > **Note:** Projects created from BDD editor are saved as **json** files and internally **Gherkin** language is used to create feature files.
@@ -46,7 +46,7 @@ In order to translate the feature files into an automation scenario, follow the 
     - [ ] All the `Steps` in each scenario are imported as **User Intents** 
     - [ ] All the `Examples` are imported into **Datasheets** with the name of the test case
 
- ![featureimport](/img/bdd/importfeaturefile.gif "featureimport")   
+ ![featureimport](../img/bdd/importfeaturefile.gif "featureimport")   
 
  * [x] The corresponding steps can then be automated accordingly either through Recording or otherwise
 
@@ -59,7 +59,7 @@ In order to translate the feature files into an automation scenario, follow the 
 
 In order to generate BDD Style Reporting post execution, from the Run Settings, make sure **Bdd Reporting** checkbox is checked.
 
- ![checkbox](/img/bdd/4.png "checkbox")
+ ![checkbox](../img/bdd/4.png "checkbox")
 
 
 This will generate **bdd-report.json** file post execution and this json file can then be fed to Azure DevOps Yaml Task to generate BDD Style Reporting.
@@ -81,7 +81,7 @@ For this we need to use the following Yaml commands :
 
 In Azure DevOps, the feature wise report can be viwed under the `Cucumber` Tab like the following :
 
- ![report](/img/bdd/5.JPG "report")
+ ![report](../img/bdd/5.JPG "report")
 
 
 

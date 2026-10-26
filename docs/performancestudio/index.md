@@ -15,11 +15,11 @@
 
 Click the **Performance Studio** button (speedometer icon) on the main toolbar.
 
-![Performance Studio toolbar button](/img/perfstudio/toolbar-button.png "Performance Studio toolbar button"){ width="70%" }
+![Performance Studio toolbar button](../img/perfstudio/toolbar-button.png "Performance Studio toolbar button"){ width="70%" }
 
 Performance Studio opens as its own panel, next to **API Workbench**:
 
-![Performance Studio panel](/img/perfstudio/panel-overview.png "Performance Studio panel")
+![Performance Studio panel](../img/perfstudio/panel-overview.png "Performance Studio panel")
 
 ## Project Folder Layout
 
@@ -141,7 +141,7 @@ Use `--full` to print the entire trace instead of just the tail — useful for d
 
 In the IDE, the panel shows the run live: a status pill (idle/running/completed/failed), a live VUs / requests-per-second chart, and a streaming output console — all without needing the CLI.
 
-![Performance Studio live run](/img/perfstudio/perfstudio.gif "Performance Studio live run")
+![Performance Studio live run](../img/perfstudio/perfstudio.gif "Performance Studio live run")
 
 #### Managing a detached (background) run
 
@@ -173,7 +173,7 @@ In the IDE, the panel shows the run live: a status pill (idle/running/completed/
 |`report compare <baselineRunId> <candidateRunId>`|Compare metrics between two runs|
 |`report junit [runId] --out <file>`|Export a run as a JUnit XML report (useful in CI), default stdout|
 
-![Performance Studio report view](/img/perfstudio/report-view.png "Performance Studio report view")
+![Performance Studio report view](../img/perfstudio/report-view.png "Performance Studio report view")
 
 ## Load Profiles
 

@@ -63,17 +63,17 @@ Kafka testing in INGenious lets you produce messages to a topic and consume/vali
 
         For String Serializer, the following are required: **`bootstrap.servers`, `producer.topic`, `value.serializer`, `key.serializer`**
 
-        ![kafka string configuration](/img/kafka/string_serializer_config_v4.png "kafka string configuration"){ width="50%" }
+        ![kafka string configuration](../../img/kafka/string_serializer_config_v4.png "kafka string configuration"){ width="50%" }
 
-        ![kafka string sample](/img/kafka/string_serializer_sample_v4.png "kafka string sample")
+        ![kafka string sample](../../img/kafka/string_serializer_sample_v4.png "kafka string sample")
 
     === "Avro Serializer Example"
 
         For Avro Serializer, the following are required: **`bootstrap.servers`, `producer.topic`, `value.serializer`, `key.serializer`, `schema.registry.url`, `addSchema`**
 
-        ![kafka avro configuration](/img/kafka/avro_serializer_config_v4.png "kafka avro configuration"){ width="50%" }
+        ![kafka avro configuration](../../img/kafka/avro_serializer_config_v4.png "kafka avro configuration"){ width="50%" }
 
-        ![kafka avro sample](/img/kafka/avro_serializer_sample_v4.png "kafka avro sample")
+        ![kafka avro sample](../../img/kafka/avro_serializer_sample_v4.png "kafka avro sample")
 
 === "Prior to v4.0.0"
 
@@ -110,13 +110,13 @@ Kafka testing in INGenious lets you produce messages to a topic and consume/vali
 
         For String Serializer, the following are required: **`server`, `producerTopic`, `valueSerializer`, `keySerializer`**
 
-        ![kafka string serializer](/img/kafka/string_serializer.png "kafka string serializer")
+        ![kafka string serializer](../../img/kafka/string_serializer.png "kafka string serializer")
 
     === "Avro Serializer Example"
 
         For Avro Serializer, the following are required: **`server`, `producerTopic`, `valueSerializer`, `keySerializer`, `setSchemaRegistryURL`, `addSchema`**
 
-        ![kafka avro serializer](/img/kafka/avro_serializer.png "kafka avro serializer")
+        ![kafka avro serializer](../../img/kafka/avro_serializer.png "kafka avro serializer")
 
 
 -------------------------------------
@@ -179,13 +179,13 @@ Kafka testing in INGenious lets you produce messages to a topic and consume/vali
 
         For this example, **`Producer_ssl_Enabled` is set to `true`** then the following are required: **`Producer_Keystore_Location`, `Producer_Key_Password`, `Producer_Keystore_Password`**
 
-        ![With SSL configuration](/img/kafka/with_ssl.png "With SSL configuration"){ width="50%" }
+        ![With SSL configuration](../../img/kafka/with_ssl.png "With SSL configuration"){ width="50%" }
 
     === "Without SSL certificate configuration example"
 
         For this example, **`Producer_ssl_Enabled` is set to `false`**
 
-        ![Without SSL configuration](/img/kafka/without_ssl.png "Without SSL configuration"){ width="50%" }
+        ![Without SSL configuration](../../img/kafka/without_ssl.png "Without SSL configuration"){ width="50%" }
 
 -------------------------------------
 
@@ -200,7 +200,7 @@ Kafka testing in INGenious lets you produce messages to a topic and consume/vali
 
  We need to press ++escape++ to close the editor
 
- ![editor](/img/kafka/editor.gif "editor")
+ ![editor](../../img/kafka/editor.gif "editor")
  
  -------------------------------------
 
@@ -210,7 +210,7 @@ Kafka testing in INGenious lets you produce messages to a topic and consume/vali
 
  The corresponding **`xpath`** or **`jsonPath`** for the tag, should be entered in the **Condition** column like as shown below :
 
- ![assertions](/img/kafka/assertions.png "assertions")
+ ![assertions](../../img/kafka/assertions.png "assertions")
 
 ??? note "Example for writing Xpath"
 

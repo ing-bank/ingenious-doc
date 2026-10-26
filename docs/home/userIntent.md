@@ -25,7 +25,7 @@ You'll also see the "User Intent" terminology surface outside of Test Design, in
 
 Choosing the User Intent option in either flow creates the result directly as a User Intent Test Case, ready to be executed from other test cases, instead of a standalone Test Plan test case.
 
-![User Intent](/img/home/userIntent/testDesign-ui-tp.png "testDesign-ui-tp")
+![User Intent](../img/home/userIntent/testDesign-ui-tp.png "testDesign-ui-tp")
 
 ## Project and Shared User Intent
 
@@ -93,7 +93,7 @@ As a best practice, compose your test cases **only from User Intents** rather th
 
 To jump to the definition of a User Intent that's called from a test step, right-click the step and choose **Go To User Intent**.
 
-![Execute](/img/home/userIntent/execute.png "execute")
+![Execute](../img/home/userIntent/execute.png "execute")
 
 ## Moving and Promoting User Intent
 
@@ -103,7 +103,7 @@ A User Intent is not locked to the scope it was created in. Right-click a User I
 * **Move to Project User Intent** – Demotes a Shared User Intent back to a single project's scope.
 * Copy variants of both operations are also available when you want to keep the original in place.
 
-![User Intent Context Menu](/img/home/userIntent/context-menu-user-intent.png "user-intent-context-menu"){ width="75%" }
+![User Intent Context Menu](../img/home/userIntent/context-menu-user-intent.png "user-intent-context-menu"){ width="75%" }
 
 Whenever a User Intent is moved or renamed, INGenious automatically rewrites every `Execute` reference to it elsewhere in the project, and confirms with a message such as:
 

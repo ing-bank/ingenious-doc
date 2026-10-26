@@ -1,4 +1,4 @@
-# ![GitHub Actions](/img/cicd/githubActions.png){ width="50" } GitHub Actions Integration
+# ![GitHub Actions](../../img/cicd/githubActions.png){ width="50" } GitHub Actions Integration
 
 ---- 
 
@@ -55,9 +55,9 @@ jobs:
 
  * [x] Once the execution is over, the logs will appera in the pipeline console
 
-  ![report](/img/cicd/githubactions1.png "Report")
+  ![report](../../img/cicd/githubactions1.png "Report")
 
  * [x] You can download the **Test Execution Reports** (as Build Artifacts) from the overview page
 
-  ![report](/img/cicd/githubactions2.png "Report") 
+  ![report](../../img/cicd/githubactions2.png "Report") 
 

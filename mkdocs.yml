@@ -1,4 +1,5 @@
 site_name: INGenious Playwright Studio
+site_url: https://ing-bank.github.io/ingenious-doc/
 theme:
  name: material
  favicon: doc_images/favicon.ico

@@ -35,15 +35,15 @@ There are **two primary methods** to implement and manage Global Data in your te
 2. **Select** the data value.
 3. **Click** on the **Global Data icon** (as shown in the tool UI).
 
-    ![gd1](/img/Things/GlobalDataSheet1.png "gd1")
+    ![gd1](../img/Things/GlobalDataSheet1.png "gd1")
 
 4. **Assign** a unique **Global Data ID** in the prompted window.
 
-    ![gd2](/img/Things/GlobalDataSheet2.png "gd2")
+    ![gd2](../img/Things/GlobalDataSheet2.png "gd2")
 
 5. The value is now stored in the **Global Datasheet** and can be referenced using the Global Data ID in any test datasheet.
 
-    ![gd3](/img/Things/GlobalDataSheet3.png "gd3")
+    ![gd3](../img/Things/GlobalDataSheet3.png "gd3")
 
 > This method is ideal for converting frequently used static values into global references.
 
@@ -102,15 +102,15 @@ There are **two primary methods** to implement and manage Global Data in your te
 
     **Sample Test Case:**
 
-    ![gd4](/img/Things/GlobalDataSheet4.png "gd4")
+    ![gd4](../img/Things/GlobalDataSheet4.png "gd4")
 
     **Sample Global Datasheet:**
 
-    ![gd5](/img/Things/GlobalDataSheet5.png "gd5")
+    ![gd5](../img/Things/GlobalDataSheet5.png "gd5")
 
     **Sample Test Datasheet:**
 
-    ![gd6](/img/Things/GlobalDataSheet6.png "gd6")
+    ![gd6](../img/Things/GlobalDataSheet6.png "gd6")
     
 ---
 

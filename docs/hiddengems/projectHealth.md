@@ -15,7 +15,7 @@ Tools → Project Health
 
 The analysis runs instantly against the project in memory and opens in a modal report window.
 
-![Project Health report](/img/health/project-health.png "Project Health report")
+![Project Health report](../img/health/project-health.png "Project Health report")
 
 !!! note
     Project Health is an **IDE-only** feature and is independent of the `ingenious project validate` command. The two look at different things: `project validate` performs a command-line configuration and integrity check, whereas Project Health scores test-design quality. Running one has no effect on the other.
