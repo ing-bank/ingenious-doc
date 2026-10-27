@@ -19,6 +19,7 @@ This page documents the available methods for each INGenious plugin API.
 | addVar(name, value) | Stores a value in a runtime variable.         |
 | getVar(name)        | Retrieves the value of a runtime variable.    |
 | getUserData()       | Returns the UserDataAccessApi for data sheet operations. |
+| getExecutionContext() | Returns the ExecutionContextApi for accessing the current run, project, and settings. |
 
 ---
 
@@ -72,6 +73,109 @@ This page documents the available methods for each INGenious plugin API.
 | getResponseCodesMap()  | Returns the map of response codes.         |
 | getResponseMessagesMap() | Returns the map of response messages.    |
 | getUserData()       | Returns the UserDataAccessApi for data sheet operations. |
+
+---
+
+## Execution Context API
+
+The `getExecutionContext()` method returns an `ExecutionContextApi` instance, the entry point for accessing the current test run, project, and settings from within a plugin action.
+
+#### Control
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `Control.exe` | `ExecutionContextApi` | `getRunner()` → returns `TestRunnerApi` | Returns the `TestRunnerApi` representing the currently executing test run. |
+| `Control.ReportManager` | `ExecutionContextApi` | `getReportManager()` → returns `SummaryReportApi` | Returns the `SummaryReportApi` used to access the overall execution summary report. |
+| `Control.triggerId` | `ExecutionContextApi` | `getTriggerId()` | Returns the trigger ID associated with the current execution. |
+| `Control.executionStartTime` | `ExecutionContextApi` | `getExecutionStartTime()` | Returns the timestamp when the current execution started. |
+| `Control.getCurrentProject()` | `ExecutionContextApi` | `getCurrentProject()` → returns `ProjectApi` | Returns the `ProjectApi` for the project currently being executed. |
+
+#### RunSettings
+
+Reached via `getExecutionContext().getRunner().getExecSettings().getRunSettings()`
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `.isVideoEnabled()` | `RunSettingsApi` | `isVideoEnabled()` | Returns whether video recording is enabled for the run. |
+| `.isTracingEnabled()` | `RunSettingsApi` | `isTracingEnabled()` | Returns whether Playwright tracing is enabled for the run. |
+| `.isHARrecordingEnabled()` | `RunSettingsApi` | `isHARrecordingEnabled()` | Returns whether HAR (HTTP Archive) recording is enabled for the run. |
+| `.isPerformanceLogEnabled()` | `RunSettingsApi` | `isPerformanceLogEnabled()` | Returns whether performance logging is enabled for the run. |
+| `.isBddReportEnabled()` | `RunSettingsApi` | `isBddReportEnabled()` | Returns whether BDD-style reporting is enabled for the run. |
+| `.isModernReport()` | `RunSettingsApi` | `isModernReport()` | Returns whether the modern HTML report format is enabled. |
+| `.isGridExecution()` | `RunSettingsApi` | `isGridExecution()` | Returns whether the run is executing against a remote grid. |
+| `.getRemoteGridURL()` | `RunSettingsApi` | `getRemoteGridURL()` | Returns the URL of the remote grid used for execution. |
+| `.useExistingDriver()` | `RunSettingsApi` | `useExistingDriver()` | Returns whether the run reuses an existing driver instance instead of creating a new one. |
+| `.getTakeFullPageScreenShot()` | `RunSettingsApi` | `getTakeFullPageScreenShot()` | Returns whether full-page screenshots are captured. |
+| `.getScreenShotFor()` | `RunSettingsApi` | `getScreenShotFor()` | Returns the configured condition(s) for when screenshots are captured. |
+| `.getThreadCount()` | `RunSettingsApi` | `getThreadCount()` | Returns the number of threads configured for parallel execution. |
+| `.getExecutionTimeOut()` | `RunSettingsApi` | `getExecutionTimeOut()` | Returns the configured execution timeout. |
+| `.getExecutionMode()` | `RunSettingsApi` | `getExecutionMode()` | Returns the configured execution mode (e.g., sequential, parallel). |
+| `.getIterationMode()` | `RunSettingsApi` | `getIterationMode()` | Returns the configured iteration mode for data-driven execution. |
+| `.getRerunTimes()` | `RunSettingsApi` | `getRerunTimes()` | Returns the number of configured rerun attempts for failed tests. |
+| `.getTestEnv()` | `RunSettingsApi` | `getTestEnv()` | Returns the configured test environment name (e.g., QA, Prod). Not the same as `getPaths().project().getTestEnv()`, which returns a filesystem path. |
+| `.getProperty("key")` | `RunSettingsApi` | `getProperty("key")` | Returns the value of a run setting property by key. |
+| `.put("key", "value")` | `RunSettingsApi` | `put("key", "value")` | Sets a run setting property value by key. |
+
+#### Test Management Settings
+
+Reached via `.getExecSettings().getTestMgmgtSettings()`
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `.getTestMgmgtSettings()` | `ExecutionSettingsApi` | `getTestMgmgtSettings()` → returns `TestMgmtSettingsApi` | Returns the `TestMgmtSettingsApi` for accessing test management tool integration settings. |
+| `.getTestMgmgtSettings().put("key","value")` | `TestMgmtSettingsApi` | `put("key","value")` | Sets a test management settings property value by key. |
+
+#### ProjectRunner
+
+Reached via `getExecutionContext().getRunner()`
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `Control.exe.getProject()` | `TestRunnerApi` | `getProject()` → returns `ProjectApi` | Returns the `ProjectApi` for the project associated with the current run. |
+| `Control.exe.getExecSettings()` | `TestRunnerApi` | `getExecSettings()` → returns `ExecutionSettingsApi` | Returns the `ExecutionSettingsApi` for the current run's execution settings. |
+| `Control.exe.getTestSet()` | `TestRunnerApi` | `getTestSet()` → returns `TestSetApi` | Returns the `TestSetApi` representing the test set being executed. |
+| `Control.exe.getTestSet().getTestSteps()` | `TestSetApi` | `getTestSteps()` → returns `List<TestStepApi>` | Returns the list of test steps contained in the test set. |
+| `Control.exe.getTestSet().getExecSettings()` | `TestSetApi` | `getExecSettings()` → returns `ExecutionSettingsApi` | Returns the execution settings scoped to the test set. |
+| `Control.exe.runEnv()` | `TestRunnerApi` | `runEnv()` | Returns the environment the run is executing against. |
+| `Control.exe.dataProvider()` | `TestRunnerApi` | `dataProvider()` → returns `ProjectTestDataApi` | Returns the `ProjectTestDataApi` used to access project test data. |
+| `Control.exe.dataProvider().defEnv()` | `ProjectTestDataApi` | `defEnv()` | Returns the default environment configured for the project test data. |
+| `Control.exe.isContinueOnError()` | `TestRunnerApi` | `isContinueOnError()` | Returns whether the run is configured to continue execution after an error. |
+| `Control.exe.useExistingBrowser()` | `TestRunnerApi` | `useExistingBrowser()` | Returns whether the run reuses an existing browser instance. |
+| `Control.exe.isDebugExe()` | `TestRunnerApi` | `isDebugExe()` | Returns whether the run is executing in debug mode. |
+| `Control.exe.getIterater(scenario, testCase)` | `TestRunnerApi` | `getIterater(scenario, testCase)` → returns `DataIteratorApi` | Returns the `DataIteratorApi` for the given scenario and test case. |
+| `Control.exe.getIterater("Scenario#TestCase")` | `TestRunnerApi` | `getIterater("Scenario#TestCase")` → returns `DataIteratorApi` | Returns the `DataIteratorApi` for the given combined scenario#testcase key. |
+| `Control.exe.retryExecution()` | `TestRunnerApi` | `retryExecution()` | Returns whether the run is configured to retry execution on failure. |
+| `Control.exe.afterExecution(true)` | `TestRunnerApi` | `afterExecution(true)` | Signals that post-execution processing should run after the test completes. |
+
+#### Project
+
+Reached via `getExecutionContext().getCurrentProject()`
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `.getLocation()` | `ProjectApi` | `getLocation()` | Returns the filesystem location of the project. |
+| `.getInfo()` | `ProjectApi` | `getInfo()` → returns `ProjectInfoApi` | Returns the `ProjectInfoApi` containing project metadata. |
+| `.getInfo().getData()` | `ProjectInfoApi` | `getDataItemNames()` | Returns the list of data item names defined for the project. Returns item names only, not the full nested Data/Attributes/Tags/Meta structure. |
+| `.getObjectRepository()` | `ProjectApi` | `getObjectRepository()` → returns `ObjectRepositoryApi` | Returns the `ObjectRepositoryApi` for checking object existence. Minimal surface — only `isObjectPresent`/`isMobileObjectPresent`/`isStructuredDataObjectPresent` are exposed; design-time authoring operations (rename/copy/move/save) are not. |
+| `.getTestData()` | `ProjectApi` | `getTestData()` → returns `ProjectTestDataApi` | Returns the `ProjectTestDataApi` for the project. |
+| `.getTestData().getTestDataFor(env)` | `ProjectTestDataApi` | `getTestDataFor(env)` → returns `TestDataSetApi` | Returns the `TestDataSetApi` for the specified environment. |
+| `.getProjectSettings()` | `ProjectApi` | `getProjectSettings()` → returns `ProjectSettingsApi` | Returns the `ProjectSettingsApi` for the project. |
+| `.getReleaseByName("Release1")` | `ProjectApi` | `getReleaseByName("Release1")` → returns `ReleaseApi` | Returns the `ReleaseApi` for the named release. |
+| `.getReleaseByName("Release1").getTestSetByName("TS1")` | `ReleaseApi` | `getTestSetByName("TS1")` → returns `TestSetApi` | Returns the `TestSetApi` for the named test set within the release. |
+
+#### ProjectSettings
+
+Reached via `getProjectSettings()`
+
+| Original | INGenious-API Class | INGenious-API Method | Description |
+|---|---|---|---|
+| `.getExecSettings()` | `ProjectSettingsApi` | `getExecSettings()` → returns `ExecutionSettingsApi` | Returns the `ExecutionSettingsApi` configured at the project level. |
+| `.getLocation()` | `ProjectSettingsApi` | `getLocation()` | Returns the filesystem location of the project settings. |
+| `.getDriverSettings()` | `ProjectSettingsApi` | `getDriverSettings()` → returns `DriverSettingsApi` | Returns the `DriverSettingsApi` for browser/driver configuration. |
+| `.getDriverSettings().useProxy()` | `DriverSettingsApi` | `useProxy()` | Returns whether a proxy is configured for the driver. |
+| `.getDriverSettings().selfSigned()` | `DriverSettingsApi` | `selfSigned()` | Returns whether self-signed certificates are accepted by the driver. |
+| `.getDriverSettings().put("key","value")` | `DriverSettingsApi` | `put("key","value")` | Sets a driver settings property value by key. |
+| `.getUserDefinedSettings()` | `ProjectSettingsApi` | `getUserDefinedSettings()` → returns `UserDefinedSettingsApi` | Returns the `UserDefinedSettingsApi` for accessing user-defined global settings. |
 
 ---
 
