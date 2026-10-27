@@ -6392,6 +6392,89 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#execution-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution Context API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution Context API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RunSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-management-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Management Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectrunner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProjectRunner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProjectSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-report-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7663,6 +7746,89 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#execution-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution Context API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution Context API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RunSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-management-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Management Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectrunner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProjectRunner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProjectSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-report-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7812,6 +7978,10 @@
 <td>getUserData()</td>
 <td>Returns the UserDataAccessApi for data sheet operations.</td>
 </tr>
+<tr>
+<td>getExecutionContext()</td>
+<td>Returns the ExecutionContextApi for accessing the current run, project, and settings.</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -7951,6 +8121,434 @@
 <tr>
 <td>getUserData()</td>
 <td>Returns the UserDataAccessApi for data sheet operations.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="execution-context-api">Execution Context API</h2>
+<p>The <code>getExecutionContext()</code> method returns an <code>ExecutionContextApi</code> instance, the entry point for accessing the current test run, project, and settings from within a plugin action.</p>
+<h4 id="control">Control</h4>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Control.exe</code></td>
+<td><code>ExecutionContextApi</code></td>
+<td><code>getRunner()</code> → returns <code>TestRunnerApi</code></td>
+<td>Returns the <code>TestRunnerApi</code> representing the currently executing test run.</td>
+</tr>
+<tr>
+<td><code>Control.ReportManager</code></td>
+<td><code>ExecutionContextApi</code></td>
+<td><code>getReportManager()</code> → returns <code>SummaryReportApi</code></td>
+<td>Returns the <code>SummaryReportApi</code> used to access the overall execution summary report.</td>
+</tr>
+<tr>
+<td><code>Control.triggerId</code></td>
+<td><code>ExecutionContextApi</code></td>
+<td><code>getTriggerId()</code></td>
+<td>Returns the trigger ID associated with the current execution.</td>
+</tr>
+<tr>
+<td><code>Control.executionStartTime</code></td>
+<td><code>ExecutionContextApi</code></td>
+<td><code>getExecutionStartTime()</code></td>
+<td>Returns the timestamp when the current execution started.</td>
+</tr>
+<tr>
+<td><code>Control.getCurrentProject()</code></td>
+<td><code>ExecutionContextApi</code></td>
+<td><code>getCurrentProject()</code> → returns <code>ProjectApi</code></td>
+<td>Returns the <code>ProjectApi</code> for the project currently being executed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="runsettings">RunSettings</h4>
+<p>Reached via <code>getExecutionContext().getRunner().getExecSettings().getRunSettings()</code></p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.isVideoEnabled()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isVideoEnabled()</code></td>
+<td>Returns whether video recording is enabled for the run.</td>
+</tr>
+<tr>
+<td><code>.isTracingEnabled()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isTracingEnabled()</code></td>
+<td>Returns whether Playwright tracing is enabled for the run.</td>
+</tr>
+<tr>
+<td><code>.isHARrecordingEnabled()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isHARrecordingEnabled()</code></td>
+<td>Returns whether HAR (HTTP Archive) recording is enabled for the run.</td>
+</tr>
+<tr>
+<td><code>.isPerformanceLogEnabled()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isPerformanceLogEnabled()</code></td>
+<td>Returns whether performance logging is enabled for the run.</td>
+</tr>
+<tr>
+<td><code>.isBddReportEnabled()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isBddReportEnabled()</code></td>
+<td>Returns whether BDD-style reporting is enabled for the run.</td>
+</tr>
+<tr>
+<td><code>.isModernReport()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isModernReport()</code></td>
+<td>Returns whether the modern HTML report format is enabled.</td>
+</tr>
+<tr>
+<td><code>.isGridExecution()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>isGridExecution()</code></td>
+<td>Returns whether the run is executing against a remote grid.</td>
+</tr>
+<tr>
+<td><code>.getRemoteGridURL()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getRemoteGridURL()</code></td>
+<td>Returns the URL of the remote grid used for execution.</td>
+</tr>
+<tr>
+<td><code>.useExistingDriver()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>useExistingDriver()</code></td>
+<td>Returns whether the run reuses an existing driver instance instead of creating a new one.</td>
+</tr>
+<tr>
+<td><code>.getTakeFullPageScreenShot()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getTakeFullPageScreenShot()</code></td>
+<td>Returns whether full-page screenshots are captured.</td>
+</tr>
+<tr>
+<td><code>.getScreenShotFor()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getScreenShotFor()</code></td>
+<td>Returns the configured condition(s) for when screenshots are captured.</td>
+</tr>
+<tr>
+<td><code>.getThreadCount()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getThreadCount()</code></td>
+<td>Returns the number of threads configured for parallel execution.</td>
+</tr>
+<tr>
+<td><code>.getExecutionTimeOut()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getExecutionTimeOut()</code></td>
+<td>Returns the configured execution timeout.</td>
+</tr>
+<tr>
+<td><code>.getExecutionMode()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getExecutionMode()</code></td>
+<td>Returns the configured execution mode (e.g., sequential, parallel).</td>
+</tr>
+<tr>
+<td><code>.getIterationMode()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getIterationMode()</code></td>
+<td>Returns the configured iteration mode for data-driven execution.</td>
+</tr>
+<tr>
+<td><code>.getRerunTimes()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getRerunTimes()</code></td>
+<td>Returns the number of configured rerun attempts for failed tests.</td>
+</tr>
+<tr>
+<td><code>.getTestEnv()</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getTestEnv()</code></td>
+<td>Returns the configured test environment name (e.g., QA, Prod). Not the same as <code>getPaths().project().getTestEnv()</code>, which returns a filesystem path.</td>
+</tr>
+<tr>
+<td><code>.getProperty("key")</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>getProperty("key")</code></td>
+<td>Returns the value of a run setting property by key.</td>
+</tr>
+<tr>
+<td><code>.put("key", "value")</code></td>
+<td><code>RunSettingsApi</code></td>
+<td><code>put("key", "value")</code></td>
+<td>Sets a run setting property value by key.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="test-management-settings">Test Management Settings</h4>
+<p>Reached via <code>.getExecSettings().getTestMgmgtSettings()</code></p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.getTestMgmgtSettings()</code></td>
+<td><code>ExecutionSettingsApi</code></td>
+<td><code>getTestMgmgtSettings()</code> → returns <code>TestMgmtSettingsApi</code></td>
+<td>Returns the <code>TestMgmtSettingsApi</code> for accessing test management tool integration settings.</td>
+</tr>
+<tr>
+<td><code>.getTestMgmgtSettings().put("key","value")</code></td>
+<td><code>TestMgmtSettingsApi</code></td>
+<td><code>put("key","value")</code></td>
+<td>Sets a test management settings property value by key.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="projectrunner">ProjectRunner</h4>
+<p>Reached via <code>getExecutionContext().getRunner()</code></p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Control.exe.getProject()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>getProject()</code> → returns <code>ProjectApi</code></td>
+<td>Returns the <code>ProjectApi</code> for the project associated with the current run.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getExecSettings()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>getExecSettings()</code> → returns <code>ExecutionSettingsApi</code></td>
+<td>Returns the <code>ExecutionSettingsApi</code> for the current run's execution settings.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getTestSet()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>getTestSet()</code> → returns <code>TestSetApi</code></td>
+<td>Returns the <code>TestSetApi</code> representing the test set being executed.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getTestSet().getTestSteps()</code></td>
+<td><code>TestSetApi</code></td>
+<td><code>getTestSteps()</code> → returns <code>List&lt;TestStepApi&gt;</code></td>
+<td>Returns the list of test steps contained in the test set.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getTestSet().getExecSettings()</code></td>
+<td><code>TestSetApi</code></td>
+<td><code>getExecSettings()</code> → returns <code>ExecutionSettingsApi</code></td>
+<td>Returns the execution settings scoped to the test set.</td>
+</tr>
+<tr>
+<td><code>Control.exe.runEnv()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>runEnv()</code></td>
+<td>Returns the environment the run is executing against.</td>
+</tr>
+<tr>
+<td><code>Control.exe.dataProvider()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>dataProvider()</code> → returns <code>ProjectTestDataApi</code></td>
+<td>Returns the <code>ProjectTestDataApi</code> used to access project test data.</td>
+</tr>
+<tr>
+<td><code>Control.exe.dataProvider().defEnv()</code></td>
+<td><code>ProjectTestDataApi</code></td>
+<td><code>defEnv()</code></td>
+<td>Returns the default environment configured for the project test data.</td>
+</tr>
+<tr>
+<td><code>Control.exe.isContinueOnError()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>isContinueOnError()</code></td>
+<td>Returns whether the run is configured to continue execution after an error.</td>
+</tr>
+<tr>
+<td><code>Control.exe.useExistingBrowser()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>useExistingBrowser()</code></td>
+<td>Returns whether the run reuses an existing browser instance.</td>
+</tr>
+<tr>
+<td><code>Control.exe.isDebugExe()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>isDebugExe()</code></td>
+<td>Returns whether the run is executing in debug mode.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getIterater(scenario, testCase)</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>getIterater(scenario, testCase)</code> → returns <code>DataIteratorApi</code></td>
+<td>Returns the <code>DataIteratorApi</code> for the given scenario and test case.</td>
+</tr>
+<tr>
+<td><code>Control.exe.getIterater("Scenario#TestCase")</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>getIterater("Scenario#TestCase")</code> → returns <code>DataIteratorApi</code></td>
+<td>Returns the <code>DataIteratorApi</code> for the given combined scenario#testcase key.</td>
+</tr>
+<tr>
+<td><code>Control.exe.retryExecution()</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>retryExecution()</code></td>
+<td>Returns whether the run is configured to retry execution on failure.</td>
+</tr>
+<tr>
+<td><code>Control.exe.afterExecution(true)</code></td>
+<td><code>TestRunnerApi</code></td>
+<td><code>afterExecution(true)</code></td>
+<td>Signals that post-execution processing should run after the test completes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="project">Project</h4>
+<p>Reached via <code>getExecutionContext().getCurrentProject()</code></p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.getLocation()</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getLocation()</code></td>
+<td>Returns the filesystem location of the project.</td>
+</tr>
+<tr>
+<td><code>.getInfo()</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getInfo()</code> → returns <code>ProjectInfoApi</code></td>
+<td>Returns the <code>ProjectInfoApi</code> containing project metadata.</td>
+</tr>
+<tr>
+<td><code>.getInfo().getData()</code></td>
+<td><code>ProjectInfoApi</code></td>
+<td><code>getDataItemNames()</code></td>
+<td>Returns the list of data item names defined for the project. Returns item names only, not the full nested Data/Attributes/Tags/Meta structure.</td>
+</tr>
+<tr>
+<td><code>.getObjectRepository()</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getObjectRepository()</code> → returns <code>ObjectRepositoryApi</code></td>
+<td>Returns the <code>ObjectRepositoryApi</code> for checking object existence. Minimal surface — only <code>isObjectPresent</code>/<code>isMobileObjectPresent</code>/<code>isStructuredDataObjectPresent</code> are exposed; design-time authoring operations (rename/copy/move/save) are not.</td>
+</tr>
+<tr>
+<td><code>.getTestData()</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getTestData()</code> → returns <code>ProjectTestDataApi</code></td>
+<td>Returns the <code>ProjectTestDataApi</code> for the project.</td>
+</tr>
+<tr>
+<td><code>.getTestData().getTestDataFor(env)</code></td>
+<td><code>ProjectTestDataApi</code></td>
+<td><code>getTestDataFor(env)</code> → returns <code>TestDataSetApi</code></td>
+<td>Returns the <code>TestDataSetApi</code> for the specified environment.</td>
+</tr>
+<tr>
+<td><code>.getProjectSettings()</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getProjectSettings()</code> → returns <code>ProjectSettingsApi</code></td>
+<td>Returns the <code>ProjectSettingsApi</code> for the project.</td>
+</tr>
+<tr>
+<td><code>.getReleaseByName("Release1")</code></td>
+<td><code>ProjectApi</code></td>
+<td><code>getReleaseByName("Release1")</code> → returns <code>ReleaseApi</code></td>
+<td>Returns the <code>ReleaseApi</code> for the named release.</td>
+</tr>
+<tr>
+<td><code>.getReleaseByName("Release1").getTestSetByName("TS1")</code></td>
+<td><code>ReleaseApi</code></td>
+<td><code>getTestSetByName("TS1")</code> → returns <code>TestSetApi</code></td>
+<td>Returns the <code>TestSetApi</code> for the named test set within the release.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="projectsettings">ProjectSettings</h4>
+<p>Reached via <code>getProjectSettings()</code></p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>INGenious-API Class</th>
+<th>INGenious-API Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.getExecSettings()</code></td>
+<td><code>ProjectSettingsApi</code></td>
+<td><code>getExecSettings()</code> → returns <code>ExecutionSettingsApi</code></td>
+<td>Returns the <code>ExecutionSettingsApi</code> configured at the project level.</td>
+</tr>
+<tr>
+<td><code>.getLocation()</code></td>
+<td><code>ProjectSettingsApi</code></td>
+<td><code>getLocation()</code></td>
+<td>Returns the filesystem location of the project settings.</td>
+</tr>
+<tr>
+<td><code>.getDriverSettings()</code></td>
+<td><code>ProjectSettingsApi</code></td>
+<td><code>getDriverSettings()</code> → returns <code>DriverSettingsApi</code></td>
+<td>Returns the <code>DriverSettingsApi</code> for browser/driver configuration.</td>
+</tr>
+<tr>
+<td><code>.getDriverSettings().useProxy()</code></td>
+<td><code>DriverSettingsApi</code></td>
+<td><code>useProxy()</code></td>
+<td>Returns whether a proxy is configured for the driver.</td>
+</tr>
+<tr>
+<td><code>.getDriverSettings().selfSigned()</code></td>
+<td><code>DriverSettingsApi</code></td>
+<td><code>selfSigned()</code></td>
+<td>Returns whether self-signed certificates are accepted by the driver.</td>
+</tr>
+<tr>
+<td><code>.getDriverSettings().put("key","value")</code></td>
+<td><code>DriverSettingsApi</code></td>
+<td><code>put("key","value")</code></td>
+<td>Sets a driver settings property value by key.</td>
+</tr>
+<tr>
+<td><code>.getUserDefinedSettings()</code></td>
+<td><code>ProjectSettingsApi</code></td>
+<td><code>getUserDefinedSettings()</code> → returns <code>UserDefinedSettingsApi</code></td>
+<td>Returns the <code>UserDefinedSettingsApi</code> for accessing user-defined global settings.</td>
 </tr>
 </tbody>
 </table>
