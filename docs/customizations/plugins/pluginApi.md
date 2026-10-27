@@ -89,7 +89,6 @@ The `getExecutionContext()` method returns an `ExecutionContextApi` instance, th
 | `Control.triggerId` | `ExecutionContextApi` | `getTriggerId()` | Returns the trigger ID associated with the current execution. |
 | `Control.executionStartTime` | `ExecutionContextApi` | `getExecutionStartTime()` | Returns the timestamp when the current execution started. |
 | `Control.getCurrentProject()` | `ExecutionContextApi` | `getCurrentProject()` → returns `ProjectApi` | Returns the `ProjectApi` for the project currently being executed. |
-| `Control.call()` / `Control.call(project)` | — | **Not exposed** | Starting a new run risks reentrancy against the static `Control.exe`/`ReportManager` state a plugin is currently executing inside of. |
 
 #### RunSettings
 
@@ -143,12 +142,10 @@ Reached via `getExecutionContext().getRunner()`
 | `Control.exe.isContinueOnError()` | `TestRunnerApi` | `isContinueOnError()` | Returns whether the run is configured to continue execution after an error. |
 | `Control.exe.useExistingBrowser()` | `TestRunnerApi` | `useExistingBrowser()` | Returns whether the run reuses an existing browser instance. |
 | `Control.exe.isDebugExe()` | `TestRunnerApi` | `isDebugExe()` | Returns whether the run is executing in debug mode. |
-| `Control.exe.getIterater(testCase)` | — | **Not exposed** | Overload dropped; it only delegated to `testcase.getKey()` internally, fully covered by the two string overloads below. |
 | `Control.exe.getIterater(scenario, testCase)` | `TestRunnerApi` | `getIterater(scenario, testCase)` → returns `DataIteratorApi` | Returns the `DataIteratorApi` for the given scenario and test case. |
 | `Control.exe.getIterater("Scenario#TestCase")` | `TestRunnerApi` | `getIterater("Scenario#TestCase")` → returns `DataIteratorApi` | Returns the `DataIteratorApi` for the given combined scenario#testcase key. |
 | `Control.exe.retryExecution()` | `TestRunnerApi` | `retryExecution()` | Returns whether the run is configured to retry execution on failure. |
 | `Control.exe.afterExecution(true)` | `TestRunnerApi` | `afterExecution(true)` | Signals that post-execution processing should run after the test completes. |
-| `Control.exe.setProject(project)` | — | **Not exposed** | Swaps the project out from under a run already in progress, the same reentrancy risk class as `Control.call()`. |
 
 #### Project
 
